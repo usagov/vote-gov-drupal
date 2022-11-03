@@ -1,0 +1,38 @@
+uuid: 7541554d-e57b-4314-953a-24e11f9082c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+  module:
+    - media
+name: 'Basic HTML'
+format: basic_html
+weight: 0
+filters:
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<br> <p class="text-align-left text-align-center text-align-right"> <h2 class="text-align-left text-align-center text-align-right"> <h3 class="text-align-left text-align-center text-align-right"> <h4 class="text-align-left text-align-center text-align-right"> <h5 class="text-align-left text-align-center text-align-right"> <h6 class="text-align-left text-align-center text-align-right"> <strong> <em> <u> <a href> <ul> <ol reversed start> <li>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_view_modes:
+        default: default
+        full: full
+      allowed_media_types: {  }

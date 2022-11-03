@@ -1,0 +1,4 @@
+name: vote-gov-d10
+recipe: drupal10
+config:
+  webroot: web
