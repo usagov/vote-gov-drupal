@@ -6,12 +6,10 @@ all:
   - language_url
 configurable:
   - language_interface
-  - language_content
 negotiation:
   language_content:
     enabled:
       language-url: -8
-      language-selected: 12
     method_weights:
       language-content-entity: -9
       language-url: -8
@@ -26,6 +24,7 @@ negotiation:
       language-url-fallback: 1
   language_interface:
     enabled:
+      language-url: -8
       language-selected: 12
     method_weights:
       language-user-admin: -10
