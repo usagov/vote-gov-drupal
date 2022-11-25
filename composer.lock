@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fcdfab02c0b62074ee42f2851cc4365b",
+    "content-hash": "6b1282cceca69b9e1ea6f472642dcece",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1508,6 +1508,50 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/ctools",
                 "issues": "https://www.drupal.org/project/issues/ctools"
+            }
+        },
+        {
+            "name": "drupal/language_switcher_extended",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/language_switcher_extended.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/language_switcher_extended-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "0d433ce4351eff78aa19a527c63f3f1828f50056"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1668763827",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "szeidler",
+                    "homepage": "https://www.drupal.org/user/767652"
+                }
+            ],
+            "description": "Provides additional processors for the Language Switcher block links.",
+            "homepage": "https://www.drupal.org/project/language_switcher_extended",
+            "support": {
+                "source": "https://git.drupalcode.org/project/language_switcher_extended"
             }
         },
         {

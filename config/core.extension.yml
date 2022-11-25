@@ -18,6 +18,7 @@ module:
   filter: 0
   image: 0
   language: 0
+  language_switcher_extended: 0
   link: 0
   locale: 0
   media: 0
