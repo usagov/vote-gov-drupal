@@ -9,7 +9,7 @@ dependencies:
 id: languageswitcher
 theme: stark
 region: content
-weight: 0
+weight: 1
 provider: null
 plugin: 'language_block:language_interface'
 settings:

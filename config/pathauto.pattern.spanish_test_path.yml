@@ -27,7 +27,7 @@ selection_criteria:
     langcodes:
       es: es
 selection_logic: and
-weight: -10
+weight: -9
 relationships:
   'node:langcode:language':
     label: Language
