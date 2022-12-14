@@ -16,12 +16,14 @@
     ],
     "require": {
         "composer/installers": "^2.0",
+        "drupal-tome/tome_drush": "dev-master",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",
         "drupal/language_switcher_extended": "^1.1",
         "drupal/pathauto": "^1.11",
         "drupal/redirect": "^1.8",
+        "drupal/tome": "^1.8",
         "drush/drush": "^11.3"
     },
     "require-dev": {

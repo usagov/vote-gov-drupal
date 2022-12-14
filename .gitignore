@@ -19,6 +19,7 @@
 /web/core/
 /web/modules/contrib/
 /web/themes/contrib/
+/drush/Commands/contrib/
 /web/profiles/contrib/
 /web/libraries/
 
