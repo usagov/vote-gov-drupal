@@ -1,0 +1,24 @@
+uuid: af96513b-81c4-4bd9-8038-d33bfb93ee60
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: english_test_path
+label: 'English test path'
+type: 'canonical_entities:node'
+pattern: '/register/[node:title]'
+selection_criteria:
+  8a2c4bbc-9ad7-4c51-82d9-844a57c910a5:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 8a2c4bbc-9ad7-4c51-82d9-844a57c910a5
+    context_mapping:
+      node: node
+    bundles:
+      page: page
+selection_logic: and
+weight: -8
+relationships:
+  'node:langcode:language':
+    label: Language

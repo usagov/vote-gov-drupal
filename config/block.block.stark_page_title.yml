@@ -9,7 +9,7 @@ _core:
 id: stark_page_title
 theme: stark
 region: content
-weight: -30
+weight: -2
 provider: null
 plugin: page_title_block
 settings:

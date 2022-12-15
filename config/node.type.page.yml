@@ -1,7 +1,14 @@
 uuid: 65567285-37b1-4f98-9370-f0ef3dcef8bb
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 name: Page
 type: page
 description: ''

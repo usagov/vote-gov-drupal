@@ -1,0 +1,33 @@
+uuid: cbd7b480-2478-420f-9f03-0e0f961a5d41
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: spanish_test_path
+label: 'Spanish test path'
+type: 'canonical_entities:node'
+pattern: '/registrar/[node:title]'
+selection_criteria:
+  6144b369-bb5c-4662-904e-cb154b097413:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 6144b369-bb5c-4662-904e-cb154b097413
+    context_mapping:
+      node: node
+    bundles:
+      page: page
+  93265abf-a59f-4cdf-90a6-a42ff66561d2:
+    id: language
+    negate: false
+    uuid: 93265abf-a59f-4cdf-90a6-a42ff66561d2
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      es: es
+selection_logic: and
+weight: -9
+relationships:
+  'node:langcode:language':
+    label: Language

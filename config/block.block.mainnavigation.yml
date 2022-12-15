@@ -1,0 +1,25 @@
+uuid: 231f690b-7050-40ed-8d4c-fda4f9f41ced
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - stark
+id: mainnavigation
+theme: stark
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }

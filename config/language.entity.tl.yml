@@ -1,0 +1,9 @@
+uuid: ad481dbd-8f82-474e-ab9f-1e6dc2f802ba
+langcode: en
+status: true
+dependencies: {  }
+id: tl
+label: Tagalog
+direction: ltr
+weight: 3
+locked: false
