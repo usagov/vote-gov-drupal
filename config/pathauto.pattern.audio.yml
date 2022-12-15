@@ -1,0 +1,22 @@
+uuid: 54fe6369-58aa-4cb5-a5d7-57e8f93f5e8e
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: audio
+label: Audio
+type: 'canonical_entities:media'
+pattern: '/media/audio/[media:name]'
+selection_criteria:
+  e2e819c7-eb27-4eb3-bbb5-9cbe89a786eb:
+    id: 'entity_bundle:media'
+    negate: false
+    uuid: e2e819c7-eb27-4eb3-bbb5-9cbe89a786eb
+    context_mapping:
+      media: media
+    bundles:
+      audio: audio
+selection_logic: and
+weight: -5
+relationships: {  }

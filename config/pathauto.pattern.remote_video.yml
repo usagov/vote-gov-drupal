@@ -1,0 +1,22 @@
+uuid: 11cc86be-6cde-40e8-99ec-c726db25cbab
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: remote_video
+label: 'Remote video'
+type: 'canonical_entities:media'
+pattern: '/media/video/[media:name]'
+selection_criteria:
+  41670061-8cbc-43d7-9f87-f359413a928b:
+    id: 'entity_bundle:media'
+    negate: false
+    uuid: 41670061-8cbc-43d7-9f87-f359413a928b
+    context_mapping:
+      media: media
+    bundles:
+      remote_video: remote_video
+selection_logic: and
+weight: -5
+relationships: {  }

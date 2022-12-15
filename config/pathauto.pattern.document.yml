@@ -1,0 +1,22 @@
+uuid: 05e6a214-8882-4a04-ab6b-c7c6966030a6
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: document
+label: Document
+type: 'canonical_entities:media'
+pattern: '/media/document/[media:name]'
+selection_criteria:
+  462e5c04-1d41-40bb-be4c-1d43e6e49253:
+    id: 'entity_bundle:media'
+    negate: false
+    uuid: 462e5c04-1d41-40bb-be4c-1d43e6e49253
+    context_mapping:
+      media: media
+    bundles:
+      documents: documents
+selection_logic: and
+weight: -5
+relationships: {  }

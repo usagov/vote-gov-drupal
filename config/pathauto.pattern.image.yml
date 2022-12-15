@@ -1,0 +1,22 @@
+uuid: 375fff38-db07-40c6-9309-4ed534f28542
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: image
+label: Image
+type: 'canonical_entities:media'
+pattern: '/media/image/[media:name]'
+selection_criteria:
+  dec98984-8eb3-4718-91f4-cc17ea64aec5:
+    id: 'entity_bundle:media'
+    negate: false
+    uuid: dec98984-8eb3-4718-91f4-cc17ea64aec5
+    context_mapping:
+      media: media
+    bundles:
+      image: image
+selection_logic: and
+weight: -5
+relationships: {  }

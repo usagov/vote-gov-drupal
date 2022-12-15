@@ -29,8 +29,8 @@ settings:
   plugins:
     ckeditor5_alignment:
       enabled_alignments:
-        - left
         - center
+        - left
         - right
     ckeditor5_heading:
       enabled_headings:
@@ -42,10 +42,10 @@ settings:
     ckeditor5_list:
       reversed: true
       startIndex: true
-    media_media:
-      allow_view_mode_override: false
     ckeditor5_sourceEditing:
       allowed_tags: {  }
+    media_media:
+      allow_view_mode_override: false
 image_upload:
   status: false
   scheme: public

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: documents
-label: Documents
+label: Document
 description: ''
 source: file
 queue_thumbnail_downloads: false
