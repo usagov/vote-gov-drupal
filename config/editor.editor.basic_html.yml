@@ -23,6 +23,7 @@ settings:
       - alignment
       - '|'
       - link
+      - drupalMedia
       - '|'
       - sourceEditing
   plugins:
@@ -43,6 +44,8 @@ settings:
         - left
         - center
         - right
+    media_media:
+      allow_view_mode_override: false
 image_upload:
   status: false
   scheme: public

@@ -1,0 +1,35 @@
+uuid: f08d7424-5dcb-4dfa-a904-a4f38fbf3d2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.documents.field_media_file
+    - media.type.documents
+  module:
+    - file
+id: media.documents.default
+targetEntityType: media
+bundle: documents
+mode: default
+content:
+  field_media_file:
+    type: file_generic
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  status: true
+  uid: true
