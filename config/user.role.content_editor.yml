@@ -1,0 +1,36 @@
+uuid: eef74a5d-08be-42bd-b533-87a6cba110bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.page
+    - workflows.workflow.publishing_content
+  module:
+    - content_moderation
+    - media
+    - node
+    - system
+    - toolbar
+id: content_editor
+label: 'Content Editor'
+weight: 2
+is_admin: null
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'create media'
+  - 'create page content'
+  - 'edit own page content'
+  - 'update media'
+  - 'use publishing_content transition create_new_draft'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view media'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view page revisions'
+  - 'view the administration theme'

@@ -1,0 +1,8 @@
+uuid: 3411513e-3615-40c4-a8ef-8814d29ee906
+langcode: en
+status: true
+dependencies: {  }
+id: block_type_2
+label: 'Block type 2'
+revision: 0
+description: 'To test deletion'

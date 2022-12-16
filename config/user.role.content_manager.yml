@@ -1,0 +1,46 @@
+uuid: 4ebc719e-cac3-438c-b764-64e9be03497b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.page
+    - workflows.workflow.publishing_content
+  module:
+    - block
+    - content_moderation
+    - media
+    - node
+    - system
+    - toolbar
+id: content_manager
+label: 'Content Manager'
+weight: 3
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'administer blocks'
+  - 'create media'
+  - 'create page content'
+  - 'delete any media'
+  - 'delete any page content'
+  - 'delete media'
+  - 'delete own page content'
+  - 'delete page revisions'
+  - 'edit any page content'
+  - 'edit own page content'
+  - 'revert page revisions'
+  - 'update any media'
+  - 'update media'
+  - 'use publishing_content transition create_new_draft'
+  - 'use publishing_content transition publish'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view page revisions'
+  - 'view the administration theme'
