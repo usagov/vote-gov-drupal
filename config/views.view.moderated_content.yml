@@ -2,7 +2,10 @@ uuid: 93189871-a1be-4370-a3d1-68cd1b07edbf
 langcode: en
 status: true
 dependencies:
+  config:
+    - workflows.workflow.publishing_content
   module:
+    - content_moderation
     - node
     - user
   enforced:
@@ -590,8 +593,7 @@ display:
           plugin_id: moderation_state_filter
           operator: in
           value:
-            editorial-draft: editorial-draft
-            editorial-archived: editorial-archived
+            publishing_content-draft: publishing_content-draft
           group: 1
           exposed: true
           expose:
@@ -609,7 +611,8 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
-              administrator: '0'
+              content_editor: '0'
+              content_manager: '0'
             reduce: true
           is_grouped: false
           group_info:
@@ -634,7 +637,11 @@ display:
           entity_field: langcode
           plugin_id: language
           operator: in
-          value: {  }
+          value:
+            en: en
+            es: es
+            ko: ko
+            tl: tl
           group: 1
           exposed: true
           expose:
@@ -652,8 +659,9 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
-              administrator: '0'
-            reduce: false
+              content_editor: '0'
+              content_manager: '0'
+            reduce: true
           is_grouped: false
           group_info:
             label: ''
@@ -677,7 +685,7 @@ display:
           plugin_id: moderation_state_filter
           operator: 'not in'
           value:
-            editorial-published: editorial-published
+            publishing_content-published: publishing_content-published
           group: 1
           exposed: false
           expose:
@@ -811,7 +819,8 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:workflow_list'
   moderated_content:
     id: moderated_content
     display_title: 'Moderated content'
@@ -830,4 +839,5 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:workflow_list'

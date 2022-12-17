@@ -6,7 +6,6 @@ dependencies:
     - node.type.page
     - workflows.workflow.publishing_content
   module:
-    - block
     - content_moderation
     - media
     - node
@@ -17,11 +16,9 @@ label: 'Content Manager'
 weight: 3
 is_admin: null
 permissions:
-  - 'access administration pages'
   - 'access content overview'
   - 'access media overview'
   - 'access toolbar'
-  - 'administer blocks'
   - 'create media'
   - 'create page content'
   - 'delete any media'
@@ -34,8 +31,10 @@ permissions:
   - 'revert page revisions'
   - 'update any media'
   - 'update media'
+  - 'use publishing_content transition archive'
   - 'use publishing_content transition create_new_draft'
   - 'use publishing_content transition publish'
+  - 'use publishing_content transition restore'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view any unpublished content'
