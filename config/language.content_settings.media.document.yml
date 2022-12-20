@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - media.type.documents
-id: media.documents
+    - media.type.document
+id: media.document
 target_entity_type_id: media
-target_bundle: documents
+target_bundle: document
 default_langcode: site_default
 language_alterable: false

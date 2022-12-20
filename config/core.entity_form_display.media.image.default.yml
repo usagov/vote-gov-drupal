@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.image.field_image
+    - field.field.media.image.field_caption
     - field.field.media.image.field_media_image
     - image.style.thumbnail
     - media.type.image
@@ -15,7 +15,7 @@ targetEntityType: media
 bundle: image
 mode: default
 content:
-  field_image:
+  field_caption:
     type: text_textfield
     weight: 2
     region: content
