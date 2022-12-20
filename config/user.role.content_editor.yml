@@ -25,6 +25,7 @@ permissions:
   - 'edit own page content'
   - 'update media'
   - 'use publishing_content transition create_new_draft'
+  - 'use publishing_content transition restore_to_draft'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view any unpublished content'

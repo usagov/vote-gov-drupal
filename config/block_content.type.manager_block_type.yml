@@ -1,8 +1,0 @@
-uuid: dbd6ac13-9109-42d9-99d6-222b783b04ac
-langcode: en
-status: true
-dependencies: {  }
-id: manager_block_type
-label: 'Manager Block Type'
-revision: 1
-description: 'A block type that can only be created by a manager.'
