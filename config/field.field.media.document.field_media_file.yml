@@ -4,13 +4,13 @@ status: true
 dependencies:
   config:
     - field.storage.media.field_media_file
-    - media.type.documents
+    - media.type.document
   module:
     - file
-id: media.documents.field_media_file
+id: media.document.field_media_file
 field_name: field_media_file
 entity_type: media
-bundle: documents
+bundle: document
 label: File
 description: ''
 required: true
@@ -20,8 +20,8 @@ default_value_callback: ''
 settings:
   handler: 'default:file'
   handler_settings: {  }
-  file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'txt doc docx pdf'
+  file_directory: 'media/document/[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
   max_filesize: ''
-  description_field: false
+  description_field: true
 field_type: file

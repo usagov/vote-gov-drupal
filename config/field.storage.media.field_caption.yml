@@ -5,8 +5,8 @@ dependencies:
   module:
     - media
     - text
-id: media.field_image
-field_name: field_image
+id: media.field_caption
+field_name: field_caption
 entity_type: media
 type: text
 settings:

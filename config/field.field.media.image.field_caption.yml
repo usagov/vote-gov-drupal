@@ -3,12 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.media.field_image
+    - field.storage.media.field_caption
     - media.type.image
   module:
     - text
-id: media.image.field_image
-field_name: field_image
+id: media.image.field_caption
+field_name: field_caption
 entity_type: media
 bundle: image
 label: Caption
