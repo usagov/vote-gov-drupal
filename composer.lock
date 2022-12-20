@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "24002da8dfd5c3421d67a6ddb6ab725c",
+    "content-hash": "0138b94cdaa3b21e19d5febfd874535d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -351,16 +351,16 @@
         },
         {
             "name": "consolidation/annotated-command",
-            "version": "4.6.0",
+            "version": "4.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/annotated-command.git",
-                "reference": "ee63c57f929e7131c714783193512ea4f76de74c"
+                "reference": "fd263e3e9341d29758025b1a9b2878e3247525be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/ee63c57f929e7131c714783193512ea4f76de74c",
-                "reference": "ee63c57f929e7131c714783193512ea4f76de74c",
+                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/fd263e3e9341d29758025b1a9b2878e3247525be",
+                "reference": "fd263e3e9341d29758025b1a9b2878e3247525be",
                 "shasum": ""
             },
             "require": {
@@ -401,9 +401,9 @@
             "description": "Initialize Symfony Console commands from annotated command class methods.",
             "support": {
                 "issues": "https://github.com/consolidation/annotated-command/issues",
-                "source": "https://github.com/consolidation/annotated-command/tree/4.6.0"
+                "source": "https://github.com/consolidation/annotated-command/tree/4.7.1"
             },
-            "time": "2022-10-30T22:08:00+00:00"
+            "time": "2022-12-06T22:57:25+00:00"
         },
         {
             "name": "consolidation/config",
@@ -628,16 +628,16 @@
         },
         {
             "name": "consolidation/robo",
-            "version": "4.0.1",
+            "version": "4.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/robo.git",
-                "reference": "86b4c35770a9e734112571b3b73e13bd03ac710e"
+                "reference": "d655b79c8e916f9f9947df0ddc1040967ddc5a28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/robo/zipball/86b4c35770a9e734112571b3b73e13bd03ac710e",
-                "reference": "86b4c35770a9e734112571b3b73e13bd03ac710e",
+                "url": "https://api.github.com/repos/consolidation/robo/zipball/d655b79c8e916f9f9947df0ddc1040967ddc5a28",
+                "reference": "d655b79c8e916f9f9947df0ddc1040967ddc5a28",
                 "shasum": ""
             },
             "require": {
@@ -695,9 +695,9 @@
             "description": "Modern task runner",
             "support": {
                 "issues": "https://github.com/consolidation/robo/issues",
-                "source": "https://github.com/consolidation/robo/tree/4.0.1"
+                "source": "https://github.com/consolidation/robo/tree/4.0.3"
             },
-            "time": "2022-09-20T16:53:20+00:00"
+            "time": "2022-12-07T14:13:05+00:00"
         },
         {
             "name": "consolidation/self-update",
@@ -815,16 +815,16 @@
         },
         {
             "name": "consolidation/site-process",
-            "version": "5.1.1",
+            "version": "5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/site-process.git",
-                "reference": "d2df2498ab1420cb7c86442922c3dcfa1b359294"
+                "reference": "6c44638d7af8a8b4abe12c3180701243f480539d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/site-process/zipball/d2df2498ab1420cb7c86442922c3dcfa1b359294",
-                "reference": "d2df2498ab1420cb7c86442922c3dcfa1b359294",
+                "url": "https://api.github.com/repos/consolidation/site-process/zipball/6c44638d7af8a8b4abe12c3180701243f480539d",
+                "reference": "6c44638d7af8a8b4abe12c3180701243f480539d",
                 "shasum": ""
             },
             "require": {
@@ -866,9 +866,9 @@
             "description": "A thin wrapper around the Symfony Process Component that allows applications to use the Site Alias library to specify the target for a remote call.",
             "support": {
                 "issues": "https://github.com/consolidation/site-process/issues",
-                "source": "https://github.com/consolidation/site-process/tree/5.1.1"
+                "source": "https://github.com/consolidation/site-process/tree/5.2.0"
             },
-            "time": "2022-10-18T12:58:12+00:00"
+            "time": "2022-12-06T17:57:16+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -1093,6 +1093,42 @@
                 }
             ],
             "time": "2022-02-28T11:07:21+00:00"
+        },
+        {
+            "name": "drupal-tome/tome_drush",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drupal-tome/tome_drush.git",
+                "reference": "e74e97a4f05952f527c748b4af19d2e2c461aedb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drupal-tome/tome_drush/zipball/e74e97a4f05952f527c748b4af19d2e2c461aedb",
+                "reference": "e74e97a4f05952f527c748b4af19d2e2c461aedb",
+                "shasum": ""
+            },
+            "require": {
+                "drush/drush": "^9.6.0 || ^10.0 || ^11.0"
+            },
+            "default-branch": true,
+            "type": "drupal-drush",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Samuel Mortenson",
+                    "email": "samuel@mortenson.coffee"
+                }
+            ],
+            "description": "Contains global Drush commands for initializing and installing Tome.",
+            "support": {
+                "issues": "https://github.com/drupal-tome/tome_drush/issues",
+                "source": "https://github.com/drupal-tome/tome_drush/tree/master"
+            },
+            "time": "2022-02-18T06:20:45+00:00"
         },
         {
             "name": "drupal/core",
@@ -1746,6 +1782,181 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "https://git.drupalcode.org/project/token"
+            }
+        },
+        {
+            "name": "drupal/tome",
+            "version": "1.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/tome.git",
+                "reference": "8.x-1.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/tome-8.x-1.9.zip",
+                "reference": "8.x-1.9",
+                "shasum": "0e4fc30aa5a930850ee0f0fb5416d04399dc8e84"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/tome_static": "*",
+                "drupal/tome_sync": "*"
+            },
+            "require-dev": {
+                "drupal/ctools": "*",
+                "drupal/pathauto": "*",
+                "drupal/redirect": "*",
+                "drupal/token": "*",
+                "drupal/tome_base": "*",
+                "drupal/tome_static": "*",
+                "drupal/tome_sync": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.9",
+                    "datestamp": "1671002492",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "samuel.mortenson",
+                    "homepage": "https://www.drupal.org/user/2582268"
+                }
+            ],
+            "description": "Everything you need to do everything statically.",
+            "homepage": "https://www.drupal.org/project/tome",
+            "support": {
+                "source": "https://git.drupalcode.org/project/tome"
+            }
+        },
+        {
+            "name": "drupal/tome_base",
+            "version": "1.8.0",
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/tome": "^1"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.8",
+                    "datestamp": "1670453864",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "samuel.mortenson",
+                    "homepage": "https://www.drupal.org/user/2582268"
+                }
+            ],
+            "description": "Contains shared services and traits between Tome Sync and Tome Static.",
+            "homepage": "https://www.drupal.org/project/tome",
+            "support": {
+                "source": "https://git.drupalcode.org/project/tome"
+            }
+        },
+        {
+            "name": "drupal/tome_static",
+            "version": "1.8.0",
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/tome": "^1",
+                "drupal/tome_base": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.8",
+                    "datestamp": "1670453864",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "samuel.mortenson",
+                    "homepage": "https://www.drupal.org/user/2582268"
+                }
+            ],
+            "description": "Exports an entire Drupal site to static HTML.",
+            "homepage": "https://www.drupal.org/project/tome",
+            "support": {
+                "source": "https://git.drupalcode.org/project/tome"
+            }
+        },
+        {
+            "name": "drupal/tome_sync",
+            "version": "1.8.0",
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/tome": "^1",
+                "drupal/tome_base": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.8",
+                    "datestamp": "1670453864",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "samuel.mortenson",
+                    "homepage": "https://www.drupal.org/user/2582268"
+                }
+            ],
+            "description": "Allows Drupal to installed from flat files and keeps content in sync.",
+            "homepage": "https://www.drupal.org/project/tome",
+            "support": {
+                "source": "https://git.drupalcode.org/project/tome"
             }
         },
         {
@@ -3375,16 +3586,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.11.8",
+            "version": "v0.11.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "f455acf3645262ae389b10e9beba0c358aa6994e"
+                "reference": "1acec99d6684a54ff92f8b548a4e41b566963778"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/f455acf3645262ae389b10e9beba0c358aa6994e",
-                "reference": "f455acf3645262ae389b10e9beba0c358aa6994e",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/1acec99d6684a54ff92f8b548a4e41b566963778",
+                "reference": "1acec99d6684a54ff92f8b548a4e41b566963778",
                 "shasum": ""
             },
             "require": {
@@ -3445,9 +3656,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.11.8"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.11.9"
             },
-            "time": "2022-07-28T14:25:11+00:00"
+            "time": "2022-11-06T15:29:46+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -10414,7 +10625,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "drupal-tome/tome_drush": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
