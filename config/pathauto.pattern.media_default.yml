@@ -10,5 +10,5 @@ type: 'canonical_entities:media'
 pattern: '/media/[media:bundle]/[media:name]'
 selection_criteria: {  }
 selection_logic: and
-weight: 0
+weight: -6
 relationships: {  }

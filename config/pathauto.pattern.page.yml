@@ -7,15 +7,16 @@ dependencies:
 id: page
 label: Page
 type: 'canonical_entities:node'
-pattern: '[node:menu-link:parents:join-path]/[node:menu-link:title]'
+pattern: '/[node:menu-link:parents:join-path]/[node:menu-link:title]'
 selection_criteria:
-  0bc6a1ae-0379-4b3c-bd35-de6cb8dce270:
+  87c2c2ab-01fe-46d4-a3f5-49a794d3f9a8:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 0bc6a1ae-0379-4b3c-bd35-de6cb8dce270
+    uuid: 87c2c2ab-01fe-46d4-a3f5-49a794d3f9a8
     context_mapping:
       node: node
     bundles:
+      landing: landing
       page: page
 selection_logic: and
 weight: -10

@@ -1,0 +1,16 @@
+uuid: 56805996-0cc1-4595-bb75-ac7fe085dc9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.state_territory
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.state_territory
+target_entity_type_id: node
+target_bundle: state_territory
+default_langcode: site_default
+language_alterable: true

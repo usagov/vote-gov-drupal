@@ -1,0 +1,31 @@
+uuid: 4658fa2b-280a-496d-9137-69d63d8bd5a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.state_territory.body
+    - node.type.state_territory
+  module:
+    - text
+    - user
+id: node.state_territory.teaser
+targetEntityType: node
+bundle: state_territory
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
