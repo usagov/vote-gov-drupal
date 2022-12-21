@@ -4,23 +4,21 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.page.body
+    - field.field.node.page.field_attachment
+    - field.field.node.page.field_content
+    - field.field.node.page.field_title
     - node.type.page
   module:
-    - text
     - user
 id: node.page.teaser
 targetEntityType: node
 bundle: page
 mode: teaser
 content:
-  body:
-    type: text_summary_or_trimmed
-    label: hidden
-    settings:
-      trim_length: 600
+  content_moderation_control:
+    settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: -20
     region: content
   links:
     settings: {  }
@@ -28,4 +26,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_attachment: true
+  field_content: true
+  field_title: true
   langcode: true
