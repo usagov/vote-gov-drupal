@@ -4,28 +4,24 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.landing.body
+    - field.field.node.landing.field_content
+    - field.field.node.landing.field_page_components
+    - field.field.node.landing.field_title
     - node.type.landing
   module:
-    - text
     - user
 id: node.landing.teaser
 targetEntityType: node
 bundle: landing
 mode: teaser
 content:
-  body:
-    type: text_summary_or_trimmed
-    label: hidden
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    weight: 101
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 100
     region: content
 hidden:
+  field_content: true
+  field_page_components: true
+  field_title: true
   langcode: true
