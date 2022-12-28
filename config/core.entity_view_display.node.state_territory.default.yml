@@ -43,14 +43,14 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 108
+    weight: 8
     region: content
   field_content:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 115
+    weight: 17
     region: content
   field_election_homepage_link:
     type: link
@@ -62,35 +62,35 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 105
+    weight: 5
     region: content
   field_generic_in_person_deadline:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 111
+    weight: 13
     region: content
   field_generic_mail_postmarked:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 113
+    weight: 15
     region: content
   field_generic_mail_received:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 114
+    weight: 16
     region: content
   field_generic_online_deadline:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 112
+    weight: 14
     region: content
   field_in_person_deadline:
     type: datetime_default
@@ -99,7 +99,7 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 109
+    weight: 9
     region: content
   field_is_state:
     type: boolean
@@ -109,7 +109,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 103
+    weight: 3
     region: content
   field_mail_postmarked_deadline:
     type: double_field_unformatted_list
@@ -133,7 +133,7 @@ content:
         scale: 2
       inline: true
     third_party_settings: {  }
-    weight: 116
+    weight: 11
     region: content
   field_mail_received_deadline:
     type: double_field_unformatted_list
@@ -157,7 +157,7 @@ content:
         scale: 2
       inline: true
     third_party_settings: {  }
-    weight: 117
+    weight: 12
     region: content
   field_more_info_link:
     type: link
@@ -169,7 +169,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 107
+    weight: 7
     region: content
   field_online_deadline:
     type: datetime_default
@@ -178,7 +178,7 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 110
+    weight: 10
     region: content
   field_registration_link:
     type: link
@@ -190,33 +190,33 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 106
+    weight: 6
     region: content
   field_registration_type:
     type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 104
+    weight: 4
     region: content
   field_state_abbreviation:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 102
+    weight: 2
     region: content
   field_state_name:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 1
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
   langcode: true

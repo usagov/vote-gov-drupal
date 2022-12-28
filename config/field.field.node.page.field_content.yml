@@ -15,7 +15,10 @@ label: Content
 description: ''
 required: true
 translatable: true
-default_value: {  }
+default_value:
+  -
+    value: '<p>This is the default content.</p>'
+    format: basic_html
 default_value_callback: ''
 settings: {  }
 field_type: text_long

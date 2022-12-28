@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.page.field_attachment
     - field.field.node.page.field_content
-    - field.field.node.page.field_title
     - node.type.page
   module:
     - text
@@ -35,13 +34,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 104
-    region: content
-  field_title:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 102
     region: content
   links:
     settings: {  }

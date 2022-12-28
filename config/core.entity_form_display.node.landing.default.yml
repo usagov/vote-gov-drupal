@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.landing.field_content
     - field.field.node.landing.field_page_components
-    - field.field.node.landing.field_title
     - node.type.landing
   module:
     - content_moderation
@@ -37,14 +36,6 @@ content:
     settings:
       match_operator: CONTAINS
       match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_title:
-    type: text_textfield
-    weight: 121
-    region: content
-    settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }

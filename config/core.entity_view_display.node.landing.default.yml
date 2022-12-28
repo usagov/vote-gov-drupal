@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.landing.field_content
     - field.field.node.landing.field_page_components
-    - field.field.node.landing.field_title
     - node.type.landing
   module:
     - text
@@ -29,13 +28,6 @@ content:
       link: true
     third_party_settings: {  }
     weight: 103
-    region: content
-  field_title:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 101
     region: content
   links:
     settings: {  }

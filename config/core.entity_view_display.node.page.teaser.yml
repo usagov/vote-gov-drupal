@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.field_attachment
     - field.field.node.page.field_content
-    - field.field.node.page.field_title
     - node.type.page
   module:
     - user
@@ -28,5 +27,4 @@ content:
 hidden:
   field_attachment: true
   field_content: true
-  field_title: true
   langcode: true

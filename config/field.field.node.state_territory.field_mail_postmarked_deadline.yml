@@ -27,7 +27,7 @@ settings:
     allowed_values: {  }
     max: null
     min: null
-    required: true
+    required: false
     on_label: 'On'
     off_label: 'Off'
   second:
@@ -36,7 +36,7 @@ settings:
     allowed_values: {  }
     max: null
     min: null
-    required: true
+    required: false
     on_label: 'On'
     off_label: 'Off'
 field_type: double_field
