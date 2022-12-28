@@ -1,0 +1,20 @@
+uuid: 7b0bc4aa-c6cb-4b2b-b4d2-db3d11dfedd4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_generic_mail_received
+field_name: field_generic_mail_received
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

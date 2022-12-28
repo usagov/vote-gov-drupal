@@ -1,0 +1,21 @@
+uuid: cb616dc5-3635-4a1c-bb36-7ae09bf5ba1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_generic_online_deadline
+    - node.type.state_territory
+  module:
+    - text
+id: node.state_territory.field_generic_online_deadline
+field_name: field_generic_online_deadline
+entity_type: node
+bundle: state_territory
+label: 'Generic online deadline'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
