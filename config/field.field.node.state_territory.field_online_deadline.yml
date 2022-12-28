@@ -1,0 +1,21 @@
+uuid: f57055b1-d2a0-471d-a435-0dec63e667ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_online_deadline
+    - node.type.state_territory
+  module:
+    - datetime
+id: node.state_territory.field_online_deadline
+field_name: field_online_deadline
+entity_type: node
+bundle: state_territory
+label: 'Online deadline'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

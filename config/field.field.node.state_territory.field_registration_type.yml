@@ -1,0 +1,21 @@
+uuid: 2407f6ee-df4b-434e-b048-b91a0081ef1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_registration_type
+    - node.type.state_territory
+  module:
+    - options
+id: node.state_territory.field_registration_type
+field_name: field_registration_type
+entity_type: node
+bundle: state_territory
+label: 'Registration type'
+description: 'Select all registration types that apply'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

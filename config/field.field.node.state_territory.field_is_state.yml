@@ -1,0 +1,23 @@
+uuid: f979af15-7023-4c8e-9d27-41091f476b84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_state
+    - node.type.state_territory
+id: node.state_territory.field_is_state
+field_name: field_is_state
+entity_type: node
+bundle: state_territory
+label: 'Is State'
+description: "Yes - This page is for one of the 50 states in the United States\r\nNo - This page is for a territory or district of the United States"
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

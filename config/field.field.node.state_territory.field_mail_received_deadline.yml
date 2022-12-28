@@ -1,0 +1,42 @@
+uuid: b8414ef3-cca7-4cf1-80f1-69f8db9da4ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mail_received_deadline
+    - node.type.state_territory
+  module:
+    - double_field
+id: node.state_territory.field_mail_received_deadline
+field_name: field_mail_received_deadline
+entity_type: node
+bundle: state_territory
+label: 'Mail received deadline'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    first: '2022-11-09T04:59:59'
+    second: 'Must be received by'
+default_value_callback: ''
+settings:
+  first:
+    label: ''
+    list: false
+    allowed_values: {  }
+    max: null
+    min: null
+    required: true
+    on_label: 'On'
+    off_label: 'Off'
+  second:
+    label: ''
+    list: false
+    allowed_values: {  }
+    max: null
+    min: null
+    required: true
+    on_label: 'On'
+    off_label: 'Off'
+field_type: double_field

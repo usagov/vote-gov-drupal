@@ -1,0 +1,20 @@
+uuid: 0fe77c9e-fd50-42bd-857e-6ddb439aa8d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_state_abbreviation
+field_name: field_state_abbreviation
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

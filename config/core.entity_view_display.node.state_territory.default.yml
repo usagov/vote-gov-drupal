@@ -3,9 +3,29 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.state_territory.body
+    - field.field.node.state_territory.field_confirm_registration_link
+    - field.field.node.state_territory.field_content
+    - field.field.node.state_territory.field_election_homepage_link
+    - field.field.node.state_territory.field_generic_in_person_deadline
+    - field.field.node.state_territory.field_generic_mail_postmarked
+    - field.field.node.state_territory.field_generic_mail_received
+    - field.field.node.state_territory.field_generic_online_deadline
+    - field.field.node.state_territory.field_in_person_deadline
+    - field.field.node.state_territory.field_is_state
+    - field.field.node.state_territory.field_mail_postmarked_deadline
+    - field.field.node.state_territory.field_mail_received_deadline
+    - field.field.node.state_territory.field_more_info_link
+    - field.field.node.state_territory.field_online_deadline
+    - field.field.node.state_territory.field_registration_link
+    - field.field.node.state_territory.field_registration_type
+    - field.field.node.state_territory.field_state_abbreviation
+    - field.field.node.state_territory.field_state_name
     - node.type.state_territory
   module:
+    - datetime
+    - double_field
+    - link
+    - options
     - text
     - user
 id: node.state_territory.default
@@ -13,9 +33,182 @@ targetEntityType: node
 bundle: state_territory
 mode: default
 content:
-  body:
+  field_confirm_registration_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_content:
     type: text_default
-    label: hidden
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_election_homepage_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_generic_in_person_deadline:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_generic_mail_postmarked:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_generic_mail_received:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  field_generic_online_deadline:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_in_person_deadline:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_is_state:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_mail_postmarked_deadline:
+    type: double_field_unformatted_list
+    label: above
+    settings:
+      first:
+        format_type: medium
+        link: false
+        hidden: false
+        key: false
+        decimal_separator: .
+        thousand_separator: ''
+        scale: 2
+      second:
+        format_type: medium
+        link: false
+        hidden: false
+        key: false
+        decimal_separator: .
+        thousand_separator: ''
+        scale: 2
+      inline: true
+    third_party_settings: {  }
+    weight: 116
+    region: content
+  field_mail_received_deadline:
+    type: double_field_unformatted_list
+    label: above
+    settings:
+      first:
+        format_type: medium
+        link: false
+        hidden: false
+        key: false
+        decimal_separator: .
+        thousand_separator: ''
+        scale: 2
+      second:
+        format_type: medium
+        link: false
+        hidden: false
+        key: false
+        decimal_separator: .
+        thousand_separator: ''
+        scale: 2
+      inline: true
+    third_party_settings: {  }
+    weight: 117
+    region: content
+  field_more_info_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_online_deadline:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_registration_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_registration_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_state_abbreviation:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_state_name:
+    type: text_default
+    label: above
     settings: {  }
     third_party_settings: {  }
     weight: 101

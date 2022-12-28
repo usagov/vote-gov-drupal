@@ -1,0 +1,32 @@
+uuid: cbfb90a0-46f4-4b10-8f83-c2b919431878
+langcode: en
+status: true
+dependencies:
+  module:
+    - double_field
+    - node
+id: node.field_mail_received_deadline
+field_name: field_mail_received_deadline
+entity_type: node
+type: double_field
+settings:
+  storage:
+    first:
+      type: datetime_iso8601
+      maxlength: 255
+      precision: 10
+      scale: 2
+      datetime_type: datetime
+    second:
+      type: string
+      maxlength: 255
+      precision: 10
+      scale: 2
+      datetime_type: datetime
+module: double_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
