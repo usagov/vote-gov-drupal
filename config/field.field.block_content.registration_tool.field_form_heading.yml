@@ -1,0 +1,21 @@
+uuid: 422e3030-b608-4c3b-bd89-f5a701d95fed
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.registration_tool
+    - field.storage.block_content.field_form_heading
+  module:
+    - text
+id: block_content.registration_tool.field_form_heading
+field_name: field_form_heading
+entity_type: block_content
+bundle: registration_tool
+label: 'Form heading'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

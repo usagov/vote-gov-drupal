@@ -1,0 +1,47 @@
+uuid: ba3b7ed7-5684-4345-8f07-dd587a757983
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.registration_tool
+    - field.field.block_content.registration_tool.field_dropdown_label
+    - field.field.block_content.registration_tool.field_form_heading
+    - field.field.block_content.registration_tool.field_heading
+    - field.field.block_content.registration_tool.field_submit_button
+  module:
+    - text
+id: block_content.registration_tool.default
+targetEntityType: block_content
+bundle: registration_tool
+mode: default
+content:
+  field_dropdown_label:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_form_heading:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_heading:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_submit_button:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  langcode: true

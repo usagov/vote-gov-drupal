@@ -1,0 +1,8 @@
+uuid: cab9f536-fb79-408d-b4e0-636ce8f43b37
+langcode: en
+status: true
+dependencies: {  }
+id: registration_tool
+label: 'Registration Tool'
+revision: 0
+description: ''
