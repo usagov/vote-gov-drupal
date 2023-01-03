@@ -1,0 +1,21 @@
+uuid: cd54429d-b98c-4774-b70e-ef4fff7ef513
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.government_banner
+    - field.storage.block_content.field_accordion_text
+  module:
+    - text
+id: block_content.government_banner.field_accordion_text
+field_name: field_accordion_text
+entity_type: block_content
+bundle: government_banner
+label: 'Accordion text'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

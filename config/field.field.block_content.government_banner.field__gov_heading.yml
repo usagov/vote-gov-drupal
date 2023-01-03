@@ -1,0 +1,21 @@
+uuid: 2509c4cf-7a4b-4c00-8166-b75a183c5c76
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.government_banner
+    - field.storage.block_content.field__gov_heading
+  module:
+    - text
+id: block_content.government_banner.field__gov_heading
+field_name: field__gov_heading
+entity_type: block_content
+bundle: government_banner
+label: '.gov heading'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

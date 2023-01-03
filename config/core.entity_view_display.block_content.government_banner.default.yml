@@ -1,0 +1,63 @@
+uuid: 6cf9ad91-2a8e-4212-9889-a20f4f536b5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.government_banner
+    - field.field.block_content.government_banner.field__gov_heading
+    - field.field.block_content.government_banner.field__gov_text
+    - field.field.block_content.government_banner.field_accordion_link
+    - field.field.block_content.government_banner.field_accordion_text
+    - field.field.block_content.government_banner.field_https_heading
+    - field.field.block_content.government_banner.field_https_text
+  module:
+    - text
+id: block_content.government_banner.default
+targetEntityType: block_content
+bundle: government_banner
+mode: default
+content:
+  field__gov_heading:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field__gov_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_accordion_link:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_accordion_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_https_heading:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_https_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  langcode: true
