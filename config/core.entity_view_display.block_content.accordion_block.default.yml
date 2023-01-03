@@ -1,0 +1,36 @@
+uuid: d74dc1c8-e994-4b7b-9807-b8ff55ec3711
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.accordion_block
+    - field.field.block_content.accordion_block.field_blocks
+    - field.field.block_content.accordion_block.field_heading
+  module:
+    - accordion_blocks
+    - text
+_core:
+  default_config_hash: XmaYGZXgMt9B8HH12NYAhW-WuAEZ7IS6PUinuKLmoII
+id: block_content.accordion_block.default
+targetEntityType: block_content
+bundle: accordion_block
+mode: default
+content:
+  field_blocks:
+    type: accordion_widget_formatter
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_heading:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
