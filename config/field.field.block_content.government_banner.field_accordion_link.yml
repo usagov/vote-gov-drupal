@@ -1,0 +1,21 @@
+uuid: a15002a0-06fa-45db-aa3e-e92946f8ee3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.government_banner
+    - field.storage.block_content.field_accordion_link
+  module:
+    - text
+id: block_content.government_banner.field_accordion_link
+field_name: field_accordion_link
+entity_type: block_content
+bundle: government_banner
+label: 'Accordion link'
+description: 'trigger for the accordion'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

@@ -1,0 +1,50 @@
+uuid: 58c8292d-fc66-4084-82ae-bb7be4283229
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.accordion_block
+    - field.field.block_content.accordion_block.field_blocks
+    - field.field.block_content.accordion_block.field_heading
+  module:
+    - text
+_core:
+  default_config_hash: b5qTdS32_Dz7EkE_0eyOwLJw6dgUnKE1JPGxLGhacYk
+id: block_content.accordion_block.default
+targetEntityType: block_content
+bundle: accordion_block
+mode: default
+content:
+  field_blocks:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_heading:
+    type: text_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

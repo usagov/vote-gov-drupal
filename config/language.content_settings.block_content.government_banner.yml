@@ -1,0 +1,11 @@
+uuid: 756c41fa-fd2a-43e5-b5cc-383f4f819178
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.government_banner
+id: block_content.government_banner
+target_entity_type_id: block_content
+target_bundle: government_banner
+default_langcode: site_default
+language_alterable: false

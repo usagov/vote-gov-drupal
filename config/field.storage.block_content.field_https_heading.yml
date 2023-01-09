@@ -1,0 +1,20 @@
+uuid: 4280827b-a226-4841-acb2-ab3fc56bd543
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+id: block_content.field_https_heading
+field_name: field_https_heading
+entity_type: block_content
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

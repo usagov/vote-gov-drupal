@@ -1,0 +1,20 @@
+uuid: 9f6c9e7f-31f5-4e79-b14c-3871765374af
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+id: block_content.field_form_heading
+field_name: field_form_heading
+entity_type: block_content
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

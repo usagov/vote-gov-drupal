@@ -1,0 +1,21 @@
+uuid: 4143546d-7a21-40ad-a94d-b5e26644234a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.registration_tool
+    - field.storage.block_content.field_heading
+  module:
+    - text
+id: block_content.registration_tool.field_heading
+field_name: field_heading
+entity_type: block_content
+bundle: registration_tool
+label: Heading
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

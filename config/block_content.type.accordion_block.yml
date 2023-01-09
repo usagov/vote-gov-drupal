@@ -1,0 +1,10 @@
+uuid: ba27a6c3-ba04-40eb-bde1-58e4188d7b7e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: iJFOUanVyjWCwA4CBy36ftfh3f2uVIfHwtzfcNYPMws
+id: accordion_block
+label: 'Accordion block'
+revision: 0
+description: 'Accordion Widget Block'

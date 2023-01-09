@@ -1,0 +1,25 @@
+uuid: c57ce7cc-49ac-4ad1-9303-da3aa7bc235c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.accordion_block
+    - field.storage.block_content.field_blocks
+_core:
+  default_config_hash: uxopBSrt26W4h0hkHA9dhnqh-tx9NCQvRcDoaa2ntz0
+id: block_content.accordion_block.field_blocks
+field_name: field_blocks
+entity_type: block_content
+bundle: accordion_block
+label: Accordions
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

@@ -1,0 +1,22 @@
+_core:
+  default_config_hash: dunZ3Eljod-O8W-58oxTgFwFcFkWDNQ0twwMdvUi1c8
+id: d7_accordion_blocks
+label: 'Accordion Blocks'
+migration_tags:
+  - 'Drupal 7'
+source:
+  plugin: accordionblock
+  constants:
+    type: accordion_block
+process:
+  id: bid
+  type: constants/type
+  info: title
+  field_blocks: content
+destination:
+  plugin: 'entity:block_content'
+  no_stub: true
+migration_dependencies:
+  required:
+    - d7_block
+    - d7_custom_block
