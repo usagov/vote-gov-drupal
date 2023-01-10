@@ -3,8 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.page.body
     - field.field.node.page.field_attachment
-    - field.field.node.page.field_content
     - node.type.page
     - workflows.workflow.publishing_content
   module:
@@ -17,6 +17,16 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
+  body:
+    type: text_textarea_with_summary
+    weight: 125
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10
@@ -29,14 +39,6 @@ content:
     region: content
     settings:
       media_types: {  }
-    third_party_settings: {  }
-  field_content:
-    type: text_textarea
-    weight: 124
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select

@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.page.body
     - field.field.node.page.field_attachment
-    - field.field.node.page.field_content
     - node.type.page
   module:
     - user
@@ -25,6 +25,6 @@ content:
     weight: 100
     region: content
 hidden:
+  body: true
   field_attachment: true
-  field_content: true
   langcode: true

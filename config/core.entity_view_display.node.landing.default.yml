@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.landing.field_content
+    - field.field.node.landing.body
     - field.field.node.landing.field_page_components
     - node.type.landing
   module:
@@ -14,12 +14,12 @@ targetEntityType: node
 bundle: landing
 mode: default
 content:
-  field_content:
+  body:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 102
+    weight: 104
     region: content
   field_page_components:
     type: entity_reference_label
