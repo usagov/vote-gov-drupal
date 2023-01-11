@@ -1,14 +1,12 @@
-uuid: 5c5e2a03-1ac8-4ead-ad7f-ec35714f14c6
+uuid: 3a120354-2342-42a5-b77b-cf132aa4ea17
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_generic_mail_received
+    - field.storage.node.field_generic_mail_received_dead
     - node.type.state_territory
-  module:
-    - text
-id: node.state_territory.field_generic_mail_received
-field_name: field_generic_mail_received
+id: node.state_territory.field_generic_mail_received_dead
+field_name: field_generic_mail_received_dead
 entity_type: node
 bundle: state_territory
 label: 'Generic mail received deadline'
@@ -18,4 +16,4 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text
+field_type: string

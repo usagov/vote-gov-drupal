@@ -9,7 +9,7 @@ id: node.state_territory.field_is_state
 field_name: field_is_state
 entity_type: node
 bundle: state_territory
-label: 'Is State'
+label: 'This is a state'
 description: "Yes - This page is for one of the 50 states in the United States\r\nNo - This page is for a territory or district of the United States"
 required: true
 translatable: false

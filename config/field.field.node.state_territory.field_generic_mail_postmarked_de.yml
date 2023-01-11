@@ -1,14 +1,12 @@
-uuid: 13fbb8ce-38bc-4236-9ee8-3571bdd93be5
+uuid: 604fb77e-c695-453e-adb4-09da3c794b44
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_generic_mail_postmarked
+    - field.storage.node.field_generic_mail_postmarked_de
     - node.type.state_territory
-  module:
-    - text
-id: node.state_territory.field_generic_mail_postmarked
-field_name: field_generic_mail_postmarked
+id: node.state_territory.field_generic_mail_postmarked_de
+field_name: field_generic_mail_postmarked_de
 entity_type: node
 bundle: state_territory
 label: 'Generic mail postmarked deadline'
@@ -18,4 +16,4 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text
+field_type: string

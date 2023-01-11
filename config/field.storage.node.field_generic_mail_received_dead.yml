@@ -1,17 +1,18 @@
-uuid: f65f52d7-581f-4f49-9dca-a9fcbeb7ec5c
+uuid: 3be87434-6d13-40e3-9921-9684ef6a0871
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - text
-id: node.field_generic_mail_postmarked
-field_name: field_generic_mail_postmarked
+id: node.field_generic_mail_received_dead
+field_name: field_generic_mail_received_dead
 entity_type: node
-type: text
+type: string
 settings:
   max_length: 255
-module: text
+  case_sensitive: false
+  is_ascii: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

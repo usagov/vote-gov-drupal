@@ -16,7 +16,7 @@ settings:
       maxlength: 255
       precision: 10
       scale: 2
-      datetime_type: datetime
+      datetime_type: date
     second:
       type: string
       maxlength: 255

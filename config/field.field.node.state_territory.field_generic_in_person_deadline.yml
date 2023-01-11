@@ -1,12 +1,10 @@
-uuid: ffb1a90c-c196-492f-9045-96c04f6d331b
+uuid: ba0a805b-4dc9-45b3-bb3b-b8de29991b49
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_generic_in_person_deadline
     - node.type.state_territory
-  module:
-    - text
 id: node.state_territory.field_generic_in_person_deadline
 field_name: field_generic_in_person_deadline
 entity_type: node
@@ -18,4 +16,4 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text
+field_type: string

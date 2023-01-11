@@ -1,17 +1,17 @@
-uuid: 6ba62bcb-0ddf-4e86-b473-d29a94dae48d
+uuid: a7b9d7f0-c98d-4487-9ec8-bd95b394909e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_in_person_deadline
+    - field.storage.node.field_onl
     - node.type.state_territory
   module:
     - double_field
-id: node.state_territory.field_in_person_deadline
-field_name: field_in_person_deadline
+id: node.state_territory.field_onl
+field_name: field_onl
 entity_type: node
 bundle: state_territory
-label: 'In-person deadline'
+label: 'Online deadline'
 description: ''
 required: false
 translatable: false

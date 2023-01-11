@@ -1,17 +1,18 @@
-uuid: 4f041e9b-8439-4cdd-9e6e-78cffd4ffd4d
+uuid: 3d10dd94-714d-4603-ba63-25c1c6e1bdb4
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - text
 id: node.field_generic_in_person_deadline
 field_name: field_generic_in_person_deadline
 entity_type: node
-type: text
+type: string
 settings:
   max_length: 255
-module: text
+  case_sensitive: false
+  is_ascii: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

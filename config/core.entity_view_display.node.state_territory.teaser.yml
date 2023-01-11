@@ -4,23 +4,22 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.state_territory.body
     - field.field.node.state_territory.field_confirm_registration_link
-    - field.field.node.state_territory.field_content
     - field.field.node.state_territory.field_election_homepage_link
     - field.field.node.state_territory.field_generic_in_person_deadline
-    - field.field.node.state_territory.field_generic_mail_postmarked
-    - field.field.node.state_territory.field_generic_mail_received
+    - field.field.node.state_territory.field_generic_mail_postmarked_de
+    - field.field.node.state_territory.field_generic_mail_received_dead
     - field.field.node.state_territory.field_generic_online_deadline
     - field.field.node.state_territory.field_in_person_deadline
     - field.field.node.state_territory.field_is_state
     - field.field.node.state_territory.field_mail_postmarked_deadline
     - field.field.node.state_territory.field_mail_received_deadline
     - field.field.node.state_territory.field_more_info_link
-    - field.field.node.state_territory.field_online_deadline
+    - field.field.node.state_territory.field_onl
     - field.field.node.state_territory.field_registration_link
     - field.field.node.state_territory.field_registration_type
     - field.field.node.state_territory.field_state_abbreviation
-    - field.field.node.state_territory.field_state_name
     - node.type.state_territory
   module:
     - user
@@ -35,21 +34,20 @@ content:
     weight: 100
     region: content
 hidden:
+  body: true
   field_confirm_registration_link: true
-  field_content: true
   field_election_homepage_link: true
   field_generic_in_person_deadline: true
-  field_generic_mail_postmarked: true
-  field_generic_mail_received: true
+  field_generic_mail_postmarked_de: true
+  field_generic_mail_received_dead: true
   field_generic_online_deadline: true
   field_in_person_deadline: true
   field_is_state: true
   field_mail_postmarked_deadline: true
   field_mail_received_deadline: true
   field_more_info_link: true
-  field_online_deadline: true
+  field_onl: true
   field_registration_link: true
   field_registration_type: true
   field_state_abbreviation: true
-  field_state_name: true
   langcode: true
