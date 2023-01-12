@@ -1,24 +1,21 @@
-uuid: a7b9d7f0-c98d-4487-9ec8-bd95b394909e
+uuid: 142ca270-a827-4c60-a346-c71bbf6db2a5
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_onl
+    - field.storage.node.field_online_deadline
     - node.type.state_territory
   module:
     - double_field
-id: node.state_territory.field_onl
-field_name: field_onl
+id: node.state_territory.field_online_deadline
+field_name: field_online_deadline
 entity_type: node
 bundle: state_territory
 label: 'Online deadline'
 description: ''
 required: false
 translatable: false
-default_value:
-  -
-    first: '2022-11-08'
-    second: '11:59PM'
+default_value: {  }
 default_value_callback: ''
 settings:
   first:

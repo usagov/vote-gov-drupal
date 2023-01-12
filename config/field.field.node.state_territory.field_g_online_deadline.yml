@@ -1,12 +1,12 @@
-uuid: 9d909a36-807a-4b46-9e86-b2f09a872eda
+uuid: 5504b7c4-8e0c-4bf4-9fba-31786d9834bc
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_generic_online_deadline
+    - field.storage.node.field_g_online_deadline
     - node.type.state_territory
-id: node.state_territory.field_generic_online_deadline
-field_name: field_generic_online_deadline
+id: node.state_territory.field_g_online_deadline
+field_name: field_g_online_deadline
 entity_type: node
 bundle: state_territory
 label: 'Generic online deadline'

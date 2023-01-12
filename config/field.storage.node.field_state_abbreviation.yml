@@ -9,7 +9,7 @@ field_name: field_state_abbreviation
 entity_type: node
 type: string
 settings:
-  max_length: 255
+  max_length: 2
   case_sensitive: false
   is_ascii: false
 module: core

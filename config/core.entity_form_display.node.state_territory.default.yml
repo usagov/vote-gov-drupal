@@ -6,22 +6,23 @@ dependencies:
     - field.field.node.state_territory.body
     - field.field.node.state_territory.field_confirm_registration_link
     - field.field.node.state_territory.field_election_homepage_link
-    - field.field.node.state_territory.field_generic_in_person_deadline
-    - field.field.node.state_territory.field_generic_mail_postmarked_de
-    - field.field.node.state_territory.field_generic_mail_received_dead
-    - field.field.node.state_territory.field_generic_online_deadline
+    - field.field.node.state_territory.field_g_in_person_deadline
+    - field.field.node.state_territory.field_g_mail_postmarked_deadline
+    - field.field.node.state_territory.field_g_mail_received_deadline
+    - field.field.node.state_territory.field_g_online_deadline
     - field.field.node.state_territory.field_in_person_deadline
     - field.field.node.state_territory.field_is_state
     - field.field.node.state_territory.field_mail_postmarked_deadline
     - field.field.node.state_territory.field_mail_received_deadline
     - field.field.node.state_territory.field_more_info_link
-    - field.field.node.state_territory.field_onl
+    - field.field.node.state_territory.field_online_deadline
     - field.field.node.state_territory.field_registration_link
     - field.field.node.state_territory.field_registration_type
     - field.field.node.state_territory.field_state_abbreviation
     - node.type.state_territory
   module:
     - content_moderation
+    - datetime
     - double_field
     - link
     - path
@@ -63,33 +64,33 @@ content:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-  field_generic_in_person_deadline:
+  field_g_in_person_deadline:
     type: string_textfield
-    weight: 140
+    weight: 149
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_generic_mail_postmarked_de:
+  field_g_mail_postmarked_deadline:
     type: string_textfield
-    weight: 142
+    weight: 150
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_generic_mail_received_dead:
+  field_g_mail_received_deadline:
     type: string_textfield
-    weight: 143
+    weight: 151
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_generic_online_deadline:
+  field_g_online_deadline:
     type: string_textfield
-    weight: 141
+    weight: 152
     region: content
     settings:
       size: 60
@@ -101,7 +102,7 @@ content:
     region: content
     settings:
       first:
-        type: null
+        type: datetime
         label_display: block
         size: 30
         placeholder: ''
@@ -109,10 +110,10 @@ content:
         cols: 10
         rows: 5
       second:
-        type: null
+        type: textfield
         label_display: block
-        size: 30
-        placeholder: ''
+        size: 8
+        placeholder: '11:59 PM'
         label: Ok
         cols: 10
         rows: 5
@@ -126,50 +127,16 @@ content:
       display_label: true
     third_party_settings: {  }
   field_mail_postmarked_deadline:
-    type: double_field
-    weight: 136
+    type: datetime_default
+    weight: 147
     region: content
-    settings:
-      first:
-        type: datetime
-        label_display: block
-        size: 30
-        placeholder: ''
-        label: Ok
-        cols: 10
-        rows: 5
-      second:
-        type: textfield
-        label_display: block
-        size: 30
-        placeholder: ''
-        label: Ok
-        cols: 10
-        rows: 5
-      inline: true
+    settings: {  }
     third_party_settings: {  }
   field_mail_received_deadline:
-    type: double_field
-    weight: 137
+    type: datetime_default
+    weight: 148
     region: content
-    settings:
-      first:
-        type: datetime
-        label_display: block
-        size: 30
-        placeholder: ''
-        label: Ok
-        cols: 10
-        rows: 5
-      second:
-        type: textfield
-        label_display: block
-        size: 30
-        placeholder: ''
-        label: Ok
-        cols: 10
-        rows: 5
-      inline: true
+    settings: {  }
     third_party_settings: {  }
   field_more_info_link:
     type: link_default
@@ -179,13 +146,13 @@ content:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-  field_onl:
+  field_online_deadline:
     type: double_field
-    weight: 145
+    weight: 146
     region: content
     settings:
       first:
-        type: null
+        type: datetime
         label_display: block
         size: 30
         placeholder: ''
@@ -193,10 +160,10 @@ content:
         cols: 10
         rows: 5
       second:
-        type: null
+        type: textfield
         label_display: block
-        size: 30
-        placeholder: ''
+        size: 8
+        placeholder: '11:59 PM'
         label: Ok
         cols: 10
         rows: 5
@@ -221,7 +188,7 @@ content:
     weight: 139
     region: content
     settings:
-      size: 60
+      size: 2
       placeholder: ''
     third_party_settings: {  }
   langcode:

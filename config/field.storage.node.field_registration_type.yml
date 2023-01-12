@@ -13,16 +13,16 @@ settings:
   allowed_values:
     -
       value: online
-      label: online
+      label: Online
     -
       value: by-mail
-      label: by-mail
+      label: By-mail
     -
       value: in-person
-      label: in-person
+      label: In-person
     -
       value: not-needed
-      label: not-needed
+      label: 'Not needed'
   allowed_values_function: ''
 module: options
 locked: false

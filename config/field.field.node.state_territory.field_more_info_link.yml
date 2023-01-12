@@ -14,7 +14,7 @@ bundle: state_territory
 label: 'More info link'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

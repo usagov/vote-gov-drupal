@@ -1,11 +1,11 @@
-uuid: 7dbe1d81-9efb-41f9-9831-106e0a17ed9b
+uuid: 00a21bb7-5007-497b-a210-dea9d0170a7e
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_generic_mail_postmarked_de
-field_name: field_generic_mail_postmarked_de
+id: node.field_g_mail_postmarked_deadline
+field_name: field_g_mail_postmarked_deadline
 entity_type: node
 type: string
 settings:

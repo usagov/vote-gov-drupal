@@ -1,29 +1,17 @@
-uuid: 1be8d606-ba73-4ec4-a06d-351fcb673698
+uuid: 187484a1-5821-4f91-bf52-464b8a48e191
 langcode: en
 status: true
 dependencies:
   module:
-    - double_field
+    - datetime
     - node
 id: node.field_mail_postmarked_deadline
 field_name: field_mail_postmarked_deadline
 entity_type: node
-type: double_field
+type: datetime
 settings:
-  storage:
-    first:
-      type: datetime_iso8601
-      maxlength: 255
-      precision: 10
-      scale: 2
-      datetime_type: date
-    second:
-      type: string
-      maxlength: 255
-      precision: 10
-      scale: 2
-      datetime_type: datetime
-module: double_field
+  datetime_type: date
+module: datetime
 locked: false
 cardinality: 1
 translatable: true

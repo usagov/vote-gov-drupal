@@ -1,15 +1,15 @@
-uuid: 604fb77e-c695-453e-adb4-09da3c794b44
+uuid: dd8348b5-3485-4a89-abbf-515de11137cc
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_generic_mail_postmarked_de
+    - field.storage.node.field_g_mail_received_deadline
     - node.type.state_territory
-id: node.state_territory.field_generic_mail_postmarked_de
-field_name: field_generic_mail_postmarked_de
+id: node.state_territory.field_g_mail_received_deadline
+field_name: field_g_mail_received_deadline
 entity_type: node
 bundle: state_territory
-label: 'Generic mail postmarked deadline'
+label: 'Generic mail received deadline'
 description: ''
 required: false
 translatable: true

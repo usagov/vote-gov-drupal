@@ -1,11 +1,11 @@
-uuid: 3d10dd94-714d-4603-ba63-25c1c6e1bdb4
+uuid: 58c9c1f9-bb91-41a2-9092-0e8e33f2c8d6
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_generic_in_person_deadline
-field_name: field_generic_in_person_deadline
+id: node.field_g_online_deadline
+field_name: field_g_online_deadline
 entity_type: node
 type: string
 settings:

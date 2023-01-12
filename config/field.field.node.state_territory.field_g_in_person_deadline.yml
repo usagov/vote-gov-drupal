@@ -1,15 +1,15 @@
-uuid: 3a120354-2342-42a5-b77b-cf132aa4ea17
+uuid: 60bfa7f2-47d9-4552-b498-743c362a6cb7
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_generic_mail_received_dead
+    - field.storage.node.field_g_in_person_deadline
     - node.type.state_territory
-id: node.state_territory.field_generic_mail_received_dead
-field_name: field_generic_mail_received_dead
+id: node.state_territory.field_g_in_person_deadline
+field_name: field_g_in_person_deadline
 entity_type: node
 bundle: state_territory
-label: 'Generic mail received deadline'
+label: 'Generic in-person deadline'
 description: ''
 required: false
 translatable: true
