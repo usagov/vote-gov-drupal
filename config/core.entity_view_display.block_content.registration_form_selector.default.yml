@@ -1,0 +1,61 @@
+uuid: 329553de-5fc7-4d06-8e47-f20de67bb49b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.registration_form_selector
+    - field.field.block_content.registration_form_selector.field_default_option_label
+    - field.field.block_content.registration_form_selector.field_description
+    - field.field.block_content.registration_form_selector.field_heading
+    - field.field.block_content.registration_form_selector.field_registration_form_link
+    - field.field.block_content.registration_form_selector.field_submit_button_label
+  module:
+    - link
+    - text
+id: block_content.registration_form_selector.default
+targetEntityType: block_content
+bundle: registration_form_selector
+mode: default
+content:
+  field_default_option_label:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_heading:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_registration_form_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_submit_button_label:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,33 @@
+uuid: aed9f742-9987-4e78-9277-26b4dd09fd18
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.search
+    - field.field.block_content.search.field_search_placeholder
+    - field.field.block_content.search.field_translated_affiliate
+  module:
+    - text
+id: block_content.search.default
+targetEntityType: block_content
+bundle: search
+mode: default
+content:
+  field_search_placeholder:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_translated_affiliate:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  info: true
+  langcode: true

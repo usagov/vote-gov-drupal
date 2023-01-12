@@ -1,0 +1,21 @@
+uuid: 523fa72f-8965-44fc-bc2e-3e64b08e7f50
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.registration_form_selector
+    - field.storage.block_content.field_default_option_label
+  module:
+    - text
+id: block_content.registration_form_selector.field_default_option_label
+field_name: field_default_option_label
+entity_type: block_content
+bundle: registration_form_selector
+label: 'Default option label'
+description: 'Default text for language selection'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

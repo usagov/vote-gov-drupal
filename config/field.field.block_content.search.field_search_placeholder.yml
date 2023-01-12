@@ -1,0 +1,21 @@
+uuid: 46e7fcfd-be10-4579-bbe2-bb5edf06e535
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.search
+    - field.storage.block_content.field_search_placeholder
+  module:
+    - text
+id: block_content.search.field_search_placeholder
+field_name: field_search_placeholder
+entity_type: block_content
+bundle: search
+label: 'Search placeholder'
+description: 'Placeholder text inside search bar'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

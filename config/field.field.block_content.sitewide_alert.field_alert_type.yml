@@ -1,0 +1,21 @@
+uuid: 250678c1-01ec-4d6b-95cc-24eae13aa2dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sitewide_alert
+    - field.storage.block_content.field_alert_type
+  module:
+    - options
+id: block_content.sitewide_alert.field_alert_type
+field_name: field_alert_type
+entity_type: block_content
+bundle: sitewide_alert
+label: 'Alert type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

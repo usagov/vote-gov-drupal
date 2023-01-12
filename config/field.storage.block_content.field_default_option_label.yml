@@ -1,0 +1,20 @@
+uuid: bc8a6e2b-57d0-4d72-9cd1-bbb8b9cc962a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+id: block_content.field_default_option_label
+field_name: field_default_option_label
+entity_type: block_content
+type: text
+settings:
+  max_length: 100
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

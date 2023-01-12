@@ -1,0 +1,8 @@
+uuid: 690d0c65-4ad9-4574-adb9-d44b617ca30a
+langcode: en
+status: true
+dependencies: {  }
+id: search
+label: 'Search block'
+revision: 0
+description: 'Search block form'

@@ -1,0 +1,32 @@
+uuid: 66010da3-7fa4-4617-88f9-6db0adc9180f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sitewide_alert
+    - field.field.block_content.sitewide_alert.field_alert_content
+    - field.field.block_content.sitewide_alert.field_alert_type
+  module:
+    - options
+    - text
+id: block_content.sitewide_alert.default
+targetEntityType: block_content
+bundle: sitewide_alert
+mode: default
+content:
+  field_alert_content:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_alert_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
