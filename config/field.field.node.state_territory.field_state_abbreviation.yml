@@ -1,0 +1,19 @@
+uuid: 25efc03d-5ca1-4707-aad2-608aadb85f51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_state_abbreviation
+    - node.type.state_territory
+id: node.state_territory.field_state_abbreviation
+field_name: field_state_abbreviation
+entity_type: node
+bundle: state_territory
+label: 'State abbreviation'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -8,7 +8,7 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: State/Territory
+name: 'State/Territory Page'
 type: state_territory
 description: ''
 help: ''

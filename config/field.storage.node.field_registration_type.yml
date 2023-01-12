@@ -1,0 +1,33 @@
+uuid: 4b7ebe43-0cad-43f0-9afe-40f452b8654e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_registration_type
+field_name: field_registration_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: online
+      label: Online
+    -
+      value: by-mail
+      label: By-mail
+    -
+      value: in-person
+      label: In-person
+    -
+      value: not-needed
+      label: 'Not needed'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

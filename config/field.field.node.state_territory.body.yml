@@ -1,4 +1,4 @@
-uuid: dfb5c372-6fab-435f-a5a2-a706e0539253
+uuid: a28b507a-e677-407c-bd43-151f7a278d17
 langcode: en
 status: true
 dependencies:
@@ -11,9 +11,9 @@ id: node.state_territory.body
 field_name: body
 entity_type: node
 bundle: state_territory
-label: Body
+label: Content
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''

@@ -1,0 +1,21 @@
+uuid: eaf7259e-60ef-458d-aadf-37a4cb7fb59b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mail_received_deadline
+    - node.type.state_territory
+  module:
+    - datetime
+id: node.state_territory.field_mail_received_deadline
+field_name: field_mail_received_deadline
+entity_type: node
+bundle: state_territory
+label: 'Mail received deadline'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
