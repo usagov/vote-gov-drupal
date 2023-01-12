@@ -1,0 +1,17 @@
+uuid: e23f3019-7564-4e34-98f3-24262082d434
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'State/Territory Page'
+type: state_territory
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

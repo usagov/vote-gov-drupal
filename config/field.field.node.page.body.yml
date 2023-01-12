@@ -1,4 +1,4 @@
-uuid: c77b1e18-836e-4e49-8c3a-8ecff2748022
+uuid: 8f722f3c-a9dd-4647-8676-50ea55cb0512
 langcode: en
 status: true
 dependencies:
@@ -11,9 +11,9 @@ id: node.page.body
 field_name: body
 entity_type: node
 bundle: page
-label: Body
+label: Content
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''

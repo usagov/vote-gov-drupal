@@ -1,0 +1,19 @@
+uuid: ae7204ab-c6ec-4998-b3e9-0b8c64d010a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_g_mail_postmarked_deadline
+    - node.type.state_territory
+id: node.state_territory.field_g_mail_postmarked_deadline
+field_name: field_g_mail_postmarked_deadline
+entity_type: node
+bundle: state_territory
+label: 'Generic mail postmarked deadline'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

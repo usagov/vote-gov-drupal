@@ -1,27 +1,27 @@
-uuid: cbd7b480-2478-420f-9f03-0e0f961a5d41
+uuid: e00efec6-1b94-4040-b2a0-5e70950fa988
 langcode: en
 status: true
 dependencies:
   module:
     - language
     - node
-id: spanish_test_path
-label: 'Spanish test path'
+id: state_territory_es
+label: 'State/Territory (es)'
 type: 'canonical_entities:node'
 pattern: '/registrar/[node:title]'
 selection_criteria:
-  6144b369-bb5c-4662-904e-cb154b097413:
+  0fefcbbc-ea35-4997-aa9d-5f36189264c5:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 6144b369-bb5c-4662-904e-cb154b097413
+    uuid: 0fefcbbc-ea35-4997-aa9d-5f36189264c5
     context_mapping:
       node: node
     bundles:
-      page: page
-  93265abf-a59f-4cdf-90a6-a42ff66561d2:
+      state_territory: state_territory
+  0e28a1ca-8d3f-4454-93ea-e74e49f7976c:
     id: language
     negate: false
-    uuid: 93265abf-a59f-4cdf-90a6-a42ff66561d2
+    uuid: 0e28a1ca-8d3f-4454-93ea-e74e49f7976c
     context_mapping:
       language: 'node:langcode:language'
     langcodes:

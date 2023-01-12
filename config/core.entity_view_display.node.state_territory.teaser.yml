@@ -1,0 +1,61 @@
+uuid: 4658fa2b-280a-496d-9137-69d63d8bd5a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.state_territory.body
+    - field.field.node.state_territory.field_confirm_registration_link
+    - field.field.node.state_territory.field_election_homepage_link
+    - field.field.node.state_territory.field_g_in_person_deadline
+    - field.field.node.state_territory.field_g_mail_postmarked_deadline
+    - field.field.node.state_territory.field_g_mail_received_deadline
+    - field.field.node.state_territory.field_g_online_deadline
+    - field.field.node.state_territory.field_in_person_deadline
+    - field.field.node.state_territory.field_is_state
+    - field.field.node.state_territory.field_mail_postmarked_deadline
+    - field.field.node.state_territory.field_mail_received_deadline
+    - field.field.node.state_territory.field_more_info_link
+    - field.field.node.state_territory.field_online_deadline
+    - field.field.node.state_territory.field_override_confirm_reg_link
+    - field.field.node.state_territory.field_override_election_hp_link
+    - field.field.node.state_territory.field_override_more_info_link
+    - field.field.node.state_territory.field_override_registration_link
+    - field.field.node.state_territory.field_registration_link
+    - field.field.node.state_territory.field_registration_type
+    - field.field.node.state_territory.field_state_abbreviation
+    - node.type.state_territory
+  module:
+    - user
+id: node.state_territory.teaser
+targetEntityType: node
+bundle: state_territory
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  field_confirm_registration_link: true
+  field_election_homepage_link: true
+  field_g_in_person_deadline: true
+  field_g_mail_postmarked_deadline: true
+  field_g_mail_received_deadline: true
+  field_g_online_deadline: true
+  field_in_person_deadline: true
+  field_is_state: true
+  field_mail_postmarked_deadline: true
+  field_mail_received_deadline: true
+  field_more_info_link: true
+  field_online_deadline: true
+  field_override_confirm_reg_link: true
+  field_override_election_hp_link: true
+  field_override_more_info_link: true
+  field_override_registration_link: true
+  field_registration_link: true
+  field_registration_type: true
+  field_state_abbreviation: true
+  langcode: true

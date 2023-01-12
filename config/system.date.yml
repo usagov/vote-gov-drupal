@@ -6,6 +6,6 @@ country:
 timezone:
   default: America/New_York
   user:
-    configurable: true
+    configurable: false
     default: 0
     warn: false
