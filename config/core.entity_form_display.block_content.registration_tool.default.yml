@@ -6,7 +6,6 @@ dependencies:
     - block_content.type.registration_tool
     - field.field.block_content.registration_tool.field_dropdown_label
     - field.field.block_content.registration_tool.field_form_heading
-    - field.field.block_content.registration_tool.field_heading
     - field.field.block_content.registration_tool.field_submit_button
   module:
     - text
@@ -26,14 +25,6 @@ content:
   field_form_heading:
     type: text_textfield
     weight: 27
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_heading:
-    type: text_textfield
-    weight: 26
     region: content
     settings:
       size: 60

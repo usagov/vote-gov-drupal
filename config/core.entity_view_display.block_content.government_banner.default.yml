@@ -4,58 +4,62 @@ status: true
 dependencies:
   config:
     - block_content.type.government_banner
-    - field.field.block_content.government_banner.field__gov_heading
-    - field.field.block_content.government_banner.field__gov_text
     - field.field.block_content.government_banner.field_accordion_link
     - field.field.block_content.government_banner.field_accordion_text
+    - field.field.block_content.government_banner.field_gov_heading
+    - field.field.block_content.government_banner.field_gov_text
     - field.field.block_content.government_banner.field_https_heading
     - field.field.block_content.government_banner.field_https_text
-  module:
-    - text
 id: block_content.government_banner.default
 targetEntityType: block_content
 bundle: government_banner
 mode: default
 content:
-  field__gov_heading:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field__gov_text:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 3
-    region: content
   field_accordion_link:
-    type: text_default
+    type: string
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 1
     region: content
   field_accordion_text:
-    type: text_default
+    type: string
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 0
     region: content
-  field_https_heading:
-    type: text_default
+  field_gov_heading:
+    type: string
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_gov_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_https_heading:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 4
     region: content
   field_https_text:
-    type: text_default
+    type: string
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 5
     region: content

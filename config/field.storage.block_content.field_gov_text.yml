@@ -1,17 +1,18 @@
-uuid: f654f67a-1b96-4d24-9682-a35e5c592b3d
+uuid: 316a720a-b323-4ab2-843a-e9d2fe35484d
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
-    - text
-id: block_content.field__gov_heading
-field_name: field__gov_heading
+id: block_content.field_gov_text
+field_name: field_gov_text
 entity_type: block_content
-type: text
+type: string
 settings:
   max_length: 255
-module: text
+  case_sensitive: false
+  is_ascii: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

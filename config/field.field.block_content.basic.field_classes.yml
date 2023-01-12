@@ -1,21 +1,19 @@
-uuid: 55cb0335-0df9-45cb-940a-8246ba4650c9
+uuid: 64b8a15a-e614-4ec6-8b21-23185add00c6
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.basic
     - field.storage.block_content.field_classes
-  module:
-    - text
 id: block_content.basic.field_classes
 field_name: field_classes
 entity_type: block_content
 bundle: basic
 label: Classes
-description: ''
+description: 'Separate classes with a space'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text
+field_type: string

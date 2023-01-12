@@ -1,12 +1,10 @@
-uuid: 4d48ea7d-37fe-4abb-a53f-f65edc3ece33
+uuid: 43b4c965-458a-4851-9a5c-c7008d8b109f
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.government_banner
     - field.storage.block_content.field_https_heading
-  module:
-    - text
 id: block_content.government_banner.field_https_heading
 field_name: field_https_heading
 entity_type: block_content
@@ -14,8 +12,8 @@ bundle: government_banner
 label: 'https heading'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text
+field_type: string

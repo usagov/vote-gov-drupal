@@ -1,21 +1,19 @@
-uuid: 0735a25f-6d6d-4608-a27b-752c93c4a167
+uuid: 2b8908f2-8ba3-4502-9f3f-aeeb955c6fe7
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.accordion_block
     - field.storage.block_content.field_heading
-  module:
-    - text
 id: block_content.accordion_block.field_heading
 field_name: field_heading
 entity_type: block_content
 bundle: accordion_block
 label: Heading
 description: ''
-required: false
-translatable: true
+required: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text
+field_type: string

@@ -1,17 +1,18 @@
-uuid: 76e14e66-7b64-4145-9881-eec259444555
+uuid: 183fb2ed-441a-4b01-8a23-05f09563be04
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
-    - text
 id: block_content.field_accordion_link
 field_name: field_accordion_link
 entity_type: block_content
-type: text
+type: string
 settings:
   max_length: 255
-module: text
+  case_sensitive: false
+  is_ascii: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

@@ -6,8 +6,6 @@ dependencies:
     - block_content.type.accordion_block
     - field.field.block_content.accordion_block.field_blocks
     - field.field.block_content.accordion_block.field_heading
-  module:
-    - text
 _core:
   default_config_hash: b5qTdS32_Dz7EkE_0eyOwLJw6dgUnKE1JPGxLGhacYk
 id: block_content.accordion_block.default
@@ -25,7 +23,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_heading:
-    type: text_textfield
+    type: string_textfield
     weight: 26
     region: content
     settings:

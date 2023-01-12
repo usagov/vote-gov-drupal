@@ -1,21 +1,19 @@
-uuid: aa3c70bb-e420-4dd1-be94-c6ff83ea7582
+uuid: a10a3947-a948-43b6-984a-13621f5bdc15
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.basic
     - field.storage.block_content.field_heading
-  module:
-    - text
 id: block_content.basic.field_heading
 field_name: field_heading
 entity_type: block_content
 bundle: basic
 label: Heading
 description: ''
-required: true
-translatable: false
+required: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text
+field_type: string
