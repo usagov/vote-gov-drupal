@@ -16,6 +16,10 @@ dependencies:
     - field.field.node.state_territory.field_mail_received_deadline
     - field.field.node.state_territory.field_more_info_link
     - field.field.node.state_territory.field_online_deadline
+    - field.field.node.state_territory.field_override_confirm_reg_link
+    - field.field.node.state_territory.field_override_election_hp_link
+    - field.field.node.state_territory.field_override_more_info_link
+    - field.field.node.state_territory.field_override_registration_link
     - field.field.node.state_territory.field_registration_link
     - field.field.node.state_territory.field_registration_type
     - field.field.node.state_territory.field_state_abbreviation
@@ -168,6 +172,38 @@ content:
         cols: 10
         rows: 5
       inline: false
+    third_party_settings: {  }
+  field_override_confirm_reg_link:
+    type: link_default
+    weight: 153
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_override_election_hp_link:
+    type: link_default
+    weight: 154
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_override_more_info_link:
+    type: link_default
+    weight: 155
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_override_registration_link:
+    type: link_default
+    weight: 156
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   field_registration_link:
     type: link_default

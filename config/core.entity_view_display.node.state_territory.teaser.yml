@@ -17,6 +17,10 @@ dependencies:
     - field.field.node.state_territory.field_mail_received_deadline
     - field.field.node.state_territory.field_more_info_link
     - field.field.node.state_territory.field_online_deadline
+    - field.field.node.state_territory.field_override_confirm_reg_link
+    - field.field.node.state_territory.field_override_election_hp_link
+    - field.field.node.state_territory.field_override_more_info_link
+    - field.field.node.state_territory.field_override_registration_link
     - field.field.node.state_territory.field_registration_link
     - field.field.node.state_territory.field_registration_type
     - field.field.node.state_territory.field_state_abbreviation
@@ -47,6 +51,10 @@ hidden:
   field_mail_received_deadline: true
   field_more_info_link: true
   field_online_deadline: true
+  field_override_confirm_reg_link: true
+  field_override_election_hp_link: true
+  field_override_more_info_link: true
+  field_override_registration_link: true
   field_registration_link: true
   field_registration_type: true
   field_state_abbreviation: true
