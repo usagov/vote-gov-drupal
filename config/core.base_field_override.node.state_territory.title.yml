@@ -1,0 +1,18 @@
+uuid: 39001e86-e91c-4b99-9c1d-6d2c76c46e96
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.state_territory
+id: node.state_territory.title
+field_name: title
+entity_type: node
+bundle: state_territory
+label: 'State name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: 00a21bb7-5007-497b-a210-dea9d0170a7e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_g_mail_postmarked_deadline
+field_name: field_g_mail_postmarked_deadline
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

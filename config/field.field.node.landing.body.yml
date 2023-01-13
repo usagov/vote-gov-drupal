@@ -1,4 +1,4 @@
-uuid: 88dc2bb2-5277-4b9b-a99e-26196f26f498
+uuid: f78d779b-5caa-4418-8ff1-ae5f5371ff9e
 langcode: en
 status: true
 dependencies:
@@ -11,9 +11,9 @@ id: node.landing.body
 field_name: body
 entity_type: node
 bundle: landing
-label: Body
+label: Content
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''

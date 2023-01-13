@@ -1,0 +1,23 @@
+uuid: 42f08553-7773-4883-91ab-7dc263c96f83
+langcode: ko
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_override_more_info_link
+    - node.type.state_territory
+  module:
+    - link
+id: node.state_territory.field_override_more_info_link
+field_name: field_override_more_info_link
+entity_type: node
+bundle: state_territory
+label: 'More info link (override)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link
