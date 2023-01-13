@@ -1,18 +1,18 @@
-uuid: 8437ff69-476a-4b11-b053-7dba211d0b65
+uuid: 6c24efa1-bbb2-4dc0-a5cb-f4cbf96a90b6
 langcode: en
 status: true
 dependencies:
   config:
-    - media.type.audio
+    - block_content.type.registration_tool
   module:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: media.audio
-target_entity_type_id: media
-target_bundle: audio
+id: block_content.registration_tool
+target_entity_type_id: block_content
+target_bundle: registration_tool
 default_langcode: site_default
 language_alterable: false
