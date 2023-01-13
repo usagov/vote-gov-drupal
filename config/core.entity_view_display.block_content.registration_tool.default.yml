@@ -6,32 +6,42 @@ dependencies:
     - block_content.type.registration_tool
     - field.field.block_content.registration_tool.field_dropdown_label
     - field.field.block_content.registration_tool.field_form_heading
-    - field.field.block_content.registration_tool.field_submit_button
-  module:
-    - text
+    - field.field.block_content.registration_tool.field_heading
+    - field.field.block_content.registration_tool.field_submit_button_label
 id: block_content.registration_tool.default
 targetEntityType: block_content
 bundle: registration_tool
 mode: default
 content:
   field_dropdown_label:
-    type: text_default
+    type: string
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 2
     region: content
   field_form_heading:
-    type: text_default
+    type: string
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 4
     region: content
-  field_submit_button:
-    type: text_default
+  field_heading:
+    type: string
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_submit_button_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 3
     region: content

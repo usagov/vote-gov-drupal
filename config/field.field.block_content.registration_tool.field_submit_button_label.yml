@@ -1,15 +1,15 @@
-uuid: 6af3e4cd-5010-45f3-999f-e71ecf5502d0
+uuid: 9d2703b6-c935-46fd-9026-19f4f5581905
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.registration_tool
-    - field.storage.block_content.field_form_heading
-id: block_content.registration_tool.field_form_heading
-field_name: field_form_heading
+    - field.storage.block_content.field_submit_button_label
+id: block_content.registration_tool.field_submit_button_label
+field_name: field_submit_button_label
 entity_type: block_content
 bundle: registration_tool
-label: 'Form heading'
+label: 'Submit button label'
 description: ''
 required: true
 translatable: true

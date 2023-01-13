@@ -6,16 +6,15 @@ dependencies:
     - block_content.type.registration_tool
     - field.field.block_content.registration_tool.field_dropdown_label
     - field.field.block_content.registration_tool.field_form_heading
-    - field.field.block_content.registration_tool.field_submit_button
-  module:
-    - text
+    - field.field.block_content.registration_tool.field_heading
+    - field.field.block_content.registration_tool.field_submit_button_label
 id: block_content.registration_tool.default
 targetEntityType: block_content
 bundle: registration_tool
 mode: default
 content:
   field_dropdown_label:
-    type: text_textfield
+    type: string_textfield
     weight: 28
     region: content
     settings:
@@ -23,15 +22,23 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_form_heading:
-    type: text_textfield
-    weight: 27
+    type: string_textfield
+    weight: 30
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_submit_button:
-    type: text_textfield
+  field_heading:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_submit_button_label:
+    type: string_textfield
     weight: 29
     region: content
     settings:
@@ -52,5 +59,10 @@ content:
     region: content
     settings:
       include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden: {  }

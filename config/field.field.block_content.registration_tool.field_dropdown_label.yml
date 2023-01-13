@@ -1,21 +1,19 @@
-uuid: 7f83d4aa-686b-4b2b-8563-c974c66e922c
+uuid: 6ffe4015-6b87-43de-ba2a-bc8a32b454e2
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.registration_tool
     - field.storage.block_content.field_dropdown_label
-  module:
-    - text
 id: block_content.registration_tool.field_dropdown_label
 field_name: field_dropdown_label
 entity_type: block_content
 bundle: registration_tool
-label: 'Dropdown Label'
+label: 'Dropdown label'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text
+field_type: string
