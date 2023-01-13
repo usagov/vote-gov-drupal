@@ -1,0 +1,16 @@
+uuid: b8b90b5d-b543-4828-968c-8dd6ba9365fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.accordion_group
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.accordion_group
+target_entity_type_id: block_content
+target_bundle: accordion_group
+default_langcode: site_default
+language_alterable: false

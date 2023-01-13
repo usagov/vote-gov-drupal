@@ -1,0 +1,39 @@
+uuid: 007a889f-5740-4462-827d-6c44998f0934
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.accordion_group
+    - field.storage.block_content.field_accordions
+  module:
+    - double_field
+id: block_content.accordion_group.field_accordions
+field_name: field_accordions
+entity_type: block_content
+bundle: accordion_group
+label: Accordions
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  first:
+    label: Title
+    list: false
+    allowed_values: {  }
+    max: null
+    min: null
+    required: true
+    on_label: 'On'
+    off_label: 'Off'
+  second:
+    label: Content
+    list: false
+    allowed_values: {  }
+    max: null
+    min: null
+    required: true
+    on_label: 'On'
+    off_label: 'Off'
+field_type: double_field

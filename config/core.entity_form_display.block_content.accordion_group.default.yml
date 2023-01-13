@@ -1,0 +1,67 @@
+uuid: 4c3f9fb8-c7d0-446b-a05e-7305428d6b84
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.accordion_group
+    - field.field.block_content.accordion_group.field_accordions
+    - field.field.block_content.accordion_group.field_heading
+  module:
+    - double_field
+id: block_content.accordion_group.default
+targetEntityType: block_content
+bundle: accordion_group
+mode: default
+content:
+  field_accordions:
+    type: double_field
+    weight: 27
+    region: content
+    settings:
+      first:
+        type: null
+        label_display: block
+        size: 30
+        placeholder: ''
+        label: Ok
+        cols: 10
+        rows: 5
+      second:
+        type: null
+        label_display: block
+        size: 30
+        placeholder: ''
+        label: Ok
+        cols: 10
+        rows: 5
+      inline: false
+    third_party_settings: {  }
+  field_heading:
+    type: string_textfield
+    weight: 28
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

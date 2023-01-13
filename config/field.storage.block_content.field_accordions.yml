@@ -1,0 +1,32 @@
+uuid: f0930379-5a80-4f68-a879-a95509ce700a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - double_field
+id: block_content.field_accordions
+field_name: field_accordions
+entity_type: block_content
+type: double_field
+settings:
+  storage:
+    first:
+      type: string
+      maxlength: 255
+      precision: 10
+      scale: 2
+      datetime_type: datetime
+    second:
+      type: text
+      maxlength: 255
+      precision: 10
+      scale: 2
+      datetime_type: datetime
+module: double_field
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

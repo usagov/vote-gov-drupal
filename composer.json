@@ -21,6 +21,7 @@
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",
+        "drupal/double_field": "^4.1",
         "drupal/language_switcher_extended": "^1.1",
         "drupal/pathauto": "^1.11",
         "drupal/redirect": "^1.8",
@@ -80,6 +81,12 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
+        },
+        "enable-patching": true,
+        "patches": {
+            "drupal/core": {
+                "support-input-filters-2091587-3.patch": "https://www.drupal.org/files/support-input-filters-2091587-3.patch"
+            }
         }
     }
 }
