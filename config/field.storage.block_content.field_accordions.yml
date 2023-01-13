@@ -1,4 +1,4 @@
-uuid: f0930379-5a80-4f68-a879-a95509ce700a
+uuid: 24e56b49-f3e1-4477-bfac-2df07f3664da
 langcode: en
 status: true
 dependencies:
@@ -18,7 +18,7 @@ settings:
       scale: 2
       datetime_type: datetime
     second:
-      type: text
+      type: text_long
       maxlength: 255
       precision: 10
       scale: 2

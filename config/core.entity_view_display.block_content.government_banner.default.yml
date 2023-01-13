@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - block_content.type.government_banner
-    - field.field.block_content.government_banner.field_accordion_link
+    - field.field.block_content.government_banner.field_accordion_link_label
     - field.field.block_content.government_banner.field_accordion_text
     - field.field.block_content.government_banner.field_gov_heading
     - field.field.block_content.government_banner.field_gov_text
@@ -15,13 +15,13 @@ targetEntityType: block_content
 bundle: government_banner
 mode: default
 content:
-  field_accordion_link:
+  field_accordion_link_label:
     type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 6
     region: content
   field_accordion_text:
     type: string

@@ -15,7 +15,7 @@ mode: default
 content:
   field_accordions:
     type: double_field
-    weight: 27
+    weight: 29
     region: content
     settings:
       first:

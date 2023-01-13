@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: registration_tool
-label: 'Registration Tool'
+label: 'Registration tool'
 revision: 0
 description: ''

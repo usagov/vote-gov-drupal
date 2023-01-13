@@ -1,4 +1,4 @@
-uuid: 007a889f-5740-4462-827d-6c44998f0934
+uuid: 5a500cd9-51c4-4829-9874-02c0f1b9ed1e
 langcode: en
 status: true
 dependencies:
@@ -19,7 +19,7 @@ default_value: {  }
 default_value_callback: ''
 settings:
   first:
-    label: Title
+    label: ''
     list: false
     allowed_values: {  }
     max: null
@@ -28,7 +28,7 @@ settings:
     on_label: 'On'
     off_label: 'Off'
   second:
-    label: Content
+    label: ''
     list: false
     allowed_values: {  }
     max: null

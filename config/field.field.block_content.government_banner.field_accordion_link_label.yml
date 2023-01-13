@@ -1,16 +1,16 @@
-uuid: 37aee322-f52e-43a3-85dc-c48333b3bd55
+uuid: 321d7b02-efe4-4c0a-adae-25ce3e31f246
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.government_banner
-    - field.storage.block_content.field_accordion_link
-id: block_content.government_banner.field_accordion_link
-field_name: field_accordion_link
+    - field.storage.block_content.field_accordion_link_label
+id: block_content.government_banner.field_accordion_link_label
+field_name: field_accordion_link_label
 entity_type: block_content
 bundle: government_banner
-label: 'Accordion link'
-description: 'trigger for accordion'
+label: 'Accordion link label'
+description: ''
 required: true
 translatable: true
 default_value: {  }
