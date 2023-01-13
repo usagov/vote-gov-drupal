@@ -1,0 +1,55 @@
+uuid: e7848194-9963-4ea6-8827-c1509eae4351
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.email_signup
+    - field.field.block_content.email_signup.field_email_field_label
+    - field.field.block_content.email_signup.field_heading
+    - field.field.block_content.email_signup.field_link
+    - field.field.block_content.email_signup.field_signup_button_label
+  module:
+    - link
+id: block_content.email_signup.default
+targetEntityType: block_content
+bundle: email_signup
+mode: default
+content:
+  field_email_field_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_heading:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_signup_button_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  langcode: true
