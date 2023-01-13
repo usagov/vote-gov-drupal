@@ -84,7 +84,7 @@
         },
         "enable-patching": true,
         "patches": {
-            "drupal/core": {
+            "drupal/double_field": {
                 "support-input-filters-2091587-3.patch": "https://www.drupal.org/files/support-input-filters-2091587-3.patch"
             }
         }
