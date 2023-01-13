@@ -1,0 +1,19 @@
+uuid: ca2b3980-7df2-4ae2-87c5-3bd34482849e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.email_signup
+    - field.storage.block_content.field_signup_button_label
+id: block_content.email_signup.field_signup_button_label
+field_name: field_signup_button_label
+entity_type: block_content
+bundle: email_signup
+label: 'Signup button label'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

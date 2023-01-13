@@ -1,0 +1,8 @@
+uuid: fbf2dd3d-714d-4790-b01b-9347a81bb59d
+langcode: en
+status: true
+dependencies: {  }
+id: email_signup
+label: 'Email Signup'
+revision: 0
+description: ''
