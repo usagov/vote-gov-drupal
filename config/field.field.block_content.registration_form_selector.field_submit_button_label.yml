@@ -1,21 +1,19 @@
-uuid: 58a63e96-5b45-433c-9463-ad7646ed58f6
+uuid: 7d12712c-7f95-450e-a387-fe600809f587
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.registration_form_selector
     - field.storage.block_content.field_submit_button_label
-  module:
-    - text
 id: block_content.registration_form_selector.field_submit_button_label
 field_name: field_submit_button_label
 entity_type: block_content
 bundle: registration_form_selector
 label: 'Submit button label'
-description: 'Text inside submit button'
+description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text
+field_type: string

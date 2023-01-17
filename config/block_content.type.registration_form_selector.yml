@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: registration_form_selector
-label: 'Registration Form Selector'
+label: 'Registration form selector'
 revision: 0
-description: 'Form selector to download National Voter Registration Form'
+description: ''

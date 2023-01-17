@@ -5,4 +5,4 @@ dependencies: {  }
 id: search
 label: 'Search block'
 revision: 0
-description: 'Search block form'
+description: ''

@@ -9,10 +9,10 @@ id: block_content.search.field_translated_affiliate
 field_name: field_translated_affiliate
 entity_type: block_content
 bundle: search
-label: 'Translated Affiliate'
+label: 'Translated affiliate'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: 0

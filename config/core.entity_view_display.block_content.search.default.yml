@@ -6,19 +6,18 @@ dependencies:
     - block_content.type.search
     - field.field.block_content.search.field_search_placeholder
     - field.field.block_content.search.field_translated_affiliate
-  module:
-    - text
 id: block_content.search.default
 targetEntityType: block_content
 bundle: search
 mode: default
 content:
   field_search_placeholder:
-    type: text_default
+    type: string
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 3
     region: content
   field_translated_affiliate:
     type: boolean

@@ -12,10 +12,10 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: Emergency
+      value: emergency
       label: Emergency
     -
-      value: Informational
+      value: info
       label: Informational
   allowed_values_function: ''
 module: options

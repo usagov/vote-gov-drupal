@@ -5,4 +5,4 @@ dependencies: {  }
 id: sitewide_alert
 label: 'Sitewide alert'
 revision: 0
-description: 'Alert message shown across entire site'
+description: ''

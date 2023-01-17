@@ -1,21 +1,19 @@
-uuid: 8d72a842-b5b4-4ba1-9316-cc6f2481d11e
+uuid: c4d30d16-2cd3-4469-9100-417ce2eed062
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.registration_form_selector
     - field.storage.block_content.field_description
-  module:
-    - text
 id: block_content.registration_form_selector.field_description
 field_name: field_description
 entity_type: block_content
 bundle: registration_form_selector
 label: Description
-description: 'Main block content'
+description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text
+field_type: string

@@ -11,31 +11,30 @@ dependencies:
     - field.field.block_content.registration_form_selector.field_submit_button_label
   module:
     - link
-    - text
 id: block_content.registration_form_selector.default
 targetEntityType: block_content
 bundle: registration_form_selector
 mode: default
 content:
   field_default_option_label:
-    type: text_textfield
-    weight: 1
+    type: string_textfield
+    weight: 26
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_description:
-    type: text_textfield
-    weight: 3
+    type: string_textfield
+    weight: 28
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_heading:
-    type: text_textfield
-    weight: 2
+    type: string_textfield
+    weight: 27
     region: content
     settings:
       size: 60
@@ -50,12 +49,17 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
   field_submit_button_label:
-    type: text_textfield
-    weight: 4
+    type: string_textfield
+    weight: 29
     region: content
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   info: true
