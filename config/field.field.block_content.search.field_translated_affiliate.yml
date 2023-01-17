@@ -11,7 +11,7 @@ entity_type: block_content
 bundle: search
 label: 'Translated affiliate'
 description: ''
-required: true
+required: false
 translatable: true
 default_value:
   -

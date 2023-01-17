@@ -11,7 +11,7 @@ id: block_content.registration_form_selector.field_registration_form_link
 field_name: field_registration_form_link
 entity_type: block_content
 bundle: registration_form_selector
-label: 'Registration form label'
+label: 'Registration form link'
 description: ''
 required: true
 translatable: true

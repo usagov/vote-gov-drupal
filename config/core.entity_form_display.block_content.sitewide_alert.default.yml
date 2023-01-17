@@ -15,7 +15,7 @@ mode: default
 content:
   field_alert_content:
     type: text_textarea
-    weight: 1
+    weight: 2
     region: content
     settings:
       rows: 5
@@ -23,10 +23,22 @@ content:
     third_party_settings: {  }
   field_alert_type:
     type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  info:
+    type: string_textfield
     weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  info: true
   langcode: true

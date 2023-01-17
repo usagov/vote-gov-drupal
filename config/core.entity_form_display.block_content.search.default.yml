@@ -13,7 +13,7 @@ mode: default
 content:
   field_search_placeholder:
     type: string_textfield
-    weight: 26
+    weight: 3
     region: content
     settings:
       size: 60
@@ -26,11 +26,18 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  info: true
   langcode: true
