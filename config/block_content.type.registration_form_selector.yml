@@ -1,0 +1,8 @@
+uuid: e561b720-244d-45d1-aceb-17a216fe5f82
+langcode: en
+status: true
+dependencies: {  }
+id: registration_form_selector
+label: 'Registration form selector'
+revision: 0
+description: ''

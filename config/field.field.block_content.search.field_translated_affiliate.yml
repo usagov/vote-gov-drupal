@@ -1,0 +1,23 @@
+uuid: 8c98accb-28d0-4e64-8fee-d67445e999b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.search
+    - field.storage.block_content.field_translated_affiliate
+id: block_content.search.field_translated_affiliate
+field_name: field_translated_affiliate
+entity_type: block_content
+bundle: search
+label: 'Translated affiliate'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'True'
+  off_label: 'False'
+field_type: boolean

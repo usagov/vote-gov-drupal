@@ -1,11 +1,11 @@
-uuid: ee4e4049-6779-4802-b62b-73857bbe3918
+uuid: 14e9c77d-7da0-40a9-8e2d-9c849de56a8c
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
-id: block_content.field_submit_button_label
-field_name: field_submit_button_label
+id: block_content.field_description
+field_name: field_description
 entity_type: block_content
 type: string
 settings:

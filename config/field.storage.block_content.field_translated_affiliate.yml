@@ -1,17 +1,14 @@
-uuid: ee4e4049-6779-4802-b62b-73857bbe3918
+uuid: e30db4f4-2814-40fe-bd5e-9bee3ef18b73
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
-id: block_content.field_submit_button_label
-field_name: field_submit_button_label
+id: block_content.field_translated_affiliate
+field_name: field_translated_affiliate
 entity_type: block_content
-type: string
-settings:
-  max_length: 255
-  case_sensitive: false
-  is_ascii: false
+type: boolean
+settings: {  }
 module: core
 locked: false
 cardinality: 1

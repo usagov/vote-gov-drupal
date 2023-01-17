@@ -1,0 +1,19 @@
+uuid: 9185d45c-4424-4098-85e8-1e6697f05490
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.search
+    - field.storage.block_content.field_search_placeholder
+id: block_content.search.field_search_placeholder
+field_name: field_search_placeholder
+entity_type: block_content
+bundle: search
+label: 'Search placeholder'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

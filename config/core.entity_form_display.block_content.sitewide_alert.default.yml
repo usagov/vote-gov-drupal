@@ -1,0 +1,44 @@
+uuid: cd57fd7f-1e33-44f5-9a39-332d594581d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sitewide_alert
+    - field.field.block_content.sitewide_alert.field_alert_content
+    - field.field.block_content.sitewide_alert.field_alert_type
+  module:
+    - text
+id: block_content.sitewide_alert.default
+targetEntityType: block_content
+bundle: sitewide_alert
+mode: default
+content:
+  field_alert_content:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_alert_type:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

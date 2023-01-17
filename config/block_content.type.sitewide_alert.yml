@@ -1,0 +1,8 @@
+uuid: c0f06e5a-1131-415d-8522-fc41499e9ad7
+langcode: en
+status: true
+dependencies: {  }
+id: sitewide_alert
+label: 'Sitewide alert'
+revision: 0
+description: ''

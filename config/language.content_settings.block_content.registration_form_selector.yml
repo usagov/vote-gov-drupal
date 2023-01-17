@@ -1,0 +1,18 @@
+uuid: b35c20ce-af07-407e-8025-d79aaccf0821
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.registration_form_selector
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: block_content.registration_form_selector
+target_entity_type_id: block_content
+target_bundle: registration_form_selector
+default_langcode: site_default
+language_alterable: false
