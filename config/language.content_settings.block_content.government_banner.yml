@@ -1,18 +1,18 @@
-uuid: 8437ff69-476a-4b11-b053-7dba211d0b65
+uuid: 756c41fa-fd2a-43e5-b5cc-383f4f819178
 langcode: en
 status: true
 dependencies:
   config:
-    - media.type.audio
+    - block_content.type.government_banner
   module:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: media.audio
-target_entity_type_id: media
-target_bundle: audio
+id: block_content.government_banner
+target_entity_type_id: block_content
+target_bundle: government_banner
 default_langcode: site_default
 language_alterable: false

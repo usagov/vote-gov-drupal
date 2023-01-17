@@ -1,0 +1,19 @@
+uuid: 6173343c-8a95-4649-b551-c8a3d185ae8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.government_banner
+    - field.storage.block_content.field_gov_text
+id: block_content.government_banner.field_gov_text
+field_name: field_gov_text
+entity_type: block_content
+bundle: government_banner
+label: '.gov text'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

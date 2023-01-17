@@ -1,0 +1,8 @@
+uuid: 696f989b-3f6c-4f8a-9492-24374e52b79b
+langcode: en
+status: true
+dependencies: {  }
+id: government_banner
+label: 'Government banner'
+revision: 0
+description: ''

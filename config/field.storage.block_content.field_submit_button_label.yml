@@ -4,14 +4,15 @@ status: true
 dependencies:
   module:
     - block_content
-    - text
 id: block_content.field_submit_button_label
 field_name: field_submit_button_label
 entity_type: block_content
-type: text
+type: string
 settings:
-  max_length: 100
-module: text
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

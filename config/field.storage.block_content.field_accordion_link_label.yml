@@ -1,11 +1,11 @@
-uuid: 177bf339-3275-421e-84fb-7353bcd5523d
+uuid: 68d0c3d8-f82e-4d76-95cd-7dab481f19d1
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
-id: block_content.field_heading
-field_name: field_heading
+id: block_content.field_accordion_link_label
+field_name: field_accordion_link_label
 entity_type: block_content
 type: string
 settings:

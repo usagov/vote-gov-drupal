@@ -1,11 +1,11 @@
-uuid: 177bf339-3275-421e-84fb-7353bcd5523d
+uuid: da449adb-4dbb-4c2e-937c-df7fd95bc937
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
-id: block_content.field_heading
-field_name: field_heading
+id: block_content.field_email_field_label
+field_name: field_email_field_label
 entity_type: block_content
 type: string
 settings:

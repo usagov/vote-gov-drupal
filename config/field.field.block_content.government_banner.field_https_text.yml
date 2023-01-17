@@ -1,0 +1,19 @@
+uuid: d74e9abd-c63e-4068-8ddf-15edd1b432fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.government_banner
+    - field.storage.block_content.field_https_text
+id: block_content.government_banner.field_https_text
+field_name: field_https_text
+entity_type: block_content
+bundle: government_banner
+label: 'https text'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
