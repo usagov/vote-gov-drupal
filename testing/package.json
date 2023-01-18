@@ -1,0 +1,25 @@
+{
+  "name": "vote-gov-drupal",
+  "version": "1.0.0",
+  "description": "## Requirements",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^12.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open",
+    "cy:test": "cypress run --spec 'cypress/e2e/tests/**/*'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usagov/vote-gov-drupal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/usagov/vote-gov-drupal/issues"
+  },
+  "homepage": "https://github.com/usagov/vote-gov-drupal#readme"
+}
