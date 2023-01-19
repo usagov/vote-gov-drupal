@@ -28,9 +28,71 @@ dependencies:
     - content_moderation
     - datetime
     - double_field
+    - field_group
     - link
     - path
     - text
+third_party_settings:
+  field_group:
+    group_links:
+      children:
+        - field_registration_link
+        - field_override_registration_link
+        - field_election_homepage_link
+        - field_override_election_hp_link
+        - field_more_info_link
+        - field_override_more_info_link
+        - field_confirm_registration_link
+        - field_override_confirm_reg_link
+      label: Links
+      region: content
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+        weight: '0'
+    group_precise_registration_deadl:
+      children:
+        - field_in_person_deadline
+        - field_online_deadline
+        - field_mail_postmarked_deadline
+        - field_mail_received_deadline
+      label: 'Precise registration deadlines'
+      region: content
+      parent_name: ''
+      weight: 21
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_generic_registration_deadl:
+      children:
+        - field_g_in_person_deadline
+        - field_g_online_deadline
+        - field_g_mail_postmarked_deadline
+        - field_g_mail_received_deadline
+      label: 'Generic registration deadlines'
+      region: content
+      parent_name: ''
+      weight: 22
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
 id: node.state_territory.default
 targetEntityType: node
 bundle: state_territory
@@ -38,7 +100,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 138
+    weight: 14
     region: content
     settings:
       rows: 9
@@ -48,13 +110,13 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   field_confirm_registration_link:
     type: link_default
-    weight: 128
+    weight: 12
     region: content
     settings:
       placeholder_url: ''
@@ -62,7 +124,7 @@ content:
     third_party_settings: {  }
   field_election_homepage_link:
     type: link_default
-    weight: 125
+    weight: 8
     region: content
     settings:
       placeholder_url: ''
@@ -70,7 +132,7 @@ content:
     third_party_settings: {  }
   field_g_in_person_deadline:
     type: string_textfield
-    weight: 149
+    weight: 16
     region: content
     settings:
       size: 60
@@ -78,7 +140,7 @@ content:
     third_party_settings: {  }
   field_g_mail_postmarked_deadline:
     type: string_textfield
-    weight: 150
+    weight: 18
     region: content
     settings:
       size: 60
@@ -86,7 +148,7 @@ content:
     third_party_settings: {  }
   field_g_mail_received_deadline:
     type: string_textfield
-    weight: 151
+    weight: 19
     region: content
     settings:
       size: 60
@@ -94,7 +156,7 @@ content:
     third_party_settings: {  }
   field_g_online_deadline:
     type: string_textfield
-    weight: 152
+    weight: 17
     region: content
     settings:
       size: 60
@@ -102,7 +164,7 @@ content:
     third_party_settings: {  }
   field_in_person_deadline:
     type: double_field
-    weight: 144
+    weight: 16
     region: content
     settings:
       first:
@@ -125,26 +187,26 @@ content:
     third_party_settings: {  }
   field_is_state:
     type: boolean_checkbox
-    weight: 123
+    weight: 12
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_mail_postmarked_deadline:
     type: datetime_default
-    weight: 147
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
   field_mail_received_deadline:
     type: datetime_default
-    weight: 148
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
   field_more_info_link:
     type: link_default
-    weight: 127
+    weight: 10
     region: content
     settings:
       placeholder_url: ''
@@ -152,7 +214,7 @@ content:
     third_party_settings: {  }
   field_online_deadline:
     type: double_field
-    weight: 146
+    weight: 17
     region: content
     settings:
       first:
@@ -175,7 +237,7 @@ content:
     third_party_settings: {  }
   field_override_confirm_reg_link:
     type: link_default
-    weight: 153
+    weight: 13
     region: content
     settings:
       placeholder_url: ''
@@ -183,7 +245,7 @@ content:
     third_party_settings: {  }
   field_override_election_hp_link:
     type: link_default
-    weight: 154
+    weight: 9
     region: content
     settings:
       placeholder_url: ''
@@ -191,7 +253,7 @@ content:
     third_party_settings: {  }
   field_override_more_info_link:
     type: link_default
-    weight: 155
+    weight: 11
     region: content
     settings:
       placeholder_url: ''
@@ -199,7 +261,7 @@ content:
     third_party_settings: {  }
   field_override_registration_link:
     type: link_default
-    weight: 156
+    weight: 7
     region: content
     settings:
       placeholder_url: ''
@@ -207,7 +269,7 @@ content:
     third_party_settings: {  }
   field_registration_link:
     type: link_default
-    weight: 126
+    weight: 6
     region: content
     settings:
       placeholder_url: ''
@@ -215,13 +277,13 @@ content:
     third_party_settings: {  }
   field_registration_type:
     type: options_select
-    weight: 124
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   field_state_abbreviation:
     type: string_textfield
-    weight: 139
+    weight: 15
     region: content
     settings:
       size: 2
@@ -229,65 +291,65 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 15
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   simple_sitemap:
-    weight: 10
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 120
+    weight: 11
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 16
+    weight: 7
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 2
     region: content
     settings:
       match_operator: CONTAINS
@@ -296,7 +358,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
