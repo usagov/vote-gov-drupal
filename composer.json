@@ -22,6 +22,7 @@
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",
         "drupal/double_field": "^4.1",
+        "drupal/field_group": "^3.4",
         "drupal/language_switcher_extended": "^1.1",
         "drupal/pathauto": "^1.11",
         "drupal/redirect": "^1.8",
