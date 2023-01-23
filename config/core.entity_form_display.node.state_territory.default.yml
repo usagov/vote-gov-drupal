@@ -24,6 +24,7 @@ dependencies:
     - field.field.node.state_territory.field_registration_type
     - field.field.node.state_territory.field_state_abbreviation
     - node.type.state_territory
+    - workflows.workflow.publishing_content
   module:
     - content_moderation
     - datetime
@@ -184,7 +185,7 @@ content:
         label: Ok
         cols: 10
         rows: 5
-      inline: false
+      inline: true
     third_party_settings: {  }
   field_is_state:
     type: boolean_checkbox
@@ -234,7 +235,7 @@ content:
         label: Ok
         cols: 10
         rows: 5
-      inline: false
+      inline: true
     third_party_settings: {  }
   field_override_confirm_reg_link:
     type: link_default

@@ -15,11 +15,11 @@ mode: default
 content:
   field_accordions:
     type: double_field
-    weight: 29
+    weight: 2
     region: content
     settings:
       first:
-        type: null
+        type: textfield
         label_display: block
         size: 30
         placeholder: ''
@@ -27,7 +27,7 @@ content:
         cols: 10
         rows: 5
       second:
-        type: null
+        type: textarea
         label_display: block
         size: 30
         placeholder: ''
@@ -38,7 +38,7 @@ content:
     third_party_settings: {  }
   field_heading:
     type: string_textfield
-    weight: 28
+    weight: 0
     region: content
     settings:
       size: 60
@@ -46,7 +46,7 @@ content:
     third_party_settings: {  }
   info:
     type: string_textfield
-    weight: -5
+    weight: 1
     region: content
     settings:
       size: 60
@@ -54,13 +54,13 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 2
+    weight: 3
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
