@@ -21,67 +21,26 @@ function terminalLog(violations) {
   cy.task('table', violationData)
 }
 
+// will need to update urls once site is migrated 
 
 // const urls = ['http://localhost:1313', 'http://localhost:1313/register/ak/', 'http://localhost:1313/register/ar/', 'http://localhost:1313/register/as/', 'http://localhost:1313/register/nd/', ]
 
 
-// describe('Validate 508 accessibility compliance', () =>{
-//   urls.forEach((url) => {
-//     it(`run axe core ${url}`, () => {
-//       cy.visit(url)
-//       cy.injectAxe()
-//       cy.get('[class="usa-banner__button-text"]').click()
-//       cy.configureAxe({
-//           runOnly: {
-//             values: ['wcag2aa']
-//           }
-//       })
-//       cy.checkA11y(null, null, terminalLog)
-//     })
-//   })
+describe('Validate 508 accessibility compliance', () =>{
+  urls.forEach((url) => {
+    it(`run axe core ${url}`, () => {
+      cy.visit(url)
+      cy.injectAxe()
+      cy.get('[class="usa-banner__button-text"]').click()
+      cy.configureAxe({
+          runOnly: {
+            values: ['wcag2aa']
+          }
+      })
+      cy.checkA11y(null, null, terminalLog)
+    })
+  })
 
-// })
+})
 
 
-describe("Validate 508 accessibility compliance", () => {
-  const baseURL = Cypress.env("base_url")
-    ? Cypress.env("base_url")
-    : "http://vote-gov-d10.lndo.site";
-
-  const singlePage =
-    Cypress.env("name") && Cypress.env("route")
-      ? [
-          {
-            name: Cypress.env("name"),
-            route: Cypress.env("route"),
-          },
-        ]
-      : null;
-  const pages = singlePage !== null ? singlePage : allPages;
-  pages.forEach((page) => {
-    it( 
-      `${page.name === "" ? "home" : page.name}`,
-      () =>
-        Cypress.env("retries") === true
-          ? {
-              retries: {
-                runMode: 2,
-              },
-            }
-          : {},
-      () => {
-        cy.visit({
-          url: baseURL + page.route,
-        });
-        cy.injectAxe()
-        cy.get('[class="usa-banner__button-text"]').click()
-        cy.configureAxe({
-            runOnly: {
-              values: ['wcag2aa']
-            }
-        })
-        cy.checkA11y(null, null, terminalLog)
-      }
-    );
-  });    
-});
