@@ -6,6 +6,10 @@ Lando: https://docs.lando.dev/
 
 NOTE: Lando requires a specific version of docker which is loaded as part of the lando package. Do not update docker separate from lando. When you update lando docker will be updated as well.
 
+## Developer documentation
+
+Reference the developer documentation in to `docs` directory.
+
 ## Getting started
 
 ### Initializing the site
