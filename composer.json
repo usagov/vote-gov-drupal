@@ -18,6 +18,7 @@
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
         "drupal-tome/tome_drush": "dev-master",
+        "drupal/admin_toolbar": "^3.3",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",
@@ -26,7 +27,10 @@
         "drupal/pathauto": "^1.11",
         "drupal/redirect": "^1.8",
         "drupal/simple_sitemap": "^4.1",
+        "drupal/stable": "^2.0",
         "drupal/tome": "^1.8",
+        "drupal/twig_field_value": "^2.0",
+        "drupal/twig_tweak": "^3.2",
         "drush/drush": "^11.3"
     },
     "require-dev": {
