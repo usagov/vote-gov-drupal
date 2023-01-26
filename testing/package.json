@@ -12,7 +12,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "cypress open",
-    "cy:test": "cypress run --spec 'cypress/e2e/tests/**/*'"
+    "cy:test": "cypress run --spec 'cypress/e2e/tests/**/*'",
+    "cy:axe": "cypress run --spec 'cypress/e2e/accessibility/**/*'"
+
   },
   "repository": {
     "type": "git",
