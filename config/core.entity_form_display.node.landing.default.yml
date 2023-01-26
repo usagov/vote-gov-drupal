@@ -8,6 +8,7 @@ dependencies:
     - node.type.landing
   module:
     - content_moderation
+    - inline_entity_form
     - path
     - text
 id: node.landing.default
@@ -32,14 +33,21 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_page_components:
-    type: entity_reference_autocomplete
+    type: inline_entity_form_complex
     weight: 123
     region: content
     settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: false
       match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
     third_party_settings: {  }
   langcode:
     type: language_select
