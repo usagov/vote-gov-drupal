@@ -12,7 +12,7 @@ field_name: field_registration_type
 entity_type: node
 bundle: state_territory
 label: 'Registration type'
-description: 'Select all registration types that apply'
+description: 'Select all that apply for this state/territory.'
 required: true
 translatable: false
 default_value: {  }

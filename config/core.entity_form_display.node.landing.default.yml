@@ -3,14 +3,36 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.block_content.landing_page_component
     - field.field.node.landing.body
     - field.field.node.landing.field_page_components
     - node.type.landing
+    - workflows.workflow.publishing_content
   module:
     - content_moderation
+    - field_group
     - inline_entity_form
     - path
+    - publication_date
     - text
+third_party_settings:
+  field_group:
+    group_language:
+      children:
+        - langcode
+      label: Language
+      region: content
+      parent_name: ''
+      weight: 12
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: true
+        weight: -11
 id: node.landing.default
 targetEntityType: node
 bundle: landing
@@ -18,7 +40,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 124
+    weight: 11
     region: content
     settings:
       rows: 9
@@ -28,19 +50,19 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   field_page_components:
     type: inline_entity_form_complex
-    weight: 123
+    weight: 10
     region: content
     settings:
-      form_mode: default
-      override_labels: false
-      label_singular: ''
-      label_plural: ''
+      form_mode: landing_page_component
+      override_labels: true
+      label_singular: Component
+      label_plural: Components
       allow_new: true
       allow_existing: false
       match_operator: CONTAINS
@@ -51,65 +73,57 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 2
+    weight: 11
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    weight: 15
+  published_at:
+    type: publication_date_timestamp
+    weight: 3
     region: content
-    settings:
-      display_label: true
+    settings: {  }
     third_party_settings: {  }
   simple_sitemap:
-    weight: 10
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 120
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
-    weight: 16
+    weight: 9
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 1
     region: content
     settings:
       match_operator: CONTAINS
@@ -118,8 +132,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  promote: true
+  sticky: true

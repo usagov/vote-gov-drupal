@@ -17,7 +17,7 @@ mode: default
 content:
   field_accordion_link_label:
     type: string_textfield
-    weight: 7
+    weight: 3
     region: content
     settings:
       size: 60
@@ -25,7 +25,7 @@ content:
     third_party_settings: {  }
   field_accordion_text:
     type: string_textfield
-    weight: 8
+    weight: 4
     region: content
     settings:
       size: 60
@@ -49,7 +49,7 @@ content:
     third_party_settings: {  }
   field_https_heading:
     type: string_textfield
-    weight: 3
+    weight: 7
     region: content
     settings:
       size: 60
@@ -57,7 +57,7 @@ content:
     third_party_settings: {  }
   field_https_text:
     type: string_textfield
-    weight: 4
+    weight: 8
     region: content
     settings:
       size: 60

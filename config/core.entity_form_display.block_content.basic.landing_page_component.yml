@@ -1,32 +1,39 @@
-uuid: aed9f742-9987-4e78-9277-26b4dd09fd18
+uuid: 054221d5-f83a-4967-ac15-335700eb27bc
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.search
-    - field.field.block_content.search.field_search_placeholder
-    - field.field.block_content.search.field_translated_affiliate
-id: block_content.search.default
+    - block_content.type.basic
+    - core.entity_form_mode.block_content.landing_page_component
+    - field.field.block_content.basic.body
+    - field.field.block_content.basic.field_classes
+    - field.field.block_content.basic.field_heading
+  module:
+    - text
+id: block_content.basic.landing_page_component
 targetEntityType: block_content
-bundle: search
-mode: default
+bundle: basic
+mode: landing_page_component
 content:
-  field_search_placeholder:
-    type: string_textfield
+  body:
+    type: text_textarea_with_summary
     weight: 3
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_classes:
+    type: string_textfield
+    weight: 4
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_translated_affiliate:
-    type: boolean_checkbox
-    weight: 4
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  info:
+  field_heading:
     type: string_textfield
     weight: 0
     region: content
@@ -46,4 +53,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  info: true

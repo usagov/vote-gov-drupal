@@ -39,43 +39,38 @@ third_party_settings:
     group_links:
       children:
         - field_registration_link
-        - field_override_registration_link
         - field_election_homepage_link
-        - field_override_election_hp_link
         - field_more_info_link
-        - field_override_more_info_link
         - field_confirm_registration_link
-        - field_override_confirm_reg_link
-      label: Links
+      label: 'Default Links'
       region: content
-      parent_name: ''
-      weight: 15
-      format_type: details
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
       format_settings:
         classes: ''
-        show_empty_fields: true
+        show_empty_fields: false
         id: ''
-        open: false
+        formatter: closed
         description: ''
         required_fields: true
-        weight: '0'
     group_precise_registration_deadl:
       children:
         - field_in_person_deadline
         - field_online_deadline
         - field_mail_postmarked_deadline
         - field_mail_received_deadline
-      label: 'Precise registration deadlines'
+      label: 'Registration deadlines'
       region: content
-      parent_name: ''
-      weight: 16
+      parent_name: group_tabs_2
+      weight: 17
       format_type: details
       format_settings:
         classes: ''
         show_empty_fields: true
         id: ''
         open: false
-        description: ''
+        description: 'When a registration deadline is left empty the equivalent generic deadline will be displayed.'
         required_fields: true
     group_generic_registration_deadl:
       children:
@@ -85,8 +80,8 @@ third_party_settings:
         - field_g_mail_received_deadline
       label: 'Generic registration deadlines'
       region: content
-      parent_name: ''
-      weight: 17
+      parent_name: group_tabs_2
+      weight: 18
       format_type: details
       format_settings:
         classes: ''
@@ -95,6 +90,54 @@ third_party_settings:
         open: false
         description: ''
         required_fields: true
+    group_tabs:
+      children:
+        - group_links
+        - group_link_overrides
+      label: Links
+      region: content
+      parent_name: ''
+      weight: 14
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 800
+    group_link_overrides:
+      children:
+        - field_override_registration_link
+        - field_override_election_hp_link
+        - field_override_more_info_link
+        - field_override_confirm_reg_link
+      label: 'Link overrides (for translations)'
+      region: content
+      parent_name: group_tabs
+      weight: 22
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: 'When an override link is left empty the equivalent default link will be displayed.'
+        required_fields: true
+    group_tabs_2:
+      children:
+        - group_precise_registration_deadl
+        - group_generic_registration_deadl
+      label: Deadlines
+      region: content
+      parent_name: ''
+      weight: 13
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 800
 id: node.state_territory.default
 targetEntityType: node
 bundle: state_territory
@@ -102,7 +145,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 18
+    weight: 15
     region: content
     settings:
       rows: 9
@@ -142,7 +185,7 @@ content:
     third_party_settings: {  }
   field_g_mail_postmarked_deadline:
     type: string_textfield
-    weight: 18
+    weight: 19
     region: content
     settings:
       size: 60
@@ -150,7 +193,7 @@ content:
     third_party_settings: {  }
   field_g_mail_received_deadline:
     type: string_textfield
-    weight: 19
+    weight: 20
     region: content
     settings:
       size: 60
@@ -239,7 +282,7 @@ content:
     third_party_settings: {  }
   field_override_confirm_reg_link:
     type: link_default
-    weight: 13
+    weight: 10
     region: content
     settings:
       placeholder_url: ''
@@ -247,7 +290,7 @@ content:
     third_party_settings: {  }
   field_override_election_hp_link:
     type: link_default
-    weight: 9
+    weight: 8
     region: content
     settings:
       placeholder_url: ''
@@ -255,7 +298,7 @@ content:
     third_party_settings: {  }
   field_override_more_info_link:
     type: link_default
-    weight: 11
+    weight: 9
     region: content
     settings:
       placeholder_url: ''
@@ -278,8 +321,8 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
   field_registration_type:
-    type: options_select
-    weight: 14
+    type: options_buttons
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -293,33 +336,26 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 19
+    weight: 16
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 11
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 9
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    weight: 7
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
   published_at:
     type: publication_date_timestamp
-    weight: 12
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -330,14 +366,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 13
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
-    weight: 8
+    weight: 11
     region: content
     settings:
       display_label: true
@@ -366,8 +395,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 10
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  promote: true
+  sticky: true
