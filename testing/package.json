@@ -14,7 +14,6 @@
     "cy:open": "cypress open",
     "cy:test": "cypress run --spec 'cypress/e2e/tests/**/*'",
     "cy:axe": "cypress run --spec 'cypress/e2e/accessibility/**/*'"
-
   },
   "repository": {
     "type": "git",
