@@ -1,9 +1,9 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  video: false,
   e2e: {
-    baseUrL: 'http://vote-gov-d10.lndo.site',
+    baseUrL: 'https://vote-gov-d10.lndo.site/',
+    video: false,
     viewportHeight: 800,
     viewportWidth: 1530,
     chromeWebSecurity: false, 
