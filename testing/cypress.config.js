@@ -1,9 +1,9 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  video: false,
   e2e: {
-
+    baseUrL: 'https://vote-gov-d10.lndo.site/',
+    video: false,
     viewportHeight: 800,
     viewportWidth: 1530,
     chromeWebSecurity: false, 
@@ -16,6 +16,19 @@ module.exports = defineConfig({
     
     setupNodeEvents(on, config) {
       // implement node event listeners here
+
+      on('task', {
+        log(message) {
+          console.log(message)
+    
+          return null
+        },
+        table(message) {
+          console.table(message)
+    
+          return null
+        }
+      })
     },
   },
 });
