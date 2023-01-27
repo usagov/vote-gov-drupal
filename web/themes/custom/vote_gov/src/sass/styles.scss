@@ -8,71 +8,16 @@
 @forward "uswds-utilities";
 
 // USWDS components.
-@forward "usa-accordion";
-@forward "usa-alert";
-@forward "usa-banner";
-@forward "usa-breadcrumb";
-@forward "usa-button";
-@forward "usa-button-group";
-@forward "usa-card";
-@forward "usa-character-count";
-@forward "usa-checkbox";
-@forward "usa-checklist";
-@forward "usa-collection";
-@forward "usa-combo-box";
-@forward "usa-content";
-@forward "usa-dark-background";
-@forward "usa-date-picker";
-@forward "usa-date-range-picker";
-@forward "usa-display";
-@forward "usa-embed-container";
-@forward "usa-error-message";
-@forward "usa-fieldset";
-@forward "usa-file-input";
-@forward "usa-footer";
-@forward "usa-form";
-@forward "usa-form-group";
-@forward "usa-graphic-list";
-@forward "usa-header";
-@forward "usa-hero";
-@forward "usa-hint";
-@forward "usa-icon";
-@forward "usa-icon-list";
-@forward "usa-identifier";
-@forward "usa-input";
-@forward "usa-input-prefix-suffix";
-@forward "usa-intro";
-@forward "usa-label";
-@forward "usa-layout-docs";
-@forward "usa-layout-grid";
-@forward "usa-legend";
+@forward 'usa-header';
+@forward 'usa-accordion';
+@forward 'uswds-form-controls';
+@forward 'usa-alert';
+@forward 'usa-banner';
+@forward 'usa-skipnav';
 @forward "usa-link";
-@forward "usa-list";
-@forward "usa-media-block";
-@forward "usa-memorable-date";
-@forward "usa-modal";
-@forward "usa-nav";
-@forward "usa-pagination";
-@forward "usa-paragraph";
-@forward "usa-process-list";
 @forward "usa-prose";
-@forward "usa-radio";
-@forward "usa-range";
-@forward "usa-search";
-@forward "usa-section";
-@forward "usa-select";
-@forward "usa-sidenav";
-@forward "usa-site-alert";
-@forward "usa-site-title";
-@forward "usa-skipnav";
-@forward "usa-step-indicator";
-@forward "usa-summary-box";
-@forward "usa-table";
-@forward "usa-tag";
-@forward "usa-textarea";
-@forward "usa-time-picker";
-@forward "usa-tooltip";
-@forward "usa-validation";
+@forward "usa-intro";
+@forward "usa-language-selector";
 
 // to include everything, just code it as @forward "uswds";
 //@forward "uswds";
@@ -81,5 +26,10 @@
 @use "custom-components";
 @use "uswds-overrides";
 @use "drupal-system";
+
+// Migrated styles
+@forward "../../_variables.scss";
+
+
 
 // ****** Do not write any custom CSS on this file ****** //

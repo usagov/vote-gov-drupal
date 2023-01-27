@@ -8,3 +8,11 @@
   right: 50%;
   overflow: hidden;
 }
+
+// Define a mixin for declaring hover and focus state together.
+@mixin hover {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}

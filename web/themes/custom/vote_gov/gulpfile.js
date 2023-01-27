@@ -11,7 +11,7 @@ const settings = {
   sass: {
     src: [
       './src/sass/**/*.scss',
-      '!./src/sass/_uswds-theme.scss' // Ignore the custom USWDS setting scss files.
+      '!./src/sass/_uswds-theme.scss', // Ignore the custom USWDS setting scss files.
     ]
   },
   js: {
@@ -24,6 +24,22 @@ const settings = {
       src: ['./node_modules/a11y-tabs/dist/a11y-tabs.min.js']
     }
   }
+}
+
+function copyFonts() {
+  var stream = gulp.src([
+    './fonts/**/*',
+  ]);
+
+  return stream.pipe(gulp.dest('./dist/assets/fonts'));
+}
+
+function copyImg() {
+  var stream = gulp.src([
+    './img/**/*',
+  ]);
+
+  return stream.pipe(gulp.dest('./dist/assets/img'));
 }
 
 // JS build function.
@@ -140,7 +156,7 @@ uswds.paths.src.projectSass = './src/sass';
 // exports.init = uswds.init;
 
 // Various compile functions.
-exports.build = series(uswds.copyAssets, vendorJS, buildJS, uswds.compile);
+exports.build = series(uswds.copyAssets, vendorJS, buildJS, copyFonts, copyImg, uswds.compile);
 exports.compile = uswds.compile;
 exports.default = exports.watch = parallel(watchCompFiles, uswds.watch, browserSync, watchJSTwigFiles);
 exports.update = uswds.updateUswds;
