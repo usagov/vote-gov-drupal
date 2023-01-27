@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Vote.gov USWDS Paragraphs file.
+ * Vote.gov USWDS Paragraph file.
  */
 
 /**

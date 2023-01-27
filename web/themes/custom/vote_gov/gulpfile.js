@@ -1,6 +1,7 @@
 const uswds = require("@uswds/compile");
 const {parallel, watch, series, src} = require('gulp');
 const gulp = require("gulp");
+const gulpStylelint = require('gulp-stylelint');
 const browsersync = require('browser-sync').create();
 const uglifyes = require('uglify-es');
 const composer = require('gulp-uglify/composer');
@@ -8,13 +9,20 @@ const uglify = composer(uglifyes, console);
 
 const settings = {
   sass: {
-    src: ['./src/sass/**/*.scss']
+    src: [
+      './src/sass/**/*.scss',
+      '!./src/sass/_uswds-theme.scss' // Ignore the custom USWDS setting scss files.
+    ]
   },
   js: {
     dest: './dist/js',
     minDest: './dist/js/min',
     minSrc: './src/js/**/*.js',
-    src: './src/js/**/*.js'
+    src: './src/js/**/*.js',
+    vendor: {
+      dest: './dist/vendor/js',
+      src: ['./node_modules/a11y-tabs/dist/a11y-tabs.min.js']
+    }
   }
 }
 
@@ -23,6 +31,12 @@ function buildJS() {
   return src(settings.js.src)
     .pipe(uglify())
     .pipe(gulp.dest(settings.js.dest))
+}
+
+// Vendor JS copy function.
+function vendorJS() {
+  return src(settings.js.vendor.src)
+    .pipe(gulp.dest(settings.js.vendor.dest))
 }
 
 // Watch changes on JS and twig files and trigger functions at the end.
@@ -37,6 +51,7 @@ function watchJSTwigFiles() {
       ignoreInitial: false
     },
     series(
+      vendorJS,
       buildJS,
       browserSyncReload
     )
@@ -57,20 +72,26 @@ function buildCompStyles() {
     }));
 }
 
+// Stylelint scss.
+function lintScss(done) {
+  return gulp.src(settings.sass.src)
+    .pipe(gulpStylelint({
+      configFile: './.stylelintrc',
+      failAfterError: false,
+      reporters: [{formatter: "string", console: true}]
+    }));
+}
+
 // Watch changes on sass files and trigger functions at the end.
 function watchCompFiles() {
-  watch(
-    [
-      './src/sass/**/*.scss',
-    ],
-    {
+  watch(settings.sass.src, {
       events: 'all',
       ignoreInitial: false
     },
     series(
+      lintScss,
       buildCompStyles
-    )
-  );
+    ));
 }
 
 // Init BrowserSync.
@@ -119,8 +140,8 @@ uswds.paths.src.projectSass = './src/sass';
 // exports.init = uswds.init;
 
 // Various compile functions.
+exports.build = series(uswds.copyAssets, vendorJS, buildJS, uswds.compile);
 exports.compile = uswds.compile;
-exports.watch = parallel(watchCompFiles, uswds.watch, browserSync, watchJSTwigFiles);
+exports.default = exports.watch = parallel(watchCompFiles, uswds.watch, browserSync, watchJSTwigFiles);
 exports.update = uswds.updateUswds;
-exports.default = uswds.watch;
 exports.copyAssets = uswds.copyAssets;

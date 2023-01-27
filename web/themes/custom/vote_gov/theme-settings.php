@@ -14,7 +14,7 @@ function vote_gov_form_system_theme_settings_alter(&$form, FormStateInterface $f
   $form['theme_custom']['settings'] = [
     '#type' => 'details',
     '#open' => TRUE,
-    '#title' => 'Vote.gov USWDS Custom Settings',
+    '#title' => 'Vote.gov Custom Settings',
     '#weight' => -1000,
   ];
 
