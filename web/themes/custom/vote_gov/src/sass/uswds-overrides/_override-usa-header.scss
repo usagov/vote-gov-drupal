@@ -1,0 +1,22 @@
+@use "uswds-core" as *;
+
+.usa-logo__text {
+  img {
+    @include at-media-max("desktop") {
+      height: units(8);
+      width: units(8);
+    }
+  }
+}
+
+.usa-navbar  {
+  @include at-media-max("desktop") {
+    height: units(10);
+  }
+}
+
+.usa-menu-btn {
+  @include at-media-max("desktop") {
+    height: units(10);
+  }
+}

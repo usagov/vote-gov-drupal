@@ -1,0 +1,6 @@
+// Include core in order to use USWDS mixins etc...
+@use "uswds-core" as *;
+
+.component__item {
+  @include u-margin-bottom(5);
+}

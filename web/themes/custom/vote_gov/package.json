@@ -1,0 +1,22 @@
+{
+  "name": "BixalDrop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@uswds/uswds": "^3.3.0"
+  },
+  "devDependencies": {
+    "@uswds/compile": "^1.0.0-beta.3",
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "uglify-es": "^3.3.9"
+  }
+}

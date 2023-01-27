@@ -1,0 +1,66 @@
+vote_gov.images.small:
+  label: small
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+  group: vote_gov.images
+
+vote_gov.images.narrow:
+  label: narrow
+  mediaQuery: '(min-width: 480px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+  group: vote_gov.images
+
+vote_gov.images.narrow_plus:
+  label: narrow
+  mediaQuery: '(min-width: 640px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+  group: vote_gov.images
+
+vote_gov.images.medium:
+  label: medium
+  mediaQuery: '(min-width: 768px)'
+  weight: 3
+  multipliers:
+    - 1x
+  group: vote_gov.images
+
+vote_gov.images.large:
+  label: wide
+  mediaQuery: '(min-width: 1024px)'
+  weight: 5
+  multipliers:
+    - 1x
+  group: vote_gov.images
+
+vote_gov.images.large_plus:
+  label: wide
+  mediaQuery: '(min-width: 1140px)'
+  weight: 5
+  multipliers:
+    - 1x
+  group: vote_gov.images
+
+vote_gov.images.wide:
+  label: wide
+  mediaQuery: '(min-width: 1280px)'
+  weight: 5
+  multipliers:
+    - 1x
+  group: vote_gov.images
+
+vote_gov.images.wide_plus:
+  label: ultrawide
+  mediaQuery: '(min-width: 1400px)'
+  weight: 7
+  multipliers:
+    - 1x
+  group: vote_gov.images

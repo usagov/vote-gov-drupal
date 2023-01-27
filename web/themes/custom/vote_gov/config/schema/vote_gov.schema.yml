@@ -1,0 +1,4 @@
+# Schema for the configuration files of the Bartik theme.
+vote_gov.settings:
+  type: theme_settings
+  label: 'Vote.gov USWDS settings'

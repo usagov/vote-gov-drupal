@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the USWDS USDA Intranet theme.
+ */
+require_once dirname(__FILE__) . '/php-includes/block.inc';
+require_once dirname(__FILE__) . '/php-includes/form.inc';
+require_once dirname(__FILE__) . '/php-includes/media.inc';
+require_once dirname(__FILE__) . '/php-includes/local_task.inc';
+require_once dirname(__FILE__) . '/php-includes/node.inc';
+require_once dirname(__FILE__) . '/php-includes/page.inc';
+require_once dirname(__FILE__) . '/php-includes/paragraphs.inc';
+require_once dirname(__FILE__) . '/php-includes/views.inc';

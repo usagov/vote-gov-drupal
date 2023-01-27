@@ -1,0 +1,10 @@
+@use "uswds-core" as *;
+
+@mixin full-width() {
+  margin: 0 -50vw;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  overflow: hidden;
+}
