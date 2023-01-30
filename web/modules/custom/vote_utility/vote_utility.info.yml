@@ -1,0 +1,5 @@
+name: Vote.gov utility module
+type: module
+description: ''
+core_version_requirement: ^8.9 || ^9 || ^10
+package: 'Custom'
