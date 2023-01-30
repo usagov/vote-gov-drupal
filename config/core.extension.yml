@@ -57,7 +57,6 @@ module:
   publication_date: 99
   minimal: 1000
 theme:
-  stark: 0
   claro: 0
   stable: 0
   vote_gov: 0
