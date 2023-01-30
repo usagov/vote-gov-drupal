@@ -1,0 +1,5 @@
+@use "uswds-core" as *;
+
+.usa-site-alert {
+  @include u-margin-bottom(3);
+}

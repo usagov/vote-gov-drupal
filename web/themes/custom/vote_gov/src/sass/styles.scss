@@ -1,0 +1,34 @@
+// ****** Do not write any custom CSS on this file ****** //
+
+// Theme settings overrides.
+@forward "uswds-theme";
+
+// USWDS packages.
+@forward "uswds-global";
+@forward "uswds-utilities";
+
+// USWDS components.
+@forward 'usa-header';
+@forward 'usa-accordion';
+@forward 'uswds-form-controls';
+@forward 'usa-alert';
+@forward 'usa-banner';
+@forward 'usa-skipnav';
+@forward "usa-link";
+@forward "usa-prose";
+@forward "usa-intro";
+@forward "usa-language-selector";
+
+// to include everything, just code it as @forward "uswds";
+//@forward "uswds";
+
+// Custom styles.
+@forward "global";
+@forward "pages";
+@forward "custom-components";
+@forward "uswds-overrides";
+@forward "drupal-system";
+
+
+
+// ****** Do not write any custom CSS on this file ****** //

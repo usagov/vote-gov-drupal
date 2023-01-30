@@ -31,7 +31,10 @@
         "drupal/publication_date": "^2.0@beta",
         "drupal/redirect": "^1.8",
         "drupal/simple_sitemap": "^4.1",
+        "drupal/stable": "^2.0",
         "drupal/tome": "^1.8",
+        "drupal/twig_field_value": "^2.0",
+        "drupal/twig_tweak": "^3.2",
         "drush/drush": "^11.3"
     },
     "require-dev": {

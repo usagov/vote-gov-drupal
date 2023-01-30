@@ -1,0 +1,22 @@
+uuid: b71a8516-0b53-40d3-a0ed-5fdda3874805
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vote_gov
+_core:
+  default_config_hash: zi0BPmuyVpUHAQAYYi8qC8jfAO1MkRPw1_STBhdmc_Y
+id: vote_gov_content
+theme: vote_gov
+region: content
+weight: -6
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

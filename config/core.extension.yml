@@ -44,6 +44,8 @@ module:
   tome_base: 0
   tome_static: 0
   toolbar: 0
+  twig_field_value: 0
+  twig_tweak: 0
   update: 0
   user: 0
   views_ui: 0
@@ -55,6 +57,7 @@ module:
   publication_date: 99
   minimal: 1000
 theme:
-  stark: 0
   claro: 0
+  stable: 0
+  vote_gov: 0
 profile: minimal

@@ -1,0 +1,10 @@
+@use "uswds-core" as *;
+
+.usa-collection__meta-item.usa-tag:not(.usa-tag--new) {
+  color: color("white");
+  @include u-bg('base-dark');
+}
+
+.usa-collection__meta-item {
+@include typeset("ui", "sm", 5);
+}
