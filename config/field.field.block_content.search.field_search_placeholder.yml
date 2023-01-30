@@ -9,7 +9,7 @@ id: block_content.search.field_search_placeholder
 field_name: field_search_placeholder
 entity_type: block_content
 bundle: search
-label: 'Search placeholder'
+label: 'Search placeholder text'
 description: ''
 required: true
 translatable: true

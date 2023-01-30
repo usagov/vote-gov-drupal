@@ -19,7 +19,7 @@ default_value: {  }
 default_value_callback: ''
 settings:
   first:
-    label: ''
+    label: 'Accordion header'
     list: false
     allowed_values: {  }
     max: null
@@ -28,7 +28,7 @@ settings:
     on_label: 'On'
     off_label: 'Off'
   second:
-    label: ''
+    label: 'Accordion content'
     list: false
     allowed_values: {  }
     max: null

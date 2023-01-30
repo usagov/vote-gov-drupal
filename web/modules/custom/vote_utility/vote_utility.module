@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * @file
+ * Custom functions.
+ */
+
+require_once dirname(__FILE__) . '/inc/token.inc';
