@@ -23,12 +23,11 @@
 //@forward "uswds";
 
 // Custom styles.
-@use "custom-components";
-@use "uswds-overrides";
-@use "drupal-system";
-
-// Migrated styles
-@forward "/_variables.scss";
+@forward "global";
+@forward "pages";
+@forward "custom-components";
+@forward "uswds-overrides";
+@forward "drupal-system";
 
 
 

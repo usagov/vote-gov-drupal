@@ -114,7 +114,7 @@ function watchCompFiles() {
 function browserSync(done) {
   browsersync.init({
     injectChanges: true,
-    logPrefix: 'OneUSDA Theme (USWDS)',
+    logPrefix: 'VOTE gov theme (USWDS)',
     baseDir: './',
     open: false,
     notify: true,
