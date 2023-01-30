@@ -7,12 +7,12 @@ dependencies:
 id: page
 label: Page
 type: 'canonical_entities:node'
-pattern: '/[node:menu-link:parents:join-path]/[node:menu-link:title]'
+pattern: '[node:vote-utility--menu-path]'
 selection_criteria:
-  87c2c2ab-01fe-46d4-a3f5-49a794d3f9a8:
+  5ecbbbd8-242b-48a4-8088-875cd836bb69:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 87c2c2ab-01fe-46d4-a3f5-49a794d3f9a8
+    uuid: 5ecbbbd8-242b-48a4-8088-875cd836bb69
     context_mapping:
       node: node
     bundles:

@@ -9,29 +9,10 @@ dependencies:
     - workflows.workflow.publishing_content
   module:
     - content_moderation
-    - field_group
     - media_library
     - path
     - publication_date
     - text
-third_party_settings:
-  field_group:
-    group_language:
-      children:
-        - langcode
-      label: Language
-      region: content
-      parent_name: ''
-      weight: 12
-      format_type: details_sidebar
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        open: true
-        description: ''
-        required_fields: true
-        weight: -11
 id: node.page.default
 targetEntityType: node
 bundle: page
