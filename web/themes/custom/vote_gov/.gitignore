@@ -1,4 +1,0 @@
-node_modules
-dist/css/*.css.map
-dist/**/*.DS_Store
-*.DS_Store

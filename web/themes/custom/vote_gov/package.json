@@ -1,5 +1,5 @@
 {
-  "name": "BixalDrop",
+  "name": "VOTE-gov-uswds",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -13,8 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@uswds/uswds": "^3.3.0",
-    "a11y-tabs": "^0.1.2",
-    "stylelint": "^14.16.1"
+    "a11y-tabs": "^0.1.2"
   },
   "devDependencies": {
     "@uswds/compile": "^1.0.0-beta.3",
