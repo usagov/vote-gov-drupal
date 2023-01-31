@@ -1,0 +1,12 @@
+_core:
+  default_config_hash: cI-Pl1vK4EZIlVhkBeRB-LcoEoKTUgI5gdJ7paB8cQk
+favicon:
+  use_default: true
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  use_default: true
+time_picker_style: html5_time_picker

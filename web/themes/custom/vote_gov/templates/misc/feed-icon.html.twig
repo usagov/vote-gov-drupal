@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Theme override for a feed icon.
+ *
+ * Available variables:
+ * - url: An internal system path or a fully qualified external URL of the feed.
+ * - title: Title of the feed for describing the feed on the subscribe link.
+ * - attributes: Remaining HTML attributes for the feed link.
+ *   - title: A descriptive title of the feed link.
+ *   - class: HTML classes to be applied to the feed link.
+ */
+#}
+
+<a {{ attributes.addClass('display-flex flex-align-center usa-link') }}
+  href="{{ url }}">
+  <svg aria-labelledby="RSS Feed" role="img" class="usa-icon--size-5 margin-right-1">
+    <title id="RSS Feed">{{ 'RSS Feed'|t }}</title>
+    <use xlink:href="{{ directory }}/dist/assets/img/sprite.svg#rss_feed"></use>
+  </svg>
+  {{ 'RSS Feed'|t }}
+</a>

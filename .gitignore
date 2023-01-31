@@ -66,3 +66,6 @@ Thumbs.db
 # Ignore Local Development files
 /web/sites/development.services.local.yml
 node_modules
+
+# Ignore Theme dist files
+/web/themes/custom/vote_gov/dist/

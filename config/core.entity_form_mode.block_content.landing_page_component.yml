@@ -1,0 +1,10 @@
+uuid: f7deb2b2-3810-45e9-9fd5-68352aa9ec9c
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.landing_page_component
+label: 'Landing Page Component'
+targetEntityType: block_content
+cache: true

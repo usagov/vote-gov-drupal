@@ -1,0 +1,34 @@
+{% extends "input.html.twig" %}
+
+{# Overrides to adhere to USWDS code. #}
+{% set date_id = element["#id"] %}
+{% set date_id_hint = date_id ~ '-hint' %}
+{% set aria_labelleby = date_id ~ '-label' %}
+{% set date_name = element["#id"] %}
+{% set date_type = element["#attributes"]["type"] %}
+
+{% if date_type == 'date' %}
+  {% set date_hint = 'mm/dd/yyyy' %}
+{% elseif date_type == 'time' %}
+  {% set date_hint_class = 'is-time' %}
+  {% set date_hint = 'hh:mm' %}
+{% endif %}
+
+{% block form_content %}
+  <div class="usa-hint {{ date_hint_class }}" id="{{ date_id_hint }}">
+    {{ date_hint }}
+  </div>
+
+  {% if time_picker_style == 'uswds_time_picker' or date_type == 'date' %}
+    <div class="usa-{{- date_type -}}-picker">
+  {% endif %}
+
+  <input{{ attributes.addClass(classes)
+  .setAttribute('name', date_name)
+  .setAttribute('aria-labelledby', aria_labelleby)
+  .setAttribute('aria-describedby', date_id_hint) }} />{{ children }}
+
+  {% if time_picker_style == 'uswds_time_picker' or date_type == 'date' %}
+    </div>
+  {% endif %}
+{% endblock form_content %}

@@ -1,6 +1,8 @@
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
+  admin_toolbar: 0
+  auto_entitylabel: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -14,10 +16,12 @@ module:
   dynamic_page_cache: 0
   editor: 0
   field: 0
+  field_group: 0
   field_ui: 0
   file: 0
   filter: 0
   image: 0
+  inline_entity_form: 0
   language: 0
   language_switcher_extended: 0
   link: 0
@@ -26,6 +30,7 @@ module:
   media_library: 0
   menu_link_content: 0
   menu_ui: 0
+  metatag: 0
   mysql: 0
   node: 0
   options: 0
@@ -40,15 +45,20 @@ module:
   tome_base: 0
   tome_static: 0
   toolbar: 0
+  twig_field_value: 0
+  twig_tweak: 0
   update: 0
   user: 0
   views_ui: 0
+  vote_utility: 0
   workflows: 0
   pathauto: 1
   content_translation: 10
   views: 10
+  publication_date: 99
   minimal: 1000
 theme:
-  stark: 0
   claro: 0
+  stable: 0
+  vote_gov: 0
 profile: minimal

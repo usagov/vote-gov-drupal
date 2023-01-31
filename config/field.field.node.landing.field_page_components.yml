@@ -3,6 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block_content.type.accordion_group
+    - block_content.type.basic
+    - block_content.type.registration_tool
     - field.storage.node.field_page_components
     - node.type.landing
 id: node.landing.field_page_components
@@ -17,5 +20,14 @@ default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:block_content'
-  handler_settings: {  }
+  handler_settings:
+    target_bundles:
+      accordion_group: accordion_group
+      basic: basic
+      registration_tool: registration_tool
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: accordion_group
 field_type: entity_reference

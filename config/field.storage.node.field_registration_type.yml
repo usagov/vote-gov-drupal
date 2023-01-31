@@ -12,21 +12,21 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: online
-      label: Online
-    -
-      value: by-mail
-      label: By-mail
+      value: not-needed
+      label: 'Not needed'
     -
       value: in-person
       label: In-person
     -
-      value: not-needed
-      label: 'Not needed'
+      value: by-mail
+      label: By-mail
+    -
+      value: online
+      label: Online
   allowed_values_function: ''
 module: options
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

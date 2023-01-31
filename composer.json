@@ -18,15 +18,24 @@
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
         "drupal-tome/tome_drush": "dev-master",
+        "drupal/admin_toolbar": "^3.3",
+        "drupal/auto_entitylabel": "^3.0",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",
         "drupal/double_field": "^4.1",
+        "drupal/field_group": "^3.4",
+        "drupal/inline_entity_form": "^1.0@RC",
         "drupal/language_switcher_extended": "^1.1",
+        "drupal/metatag": "^1.22",
         "drupal/pathauto": "^1.11",
+        "drupal/publication_date": "^2.0@beta",
         "drupal/redirect": "^1.8",
         "drupal/simple_sitemap": "^4.1",
+        "drupal/stable": "^2.0",
         "drupal/tome": "^1.8",
+        "drupal/twig_field_value": "^2.0",
+        "drupal/twig_tweak": "^3.2",
         "drush/drush": "^11.3"
     },
     "require-dev": {
@@ -52,7 +61,7 @@
         "enable-patching": true,
         "patches": {
             "drupal/double_field": {
-                "Support input filters on text formats": "https://www.drupal.org/files/issues/2022-12-20/2091587-text_long-60_1.patch"
+                "Support input filters on text formats (original issue: https://www.drupal.org/node/2091587)": "patches/double_field/2091587-text_long-60_2.patch"
             }
         },
         "drupal-scaffold": {

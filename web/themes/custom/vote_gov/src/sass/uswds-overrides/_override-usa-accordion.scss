@@ -1,0 +1,64 @@
+
+.accordion {
+    color: $darkest-gray;
+  
+    h2 {
+      font-size: 2em;
+      color: $color-blue-dark;
+    }
+  
+    .usa-accordion__heading:not(:first-child) {
+      margin-top: 1rem;
+    }
+  
+    .usa-accordion__button {
+      font-size: 24px;
+      font-weight: 500;
+      background-color: $light-gray;
+      padding: 1.8rem 3.5rem 1.8rem 1.3rem;
+  
+      @include hover {
+        background-color: #fff;
+        color: $deep-blue;
+      }
+  
+      [dir="rtl"] & {
+        background-position: 1rem;
+        text-align: right;
+        padding: 1.8rem 1.25rem 1.8rem 3.5rem;
+      }
+    }
+  
+    .usa-accordion__button[aria-expanded=true] {
+      background-color: #fff;
+      color: $deep-blue;
+    }
+  
+    .usa-accordion__content {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: -0.5rem;
+      padding-bottom: 1.25rem;
+  
+      a {
+        color: $blue;
+      }
+    }
+  }
+  
+  .slick-acc {
+    .usa-accordion__button {
+      font-size: 18px;
+    }
+  }
+  
+  .homepage-acc {
+    padding-top: 50px;
+  }
+  
+  .content-heading {
+    font-family: Merriweather Web, Georgia, Cambria, Times New Roman, Times, serif;
+    font-weight: normal;
+  }
+  

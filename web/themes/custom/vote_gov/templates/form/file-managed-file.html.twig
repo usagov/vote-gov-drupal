@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Theme override to display a file form widget.
+ *
+ * Available variables:
+ * - element: Form element for the file upload.
+ * - attributes: HTML attributes for the containing element.
+ *
+ * @see template_preprocess_file_managed_file()
+ */
+#}
+{#edit-usa-managed-file-upload#}
+{% set extensions =  element["#upload_validators"].file_validate_extensions.0 %}
+{% set aria_for = element["#label_for"] %}
+
+{% set classes = [
+  'js-form-managed-file',
+  'form-managed-file',
+] %}
+
+<span class="usa-hint" id="{{ aria_for -}}-hint">
+    {{ 'Select'|t }} {{ extensions }} {{ 'files'|t }}
+</span>
+
+<div{{ attributes.addClass(classes) }}>
+  {{ element }}
+</div>
+
+

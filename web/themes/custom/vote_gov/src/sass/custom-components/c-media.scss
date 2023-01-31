@@ -1,0 +1,18 @@
+// Include core in order to use USWDS mixins etc...
+@use "uswds-core" as *;
+
+// Responsive video.
+.video-wrap {
+  > iframe {
+    width: 100%;
+    height: 100%;
+    // aspect ratio calc in JS.
+  }
+}
+
+.media-image {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
