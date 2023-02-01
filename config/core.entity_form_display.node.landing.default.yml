@@ -5,12 +5,14 @@ dependencies:
   config:
     - core.entity_form_mode.block_content.landing_page_component
     - field.field.node.landing.body
+    - field.field.node.landing.field_metatags
     - field.field.node.landing.field_page_components
     - node.type.landing
     - workflows.workflow.publishing_content
   module:
     - content_moderation
     - inline_entity_form
+    - metatag
     - path
     - publication_date
     - text
@@ -34,6 +36,14 @@ content:
     weight: 2
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_metatags:
+    type: metatag_firehose
+    weight: 26
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_page_components:
     type: inline_entity_form_complex

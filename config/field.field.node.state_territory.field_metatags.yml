@@ -1,0 +1,21 @@
+uuid: 416f2688-884c-4b6c-b170-7e0be3b598e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.state_territory
+  module:
+    - metatag
+id: node.state_territory.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: state_territory
+label: Metatags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag
