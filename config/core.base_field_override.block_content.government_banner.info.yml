@@ -1,0 +1,18 @@
+uuid: c4bf3a73-05e0-4908-b19f-72fa7dfddea2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.government_banner
+id: block_content.government_banner.info
+field_name: info
+entity_type: block_content
+bundle: government_banner
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
