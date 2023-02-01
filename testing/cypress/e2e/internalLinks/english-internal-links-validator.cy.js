@@ -21,7 +21,7 @@ const excludedlinks = [
   'https://info.scvotes.sc.gov/eng/ovr/start.aspx?ref=voteusa_en'
 ];
 
-describe("External Link Validator Test", () => {
+describe("Internal Link Validator Test", () => {
   const singlePage =
     Cypress.env("name") && Cypress.env("route")
       ? [
