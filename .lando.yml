@@ -75,6 +75,13 @@ tooling:
       - drush updb
       - drush cim -y
       - drush cr
+  set:
+    service: appserver
+    description: Creates a settings.local file
+    cmd:
+      - cp /app/.lando/settings.local.php /app/web/sites
+      - cp /app/.lando/services.local.yml /app/web/sites
+      - drush cr
   xoff:
     cmd: "rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && /etc/init.d/apache2 reload"
     description: Disable xdebug.
@@ -85,3 +92,6 @@ tooling:
     description: Enable xdebug.
     service: appserver
     user: root
+events:
+  post-set:
+    - echo "Successfully enabled local development settings and services files!"
