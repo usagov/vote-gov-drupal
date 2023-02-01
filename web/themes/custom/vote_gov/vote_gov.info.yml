@@ -13,7 +13,7 @@ libraries:
   - vote_gov/global
 
 regions:
-  preface: "Preface"
+  header: "Header"
   highlighted: "Highlighted"
   breadcrumb: "breadcrumb"
   help: "Help"
