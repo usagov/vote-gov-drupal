@@ -1,0 +1,18 @@
+uuid: cc84cd83-2a3b-4857-ad9f-288a616fa466
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sitewide_alert
+id: block_content.sitewide_alert.info
+field_name: info
+entity_type: block_content
+bundle: sitewide_alert
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
