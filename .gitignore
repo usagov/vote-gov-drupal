@@ -64,7 +64,8 @@ Thumbs.db
 ._*
 
 # Ignore Local Development files
-/web/sites/development.services.local.yml
+/web/sites/services.local.yml
+/web/sites/settings.local.php
 node_modules
 
 # Ignore Theme dist files
