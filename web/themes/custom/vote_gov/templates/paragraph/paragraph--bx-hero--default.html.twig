@@ -38,51 +38,16 @@
  * @ingroup themeable
  */
 #}
-
-{# Set vars for the hero image. #}
-{% set image_url = paragraph.field_bx_media.entity.field_media_image.entity.uri.getString() %}
-{% set image_style_url = image_url | image_style('max_2600x2600') %}
-{% set bottom_margin = content.field_bx_bottom_padding.0["#markup"] %}
-
-{% set classes = [
-  'usa-hero',
-  bottom_margin == 0 ? 'margin-bottom-8' : 'margin-bottom-0',
-  'paragraph',
-  'paragraph--type--' ~ paragraph.bundle|clean_class,
-  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-  not paragraph.isPublished() ? 'paragraph--unpublished'
-] %}
+{% extends  "paragraph--default.html.twig" %}
 
 {% block paragraph %}
-  <section{{ attributes.addClass(classes).setAttribute('aria-label', ('Introduction'|t)  ) }}
-    style="background-image: url('{{ file_url(image_style_url) }}')">
-    {% block content %}
-      <div class="grid-container">
-        <div class="usa-hero__callout">
-
-          <h1 class="usa-hero__heading">
-            {% if content.field_bx_title_eyebrow %}
-              <span class="usa-hero__heading--alt">
-                {{ content.field_bx_title_eyebrow | field_value }}
-              </span>
-              {{ content.field_bx_title | field_value }}
-            {% endif %}
-          </h1>
-
-          {% if content.field_bx_text | render %}
-            <p>{{ content.field_bx_text | field_value }}</p>
-          {% endif %}
-
-          {% if content.field_bx_link %}
-            <a class="usa-button usa-button--outline usa-button--inverse"
-               href="{{ content.field_bx_link.0["#url_title"] }}"
-               title="{{ content.field_bx_link.0["#title"] }}">
-              {{ content.field_bx_link.0["#title"] }}
-            </a>
-          {% endif %}
-
-        </div>
-      </div>
-    {% endblock %}
-  </section>
+  {% include '@vote_gov/uswds/usa-hero.html.twig' with {
+    'image_url': paragraph.field_bx_media.entity.field_media_image.entity.uri.getString(),
+    'bottom_margin': content.field_bx_bottom_padding.0["#markup"],
+    'title_eyebrow': content.field_bx_title_eyebrow | field_value,
+    'title': content.field_bx_title | field_value,
+    'text': content.field_bx_text | field_value,
+    'link_title': content.field_bx_link.0["#url_title"],
+    'link_url': content.field_bx_link.0["#url_title"],
+  } %}
 {% endblock paragraph %}

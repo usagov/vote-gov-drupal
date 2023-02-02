@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Default theme implementation to USWDS process list component.
+ *
+ * USWDS template variables:
+ * - process_list_item: field object value
+ * - classes: classes array
+ *
+ * Usage example:
+ * {% include '@vote_gov/uswds/usa-process-list.html.twig' with {
+ *   'process_list_item': var_process_list_item | field_value,
+ *   'classes': var_classes
+ * } %}
+ *
+#}
+{% set usa_classes = [
+  'usa-process-list',
+  'component',
+  'component--type--usa-process-list',
+] %}
+
+<ol{{ attributes.addClass(usa_classes | merge(classes | default([]))) }}>
+  {% block content %}
+    {{ process_list_item }}
+  {% endblock %}
+</ol>

@@ -38,25 +38,12 @@
  * @ingroup themeable
  */
 #}
-
-{% set accordion_multi = content.field_bx_accordion_multi.0["#markup"] %}
-{% set accordion_border = content.field_bx_border.0["#markup"] %}
-{% set data_allow_multiple = accordion_multi == '1'  ? 'data-allow-multiple' : 'data-allow-single' %}
-
-{% set classes = [
-  'usa-accordion',
-  accordion_multi == '1' ? 'usa-accordion--multiselectable',
-  accordion_border == '1' ? 'usa-accordion--bordered',
-   'component',
-   'component--type--' ~ paragraph.bundle|clean_class,
-  view_mode ?  'component--view-mode--' ~ view_mode|clean_class,
-  not paragraph.isPublished() ?  'component--unpublished'
-] %}
+{% extends  "paragraph--default.html.twig" %}
 
 {% block paragraph %}
-  <div{{ attributes.addClass(classes).setAttribute(data_allow_multiple, '') }}>
-    {% block content %}
-      {{ content.field_bx_accordion_item | field_value }}
-    {% endblock %}
-  </div>
+  {% include '@vote_gov/uswds/usa-accordion.html.twig' with {
+    'accordion_multi': content.field_bx_accordion_multi.0["#markup"],
+    'accordion_border': content.field_bx_border.0["#markup"],
+    'accordion_item': content.field_bx_accordion_item | field_value,
+  } %}
 {% endblock paragraph %}

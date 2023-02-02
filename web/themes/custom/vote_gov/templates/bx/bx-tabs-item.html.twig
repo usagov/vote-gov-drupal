@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Default theme implementation to BX tabs item component.
+ *
+ * BX template variables:
+ * - id: string value
+ * - text: string value
+ * - classes: classes array
+ *
+ * Usage example:
+ * {% include '@vote_gov/bx/bx-tabs-item.html.twig' with {
+ *   'id': var_id,
+ *   'text': var_text | field_value,
+ *   'classes': var_classes
+ * } %}
+ *
+#}
+{% set bx_classes = [
+  'is-wysiwyg',
+  'c-tabs__panel',
+  'component',
+  'component--type--bx-tabs-item',
+] %}
+
+<div{{ attributes.addClass(bx_classes | merge(classes | default([]))) }}
+  id="panel-{{- id }}"
+  role="tabpanel"
+  tab-title="{{ id }}">
+
+  {% block content %}
+    {{ text }}
+  {% endblock %}
+
+</div>

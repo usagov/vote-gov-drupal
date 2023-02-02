@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Default theme implementation to USWDS accordion component.
+ *
+ * USWDS template variables:
+ * - expanded: boolean
+ * - id: string value
+ * - title: string object value
+ * - text: string object value
+ * - heading_level: string value h2, h3, etc.
+ * - classes: classes array
+ *
+ * Usage example:
+ * {% include '@vote_gov/uswds/usa-accordion-item.html.twig' with {
+ *   'expanded': var_expanded,
+ *   'id': var_id,
+ *   'title': var_title | field_value,
+ *   'text': var_text | field_value,
+ *   'heading_level': 'h2',
+ *   'classes': var_classes
+ * } %}
+ *
+#}
+{% block content %}
+  <!-- Use the accurate heading level to maintain the document outline -->
+  <{{ heading_level | default('h2') }} class="usa-accordion__heading">
+    <button type="button" class="usa-accordion__button" aria-expanded="{{ expanded | default('false') }}"
+            aria-controls="acc-{{ id }}">
+      {{ title }}
+    </button>
+  </{{ heading_level | default('h2') }}>
+
+  <div id="acc-{{ id }}" class="usa-accordion__content usa-prose">
+    {{ text }}
+  </div>
+{% endblock %}

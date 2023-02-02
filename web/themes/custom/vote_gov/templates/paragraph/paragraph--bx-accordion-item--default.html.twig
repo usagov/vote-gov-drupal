@@ -38,30 +38,15 @@
  * @ingroup themeable
  */
 #}
-
-{% set classes = [
-  'component',
-  'component--type--' ~ paragraph.bundle|clean_class,
-  view_mode ?  'component--view-mode--' ~ view_mode|clean_class,
-  not paragraph.isPublished() ?  'component--unpublished'
-] %}
+{% extends  "paragraph--default.html.twig" %}
 
 {% block paragraph %}
   {{ attributes }}
-  {% block content %}
-
-    <!-- Use the accurate heading level to maintain the document outline -->
-    <h2 class="usa-accordion__heading">
-      <button type="button" class="usa-accordion__button" aria-expanded="{{ item.expanded|default('false') }}"
-              aria-controls="acc-{{ paragraph.id() }}">
-        {{ content.field_bx_title | field_value }}
-      </button>
-    </h2>
-
-    <div id="acc-{{ paragraph.id() }}" class="usa-accordion__content usa-prose">
-      {{ content.field_bx_text | field_value }}
-    </div>
-
-  {% endblock %}
+  {% include '@vote_gov/uswds/usa-accordion-item.html.twig' with {
+    'expanded': item.expanded,
+    'id': paragraph.id(),
+    'title': content.field_bx_title | field_value,
+    'text': content.field_bx_text | field_value,
+  } %}
   </>
 {% endblock paragraph %}

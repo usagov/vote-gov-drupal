@@ -38,17 +38,10 @@
  * @ingroup themeable
  */
 #}
-{% set classes = [
-  'component',
-  'component--type--' ~ paragraph.bundle|clean_class,
-  view_mode ?  'component--view-mode--' ~ view_mode|clean_class,
-  not paragraph.isPublished() ?  'component--unpublished'
-] %}
+{% extends  "paragraph--default.html.twig" %}
 
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
-    {% block content %}
-      {{ content.field_bx_media | field_value }}
-    {% endblock %}
-  </div>
+  {% include '@vote_gov/bx/bx-media.html.twig' with {
+    'media': content.field_bx_media | field_value,
+  } %}
 {% endblock paragraph %}

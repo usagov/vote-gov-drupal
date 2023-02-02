@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Default theme implementation to BX title component.
+ *
+ * BX template variables:
+ * - title: string value
+ * - classes: classes array
+ *
+ * Usage example:
+ * {% include '@vote_gov/bx/bx-title.html.twig' with {
+ *   'title': var_title | field_value,
+ *   'classes': var_classes
+ * } %}
+ *
+#}
+{% set bx_classes = [
+  'component',
+  'component--type--bx-title'
+] %}
+
+<div{{ attributes.addClass(bx_classes | merge(classes | default([]))) }}>
+  {% block content %}
+    <h2>{{ title }}</h2>
+  {% endblock %}
+</div>
