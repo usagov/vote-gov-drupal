@@ -38,24 +38,12 @@
  * @ingroup themeable
  */
 #}
-{% set classes = [
-  'is-wysiwyg',
-  'c-tabs__panel',
-  'component',
-  'component--type--' ~ paragraph.bundle|clean_class,
-  view_mode ?  'component--view-mode--' ~ view_mode|clean_class,
-  not paragraph.isPublished() ?  'component--unpublished'
-] %}
+{% extends  "paragraph--default.html.twig" %}
 
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}
-    id="panel-{{- paragraph.id() }}"
-    role="tabpanel"
-    tab-title="{{ paragraph.id() }}">
-
-    {% block content %}
-      {{ content.field_bx_text | field_value }}
-    {% endblock %}
-
-  </div>
+  {% include '@vote_gov/bx/bx-tabs-item.html.twig' with {
+    'id': paragraph.id(),
+    'text': var_text | field_value,
+    'classes': content.field_bx_text | field_value
+  } %}
 {% endblock paragraph %}

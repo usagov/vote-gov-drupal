@@ -38,37 +38,13 @@
  * @ingroup themeable
  */
 #}
-{% set alert_aria = content.field_bx_title.0["#context"].value %}
-{% set alert_style = content.field_bx_alert_emergency.0["#markup"] %}
-
-{% set classes = [
-  alert_style == 1 ? 'usa-site-alert--emergency',
-  'usa-site-alert',
-  'usa-site-alert--info',
-  'component',
-  'component--type--' ~ paragraph.bundle|clean_class,
-  view_mode ?  'component--view-mode--' ~ view_mode|clean_class,
-  not paragraph.isPublished() ?  'component--unpublished'
-] %}
+{% extends  "paragraph--default.html.twig" %}
 
 {% block paragraph %}
-  <section class="display-flex flex-justify-center" aria-label="{{ alert_aria }}">
-    <div{{ attributes.addClass(classes) }}>
-      {% block content %}
-        <div class="usa-alert">
-          <div class="usa-alert__body">
-
-            <h2 class="usa-alert__heading">{{ content.field_bx_title | field_value }}</h2>
-
-            {% if  content.field_bx_text | render %}
-              <div class="usa-alert__text">
-                {{ content.field_bx_text | field_value }}
-              </div>
-            {% endif %}
-
-          </div>
-        </div>
-      {% endblock %}
-    </div>
-  </section>
+  {% include '@vote_gov/uswds/usa-site-alert.html.twig' with {
+    'alert_aria': content.field_bx_title.0["#context"].value,
+    'alert_style': content.field_bx_alert_emergency.0["#markup"],
+    'title': content.field_bx_title | field_value,
+    'text': content.field_bx_text | field_value,
+  } %}
 {% endblock paragraph %}

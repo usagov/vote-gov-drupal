@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Default theme implementation to BX media component.
+ *
+ * BX template variables:
+ * - media: media object value
+ * - classes: classes array
+ *
+ * Usage example:
+ * {% include '@vote_gov/bx/bx-media.html.twig' with {
+ *   'media': var_media | field_value,
+ *   'classes': var_classes
+ * } %}
+ *
+#}
+{% set bx_classes = [
+  'component',
+  'component--type--bx-media'
+] %}
+
+<div{{ attributes.addClass(bx_classes | merge(classes | default([]))) }}>
+  {% block content %}
+    {{ media }}
+  {% endblock %}
+</div>

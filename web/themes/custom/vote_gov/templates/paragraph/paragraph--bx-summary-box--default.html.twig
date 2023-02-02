@@ -38,28 +38,12 @@
  * @ingroup themeable
  */
 #}
-{% set classes = [
-  'usa-summary-box',
-  'component',
-  'component--type--' ~ paragraph.bundle|clean_class,
-  view_mode ?  'component--view-mode--' ~ view_mode|clean_class,
-  not paragraph.isPublished() ?  'component--unpublished'
-] %}
+{% extends  "paragraph--default.html.twig" %}
 
 {% block paragraph %}
-  <div{{ attributes.addClass(classes).setAttribute('role', 'region').setAttribute('aria-labelledby', 'summary-box-' ~ paragraph.id()) }}>
-    {% block content %}
-      <div class="usa-summary-box__body">
-
-        <h2 id="summary-box-{{ paragraph.id() }}" class="usa-summary-box__heading">
-          {{ content.field_bx_title | field_value }}
-        </h2>
-
-        <div class="usa-summary-box__text">
-          {{ content.field_bx_text | field_value }}
-        </div>
-
-      </div>
-    {% endblock %}
-  </div>
+  {% include '@vote_gov/uswds/usa-summary-box.html.twig' with {
+    'id': paragraph.id(),
+    'title': content.field_bx_title | field_value,
+    'text': content.field_bx_text | field_value,
+  } %}
 {% endblock paragraph %}

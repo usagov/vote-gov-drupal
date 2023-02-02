@@ -38,17 +38,10 @@
  * @ingroup themeable
  */
 #}
-{% set classes = [
-  'component',
-  'component--type--' ~ paragraph.bundle|clean_class,
-  view_mode ?  'component--view-mode--' ~ view_mode|clean_class,
-  not paragraph.isPublished() ?  'component--unpublished'
-] %}
+{% extends  "paragraph--default.html.twig" %}
 
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
-    {% block content %}
-      <h2>{{ content.field_bx_title | field_value }}</h2>
-    {% endblock %}
-  </div>
+  {% include '@vote_gov/bx/bx-title.html.twig' with {
+    'title': content.field_bx_title | field_value,
+  } %}
 {% endblock paragraph %}

@@ -38,18 +38,10 @@
  * @ingroup themeable
  */
 #}
-{% set classes = [
-  'usa-collection',
-  'component',
-  'component--type--' ~ paragraph.bundle|clean_class,
-  view_mode ?  'component--view-mode--' ~ view_mode|clean_class,
-  not paragraph.isPublished() ?  'component--unpublished'
-] %}
+{% extends  "paragraph--default.html.twig" %}
 
 {% block paragraph %}
-  <ul{{ attributes.addClass(classes).removeAttribute('role').setAttribute('role', 'list') }}>
-    {% block content %}
-      {{ content.field_bx_collection_content | field_value }}
-    {% endblock %}
-  </ul>
+  {% include '@vote_gov/uswds/usa-collection.html.twig' with {
+    'collection_content': content.field_bx_collection_content | field_value,
+  } %}
 {% endblock paragraph %}

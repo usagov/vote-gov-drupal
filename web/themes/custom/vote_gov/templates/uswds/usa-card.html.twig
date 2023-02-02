@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Default theme implementation to USWDS card component.
+ *
+ * USWDS template variables:
+ * - card_item: field object value
+ * - classes: classes array
+ *
+ * Usage example:
+ * {% include '@vote_gov/uswds/usa-card.html.twig' with {
+ *   'card_item': var_card_item | field_value,
+ *   'classes': var_classes
+ * } %}
+ *
+#}
+{% set usa_classes = [
+  'usa-card-group',
+  'component',
+  'component--type--usa-card',
+] %}
+
+<ul{{ attributes.addClass(usa_classes | merge(classes | default([]))) }}>
+  {% block content %}
+    {{ card_item }}
+  {% endblock %}
+</ul>

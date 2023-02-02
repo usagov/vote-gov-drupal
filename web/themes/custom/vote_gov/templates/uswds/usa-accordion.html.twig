@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Default theme implementation to USWDS accordion component.
+ *
+ * USWDS template variables:
+ * - accordion_multi: 0 or 1
+ * - accordion_border: 0 or 1
+ * - accordion_item: field object value
+ * - classes: classes array
+ *
+ * Usage example:
+ * {% include '@vote_gov/uswds/usa-accordion.html.twig' with {
+ *   'accordion_multi': var_accordion_multi,
+ *   'accordion_border': var_accordion_border,
+ *   'accordion_item': var_accordion_item | field_value,
+ *   'classes': var_classes
+ * } %}
+ *
+#}
+{% set data_allow_multiple = accordion_multi == '1'  ? 'data-allow-multiple' : 'data-allow-single' %}
+
+{% set usa_classes = [
+  'usa-accordion',
+  accordion_multi == '1' ? 'usa-accordion--multiselectable',
+  accordion_border == '1' ? 'usa-accordion--bordered',
+   'component',
+   'component--type--usa-accordion',
+] %}
+
+<div{{ attributes.addClass(usa_classes | merge(classes | default([]))).setAttribute(data_allow_multiple, '') }}>
+  {% block content %}
+    {{ accordion_item }}
+  {% endblock %}
+</div>
