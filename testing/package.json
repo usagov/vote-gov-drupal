@@ -12,7 +12,9 @@
   "scripts": {
     "cy:open": "cypress open",
     "cy:test": "cypress run --spec 'cypress/e2e/tests/**/*'",
-    "cy:axe": "cypress run --spec 'cypress/e2e/accessibility/**/*'"
+    "cy:axe": "cypress run --spec 'cypress/e2e/accessibility/**/*'",
+    "cy:links": "cypress run --spec 'cypress/e2e/internalLinks/**/*'",
+    "cy:proofer": "cypress run --spec 'cypress/e2e/externalLinks/**/*'"
   },
   "repository": {
     "type": "git",
