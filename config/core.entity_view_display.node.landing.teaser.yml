@@ -14,6 +14,11 @@ targetEntityType: node
 bundle: landing
 mode: teaser
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -23,3 +28,4 @@ hidden:
   body: true
   field_page_components: true
   langcode: true
+  published_at: true

@@ -28,3 +28,4 @@ hidden:
   body: true
   field_attachment: true
   langcode: true
+  published_at: true

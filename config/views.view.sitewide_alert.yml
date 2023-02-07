@@ -6,8 +6,9 @@ dependencies:
     - block_content.type.sitewide_alert
   module:
     - block_content
+    - user
 id: sitewide_alert
-label: 'Sitewide Alert'
+label: 'Custom Block: Sitewide Alert'
 module: views
 description: ''
 tag: ''
@@ -87,10 +88,9 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: some
+        type: none
         options:
           offset: 0
-          items_per_page: 5
       exposed_form:
         type: basic
         options:
@@ -102,29 +102,29 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
       empty: {  }
       sorts:
-        revision_created:
-          id: revision_created
-          table: block_content_revision
-          field: revision_created
+        id:
+          id: id
+          table: block_content_field_data
+          field: id
           relationship: none
           group_type: group
           admin_label: ''
           entity_type: block_content
-          entity_field: revision_created
-          plugin_id: date
+          entity_field: id
+          plugin_id: standard
           order: ASC
           expose:
             label: ''
             field_identifier: ''
           exposed: false
-          granularity: second
       arguments: {  }
       filters:
         status:
@@ -138,14 +138,6 @@ display:
           group: 1
           expose:
             operator: ''
-        reusable:
-          id: reusable
-          table: block_content_field_data
-          field: reusable
-          entity_type: block_content
-          entity_field: reusable
-          plugin_id: boolean
-          value: '1'
         type:
           id: type
           table: block_content_field_data
@@ -155,6 +147,48 @@ display:
           plugin_id: bundle
           value:
             sitewide_alert: sitewide_alert
+        langcode:
+          id: langcode
+          table: block_content_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: block_content
+          entity_field: langcode
+          plugin_id: language
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       style:
         type: default
         options:
@@ -180,6 +214,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - user.permissions
       tags: {  }
   block_1:
     id: block_1
@@ -187,12 +222,13 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      rendering_language: '***LANGUAGE_language_interface***'
       display_extenders: {  }
       block_description: 'Sitewide Alert List'
       block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
+        - user.permissions
       tags: {  }
