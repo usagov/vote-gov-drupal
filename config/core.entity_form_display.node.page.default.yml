@@ -5,11 +5,13 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_attachment
+    - field.field.node.page.field_metatags
     - node.type.page
     - workflows.workflow.publishing_content
   module:
     - content_moderation
     - media_library
+    - metatag
     - path
     - publication_date
     - text
@@ -40,6 +42,14 @@ content:
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  field_metatags:
+    type: metatag_firehose
+    weight: 26
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   langcode:
     type: language_select

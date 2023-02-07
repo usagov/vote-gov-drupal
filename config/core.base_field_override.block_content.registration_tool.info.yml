@@ -1,0 +1,18 @@
+uuid: c04bd510-2d4f-433c-8ea8-9dc2e6e6fa7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.registration_tool
+id: block_content.registration_tool.info
+field_name: info
+entity_type: block_content
+bundle: registration_tool
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -5,8 +5,10 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_attachment
+    - field.field.node.page.field_metatags
     - node.type.page
   module:
+    - metatag
     - text
     - user
 id: node.page.default
@@ -34,6 +36,13 @@ content:
       link: false
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_metatags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
     region: content
   links:
     settings: {  }

@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.landing.body
+    - field.field.node.landing.field_metatags
     - field.field.node.landing.field_page_components
     - node.type.landing
   module:
+    - metatag
     - text
     - user
 id: node.landing.default
@@ -25,6 +27,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: -20
+    region: content
+  field_metatags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
     region: content
   field_page_components:
     type: entity_reference_label

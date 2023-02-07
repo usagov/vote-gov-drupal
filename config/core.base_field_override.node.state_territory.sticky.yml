@@ -1,0 +1,22 @@
+uuid: 2c888980-274c-4ae9-a15d-0f22bdfbc7ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.state_territory
+id: node.state_territory.sticky
+field_name: sticky
+entity_type: node
+bundle: state_territory
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
