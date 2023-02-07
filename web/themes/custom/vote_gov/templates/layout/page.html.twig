@@ -53,13 +53,8 @@
 {% set base_url = url('<front>')|render|split('/', -1)|join('/') %}
 
 <div class="layout-container">
-  {# Preface region for USA banner. #}
-  {{ page.preface }}
-
-  {# Header partial. #}
-  <!-- Start header.-->
-  {% include '@vote_gov/partial/p-header.html.twig' %}
-  <!-- End header.-->
+  {# Header region for USA banner, language selector, search box, and site alert #}
+  {{ page.header }}
 
   <main role="main" class="main-content clearfix">
     {# link is in html.html.twig #}
