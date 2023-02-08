@@ -19,7 +19,6 @@ dependencies:
     - media
     - menu_link_content
     - node
-    - publication_date
     - system
     - toolbar
 id: content_manager
@@ -31,7 +30,7 @@ permissions:
   - 'access files overview'
   - 'access media overview'
   - 'access toolbar'
-  - 'administer publication date'
+  - 'administer menu'
   - 'create audio media'
   - 'create content translations'
   - 'create document media'
@@ -80,10 +79,6 @@ permissions:
   - 'revert landing revisions'
   - 'revert page revisions'
   - 'revert state_territory revisions'
-  - 'set any published on date'
-  - 'set landing published on date'
-  - 'set page published on date'
-  - 'set state_territory published on date'
   - 'translate any entity'
   - 'translate audio media'
   - 'translate block_content'
@@ -102,6 +97,7 @@ permissions:
   - 'use publishing_content transition create_new_draft'
   - 'use publishing_content transition publish'
   - 'use publishing_content transition restore'
+  - 'use publishing_content transition restore_to_draft'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view any unpublished content'
