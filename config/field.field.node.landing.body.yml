@@ -11,7 +11,7 @@ id: node.landing.body
 field_name: body
 entity_type: node
 bundle: landing
-label: Content
+label: 'Page description'
 description: ''
 required: true
 translatable: true
