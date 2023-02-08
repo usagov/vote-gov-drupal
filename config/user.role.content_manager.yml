@@ -3,12 +3,23 @@ langcode: en
 status: true
 dependencies:
   config:
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - node.type.landing
     - node.type.page
+    - node.type.state_territory
     - workflows.workflow.publishing_content
   module:
+    - block_content
     - content_moderation
+    - content_translation
+    - file
     - media
+    - menu_link_content
     - node
+    - publication_date
     - system
     - toolbar
 id: content_manager
@@ -17,19 +28,75 @@ weight: 3
 is_admin: null
 permissions:
   - 'access content overview'
+  - 'access files overview'
   - 'access media overview'
   - 'access toolbar'
+  - 'administer publication date'
+  - 'create audio media'
+  - 'create content translations'
+  - 'create document media'
+  - 'create image media'
+  - 'create landing content'
   - 'create media'
   - 'create page content'
+  - 'create remote_video media'
+  - 'create state_territory content'
+  - 'delete all revisions'
+  - 'delete any audio media'
+  - 'delete any document media'
+  - 'delete any image media'
+  - 'delete any landing content'
   - 'delete any media'
   - 'delete any page content'
+  - 'delete any remote_video media'
+  - 'delete any state_territory content'
+  - 'delete content translations'
+  - 'delete landing revisions'
   - 'delete media'
+  - 'delete own audio media'
+  - 'delete own document media'
+  - 'delete own image media'
+  - 'delete own landing content'
   - 'delete own page content'
+  - 'delete own remote_video media'
+  - 'delete own state_territory content'
   - 'delete page revisions'
+  - 'delete state_territory revisions'
+  - 'edit any audio media'
+  - 'edit any document media'
+  - 'edit any image media'
+  - 'edit any landing content'
   - 'edit any page content'
+  - 'edit any remote_video media'
+  - 'edit any state_territory content'
+  - 'edit own audio media'
+  - 'edit own document media'
+  - 'edit own image media'
+  - 'edit own landing content'
   - 'edit own page content'
+  - 'edit own remote_video media'
+  - 'edit own state_territory content'
+  - 'revert all revisions'
+  - 'revert landing revisions'
   - 'revert page revisions'
+  - 'revert state_territory revisions'
+  - 'set any published on date'
+  - 'set landing published on date'
+  - 'set page published on date'
+  - 'set state_territory published on date'
+  - 'translate any entity'
+  - 'translate audio media'
+  - 'translate block_content'
+  - 'translate document media'
+  - 'translate editable entities'
+  - 'translate image media'
+  - 'translate landing node'
+  - 'translate menu_link_content'
+  - 'translate page node'
+  - 'translate remote_video media'
+  - 'translate state_territory node'
   - 'update any media'
+  - 'update content translations'
   - 'update media'
   - 'use publishing_content transition archive'
   - 'use publishing_content transition create_new_draft'
@@ -38,8 +105,10 @@ permissions:
   - 'view all media revisions'
   - 'view all revisions'
   - 'view any unpublished content'
+  - 'view landing revisions'
   - 'view latest version'
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view page revisions'
+  - 'view state_territory revisions'
   - 'view the administration theme'
