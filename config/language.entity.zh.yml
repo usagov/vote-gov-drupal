@@ -1,0 +1,9 @@
+uuid: 57cfd055-8ba1-46e1-886a-0cb7f1c99d03
+langcode: en
+status: true
+dependencies: {  }
+id: zh
+label: 'Chinese - traditional'
+direction: ltr
+weight: -6
+locked: false

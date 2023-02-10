@@ -1,0 +1,9 @@
+uuid: cde37284-037c-438e-beab-adfa312a6de5
+langcode: en
+status: true
+dependencies: {  }
+id: hi
+label: Hindi
+direction: ltr
+weight: -5
+locked: false

@@ -1,0 +1,4 @@
+# Vietnamese translation of Vote.gov
+#
+msgid "Vietnamese"
+msgstr "Tiếng Việt"

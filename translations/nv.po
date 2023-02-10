@@ -1,4 +1,4 @@
-# Spanish translation of Vote.gov
+# Navajo translation of Vote.gov
 #
 msgid ""
 msgstr ""
@@ -10,5 +10,5 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-msgid "Spanish"
-msgstr "Español"
+msgid "Navajo"
+msgstr "Diné++"
