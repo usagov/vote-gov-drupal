@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  
   e2e: {
     baseUrL: 'https://vote-gov-d10.lndo.site/',
     video: false,
@@ -13,7 +14,12 @@ module.exports = defineConfig({
     chromeWebSecurity: false,
     responsetimeout: 10000,
     "blockHosts": ["www.google-analytics.com", "ssl.google-analytics.com"],
-    
+
+    env: {
+      "cyAdminUser": "testing-qa",
+      "cyAdminPassword": "Vote.gov2023"
+    },
+
     setupNodeEvents(on, config) {
       // implement node event listeners here
 
@@ -29,6 +35,8 @@ module.exports = defineConfig({
           return null
         }
       })
+
+      
     },
   },
 });

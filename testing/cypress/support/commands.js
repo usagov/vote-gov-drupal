@@ -23,3 +23,29 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+// ...
+// Cypress.Commands.add("login", (user, password) => {
+//   return cy.request({
+//     method: 'POST',
+//     url: '/user/login', 
+//     form: true,
+//     body: { 
+//       name: user,
+//       pass: password,
+//       form_id: 'user_login_form' 
+//     }
+//   });
+// });
+ 
+// Cypress.Commands.add('logout', () => {
+//   return cy.request('/user/logout');
+// });
+
+Cypress.Commands.add('login', (username, password) => {
+  cy.visit('/login')
+  cy.get('[data-test=username]').type(username)
+  cy.get('[data-test=password]').type(password)
+  // cy.get('#login').click()
+  // cy.url().should('contain', '/login-successful')
+})
