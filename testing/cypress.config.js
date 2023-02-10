@@ -15,11 +15,6 @@ module.exports = defineConfig({
     responsetimeout: 10000,
     "blockHosts": ["www.google-analytics.com", "ssl.google-analytics.com"],
 
-    env: {
-      "cyAdminUser": "testing-qa",
-      "cyAdminPassword": "Vote.gov2023"
-    },
-
     setupNodeEvents(on, config) {
       // implement node event listeners here
 
