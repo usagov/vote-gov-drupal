@@ -23,19 +23,19 @@ content:
     region: content
   field_classes:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
   field_heading:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 4
+    weight: 0
     region: content
 hidden:
   langcode: true

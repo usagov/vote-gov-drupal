@@ -24,35 +24,27 @@ dependencies:
     - field.field.node.state_territory.field_registration_link
     - field.field.node.state_territory.field_registration_type
     - field.field.node.state_territory.field_state_abbreviation
+    - field.field.node.state_territory.field_state_name
     - node.type.state_territory
   module:
     - datetime
     - double_field
     - link
     - metatag
-    - options
-    - text
     - user
 id: node.state_territory.default
 targetEntityType: node
 bundle: state_territory
 mode: default
 content:
-  body:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 18
-    region: content
   content_moderation_control:
     settings: {  }
     third_party_settings: {  }
-    weight: -20
+    weight: 0
     region: content
   field_confirm_registration_link:
     type: link
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -60,11 +52,11 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 8
+    weight: 16
     region: content
   field_election_homepage_link:
     type: link
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -72,49 +64,48 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 5
+    weight: 3
     region: content
   field_g_in_person_deadline:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 29
+    weight: 15
     region: content
   field_g_mail_postmarked_deadline:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 30
+    weight: 11
     region: content
   field_g_mail_received_deadline:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 31
+    weight: 13
     region: content
   field_g_online_deadline:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 32
+    weight: 9
     region: content
   field_in_person_deadline:
     type: double_field_unformatted_list
-    label: above
+    label: hidden
     settings:
       first:
-        format_type: medium
+        format_type: long_date
         link: false
         hidden: false
-        key: false
         decimal_separator: .
         thousand_separator: ''
         scale: 2
@@ -122,52 +113,41 @@ content:
         format_type: medium
         link: false
         hidden: false
-        key: false
         decimal_separator: .
         thousand_separator: ''
         scale: 2
       inline: true
     third_party_settings: {  }
-    weight: 24
-    region: content
-  field_is_state:
-    type: boolean
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 3
+    weight: 14
     region: content
   field_mail_postmarked_deadline:
     type: datetime_default
-    label: above
+    label: hidden
     settings:
       timezone_override: ''
-      format_type: medium
+      format_type: long_date
     third_party_settings: {  }
-    weight: 27
+    weight: 10
     region: content
   field_mail_received_deadline:
     type: datetime_default
-    label: above
+    label: hidden
     settings:
       timezone_override: ''
-      format_type: medium
+      format_type: long_date
     third_party_settings: {  }
-    weight: 28
+    weight: 12
     region: content
   field_metatags:
     type: metatag_empty_formatter
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 37
+    weight: 19
     region: content
   field_more_info_link:
     type: link
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -179,13 +159,12 @@ content:
     region: content
   field_online_deadline:
     type: double_field_unformatted_list
-    label: above
+    label: hidden
     settings:
       first:
-        format_type: medium
+        format_type: long_date
         link: false
         hidden: false
-        key: false
         decimal_separator: .
         thousand_separator: ''
         scale: 2
@@ -193,17 +172,16 @@ content:
         format_type: medium
         link: false
         hidden: false
-        key: false
         decimal_separator: .
         thousand_separator: ''
         scale: 2
       inline: true
     third_party_settings: {  }
-    weight: 26
+    weight: 8
     region: content
   field_override_confirm_reg_link:
     type: link
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -211,11 +189,11 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 33
+    weight: 17
     region: content
   field_override_election_hp_link:
     type: link
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -223,11 +201,11 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 34
+    weight: 4
     region: content
   field_override_more_info_link:
     type: link
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -235,23 +213,11 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 35
+    weight: 18
     region: content
   field_override_registration_link:
     type: link
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 36
-    region: content
-  field_registration_link:
-    type: link
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -261,26 +227,35 @@ content:
     third_party_settings: {  }
     weight: 6
     region: content
-  field_registration_type:
-    type: list_default
-    label: above
-    settings: {  }
+  field_registration_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
-  field_state_abbreviation:
+  field_state_name:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 19
+    weight: 2
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
 hidden:
+  body: true
+  field_is_state: true
+  field_registration_type: true
+  field_state_abbreviation: true
   langcode: true
   published_at: true
