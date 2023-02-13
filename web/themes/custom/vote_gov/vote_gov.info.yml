@@ -14,11 +14,8 @@ libraries:
 
 regions:
   header: "Header"
-  highlighted: "Highlighted"
-  breadcrumb: "breadcrumb"
-  help: "Help"
+  admin: "Admin local tasks"
   content: "Content"
   sidebar: "Sidebar"
-  postscript: "Postscript"
   footer: "Footer"
   no_region: "Blocks for Twig Tweak, hidden, or other purposes"

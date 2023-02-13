@@ -27,9 +27,7 @@
 * comment/reply/12345).
 *
 * Regions:
-* - page.breadcrumb: Items for the breadcrumb region.
-* - page.highlighted: Items for the highlighted content region.
-* - page.help: Dynamic help text, mostly for admin pages.
+* - page.header: Items for the header region.
 * - page.content: The main content of the current page.
 * - page.sidebar: Items for the sidebar.
 * - page.footer: Items for the footer region.
@@ -60,19 +58,9 @@
     {# link is in html.html.twig #}
     <a id="main-content" tabindex="-1"></a>
 
-    {# Highlighted region for full width components such as a hero. #}
-    {{ page.highlighted }}
-
-    {# Breadcrumb region. #}
-    {% if page.breadcrumb %}
-      <div class="grid-container-widescreen">
-        {{ page.breadcrumb }}
-      </div>
-    {% endif %}
-
     <div class="layout-content grid-container-widescreen">
-      {# Help region. #}
-      {{ page.help }}
+      {# Admin region. #}
+      {{ page.admin }}
     </div>
 
     <div class="layout-content grid-container-widescreen">
@@ -92,9 +80,6 @@
         {% endif %}
       </div>
     </div>{# /.layout-content #}
-
-    {# Postscript region for full width components such as a global site CTA. #}
-    {{ page.postscript }}
   </main>
 
   {# Footer partial. #}
