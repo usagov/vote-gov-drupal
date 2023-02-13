@@ -98,22 +98,22 @@
 
   <div{{ content_attributes.addClass('node__content') }}> 
 
-    <h3>{{ 'How to register to vote in ' }}{{ content.field_state_name.0 }}</h3>
-      <p>{{ 'Start your online registration on ' | t }}{{ content.field_registration_link.0 }}</p>
-      <p>{{ 'You can also register to vote by mail or in person on ' | t  }}{{ content.field_more_info_link.0 }}</p>
+    <h3>{{ 'How to register to vote in ' }}{{ content.field_state_name | field_value }}</h3>
+      <p>{{ 'Start your online registration on ' | t }}{{ content.field_registration_link }}{{ content.field_override_registration_link }}</p>
+      <p>{{ 'You can also register to vote by mail or in person on ' | t  }}{{ content.field_more_info_link | field_value }}{{ content.field_override_more_info_link }}</p>
 
-    <h3>{{ 'Voter registration deadlines in ' | t }}{{ content.field_state_name.0 }}</h3>
+    <h3>{{ 'Voter registration deadlines in ' | t }}{{ content.field_state_name | field_value }}</h3>
       <ul>
-      <li>{{ 'Online registration deadline: ' | t }}{{ content.field_online_deadline.0 }}</li>  
+      <li>{{ 'Online registration deadline: ' | t }}{{ content.field_online_deadline }}{{ content.field_g_online_deadline }}</li>  
       {# logic needed to display postmarked or received #}    
-      <li>{{ 'Register by mail deadline: ' | t }}{{ 'Must be postmarked by ' }}{{ content.field_mail_postmarked_deadline.0 }}</li>
-      <li>{{ 'Register by mail deadline: ' | t }}{{ 'Must be received by ' }}{{ content.field_mail_received_deadline.0 }}</li>
-      <li>{{ 'In person registration deadline: ' | t }}{{ content.field_in_person_deadline.0 }}</li>
+      <li>{{ 'Register by mail deadline: ' | t }}{{ 'Must be postmarked by ' }}{{ content.field_mail_postmarked_deadline | field_value }}{{ content.field_g_mail_postmarked_deadline }}</li>
+      <li>{{ 'Register by mail deadline: ' | t }}{{ 'Must be received by ' }}{{ content.field_mail_received_deadline | field_value }}{{ content.field_g_mail_received_deadline }}</li>
+      <li>{{ 'In person registration deadline: ' | t }}{{ content.field_in_person_deadline }}{{ content.field_g_in_person_deadline }}</li>
       </ul>
 
     <h3>{{ 'How to check your voter registration' | t }}</h3>
-      <p>{{ 'You can confirm your voter registration status on ' | t }}{{ content.field_election_homepage_link.0 }}</p>
-      
+      <p>{{ 'You can confirm your voter registration status on ' | t }}{{ content.field_confirm_registration_link | field_value }}{{ content.field_override_confirm_reg_link }}</p>
+
   </div>
 
 </article>
