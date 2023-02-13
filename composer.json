@@ -20,6 +20,7 @@
         "drupal-tome/tome_drush": "dev-master",
         "drupal/admin_toolbar": "^3.3",
         "drupal/auto_entitylabel": "^3.0",
+        "drupal/block_content_template": "^1.5",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",
