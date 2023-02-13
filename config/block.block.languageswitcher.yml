@@ -9,7 +9,7 @@ dependencies:
 id: languageswitcher
 theme: vote_gov
 region: header
-weight: 0
+weight: -4
 provider: null
 plugin: 'language_block:language_interface'
 settings:

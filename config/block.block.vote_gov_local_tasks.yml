@@ -8,8 +8,8 @@ _core:
   default_config_hash: umNtIMUoh_wuWhK5Dv8-cX7febvOoYCebJ8lOg1NDk0
 id: vote_gov_local_tasks
 theme: vote_gov
-region: help
-weight: -5
+region: admin
+weight: -3
 provider: null
 plugin: local_tasks_block
 settings:
