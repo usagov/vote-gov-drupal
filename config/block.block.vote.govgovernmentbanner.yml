@@ -11,7 +11,7 @@ dependencies:
 id: vote.govgovernmentbanner
 theme: vote_gov
 region: header
-weight: -5
+weight: -3
 provider: null
 plugin: 'block_content:1447b063-7391-47e1-9bd8-6589be38bf12'
 settings:
