@@ -15,7 +15,7 @@ mode: default
 content:
   field_accordions:
     type: double_field_unformatted_list
-    label: above
+    label: hidden
     settings:
       first:
         format_type: medium
@@ -39,7 +39,7 @@ content:
     region: content
   field_heading:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
