@@ -61,9 +61,12 @@ function vote_gov_preprocess_form_element(&$vars): void {
  * Implements hook_preprocess_form_element_label().
  */
 function vote_gov_preprocess_form_element_label(&$vars): void {
-  // Define the label for element.
-  $type = $vars["element"]["#form_element_type"];
-  $vars['attributes']['class'][] = 'form-item__label usa-' . $type . '__label';
+  if (isset($vars['element']['#form_element_type'])) {
+    // Define the label for element.
+    $type = $vars['element']['#form_element_type'];
+
+    $vars['attributes']['class'][] = 'form-item__label usa-' . $type . '__label';
+  }
 }
 
 /**

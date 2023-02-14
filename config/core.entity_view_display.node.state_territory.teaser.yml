@@ -1,6 +1,6 @@
 uuid: 4658fa2b-280a-496d-9137-69d63d8bd5a4
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -25,7 +25,6 @@ dependencies:
     - field.field.node.state_territory.field_registration_link
     - field.field.node.state_territory.field_registration_type
     - field.field.node.state_territory.field_state_abbreviation
-    - field.field.node.state_territory.field_state_name
     - node.type.state_territory
   module:
     - user
@@ -66,6 +65,5 @@ hidden:
   field_registration_link: true
   field_registration_type: true
   field_state_abbreviation: true
-  field_state_name: true
   langcode: true
   published_at: true

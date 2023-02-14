@@ -1,8 +1,9 @@
-uuid: afb77bc4-02a1-43d8-93d6-4001086c243e
+uuid: 8c11b026-d8e1-486b-8e8a-b2bd2f4e55ac
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.state_territory.body
     - field.field.node.state_territory.field_confirm_registration_link
     - field.field.node.state_territory.field_election_homepage_link
@@ -29,12 +30,12 @@ dependencies:
     - datetime
     - double_field
     - link
-    - metatag
+    - options
     - user
-id: node.state_territory.default
+id: node.state_territory.full
 targetEntityType: node
 bundle: state_territory
-mode: default
+mode: full
 content:
   content_moderation_control:
     settings: {  }
@@ -45,25 +46,25 @@ content:
     type: link
     label: hidden
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
     third_party_settings: {  }
-    weight: 16
+    weight: 15
     region: content
   field_election_homepage_link:
     type: link
     label: hidden
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
   field_g_in_person_deadline:
     type: string
@@ -71,7 +72,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 15
+    weight: 14
     region: content
   field_g_mail_postmarked_deadline:
     type: string
@@ -79,7 +80,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 11
+    weight: 10
     region: content
   field_g_mail_received_deadline:
     type: string
@@ -87,7 +88,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 13
+    weight: 12
     region: content
   field_g_online_deadline:
     type: string
@@ -95,7 +96,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 9
+    weight: 8
     region: content
   field_in_person_deadline:
     type: double_field_unformatted_list
@@ -117,7 +118,17 @@ content:
         scale: 2
       inline: true
     third_party_settings: {  }
-    weight: 14
+    weight: 13
+    region: content
+  field_is_state:
+    type: boolean
+    label: hidden
+    settings:
+      format: true-false
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 19
     region: content
   field_mail_postmarked_deadline:
     type: datetime_default
@@ -126,7 +137,7 @@ content:
       timezone_override: ''
       format_type: long_date
     third_party_settings: {  }
-    weight: 10
+    weight: 9
     region: content
   field_mail_received_deadline:
     type: datetime_default
@@ -135,26 +146,19 @@ content:
       timezone_override: ''
       format_type: long_date
     third_party_settings: {  }
-    weight: 12
-    region: content
-  field_metatags:
-    type: metatag_empty_formatter
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 19
+    weight: 11
     region: content
   field_more_info_link:
     type: link
     label: hidden
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
     third_party_settings: {  }
-    weight: 7
+    weight: 6
     region: content
   field_online_deadline:
     type: double_field_unformatted_list
@@ -176,77 +180,86 @@ content:
         scale: 2
       inline: true
     third_party_settings: {  }
-    weight: 8
+    weight: 7
     region: content
   field_override_confirm_reg_link:
     type: link
     label: hidden
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
     third_party_settings: {  }
-    weight: 17
+    weight: 16
     region: content
   field_override_election_hp_link:
     type: link
     label: hidden
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
     third_party_settings: {  }
-    weight: 4
+    weight: 3
     region: content
   field_override_more_info_link:
     type: link
     label: hidden
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
     third_party_settings: {  }
-    weight: 18
+    weight: 17
     region: content
   field_override_registration_link:
     type: link
     label: hidden
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
     third_party_settings: {  }
-    weight: 6
+    weight: 5
     region: content
   field_registration_link:
     type: link
     label: hidden
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
     third_party_settings: {  }
-    weight: 5
+    weight: 4
     region: content
-  links:
+  field_registration_type:
+    type: list_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 18
+    region: content
+  field_state_abbreviation:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 20
     region: content
 hidden:
   body: true
-  field_is_state: true
-  field_registration_type: true
-  field_state_abbreviation: true
+  field_metatags: true
   langcode: true
+  links: true
   published_at: true
