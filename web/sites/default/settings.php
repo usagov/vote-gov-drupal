@@ -822,21 +822,13 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  * Keep this code block at the end of this file to take full effect.
  */
 #
+
+// Load cloud.gov settings into Drupal.
+if ( !empty(getenv('VCAP_APPLICATION')) ) {
+  include DRUPAL_ROOT . '/sites/default/settings.cloudgov.php';
+}
+
+// Overide anything special for local developement
 if (file_exists(DRUPAL_ROOT . '/sites/settings.local.php')) {
   include DRUPAL_ROOT . '/sites/settings.local.php';
 }
-
-$databases['default']['default'] = array (
-  'database' => 'drupal10',
-  'username' => 'drupal10',
-  'password' => 'drupal10',
-  'prefix' => '',
-  'host' => 'database',
-  'port' => '',
-  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
-  'driver' => 'mysql',
-  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
-);
-
-$settings['tome_static_directory'] = dirname(DRUPAL_ROOT) . '/html';
-$settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config';
