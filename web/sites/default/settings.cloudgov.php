@@ -1,4 +1,5 @@
 <?php
+
 $cf_application_data = json_decode(getenv('VCAP_APPLICATION') ?? '{}', TRUE);
 $cf_service_data = json_decode(getenv('VCAP_SERVICES') ?? '{}', TRUE);
 
@@ -89,8 +90,6 @@ foreach ($cf_service_data as $service_list) {
         'prefix' => '',
         'host' => $service['credentials']['host'],
         'port' => $service['credentials']['port'],
-        //'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-        //'driver' => 'mysql'
         'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
         'driver' => 'mysql',
         'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
@@ -131,12 +130,6 @@ foreach ($cf_service_data as $service_list) {
       $settings['s3fs.upload_as_private'] = FALSE;
       $settings['s3fs.use_s3_for_public'] = TRUE;
       $settings['s3fs.use_s3_for_private'] = FALSE;
-      /*
-      var_dump($config['s3fs.settings']);
-      echo "\n\n";
-      var_dump($settings);
-      exit();
-      */
     }
   }
 }
