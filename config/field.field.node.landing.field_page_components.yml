@@ -1,4 +1,4 @@
-uuid: 05ab7768-1a0a-4bd3-b14e-624279212005
+uuid: d09e87bd-30b7-4eff-8fa3-ac8a9982590a
 langcode: en
 status: true
 dependencies:
@@ -8,6 +8,8 @@ dependencies:
     - block_content.type.registration_tool
     - field.storage.node.field_page_components
     - node.type.landing
+  module:
+    - entity_reference_revisions
 id: node.landing.field_page_components
 field_name: field_page_components
 entity_type: node
@@ -15,7 +17,7 @@ bundle: landing
 label: 'Page Components'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -30,4 +32,4 @@ settings:
       direction: ASC
     auto_create: false
     auto_create_bundle: accordion_group
-field_type: entity_reference
+field_type: entity_reference_revisions

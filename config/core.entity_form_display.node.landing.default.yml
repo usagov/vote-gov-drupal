@@ -60,7 +60,7 @@ content:
       allow_duplicate: false
       collapsible: false
       collapsed: false
-      revision: false
+      revision: true
     third_party_settings: {  }
   langcode:
     type: language_select

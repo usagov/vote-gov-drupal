@@ -1,5 +1,5 @@
 status: 2
-pattern: '[block_content:type] [block_content:id]'
+pattern: 'Registration Tool [block_content:id]'
 escape: false
 preserve_titles: false
 save: false
