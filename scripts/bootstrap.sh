@@ -80,10 +80,17 @@ if [ "${CF_INSTANCE_INDEX:-''}" == "0" ]; then #&& [ -z "${SKIP_DRUPAL_BOOTSTRAP
     drush cim -y || drush cim -y
     drush cim -y
     drush php-eval "node_access_rebuild();" -y
-    drush state:set system.maintenance_mode 0 -y
     drush cr
+
+    echo "Uploading public files to S3 ..."
+    drush s3fs-rc
+    drush s3fs-cl -y --scheme=public --condition=newer
+    drush state:set system.maintenance_mode 0 -y
 
     echo "Bootstrap finished"
 else
     echo "Bootstrap skipping Drupal CIM because: Instance=${CF_INSTANCE_INDEX:-''} Skip=${SKIP_DRUPAL_BOOTSTRAP:-''}"
 fi
+
+echo "PATH=$PATH:/home/vcap/app/php/bin:/home/vcap/app/vendor/drush/drush" >> /home/vcap/.bashrc
+
