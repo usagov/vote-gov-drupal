@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.landing
     - node.type.page
     - node.type.state_territory
   module:
@@ -63,7 +62,6 @@ type_settings:
       weight: 3
   entity_types:
     node:
-      - landing
       - page
       - state_territory
   default_moderation_state: draft
