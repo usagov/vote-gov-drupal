@@ -165,3 +165,6 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
+
+$settings['tome_static_directory'] = dirname(DRUPAL_ROOT) . '/html';
+$settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config';
