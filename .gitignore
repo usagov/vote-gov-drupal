@@ -73,3 +73,6 @@ node_modules
 
 # Allow cloud.gov settings file.
 !web/sites/default/settings.cloudgov.php
+# Ignore Cypress Reports 
+/testing/cypress/reports
+/testing/cypress/screenshots
