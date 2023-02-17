@@ -1,4 +1,0 @@
-# Korean translation of Vote.gov
-#
-msgid "Korean"
-msgstr "한국어"

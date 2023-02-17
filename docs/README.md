@@ -18,3 +18,4 @@ List of development environments and their equivalent git branches.
 - [Backend](backend.md)
 - [Frontend](frontend.md)
 - [QA & Testing](testing.md)
+- [Translations](translations.md)
