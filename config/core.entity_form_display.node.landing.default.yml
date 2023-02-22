@@ -23,7 +23,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 11
+    weight: 10
     region: content
     settings:
       rows: 9
@@ -39,7 +39,7 @@ content:
     third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
-    weight: 26
+    weight: 13
     region: content
     settings:
       sidebar: true
@@ -47,7 +47,7 @@ content:
     third_party_settings: {  }
   field_page_components:
     type: inline_entity_form_complex
-    weight: 10
+    weight: 11
     region: content
     settings:
       form_mode: landing_page_component
@@ -60,11 +60,11 @@ content:
       allow_duplicate: false
       collapsible: false
       collapsed: false
-      revision: false
+      revision: true
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 13
+    weight: 12
     region: content
     settings:
       include_locked: true

@@ -4,13 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
-    - field.field.node.page.field_attachment
     - field.field.node.page.field_metatags
     - node.type.page
     - workflows.workflow.publishing_content
   module:
     - content_moderation
-    - media_library
     - metatag
     - path
     - publication_date
@@ -35,13 +33,6 @@ content:
     weight: 5
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_attachment:
-    type: media_library_widget
-    weight: 11
-    region: content
-    settings:
-      media_types: {  }
     third_party_settings: {  }
   field_metatags:
     type: metatag_firehose

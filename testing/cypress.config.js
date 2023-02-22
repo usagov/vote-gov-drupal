@@ -1,9 +1,9 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  
+reporter: 'cypress-mochawesome-reporter',
   e2e: {
-    baseUrL: 'https://vote-gov-d10.lndo.site/',
+    baseUrl: 'http://vote-gov.lndo.site/',
     video: false,
     viewportHeight: 800,
     viewportWidth: 1530,
@@ -17,6 +17,7 @@ module.exports = defineConfig({
 
     setupNodeEvents(on, config) {
       // implement node event listeners here
+      require('cypress-mochawesome-reporter/plugin')(on);
 
       on('task', {
         log(message) {

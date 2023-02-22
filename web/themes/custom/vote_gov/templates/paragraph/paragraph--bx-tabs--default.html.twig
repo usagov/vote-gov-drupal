@@ -38,35 +38,21 @@
  * @ingroup themeable
  */
 #}
-
-{{ attach_library('vote_gov/a11y_tabs') }}
-
-{% set classes = [
-  'c-tabs',
-  'component',
-  'component--type--' ~ paragraph.bundle|clean_class,
-  view_mode ?  'component--view-mode--' ~ view_mode|clean_class,
-  not paragraph.isPublished() ?  'component--unpublished'
-] %}
+{% extends  "paragraph--default.html.twig" %}
 
 {% block paragraph %}
-  <section{{ attributes.addClass(classes) }}>
-    {% block content %}
+  {# Create an array for tab label information. #}
+  {% set tabs_items = [] %}
+  {% for item in content.field_bx_tabs_item | children(true) %}
+    {% set tabs_items = tabs_items | merge([{
+      'id': item['#paragraph'].id.getString(),
+      'selected': item.selected,
+      'title': item['#paragraph'].field_bx_title.getString()
+    }]) %}
+  {% endfor %}
 
-      <div class="c-tabs__list" role="tablist">
-        {% for item in content.field_bx_tabs_item |  children(true) %}
-          <button
-            class="c-tabs__item c-tabs__button usa-button"
-            role="tab"
-            aria-controls="panel-{{- item["#paragraph"].id.getString() }}"
-            aria-selected="{{ item.selected }}">
-            {{ item["#paragraph"].field_bx_title.getString() }}
-          </button>
-        {% endfor %}
-      </div>
-
-      {{ content.field_bx_tabs_item | field_value }}
-
-    {% endblock %}
-  </section>
+  {% include '@vote_gov/bx/bx-tabs.html.twig' with {
+    'tabs_items': tabs_items,
+    'tabs_items_values': content.field_bx_tabs_item | field_value,
+  } %}
 {% endblock paragraph %}

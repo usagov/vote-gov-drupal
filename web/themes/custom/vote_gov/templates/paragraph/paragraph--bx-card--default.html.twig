@@ -38,19 +38,10 @@
  * @ingroup themeable
  */
 #}
-
-{% set classes = [
-  'usa-card-group',
-  'component',
-  'component--type--' ~ paragraph.bundle|clean_class,
-  view_mode ?  'component--view-mode--' ~ view_mode|clean_class,
-  not paragraph.isPublished() ?  'component--unpublished'
-] %}
+{% extends  "paragraph--default.html.twig" %}
 
 {% block paragraph %}
-  <ul{{ attributes.addClass(classes) }}>
-    {% block content %}
-      {{ content.field_bx_card_item | field_value }}
-    {% endblock %}
-  </ul>
+  {% include '@vote_gov/uswds/usa-card.html.twig' with {
+    'card_item': content.field_bx_card_item | field_value,
+  } %}
 {% endblock paragraph %}

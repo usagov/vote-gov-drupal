@@ -38,30 +38,12 @@
  * @ingroup themeable
  */
 #}
-
-{% if is_large_text == true %}
-  {% set large_text = 'font-sans-xl line-height-sans-1 padding-bottom-2' %}
-{% endif %}
-
-{% set classes = [
-  'usa-process-list__item',
-  'maxw-full',
-  'component',
-  'component--type--' ~ paragraph.bundle|clean_class,
-  view_mode ?  'component--view-mode--' ~ view_mode|clean_class,
-  not paragraph.isPublished() ?  'component--unpublished'
-] %}
+{% extends  "paragraph--default.html.twig" %}
 
 {% block paragraph %}
-  <li{{ attributes.addClass(classes) }}>
-    {% block content %}
-
-      <h2 class="usa-process-list__heading {{ large_text -}}">
-        {{ content.field_bx_title | field_value }}
-      </h2>
-
-      {{ content.field_bx_text | field_value }}
-
-    {% endblock %}
-  </li>
+  {% include '@vote_gov/uswds/usa-process-list-item.html.twig' with {
+    'is_large_text': is_large_text,
+    'title': content.field_bx_title | field_value,
+    'text': content.field_bx_text | field_value,
+  } %}
 {% endblock paragraph %}

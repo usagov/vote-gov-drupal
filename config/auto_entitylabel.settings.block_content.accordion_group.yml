@@ -1,8 +1,8 @@
 status: 2
-pattern: '[block_content:type] [block_content:id]'
+pattern: 'Accordion Group [block_content:id]'
 escape: false
 preserve_titles: false
-save: false
+save: true
 chunk: 50
 dependencies:
   config:

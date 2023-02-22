@@ -1,6 +1,32 @@
-{% extends "block--system-menu-block.html.twig" %}
+{% set classes = [
+  'block',
+  'block-menu',
+  'navigation',
+  'menu--' ~ derivative_plugin_id|clean_class,
+] %}
 
-{# Overrides to adhere to USWDS code.#}
-{% set attributes =
-attributes.addClass('usa-footer__nav').setAttribute('aria-label', 'Footer
-navigation') %}
+{% set heading_id = attributes.id ~ '-menu'|clean_id %}
+
+{# footer identifier: agency #}
+{{ 'An official website of the' | t }}
+{{ link('General Services Administration.', 'https://www.gsa.gov/') }}
+
+<nav role="navigation"
+     aria-labelledby="{{ heading_id }}"{{ attributes.addClass(classes)|without('role', 'aria-labelledby') }}>
+  {# Label. If not displayed, we still provide it for screen readers. #}
+  {% if not configuration.label_display %}
+    {% set title_attributes = title_attributes.addClass('visually-hidden') %}
+  {% endif %}
+  {{ title_prefix }}
+  <h2{{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}</h2>
+  {{ title_suffix }}
+
+  {# Menu. #}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</nav>
+
+{#footer identifier:link #}
+{{ 'Looking for U.S. government information and services? ' | t }}
+{{ link('Visit USA.gov', 'https://www.usa.gov/') }}

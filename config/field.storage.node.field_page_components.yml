@@ -1,17 +1,18 @@
-uuid: e7dffd74-7349-4401-ac5d-e7da1bca20a7
+uuid: b712576d-82c6-4d77-8922-fd7fb3f62cd5
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
+    - entity_reference_revisions
     - node
 id: node.field_page_components
 field_name: field_page_components
 entity_type: node
-type: entity_reference
+type: entity_reference_revisions
 settings:
   target_type: block_content
-module: core
+module: entity_reference_revisions
 locked: false
 cardinality: -1
 translatable: true

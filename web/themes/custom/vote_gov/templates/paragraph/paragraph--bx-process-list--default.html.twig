@@ -38,19 +38,10 @@
  * @ingroup themeable
  */
 #}
-
-{% set classes = [
-  'usa-process-list',
-  'component',
-  'component--type--' ~ paragraph.bundle|clean_class,
-  view_mode ?  'component--view-mode--' ~ view_mode|clean_class,
-  not paragraph.isPublished() ?  'component--unpublished'
-] %}
+{% extends  "paragraph--default.html.twig" %}
 
 {% block paragraph %}
-  <ol{{ attributes.addClass(classes) }}>
-    {% block content %}
-      {{ content.field_bx_process_list_item | field_value }}
-    {% endblock %}
-  </ol>
+  {% include '@vote_gov/uswds/usa-process-list.html.twig' with {
+    'process_list_item': content.field_bx_process_list_item | field_value,
+  } %}
 {% endblock paragraph %}
