@@ -3,14 +3,18 @@ default_config: &defaults
   buildpacks:
     - php_buildpack
   disk_quota: 768M
+  env:
+    ENV: ${CIRCLE_BRANCH}
+    LD_LIBRARY_PATH: /home/vcap/app/php/lib/
+    PHP_INI_SCAN_DIR: /home/vcap/app/php/etc/:/home/vcap/app/php/etc/php.ini.d/
   timeout: 180
   services:
-    - vote-mysql-dev
-    - vote-secrets-dev
-    - vote-storage-dev
+    - vote-mysql-${CIRCLE_BRANCH}
+    - vote-secrets-${CIRCLE_BRANCH}
+    - vote-storage-${CIRCLE_BRANCH}
 
 applications:
-- name: vote-drupal-dev
+- name: vote-drupal-${CIRCLE_BRANCH}
   <<: *defaults
   memory: 512M
   instances: 1

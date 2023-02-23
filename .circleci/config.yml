@@ -1,26 +1,59 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine.
-# See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
-
-# Define a job to be invoked later in a workflow.
-# See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
-  say-hello:
-    # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
+  deploy:
     docker:
       - image: cimg/base:stable
-    # Add steps to the job
-    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
       - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
+          name: "Install PHP dependencies"
+          command: >
+            add-apt-repository ppa:ondrej/php
+            apt update
+            apt install -y php8.2
+      - run:
+          name: "PHP CodeSniffer"
+          command: >
+            php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+            php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+            php composer-setup.php
+            php -r "unlink('composer-setup.php');"
+            sudo mv composer.phar /usr/local/bin/composer
+            composer install
+            composer global require "squizlabs/php_codesniffer=*"
+            ~/.composer/vendor/bin/phpcs
 
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+            echo 'Cleaning up...'
+            rm -rf ./vendor/ \
+                   ./web/core/ \
+                   ./web/modules/contrib/ \
+                   ./web/themes/contrib/ .\
+                   ./drush/Commands/contrib/ \
+                   ./web/profiles/contrib/ \
+                   ./web/libraries/
+      - run:
+          name: "Install node dependencies"
+          command: >
+            wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+            echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+            apt update
+            apt install -y nodejs npm cf8-cli
+      - run:
+          name: "Build theme"
+          command: >
+            cd web/themes/custom/vote_gov
+            npm run build
+      - run:
+          name: "Deploy"
+          command: >
+            [ "${CIRCLE_BRANCH}" == "dev" ] && export CF_USERNAME=${CF_USERNAME_DEV}; export CF_PASSWORD=${CF_PASSWORD_DEV}
+            
+            mv manifest.yml manifest.tmp
+            envsubst < manifest.tmp > manifest.yml
+            
+            cf auth
+            cf push
 workflows:
-  say-hello-workflow:
+  deploy-workflow:
     jobs:
-      - say-hello
+      - deploy
