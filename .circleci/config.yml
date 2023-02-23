@@ -1,59 +1,85 @@
 version: 2.1
 jobs:
+  php-lint:
+    docker:
+      - image: php:8.2-alpine
+    steps:
+      - checkout
+      - run:
+          name: "Install PHP dependencies"
+          command: |
+            apk add curl php-curl php-dom php-gd php-xml
+      - run:
+          name: "PHP CodeSniffer"
+          command: |
+            curl -s -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar 
+            chmod +x phpcs.phar
+            ./phpcs.phar --report=csv --report-file=/tmp/phpcs.csv ./web
+      - store_artifacts:
+          path: /tmp/phpcs.csv
+          destination: phpcs_<<pipeline.number>>.csv
+  build-theme:
+    docker:
+      - image: node:18-slim
+    steps:
+      - checkout
+      - run:
+          name: "Build theme"
+          command: |
+            npm install -g gulp
+            cd web/themes/custom/vote_gov
+            npm install
+            npm run build
+      - persist_to_workspace:
+          root: web/themes/custom
+          paths:
+            - "vote_gov"
   deploy:
     docker:
       - image: cimg/base:stable
     steps:
       - checkout
       - run:
-          name: "Install PHP dependencies"
-          command: >
-            add-apt-repository ppa:ondrej/php
-            apt update
-            apt install -y php8.2
-      - run:
-          name: "PHP CodeSniffer"
-          command: >
-            php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-            php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-            php composer-setup.php
-            php -r "unlink('composer-setup.php');"
-            sudo mv composer.phar /usr/local/bin/composer
-            composer install
-            composer global require "squizlabs/php_codesniffer=*"
-            ~/.composer/vendor/bin/phpcs
-
-            echo 'Cleaning up...'
-            rm -rf ./vendor/ \
-                   ./web/core/ \
-                   ./web/modules/contrib/ \
-                   ./web/themes/contrib/ .\
-                   ./drush/Commands/contrib/ \
-                   ./web/profiles/contrib/ \
-                   ./web/libraries/
-      - run:
-          name: "Install node dependencies"
-          command: >
+          name: "Install cloudfoundry dependencies"
+          command: |
             wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
             echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-            apt update
-            apt install -y nodejs npm cf8-cli
-      - run:
-          name: "Build theme"
-          command: >
-            cd web/themes/custom/vote_gov
-            npm run build
+            sudo apt update
+            sudo apt install -y cf8-cli gettext
       - run:
           name: "Deploy"
-          command: >
-            [ "${CIRCLE_BRANCH}" == "dev" ] && export CF_USERNAME=${CF_USERNAME_DEV}; export CF_PASSWORD=${CF_PASSWORD_DEV}
+          command: |
             
             mv manifest.yml manifest.tmp
             envsubst < manifest.tmp > manifest.yml
-            
-            cf auth
+
+            if [ "${CIRCLE_BRANCH}" == "dev" ]; then
+              cf login \
+                -a https://api.fr.cloud.gov \
+                -u ${CF_USERNAME_DEV} \
+                -p ${CF_PASSWORD_DEV} \
+                -o ${CF_ORG} \
+                -s ${CF_SPACE_DEV}
+            fi
+
             cf push
+      - attach_workspace:
+          at: web/themes/custom/vote_gov
 workflows:
   deploy-workflow:
     jobs:
-      - deploy
+      - php-lint
+      - build-theme:
+          filters:
+            branches:
+              only:
+                - dev
+          requires:
+            - php-lint
+      - deploy:
+          filters:
+            branches:
+              only:
+                - dev
+          requires:
+            - build-theme
