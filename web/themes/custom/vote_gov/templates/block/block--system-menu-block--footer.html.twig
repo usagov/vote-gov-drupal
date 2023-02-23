@@ -7,26 +7,50 @@
 
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
 
-{# footer identifier: agency #}
-{{ 'An official website of the' | t }}
-{{ link('General Services Administration.', 'https://www.gsa.gov/') }}
+  {# {% block contact %}
+    {{ 'Vote.gov in partnership with EAC' | t }}
+    {{ link('Follow Vote.gov on Twitter', 'https://twitter.com/votegov') }}
+  {% endblock %} #}
 
-<nav role="navigation"
-     aria-labelledby="{{ heading_id }}"{{ attributes.addClass(classes)|without('role', 'aria-labelledby') }}>
-  {# Label. If not displayed, we still provide it for screen readers. #}
-  {% if not configuration.label_display %}
-    {% set title_attributes = title_attributes.addClass('visually-hidden') %}
-  {% endif %}
-  {{ title_prefix }}
-  <h2{{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}</h2>
-  {{ title_suffix }}
-
-  {# Menu. #}
-  {% block content %}
-    {{ content }}
-  {% endblock %}
-</nav>
-
-{#footer identifier:link #}
-{{ 'Looking for U.S. government information and services? ' | t }}
-{{ link('Visit USA.gov', 'https://www.usa.gov/') }}
+{# identifier start #}
+<div class="usa-identifier">
+<div class="grid-container">
+  <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier,">
+    <div class="usa-identifier__container">
+      <div class="usa-identifier__logos">
+        <a href="" class="usa-identifier__logo">
+          <img
+            class="usa-identifier__logo-img"
+            src="/themes/custom/vote_gov/img/gsa-logo.svg"
+            alt="GSA logo"
+            role="img"/>
+        </a>
+      </div>
+      <section class="usa-identifier__identity" aria-label="Agency description,">
+        <p class="usa-identifier__identity-domain">{{'Vote.gov'}}</p>
+        <p class="usa-identifier__identity-disclaimer">
+          {{'An official website of the '}}<a href="https://www.gsa.gov/">{{'General Services Administration'}}</a>
+        </p>
+      </section>
+    </div>
+  </section>
+  <nav
+    class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links,">
+    <div class="usa-identifier__container">
+      {# Menu items (uses template /navigation/menu--footer.html.twig) #}
+      {% block content %}
+        {{ content }}
+      {% endblock %}
+    </div>
+  </nav>
+  <section class="usa-identifier__section usa-identifier__section--usagov" aria-label="U.S. government information and services,">
+    <div class="usa-identifier__container">
+      <div class="usa-identifier__usagov-description">
+        {{'Looking for U.S. government information and services? ' | t }}
+        {{ link('Visit USA.gov', 'https://www.usa.gov/') }}
+      </div>
+    </div>
+  </section>
+  </div>
+</div>
+{# identifier end #}

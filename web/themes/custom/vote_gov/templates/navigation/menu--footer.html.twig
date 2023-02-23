@@ -29,27 +29,10 @@
   {% import _self as menus %}
 
   {% if items %}
-    <ul {{ attributes.addClass('menu') }}>
-      {% for item in items %}
-
-        {% set item_classes = [
-          'mobile-lg:grid-col-4',
-          'desktop:grid-col-auto',
-          'usa-footer__primary-content',
-          'menu__item',
-          'menu__item--' ~ menu_item_type,
-          item.in_active_trail ? 'menu__item--active-trail',
-        ] %}
-
-        {% set link_classes = [
-          'usa-footer__primary-link',
-          'menu__link',
-          'menu__link--' ~ menu_item_type,
-          item.in_active_trail ? 'menu__link--active-trail',
-        ] %}
-
-        <li{{ item.attributes.addClass(item_classes) }}>
-          {{ link(item.title, item.url, { 'class': link_classes }) }}
+      <ul class="usa-identifier__required-links-list">
+        {% for item in items %}
+        <li class="usa-identifier__required-links-item">
+          {{ link(item.title, item.url, { 'class': 'usa-identifier__required-links-item' }) }}
         </li>
       {% endfor %}
     </ul>

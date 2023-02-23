@@ -1,0 +1,54 @@
+@use '../variables' as *;
+
+.usa-identifier {
+    background-color: $color-grey-dark;
+    font-size: 16px;
+}
+
+.usa-identifier__container {
+    padding: 0;
+}
+
+.usa-identifier__section--usagov {
+    border-top: 1px solid #fff;
+}
+
+.usa-identifier__required-links-list {
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+
+    .usa-identifier__required-links-item {
+        margin-bottom: 1.5rem;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            word-break: keep-all;
+            line-break: strict;
+
+            &:focus,
+            &:hover {
+              text-decoration: underline;
+            }
+        }
+    }
+}
+
+.usa-identifier__identity-disclaimer a:visited, .usa-identifier__section--usagov a, .usa-identifier__identity-domain {
+    color: #fff;
+}
+
+.usa-identifier__section--usagov a {
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.usa-identifier__usagov-description {
+    display: block;
+}
+
+.usa-identifier__identity-disclaimer {
+    a {
+        color: #fff;
+    }
+}
