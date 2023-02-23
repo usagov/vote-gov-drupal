@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 .footer-contact {
     padding: 24px 0;
   }
@@ -14,10 +16,10 @@
       color: #11385b;
     }
   
-    svg {
-      display: inline-block;
+    .usa-icon {
       fill: $color-blue-headings;
-      vertical-align: middle;
+      height: 18px;
+      width: 18px;
     }
   }
   

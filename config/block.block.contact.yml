@@ -1,0 +1,25 @@
+uuid: 4c3f0c19-cd2b-491d-be54-b35a750fc28d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0b8d2d1d-bfcf-4510-b0df-a50c65a0fdc7'
+  module:
+    - block_content
+  theme:
+    - vote_gov
+id: contact
+theme: vote_gov
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:0b8d2d1d-bfcf-4510-b0df-a50c65a0fdc7'
+settings:
+  id: 'block_content:0b8d2d1d-bfcf-4510-b0df-a50c65a0fdc7'
+  label: Contact
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
