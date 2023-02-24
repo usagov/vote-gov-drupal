@@ -8,16 +8,36 @@ jobs:
       - run:
           name: "Install PHP dependencies"
           command: |
-            apk add curl php-curl php-dom php-gd php-xml
+            apk add git curl php-curl php-dom php-gd php-xml
+            php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+            php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+            php composer-setup.php
+            php -r "unlink('composer-setup.php');"
+            mv composer.phar /usr/local/bin/composer
       - run:
           name: "PHP CodeSniffer"
           command: |
-            curl -s -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar 
-            chmod +x phpcs.phar
-            ./phpcs.phar --report=csv --report-file=/tmp/phpcs.csv ./web
+            git clone --branch 8.3.x http://git.drupal.org/project/coder.git
+            cd coder
+            composer install
+            export PATH="$PATH:$HOME/project/coder/vendor/bin"
+            phpcs --standard=Drupal --ignore=*/node_modules/* --extensions=php,module,inc,install,test,profile,theme,info,yml,twig --report=csv --report-file=/tmp/phpcs.csv ${HOME}/project/web
       - store_artifacts:
           path: /tmp/phpcs.csv
           destination: phpcs_<<pipeline.number>>.csv
+  cypress:
+    docker:
+      - image: cypress/included:cypress-12.3.0-node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
+    steps:
+      - checkout
+      - run:
+          name: "Cypress"
+          command: |
+            cd testing
+            npm install
+            npm run cy:test
+      - store_artifacts:
+          path: testing/cypress/screenshots
   build-theme:
     docker:
       - image: node:18-slim
@@ -60,15 +80,20 @@ jobs:
                 -p ${CF_PASSWORD_DEV} \
                 -o ${CF_ORG} \
                 -s ${CF_SPACE_DEV}
+                PUSH=true
             fi
 
-            cf push
+            [ -n ${PUSH} ] && cf push
+
       - attach_workspace:
           at: web/themes/custom/vote_gov
 workflows:
   deploy-workflow:
     jobs:
       - php-lint
+      #- cypress
+          #requires:
+            #- php-lint
       - build-theme:
           filters:
             branches:
