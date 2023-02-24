@@ -7,35 +7,30 @@
 
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
 
-  {# {% block contact %}
-    {{ 'Vote.gov in partnership with EAC' | t }}
-    {{ link('Follow Vote.gov on Twitter', 'https://twitter.com/votegov') }}
-  {% endblock %} #}
-
 {# identifier start #}
 <div class="usa-identifier">
 <div class="grid-container">
-  <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier,">
+  <section class="usa-identifier__section usa-identifier__section--masthead" aria-label={{ 'Agency identifier' | t }}>
     <div class="usa-identifier__container">
       <div class="usa-identifier__logos">
         <a href="" class="usa-identifier__logo">
           <img
             class="usa-identifier__logo-img"
             src="/themes/custom/vote_gov/img/gsa-logo.svg"
-            alt="GSA logo"
+            alt={{ 'GSA logo' | t }}
             role="img"/>
         </a>
       </div>
-      <section class="usa-identifier__identity" aria-label="Agency description,">
+      <section class="usa-identifier__identity" aria-label={{ 'Agency description' | t }}>
         <p class="usa-identifier__identity-domain">{{'Vote.gov'}}</p>
         <p class="usa-identifier__identity-disclaimer">
-          {{'An official website of the '}}<a href="https://www.gsa.gov/">{{'General Services Administration'}}</a>
+          {{'An official website of the '}}<a href="https://www.gsa.gov/">{{'General Services Administration' | t }}</a>
         </p>
       </section>
     </div>
   </section>
   <nav
-    class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links,">
+    class="usa-identifier__section usa-identifier__section--required-links" aria-label={{ 'Important links' | t }}>
     <div class="usa-identifier__container">
       {# Menu items (uses template /navigation/menu--footer.html.twig) #}
       {% block content %}
@@ -43,10 +38,10 @@
       {% endblock %}
     </div>
   </nav>
-  <section class="usa-identifier__section usa-identifier__section--usagov" aria-label="U.S. government information and services,">
+  <section class="usa-identifier__section usa-identifier__section--usagov" aria-label={{ 'U.S. government information and services' | t }}>
     <div class="usa-identifier__container">
       <div class="usa-identifier__usagov-description">
-        {{'Looking for U.S. government information and services? ' | t }}
+        {{ 'Looking for U.S. government information and services? ' | t }}
         {{ link('Visit USA.gov', 'https://www.usa.gov/') }}
       </div>
     </div>
