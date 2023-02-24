@@ -1,38 +1,3 @@
-// Cypress.Commands.add('testingLogin', () => {
-//   cy.visit('https://vote-gov-d10.lndo.site/user')
-//   cy.get('[data-drupal-selector="edit-name"]').type('testing-qa')
-//   cy.get('[data-drupal-selector="edit-pass"]').type('Vote.gov2023')
-
-//   cy.get('[data-drupal-selector="edit-submit"]').click()
-
-// })
-
-// Cypress.Commands.add('editorLogin', () => {
-//   cy.visit('https://vote-gov-d10.lndo.site/user')
-//   cy.get('[data-drupal-selector="edit-name"]').type('content-editor-test')
-//   cy.get('[data-drupal-selector="edit-pass"]').type('Vote.gov2023')
-
-//   cy.get('[data-drupal-selector="edit-submit"]').click()
-
-// })
-
-// Cypress.Commands.add('managerLogin', () => {
-//   cy.visit('https://vote-gov-d10.lndo.site/user')
-//   cy.get('[data-drupal-selector="edit-name"]').type('content-manager-test')
-//   cy.get('[data-drupal-selector="edit-pass"]').type('Vote.gov2023')
-
-//   cy.get('[data-drupal-selector="edit-submit"]').click()
-
-// })
-
-// Cypress.Commands.add('adminLogin', () => {
-//   cy.visit('https://vote-gov.lndo.site/user')
-//   cy.get('[data-drupal-selector="edit-name"]').type('admin_test')
-//   cy.get('[data-drupal-selector="edit-pass"]').type('vote123')
-
-//   cy.get('[data-drupal-selector="edit-submit"]').click()
-// })
-
 
 /**
  * Create a User through Drush
