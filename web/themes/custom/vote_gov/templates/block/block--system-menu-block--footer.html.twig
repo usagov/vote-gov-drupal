@@ -8,44 +8,25 @@
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
 
 {# identifier start #}
-<div class="usa-identifier">
-<div class="grid-container">
-  <section class="usa-identifier__section usa-identifier__section--masthead" aria-label={{ 'Agency identifier' | t }}>
-    <div class="usa-identifier__container">
-      <div class="usa-identifier__logos">
-        <a href="" class="usa-identifier__logo">
-          <img
-            class="usa-identifier__logo-img"
-            src="/themes/custom/vote_gov/img/gsa-logo.svg"
-            alt={{ 'GSA logo' | t }}
-            role="img"/>
-        </a>
+<div class="footer-identifier" data-test="footer">
+  <div class="grid-container">
+    <section class="identifier-gsa grid-row grid-gap-2" aria-label="{{ 'Agency identifier' | t }}">
+      <div><img src="/themes/custom/vote_gov/img/gsa-logo.svg" alt="GSA logo" width="40" height="40"></div>
+      <div class="grid-col-auto" aria-label="{{ 'Agency description' | t }}">
+        {{ 'Vote.gov' }}<br>
+        <strong>{{'An official website of the '}}{{ link('General Services Administration' | t, 'https://www.gsa.gov/') }}</strong>
       </div>
-      <section class="usa-identifier__identity" aria-label={{ 'Agency description' | t }}>
-        <p class="usa-identifier__identity-domain">{{'Vote.gov'}}</p>
-        <p class="usa-identifier__identity-disclaimer">
-          {{'An official website of the '}}<a href="https://www.gsa.gov/">{{'General Services Administration' | t }}</a>
-        </p>
-      </section>
-    </div>
-  </section>
-  <nav
-    class="usa-identifier__section usa-identifier__section--required-links" aria-label={{ 'Important links' | t }}>
-    <div class="usa-identifier__container">
+    </section>
       {# Menu items (uses template /navigation/menu--footer.html.twig) #}
-      {% block content %}
-        {{ content }}
-      {% endblock %}
-    </div>
-  </nav>
-  <section class="usa-identifier__section usa-identifier__section--usagov" aria-label={{ 'U.S. government information and services' | t }}>
-    <div class="usa-identifier__container">
-      <div class="usa-identifier__usagov-description">
+    <nav class="grid-row grid-gap identifier" aria-label="{{ 'Important links' | t }}">
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+    </nav>
+    <section aria-label="{{ 'U.S. government information and services' | t }}" class="identifier-gov-info">
         {{ 'Looking for U.S. government information and services? ' | t }}
-        {{ link('Visit USA.gov', 'https://www.usa.gov/') }}
-      </div>
-    </div>
-  </section>
+        {{ link('Visit USA.gov' | t , 'https://www.usa.gov/') }}
+    </section>
   </div>
 </div>
-{# identifier end #}
+{# identifier start #}
