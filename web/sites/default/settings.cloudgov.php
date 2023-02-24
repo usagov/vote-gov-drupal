@@ -11,7 +11,7 @@ $applicaiton_fqdn_regex = "^.+\.app\.cloud\.gov$";
 
 $settings['tome_static_directory'] = dirname(DRUPAL_ROOT) . '/html';
 $settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config';
-$settings['file_private_path'] = "../private";
+$settings['file_private_path'] = dirname(DRUPAL_ROOT) . '/private';
 
 //$settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config/sync';
 
