@@ -69,9 +69,11 @@ foreach ($cf_service_data as $service_list) {
         'driver' => 'mysql',
         'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
       ];
-    } else if ( stristr($service['name'], 'secrets') ) {
+    }
+    elseif (stristr($service['name'], 'secrets')) {
       $settings['hash_salt'] = $service['credentials']['HASH_SALT'];
-    } else if ( stristr($service['name'], 'storage') ) {
+    }
+    elseif (stristr($service['name'], 'storage')) {
       $settings['s3fs.access_key'] = $service['credentials']['access_key_id'];
       $settings['s3fs.secret_key'] = $service['credentials']['secret_access_key'];
       $config['s3fs.settings']['bucket'] = $service['credentials']['bucket'];
