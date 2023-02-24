@@ -61,7 +61,7 @@ export S3_PROXY_PATH_CMS=${S3_PROXY_PATH_CMS:-/s3/files}
 # export NEW_RELIC_API_KEY=${NEW_RELIC_API_KEY:-$(echo $SECRETS | jq -r '.NEW_RELIC_API_KEY')}
 # export NEW_RELIC_LICENSE_KEY=${NEW_RELIC_LICENSE_KEY:-$(echo $SECRETS | jq -r '.NEW_RELIC_LICENSE_KEY')}
 
-dirs=( "/home/vcap/app/web/private" "/home/vcap/app/web/sites/default/files" )
+dirs=( "${HOME}/private" "${HOME}/web/sites/default/files" )
 
 for dir in $dirs; do
   if [ ! -d $dir ]; then
@@ -71,7 +71,7 @@ for dir in $dirs; do
   fi
 done
 
-if [ "${CF_INSTANCE_INDEX:-''}" == "0" ]; then #&& [ -z "${SKIP_DRUPAL_BOOTSTRAP:-}" ]; then
+if [[ "${CF_INSTANCE_INDEX:-''}" == "0" && ! $(echo $VCAP_APPLICATION | jq -r '.name') =~ "cron" ]]; then #&& [ -z "${SKIP_DRUPAL_BOOTSTRAP:-}" ]; then
 
     echo  "Updating drupal ... "
     drush state:set system.maintenance_mode 1 -y
@@ -94,3 +94,7 @@ fi
 
 echo "PATH=$PATH:/home/vcap/app/php/bin:/home/vcap/app/vendor/drush/drush" >> /home/vcap/.bashrc
 
+chmod +x ${HOME}/scripts/cronish.sh
+
+## Only run 'drush cron' in the first instance of an application.
+[ "${CF_INSTANCE_INDEX:-''}" == "0" ] && ${HOME}/scripts/cronish.sh &
