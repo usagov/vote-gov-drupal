@@ -1,26 +1,85 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine.
-# See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
-
-# Define a job to be invoked later in a workflow.
-# See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
-  say-hello:
-    # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
+  php-lint:
     docker:
-      - image: cimg/base:stable
-    # Add steps to the job
-    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
+      - image: php:8.2-alpine
     steps:
       - checkout
       - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
+          name: "Install PHP dependencies"
+          command: |
+            apk add curl php-curl php-dom php-gd php-xml
+      - run:
+          name: "PHP CodeSniffer"
+          command: |
+            curl -s -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar 
+            chmod +x phpcs.phar
+            ./phpcs.phar --report=csv --report-file=/tmp/phpcs.csv ./web
+      - store_artifacts:
+          path: /tmp/phpcs.csv
+          destination: phpcs_<<pipeline.number>>.csv
+  build-theme:
+    docker:
+      - image: node:18-slim
+    steps:
+      - checkout
+      - run:
+          name: "Build theme"
+          command: |
+            npm install -g gulp
+            cd web/themes/custom/vote_gov
+            npm install
+            npm run build
+      - persist_to_workspace:
+          root: web/themes/custom
+          paths:
+            - "vote_gov"
+  deploy:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Install cloudfoundry dependencies"
+          command: |
+            wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+            echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+            sudo apt update
+            sudo apt install -y cf8-cli gettext
+      - run:
+          name: "Deploy"
+          command: |
+            
+            mv manifest.yml manifest.tmp
+            envsubst < manifest.tmp > manifest.yml
 
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+            if [ "${CIRCLE_BRANCH}" == "dev" ]; then
+              cf login \
+                -a https://api.fr.cloud.gov \
+                -u ${CF_USERNAME_DEV} \
+                -p ${CF_PASSWORD_DEV} \
+                -o ${CF_ORG} \
+                -s ${CF_SPACE_DEV}
+            fi
+
+            cf push
+      - attach_workspace:
+          at: web/themes/custom/vote_gov
 workflows:
-  say-hello-workflow:
+  deploy-workflow:
     jobs:
-      - say-hello
+      - php-lint
+      - build-theme:
+          filters:
+            branches:
+              only:
+                - dev
+          requires:
+            - php-lint
+      - deploy:
+          filters:
+            branches:
+              only:
+                - dev
+          requires:
+            - build-theme
