@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Settings file for cloud.gov.
+ */
+
 $cf_application_data = json_decode(getenv('VCAP_APPLICATION') ?? '{}', TRUE);
 $cf_service_data = json_decode(getenv('VCAP_SERVICES') ?? '{}', TRUE);
 
@@ -11,12 +16,8 @@ $applicaiton_fqdn_regex = "^.+\.app\.cloud\.gov$";
 
 $settings['tome_static_directory'] = dirname(DRUPAL_ROOT) . '/html';
 $settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config';
-$settings['file_private_path'] = "../private";
-
-//$settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config/sync';
-
+$settings['file_private_path'] = dirname(DRUPAL_ROOT) . '/private';
 $settings['install_profile'] = 'minimal';
-
 
 $settings['tome_static_path_exclude'] = [
   '/saml', '/saml/acs', '/saml/login', '/saml/logout', '/saml/metadata', '/saml/sls',
@@ -33,50 +34,48 @@ if (getenv('NEW_RELIC_API_KEY')) {
 /**
  * Collect external service information from environment.
  * Cloud Foundry places all service credentials in VCAP_SERVICES
- */
-
-// 
-// $SERVER_HTTP_HOST = $_SERVER['HTTP_HOST'];
+**/
+// $server_http_host = $_SERVER['HTTP_HOST'];
 // if (!empty($cf_application_data['space_name']) &&
 //     in_array($cf_application_data['space_name'],
-//              ['dev', 'stage', 'prod'])) {
+//     ['dev', 'stage', 'prod'])) {
 //   switch (strtolower($cf_application_data['space_name'])) {
 //     case "dev":
-//       $SERVER_HTTP_HOST = 'https://cms-dev.vote.gov';
+//       $server_http_host = 'https://cms-dev.vote.gov';
 //       break;
-
 //     case "stage":
-//       $SERVER_HTTP_HOST = 'https://cms-stage.vote.gov';
+//       $server_http_host = 'https://cms-stage.vote.gov';
 //       break;
-
 //     case "prod":
-//       $SERVER_HTTP_HOST = 'https://cms.vote.gov';
+//       $server_http_host = 'https://cms.vote.gov';
 //       break;
-//   }
+//    }
 // }
-$IS_CLOUDGOV=FALSE;
 
-//$SERVER_HTTP_POST = $_SERVER['HTTP_HOST'] ?? '';
+
+$is_cloudgov=FALSE;
+
+// $server_http_host = $_SERVER['HTTP_HOST'] ?? '';
 
 if (!empty($cf_application_data['space_name']) &&
     $application_environment != 'local') {
   switch ($application_environment) {
     case "dev":
-      $IS_CLOUDGOV=TRUE;
-      //$SERVER_HTTP_HOST = 'cms-dev.vote.gov';
+      $is_cloudgov=TRUE;
+      // $server_http_host = 'cms-dev.vote.gov';
       break;
 
     case "stage":
-      $IS_CLOUDGOV=TRUE;
-      //$SERVER_HTTP_HOST = 'cms-stage.vote.gov';
+      $is_cloudgov=TRUE;
+      // $server_http_host = 'cms-stage.vote.gov';
       break;
 
     case "prod":
-      $IS_CLOUDGOV=TRUE;
-      //$SERVER_HTTP_HOST = 'cms.vote.gov';
+      $is_cloudgov=TRUE;
+      // $server_http_host = 'cms.vote.gov';
       break;
   }
-  $SERVER_HTTP_HOST = $application_hostname;
+  $server_http_host = $application_hostname;
 }
 
 foreach ($cf_service_data as $service_list) {
@@ -95,7 +94,7 @@ foreach ($cf_service_data as $service_list) {
         'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
       ];
 
-      // if ( $IS_CLOUDGOV===TRUE ) {
+      // if ( $is_cloudgov===TRUE ) {
       //   $databases['default']['default']['pdo'] = [
       //     \PDO::MYSQL_ATTR_SSL_CA => '/etc/ssl/certs/rds-combined-ca-us-gov-bundle.pem',
       //     \PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => TRUE
@@ -142,30 +141,28 @@ $settings['php_storage']['twig']['directory'] = '../storage/php';
 $settings['cache']['bins']['data'] = 'cache.backend.php';
 
 $settings['trusted_host_patterns'][] = $applicaiton_fqdn_regex;
-//var_dump($settings['trusted_host_patterns']);
+// var_dump($settings['trusted_host_patterns']);
 
-/*
-if (!empty($application_environment)) {
-  switch (strtolower($applicaiton_environment)) {
-    case "local":
-      $settings['trusted_host_patterns'][] = '^cms-local.usa.gov$';
-      $settings['trusted_host_patterns'][] = '^cms-local-usagov.apps.internal$';
-      break;
-
-    case "dev":
-      $settings['trusted_host_patterns'][] = '^cms-dev.vote.gov$';
-      $settings['trusted_host_patterns'][] = '^cms-dev-usagov.apps.internal$';
-      break;
-
-    case "stage":
-      $settings['trusted_host_patterns'][] = '^cms-stage.vote.gov$';
-      $settings['trusted_host_patterns'][] = '^cms-stage-usagov.apps.internal$';
-      break;
-
-    case "prod":
-      $settings['trusted_host_patterns'][] = '^cms.vote.gov$';
-      $settings['trusted_host_patterns'][] = '^cms-prod-usagov.apps.internal$';
-      break;
-  }
-}
-*/
+// if (!empty($application_environment)) {
+//   switch (strtolower($applicaiton_environment)) {
+//     case "local":
+//       $settings['trusted_host_patterns'][] = '^cms-local.usa.gov$';
+//       $settings['trusted_host_patterns'][] = '^cms-local-usagov.apps.internal$';
+//       break;
+// 
+//     case "dev":
+//       $settings['trusted_host_patterns'][] = '^cms-dev.vote.gov$';
+//       $settings['trusted_host_patterns'][] = '^cms-dev-usagov.apps.internal$';
+//       break;
+// 
+//     case "stage":
+//       $settings['trusted_host_patterns'][] = '^cms-stage.vote.gov$';
+//       $settings['trusted_host_patterns'][] = '^cms-stage-usagov.apps.internal$';
+//       break;
+// 
+//     case "prod":
+//       $settings['trusted_host_patterns'][] = '^cms.vote.gov$';
+//       $settings['trusted_host_patterns'][] = '^cms-prod-usagov.apps.internal$';
+//       break;
+//   }
+// }
