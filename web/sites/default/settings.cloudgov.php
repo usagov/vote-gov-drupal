@@ -3,7 +3,7 @@
 /**
  * @file
  * Settings file for cloud.gov.
-**/
+ */
 
 $cf_application_data = json_decode(getenv('VCAP_APPLICATION') ?? '{}', TRUE);
 $cf_service_data = json_decode(getenv('VCAP_SERVICES') ?? '{}', TRUE);
@@ -31,23 +31,23 @@ if (getenv('NEW_RELIC_API_KEY')) {
   $config['new_relic_rpm.settings']['api_key'] = getenv('NEW_RELIC_API_KEY');
 }
 
-$is_cloudgov=FALSE;
+$is_cloudgov = FALSE;
 
 if (!empty($cf_application_data['space_name']) &&
     $application_environment != 'local') {
   switch ($application_environment) {
     case "dev":
-      $is_cloudgov=TRUE;
+      $is_cloudgov = TRUE;
       // $server_http_host = 'cms-dev.vote.gov';
       break;
 
     case "stage":
-      $is_cloudgov=TRUE;
+      $is_cloudgov = TRUE;
       // $server_http_host = 'cms-stage.vote.gov';
       break;
 
     case "prod":
-      $is_cloudgov=TRUE;
+      $is_cloudgov = TRUE;
       // $server_http_host = 'cms.vote.gov';
       break;
   }
@@ -57,7 +57,7 @@ if (!empty($cf_application_data['space_name']) &&
 foreach ($cf_service_data as $service_list) {
   foreach ($service_list as $service) {
 
-    if ( stristr($service['name'], 'mysql') ) {
+    if (stristr($service['name'], 'mysql')) {
       $databases['default']['default'] = [
         'database' => $service['credentials']['db_name'],
         'username' => $service['credentials']['username'],
