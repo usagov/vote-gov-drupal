@@ -51,8 +51,6 @@ reporter: 'cypress-mochawesome-reporter',
           return null
         }
       })
-
-      
     },
   },
 });
