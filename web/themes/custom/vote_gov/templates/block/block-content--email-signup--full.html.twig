@@ -1,0 +1,24 @@
+{% block content %}
+  <div class="bg-white">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="tablet:grid-col-4"></div>
+        <div class="tablet:grid-col-8 right-shift">
+        {# what goes in action #}
+          <form class="form-signup" action="" method="get">
+            <h2 class="text-color-blue font-size-medium">
+                {{ content.field_heading | field_value }}
+            </h2>
+            <label class="max-width-input text-grey" for="email-2" id="emailsub">
+                {{ content.field_email_field_label | field_value }}
+            </label>
+            <input id="email-2" name="email" type="email" class="usa-input max-width-input">
+            <button class="usa-button max-width-input" id="user-submit" type="submit">
+              {{ content.field_signup_button_label | field_value }}
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

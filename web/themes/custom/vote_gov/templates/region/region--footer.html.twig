@@ -15,10 +15,6 @@
 
 {% if content %}
   <div{{ attributes }}>
-    {% block contact %}
-      {{ 'Vote.gov in partnership with EAC' | t }}
-      {{ link('Follow Vote.gov on Twitter', 'https://twitter.com/votegov') }}
-    {% endblock %}
     {{ content }}
   </div>
 {% endif %}
