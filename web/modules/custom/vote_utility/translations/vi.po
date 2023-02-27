@@ -10,3 +10,16 @@ msgstr ""
 
 msgid "Vietnamese"
 msgstr "Tiếng Việt"
+
+#identifier
+msgid "An official website of the %link%."
+msgstr "Một trang web chính thức của %link%"
+
+msgid "General Services Administration"
+msgstr "Cơ quan Quản lý Dịch vụ Tổng hợp"
+
+msgid "Looking for U.S. government information and services? %link%"
+msgstr "Tìm kiếm thông tin và dịch vụ của chính phủ Hoa Kỳ %link%"
+
+msgid "Visit USA.gov"
+msgstr "Vào trang USA.gov"

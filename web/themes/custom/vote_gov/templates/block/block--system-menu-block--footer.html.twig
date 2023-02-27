@@ -8,8 +8,7 @@
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
 
 {# footer identifier: agency #}
-{% set GSAtxt = 'An official website of the %link%' | t %}
-{% set GSAlink = link('General Services Administration.', 'https://www.gsa.gov/') %}
+{% set GSAlink = link('General Services Administration' | t, 'https://www.gsa.gov/') %}
 {{ 'An official website of the %link%' | t({'%link%': GSAlink | render}) }}
 
 <nav role="navigation"
@@ -29,5 +28,5 @@
 </nav>
 
 {#footer identifier:link #}
-{{ 'Looking for U.S. government information and services? ' | t }}
-{{ link('Visit USA.gov', 'https://www.usa.gov/') }}
+{% set infoLink = link('Visit USA.gov' | t, 'https://www.usa.gov/') %}
+{{ 'Looking for U.S. government information and services? %link%' | t({'%link%': infoLink | render}) }}

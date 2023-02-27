@@ -12,13 +12,13 @@ msgid "Spanish"
 msgstr "Español"
 
 #identifier
-msgid "An official website of the %link%"
+msgid "An official website of the %link%."
 msgstr "Un sitio web oficial de la %link%"
 
 msgid "General Services Administration"
 msgstr "Administración General de Servicios (GSA, en inglés)"
 
-msgid "Looking for U.S. government information and services? "
+msgid "Looking for U.S. government information and services? %link%"
 msgstr "¿Busca información y servicios del Gobierno de Estados Unidos? "
 
 msgid "Visit USA.gov"

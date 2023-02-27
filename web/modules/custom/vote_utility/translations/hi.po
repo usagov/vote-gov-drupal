@@ -10,3 +10,16 @@ msgstr ""
 
 msgid "Hindi"
 msgstr "हिन्दी"
+
+#identifier
+msgid "An official website of the %link%."
+msgstr "%link% की आधिकारिक वेबसाइट"
+
+msgid "General Services Administration"
+msgstr "सामान्य सेवा प्रशासन/जनरल सर्विसेज़ एडमिनिस्ट्रेशन"
+
+msgid "Looking for U.S. government information and services? %link%"
+msgstr "यू.एस. सरकार की जानकारी और सेवाएं खोज रहे हैं? %link%"
+
+msgid "Visit USA.gov"
+msgstr "USA.gov पर जाएं"

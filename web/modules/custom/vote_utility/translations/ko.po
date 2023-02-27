@@ -10,3 +10,16 @@ msgstr ""
 
 msgid "Korean"
 msgstr "한국어"
+
+#identifier
+msgid "An official website of the %link%."
+msgstr "%link%의 공식 웹사이트"
+
+msgid "General Services Administration"
+msgstr "미국 연방 조달청"
+
+msgid "Looking for U.S. government information and services? %link%"
+msgstr "미국 정부 정보 및 서비스를 검색하고 싶으신가요? %link%"
+
+msgid "Visit USA.gov"
+msgstr "USA.gov 사이트로 가기"

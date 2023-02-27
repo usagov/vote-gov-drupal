@@ -10,3 +10,16 @@ msgstr ""
 
 msgid "Chinese - simplified"
 msgstr "中文"
+
+#identifier
+msgid "An official website of the %link%."
+msgstr "%link%官方網站"
+
+msgid "General Services Administration"
+msgstr "總管理局"
+
+msgid "Looking for U.S. government information and services? %link%"
+msgstr "尋找美國政府資訊與服務？ %link%"
+
+msgid "Visit USA.gov"
+msgstr "訪問 USA.gov"
