@@ -7,6 +7,10 @@
 
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
 
+{# contact start #}
+{% include '@vote_gov/partial/footer-contact.html.twig' %}
+{# contact end #}
+
 {# identifier start #}
 <div class="footer-identifier" data-test="footer">
   <div class="grid-container">
@@ -29,4 +33,4 @@
     </section>
   </div>
 </div>
-{# identifier start #}
+{# identifier end #}
