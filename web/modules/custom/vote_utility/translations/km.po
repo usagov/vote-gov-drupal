@@ -23,3 +23,25 @@ msgstr "កំពុងស្វែងរកព័ត៌មាននិងសេ
 
 msgid "Visit USA.gov"
 msgstr "ចូលមើល​ USA.gov"
+
+msgid "Agency identifier"
+msgstr "អ្នកស្វែងរកភ្នាក់ងារ"
+
+msgid "Agency description"
+msgstr "ការពិពណ៌នាពីភ្នាក់ងារ"
+
+msgid "Important links"
+msgstr "តំណសំខាន់ៗ"
+
+msgid "Government information and services"
+msgstr "ព័ត៌មាននិងសេវាកម្មរដ្ឋាភិបាល"
+
+#contact
+msgid "in partnership with"
+msgstr "ក្នុងភាពជាដៃគូជាមួយ"
+
+msgid "In partnership with U.S. Election Assistance Commission"
+msgstr "ក្នុងភាពជាដៃគូជាមួយ U.S. Election Assistance Commission"
+
+msgid "Follow Vote.gov on Twitter"
+msgstr "តាមដាន Vote.gov នៅលើ Twitter"

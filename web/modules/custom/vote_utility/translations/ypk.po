@@ -23,3 +23,25 @@ msgstr "Ivaghiiqsin U.S.-em kavemengan sameng pillghillu qepghaghvigillu? %link%
 
 msgid "Visit USA.gov"
 msgstr "Takugu USA.gov"
+
+msgid "Agency identifier"
+msgstr "Qepghaghvigem nalluniighusii"
+
+msgid "Agency description"
+msgstr "Qepghaghvigem apellgha"
+
+msgid "Important links"
+msgstr "Megnunalghiit kelgutisit"
+
+msgid "Government information and services"
+msgstr "Kavemem ungipiillu salqumsugillu"
+
+#contact
+msgid "in partnership with"
+msgstr "ilalkiilluteng"
+
+msgid "In partnership with U.S. Election Assistance Commission"
+msgstr "ilalkiilluteng U.S. Election Assistance Commission"
+
+msgid "Follow Vote.gov on Twitter"
+msgstr "Maligtigu Vote.gov Twitter-ekun"

@@ -23,3 +23,25 @@ msgstr "यू.एस. सरकार की जानकारी और स�
 
 msgid "Visit USA.gov"
 msgstr "USA.gov पर जाएं"
+
+msgid "Agency identifier"
+msgstr "एजेंसी पहचानकर्ता"
+
+msgid "Agency description"
+msgstr "एजेंसी का विवरण"
+
+msgid "Important links"
+msgstr "महत्वपूर्ण लिंक"
+
+msgid "Government information and services"
+msgstr "सरकारी सूचना और सेवाएं"
+
+#contact
+msgid "in partnership with"
+msgstr "के साथ साझेदारी में"
+
+msgid "In partnership with U.S. Election Assistance Commission"
+msgstr "U.S. Election Assistance Commission के साथ साझेदारी में"
+
+msgid "Follow Vote.gov on Twitter"
+msgstr "Vote.gov को Twitter पर फ़ॉलो करें"
