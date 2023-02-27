@@ -1,4 +1,18 @@
 # Bengali translation of Vote.gov
 #
+
 msgid "Bengali"
 msgstr "বাংলা"
+
+#identifier
+msgid "An official website of the "
+msgstr "সাধারণ পরিষেবা প্রশাসন "
+
+msgid "General Services Administration"
+msgstr "এর একটি দাপ্তরিক ওয়েবসাইট"
+
+msgid "Looking for U.S. government information and services? "
+msgstr "মার্কিন সরকারের তথ্য এবং পরিষেবা খুঁজছেন? "
+
+msgid "Visit USA.gov"
+msgstr "USA.gov দেখুন"

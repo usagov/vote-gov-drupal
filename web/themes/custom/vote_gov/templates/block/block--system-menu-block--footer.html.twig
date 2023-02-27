@@ -8,8 +8,9 @@
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
 
 {# footer identifier: agency #}
-{{ 'An official website of the' | t }}
-{{ link('General Services Administration.', 'https://www.gsa.gov/') }}
+{% set GSAtxt = 'An official website of the %link%' | t %}
+{% set GSAlink = link('General Services Administration.', 'https://www.gsa.gov/') %}
+{{ 'An official website of the %link%' | t({'%link%': GSAlink | render}) }}
 
 <nav role="navigation"
      aria-labelledby="{{ heading_id }}"{{ attributes.addClass(classes)|without('role', 'aria-labelledby') }}>
