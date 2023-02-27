@@ -2,17 +2,17 @@
 
 describe('sign in as content editor', () => {
   before('create new user', () => {
-    cy.createUser(Cypress.env('content_editor'), Cypress.env('editor_password'), Cypress.env('editor_role'));
+    cy.createUser(Cypress.env('roles').content_editor.username, Cypress.env('test_pass'), Cypress.env('roles').content_editor.role);
   })
 
   after('delete user', () => {
-    cy.deleteUser(Cypress.env('content_editor'))
+    cy.deleteUser(Cypress.env('roles').content_editor.username)
   })
 
   it('check log in', () => {
-    cy.signin(Cypress.env('content_editor'), Cypress.env('editor_password'))
+    cy.signin(Cypress.env('roles').content_editor.username, Cypress.env('test_pass'))
 
-    cy.get('[class="title page-title"]').should('contain', 'editor_test')
+    cy.get('[class="title page-title"]').should('have.text', Cypress.env('roles').content_editor.username)
 
   })
 })
