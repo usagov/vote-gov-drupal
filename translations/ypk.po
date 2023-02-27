@@ -1,4 +1,0 @@
-# Yupʼik translation of Vote.gov
-#
-msgid "Yupʼik"
-msgstr ""

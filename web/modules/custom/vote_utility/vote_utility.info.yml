@@ -3,3 +3,5 @@ type: module
 description: ''
 core_version_requirement: ^8.9 || ^9 || ^10
 package: 'Custom'
+interface translation project: vote_utility
+interface translation server pattern: modules/custom/%project/translations/%language.po
