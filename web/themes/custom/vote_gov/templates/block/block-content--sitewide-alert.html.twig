@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block content.
+ *
+ * @see template_preprocess_block_content_template()
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div class="usa-alert usa-alert--info">
+  <div class="grid-container">
+    <div class="usa-alert__body">
+      <div class="usa-alert__text">
+        {{ content.field_alert_content | field_value }}
+      </div>
+    </div>
+  </div>
+</div>
