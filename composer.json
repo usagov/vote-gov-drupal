@@ -31,6 +31,8 @@
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/language_switcher_extended": "^1.1",
         "drupal/metatag": "^1.22",
+        "drupal/migrate_plus": "^6.0",
+        "drupal/migrate_tools": "^6.0",
         "drupal/pathauto": "^1.11",
         "drupal/publication_date": "^2.0@beta",
         "drupal/redirect": "^1.8",

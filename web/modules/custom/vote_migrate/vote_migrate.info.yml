@@ -1,0 +1,11 @@
+name: Vote.gov migrate module
+type: module
+description: ''
+core_version_requirement: ^8.9 || ^9 || ^10
+package: 'Custom'
+dependencies:
+  - drupal:migrate
+  - drupal:migrate_plus
+  - drupal:migrate_tools
+interface translation project: vote_migrate
+interface translation server pattern: modules/custom/%project/translations/%language.po

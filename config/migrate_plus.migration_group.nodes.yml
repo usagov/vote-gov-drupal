@@ -1,0 +1,10 @@
+uuid: 780f01fc-1f8c-4216-96e1-beaf52fabaf5
+langcode: en
+status: true
+dependencies: {  }
+id: nodes
+label: nodes
+description: ''
+source_type: null
+module: null
+shared_configuration: null
