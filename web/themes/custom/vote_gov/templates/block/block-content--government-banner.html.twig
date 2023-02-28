@@ -33,6 +33,7 @@
               <span class="usa-banner__button-text">{{ content.field_accordion_link_label | field_value }}</span>
             </button>
           </div>
+          {{ drupal_entity('block', 'languageswitcher_2') }}
         </div>
       </div>
     </div>
@@ -63,8 +64,5 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class=".switcher-desktop">
-    {{ drupal_block('language_block:language_interface') }}
   </div>
 </section>

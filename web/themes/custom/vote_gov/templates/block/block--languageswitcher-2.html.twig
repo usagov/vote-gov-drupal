@@ -25,22 +25,22 @@
  * @see template_preprocess_block()
  */
 #}
-<div class="switcher-mobile">
+<div class="switcher-desktop">
 
   <div class="usa-language-container usa-language--big">
 
     <ul class="usa-language__primary usa-accordion">
       <li class="usa-language__primary-item">
-        <button class="usa-button usa-language__link" data-test="language-button" role="button" aria-expanded="false" aria-controls="language-options">
+        <button class="usa-button usa-language__link" data-test="language-button" role="button" aria-expanded="false" aria-controls="language-options-2">
           {{ "Select Language" | t }}
         </button>
         {# Language menu items:
            links--language-block.html.twig #}
-          <ul id="language-options" class="usa-language__submenu" data-test="language-switcher" name="language-switcher" hidden="true"{{ attributes }}>
-            {% block content %}
-              {{ content }}
-            {% endblock %}
+        {% block content %}
+          <ul id="language-options-2" class="usa-language__submenu" data-test="language-switcher" name="language-switcher" hidden="true"{{ attributes }}>
+            {{ content }}
           </ul>
+        {% endblock %}
       </li>
     </ul>
 
