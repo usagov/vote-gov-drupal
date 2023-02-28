@@ -14,7 +14,8 @@
     "cy:test": "cypress run --spec 'cypress/e2e/tests/**/*'",
     "cy:axe": "cypress run --spec 'cypress/e2e/accessibility/**/*'",
     "cy:links": "cypress run --spec 'cypress/e2e/internalLinks/**/*'",
-    "cy:proofer": "cypress run --spec 'cypress/e2e/externalLinks/**/*'"
+    "cy:proofer": "cypress run --spec 'cypress/e2e/externalLinks/**/*'",
+    "cy:backEnd": "cypress run --spec 'cypress/e2e/backend/**/*'"
   },
   "repository": {
     "type": "git",
