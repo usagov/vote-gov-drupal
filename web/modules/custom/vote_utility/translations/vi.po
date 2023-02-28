@@ -8,8 +8,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
+#language selector
 msgid "Vietnamese"
 msgstr "Tiếng Việt"
+
+msgid "Select language"
+msgstr "Lựa chọn ngôn ngữ"
 
 #identifier
 msgid "An official website of the %link%."
@@ -45,3 +49,7 @@ msgstr "hợp tác với U.S. Election Assistance Commission"
 
 msgid "Follow Vote.gov on Twitter"
 msgstr "Theo dõi Vote.gov trên Twitter"
+
+#search
+msgid "Search Vote.gov"
+msgstr "Tìm kiếm Vote.gov"
