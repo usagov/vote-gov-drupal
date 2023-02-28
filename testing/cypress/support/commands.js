@@ -1,25 +1,44 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+/**
+ * Create a User through Drush
+ * @param {*} user - String
+ * @param {*} password - String
+ */
+Cypress.Commands.add('createUser', (user, pass, role) => {
+
+  let drush = 'lando drush';
+  cy.exec(`${drush} user-create "${user}" --mail="${user}@example.com" --password="${pass}"`,
+    //Code will continue to execute if the given user account data already exists
+    { failOnNonZeroExit: false }
+  );
+
+  cy.exec(
+    `${drush} user-add-role "${role}" "${user}"`,
+    { failOnNonZeroExit: false }
+  );
+
+  cy.exec(`${drush} user-information "${user}"`,
+  { failOnNonZeroExit: false }
+  );
+  //we didn’t explicitly set the failOnNonZeroExit property here and the test will fail
+  //if the given user account doesn’t exist.
+
+});
+
+
+Cypress.Commands.add('signin', (user, pass) => {
+
+  cy.visit('http://vote-gov.lndo.site/user/login')
+  cy.get('[data-drupal-selector="edit-name"]').type(user)
+  cy.get('[data-drupal-selector="edit-pass"]').type(pass)
+
+  cy.get('[data-drupal-selector="edit-submit"]').click()
+
+});
+
+Cypress.Commands.add('deleteUser', function (user) {
+  let drush = 'lando drush';
+  cy.exec(`${drush} -y user:cancel --delete-content "${user}"`, {
+      timeout: 120000
+  });
+});
