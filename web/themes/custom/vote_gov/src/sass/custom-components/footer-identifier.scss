@@ -1,11 +1,12 @@
-
 @forward 'usa-footer';
+@use "uswds-core" as *;
 
 .footer-identifier {
   background-color: #4b4b4d;
   padding-top: 2rem;
   padding-bottom: 2rem;
   color: #fff;
+  font-size: 16px;
 
   @include at-media-max('desktop') {
     padding-bottom: 4rem;

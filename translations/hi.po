@@ -1,4 +1,0 @@
-# Hindi translation of Vote.gov
-#
-msgid "Hindi"
-msgstr "हिन्दी"

@@ -1,4 +1,6 @@
+@use "uswds-core" as *;
 @use 'sass:math';
+@use '../variables' as *;
 
 .css-arrow {
   position: relative;

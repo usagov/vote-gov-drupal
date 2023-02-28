@@ -1,4 +1,0 @@
-# Tagalog translation of Vote.gov
-#
-msgid "Tagalog"
-msgstr ""

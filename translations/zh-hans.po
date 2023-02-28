@@ -1,4 +1,0 @@
-# Chinese - simplified translation of Vote.gov
-#
-msgid "Chinese - simplified"
-msgstr "中文"

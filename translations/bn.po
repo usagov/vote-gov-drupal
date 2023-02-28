@@ -1,4 +1,0 @@
-# Bengali translation of Vote.gov
-#
-msgid "Bengali"
-msgstr "বাংলা"

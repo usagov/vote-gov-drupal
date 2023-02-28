@@ -1,4 +1,0 @@
-# Khmer translation of Vote.gov
-#
-msgid "Khmer"
-msgstr "ភាសាខ្មែរ"
