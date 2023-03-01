@@ -7,7 +7,7 @@
         {# what goes in action #}
           <form class="form-signup" action="" method="get">
             <h2 class="text-color-blue font-size-medium">
-                {{ content.field_heading | field_value }}
+                {{ content.field_heading | field_value | render | replace({'%USAGov%': 'USAGov'}) }}
             </h2>
             <label class="max-width-input text-grey" for="email-2" id="emailsub">
                 {{ content.field_email_field_label | field_value }}
