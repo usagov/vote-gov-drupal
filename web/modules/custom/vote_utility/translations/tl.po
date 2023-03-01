@@ -10,3 +10,38 @@ msgstr ""
 
 msgid "Tagalog"
 msgstr ""
+
+#identifier
+msgid "An official website of the %link%."
+msgstr "Isang opisyal na website ng %link%"
+
+msgid "General Services Administration"
+msgstr "Administrasyon ng Pangkalahatang Serbisyo"
+
+msgid "Looking for U.S. government information and services? %link%"
+msgstr "Naghahanap ng impormasyon at mga serbisyo ng gobyerno ng U.S.? %link%"
+
+msgid "Visit USA.gov"
+msgstr "Bisitahin ang USA.gov"
+
+msgid "Agency identifier"
+msgstr "Tagatukoy ng Ahensya"
+
+msgid "Agency description"
+msgstr "Paglalarawan ng Ahensya"
+
+msgid "Important links"
+msgstr "Importanteng mga Links"
+
+msgid "Government information and services"
+msgstr "Impormasyon at mga serbisyo ng gobyerno"
+
+#contact
+msgid "in partnership with"
+msgstr "sa pakikipagtulungan sa"
+
+msgid "In partnership with U.S. Election Assistance Commission"
+msgstr "sa pakikipagtulungan sa Election Assistance Commission"
+
+msgid "Follow Vote.gov on Twitter"
+msgstr "I-follow ang Vote.gov sa Twitter"

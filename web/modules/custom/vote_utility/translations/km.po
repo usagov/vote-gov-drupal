@@ -10,3 +10,38 @@ msgstr ""
 
 msgid "Khmer"
 msgstr "ភាសាខ្មែរ"
+
+#identifier
+msgid "An official website of the %link%."
+msgstr "គេហទំព័រផ្លូវការនៃ %link%"
+
+msgid "General Services Administration"
+msgstr "រដ្ឋបាលសេវាកម្មទូទៅ"
+
+msgid "Looking for U.S. government information and services? %link%"
+msgstr "កំពុងស្វែងរកព័ត៌មាននិងសេវាកម្មរដ្ឋាភិបាលអាមេរិចមែនទេ? %link%"
+
+msgid "Visit USA.gov"
+msgstr "ចូលមើល​ USA.gov"
+
+msgid "Agency identifier"
+msgstr "អ្នកស្វែងរកភ្នាក់ងារ"
+
+msgid "Agency description"
+msgstr "ការពិពណ៌នាពីភ្នាក់ងារ"
+
+msgid "Important links"
+msgstr "តំណសំខាន់ៗ"
+
+msgid "Government information and services"
+msgstr "ព័ត៌មាននិងសេវាកម្មរដ្ឋាភិបាល"
+
+#contact
+msgid "in partnership with"
+msgstr "ក្នុងភាពជាដៃគូជាមួយ"
+
+msgid "In partnership with U.S. Election Assistance Commission"
+msgstr "ក្នុងភាពជាដៃគូជាមួយ U.S. Election Assistance Commission"
+
+msgid "Follow Vote.gov on Twitter"
+msgstr "តាមដាន Vote.gov នៅលើ Twitter"
