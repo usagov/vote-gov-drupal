@@ -11,7 +11,7 @@ dependencies:
 id: search.govsearchblock
 theme: vote_gov
 region: header
-weight: 0
+weight: -3
 provider: null
 plugin: 'block_content:21a0e011-9d20-4893-95a5-72c21087da8d'
 settings:

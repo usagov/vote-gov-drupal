@@ -1,4 +1,4 @@
-uuid: 99766d39-e338-4a6e-831f-34fb431f8aa9
+uuid: 1a0635e9-f4dc-4916-979b-e968769e3796
 langcode: en
 status: true
 dependencies:
@@ -6,15 +6,15 @@ dependencies:
     - language
   theme:
     - vote_gov
-id: languageswitcher
+id: languageswitcher_2
 theme: vote_gov
-region: header
+region: no_region
 weight: -5
 provider: null
 plugin: 'language_block:language_interface'
 settings:
   id: 'language_block:language_interface'
-  label: 'Select Language Mobile'
+  label: 'Select Language Desktop'
   label_display: '0'
   provider: language
 visibility: {  }

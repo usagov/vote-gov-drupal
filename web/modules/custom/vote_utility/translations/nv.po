@@ -2,11 +2,11 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Vote.gov Utilityn"
-"MIME-Version: 1.0n"
-"Content-Type: text/plain; charset=utf-8n"
-"Content-Transfer-Encoding: 8bitn"
-"Plural-Forms: nplurals=2; plural=(n > 1);n"
+"Project-Id-Version: Vote.gov Utility\\n"
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=utf-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
 #language selector
 msgid "Navajo"
