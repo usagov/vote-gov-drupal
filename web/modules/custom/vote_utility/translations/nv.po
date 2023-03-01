@@ -2,14 +2,18 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Vote.gov Utilityn"
-"MIME-Version: 1.0n"
-"Content-Type: text/plain; charset=utf-8n"
-"Content-Transfer-Encoding: 8bitn"
-"Plural-Forms: nplurals=2; plural=(n > 1);n"
+"Project-Id-Version: Vote.gov Utility\\n"
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=utf-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
+#language selector
 msgid "Navajo"
 msgstr "Diné"
+
+msgid "Select language"
+msgstr "Saad choid77['88[7g77"
 
 #identifier
 msgid "An official website of the %link%."
@@ -45,3 +49,7 @@ msgstr "U.S. Election Assistance Commission yi[ nidaalnish"
 
 msgid "Follow Vote.gov on Twitter"
 msgstr "Vote.gov bik44' nanin1 Twitter biyi'"
+
+#search
+msgid "Search Vote.gov"
+msgstr "vote.gov hanit1h"

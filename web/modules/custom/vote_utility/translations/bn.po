@@ -8,8 +8,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
+#language selector
 msgid "Bengali"
 msgstr "বাংলা"
+
+msgid "Select language"
+msgstr "ভাষা নির্বাচন করুন"
 
 #identifier
 msgid "An official website of the %link%."
@@ -45,3 +49,7 @@ msgstr "এর সাথে অংশীদারিত্বে U.S. Election A
 
 msgid "Follow Vote.gov on Twitter"
 msgstr "টুইটারে Vote.gov অনুসরণ করুন"
+
+#search
+msgid "Search Vote.gov"
+msgstr "Vote.gov অনুসন্ধান করুন"

@@ -8,8 +8,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
+#language selector
+
 msgid "Tagalog"
 msgstr ""
+
+msgid "Select language"
+msgstr "Pumili ng wika"
 
 #identifier
 msgid "An official website of the %link%."
@@ -45,3 +50,7 @@ msgstr "sa pakikipagtulungan sa Election Assistance Commission"
 
 msgid "Follow Vote.gov on Twitter"
 msgstr "I-follow ang Vote.gov sa Twitter"
+
+#search
+msgid "Search Vote.gov"
+msgstr "I-search ang Vote.gov"

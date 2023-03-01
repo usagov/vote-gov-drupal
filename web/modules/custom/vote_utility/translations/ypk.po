@@ -8,8 +8,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
+#language selector
 msgid "Yupʼik"
 msgstr ""
+
+msgid "Select language"
+msgstr "Ulu nakmiighhu"
 
 #identifier
 msgid "An official website of the %link%."
@@ -45,3 +49,7 @@ msgstr "ilalkiilluteng U.S. Election Assistance Commission"
 
 msgid "Follow Vote.gov on Twitter"
 msgstr "Maligtigu Vote.gov Twitter-ekun"
+
+#search
+msgid "Search Vote.gov"
+msgstr "Ivaghivikigu vote.gov"

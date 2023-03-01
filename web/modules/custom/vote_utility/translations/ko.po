@@ -8,8 +8,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
+#language selector
 msgid "Korean"
 msgstr "한국어"
+
+msgid "Select language"
+msgstr "언어 선택"
 
 #identifier
 msgid "An official website of the %link%."
@@ -45,3 +49,7 @@ msgstr "협력 제공 기관: U.S. Election Assistance Commission"
 
 msgid "Follow Vote.gov on Twitter"
 msgstr "Vote.gov 사이트 트위터 팔로우하기"
+
+#search
+msgid "Search Vote.gov"
+msgstr "Vote.gov 사이트 검색"

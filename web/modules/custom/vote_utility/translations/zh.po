@@ -8,8 +8,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
+#language selector
 msgid "Chinese - traditional"
 msgstr "繁體中文"
+
+msgid "Select language"
+msgstr "選擇語言"
 
 #identifier
 msgid "An official website of the %link%."
@@ -45,3 +49,7 @@ msgstr "與 U.S. Election Assistance Commission合作 "
 
 msgid "Follow Vote.gov on Twitter"
 msgstr "在 Twitter 上追蹤 Vote.gov"
+
+#search
+msgid "Search Vote.gov"
+msgstr "搜尋 Vote.gov"
