@@ -23,7 +23,7 @@
 
       <label class="usa-sr-only" for="search-field-en-small">{{ content.field_search_placeholder | field_value }}</label>
 
-      <input class="usa-input" id="search-field-en-small" type="search" name="query" autocomplete="off" placeholder="Search Vote.gov ">
+      <input class="usa-input" id="search-field-en-small" type="search" name="query" autocomplete="off" placeholder="{{ content.field_search_placeholder | field_value }}">
 
       <button class="usa-button" type="submit" name="commit" data-disable-with="Search">
         <img src="{{ base_path ~ directory }}/dist/assets/img/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt={{ 'Search Vote.gov' | t }}>
