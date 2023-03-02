@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block content.
+ *
+ * @see template_preprocess_block_content_template()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'block-content',
+    'block-content--type-' ~ bundle|clean_class,
+    'block-content--' ~ id,
+    'block-content--view-mode-' ~ view_mode|clean_class
+  ]
+%}
+<div class="bg-lightblue search-container">
+  <div class="grid-container">
+    <form class="usa-search usa-search--small search-bar" role="search" id="search_form" action="https://search.vote.gov/search" accept-charset="UTF-8" method="get">
+      <input type="hidden" name="affiliate" id="affiliate" value="vote_en" autocomplete="off">
+
+      <label class="usa-sr-only" for="search-field-en-small">{{ content.field_search_placeholder | field_value }}</label>
+
+      <input class="usa-input" id="search-field-en-small" type="search" name="query" autocomplete="off" placeholder="Search Vote.gov ">
+
+      <button class="usa-button" type="submit" name="commit" data-disable-with="Search">
+        <img src="{{ base_path ~ directory }}/dist/assets/img/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt={{ 'Search Vote.gov' | t }}>
+      </button>
+    </form>
+  </div>
+</div>
