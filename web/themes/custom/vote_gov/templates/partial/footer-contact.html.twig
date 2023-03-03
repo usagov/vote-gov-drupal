@@ -8,7 +8,7 @@
       </div>
       <div class="tablet:grid-col-auto partnership-txt">{{ 'in partnership with' | t }}</div>
       <div class="tablet:grid-col-auto eac-container">
-        <a href="https://www.eac.gov/" target="_blank">
+        <a href="{{ language == 'es' ? 'https://www.eac.gov/translations/spanish' : 'https://www.eac.gov/' }}" target="_blank">
           <img class="eac-logo" width="146" height="48" src="{{ base_path ~ directory }}/img/eac-logo.webp" alt="{{ 'In partnership with U.S. Election Assistance Commission' | t }}">
         </a>
       </div>

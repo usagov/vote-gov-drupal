@@ -7,7 +7,7 @@
 
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
 {% set GSAlink = link('General Services Administration' | t, 'https://www.gsa.gov/') %}
-{% set infoLink = link('Visit USA.gov' | t, 'https://www.usa.gov/') %}
+{% set infoLink = link('Visit USA.gov' | t, (language == 'es' ? 'https://www.usa.gov/espanol/' : 'https://www.usa.gov/')) %}
 
 {# contact start #}
 {% include '@vote_gov/partial/footer-contact.html.twig' %}
