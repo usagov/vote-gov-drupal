@@ -176,4 +176,4 @@ workflows:
               only:
                 - dev
           requires:
-            - build-theme`
+            - build-theme
