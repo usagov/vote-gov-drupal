@@ -81,21 +81,21 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - checkout
       - run:
           name: "Install cloudfoundry dependencies"
           command: |
             wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
             echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
             sudo apt update
-            sudo apt install -y cf8-cli gettext
+            sudo apt install -y cf8-cli gettext git
+      - checkout
       - run:
           name: "Deploy"
           command: |
             
             mv manifest.yml manifest.tmp
             envsubst < manifest.tmp > manifest.yml
-
+            
             if [ "${CIRCLE_BRANCH}" == "prod" ]; then
               CF_USERNAME=${CF_USERNAME_PROD}
               CF_PASSWORD=${CF_PASSWORD_PROD}
@@ -114,7 +114,8 @@ jobs:
               CF_SPACE=${CF_SPACE_DEV}
             fi
 
-            if [[ "${CIRCLE_BRANCH}" =~ dev|test|stage|prod ]]; then
+            if [[ "${CIRCLE_BRANCH}" =~ (dev|test|stage|prod) ]]; then
+              echo pushing
               cf login \
                 -a https://api.fr.cloud.gov \
                 -u ${CF_USERNAME} \
@@ -122,7 +123,9 @@ jobs:
                 -o ${CF_ORG} \
                 -s ${CF_SPACE}
 
-              cf push
+              # cf push
+            else
+              echo "Nothing to push."
             fi
 
       - attach_workspace:
@@ -131,26 +134,35 @@ jobs:
     docker:
       - image: php:8.2-alpine
     steps:
-      - checkout
       - run:
           name: "Install PHP dependencies"
           command: |
-            apk add git curl php-curl php-dom php-gd php-xml bash
+
+            apk add git curl php-curl php-dom php-gd php-xml
             php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
             php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
             php composer-setup.php
             php -r "unlink('composer-setup.php');"
             mv composer.phar /usr/local/bin/composer
-            chsh -s /bin/bash root
+      - checkout
       - run:
           name: "PHP CodeSniffer"
           command: |
             git clone --branch 8.3.x http://git.drupal.org/project/coder.git
             cd coder
             composer install
+            cd ..
+            ls -al
             export PATH="$PATH:$HOME/project/coder/vendor/bin"
-            if [[ "${CIRCLE_BRANCH}" =~ dev|test|stage|prod ]]; then
-              phpcs --standard=Drupal --ignore=*/node_modules/* --extensions=php,module,inc,install,test,profile,theme,info,yml,twig --report=csv --report-file=/tmp/phpcs.csv ${HOME}/project/web || exit 0
+            echo $PWD
+            if [[ "${CIRCLE_BRANCH}" =~ (dev|test|stage|prod) ]]; then
+              phpcs \
+                --standard=Drupal \
+                --ignore=*/node_modules/* \
+                --extensions=php,module,inc,install,test,profile,theme,info,yml,twig \
+                --report=csv \
+                --report-file=/tmp/phpcs.csv \
+                ~/project/web || exit 0
             else
               phpcs --standard=Drupal --ignore=*/node_modules/* --extensions=php,module,inc,install,test,profile,theme,info,yml,twig --report=csv --report-file=/tmp/phpcs.csv ${HOME}/project/web
             fi
