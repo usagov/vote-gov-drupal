@@ -71,7 +71,7 @@ for dir in $dirs; do
   fi
 done
 
-if [[ "${CF_INSTANCE_INDEX:-''}" == "0" && && [ -z "${SKIP_DRUPAL_BOOTSTRAP:-}" ]]; then ]; then
+if [[ "${CF_INSTANCE_INDEX:-''}" == "0" && [ -z "${SKIP_DRUPAL_BOOTSTRAP:-}" ]]; then ]; then
 
     echo  "Updating drupal ... "
     drush state:set system.maintenance_mode 1 -y
