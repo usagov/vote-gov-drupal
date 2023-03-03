@@ -11,7 +11,7 @@ dependencies:
 id: views_block__sitewide_alert_block_1
 theme: vote_gov
 region: header
-weight: -1
+weight: -4
 provider: null
 plugin: 'views_block:sitewide_alert-block_1'
 settings:
