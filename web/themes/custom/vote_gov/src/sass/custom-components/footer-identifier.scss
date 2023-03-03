@@ -27,6 +27,14 @@
   align-items: center;
 }
 
+.identifier-gov-info, .identifier-gsa {
+  .placeholder {
+    a {
+     font-style: normal;
+    }
+  }
+}
+
 .identifier-links {
   li {
     @include at-media-max('tablet') {
