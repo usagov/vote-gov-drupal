@@ -1,3 +1,4 @@
+
 version: 2.1
 jobs:
   backup-db:
@@ -51,6 +52,10 @@ jobs:
     docker:
       - image: node:18-slim
     steps:
+      - persist_to_workspace:
+          root: ~/web/themes/custom
+          paths:
+            - ./vote_gov
       - checkout
       - run:
           name: "Build theme"
@@ -59,10 +64,6 @@ jobs:
             cd web/themes/custom/vote_gov
             npm install
             npm run build
-      - persist_to_workspace:
-          root: web/themes/custom
-          paths:
-            - "vote_gov"
   cypress:
     docker:
       - image: cypress/included:cypress-12.3.0-node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
@@ -81,6 +82,8 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
+      - attach_workspace:
+          at: ~/web/themes/custom
       - run:
           name: "Install cloudfoundry dependencies"
           command: |
@@ -124,9 +127,6 @@ jobs:
 
               cf push
             fi
-
-      - attach_workspace:
-          at: web/themes/custom/vote_gov
   php-lint:
     docker:
       - image: php:8.2-alpine
