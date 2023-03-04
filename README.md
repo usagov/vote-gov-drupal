@@ -31,6 +31,9 @@ You can get the local site urls using this command.
 lando info
 ```
 
+### Build the theme compiled files
+See the README file located in the `vote_gov` custom theme for a quick start.
+
 ## Drush commands
 
 ### Clearing cache
