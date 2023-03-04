@@ -16,6 +16,6 @@ default_config: &defaults
 applications:
 - name: vote-drupal-${CIRCLE_BRANCH}
   <<: *defaults
-  memory: 512M
+  memory: ${DRUPAL_MEMORY}
   instances: 1
   random-route: false

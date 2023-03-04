@@ -52,10 +52,6 @@ jobs:
     docker:
       - image: node:18-slim
     steps:
-      - persist_to_workspace:
-          root: ~/web/themes/custom
-          paths:
-            - ./vote_gov
       - checkout
       - run:
           name: "Build theme"
@@ -64,6 +60,10 @@ jobs:
             cd web/themes/custom/vote_gov
             npm install
             npm run build
+      - persist_to_workspace:
+          root: ~/
+          paths: 
+            - project/web/themes/custom/vote_gov
   cypress:
     docker:
       - image: cypress/included:cypress-12.3.0-node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
@@ -82,8 +82,9 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
+      - checkout
       - attach_workspace:
-          at: ~/web/themes/custom
+          at: ~/
       - run:
           name: "Install cloudfoundry dependencies"
           command: |
@@ -91,32 +92,34 @@ jobs:
             echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
             sudo apt update
             sudo apt install -y cf8-cli gettext git
-      - checkout
       - run:
           name: "Deploy"
           command: |
-            
-            mv manifest.yml manifest.tmp
-            envsubst < manifest.tmp > manifest.yml
-            
             if [ "${CIRCLE_BRANCH}" == "prod" ]; then
               CF_USERNAME=${CF_USERNAME_PROD}
               CF_PASSWORD=${CF_PASSWORD_PROD}
               CF_SPACE=${CF_SPACE_PROD}
+              DRUPAL_MEMORY=${DRUPAL_MEMORY_PROD}
             elif [ "${CIRCLE_BRANCH}" == "stage" ]; then
               CF_USERNAME=${CF_USERNAME_STAGE}
               CF_PASSWORD=${CF_PASSWORD_STAGE}
               CF_SPACE=${CF_SPACE_STAGE}
+              DRUPAL_MEMORY=${DRUPAL_MEMORY_STAGE}
             elif [ "${CIRCLE_BRANCH}" == "test" ]; then
-              CF_USERNAME=${CF_USERNAME_TEST}
-              CF_PASSWORD=${CF_PASSWORD_TEST}
-              CF_SPACE=${CF_SPACE_STAGE}
+              CF_USERNAME=${CF_USERNAME_DEV}
+              CF_PASSWORD=${CF_PASSWORD_DEV}
+              CF_SPACE=${CF_SPACE_DEV}
+              DRUPAL_MEMORY=${DRUPAL_MEMORY_DEV}
             elif [ "${CIRCLE_BRANCH}" == "dev" ]; then
               CF_USERNAME=${CF_USERNAME_DEV}
               CF_PASSWORD=${CF_PASSWORD_DEV}
               CF_SPACE=${CF_SPACE_DEV}
+              DRUPAL_MEMORY=${DRUPAL_MEMORY_DEV}
             fi
 
+            mv manifest.yml manifest.tmp
+            envsubst < manifest.tmp > manifest.yml
+            
             if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "test" || "${CIRCLE_BRANCH}" == "stage" || "${CIRCLE_BRANCH}" == "prod" ]]; then
               cf login \
                 -a https://api.fr.cloud.gov \
@@ -134,7 +137,6 @@ jobs:
       - run:
           name: "Install PHP dependencies"
           command: |
-
             apk add git curl php-curl php-dom php-gd php-xml
             php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
             php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
@@ -178,6 +180,7 @@ workflows:
             branches:
               only:
                 - dev
+                - test
           requires:
             - php-lint
       - deploy:
@@ -185,5 +188,6 @@ workflows:
             branches:
               only:
                 - dev
+                - test
           requires:
             - build-theme
