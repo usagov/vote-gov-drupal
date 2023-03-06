@@ -8,5 +8,48 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
+#language selector
 msgid "Chinese - traditional"
 msgstr "繁體中文"
+
+msgid "Select language"
+msgstr "選擇語言"
+
+#identifier
+msgid "An official website of the %link%."
+msgstr "%link%官方網站"
+
+msgid "General Services Administration"
+msgstr "總管理局"
+
+msgid "Looking for U.S. government information and services? %link%"
+msgstr "尋找美國政府資訊與服務？ %link%"
+
+msgid "Visit USA.gov"
+msgstr "访问 USA.gov"
+
+msgid "Agency identifier"
+msgstr "機構標誌"
+
+msgid "Agency description"
+msgstr "機構說明"
+
+msgid "Important links"
+msgstr "重要連結"
+
+msgid "Government information and services"
+msgstr "政府資訊和服務"
+
+#contact
+msgid "in partnership with"
+msgstr "與合作"
+
+msgid "In partnership with U.S. Election Assistance Commission"
+msgstr "與 U.S. Election Assistance Commission合作 "
+
+msgid "Follow Vote.gov on Twitter"
+msgstr "在 Twitter 上追蹤 Vote.gov"
+
+#search
+msgid "Search Vote.gov"
+msgstr "搜尋 Vote.gov"

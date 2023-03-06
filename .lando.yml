@@ -71,6 +71,15 @@ tooling:
       - drush cr
       - drush updb
       - drush cim -y
+      - drush locale-check
+      - drush locale-update
+      - drush cr
+  import-translations:
+    service: appserver
+    description: Import string translations from vote_utility module
+    cmd:
+      - drush locale-check
+      - drush locale-update
       - drush cr
   set:
     service: appserver

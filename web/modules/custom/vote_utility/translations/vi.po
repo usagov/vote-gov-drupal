@@ -8,5 +8,48 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
+#language selector
 msgid "Vietnamese"
 msgstr "Tiếng Việt"
+
+msgid "Select language"
+msgstr "Lựa chọn ngôn ngữ"
+
+#identifier
+msgid "An official website of the %link%."
+msgstr "Một trang web chính thức của %link%"
+
+msgid "General Services Administration"
+msgstr "Cơ quan Quản lý Dịch vụ Tổng hợp"
+
+msgid "Looking for U.S. government information and services? %link%"
+msgstr "Tìm kiếm thông tin và dịch vụ của chính phủ Hoa Kỳ %link%"
+
+msgid "Visit USA.gov"
+msgstr "Vào trang USA.gov"
+
+msgid "Agency identifier"
+msgstr "Mã xác định cơ quan"
+
+msgid "Agency description"
+msgstr "Các điểm nhận diên của cơ quan"
+
+msgid "Important links"
+msgstr "Các đường truyền quan trọng"
+
+msgid "Government information and services"
+msgstr "Những thông tin và dịch vụ của chính phủ"
+
+#contact
+msgid "in partnership with"
+msgstr "hợp tác với"
+
+msgid "In partnership with U.S. Election Assistance Commission"
+msgstr "hợp tác với U.S. Election Assistance Commission"
+
+msgid "Follow Vote.gov on Twitter"
+msgstr "Theo dõi Vote.gov trên Twitter"
+
+#search
+msgid "Search Vote.gov"
+msgstr "Tìm kiếm Vote.gov"

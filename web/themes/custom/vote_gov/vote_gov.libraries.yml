@@ -9,6 +9,12 @@ global:
   dependencies:
     - core/once
     - core/drupal.active-link
+    - vote_gov/external_links
+
+external_links:
+  version: VERSION
+  js:
+    dist/js/external-links.js: { minified: true }
 
 form_range:
   version: VERSION
@@ -26,3 +32,4 @@ remote_video:
   version: VERSION
   js:
     dist/js/bx-remote-video.js: { minified: true }
+
