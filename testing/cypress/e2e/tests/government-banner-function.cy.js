@@ -2,7 +2,7 @@
 
 describe('Government Banner Function', () => {
 
-  it('check that site admin access', () => {
+  it('check site admin access', () => {
     cy.signin(Cypress.env('roles').site_admin.username, Cypress.env('test_pass'))
 
     // each role should have access to edit
@@ -18,7 +18,7 @@ describe('Government Banner Function', () => {
     cy.logout()
   })
 
-  it('check that content editor access', () => {
+  it('check content editor access', () => {
     cy.signin(Cypress.env('roles').content_editor.username, Cypress.env('test_pass'))
 
      // each role should have access to edit
@@ -37,7 +37,7 @@ describe('Government Banner Function', () => {
     cy.logout()    
   })
 
-  it('check that content manager access', () => {
+  it('check content manager access', () => {
     cy.signin(Cypress.env('roles').content_manager.username, Cypress.env('test_pass'))
 
      // each role should have access to edit
@@ -56,7 +56,7 @@ describe('Government Banner Function', () => {
     cy.logout()
   })
 
-  it('check header function', () => {
+  it('check function', () => {
     cy.visit('/')
 
     cy.get('[data-test="header-logo"]').should('be.visible')
