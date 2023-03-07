@@ -1,6 +1,6 @@
 // <reference types="cypress" />
 
-describe('Ofical Website Function', () => {
+describe('Government Banner Function', () => {
 
   it('check that site admin access', () => {
     cy.signin(Cypress.env('roles').site_admin.username, Cypress.env('test_pass'))
