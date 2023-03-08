@@ -83,7 +83,7 @@ jobs:
             echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
             wget https://dev.mysql.com/get/mysql-apt-config_0.8.18-1_all.deb
             sudo dpkg -i mysql-apt-config_0.8.18-1_all.deb
-
+            sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 467B942D3A79BD29
             sudo apt update
             sudo apt install -y cf8-cli mysql-client
             cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/1.1.0/cf-service-connect-darwin-amd64
