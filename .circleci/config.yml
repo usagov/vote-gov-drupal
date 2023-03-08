@@ -84,11 +84,11 @@ jobs:
           name: "Run downsync"
           command: |
             source ./scripts/pipeline/cloud-gov-login.sh "${BACKUP_ENV}"
-            ./scripts/pipeline/downsync-backup.sh
+            source ./scripts/pipeline/downsync-backup.sh
             cf logout
             
             source ./scripts/pipeline/cloud-gov-login.sh "${RESTORE_ENV}"
-            ./scripts/pipeline/downsync-restore.sh
+            source ./scripts/pipeline/downsync-restore.sh
 
   php-lint:
     docker:
