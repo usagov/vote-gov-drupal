@@ -8,5 +8,48 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
+#language selector
 msgid "Bengali"
 msgstr "বাংলা"
+
+msgid "Select language"
+msgstr "ভাষা নির্বাচন করুন"
+
+#identifier
+msgid "An official website of the %link%."
+msgstr "%link% এর একটি দাপ্তরিক ওয়েবসাইট"
+
+msgid "General Services Administration"
+msgstr "সাধারণ পরিষেবা প্রশাসন"
+
+msgid "Looking for U.S. government information and services? %link%"
+msgstr "মার্কিন সরকারের তথ্য এবং পরিষেবা খুঁজছেন? %link%"
+
+msgid "Visit USA.gov"
+msgstr "USA.gov দেখুন"
+
+msgid "Agency identifier"
+msgstr "সংস্থা শনাক্তকারী"
+
+msgid "Agency description"
+msgstr "সংস্থার বিবরণ"
+
+msgid "Important links"
+msgstr "গুরুত্বপূর্ণ লিঙ্ক"
+
+msgid "Government information and services"
+msgstr "সরকারি তথ্য ও সেবা"
+
+#contact
+msgid "in partnership with"
+msgstr "এর সাথে অংশীদারিত্বে"
+
+msgid "In partnership with U.S. Election Assistance Commission"
+msgstr "এর সাথে অংশীদারিত্বে U.S. Election Assistance Commission"
+
+msgid "Follow Vote.gov on Twitter"
+msgstr "টুইটারে Vote.gov অনুসরণ করুন"
+
+#search
+msgid "Search Vote.gov"
+msgstr "Vote.gov অনুসন্ধান করুন"

@@ -8,5 +8,48 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
+#language selector
 msgid "Spanish"
 msgstr "Español"
+
+msgid "Select language"
+msgstr "Seleccione el idioma"
+
+#identifier
+msgid "An official website of the %link%."
+msgstr "Un sitio web oficial de la %link%"
+
+msgid "General Services Administration"
+msgstr "Administración General de Servicios (GSA, en inglés)"
+
+msgid "Looking for U.S. government information and services? %link%"
+msgstr "¿Busca información y servicios del Gobierno de Estados Unidos? %link%"
+
+msgid "Visit USA.gov"
+msgstr "USAGov en Español"
+
+msgid "Agency identifier"
+msgstr "Identificador de la agencia"
+
+msgid "Agency description"
+msgstr "Descripción de la agencia"
+
+msgid "Important links"
+msgstr "Enlaces importantes"
+
+msgid "Government information and services"
+msgstr "Información y servicios del gobierno"
+
+#contact
+msgid "in partnership with"
+msgstr "en colaboración con"
+
+msgid "In partnership with U.S. Election Assistance Commission"
+msgstr "En colaboración con la U.S. Election Assistance Commission"
+
+msgid "Follow Vote.gov on Twitter"
+msgstr "Siga a Vote.gov en Twitter (en inglés)"
+
+#search
+msgid "Search Vote.gov"
+msgstr "Busque en Vote.gov"

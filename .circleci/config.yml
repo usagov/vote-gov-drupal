@@ -1,43 +1,53 @@
+
 version: 2.1
 jobs:
-  php-lint:
+  backup-db:
     docker:
-      - image: php:8.2-alpine
+      - image: alpine:edge
     steps:
       - checkout
       - run:
-          name: "Install PHP dependencies"
+          name: "Install dependencies"
           command: |
-            apk add git curl php-curl php-dom php-gd php-xml
-            php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-            php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-            php composer-setup.php
-            php -r "unlink('composer-setup.php');"
-            mv composer.phar /usr/local/bin/composer
+            apk add --no-cache mysql-client cloudfoundry-cli
+            cf install-plugin https://github.com/cloud-gov/cf-service-connect/releases/download/1.1.0/cf-service-connect-darwin-amd64
       - run:
-          name: "PHP CodeSniffer"
+          name: "Backup database"
           command: |
-            git clone --branch 8.3.x http://git.drupal.org/project/coder.git
-            cd coder
-            composer install
-            export PATH="$PATH:$HOME/project/coder/vendor/bin"
-            phpcs --standard=Drupal --ignore=*/node_modules/* --extensions=php,module,inc,install,test,profile,theme,info,yml,twig --report=csv --report-file=/tmp/phpcs.csv ${HOME}/project/web
-      - store_artifacts:
-          path: /tmp/phpcs.csv
-          destination: phpcs_<<pipeline.number>>.csv
-  cypress:
-    docker:
-      - image: cypress/included:cypress-12.3.0-node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
-    steps:
-      - checkout
-      - run:
-          name: "Cypress"
-          command: |
-            cd testing
-            npm install
-            npm run cy:test
-      - store_artifacts:
-          path: testing/cypress/screenshots
+            cf connect-to-service --no-client vote-drupal-${CIRCLE_BRANCH} vote-mysql-${CIRCLE_BRANCH} > creds.txt &
+
+            {
+              host=$(cat creds.txt | grep -i host | awk '{print $2}')
+              port=$(cat creds.txt | grep -i port | awk '{print $2}')
+              username=$(cat creds.txt | grep -i username | awk '{print $2}')
+              password=$(cat creds.txt | grep -i password | awk '{print $2}')
+              dbname=$(cat creds.txt | grep -i '^name' | awk '{print $2}')
+            
+              mkdir ~/.mysql && chmod 0700 ~/.mysql
+              
+              echo "[mysqldump]" > ~/.mysql/creds.cnf
+              echo "user=${username}" >> ~/.mysql/creds.cnf
+              echo "password=${password}" >> ~/.mysql/creds.cnf
+              chmod 400 ~/.mysql/creds.cnf                
+            } &> /dev/null
+
+            mysqldump \
+              --database=${dbname} \
+              --defaults-extra-file=~/.mysql/creds.cnf
+              --host=${host} \
+              --port=${port} \
+              --protocol=TCP | gzip -c > backup_$(date --utc +%Y%m%dT%H%M%SZ).sql.gz
+            
+            ids=$(ps aux | grep connect-to-service | grep -v grep | awk '{print $2}')
+            for id in ${ids}; do
+              kill -9 ${id}
+            done
+
+    #   - image: amazon/aws-cli:latest
+    # steps:
+    #   - checkout
+    #   - run:
+    #     name "Install MySQL..."
   build-theme:
     docker:
       - image: node:18-slim
@@ -51,42 +61,113 @@ jobs:
             npm install
             npm run build
       - persist_to_workspace:
-          root: web/themes/custom
-          paths:
-            - "vote_gov"
+          root: ~/
+          paths: 
+            - project/web/themes/custom/vote_gov/dist
+  cypress:
+    docker:
+      - image: cypress/included:cypress-12.3.0-node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
+    steps:
+      - checkout
+      - run:
+          name: "Cypress"
+          command: |
+            cd testing
+            npm install
+            npm run cy:test
+      - store_artifacts:
+          path: testing/cypress/screenshots
+
   deploy:
     docker:
       - image: cimg/base:stable
     steps:
       - checkout
+      - attach_workspace:
+          at: ~/
       - run:
           name: "Install cloudfoundry dependencies"
           command: |
             wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
             echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
             sudo apt update
-            sudo apt install -y cf8-cli gettext
+            sudo apt install -y cf8-cli gettext git
       - run:
           name: "Deploy"
           command: |
-            
-            mv manifest.yml manifest.tmp
-            envsubst < manifest.tmp > manifest.yml
-
-            if [ "${CIRCLE_BRANCH}" == "dev" ]; then
-              cf login \
-                -a https://api.fr.cloud.gov \
-                -u ${CF_USERNAME_DEV} \
-                -p ${CF_PASSWORD_DEV} \
-                -o ${CF_ORG} \
-                -s ${CF_SPACE_DEV}
-                PUSH=true
+            if [ "${CIRCLE_BRANCH}" == "prod" ]; then
+              CF_USERNAME=${CF_USERNAME_PROD}
+              CF_PASSWORD=${CF_PASSWORD_PROD}
+              CF_SPACE=${CF_SPACE_PROD}
+              DRUPAL_MEMORY=${DRUPAL_MEMORY_PROD}
+            elif [ "${CIRCLE_BRANCH}" == "stage" ]; then
+              CF_USERNAME=${CF_USERNAME_STAGE}
+              CF_PASSWORD=${CF_PASSWORD_STAGE}
+              CF_SPACE=${CF_SPACE_STAGE}
+              DRUPAL_MEMORY=${DRUPAL_MEMORY_STAGE}
+            elif [ "${CIRCLE_BRANCH}" == "test" ]; then
+              CF_USERNAME=${CF_USERNAME_DEV}
+              CF_PASSWORD=${CF_PASSWORD_DEV}
+              CF_SPACE=${CF_SPACE_DEV}
+              DRUPAL_MEMORY=${DRUPAL_MEMORY_DEV}
+            elif [ "${CIRCLE_BRANCH}" == "dev" ]; then
+              CF_USERNAME=${CF_USERNAME_DEV}
+              CF_PASSWORD=${CF_PASSWORD_DEV}
+              CF_SPACE=${CF_SPACE_DEV}
+              DRUPAL_MEMORY=${DRUPAL_MEMORY_DEV}
             fi
 
-            [ -n ${PUSH} ] && cf push
+            mv manifest.yml manifest.tmp
+            envsubst < manifest.tmp > manifest.yml
+            
+            if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "test" || "${CIRCLE_BRANCH}" == "stage" || "${CIRCLE_BRANCH}" == "prod" ]]; then
+              cf login \
+                -a https://api.fr.cloud.gov \
+                -u ${CF_USERNAME} \
+                -p ${CF_PASSWORD} \
+                -o ${CF_ORG} \
+                -s ${CF_SPACE}
 
-      - attach_workspace:
-          at: web/themes/custom/vote_gov
+              cf push
+            fi
+  php-lint:
+    docker:
+      - image: php:8.2-alpine
+    steps:
+      - run:
+          name: "Install PHP dependencies"
+          command: |
+            apk add git curl php-curl php-dom php-gd php-xml
+            php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+            php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+            php composer-setup.php
+            php -r "unlink('composer-setup.php');"
+            mv composer.phar /usr/local/bin/composer
+      - checkout
+      - run:
+          name: "PHP CodeSniffer"
+          command: |
+            git clone --branch 8.3.x http://git.drupal.org/project/coder.git
+            cd coder
+            composer install
+            cd ..
+            ls -al
+            export PATH="$PATH:$HOME/project/coder/vendor/bin"
+            echo $PWD
+            if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "test" || "${CIRCLE_BRANCH}" == "stage" || "${CIRCLE_BRANCH}" == "prod" ]]; then
+              phpcs \
+                --standard=Drupal \
+                --ignore=*/node_modules/* \
+                --extensions=php,module,inc,install,test,profile,theme,info,yml,twig \
+                --report=csv \
+                --report-file=/tmp/phpcs.csv \
+                ~/project/web || exit 0
+            else
+              phpcs --standard=Drupal --ignore=*/node_modules/* --extensions=php,module,inc,install,test,profile,theme,info,yml,twig --report=csv --report-file=/tmp/phpcs.csv ${HOME}/project/web
+            fi
+      - store_artifacts:
+          path: /tmp/phpcs.csv
+          destination: phpcs_<<pipeline.number>>.csv
 workflows:
   deploy-workflow:
     jobs:
@@ -99,6 +180,7 @@ workflows:
             branches:
               only:
                 - dev
+                - test
           requires:
             - php-lint
       - deploy:
@@ -106,5 +188,6 @@ workflows:
             branches:
               only:
                 - dev
+                - test
           requires:
             - build-theme

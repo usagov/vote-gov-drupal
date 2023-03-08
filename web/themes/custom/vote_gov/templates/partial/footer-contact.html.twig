@@ -4,12 +4,12 @@
     <div class="grid-row">
       <div class="tablet:grid-col-auto">
         <div class="vote-txt">{{ 'Vote.gov' | t }}</div>
-        <img class="vote-logo" loading="lazy" width="130" height="160" src="{{ base_path ~ directory }}/img/ballot_box-blue.svg" alt="{{ 'Web design standards' | t }}">
+        <img class="vote-logo" loading="lazy" width="130" height="160" src="{{ theme_path }}/img/ballot_box-blue.svg" alt="{{ 'Web design standards' | t }}">
       </div>
       <div class="tablet:grid-col-auto partnership-txt">{{ 'in partnership with' | t }}</div>
       <div class="tablet:grid-col-auto eac-container">
-        <a href="https://www.eac.gov/" target="_blank">
-          <img class="eac-logo" width="146" height="48" src="{{ base_path ~ directory }}/img/eac-logo.webp" alt="{{ 'In partnership with U.S. Election Assistance Commission' | t }}">
+        <a href="{{ language == 'es' ? 'https://www.eac.gov/translations/spanish' : 'https://www.eac.gov/' }}" target="_blank">
+          <img class="eac-logo" width="146" height="48" src="{{ theme_path }}/img/eac-logo.webp" alt="{{ 'In partnership with U.S. Election Assistance Commission' | t }}">
         </a>
       </div>
       <div class="tablet:grid-col"></div>
@@ -17,7 +17,7 @@
         <a href="https://twitter.com/votegov" class="twitter-link" target="_blank">
           <span>{{ 'Follow Vote.gov on Twitter' | t }}</span>
           <svg class="usa-icon" aria-hidden="true" focusable="false" role="img" height="28" width="28">
-            <use xlink:href="{{ base_path ~ directory }}/dist/assets/img/sprite.svg#twitter"></use>
+            <use xlink:href="{{ theme_path }}/dist/assets/img/sprite.svg#twitter"></use>
           </svg>
         </a>
       </div>
