@@ -58,8 +58,7 @@ jobs:
       - run:
           name: "Deploy"
           command: |
-            export BRANCH="${CIRCLE_BRANCH}"
-            source ./scripts/pipeline/cloud-gov-login.sh
+            source ./scripts/pipeline/cloud-gov-login.sh "${CIRCLE_BRANCH}"
 
             mv manifest.yml manifest.tmp
             envsubst < manifest.tmp > manifest.yml
