@@ -77,6 +77,8 @@ jobs:
       - run:
           name: "Install dependencies"
           command: |
+            echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories
+            apk update
             apk add --no-cache mysql-client cloudfoundry-cli
             cf install-plugin https://github.com/cloud-gov/cf-service-connect/releases/download/1.1.0/cf-service-connect-darwin-amd64
       - run:
