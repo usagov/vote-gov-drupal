@@ -1,3 +1,4 @@
+
 version: 2.1
 jobs:
   backup-db:
@@ -60,9 +61,9 @@ jobs:
             npm install
             npm run build
       - persist_to_workspace:
-          root: web/themes/custom
-          paths:
-            - "vote_gov"
+          root: ~/
+          paths: 
+            - project/web/themes/custom/vote_gov/dist
   cypress:
     docker:
       - image: cypress/included:cypress-12.3.0-node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
@@ -82,39 +83,44 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
+      - attach_workspace:
+          at: ~/
       - run:
           name: "Install cloudfoundry dependencies"
           command: |
             wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
             echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
             sudo apt update
-            sudo apt install -y cf8-cli gettext
+            sudo apt install -y cf8-cli gettext git
       - run:
           name: "Deploy"
           command: |
-            
-            mv manifest.yml manifest.tmp
-            envsubst < manifest.tmp > manifest.yml
-
             if [ "${CIRCLE_BRANCH}" == "prod" ]; then
               CF_USERNAME=${CF_USERNAME_PROD}
               CF_PASSWORD=${CF_PASSWORD_PROD}
               CF_SPACE=${CF_SPACE_PROD}
+              DRUPAL_MEMORY=${DRUPAL_MEMORY_PROD}
             elif [ "${CIRCLE_BRANCH}" == "stage" ]; then
               CF_USERNAME=${CF_USERNAME_STAGE}
               CF_PASSWORD=${CF_PASSWORD_STAGE}
               CF_SPACE=${CF_SPACE_STAGE}
+              DRUPAL_MEMORY=${DRUPAL_MEMORY_STAGE}
             elif [ "${CIRCLE_BRANCH}" == "test" ]; then
-              CF_USERNAME=${CF_USERNAME_TEST}
-              CF_PASSWORD=${CF_PASSWORD_TEST}
-              CF_SPACE=${CF_SPACE_STAGE}
+              CF_USERNAME=${CF_USERNAME_DEV}
+              CF_PASSWORD=${CF_PASSWORD_DEV}
+              CF_SPACE=${CF_SPACE_DEV}
+              DRUPAL_MEMORY=${DRUPAL_MEMORY_DEV}
             elif [ "${CIRCLE_BRANCH}" == "dev" ]; then
               CF_USERNAME=${CF_USERNAME_DEV}
               CF_PASSWORD=${CF_PASSWORD_DEV}
               CF_SPACE=${CF_SPACE_DEV}
+              DRUPAL_MEMORY=${DRUPAL_MEMORY_DEV}
             fi
 
-            if [[ "${CIRCLE_BRANCH}" =~ dev|test|stage|prod ]]; then
+            mv manifest.yml manifest.tmp
+            envsubst < manifest.tmp > manifest.yml
+            
+            if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "test" || "${CIRCLE_BRANCH}" == "stage" || "${CIRCLE_BRANCH}" == "prod" ]]; then
               cf login \
                 -a https://api.fr.cloud.gov \
                 -u ${CF_USERNAME} \
@@ -124,14 +130,10 @@ jobs:
 
               cf push
             fi
-
-      - attach_workspace:
-          at: web/themes/custom/vote_gov
   php-lint:
     docker:
       - image: php:8.2-alpine
     steps:
-      - checkout
       - run:
           name: "Install PHP dependencies"
           command: |
@@ -141,15 +143,25 @@ jobs:
             php composer-setup.php
             php -r "unlink('composer-setup.php');"
             mv composer.phar /usr/local/bin/composer
+      - checkout
       - run:
           name: "PHP CodeSniffer"
           command: |
             git clone --branch 8.3.x http://git.drupal.org/project/coder.git
             cd coder
             composer install
+            cd ..
+            ls -al
             export PATH="$PATH:$HOME/project/coder/vendor/bin"
-            if [[ "${CIRCLE_BRANCH}" =~ dev|test|stage|prod ]]; then
-              phpcs --standard=Drupal --ignore=*/node_modules/* --extensions=php,module,inc,install,test,profile,theme,info,yml,twig --report=csv --report-file=/tmp/phpcs.csv ${HOME}/project/web || exit 0
+            echo $PWD
+            if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "test" || "${CIRCLE_BRANCH}" == "stage" || "${CIRCLE_BRANCH}" == "prod" ]]; then
+              phpcs \
+                --standard=Drupal \
+                --ignore=*/node_modules/* \
+                --extensions=php,module,inc,install,test,profile,theme,info,yml,twig \
+                --report=csv \
+                --report-file=/tmp/phpcs.csv \
+                ~/project/web || exit 0
             else
               phpcs --standard=Drupal --ignore=*/node_modules/* --extensions=php,module,inc,install,test,profile,theme,info,yml,twig --report=csv --report-file=/tmp/phpcs.csv ${HOME}/project/web
             fi
@@ -168,6 +180,7 @@ workflows:
             branches:
               only:
                 - dev
+                - test
           requires:
             - php-lint
       - deploy:
@@ -175,5 +188,6 @@ workflows:
             branches:
               only:
                 - dev
+                - test
           requires:
             - build-theme
