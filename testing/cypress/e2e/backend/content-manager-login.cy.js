@@ -5,8 +5,13 @@ describe('sign in as content manager', () => {
     cy.createUser(Cypress.env('roles').content_manager.username, Cypress.env('test_pass'), Cypress.env('roles').content_manager.role);
   })
 
-  after('delete user', () => {
-    cy.deleteUser(Cypress.env('roles').content_manager.username)
+    // will add in later once the need for deleting user is needed 
+  // after('delete user', () => {
+  //   cy.deleteUser(Cypress.env('roles').content_manager.username)
+  // })
+
+  after('log out', () => {
+    cy.logout()
   })
 
   it('check log in', () => {
