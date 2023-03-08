@@ -8,9 +8,20 @@ kill_pids() {
   done
 }
 
+## Wait for the tunnel to finish connecting.
+wait_for_tunnel() {
+  while : ; do
+    [ -n "$(grep 'Press Control-C to stop.' creds.txt)" ] && break
+    echo "Waiting for tunnel..."
+    sleep 1
+  done 
+}
+
 ## Create a tunnel through the application to pull the database.
 echo "Creating tunnel to database..."
 cf connect-to-service --no-client vote-drupal-${BACKUP_ENV} vote-mysql-${BACKUP_ENV} > creds.txt &
+
+wait_for_tunnel
 
 ## Create variables and credential file for MySQL login.
 {
@@ -39,3 +50,5 @@ mysqldump \
 ## Kill the backgrounded SSH tunnel.
 echo "Cleaning up old connections..."
 kill_pids "connect-to-service"
+
+rm -f creds.txt
