@@ -26,6 +26,7 @@ settings:
       - drupalMedia
       - '|'
       - sourceEditing
+      - style
   plugins:
     ckeditor5_alignment:
       enabled_alignments:
@@ -44,6 +45,11 @@ settings:
       startIndex: true
     ckeditor5_sourceEditing:
       allowed_tags: {  }
+    ckeditor5_style:
+      styles:
+        -
+          label: 'Button styled link'
+          element: '<a class="usa-button">'
     media_media:
       allow_view_mode_override: false
 image_upload:

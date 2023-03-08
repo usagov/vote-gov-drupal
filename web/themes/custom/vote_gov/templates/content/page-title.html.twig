@@ -25,7 +25,7 @@
 
 {{ title_prefix }}
 {% if title|render|striptags|trim %}
- <h1 class="main-heading" data-test="main-header">{{ title }}</h1>
+ <h1{{ title_attributes.addClass('main-heading').setAttribute('data-test', 'main-header') }}>{{ title }}</h1>
 
 {% endif %}
 {{ title_suffix }}
