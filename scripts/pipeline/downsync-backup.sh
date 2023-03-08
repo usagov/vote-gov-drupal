@@ -48,6 +48,9 @@ echo "Backing up '${BACKUP_ENV}' database..."
   --protocol=TCP \
   ${dbname} > backup_${BACKUP_ENV}.sql
 
+  ## Patch out any MySQL 'SET' commands that require admin.
+  sed -i 's/^SET /-- &/' backup_dev.sql
+  
 } &> /dev/null
 
 
