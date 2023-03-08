@@ -1,48 +1,13 @@
 
 version: 2.1
+parameters:
+  backup:
+    type: string
+    default: "none"
+  restore:
+    type: string
+    default: "none"
 jobs:
-  backup-db:
-    docker:
-      - image: alpine:edge
-    steps:
-      - checkout
-      - run:
-          name: "Install dependencies"
-          command: |
-            apk add --no-cache mysql-client cloudfoundry-cli
-            cf install-plugin https://github.com/cloud-gov/cf-service-connect/releases/download/1.1.0/cf-service-connect-darwin-amd64
-      - run:
-          name: "Backup database"
-          command: |
-            cf connect-to-service --no-client vote-drupal-${CIRCLE_BRANCH} vote-mysql-${CIRCLE_BRANCH} > creds.txt &
-
-            {
-              host=$(cat creds.txt | grep -i host | awk '{print $2}')
-              port=$(cat creds.txt | grep -i port | awk '{print $2}')
-              username=$(cat creds.txt | grep -i username | awk '{print $2}')
-              password=$(cat creds.txt | grep -i password | awk '{print $2}')
-              dbname=$(cat creds.txt | grep -i '^name' | awk '{print $2}')
-            
-              mkdir ~/.mysql && chmod 0700 ~/.mysql
-              
-              echo "[mysqldump]" > ~/.mysql/creds.cnf
-              echo "user=${username}" >> ~/.mysql/creds.cnf
-              echo "password=${password}" >> ~/.mysql/creds.cnf
-              chmod 400 ~/.mysql/creds.cnf                
-            } &> /dev/null
-
-            mysqldump \
-              --database=${dbname} \
-              --defaults-extra-file=~/.mysql/creds.cnf
-              --host=${host} \
-              --port=${port} \
-              --protocol=TCP | gzip -c > backup_$(date --utc +%Y%m%dT%H%M%SZ).sql.gz
-            
-            ids=$(ps aux | grep connect-to-service | grep -v grep | awk '{print $2}')
-            for id in ${ids}; do
-              kill -9 ${id}
-            done
-
     #   - image: amazon/aws-cli:latest
     # steps:
     #   - checkout
@@ -77,7 +42,6 @@ jobs:
             npm run cy:test
       - store_artifacts:
           path: testing/cypress/screenshots
-
   deploy:
     docker:
       - image: cimg/base:stable
@@ -95,41 +59,38 @@ jobs:
       - run:
           name: "Deploy"
           command: |
-            if [ "${CIRCLE_BRANCH}" == "prod" ]; then
-              CF_USERNAME=${CF_USERNAME_PROD}
-              CF_PASSWORD=${CF_PASSWORD_PROD}
-              CF_SPACE=${CF_SPACE_PROD}
-              DRUPAL_MEMORY=${DRUPAL_MEMORY_PROD}
-            elif [ "${CIRCLE_BRANCH}" == "stage" ]; then
-              CF_USERNAME=${CF_USERNAME_STAGE}
-              CF_PASSWORD=${CF_PASSWORD_STAGE}
-              CF_SPACE=${CF_SPACE_STAGE}
-              DRUPAL_MEMORY=${DRUPAL_MEMORY_STAGE}
-            elif [ "${CIRCLE_BRANCH}" == "test" ]; then
-              CF_USERNAME=${CF_USERNAME_DEV}
-              CF_PASSWORD=${CF_PASSWORD_DEV}
-              CF_SPACE=${CF_SPACE_DEV}
-              DRUPAL_MEMORY=${DRUPAL_MEMORY_DEV}
-            elif [ "${CIRCLE_BRANCH}" == "dev" ]; then
-              CF_USERNAME=${CF_USERNAME_DEV}
-              CF_PASSWORD=${CF_PASSWORD_DEV}
-              CF_SPACE=${CF_SPACE_DEV}
-              DRUPAL_MEMORY=${DRUPAL_MEMORY_DEV}
-            fi
+            export BRANCH="${CIRCLE_BRANCH}"
+            source ./scripts/pipeline/cloud-gov-login.sh
 
             mv manifest.yml manifest.tmp
             envsubst < manifest.tmp > manifest.yml
             
-            if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "test" || "${CIRCLE_BRANCH}" == "stage" || "${CIRCLE_BRANCH}" == "prod" ]]; then
-              cf login \
-                -a https://api.fr.cloud.gov \
-                -u ${CF_USERNAME} \
-                -p ${CF_PASSWORD} \
-                -o ${CF_ORG} \
-                -s ${CF_SPACE}
-
+            if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "test" || "${CIRCLE_BRANCH}" == "stage" || "${CIRCLE_BRANCH}" == "prod" ]]; then            
               cf push
             fi
+  downsync:
+    docker:
+      - image: alpine:edge
+    environment:
+      BACKUP_ENV: << pipeline.parameters.backup>>
+      RESTORE_ENV: << pipeline.parameters.restore>>
+    steps:
+      - checkout
+      - run:
+          name: "Install dependencies"
+          command: |
+            apk add --no-cache mysql-client cloudfoundry-cli
+            cf install-plugin https://github.com/cloud-gov/cf-service-connect/releases/download/1.1.0/cf-service-connect-darwin-amd64
+      - run:
+          name: "Run downsync"
+          command: |
+            source ./scripts/pipeline/cloud-gov-login.sh "${BACKUP_ENV}"
+            ./scripts/pipeline/downsync-backup.sh
+            cf logout
+            
+            source ./scripts/pipeline/cloud-gov-login.sh "${RESTORE_ENV}"
+            ./scripts/pipeline/downsync-restore.sh
+
   php-lint:
     docker:
       - image: php:8.2-alpine
@@ -191,3 +152,22 @@ workflows:
                 - test
           requires:
             - build-theme
+  downsync:
+    when:
+      and:
+        - equal: [api, << pipeline.trigger_source >>]
+        - or:
+          - equal: [dev, << pipeline.parameters.backup >> ]
+          - equal: [prod, << pipeline.parameters.backup >> ]
+          - equal: [stage, << pipeline.parameters.backup >> ]
+          - equal: [test, << pipeline.parameters.backup >> ]
+        - or:
+          - equal: [dev, << pipeline.parameters.restore >> ]
+          - equal: [stage, << pipeline.parameters.restore >> ]
+          - equal: [test, << pipeline.parameters.restore >> ]
+    jobs:
+      - downsync
+
+
+    #  << pipeline.parameters.backup >>
+    # << pipeline.parameters.restore >>
