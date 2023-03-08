@@ -41,11 +41,11 @@ wait_for_tunnel
 
 echo "Backing up '${BACKUP_ENV}' database..."
 mysqldump \
-  --database=${dbname} \
-  --defaults-extra-file=~/.mysql/creds.cnf
+  --defaults-extra-file=~/.mysql/creds.cnf \
   --host=${host} \
   --port=${port} \
-  --protocol=TCP > backup_${BACKUP_ENV}.sql
+  --protocol=TCP \
+  ${dbname} > backup_${BACKUP_ENV}.sql
 
 ## Kill the backgrounded SSH tunnel.
 echo "Cleaning up old connections..."

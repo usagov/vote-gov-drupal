@@ -45,7 +45,7 @@ mysql \
   --port=${port} \
   --protocol=TCP \
   --defaults-extra-file=~/.mysql/creds.cnf \
-  --database=${dbname} < backup_${BACKUP_ENV}.sql
+  ${dbname} < backup_${BACKUP_ENV}.sql
 
 ## Kill the backgrounded SSH tunnel.
 echo "Cleaning up old connections..."
