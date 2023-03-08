@@ -4,11 +4,9 @@ kill_pids() {
   app=$1
   ids=$(ps aux | grep ${app} | grep -v grep | awk '{print $2}')
   for id in ${ids}; do
-    {
-      kill -9 ${id}
-    } &> /dev/null
+    kill -9 ${id}
   done
-}
+} &> /dev/null
 
 ## Wait for the tunnel to finish connecting.
 wait_for_tunnel() {
@@ -50,7 +48,7 @@ echo "Backing up '${BACKUP_ENV}' database..."
 
   ## Patch out any MySQL 'SET' commands that require admin.
   sed -i 's/^SET /-- &/' backup_dev.sql
-  
+
 } &> /dev/null
 
 

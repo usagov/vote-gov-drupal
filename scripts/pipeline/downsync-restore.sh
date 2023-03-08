@@ -4,11 +4,9 @@ kill_pids() {
   app=$1
   ids=$(ps aux | grep ${app} | grep -v grep | awk '{print $2}')
   for id in ${ids}; do
-    {
-      kill -9 ${id}
-    } &> /dev/null
+    kill -9 ${id}
   done
-}
+} &> /dev/null
 
 ## Wait for the tunnel to finish connecting.
 wait_for_tunnel() {
@@ -17,7 +15,7 @@ wait_for_tunnel() {
     echo "Waiting for tunnel..."
     sleep 1
   done 
-} &> /dev/null
+}
 
 ## Create a tunnel through the application to restore the database.
 echo "Creating tunnel to database..."
