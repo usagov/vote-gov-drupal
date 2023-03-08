@@ -4,7 +4,9 @@ kill_pids() {
   app=$1
   ids=$(ps aux | grep ${app} | grep -v grep | awk '{print $2}')
   for id in ${ids}; do
-    kill -9 ${id}
+    {
+      kill -9 ${id}
+    } &> /dev/null
   done
 }
 
@@ -15,7 +17,7 @@ wait_for_tunnel() {
     echo "Waiting for tunnel..."
     sleep 1
   done 
-}
+} &> /dev/null
 
 ## Create a tunnel through the application to restore the database.
 echo "Creating tunnel to database..."
@@ -24,6 +26,7 @@ cf connect-to-service --no-client vote-drupal-${RESTORE_ENV} vote-mysql-${RESTOR
 wait_for_tunnel
 
 ## Create variables and credential file for MySQL login.
+echo "Restoring '${BACKUP_ENV}' database to '${RESTORE_ENV}'..."
 {
   host=$(cat creds.txt | grep -i host | awk '{print $2}')
   port=$(cat creds.txt | grep -i port | awk '{print $2}')
@@ -33,22 +36,23 @@ wait_for_tunnel
 
   mkdir ~/.mysql && chmod 0700 ~/.mysql
   
-  echo "[mysql]" > ~/.mysql/creds.cnf
-  echo "user=${username}" >> ~/.mysql/creds.cnf
-  echo "password=${password}" >> ~/.mysql/creds.cnf
-  chmod 400 ~/.mysql/creds.cnf                
-} &> /dev/null
+  echo "[mysql]" > ~/.mysql/mysql.cnf
+  echo "user=${username}" >> ~/.mysql/mysql.cnf
+  echo "password=${password}" >> ~/.mysql/mysql.cnf
+  chmod 400 ~/.mysql/mysql.cnf
 
-echo "Restoring '${BACKUP_ENV}' database to '${RESTORE_ENV}'..."
-mysql \
+  mysql \
   --host=${host} \
   --port=${port} \
   --protocol=TCP \
-  --defaults-extra-file=~/.mysql/creds.cnf \
+  --defaults-extra-file=~/.mysql/mysql.cnf \
   ${dbname} < backup_${BACKUP_ENV}.sql
+
+} &> /dev/null
 
 ## Kill the backgrounded SSH tunnel.
 echo "Cleaning up old connections..."
 kill_pids "connect-to-service"
 
-rm -f creds.txt
+## Clean up.
+rm -rf creds.txt ~/.mysql backup_${BACKUP_ENV}.sql

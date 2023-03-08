@@ -4,7 +4,9 @@ kill_pids() {
   app=$1
   ids=$(ps aux | grep ${app} | grep -v grep | awk '{print $2}')
   for id in ${ids}; do
-    kill -9 ${id}
+    {
+      kill -9 ${id}
+    } &> /dev/null
   done
 }
 
@@ -24,6 +26,7 @@ cf connect-to-service --no-client vote-drupal-${BACKUP_ENV} vote-mysql-${BACKUP_
 wait_for_tunnel
 
 ## Create variables and credential file for MySQL login.
+echo "Backing up '${BACKUP_ENV}' database..."
 {
   host=$(cat creds.txt | grep -i host | awk '{print $2}')
   port=$(cat creds.txt | grep -i port | awk '{print $2}')
@@ -33,22 +36,24 @@ wait_for_tunnel
 
   mkdir ~/.mysql && chmod 0700 ~/.mysql
   
-  echo "[mysqldump]" > ~/.mysql/creds.cnf
-  echo "user=${username}" >> ~/.mysql/creds.cnf
-  echo "password=${password}" >> ~/.mysql/creds.cnf
-  chmod 400 ~/.mysql/creds.cnf                
-} &> /dev/null
-
-echo "Backing up '${BACKUP_ENV}' database..."
-mysqldump \
-  --defaults-extra-file=~/.mysql/creds.cnf \
+  echo "[mysqldump]" > ~/.mysql/mysqldump.cnf
+  echo "user=${username}" >> ~/.mysql/mysqldump.cnf
+  echo "password=${password}" >> ~/.mysql/mysqldump.cnf
+  chmod 400 ~/.mysql/mysqldump.cnf
+  
+  mysqldump \
+  --defaults-extra-file=~/.mysql/mysqldump.cnf \
   --host=${host} \
   --port=${port} \
   --protocol=TCP \
   ${dbname} > backup_${BACKUP_ENV}.sql
 
+} &> /dev/null
+
+
 ## Kill the backgrounded SSH tunnel.
 echo "Cleaning up old connections..."
 kill_pids "connect-to-service"
 
-rm -f creds.txt
+## Clean up.
+rm -rf creds.txt ~/.mysql
