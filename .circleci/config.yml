@@ -129,6 +129,9 @@ jobs:
           destination: phpcs_<<pipeline.number>>.csv
 workflows:
   deploy-workflow:
+    when:
+      and:
+        - equal: [webhook, << pipeline.trigger_source >>]
     jobs:
       - php-lint
       #- cypress
