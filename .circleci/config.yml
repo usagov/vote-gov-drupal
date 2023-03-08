@@ -1,4 +1,3 @@
-
 version: 2.1
 parameters:
   backup:
@@ -152,7 +151,7 @@ workflows:
                 - test
           requires:
             - build-theme
-  downsync:
+  downsync-workflow:
     when:
       and:
         - equal: [api, << pipeline.trigger_source >>]
@@ -167,7 +166,3 @@ workflows:
           - equal: [test, << pipeline.parameters.restore >> ]
     jobs:
       - downsync
-
-
-    #  << pipeline.parameters.backup >>
-    # << pipeline.parameters.restore >>
