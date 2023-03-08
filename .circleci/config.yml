@@ -82,7 +82,7 @@ jobs:
             wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
             echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
             wget https://dev.mysql.com/get/mysql-apt-config_0.8.18-1_all.deb
-            dpkg -i mysql-apt-config_0.8.18-1_all.deb
+            sudo dpkg -i mysql-apt-config_0.8.18-1_all.deb
 
             sudo apt update
             sudo apt install -y cf8-cli mysql-client
