@@ -13,7 +13,7 @@ kill_pids() {
 ## Wait for the tunnel to finish connecting.
 wait_for_tunnel() {
   while : ; do
-    [ -n "$(grep 'Press Control-C to stop.' creds.txt)" ] && break
+    [ -n "$(grep 'Press Control-C to stop.' backup.txt)" ] && break
     echo "Waiting for tunnel..."
     sleep 1
   done 
@@ -21,18 +21,18 @@ wait_for_tunnel() {
 
 ## Create a tunnel through the application to pull the database.
 echo "Creating tunnel to database..."
-cf connect-to-service --no-client vote-drupal-${BACKUP_ENV} vote-mysql-${BACKUP_ENV} > creds.txt &
+cf connect-to-service --no-client vote-drupal-${BACKUP_ENV} vote-mysql-${BACKUP_ENV} > backup.txt &
 
 wait_for_tunnel
 
 ## Create variables and credential file for MySQL login.
 echo "Backing up '${BACKUP_ENV}' database..."
 {
-  host=$(cat creds.txt | grep -i host | awk '{print $2}')
-  port=$(cat creds.txt | grep -i port | awk '{print $2}')
-  username=$(cat creds.txt | grep -i username | awk '{print $2}')
-  password=$(cat creds.txt | grep -i password | awk '{print $2}')
-  dbname=$(cat creds.txt | grep -i '^name' | awk '{print $2}')
+  host=$(cat backup.txt | grep -i host | awk '{print $2}')
+  port=$(cat backup.txt | grep -i port | awk '{print $2}')
+  username=$(cat backup.txt | grep -i username | awk '{print $2}')
+  password=$(cat backup.txt | grep -i password | awk '{print $2}')
+  dbname=$(cat backup.txt | grep -i '^name' | awk '{print $2}')
 
   mkdir ~/.mysql && chmod 0700 ~/.mysql
   
@@ -56,4 +56,4 @@ echo "Cleaning up old connections..."
 kill_pids "connect-to-service"
 
 ## Clean up.
-rm -rf creds.txt ~/.mysql
+rm -rf backup.txt ~/.mysql
