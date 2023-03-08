@@ -86,7 +86,7 @@ jobs:
             sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 467B942D3A79BD29
             sudo apt update
             sudo apt install -y cf8-cli mysql-client
-            cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/1.1.0/cf-service-connect-darwin-amd64
+            cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/1.1.0/cf-service-connect-linux-amd64
 
       - run:
           name: "Run downsync"
