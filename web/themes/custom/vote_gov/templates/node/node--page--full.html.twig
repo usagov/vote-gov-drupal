@@ -5,6 +5,8 @@
  */
 #}
 {% set classes = [
+  'voter-info',
+  'page-type--basic',
   'node',
   'node--type-' ~ node.bundle|clean_class,
   node.isPromoted() ? 'node--promoted',
@@ -15,24 +17,13 @@
   'page-type--basic',
 ] %}
 
-<div class="bg-lightblue">
-  <div class="grid-container">
-    <div class="grid-row grid-gap">
-      <div class="tablet:grid-col-4">
-      </div>
-      <div class="tablet:grid-col-8 right-shift">
-        <section{{ attributes.addClass(classes) }}>
-          <div class="about-page">
-            {# Title banner and main content #}
-            {{ content }}
-          </div>
-        </section>
-          {# Homepage link #}
-          {% include '@vote_gov/partial/homepage-link.html.twig' %}
-      </div>
-    </div>
+<section{{ attributes.addClass(classes) }}>
+  <div class="about-page">
+    {# Title banner and main content #}
+    {{ content }}
   </div>
-</div>
-
+</section>
+{# Homepage link #}
+{% include '@vote_gov/partial/homepage-link.html.twig' %}
 
 
