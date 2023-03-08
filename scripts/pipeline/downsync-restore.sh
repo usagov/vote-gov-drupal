@@ -36,7 +36,7 @@ echo "Restoring '${BACKUP_ENV}' database to '${RESTORE_ENV}'..."
 
   mkdir ~/.mysql && chmod 0700 ~/.mysql
   
-  echo "[mysql]" > ~/.mysql/mysql.cnf
+  echo "[client]" > ~/.mysql/mysql.cnf
   echo "user=${username}" >> ~/.mysql/mysql.cnf
   echo "password=${password}" >> ~/.mysql/mysql.cnf
   chmod 400 ~/.mysql/mysql.cnf
