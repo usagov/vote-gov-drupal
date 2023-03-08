@@ -42,10 +42,10 @@ echo "Restoring '${BACKUP_ENV}' database to '${RESTORE_ENV}'..."
   chmod 400 ~/.mysql/mysql.cnf
 
   mysql \
+  --defaults-extra-file=~/.mysql/mysql.cnf \
   --host=${host} \
   --port=${port} \
   --protocol=TCP \
-  --defaults-extra-file=~/.mysql/mysql.cnf \
   --database=${dbname} < backup_${BACKUP_ENV}.sql
 
 } &> /dev/null
