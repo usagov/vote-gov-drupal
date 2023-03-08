@@ -15,6 +15,7 @@ libraries:
 regions:
   header: "Header"
   admin: "Admin local tasks"
+  page_title: "Page title"
   content: "Content"
   sidebar: "Sidebar"
   footer: "Footer"

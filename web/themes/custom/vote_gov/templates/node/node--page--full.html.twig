@@ -68,6 +68,8 @@
  */
 #}
 {% set classes = [
+  'voter-info',
+  'page-type--basic',
   'node',
   'node--type-' ~ node.bundle|clean_class,
   node.isPromoted() ? 'node--promoted',
@@ -76,30 +78,20 @@
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ] %}
 
-<div class="bg-lightblue">
-  <div class="grid-container">
-    <div class="grid-row grid-gap">
-      <div class="tablet:grid-col-4">
-      </div>
-      <div class="tablet:grid-col-8 right-shift">
-        <section class="voter-info page-type--basic">
-          <div class="about-page">
-            {# Title banner and main content #}
-            {{ content }}
-            {# Homepage button #}
-            <a href="/">
-              <button type="button" class="usa-button">
-              Get Registered
-              </button>
-            </a>
-          </div>
-        </section>
-        {# Go back link - where should this go? #}
-        <p class="arrow-text"><a href="/" title="Vote.gov" data-test="back-button"><span class="arrow direction"></span>Go back</a></p>
-      </div>
-    </div>
+<section{{ attributes.addClass(classes) }}>
+  <div class="about-page">
+    {# Title banner and main content #}
+    {{ content }}
+    {# Homepage button #}
+    <a href="/">
+      <button type="button" class="usa-button">
+        Get Registered
+      </button>
+    </a>
   </div>
-</div>
+</section>
+{# Go back link - where should this go? #}
+<p class="arrow-text"><a href="/" title="Vote.gov" data-test="back-button"><span class="arrow direction"></span>Go back</a></p>
 
 
 
