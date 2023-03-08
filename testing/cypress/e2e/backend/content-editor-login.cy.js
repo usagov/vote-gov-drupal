@@ -10,6 +10,10 @@ describe('sign in as content editor', () => {
   //   cy.deleteUser(Cypress.env('roles').content_editor.username)
   // })
 
+  after('log out', () => {
+    cy.logout()
+  })
+
   it('check log in', () => {
     cy.signin(Cypress.env('roles').content_editor.username, Cypress.env('test_pass'))
 

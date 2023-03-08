@@ -11,6 +11,10 @@ describe('signin as site admin', () => {
   //   cy.deleteUser(Cypress.env('roles').site_admin.username)
   // })
 
+  after('log out', () => {
+    cy.logout()
+  })
+
   it('check log in', () => {
     cy.signin(Cypress.env('roles').site_admin.username, Cypress.env('test_pass'))
 
