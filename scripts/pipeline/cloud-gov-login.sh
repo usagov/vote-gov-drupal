@@ -34,6 +34,6 @@ echo "Logging into Cloud.gov..."
     -s ${CF_SPACE} > login.log || login_error=1
 } 2>&1 >/dev/null
 
-[ -n "${login_error}" ] && echo "Error logging into Cloud.gov!\nExit code: $(echo $?)" && exit $?
+[ -n "${login_error}" ] && echo "Error logging into Cloud.gov!" && exit 1
 
 echo "Login successful!"
