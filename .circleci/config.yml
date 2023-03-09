@@ -7,11 +7,6 @@ parameters:
     type: string
     default: "none"
 jobs:
-    #   - image: amazon/aws-cli:latest
-    # steps:
-    #   - checkout
-    #   - run:
-    #     name "Install MySQL..."
   build-theme:
     docker:
       - image: node:18-slim
@@ -28,22 +23,24 @@ jobs:
           root: ~/
           paths: 
             - project/web/themes/custom/vote_gov/dist
-  # cypress:
-  #   docker:
-  #     - image: cypress/included:cypress-12.3.0-node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
-  #   steps:
-  #     - checkout
-  #     - run:
-  #         name: "Cypress"
-  #         command: |
-  #           cd testing
-  #           source ./scripts/pipeline/cloud-gov-login.sh "${CIRCLE_BRANCH}"
-  #           CYPRESS_BASEURL=$(cf routes | grep drupal-${CIRCLE_BRANCH} | awk '{print $2"."$3}')
-  #           sed -i "s/^    baseUrl: .*/    baseUrl: 'https:\/\/${CYPRESS_BASEURL}',/" cypress.config.js
-  #           npm install
-  #           npm run cy:test
-  #     - store_artifacts:
-  #         path: testing/cypress/screenshots
+  cypress:
+    docker:
+      - image: cypress/included:cypress-12.3.0-node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: "Cypress"
+          command: |
+            cd testing
+            source ./scripts/pipeline/cloud-gov-login.sh "${CIRCLE_BRANCH}"
+            CYPRESS_BASEURL=$(cf routes | grep drupal-${CIRCLE_BRANCH} | awk '{print $2"."$3}')
+            sed -i "s/^    baseUrl: .*/    baseUrl: 'https:\/\/${CYPRESS_BASEURL}',/" cypress.config.js
+            npm install
+            npm run cy:test
+      - store_artifacts:
+          path: testing/cypress/screenshots
   deploy:
     docker:
       - image: cimg/base:stable
@@ -75,8 +72,6 @@ jobs:
     environment:
       BACKUP_ENV: << pipeline.parameters.backup>>
       RESTORE_ENV: << pipeline.parameters.restore>>
-      
-    
     steps:
       - checkout
       - run:
@@ -145,14 +140,14 @@ workflows:
       and:
         - equal: [webhook, << pipeline.trigger_source >>]
     jobs:
-      # - cypress:
-      #     requires:
-      #       - deploy
-      #     filters:
-      #       branches:
-      #         only:
-      #           - dev
-      #           - test
+      - cypress:
+          requires:
+            - build-theme
+          filters:
+            branches:
+              only:
+                - dev
+                - test
       - php-lint
       - build-theme:
           filters:
