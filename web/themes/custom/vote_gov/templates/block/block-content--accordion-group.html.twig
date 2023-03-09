@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block content.
+ *
+ * @see template_preprocess_block_content_template()
+ *
+ * @ingroup themeable
+ */
+#}
+{% block content %}
+    <div class="bg-lightblue">
+      <div class="grid-container accordion homepage-acc">
+        <div class="grid-row grid-gap">
+          <div class="tablet:grid-col-4">
+
+          </div>
+          <div class="tablet:grid-col-8 right-shift">
+
+            <section>
+          <header>
+            <h2 class="content-heading">{{ content.field_heading | field_value }}</h2>
+          </header>
+          <div class="usa-accordion" data-test="accordion">
+            {{ content.field_accordions }}
+          </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

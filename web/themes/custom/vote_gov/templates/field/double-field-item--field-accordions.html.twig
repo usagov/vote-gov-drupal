@@ -1,0 +1,13 @@
+{# {% for subitem in item %} #}
+{# {{ dump(item.length)}} #}
+{# {% endfor %} #}
+  {# {% if subitem -%} #}
+        <h3 class="usa-accordion__heading">
+          <button type="button" type="button" class="usa-accordion__button" data-test="accordion-button" aria-expanded="false" aria-controls="hp0">
+            {{ item.first }}
+          </button>
+        </h3>
+        <div id="hp0" class="usa-accordion__content usa-prose" data-test="accordion-content">
+            {{ item.second  }}
+        </div>
+  {# {% endif %} #}

@@ -1,0 +1,99 @@
+{% block content %}
+<div class="bg-blue css-arrow">
+  <div class="grid-container">
+    <div class="grid-row grid-gap">
+          <div class="tablet:grid-col-4">
+            <a class="site-logo" data-test="vote-logo" href="" aria-label="Vote.gov">
+              <div class="logo-text">{{ "Vote.gov" }}</div>
+              <div id="SiteLogo">{{ "" }}</div>
+            </a>
+          </div>
+
+            <div id="skip-target" class="tablet:grid-col-8 right-shift">
+              <section class="register align-bottom">
+                <header>
+                  <h1 class="main-heading" data-test="main-header">{{ content.field_heading | field_value }}</h1>
+                </header>
+
+                <form class="form-register" method="get" id="register">
+                  <h2>{{ content.field_form_heading | field_value }}</h2>
+                  <label class="usa-sr-only" for="js-user-selection">
+                    {{ content.field_dropdown_label | field_value }}
+                  </label>
+                  <select class="usa-select max-width-input" name="userselection" id="js-user-selection" data-test="state-selection">
+                    <option value="default">
+                      {{ content.field_dropdown_label | field_value }}
+                    </option>
+                    {% set states = [
+                      {"abrev": "al", "name": "Alabama"},                
+                      {"abrev": "ak", "name": "Alaska"},               
+                      {"abrev": "as", "name": "American Samoa"},                
+                      {"abrev": "az", "name": "Arizona"},                
+                      {"abrev": "ar", "name": "Arkansas"},               
+                      {"abrev": "ca", "name": "California"},               
+                      {"abrev": "co", "name": "Colorado"},               
+                      {"abrev": "ct", "name": "Connecticut"},                
+                      {"abrev": "de", "name": "Delaware"},                
+                      {"abrev": "dc", "name": "District of Columbia"},                
+                      {"abrev": "fl", "name": "Florida"},                
+                      {"abrev": "ga", "name": "Georgia"},                
+                      {"abrev": "gu", "name": "Guam"},                
+                      {"abrev": "hi", "name": "Hawaii"},                
+                      {"abrev": "id", "name": "Idaho"},               
+                      {"abrev": "il", "name": "Illinois"},               
+                      {"abrev": "in", "name": "Indiana"},                
+                      {"abrev": "ia", "name": "Iowa"},               
+                      {"abrev": "ks", "name": "Kansas"},               
+                      {"abrev": "ky", "name": "Kentucky"},                
+                      {"abrev": "la", "name": "Louisiana"},                
+                      {"abrev": "me", "name": "Maine"},                
+                      {"abrev": "md", "name": "Maryland"},               
+                      {"abrev": "ma", "name": "Massachusetts"},               
+                      {"abrev": "mi", "name": "Michigan"},                
+                      {"abrev": "mn", "name": "Minnesota"},               
+                      {"abrev": "ms", "name": "Mississippi"},               
+                      {"abrev": "mo", "name": "Missouri"},               
+                      {"abrev": "mt", "name": "Montana"},               
+                      {"abrev": "ne", "name": "Nebraska"},               
+                      {"abrev": "nv", "name": "Nevada"},               
+                      {"abrev": "nh", "name": "New Hampshire"},                
+                      {"abrev": "nj", "name": "New Jersey"},               
+                      {"abrev": "nm", "name": "New Mexico"},                
+                      {"abrev": "ny", "name": "New York"},                
+                      {"abrev": "nc", "name": "North Carolina"},               
+                      {"abrev": "nd", "name": "North Dakota"},                
+                      {"abrev": "mp", "name": "Northern Mariana Islands"},                
+                      {"abrev": "oh", "name": "Ohio"},                
+                      {"abrev": "ok", "name": "Oklahoma"},                
+                      {"abrev": "or", "name": "Oregon"},                
+                      {"abrev": "pa", "name": "Pennsylvania"},                
+                      {"abrev": "pr", "name": "Puerto Rico"},                
+                      {"abrev": "ri", "name": "Rhode Island"},                
+                      {"abrev": "sc", "name": "South Carolina"},                
+                      {"abrev": "sd", "name": "South Dakota"},                
+                      {"abrev": "tn", "name": "Tennessee"},                
+                      {"abrev": "tx", "name": "Texas"},                
+                      {"abrev": "vi", "name": "U.S. Virgin Islands"},                
+                      {"abrev": "ut", "name": "Utah"},               
+                      {"abrev": "vt", "name": "Vermont"},               
+                      {"abrev": "va", "name": "Virginia"},                
+                      {"abrev": "wa", "name": "Washington"},                
+                      {"abrev": "wv", "name": "West Virginia"},               
+                      {"abrev": "wi", "name": "Wisconsin"},
+                      {"abrev": "wy", "name": "Wyoming"}
+                          ] %}
+                    {% for state in states %}
+                    <option value="{{ state.abrev }}">{{ state.name }}</option>
+                    {% endfor %}
+                  </select>
+                  <button class="usa-button max-width-input" id="js-user-submit" type="submit" data-test="register-button">
+                    {{ content.field_submit_button_label | field_value }}
+                  </button>
+                </form>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
