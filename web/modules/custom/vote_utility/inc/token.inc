@@ -4,13 +4,11 @@
  * @file
  * Defines custom tokens.
  */
-
 use Drupal\Core\Render\BubbleableMetadata;
 
 /**
  * Implements hook_token_info().
  */
-
 function vote_utility_token_info() {
   // No token groups to define (this module adds tokens to the existing 'node'
   // token group).
@@ -29,6 +27,7 @@ function vote_utility_token_info() {
 
   ];
 }
+
 /**
  * Implements hook_tokens().
  */
@@ -50,9 +49,9 @@ function vote_utility_tokens($type, $tokens, array $data, array $options, Bubble
     }
   }
 
-
   return $replacements;
 }
+
 // @codingStandardsIgnoreStart
 /**
  * Get token replacement value, based on value of menu location on an entity otherwise fall back on node title.
