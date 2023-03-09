@@ -48,6 +48,10 @@ module:
   simple_sitemap: 0
   system: 0
   text: 0
+  tmgmt: 0
+  tmgmt_config: 0
+  tmgmt_content: 0
+  tmgmt_file: 0
   token: 0
   tome_base: 0
   tome_static: 0
