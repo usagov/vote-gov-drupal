@@ -37,6 +37,9 @@ jobs:
   #         name: "Cypress"
   #         command: |
   #           cd testing
+  #           source ./scripts/pipeline/cloud-gov-login.sh "${CIRCLE_BRANCH}"
+  #           CYPRESS_BASEURL=$(cf routes | grep drupal-${CIRCLE_BRANCH} | awk '{print $2"."$3}')
+  #           sed -i "s/^    baseUrl: .*/    baseUrl: 'https:\/\/${CYPRESS_BASEURL}',/" cypress.config.js
   #           npm install
   #           npm run cy:test
   #     - store_artifacts:
@@ -142,10 +145,15 @@ workflows:
       and:
         - equal: [webhook, << pipeline.trigger_source >>]
     jobs:
+      # - cypress:
+      #     requires:
+      #       - deploy
+      #     filters:
+      #       branches:
+      #         only:
+      #           - dev
+      #           - test
       - php-lint
-      #- cypress
-          #requires:
-            #- php-lint
       - build-theme:
           filters:
             branches:

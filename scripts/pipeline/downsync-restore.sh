@@ -6,7 +6,7 @@ kill_pids() {
   for id in ${ids}; do
     kill -9 ${id}
   done
-} &> /dev/null
+}
 
 ## Wait for the tunnel to finish connecting.
 wait_for_tunnel() {
@@ -46,11 +46,13 @@ echo "Restoring '${BACKUP_ENV}' database to '${RESTORE_ENV}'..."
   --protocol=TCP \
   --database=${dbname} < backup_${BACKUP_ENV}.sql
 
-} &> /dev/null
+} 2>&1 >/dev/null
 
 ## Kill the backgrounded SSH tunnel.
 echo "Cleaning up old connections..."
-kill_pids "connect-to-service"
+{
+  kill_pids "connect-to-service"
+} 2>&1 >/dev/null
 
 ## Clean up.
 rm -rf restore.txt ~/.mysql backup_${BACKUP_ENV}.sql

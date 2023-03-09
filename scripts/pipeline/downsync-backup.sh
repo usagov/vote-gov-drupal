@@ -6,7 +6,7 @@ kill_pids() {
   for id in ${ids}; do
     kill -9 ${id}
   done
-} &> /dev/null
+}
 
 ## Wait for the tunnel to finish connecting.
 wait_for_tunnel() {
@@ -49,12 +49,13 @@ echo "Backing up '${BACKUP_ENV}' database..."
   ## Patch out any MySQL 'SET' commands that require admin.
   sed -i 's/^SET /-- &/' backup_dev.sql
 
-} &> /dev/null
-
+} 2>&1 >/dev/null
 
 ## Kill the backgrounded SSH tunnel.
 echo "Cleaning up old connections..."
-kill_pids "connect-to-service"
+{
+  kill_pids "connect-to-service"
+} 2>&1 >/dev/null
 
 ## Clean up.
 rm -rf backup.txt ~/.mysql
