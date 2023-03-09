@@ -20,3 +20,8 @@ regions:
   sidebar: "Sidebar"
   footer: "Footer"
   no_region: "Blocks for Twig Tweak, hidden, or other purposes"
+
+# define custom css for wysiwyg
+ckeditor5-stylesheets:
+  - dist/css/styles.css
+  - ckeditor/ckeditor.css

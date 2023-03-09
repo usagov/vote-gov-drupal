@@ -10,14 +10,21 @@ a.usa-button,
     margin-top: 1rem;
     margin-bottom: 3rem;
   }
-}
 
-.usa-button:hover,
-.usa-button.usa-button--hover {
-  color: white;
-  background-color: $color-grey-dark;
-  border-bottom: 0;
-  text-decoration: none;
+  .usa-button-group__item & {
+    > a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  &:hover,
+  &.usa-button--hover {
+    color: white;
+    background-color: $color-grey-dark;
+    border-bottom: 0;
+    text-decoration: none;
+  }
 }
 
 //"Go back" arrow button and text
