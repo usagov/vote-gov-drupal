@@ -60,15 +60,23 @@ function vote_utility_tokens($type, $tokens, array $data, array $options, Bubble
  *\
  // @codingStandardsIgnoreEnd
 function vote_utility_get_menu_path($node) {
+
   /**
   * Define the menu token string value.
   *\
+
   $menu_token = '[node:menu-link:parents:join-path]/[node:menu-link:title]';
 
-  // Set the default replacement value.
+  /**
+  * Set the default replacement value.
+  *\
+
   $replacement_value = $node->getTitle();
 // @codingStandardsIgnoreStart
-  // If the menu IS enabled on this node set a new replacement value based on the menu token.
+  /**
+  * If the menu IS enabled on this node set a new replacement value based on the menu token.
+  *\
+
 // @codingStandardsIgnoreEnd
   if (!empty($node->menu['enabled'])) {
     $replacement_value = Drupal::token()
