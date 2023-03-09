@@ -164,7 +164,7 @@ workflows:
                 - dev
                 - test
           requires:
-            - build-theme
+            - cypress
   downsync-workflow:
     when:
       and:
