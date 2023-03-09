@@ -85,24 +85,3 @@ function vote_utility_get_menu_path($node) {
 
   return $replacement_value;
 }
-
-
-File,Line,Column,Type,Message,Source,Severity,Fixable
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",62,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",63,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",64,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",67,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",68,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",69,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",70,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",73,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",74,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",81,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",82,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",83,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",84,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",85,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",86,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",87,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",88,1,error,"Expected 1 newline at end of file; 0 found",Drupal.Files.EndFileNewline.NoneFound,5,1
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",88,1,error,"Wrong function doc comment end; expected \"*/\", found \"\"",Drupal.Commenting.DocComment.WrongEnd,5,0
