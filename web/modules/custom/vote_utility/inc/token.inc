@@ -4,6 +4,7 @@
  * @file
  * Defines custom tokens.
  */
+
 use Drupal\Core\Render\BubbleableMetadata;
 
 /**
