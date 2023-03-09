@@ -6,7 +6,6 @@
  */
 
 use Drupal\Core\Render\BubbleableMetadata;
-
 /**
  * Implements hook_token_info().
  */
@@ -27,8 +26,6 @@ function vote_utility_token_info() {
     ],
   ];
 }
-
-
 /**
  * Implements hook_tokens().
  */
@@ -52,22 +49,24 @@ function vote_utility_tokens($type, $tokens, array $data, array $options, Bubble
 
   return $replacements;
 }
-
+// @codingStandardsIgnoreStart
 /**
  * Get token replacement value, based on value of menu location on an entity otherwise fall back on node title.
  *
  */
+ // @codingStandardsIgnoreEnd
 function vote_utility_get_menu_path($node) {
   // Define the menu token string value.
   $menu_token = '[node:menu-link:parents:join-path]/[node:menu-link:title]';
 
   // Set the default replacement value.
   $replacement_value = $node->getTitle();
-
+// @codingStandardsIgnoreStart
   // If the menu IS enabled on this node set a new replacement value based on the menu token.
+// @codingStandardsIgnoreEnd
   if (!empty($node->menu['enabled'])) {
     $replacement_value = Drupal::token()
-                               ->replace($menu_token, ['node' => $node], ['clear' => TRUE]);
+      ->replace($menu_token, ['node' => $node], ['clear' => TRUE]);
   }
 
   return $replacement_value;
