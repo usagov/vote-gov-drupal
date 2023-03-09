@@ -34,7 +34,7 @@ jobs:
           name: "Cypress"
           command: |
             cd testing
-            source ./scripts/pipeline/cloud-gov-login.sh "${CIRCLE_BRANCH}"
+            source ../scripts/pipeline/cloud-gov-login.sh "${CIRCLE_BRANCH}"
             CYPRESS_BASEURL=$(cf routes | grep drupal-${CIRCLE_BRANCH} | awk '{print $2"."$3}')
             sed -i "s/^    baseUrl: .*/    baseUrl: 'https:\/\/${CYPRESS_BASEURL}',/" cypress.config.js
             npm install
