@@ -58,7 +58,7 @@ function vote_utility_tokens($type, $tokens, array $data, array $options, Bubble
  * Get token replacement value, based on value of menu location on an entity otherwise fall back on node title.
  *
  *\
-
+ // @codingStandardsIgnoreEnd
 function vote_utility_get_menu_path($node) {
 
   /**
@@ -72,7 +72,7 @@ function vote_utility_get_menu_path($node) {
   *\
 
   $replacement_value = $node->getTitle();
-
+// @codingStandardsIgnoreStart
   /**
   * If the menu IS enabled on this node set a new replacement value based on the menu token.
   *\
