@@ -10,7 +10,12 @@ id: media.document.media_library
 targetEntityType: media
 bundle: document
 mode: media_library
-content: {  }
+content:
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   field_media_file: true
