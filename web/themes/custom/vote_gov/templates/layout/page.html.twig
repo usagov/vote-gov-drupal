@@ -36,7 +36,13 @@
 * @see html.html.twig
 */
 #}
+
 {% set node_type = node.bundle() %}
+  
+{% if node_type != 'landing' %}
+  {% set bodyClass = "page-vote" %}
+<body class={{ bodyClass }}>
+  {% endif %}
 
 <div class="layout-container">
   {# Header region for USA banner, language selector, search box, and site alert #}
@@ -81,3 +87,4 @@
   {{ page.footer }}
 
 </div>{# /.layout-container #}
+</div>

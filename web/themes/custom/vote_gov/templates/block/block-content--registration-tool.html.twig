@@ -1,14 +1,14 @@
 {% block content %}
-<div class="bg-blue css-arrow">
-  <div class="grid-container">
-    <div class="grid-row grid-gap">
-          <div class="tablet:grid-col-4">
-            <a class="site-logo" data-test="vote-logo" href="" aria-label="Vote.gov">
-              <div class="logo-text">{{ "Vote.gov" }}</div>
-              <div id="SiteLogo">{{ "" }}</div>
-            </a>
-          </div>
-
+<div class="bg-blue css-arrow page-vote">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="tablet:grid-col-4">
+		  {% set logo_sitename = language != 'en' ? sitename ~ ' in ' ~ languagename : sitename %}
+          <a class="site-logo" href="/" aria-label="{{ logo_sitename | t }}">
+            <div class="logo-text">{{ logo_sitename }}</div>
+            <div id="SiteLogo">{{ source( directory ~ '/img/ballot_box-blue.svg' ) }}</div>
+			    </a>
+        </div>
             <div id="skip-target" class="tablet:grid-col-8 right-shift">
               <section class="register align-bottom">
                 <header>
