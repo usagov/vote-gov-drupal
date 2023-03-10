@@ -6,12 +6,17 @@ dependencies:
     - field.storage.node.body
     - node.type.page
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - simple_html
 id: node.page.body
 field_name: body
 entity_type: node
 bundle: page
-label: Content
+label: 'Page Description'
 description: ''
 required: true
 translatable: true

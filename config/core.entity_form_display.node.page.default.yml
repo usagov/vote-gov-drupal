@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_body
     - field.field.node.page.field_metatags
     - node.type.page
     - workflows.workflow.publishing_content
@@ -34,9 +35,19 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_body:
+    type: text_textarea_with_summary
+    weight: 11
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
-    weight: 26
+    weight: 13
     region: content
     settings:
       sidebar: true
@@ -44,7 +55,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 13
+    weight: 12
     region: content
     settings:
       include_locked: true

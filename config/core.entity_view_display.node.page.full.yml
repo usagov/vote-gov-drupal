@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.page.body
+    - field.field.node.page.field_body
     - field.field.node.page.field_metatags
     - node.type.page
   module:
@@ -15,19 +16,20 @@ targetEntityType: node
 bundle: page
 mode: full
 content:
-  body:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_body:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 1
     region: content
-  content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
+  body: true
   field_metatags: true
   langcode: true
   links: true
