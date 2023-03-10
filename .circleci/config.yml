@@ -194,9 +194,6 @@ workflows:
     when:
       and:
         - equal: [webhook, << pipeline.trigger_source >>]
-    when:
-      and:
-        - equal: [webhook, << pipeline.trigger_source >>]
     jobs:
       - cypress:
           requires:
