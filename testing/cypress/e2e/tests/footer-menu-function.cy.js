@@ -1,10 +1,10 @@
 /// <reference types="cypress" />
 
 
-describe('Footer Id Function', () => {
-  
+describe('Footer Menu Function', () => {
+
   it.only('check function', () => {
-    
+
     // before test create a link
     cy.signin(Cypress.env('roles').site_admin.username, Cypress.env('test_pass'))
 
@@ -20,14 +20,14 @@ describe('Footer Id Function', () => {
     cy.logout()
 
 
-    // check that the link is working as expected 
+    // check that the link is working as expected
     cy.visit('/')
 
     cy.get('[data-test="footer"]').find('[class="usa-list usa-list--unstyled identifier-links"]').then(link => {
       cy.get(link[0]).find('a').should('contain', 'Cypress Test Link').should('have.attr', 'href').and('contain', 'bixal.com')
     })
 
-    // after delete the link that was created 
+    // after delete the link that was created
     cy.signin(Cypress.env('roles').site_admin.username, Cypress.env('test_pass'))
 
     cy.visit('http://vote-gov.lndo.site/admin/structure/menu/manage/footer')
@@ -60,7 +60,7 @@ describe('Footer Id Function', () => {
   it('check content editor access', () => {
     cy.signin(Cypress.env('roles').content_editor.username, Cypress.env('test_pass'))
 
-    // content editor should not have access to url 
+    // content editor should not have access to url
     cy.request({
           url: 'http://vote-gov.lndo.site/admin/structure/menu/manage/footer/add',
           failOnStatusCode:false,
@@ -68,7 +68,7 @@ describe('Footer Id Function', () => {
           expect(resp.status).to.eq(403)
       })
 
-    cy.logout()    
+    cy.logout()
   })
 
   it('check content manager access', () => {
@@ -77,7 +77,7 @@ describe('Footer Id Function', () => {
      // content manager should have access to edit
     cy.request('http://vote-gov.lndo.site/admin/structure/menu/manage/footer/add').then((response) => {
       expect(response.status).to.eq(200)
-        })   
+        })
 
     cy.logout()
   })
