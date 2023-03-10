@@ -197,12 +197,13 @@ workflows:
     jobs:
       - cypress:
           requires:
-            - deploy-test
+            - deploy-cypress
           filters:
             branches:
               only:
                 - dev
-                - test
+                - stage
+                - prod
       - build-theme:
           filters:
             branches:
