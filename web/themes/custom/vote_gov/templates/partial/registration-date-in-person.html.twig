@@ -1,0 +1,13 @@
+{#
+/**
+ * partial
+ * Voter online registration deadline
+ *
+ */
+#}
+
+{% if content.field_online_deadline is not empty %}
+    <li><span class="bold-text">{{ 'In person registration deadline: ' | t }}</span>{{ content.field_in_person_deadline | field_value }}</li>
+    {% else %}
+    <li><span class="bold-text">{{ 'In person registration deadline: ' | t }}</span>{{ content.field_g_in_person_deadline | field_value }}</li>
+{% endif %}

@@ -1,0 +1,21 @@
+{#
+/**
+ * partial
+ * Voter registration mail-in deadline
+ *
+ */
+#}
+
+{#postmarked#}
+{% if content.field_mail_postmarked_deadline|render|trim %}
+    <li><span class="bold-text">{{ 'Register by mail deadline: ' | t }}</span>{{ 'Must be postmarked by ' | t }}{{ content.field_mail_postmarked_deadline | field_value }}</li>
+{% elseif content.field_g_mail_postmarked_deadline|render|trim %}
+    <li><span class="bold-text">{{ 'Register by mail deadline: ' | t }}</span>{{ 'Must be postmarked by ' | t }}{{ content.field_g_mail_postmarked_deadline | field_value }}</li>
+{% endif %}
+
+{# received #}
+{% if content.field_mail_received_deadline|render|trim %}
+    <li><span class="bold-text">{{ 'Register by mail deadline: ' | t }}</span>{{ 'Must be received by ' | t }}{{ content.field_mail_received_deadline | field_value }}</li>
+{% elseif content.field_g_mail_received_deadline|render|trim %}
+    <li><span class="bold-text">{{ 'Register by mail deadline: ' | t }}</span>{{ 'Must be received by ' | t }}{{ content.field_g_mail_received_deadline | field_value }}</li>
+{% endif %}

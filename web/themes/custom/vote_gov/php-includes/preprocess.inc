@@ -26,4 +26,16 @@ function vote_gov_preprocess(&$variables) {
   $variables['sitename'] = $sitename;
 }
 
+/**
+ * Implements hook_preprocess_page_title().
+ */
+function vote_gov_preprocess_page_title(&$variables) {
+
+  $node = \Drupal::request()->attributes->get('node');
+
+  if ($node && $node->bundle() == 'state_territory') {
+    $variables['title'] = t('Register to vote in @title', ['@title' => $node->getTitle()]);
+  }
+}
+
 
