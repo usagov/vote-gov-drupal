@@ -1,0 +1,116 @@
+# Migration configuration for State/Territory content type - Translations.
+id: state_territory_translations
+label: State/Territory Nodes Translations
+migration_group: nodes
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls:
+    - localhost/vote_migrate/import_nodes_state_territory/translation/es/json
+    - localhost/vote_migrate/import_nodes_state_territory/translation/ko/json
+    - localhost/vote_migrate/import_nodes_state_territory/translation/tl/json
+#    - localhost/vote_migrate/import_nodes_state_territory/translation/bn/json
+#    - localhost/vote_migrate/import_nodes_state_territory/translation/hi/json
+#    - localhost/vote_migrate/import_nodes_state_territory/translation/km/json
+#    - localhost/vote_migrate/import_nodes_state_territory/translation/nv/json
+#    - localhost/vote_migrate/import_nodes_state_territory/translation/vi/json
+#    - localhost/vote_migrate/import_nodes_state_territory/translation/ypk/json
+#    - localhost/vote_migrate/import_nodes_state_territory/translation/zh/json
+  item_selector: data
+  fields:
+    - name: abbreviation
+      label: 'Abbreviation'
+      selector: state_abbreviation
+    - name: langcode
+      label: 'Language'
+      selector: langcode
+    - name: hp_link
+      label: 'HP Link'
+      selector: hp_link
+    - name: registration_link
+      label: 'Registration Link'
+      selector: registration_link
+    - name: more_info_link
+      label: 'More Info Link'
+      selector: more_info_link
+    - name: confirm_registration_link
+      label: 'Confirm Registration Link'
+      selector: confirm_registration_link
+    - name: in_person_deadline
+      label: 'In-person Deadline'
+      selector: default_ip_deadline
+    - name: online_deadline
+      label: 'Online Deadline'
+      selector: default_online_deadline
+    - name: mail_postmarked_deadline
+      label: 'Mail Postmark Deadline'
+      selector: default_mail_postmarked_deadline
+  ids:
+    abbreviation:
+      type: string
+process:
+  title:
+    -
+      plugin: migration_lookup
+      source: abbreviation
+      migration: state_territory
+    -
+      plugin: entity_value
+      entity_type: node
+      field_name: title
+  nid:
+    plugin: migration_lookup
+    source: abbreviation
+    migration: state_territory
+  field_election_homepage_link/uri:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: hp_link
+  field_registration_link/uri:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: registration_link
+  field_more_info_link/uri:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: more_info_link
+  field_confirm_registration_link/uri:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: confirm_registration_link
+  field_g_in_person_deadline:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: in_person_deadline
+    -
+      plugin: convert_state_territory_deadline
+  field_g_online_deadline:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: online_deadline
+    -
+      plugin: convert_state_territory_deadline
+  field_g_mail_postmarked_deadline:
+    plugin: convert_state_territory_deadline
+    source: mail_postmarked_deadline
+  langcode: langcode
+  content_translation_source:
+    plugin: default_value
+    default_value: 'en'
+  uid:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: 'entity:node'
+  translations: true
+migration_dependencies:
+  required:
+    - state_territory
+  optional: []

@@ -1,0 +1,16 @@
+vote_migrate.combine_json_data:
+  path: '/vote_migrate/import_nodes_state_territory/json'
+  defaults:
+    _controller: 'Drupal\vote_migrate\Controller\StateTerritoryJsonController::getJson'
+    _title: 'State Territory - JSON'
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+vote_migrate.translation_json_data:
+  path: '/vote_migrate/import_nodes_state_territory/translation/{langcode}/json'
+  defaults:
+    _controller: 'Drupal\vote_migrate\Controller\StateTerritoryTranslationJsonController::getJson'
+    _title: 'State Territory - Translation - JSON'
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'

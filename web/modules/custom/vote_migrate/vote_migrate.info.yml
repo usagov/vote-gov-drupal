@@ -8,4 +8,3 @@ dependencies:
   - drupal:migrate_plus
   - drupal:migrate_tools
 interface translation project: vote_migrate
-interface translation server pattern: modules/custom/%project/translations/%language.po
