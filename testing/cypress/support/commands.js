@@ -42,3 +42,17 @@ Cypress.Commands.add('deleteUser', function (user) {
       timeout: 120000
   });
 });
+
+/**
+ * Logout with cy.request
+ */
+Cypress.Commands.add('logout', function () {
+  cy.request({
+      method: 'GET',
+      url: '/user/logout',
+      followRedirect: false // turn off following redirects
+  }).then((resp) => {
+      // redirect status code is 302
+      expect(resp.status).to.eq(302)
+  });
+});

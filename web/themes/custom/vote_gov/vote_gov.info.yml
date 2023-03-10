@@ -15,7 +15,13 @@ libraries:
 regions:
   header: "Header"
   admin: "Admin local tasks"
+  page_title: "Page title"
   content: "Content"
   sidebar: "Sidebar"
   footer: "Footer"
   no_region: "Blocks for Twig Tweak, hidden, or other purposes"
+
+# define custom css for wysiwyg
+ckeditor5-stylesheets:
+  - dist/css/styles.css
+  - ckeditor/ckeditor.css
