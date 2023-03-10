@@ -59,6 +59,8 @@ function vote_utility_tokens($type, $tokens, array $data, array $options, Bubble
  *
  *\
 function vote_utility_get_menu_path($node) {
+  // phpcs:disable Drupal.Commenting.ClassComment.Missing
+// @codingStandardsIgnoreEnd
 
   /**
   * Define the menu token string value.
