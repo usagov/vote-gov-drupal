@@ -53,14 +53,12 @@ function vote_utility_tokens($type, $tokens, array $data, array $options, Bubble
   return $replacements;
 }
 
-// @codingStandardsIgnore
+
 /**
- * Get token replacement value, based on value of menu location on an entity otherwise fall back on node title.
- *
+ * Get token replacement value, based on value of menu location on an entity 
+ * otherwise fall back on node title.
  *\
-  // phpcs:disable Drupal.Commenting.ClassComment.Missing
 function vote_utility_get_menu_path($node) {
-// @codingStandardsIgnoreEnd
 
   /**
   * Define the menu token string value.
@@ -73,12 +71,13 @@ function vote_utility_get_menu_path($node) {
   *\
 
   $replacement_value = $node->getTitle();
-// @codingStandardsIgnoreStart
+
   /**
-  * If the menu IS enabled on this node set a new replacement value based on the menu token.
+  * If the menu IS enabled on this node set a new replacement value based on
+  * the menu token.
   *\
 
-// @codingStandardsIgnoreEnd
+
   if (!empty($node->menu['enabled'])) {
     $replacement_value = Drupal::token()
       ->replace($menu_token, ['node' => $node], ['clear' => TRUE]);
@@ -86,3 +85,43 @@ function vote_utility_get_menu_path($node) {
 
   return $replacement_value;
 }
+
+
+File,Line,Column,Type,Message,Source,Severity,Fixable
+"/root/project/web/modules/custom/vote_utility/inc/token.inc",58,4,warning,"Line exceeds 80 characters; contains 111 characters",Drupal.Files.LineLength.TooLong,5,0
+
+"/root/project/web/modules/custom/vote_utility/inc/token.inc",62,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
+
+"/root/project/web/modules/custom/vote_utility/inc/token.inc",64,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
+
+"/root/project/web/modules/custom/vote_utility/inc/token.inc",65,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
+
+"/root/project/web/modules/custom/vote_utility/inc/token.inc",68,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
+
+"/root/project/web/modules/custom/vote_utility/inc/token.inc",69,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
+
+"/root/project/web/modules/custom/vote_utility/inc/token.inc",70,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
+
+"/root/project/web/modules/custom/vote_utility/inc/token.inc",71,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
+
+"/root/project/web/modules/custom/vote_utility/inc/token.inc",74,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
+
+"/root/project/web/modules/custom/vote_utility/inc/token.inc",75,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
+
+"/root/project/web/modules/custom/vote_utility/inc/token.inc",82,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
+
+"/root/project/web/modules/custom/vote_utility/inc/token.inc",83,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
+
+"/root/project/web/modules/custom/vote_utility/inc/token.inc",84,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
+
+"/root/project/web/modules/custom/vote_utility/inc/token.inc",85,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
+
+"/root/project/web/modules/custom/vote_utility/inc/token.inc",86,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
+
+"/root/project/web/modules/custom/vote_utility/inc/token.inc",87,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
+
+"/root/project/web/modules/custom/vote_utility/inc/token.inc",88,1,error,"Doc comment star missing",Drupal.Commenting.DocCommentStar.StarMissing,5,1
+
+"/root/project/web/modules/custom/vote_utility/inc/token.inc",89,1,error,"Expected 1 newline at end of file; 0 found",Drupal.Files.EndFileNewline.NoneFound,5,1
+
+"/root/project/web/modules/custom/vote_utility/inc/token.inc",89,1,error,"Wrong function doc comment end; expected \"*/\", found \"\"",Drupal.Commenting.DocComment.WrongEnd,5,0
