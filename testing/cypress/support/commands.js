@@ -28,7 +28,7 @@ Cypress.Commands.add('createUser', (user, pass, role) => {
 
 Cypress.Commands.add('signin', (user, pass) => {
 
-  cy.visit('http://vote-gov.lndo.site/user/login')
+  cy.visit('/user/login')
   cy.get('[data-drupal-selector="edit-name"]').type(user)
   cy.get('[data-drupal-selector="edit-pass"]').type(pass)
 
