@@ -3,35 +3,7 @@
 
 describe('Footer Id Function', () => {
   
-  // before('create test footer link', () => {
-  //   cy.signin(Cypress.env('roles').site_admin.username, Cypress.env('test_pass'))
-
-  //   cy.visit('http://vote-gov.lndo.site/admin/structure/menu/manage/footer/add')
-
-  //   cy.get('[data-drupal-selector="edit-title-0-value"]').type('Cypress Test Link')
-  //   cy.get('[data-drupal-selector="edit-link-0-uri"]').type('https://www.bixal.com/')
-  //   cy.get('[data-drupal-selector="edit-submit"]').click()
-  // })
-
-  // after('delete link', () => {
-  //   cy.signin(Cypress.env('roles').site_admin.username, Cypress.env('test_pass'))
-
-  //   cy.visit('http://vote-gov.lndo.site/admin/structure/menu/manage/footer')
-
-  //   cy.get('[class="dropbutton__toggle"]').then(dropDown => {
-  //     cy.get(dropDown[0]).click()
-  //     cy.get('[class="delete dropbutton__item dropbutton-action secondary-action"]').then(remove => {
-  //       cy.get(remove[0]).click()
-  //     })
-  //   })
-
-  //   cy.get('[data-drupal-selector="edit-submit"]').click()
-
-
-  // })
-
-
-  it('check function', () => {
+  it.only('check function', () => {
     
     // before test create a link
     cy.signin(Cypress.env('roles').site_admin.username, Cypress.env('test_pass'))
@@ -40,6 +12,9 @@ describe('Footer Id Function', () => {
 
     cy.get('[data-drupal-selector="edit-title-0-value"]').type('Cypress Test Link')
     cy.get('[data-drupal-selector="edit-link-0-uri"]').type('https://www.bixal.com/')
+    cy.get('[data-drupal-selector="edit-weight-0-value"]').clear().type('-99')
+
+
     cy.get('[data-drupal-selector="edit-submit"]').click()
 
     cy.logout()
