@@ -43,8 +43,8 @@ jobs:
           name: "Cypress"
           command: |
             cd testing
-            source ../scripts/pipeline/cloud-gov-login.sh "${CIRCLE_BRANCH}"
-            CYPRESS_BASEURL=$(cf routes | grep drupal-${CIRCLE_BRANCH} | awk '{print $2"."$3}')
+            source ../scripts/pipeline/cloud-gov-login.sh "test"
+            CYPRESS_BASEURL=$(cf routes | grep drupal-test | awk '{print $2"."$3}')
             sed -i "s/^    baseUrl: .*/    baseUrl: 'https:\/\/${CYPRESS_BASEURL}',/" cypress.config.js
             npm install
             npm run cy:test
@@ -75,6 +75,52 @@ jobs:
             if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "test" || "${CIRCLE_BRANCH}" == "stage" || "${CIRCLE_BRANCH}" == "prod" ]]; then            
               cf push
             fi
+  deploy-cypress:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: "Install cloudfoundry dependencies"
+          command: |
+            wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+            echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+            sudo apt update
+            sudo apt install -y cf8-cli gettext git
+      - run:
+          name: "Deploy"
+          command: |
+            source ./scripts/pipeline/cloud-gov-login.sh "test"
+
+            mv manifest.yml manifest.tmp
+            envsubst < manifest.tmp > manifest.yml
+            
+            cf push
+  deploy-test:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: "Install cloudfoundry dependencies"
+          command: |
+            wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+            echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+            sudo apt update
+            sudo apt install -y cf8-cli gettext git
+      - run:
+          name: "Deploy"
+          command: |
+            source ./scripts/pipeline/cloud-gov-login.sh "test"
+
+            mv manifest.yml manifest.tmp
+            envsubst < manifest.tmp > manifest.yml
+            
+            cf push
   downsync:
     docker:
       - image: cimg/base:stable
@@ -151,18 +197,19 @@ workflows:
     jobs:
       - cypress:
           requires:
-            - build-theme
+            - deploy-test
           filters:
             branches:
               only:
                 - dev
                 - test
-      - php-lint
       - build-theme:
           filters:
             branches:
               only:
                 - dev
+                - stage
+                - prod
                 - test
           requires:
             - php-lint
@@ -171,9 +218,27 @@ workflows:
             branches:
               only:
                 - dev
-                - test
+                - stage
+                - prod
           requires:
             - cypress
+      - deploy-cypress:
+          filters:
+            branches:
+              only:
+                - dev
+                - stage
+                - prod
+          requires:
+            - build-theme
+      - deploy-test:
+          filters:
+            branches:
+              only:
+                - test
+          requires:
+            - build-theme
+      - php-lint
   downsync-workflow:
     when:
       and:
