@@ -14,8 +14,8 @@ source:
   data_fetcher_plugin: http
   data_parser_plugin: json
   urls:
-    - 'https://raw.githubusercontent.com/usagov/vote-gov/staging/data/states.json'
-  item_selector: /
+    - localhost/vote_migrate/import_nodes_state_territory/json
+  item_selector: data
   fields:
     -
       name: title
@@ -34,14 +34,6 @@ source:
       label: 'Registration Type'
       selector: registration_type
     -
-      name: translation_key
-      label: 'Translation Key'
-      selector: translationKey
-    -
-      name: type
-      label: Type
-      selector: type
-    -
       name: hp_link
       label: 'HP Link'
       selector: hp_link
@@ -57,6 +49,18 @@ source:
       name: confirm_registration_link
       label: 'Confirm Registration Link'
       selector: confirm_registration_link
+    -
+      name: in_person_deadline
+      label: 'In-person Deadline'
+      selector: default_ip_deadline
+    -
+      name: online_deadline
+      label: 'Online Deadline'
+      selector: default_online_deadline
+    -
+      name: mail_postmarked_deadline
+      label: 'Mail Postmark Deadline'
+      selector: default_mail_postmarked_deadline
   ids:
     abbreviation:
       type: string
@@ -66,11 +70,26 @@ process:
   field_is_state:
     plugin: convert_string_to_boolean
     source: is_state
-  field_registration_type: registration_type
+  field_registration_type:
+    plugin: assign_state_territory_registration_type
+    source: registration_type
   field_election_homepage_link/uri: hp_link
   field_registration_link/uri: registration_link
   field_more_info_link/uri: more_info_link
   field_confirm_registration_link/uri: confirm_registration_link
+  field_g_in_person_deadline:
+    plugin: convert_state_territory_deadline
+    source: in_person_deadline
+  field_g_online_deadline:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: online_deadline
+    -
+      plugin: convert_state_territory_deadline
+  field_g_mail_postmarked_deadline:
+    plugin: convert_state_territory_deadline
+    source: mail_postmarked_deadline
   langcode:
     plugin: default_value
     default_value: en

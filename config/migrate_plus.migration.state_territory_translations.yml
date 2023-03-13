@@ -1,7 +1,14 @@
-# Migration configuration for State/Territory content type - Translations.
+uuid: d6aa4a2e-c5b4-4688-be9c-4f2712ddce6c
+langcode: en
+status: true
+dependencies: {  }
 id: state_territory_translations
-label: State/Territory Nodes Translations
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
 migration_group: nodes
+label: 'State/Territory Nodes Translations'
 source:
   plugin: url
   data_fetcher_plugin: http
@@ -19,31 +26,40 @@ source:
     - localhost/vote_migrate/import_nodes_state_territory/translation/zh/json
   item_selector: data
   fields:
-    - name: abbreviation
-      label: 'Abbreviation'
+    -
+      name: abbreviation
+      label: Abbreviation
       selector: state_abbreviation
-    - name: langcode
-      label: 'Language'
+    -
+      name: langcode
+      label: Language
       selector: langcode
-    - name: hp_link
+    -
+      name: hp_link
       label: 'HP Link'
       selector: hp_link
-    - name: registration_link
+    -
+      name: registration_link
       label: 'Registration Link'
       selector: registration_link
-    - name: more_info_link
+    -
+      name: more_info_link
       label: 'More Info Link'
       selector: more_info_link
-    - name: confirm_registration_link
+    -
+      name: confirm_registration_link
       label: 'Confirm Registration Link'
       selector: confirm_registration_link
-    - name: in_person_deadline
+    -
+      name: in_person_deadline
       label: 'In-person Deadline'
       selector: default_ip_deadline
-    - name: online_deadline
+    -
+      name: online_deadline
       label: 'Online Deadline'
       selector: default_online_deadline
-    - name: mail_postmarked_deadline
+    -
+      name: mail_postmarked_deadline
       label: 'Mail Postmark Deadline'
       selector: default_mail_postmarked_deadline
   ids:
@@ -103,7 +119,7 @@ process:
   langcode: langcode
   content_translation_source:
     plugin: default_value
-    default_value: 'en'
+    default_value: en
   uid:
     plugin: default_value
     default_value: 1
@@ -113,4 +129,4 @@ destination:
 migration_dependencies:
   required:
     - state_territory
-  optional: []
+  optional: {  }
