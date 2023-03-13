@@ -53,10 +53,15 @@ function vote_utility_tokens($type, $tokens, array $data, array $options, Bubble
   return $replacements;
 }
 
-/**
- * Get token replacement value, based on value of menu location on an
- * entity otherwise fall back on node title.
- */
+/** 
+  * Get token replacement value, based on value of menu location on an
+  * entity otherwise fall back on node title.
+  *
+  * @param $node
+  *
+  * @return mixed|string
+  *
+  */
 function vote_utility_get_menu_path($node) {
 
   // Define the menu token string value.
@@ -74,3 +79,8 @@ function vote_utility_get_menu_path($node) {
 
   return $replacement_value;
 }
+
+
+
+File,Line,Column,Type,Message,Source,Severity,Fixable
+"/root/project/web/modules/custom/vote_utility/inc/token.inc",58,4,error,"Doc comment short description must be on a single line, further text should be a separate paragraph",Drupal.Commenting.DocComment.ShortSingleLine,5,0
