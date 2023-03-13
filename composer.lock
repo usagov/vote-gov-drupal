@@ -2715,17 +2715,17 @@
         },
         {
             "name": "drupal/simple_sitemap",
-            "version": "4.1.3",
+            "version": "4.1.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/simple_sitemap.git",
-                "reference": "4.1.3"
+                "reference": "4.1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/simple_sitemap-4.1.3.zip",
-                "reference": "4.1.3",
-                "shasum": "18eda442709f32102416a0112abc33649658f8e9"
+                "url": "https://ftp.drupal.org/files/projects/simple_sitemap-4.1.4.zip",
+                "reference": "4.1.4",
+                "shasum": "55986f9819c60216ad6401941ca4176a1e086c8b"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10",
@@ -2734,8 +2734,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.1.3",
-                    "datestamp": "1674225949",
+                    "version": "4.1.4",
+                    "datestamp": "1674226567",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
