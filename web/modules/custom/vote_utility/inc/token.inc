@@ -85,7 +85,3 @@ function vote_utility_get_menu_path($node) {
 
   return $replacement_value;
 }
-
-
-
-
