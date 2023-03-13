@@ -79,16 +79,3 @@ function vote_utility_get_menu_path($node) {
 
   return $replacement_value;
 }
-
-
-File,Line,Column,Type,Message,Source,Severity,Fixable
-
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",58,4,error,"Doc comment short description must be on a single line, further text should be a separate paragraph",Drupal.Commenting.DocComment.ShortSingleLine,5,0
-
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",60,4,error,"Missing parameter comment",Drupal.Commenting.FunctionComment.MissingParamComment,5,0
-
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",60,4,error,"Missing parameter type",Drupal.Commenting.FunctionComment.MissingParamType,5,0
-
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",62,4,error,"Description for the @return value is missing",Drupal.Commenting.FunctionComment.MissingReturnComment,5,0
-
-"/root/project/web/modules/custom/vote_utility/inc/token.inc",64,2,error,"Additional blank lines found at end of doc comment",Drupal.Commenting.DocComment.SpacingAfter,5,1
