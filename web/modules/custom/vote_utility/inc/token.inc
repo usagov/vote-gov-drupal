@@ -53,9 +53,14 @@ function vote_utility_tokens($type, $tokens, array $data, array $options, Bubble
   return $replacements;
 }
 
-/**
- * Get token replacement value, based on value of menu location 
- * on an entity otherwise fall back on node title.
+/** 
+ * Get token replacement value, based on value of menu location on an 
+ * entity otherwise fall back on node title. 
+ *  
+ * @param $node 
+ * 
+ * @return mixed|string 
+ * 
  */
 function vote_utility_get_menu_path($node) {
 
@@ -65,7 +70,7 @@ function vote_utility_get_menu_path($node) {
   // Set the default replacement value.
   $replacement_value = $node->getTitle();
 
-  // If the menu IS enabled on this node set a new 
+  // If the menu IS enabled on this node set a new
   // replacement value based on the menu token.
   if (!empty($node->menu['enabled'])) {
     $replacement_value = Drupal::token()
@@ -74,3 +79,8 @@ function vote_utility_get_menu_path($node) {
 
   return $replacement_value;
 }
+
+
+File,Line,Column,Type,Message,Source,Severity,Fixable
+
+"/root/project/web/modules/custom/vote_utility/inc/token.inc",58,4,error,"Doc comment short description must be on a single line, further text should be a separate paragraph",Drupal.Commenting.DocComment.ShortSingleLine,5,0
