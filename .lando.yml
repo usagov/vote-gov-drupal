@@ -21,6 +21,16 @@ services:
 #    overrides:
 #      ports:
 #        - "32654:32654"
+  node:
+    type: node:16
+    build_as_root:
+      - apt update -y && apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb -y
+    build:
+      - cd testing && npm install && npm install -g cypress@12.3.0
+    overrides:
+      environment:
+        LOCAL: "LOCAL"
+        LANDO_URL: "http://vote-gov.lndo.site/"
   appserver:
     # Point to custom development php.ini
     config:
@@ -50,6 +60,13 @@ proxy:
 # it knows the service to use.
 # https://docs.lando.dev/config/tooling.html#usage
 tooling:
+  node:
+    type: node:16
+    description: Used for node <commands>
+    service: node
+  npm:
+    description: Used for npm <commands>
+    service: node
 #  npm:
 #    service: node
 #    description: Runs npm commands
@@ -63,6 +80,26 @@ tooling:
 #    dir: "/app/web/themes/custom/vote_gov"
 #    cmd: npm run build --prefix  /app/web/themes/custom/vote_gov
   # Custom lando command, to sync Drupal db with updates, config changes in codebase.
+  'cy:axe':
+    service: node
+    cmd: cd testing && npx cypress run --spec 'cypress/e2e/accessibility/**/*' 
+    description: run cypress accessibility test - headless 
+  'cy:links':
+    service: node
+    cmd: cd testing && npx cypress run --spec 'cypress/e2e/internalLinks/**/*' 
+    description: run cypress internal links tess - headless    
+  'cy:proofer':
+    service: node
+    cmd: cd testing && npx cypress run --spec 'cypress/e2e/externalLinks/**/*' 
+    description: run cypress external links test - headless
+  'cy:test':
+    service: node
+    cmd: cd testing && npx cypress run --spec 'cypress/e2e/tests/**/*' 
+    description: run cypress functional tests - headless 
+  'cy:testSuite':
+    service: node
+    cmd: cd testing && npx cypress run 
+    description: run full testing suite, functional, internal links, external links and accessibility - headless   
   retune:
     service: appserver
     description: Branch update (run composer / db updates / import config / clear caches).
