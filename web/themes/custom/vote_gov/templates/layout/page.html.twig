@@ -36,19 +36,7 @@
 * @see html.html.twig
 */
 #}
-
-{% if page.sidebar %}
-  {% set content_grid_class = 'desktop:grid-col-9 order-last' %}
-  {% set aside_grid_class = 'desktop:grid-col-3 order-first' %}
-{% else %}
-  {% set content_grid_class = 'desktop:grid-col-12' %}
-{% endif %}
-
-{# Set the path to usa icons. #}
-{% set path_image =  '/dist/assets/img' %}
-
-{# Set the base URL. #}
-{% set base_url = url('<front>')|render|split('/', -1)|join('/') %}
+{% set node_type = node.bundle() %}
 
 <div class="layout-container">
   {# Header region for USA banner, language selector, search box, and site alert #}
@@ -60,28 +48,33 @@
     {# link is in html.html.twig #}
     <a id="main-content" tabindex="-1"></a>
 
-    <div class="layout-content grid-container-widescreen">
-      {# Admin region. #}
-      {{ page.admin }}
-    </div>
+    {% if node_type != 'landing' %}
+      {{ page.page_title }}
 
-    <div class="layout-content grid-container-widescreen">
-      {# Main content region. #}
-      <div class="grid-row grid-gap-lg">
-        <div class="{{ content_grid_class }}">
-          {{ page.content }}
-        </div>
-
-        {# Sidebar region. #}
-        {% if page.sidebar %}
-          <div class="{{ aside_grid_class }}">
-            <aside class="layout-sidebar-first" role="complementary">
-              {{ page.sidebar }}
-            </aside>
+      <div class="bg-lightblue">
+        <div class="grid-container">
+          <div class="grid-row grid-gap">
+            <div class="tablet:grid-col-4">
+              <aside class="layout-sidebar-first" role="complementary">
+                {{ page.sidebar }}
+              </aside>
+            </div>
+            <div class="tablet:grid-col-8 right-shift">
+              {# Admin region. #}
+              {{ page.admin }}
+              {{ page.content }}
+            </div>
           </div>
-        {% endif %}
+        </div>
       </div>
-    </div>{# /.layout-content #}
+    {% else %}
+      <div class="{{ logged_in ? 'grid-container margin-y-2' }}">
+        {# Admin region. #}
+        {{ page.admin }}
+      </div>
+      {{ page.content }}
+    {% endif %}
+
   </main>
 
   {# Footer region #}

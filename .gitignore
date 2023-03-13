@@ -52,6 +52,7 @@
 *.tar
 *.zip
 *.tgz
+*.csv
 
 # Ignore Logs and databases
 *.log
