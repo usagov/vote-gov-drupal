@@ -33,7 +33,13 @@
 
     {# Check voter registration #}
     <h2>{{ 'How to check your voter registration' | t }}</h2>
-    <p>{{ 'You can confirm your voter registration status on ' | t }}{{ content.field_confirm_registration_link | field_value }}{{ content.field_override_confirm_reg_link }}</p>
+    <p>{{ 'You can confirm your voter registration status on <a href="@link">@state_name\'s election website</a>.' | t ({
+      '@link': content.field_confirm_registration_link | field_value | render,
+      '@state_name': label | render
+      }) }}
+      {{ content.field_override_confirm_reg_link }}</p>
+
+    {# TODO: Last updated on #}
 
     <div>
       {{ drupal_entity('block_content', 3) }}
