@@ -11,10 +11,10 @@ use Drupal\Core\Render\BubbleableMetadata;
  * Implements hook_token_info().
  */
 function vote_utility_token_info() {
-  // No token groups to define (this module adds tokens to the existing 'node'
-  // token group).
+  // No token groups to define (this module adds tokens to the existing 'node' \
+  // token group). \
   $types = [];
-  // Define node-based tokens.
+  // Define node-based tokens. \
   $tokens['vote-utility--menu-path'] = [
     'name'        => t('Vote Utility - Menu path'),
     'description' => t('Provide a URL path fragment, based on the Menu location otherwise falls back on node title.'),
@@ -35,9 +35,7 @@ function vote_utility_token_info() {
 function vote_utility_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata): array {
   $replacements = [];
 
-  /** 
-  * Get new token replacement values for the 'node' token group.
-  */
+  // Get new token replacement values for the 'node' token group. \
   if ($type == 'node' && !empty($data['node'])) {
 
     /** @var \Drupal\node\NodeInterface $node */
