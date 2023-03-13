@@ -54,7 +54,8 @@ function vote_utility_tokens($type, $tokens, array $data, array $options, Bubble
 }
 
 /**
- * Gets token replacement value, based on value of menu location on an entity. 
+ * Gets token replacement value, based on value of menu location on an entity.
+ *
  * Otherwise fall back on node title.
  */
 function vote_utility_get_menu_path($node) {
