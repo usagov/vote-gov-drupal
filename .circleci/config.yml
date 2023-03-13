@@ -75,52 +75,52 @@ jobs:
             if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "test" || "${CIRCLE_BRANCH}" == "stage" || "${CIRCLE_BRANCH}" == "prod" ]]; then            
               cf push
             fi
-  deploy-cypress:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/
-      - run:
-          name: "Install cloudfoundry dependencies"
-          command: |
-            wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
-            echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-            sudo apt update
-            sudo apt install -y cf8-cli gettext git
-      - run:
-          name: "Deploy"
-          command: |
-            source ./scripts/pipeline/cloud-gov-login.sh "test"
+  # deploy-cypress:
+  #   docker:
+  #     - image: cimg/base:stable
+  #   steps:
+  #     - checkout
+  #     - attach_workspace:
+  #         at: ~/
+  #     - run:
+  #         name: "Install cloudfoundry dependencies"
+  #         command: |
+  #           wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+  #           echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+  #           sudo apt update
+  #           sudo apt install -y cf8-cli gettext git
+  #     - run:
+  #         name: "Deploy"
+  #         command: |
+  #           source ./scripts/pipeline/cloud-gov-login.sh "test"
 
-            mv manifest.yml manifest.tmp
-            envsubst < manifest.tmp > manifest.yml
+  #           mv manifest.yml manifest.tmp
+  #           envsubst < manifest.tmp > manifest.yml
             
-            cf push
-  deploy-test:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/
-      - run:
-          name: "Install cloudfoundry dependencies"
-          command: |
-            wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
-            echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-            sudo apt update
-            sudo apt install -y cf8-cli gettext git
-      - run:
-          name: "Deploy"
-          command: |
-            source ./scripts/pipeline/cloud-gov-login.sh "test"
+  #           cf push
+  # deploy-test:
+  #   docker:
+  #     - image: cimg/base:stable
+  #   steps:
+  #     - checkout
+  #     - attach_workspace:
+  #         at: ~/
+  #     - run:
+  #         name: "Install cloudfoundry dependencies"
+  #         command: |
+  #           wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+  #           echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+  #           sudo apt update
+  #           sudo apt install -y cf8-cli gettext git
+  #     - run:
+  #         name: "Deploy"
+  #         command: |
+  #           source ./scripts/pipeline/cloud-gov-login.sh "test"
 
-            mv manifest.yml manifest.tmp
-            envsubst < manifest.tmp > manifest.yml
+  #           mv manifest.yml manifest.tmp
+  #           envsubst < manifest.tmp > manifest.yml
             
-            cf push
+  #           cf push
   downsync:
     docker:
       - image: cimg/base:stable
@@ -195,14 +195,7 @@ workflows:
       and:
         - equal: [webhook, << pipeline.trigger_source >>]
     jobs:
-      - cypress:
-          requires:
-            - deploy-test
-          filters:
-            branches:
-              only:
-                - dev
-                - test
+      - php-lint
       - build-theme:
           filters:
             branches:
@@ -213,6 +206,17 @@ workflows:
                 - test
           requires:
             - php-lint
+      - cypress:
+          requires:
+            # - deploy-cypress
+            - build-theme
+          filters:
+            branches:
+              only:
+                - dev
+                - stage
+                - prod
+                - test
       - deploy:
           filters:
             branches:
@@ -220,25 +224,25 @@ workflows:
                 - dev
                 - stage
                 - prod
-          requires:
-            - cypress
-      - deploy-cypress:
-          filters:
-            branches:
-              only:
-                - dev
-                - stage
-                - prod
-          requires:
-            - build-theme
-      - deploy-test:
-          filters:
-            branches:
-              only:
                 - test
           requires:
-            - build-theme
-      - php-lint
+            - cypress
+      # - deploy-cypress:
+      #     filters:
+      #       branches:
+      #         only:
+      #           - dev
+      #           - stage
+      #           - prod
+      #     requires:
+      #       - build-theme
+      # - deploy-test:
+      #     filters:
+      #       branches:
+      #         only:
+      #           - test
+      #     requires:
+      #       - build-theme
   downsync-workflow:
     when:
       and:
