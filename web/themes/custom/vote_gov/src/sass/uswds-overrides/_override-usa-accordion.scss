@@ -65,3 +65,7 @@
     font-family: Merriweather Web, Georgia, Cambria, Times New Roman, Times, serif;
     font-weight: normal;
   }
+
+  [hidden], template {
+    display: none !important;
+}

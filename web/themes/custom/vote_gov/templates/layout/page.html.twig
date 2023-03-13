@@ -39,12 +39,11 @@
 
 {% set node_type = node.bundle() %}
   
-{% if node_type != 'landing' %}
+{% if node_type == 'landing' %}
   {% set bodyClass = "page-vote" %}
-<body class={{ bodyClass }}>
+<div class="layout-container {{ bodyClass }}">
   {% endif %}
 
-<div class="layout-container">
   {# Header region for USA banner, language selector, search box, and site alert #}
   <header class="usa-header" role="banner">
     {{ page.header }}
