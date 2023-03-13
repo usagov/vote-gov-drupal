@@ -90,16 +90,13 @@ process:
       source: in_person_deadline
     -
       plugin: convert_state_territory_deadline
-  field_g_online_deadline:
+  field_g_mail_postmarked_deadline:
     -
       plugin: skip_on_empty
       method: process
-      source: online_deadline
+      source: mail_postmarked_deadline
     -
       plugin: convert_state_territory_deadline
-  field_g_mail_postmarked_deadline:
-    plugin: convert_state_territory_deadline
-    source: mail_postmarked_deadline
   langcode: langcode
   content_translation_source:
     plugin: default_value
@@ -107,6 +104,13 @@ process:
   uid:
     plugin: default_value
     default_value: 1
+  moderation_state:
+    plugin: static_map
+    source: state
+    default_value: draft
+    map:
+      '0': draft
+      '1': published
 destination:
   plugin: 'entity:node'
   translations: true

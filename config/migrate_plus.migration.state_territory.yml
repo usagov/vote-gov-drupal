@@ -96,6 +96,13 @@ process:
   uid:
     plugin: default_value
     default_value: 1
+  moderation_state:
+    plugin: static_map
+    source: state
+    default_value: draft
+    map:
+      - draft
+      - published
 destination:
   plugin: 'entity:node'
   default_bundle: state_territory
