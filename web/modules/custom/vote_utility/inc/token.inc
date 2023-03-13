@@ -11,7 +11,7 @@ use Drupal\Core\Render\BubbleableMetadata;
  * Implements hook_token_info().
  */
 function vote_utility_token_info() {
-  // No token groups to define (this module adds tokens to the existing 'node' \
+  // No token groups to define (this module adds tokens to the existing 'node'. \
   // token group). \
   $types = [];
   // Define node-based tokens. \
