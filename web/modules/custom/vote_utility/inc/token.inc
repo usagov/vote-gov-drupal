@@ -35,7 +35,9 @@ function vote_utility_token_info() {
 function vote_utility_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata): array {
   $replacements = [];
 
-  // Get new token replacement values for the 'node' token group.
+  /** 
+  * Get new token replacement values for the 'node' token group.
+  */
   if ($type == 'node' && !empty($data['node'])) {
 
     /** @var \Drupal\node\NodeInterface $node */
@@ -53,7 +55,7 @@ function vote_utility_tokens($type, $tokens, array $data, array $options, Bubble
   return $replacements;
 }
 
-// @codingStandardsIgnore
+// @codingStandardsIgnoreStart
 /**
  * Get token replacement value, based on value of menu location on an entity otherwise fall back on node title.
  *\
