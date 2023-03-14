@@ -1,5 +1,11 @@
+
+
 {% block content %}
-<div class="bg-lightblue">
+{% set classes = [ 
+    content.field_classes | field_value | render
+] %}
+
+<div{{ attributes.addClass(classes) }}>
   <div class="grid-container">
     <div class="grid-row grid-gap">
       <div class="tablet:grid-col-4">
