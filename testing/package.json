@@ -16,7 +16,8 @@
     "cy:links": "cypress run --spec 'cypress/e2e/internalLinks/**/*'",
     "cy:proofer": "cypress run --spec 'cypress/e2e/externalLinks/**/*'",
     "cy:backEnd": "cypress run --spec 'cypress/e2e/backend/**/*'",
-    "testSuite": "npm run cy:test && npm run cy:links && npm run cy:axe"
+    "testSuite": "npm run cy:test && npm run cy:links && npm run cy:axe",
+    "cypress": "cypress"
   },
   "repository": {
     "type": "git",
