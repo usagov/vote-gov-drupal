@@ -8,20 +8,24 @@
 {% extends 'node.html.twig' %}
 
 {% block content %}
+
     {# How to register to vote #}
     <h2>{{ 'How to register to vote in @state_name' | t({ '@state_name': label | render }) }}</h2>
+    {% if content.field_registration_link | render %}
+      <p>{{ 'Start your online registration on <a href="@link">@state_name\'s election website</a>.' | t({
+          '@link': content.field_override_registration_link | field_value | render | default( content.field_registration_link | field_value | render ),
+          '@state_name': label | render
+        }) }}
+      </p>
+    {% endif %}
 
-    <p>{{ 'Start your online registration on <a href="@link">@state_name\'s election website</a>.' | t({
-        '@link': content.field_registration_link | field_value | render,
-        '@state_name': label | render
-      }) }}
-      {{ content.field_override_registration_link | field_value }}</p>
-
-    <p>{{ 'You can also register to vote by mail or in person on <a href="@link">@state_name\'s election website</a>.' | t({
-        '@link': content.field_more_info_link | field_value | render,
-        '@state_name': label | render
-      }) }}
-      {{ content.field_override_more_info_link | field_value }}</p>
+    {% if content.field_more_info_link | render %}
+      <p>{{ 'You can also register to vote by mail or in person on <a href="@link">@state_name\'s election website</a>.' | t({
+          '@link': content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ),
+          '@state_name': label | render
+        }) }}
+      </p>
+    {% endif %}
 
     {# Registration deadlines #}
     <h2>{{ 'Voter registration deadlines in @state_name' | t ({ '@state_name': label | render }) }}</h2>
@@ -33,15 +37,17 @@
 
     {# Check voter registration #}
     <h2>{{ 'How to check your voter registration' | t }}</h2>
-    <p>{{ 'You can confirm your voter registration status on <a href="@link">@state_name\'s election website</a>.' | t ({
-      '@link': content.field_confirm_registration_link | field_value | render,
-      '@state_name': label | render
-      }) }}
-      {{ content.field_override_confirm_reg_link }}</p>
-
-    {# TODO: Last updated on #}
-
+    {% if content.field_more_info_link | render %}
+      <p>{{ 'You can confirm your voter registration status on <a href="@link">@state_name\'s election website</a>.' | t ({
+        '@link': content.field_override_confirm_reg_link | field_value | render | default( content.field_confirm_registration_link | field_value | render ),
+        '@state_name': label | render
+        }) }}
+      </p>
+    {% endif %}
+    {# NVRF Selector and download button #}
     <div>
       {{ drupal_entity('block_content', 3) }}
     </div>
+
+     <p> {{'Last updated ' | t }}{{ node.revision_timestamp.value | date('F d, Y') }} </p>
 {% endblock %}

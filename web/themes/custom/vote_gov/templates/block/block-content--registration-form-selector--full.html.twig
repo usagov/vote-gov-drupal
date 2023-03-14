@@ -16,13 +16,14 @@
     'block-content--view-mode-' ~ view_mode|clean_class
   ]
 %}
+{% set node_type = node.bundle() %}
 
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {{ title_suffix }}
   <div class="block-content__content">
     <form class="state-download" method="get" id="register">
-      <h2>{{ content.field_heading }}</h2>
+      <h2>{{ content.field_heading | field_value | render | replace({"@state_name": pagetitle}) }}</h2>
       <p>{{ content.field_description }}</p>
       <label class="usa-sr-only" for="js-user-selection">{{ content.field_default_option_label }}</label>
       {# NVRF language selector #}

@@ -22,10 +22,14 @@
   'title',
   'page-title',
 ] %}
+{% set node_type = currentnode.bundle() %}
 
 {{ title_prefix }}
 {% if title|render|striptags|trim %}
- <h1{{ title_attributes.addClass('main-heading').setAttribute('data-test', 'main-header') }}>{{ title }}</h1>
-
+  {% if node_type == 'state_territory' %}
+    <h1{{ title_attributes.addClass('main-heading').setAttribute('data-test', 'main-header') }}>{{ 'Register to vote in @state_name' | render | replace({"@state_name": pagetitle}) }}</h1>
+  {% else %}
+    <h1{{ title_attributes.addClass('main-heading').setAttribute('data-test', 'main-header') }}>{{ pagetitle }}</h1>
+  {% endif %}
 {% endif %}
 {{ title_suffix }}

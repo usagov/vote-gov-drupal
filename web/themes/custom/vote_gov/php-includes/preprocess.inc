@@ -28,18 +28,10 @@ function vote_gov_preprocess(&$variables) {
   // Set global variable for page name.
   $node = \Drupal::request()->attributes->get('node');
   $variables['pagetitle'] = $node->getTitle();
-}
 
-/**
- * Implements hook_preprocess_page_title().
- */
-function vote_gov_preprocess_page_title(&$variables) {
-
+  // Set variable for node object.
   $node = \Drupal::request()->attributes->get('node');
-
-  if ($node && $node->bundle() == 'state_territory') {
-    $variables['title'] = t('Register to vote in @title', ['@title' => $node->getTitle()]);
-  }
+  $variables['currentnode'] = $node;
 }
 
 
