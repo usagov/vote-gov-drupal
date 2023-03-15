@@ -19,6 +19,9 @@ source:
     - localhost/vote_migrate/import_nodes_state_territory/translation/zh/json
   item_selector: data
   fields:
+    - name: id
+      label: 'Migration ID'
+      selector: migration_id
     - name: abbreviation
       label: 'Abbreviation'
       selector: state_abbreviation
@@ -47,7 +50,7 @@ source:
       label: 'Mail Postmark Deadline'
       selector: default_mail_postmarked_deadline
   ids:
-    abbreviation:
+    id:
       type: string
 process:
   title:

@@ -1,7 +1,7 @@
 # Migration configuration for State/Territory content type.
 id: state_territory
 label: State/Territory Nodes
-migration_group: nodes
+migration_group: nodes__state_territory
 source:
   plugin: url
   data_fetcher_plugin: http

@@ -43,6 +43,7 @@ class StateTerritoryTranslationJsonController {
     foreach($data as $data_set) {
       foreach($data_set as $state_code => $state) {
         $json[$state_code] = isset($json[$state_code]) ? array_merge($json[$state_code], $state) : $state;
+        $json[$state_code]['migration_id'] = $state_code . '_' . $langcode;
         $json[$state_code]['state_abbreviation'] = $state_code; 
         $json[$state_code]['langcode'] = $langcode; 
       }
