@@ -38,7 +38,12 @@
 #}
 {% set node_type = node.bundle() %}
 
-<div class="layout-container">
+{% set classes = [
+  'layout-container',
+  node_type == 'landing' ? 'page-vote'
+] %}
+
+<div class="layout-container {{ node_type }}">
   {# Header region for USA banner, language selector, search box, and site alert #}
   <header class="usa-header" role="banner">
     {{ page.header }}
@@ -81,3 +86,4 @@
   {{ page.footer }}
 
 </div>{# /.layout-container #}
+</div>
