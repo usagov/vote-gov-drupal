@@ -45,20 +45,9 @@ jobs:
       - run:
           name: "Cypress"
           command: |
-            #export cypress_test_user="$(tr -dc A-Za-z0-9 </dev/urandom | head -c 10 ; echo '')@test.test"
-            
             source ./scripts/pipeline/cloud-gov-login.sh "test"
-
-            # ./scripts/pipeline/cloud-gov-remote-command.sh \
-            #   "vote-drupal-test" \
-            #   "drush user:create \ 
-            #   newuser \
-            #   --yes \
-            #   --mail=${TEST_ACCOUNT_USER}" \
-            #   --password=${TEST_ACCOUNT_PASS}
             
             cd testing
-            
             cypress_baseurl=$(cf routes | grep drupal-test | awk '{print $2"."$3}')
             cypress_random_pass="$(date | sha256sum | cut -d" " -f1)"
 
@@ -68,14 +57,6 @@ jobs:
             npm install
             npm run cy:backEnd
             npm run cy:test
-
-            # ./scripts/pipeline/cloud-gov-remote-command.sh \
-            #   "vote-drupal-test" \
-            #   "drush user:cancel \
-            #   --yes \
-            #   ${TEST_ACCOUNT_USER} \
-            #   --delete-content"
-
       - store_artifacts:
           path: testing/cypress/screenshots
   deploy:
