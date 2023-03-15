@@ -8,5 +8,5 @@
 {% set deadline = content.field_in_person_deadline | field_value | default(content.field_g_in_person_deadline | field_value) %}
 
 {% if deadline %}
-  <li><span class="bold-text">{{ 'In person registration deadline: ' | t }}</span>{{ deadline | render | striptags }}</li>
+  <li><span class="bold-text">{{ 'In person registration deadline:' | t }}</span> {{ deadline | render | striptags }}</li>
 {% endif %}
