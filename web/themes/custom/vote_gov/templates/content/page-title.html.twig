@@ -12,24 +12,12 @@
  *   displayed after the main title tag that appears in the template.
  */
 #}
-{% set components_path =  path('<current>') %}
-{% if 'uswds-components' in components_path %}
-  {% set title_class = 'text-white bg-primary padding-x-205 padding-y-2'  %}
-{% endif %}
-
-{% set classes = [
-  title_class,
-  'title',
-  'page-title',
-] %}
+{% set title = title | render | striptags | trim %}
 {% set node_type = currentnode.bundle() %}
+{% set title = node_type == 'state_territory' ? 'Register to vote in @state_name' | t ({"@state_name": title}) : title %}
 
 {{ title_prefix }}
-{% if title|render|striptags|trim %}
-  {% if node_type == 'state_territory' %}
-    <h1{{ title_attributes.addClass('main-heading').setAttribute('data-test', 'main-header') }}>{{ 'Register to vote in @state_name' | render | replace({"@state_name": pagetitle}) }}</h1>
-  {% else %}
-    <h1{{ title_attributes.addClass('main-heading').setAttribute('data-test', 'main-header') }}>{{ pagetitle }}</h1>
-  {% endif %}
+{% if title %}
+  <h1{{ title_attributes.addClass('main-heading').setAttribute('data-test', 'main-header') }}>{{ title }}</h1>
 {% endif %}
 {{ title_suffix }}
