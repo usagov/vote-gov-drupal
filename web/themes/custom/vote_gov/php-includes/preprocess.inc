@@ -25,5 +25,3 @@ function vote_gov_preprocess(&$variables) {
   $sitename = Drupal::config('system.site')->get('name');
   $variables['sitename'] = $sitename;
 }
-
-
