@@ -16,7 +16,7 @@ reporter: 'cypress-mochawesome-reporter',
     "blockHosts": ["www.google-analytics.com", "ssl.google-analytics.com"],
 
     env: {
-      "test_pass": Cypress.env('random_pass'),
+      "test_pass": "password",
       "roles": {
             // info for site admin role
             "site_admin": {
