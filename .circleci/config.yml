@@ -46,7 +46,6 @@ jobs:
           name: "Cypress"
           command: |
             #export cypress_test_user="$(tr -dc A-Za-z0-9 </dev/urandom | head -c 10 ; echo '')@test.test"
-            export cypress_random_pass="$(date | sha256sum | cut -d" " -f1)"
             
             source ./scripts/pipeline/cloud-gov-login.sh "test"
 
@@ -59,8 +58,13 @@ jobs:
             #   --password=${TEST_ACCOUNT_PASS}
             
             cd testing
-            CYPRESS_BASEURL=$(cf routes | grep drupal-test | awk '{print $2"."$3}')
-            sed -i "s/^    baseUrl: .*/    baseUrl: 'https:\/\/${CYPRESS_BASEURL}',/" cypress.config.js
+            
+            cypress_baseurl=$(cf routes | grep drupal-test | awk '{print $2"."$3}')
+            cypress_random_pass="$(date | sha256sum | cut -d" " -f1)"
+
+            sed -i "s/^    baseUrl: .*/    baseUrl: 'https:\/\/${cypress_baseurl}',/" cypress.config.js
+            sed -i "s/^      \"test_pass\": .*/      \"test_pass\": \"${cypress_random_pass}\",/" cypress.config.js
+            
             npm install
             npm run cy:test
 
