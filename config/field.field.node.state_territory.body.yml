@@ -6,12 +6,17 @@ dependencies:
     - field.storage.node.body
     - node.type.state_territory
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - simple_html
 id: node.state_territory.body
 field_name: body
 entity_type: node
 bundle: state_territory
-label: Content
+label: 'Page description'
 description: ''
 required: true
 translatable: true

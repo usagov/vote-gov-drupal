@@ -119,7 +119,7 @@
         <a class="usa-link" href="{{ title_url }}" rel="{{ external_rel }}" {{ external_target }}>{{ label | field_value }}
           {% if is_headings_only == true and content.field_bx_external_link | render %}
             <svg class="usa-icon position-relative top-6" aria-hidden="true" role="img">
-              <use xlink:href="/{{ directory }}/dist/assets/img/sprite.svg#launch"></use>
+              <use xlink:href="{{ theme_path }}/dist/assets/img/sprite.svg#launch"></use>
             </svg>
           {% endif %}
         </a>
@@ -131,7 +131,7 @@
       <ul class="usa-collection__meta" aria-label="{{ "More information" | t }}">
         <li class="usa-collection__meta-item position-relative">
           <svg class="usa-icon position-relative bottom-neg-2px" aria-hidden="true" role="img">
-            <use xlink:href="/{{ directory }}/dist/assets/img/sprite.svg#public"></use>
+            <use xlink:href="{{ theme_path }}/dist/assets/img/sprite.svg#public"></use>
           </svg>
           {{ content.field_bx_external_link.0["#title"] }}
         </li>

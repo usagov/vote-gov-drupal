@@ -22,7 +22,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p class="text-align-left text-align-center text-align-right"> <h2 class="text-align-left text-align-center text-align-right"> <h3 class="text-align-left text-align-center text-align-right"> <h4 class="text-align-left text-align-center text-align-right"> <h5 class="text-align-left text-align-center text-align-right"> <h6 class="text-align-left text-align-center text-align-right"> <strong> <em> <u> <a href> <ul> <ol reversed start> <li> <drupal-media data-entity-type data-entity-uuid alt data-align>'
+      allowed_html: '<br> <p class="text-align-left text-align-center text-align-right"> <h2 class="text-align-left text-align-center text-align-right"> <h3 class="text-align-left text-align-center text-align-right"> <h4 class="text-align-left text-align-center text-align-right"> <h5 class="text-align-left text-align-center text-align-right"> <h6 class="text-align-left text-align-center text-align-right"> <a class="usa-button" href> <strong> <em> <u> <ul> <ol reversed start> <li> <drupal-media data-entity-type data-entity-uuid alt data-align>'
       filter_html_help: true
       filter_html_nofollow: false
   media_embed:

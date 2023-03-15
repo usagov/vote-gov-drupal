@@ -8,8 +8,8 @@ _core:
   default_config_hash: J3MtGne879ZegCX2RuZn139w-FbITebjlH7TOjuU7K8
 id: vote_gov_page_title
 theme: vote_gov
-region: content
-weight: -4
+region: page_title
+weight: -5
 provider: null
 plugin: page_title_block
 settings:

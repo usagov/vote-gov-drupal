@@ -1,28 +1,28 @@
-uuid: f78d779b-5caa-4418-8ff1-ae5f5371ff9e
+uuid: e5a33e7a-f434-4ec0-b2d9-f34c19562e8f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
-    - node.type.landing
+    - field.storage.node.field_body
+    - node.type.page
   module:
     - allowed_formats
     - text
 third_party_settings:
   allowed_formats:
     allowed_formats:
-      - simple_html
-id: node.landing.body
-field_name: body
+      - basic_html
+id: node.page.field_body
+field_name: field_body
 entity_type: node
-bundle: landing
-label: 'Page description'
+bundle: page
+label: Content
 description: ''
 required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  display_summary: true
+  display_summary: false
   required_summary: false
 field_type: text_with_summary
