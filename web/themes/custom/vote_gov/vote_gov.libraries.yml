@@ -32,4 +32,3 @@ remote_video:
   version: VERSION
   js:
     dist/js/bx-remote-video.js: { minified: true }
-

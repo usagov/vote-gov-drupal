@@ -31,5 +31,3 @@ function vote_gov_preprocess(&$variables) {
     $variables['currentnode'] = $node;
   }
 }
-
-
