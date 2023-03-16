@@ -6,12 +6,12 @@ describe('Government Banner Function', () => {
     cy.signin(Cypress.env('roles').site_admin.username, Cypress.env('test_pass'))
 
     // each role should have access to edit
-    cy.request('http://vote-gov.lndo.site/block/1').then((response) => {
+    cy.request('/block/1').then((response) => {
   expect(response.status).to.eq(200)
     })
 
     // only site admin should be able to create banner, editor and manager should not have access to url
-    cy.request('http://vote-gov.lndo.site//block/add/government_banner').then((response) => {
+    cy.request('//block/add/government_banner').then((response) => {
       expect(response.status).to.eq(200)
         })
 
@@ -22,13 +22,13 @@ describe('Government Banner Function', () => {
     cy.signin(Cypress.env('roles').content_editor.username, Cypress.env('test_pass'))
 
      // each role should have access to edit
-    cy.request('http://vote-gov.lndo.site/block/1').then((response) => {
+    cy.request('/block/1').then((response) => {
       expect(response.status).to.eq(200)
         }) 
 
     // only site admin should be able to create banner, editor and manager should not have access to url
     cy.request({
-          url: 'http://vote-gov.lndo.site/block/add/government_banner',
+          url: '/block/add/government_banner',
           failOnStatusCode:false,
       }).then((resp) => {
           expect(resp.status).to.eq(403)
@@ -41,13 +41,13 @@ describe('Government Banner Function', () => {
     cy.signin(Cypress.env('roles').content_manager.username, Cypress.env('test_pass'))
 
      // each role should have access to edit
-    cy.request('http://vote-gov.lndo.site/block/1').then((response) => {
+    cy.request('/block/1').then((response) => {
       expect(response.status).to.eq(200)
         })
 
     // only site admin should be able to create banner, editor and manager should not have access to url 
     cy.request({
-          url: 'http://vote-gov.lndo.site/block/add/government_banner',
+          url: '/block/add/government_banner',
           failOnStatusCode:false,
       }).then((resp) => {
           expect(resp.status).to.eq(403)
