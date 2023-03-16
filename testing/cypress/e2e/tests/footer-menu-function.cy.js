@@ -1,4 +1,4 @@
-/// <reference types="cypress" />
+// <reference types="cypress" />
 
 
 describe('Footer Menu Function', () => {
@@ -8,7 +8,7 @@ describe('Footer Menu Function', () => {
     // before test create a link
     cy.signin(Cypress.env('roles').site_admin.username, Cypress.env('test_pass'))
 
-    cy.visit('http://vote-gov.lndo.site/admin/structure/menu/manage/footer/add')
+    cy.visit('/admin/structure/menu/manage/footer/add')
 
     cy.get('[data-drupal-selector="edit-title-0-value"]').type('Cypress Test Link')
     cy.get('[data-drupal-selector="edit-link-0-uri"]').type('https://www.bixal.com/')
@@ -30,7 +30,7 @@ describe('Footer Menu Function', () => {
     // after delete the link that was created
     cy.signin(Cypress.env('roles').site_admin.username, Cypress.env('test_pass'))
 
-    cy.visit('http://vote-gov.lndo.site/admin/structure/menu/manage/footer')
+    cy.visit('/admin/structure/menu/manage/footer')
 
     cy.get('[class="dropbutton__toggle"]').then(dropDown => {
       cy.get(dropDown[0]).click()
@@ -50,7 +50,7 @@ describe('Footer Menu Function', () => {
     cy.signin(Cypress.env('roles').site_admin.username, Cypress.env('test_pass'))
 
     // admin role should have access to edit
-    cy.request('http://vote-gov.lndo.site/admin/structure/menu/manage/footer/add').then((response) => {
+    cy.request('/admin/structure/menu/manage/footer/add').then((response) => {
   expect(response.status).to.eq(200)
     })
 
@@ -62,7 +62,7 @@ describe('Footer Menu Function', () => {
 
     // content editor should not have access to url
     cy.request({
-          url: 'http://vote-gov.lndo.site/admin/structure/menu/manage/footer/add',
+          url: '/admin/structure/menu/manage/footer/add',
           failOnStatusCode:false,
       }).then((resp) => {
           expect(resp.status).to.eq(403)
@@ -75,7 +75,7 @@ describe('Footer Menu Function', () => {
     cy.signin(Cypress.env('roles').content_manager.username, Cypress.env('test_pass'))
 
      // content manager should have access to edit
-    cy.request('http://vote-gov.lndo.site/admin/structure/menu/manage/footer/add').then((response) => {
+    cy.request('/admin/structure/menu/manage/footer/add').then((response) => {
       expect(response.status).to.eq(200)
         })
 
