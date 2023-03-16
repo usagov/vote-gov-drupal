@@ -58,13 +58,6 @@ jobs:
             npm run cy:backEnd || exit 0
             npm run cy:test || exit 0
 
-            # ./scripts/pipeline/cloud-gov-remote-command.sh \
-            #   "vote-drupal-test" \
-            #   "drush user:cancel \
-            #   --yes \
-            #   ${TEST_ACCOUNT_USER} \
-            #   --delete-content"
-
       - store_artifacts:
           path: testing/cypress/screenshots
   deploy:
