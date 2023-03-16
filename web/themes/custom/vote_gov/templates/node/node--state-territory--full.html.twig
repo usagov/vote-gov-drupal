@@ -8,27 +8,46 @@
 {% extends 'node.html.twig' %}
 
 {% block content %}
-    <h3>{{ 'How to register to vote in @state_name' | t({ '@state_name': label | render }) }}</h3>
-    <p>{{ 'Start your online registration on <a href="@link">@state_name election website</a>.' | t({
-        '@link': content.field_registration_link | field_value | render,
-        '@state_name': label | render
-      }) }}
-      {{ content.field_override_registration_link | field_value }}</p>
-    <p>{{ 'You can also register to vote by mail or in person on ' | t  }}{{ content.field_more_info_link | field_value }}{{ content.field_override_more_info_link | field_value }}</p>
 
-    <h3>{{ 'Voter registration deadlines in ' | t }}{{ content.field_state_name | field_value }}</h3>
-    <ul>
-      <li>{{ 'Online registration deadline: ' | t }}{{ content.field_online_deadline | field_value }}{{ content.field_g_online_deadline | field_value }}</li>
-      {# logic needed to display postmarked or received #}
-      <li>{{ 'Register by mail deadline: ' | t }}{{ 'Must be postmarked by ' }}{{ content.field_mail_postmarked_deadline | field_value }}{{ content.field_g_mail_postmarked_deadline | field_value }}</li>
-      <li>{{ 'Register by mail deadline: ' | t }}{{ 'Must be received by ' }}{{ content.field_mail_received_deadline | field_value }}{{ content.field_g_mail_received_deadline | field_value }}</li>
-      <li>{{ 'In person registration deadline: ' | t }}{{ content.field_in_person_deadline | field_value }}{{ content.field_g_in_person_deadline | field_value }}</li>
+    {# How to register to vote #}
+    <h2>{{ 'How to register to vote in @state_name' | t({ '@state_name': label | render }) }}</h2>
+    {% if content.field_registration_link | render %}
+      <p>{{ 'Start your online registration on <a href="@link">@state_name\'s election website</a>.' | t({
+          '@link': content.field_override_registration_link | field_value | render | default( content.field_registration_link | field_value | render ),
+          '@state_name': label | render
+        }) }}
+      </p>
+    {% endif %}
+
+    {% if content.field_more_info_link | render %}
+      <p>{{ 'You can also register to vote by mail or in person on <a href="@link">@state_name\'s election website</a>.' | t({
+          '@link': content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ),
+          '@state_name': label | render
+        }) }}
+      </p>
+    {% endif %}
+
+    {# Registration deadlines #}
+    <h2>{{ 'Voter registration deadlines in @state_name' | t ({ '@state_name': label | render }) }}</h2>
+    <ul class="registered-resources">
+      {% include '@vote_gov/partial/registration-date-online.html.twig' %}
+      {% include '@vote_gov/partial/registration-date-mail.html.twig' %}
+      {% include '@vote_gov/partial/registration-date-in-person.html.twig' %}
     </ul>
 
-    <h3>{{ 'How to check your voter registration' | t }}</h3>
-    <p>{{ 'You can confirm your voter registration status on ' | t }}{{ content.field_confirm_registration_link | field_value }}{{ content.field_override_confirm_reg_link }}</p>
-
+    {# Check voter registration #}
+    {% if content.field_more_info_link | render %}
+    <h2>{{ 'How to check your voter registration' | t }}</h2>
+      <p>{{ 'You can confirm your voter registration status on <a href="@link">@state_name\'s election website</a>.' | t ({
+        '@link': content.field_override_confirm_reg_link | field_value | render | default( content.field_confirm_registration_link | field_value | render ),
+        '@state_name': label | render
+        }) }}
+      </p>
+    {% endif %}
+    {# NVRF Selector and download button #}
     <div>
       {{ drupal_entity('block_content', 3) }}
     </div>
+
+     <p> {{'Last updated ' | t }}{{ node.revision_timestamp.value | date('F d, Y') }} </p>
 {% endblock %}
