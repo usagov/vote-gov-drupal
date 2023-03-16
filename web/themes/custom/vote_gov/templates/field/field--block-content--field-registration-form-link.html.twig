@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * Theme override for a field.
+ *
+ */
+#}
+
+{# NVRF selector fields #}
+<select class="usa-select  max-width-input" name="userselection" id="js-user-selection">
+  {% for item in items %}
+    <option value="{{ item.content['#url_title'] }}"{{ option.selected ? ' selected="selected"' }}>{{ item.content['#title'] }}</option>
+  {% endfor %}
+</select>

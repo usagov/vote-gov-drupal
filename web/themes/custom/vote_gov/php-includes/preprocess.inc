@@ -24,4 +24,10 @@ function vote_gov_preprocess(&$variables) {
   // Set global variable for site name.
   $sitename = Drupal::config('system.site')->get('name');
   $variables['sitename'] = $sitename;
+
+  // Set variable for node object.
+  $node = \Drupal::request()->attributes->get('node');
+  if (!empty($node)) {
+    $variables['currentnode'] = $node;
+  }
 }
