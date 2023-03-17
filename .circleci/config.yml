@@ -163,8 +163,10 @@ workflows:
     jobs:
       - approval:
           type: approval
-          requires:
-            - prod
+          filters:
+            branches:
+              only:
+                - prod
       - php-lint
       - build-theme:
           filters:
