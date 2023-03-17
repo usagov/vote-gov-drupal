@@ -23,7 +23,7 @@ lando set
 
 ```
 lando db-import <filename>
-lando drush retune
+lando retune
 ```
 
 You can get the local site urls using this command.
