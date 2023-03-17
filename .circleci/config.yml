@@ -15,10 +15,20 @@ jobs:
       - run:
           name: "Build theme"
           command: |
-            npm install -g gulp
-            cd web/themes/custom/vote_gov
-            npm install
-            npm run build
+            source ./scripts/pipeline/build-theme.sh
+      - persist_to_workspace:
+          root: ~/
+          paths: 
+            - project/web/themes/custom/vote_gov/dist
+  build-theme-prod:
+    docker:
+      - image: node:18-slim
+    steps:
+      - checkout
+      - run:
+          name: "Build theme production"
+          command: |
+            source ./scripts/pipeline/build-theme.sh
       - persist_to_workspace:
           root: ~/
           paths: 
@@ -70,6 +80,29 @@ jobs:
             source ./scripts/pipeline/deb-cf-install.sh
       - run:
           name: "Deploy"
+          command: |
+            source ./scripts/pipeline/cloud-gov-login.sh "${CIRCLE_BRANCH}"
+
+            mv manifest.yml manifest.tmp
+            envsubst < manifest.tmp > manifest.yml
+            
+            if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "test" || "${CIRCLE_BRANCH}" == "stage" || "${CIRCLE_BRANCH}" == "prod" ]]; then            
+              cf push
+            fi
+  deploy-prod:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: "Install cloudfoundry dependencies"
+          command: |
+            source ./scripts/pipeline/deb-basic-deps.sh
+            source ./scripts/pipeline/deb-cf-install.sh
+      - run:
+          name: "Deploy production"
           command: |
             source ./scripts/pipeline/cloud-gov-login.sh "${CIRCLE_BRANCH}"
 
@@ -164,12 +197,19 @@ workflows:
       and:
         - equal: [webhook, << pipeline.trigger_source >>]
     jobs:
-      - approval:
+      - production-approval:
           type: approval
           filters:
             branches:
               only:
                 - prod
+      - build-theme-prod:
+          filters:
+            branches:
+              only:
+                - prod
+          requires:
+            - production-approval
       - php-lint
       - build-theme:
           filters:
@@ -177,20 +217,17 @@ workflows:
               only:
                 - dev
                 - stage
-                - prod
                 - test
           requires:
             - php-lint
       - cypress:
           requires:
-            # - deploy-cypress
             - deploy-test
           filters:
             branches:
               only:
                 - dev
                 - stage
-                - prod
                 - test
       - deploy:
           filters:
@@ -198,17 +235,22 @@ workflows:
               only:
                 - dev
                 - stage
-                - prod
                 - test
           requires:
             - cypress
+      - deploy-prod:
+          filters:
+            branches:
+              only:
+                - prod
+          requires:
+            - build-theme-prod
       - deploy-test:
           filters:
             branches:
               only:
                 - dev
                 - stage
-                - prod
                 - test
           requires:
             - build-theme

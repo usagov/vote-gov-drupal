@@ -3,7 +3,8 @@
 ## To work for rootless and root images.
 [ "$(whoami)" != "root" ] && sudo="sudo"
 
+Echo "Installing basic dependencies..."
 {
-  ${sudo} apt update
-  ${sudo} apt install -y wget gnupg gettext
-} 2>&1 >/dev/null
+  ${sudo} apt-get update
+  ${sudo} apt-get install -y wget gnupg gettext
+} >/dev/null 2>&1

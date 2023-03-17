@@ -7,4 +7,4 @@ echo "Installing PHP CodeSniffer..."
   composer install
   cd ..
   export PATH="$PATH:$HOME/project/coder/vendor/bin"
-} 2>&1 >/dev/null
+} >/dev/null 2>&1

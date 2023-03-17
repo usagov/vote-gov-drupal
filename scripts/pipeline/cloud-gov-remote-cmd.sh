@@ -8,4 +8,4 @@ command=$2
 echo "Running command: '$(echo ${command} | cut -d' ' -f1,2)'..."
 {
   cf ssh ${application} -c "${command}"
-}  2>&1 >/dev/null
+} >/dev/null 2>&1

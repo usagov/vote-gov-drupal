@@ -11,4 +11,4 @@ echo "Installing composer..."
   php -r "unlink('composer-setup.php');"
   chmod +x composer.phar
   ${sudo} mv composer.phar /usr/local/bin/composer
-} 2>&1 >/dev/null
+} >/dev/null 2>&1
