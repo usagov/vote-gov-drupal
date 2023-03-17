@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## To work for rootless and root images.
-[ "$(whoami)" != "root" ] && $sudo="sudo"
+[ "$(whoami)" != "root" ] && sudo="sudo"
 
 echo "Installing CloudFoundry repository..."
 {
