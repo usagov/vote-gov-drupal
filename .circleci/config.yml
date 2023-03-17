@@ -36,12 +36,8 @@ jobs:
       - run:
           name: "Install cloudfoundry dependencies"
           command: |
-            apt update
-            apt install -y wget gnupg
-            wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add -
-            echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-            apt update
-            apt install -y cf8-cli gettext git
+            source ./scripts/pipeline/deb-basic-deps.sh
+            source ./scripts/pipeline/deb-cf-install.sh
       - run:
           name: "Cypress"
           command: |
@@ -70,10 +66,8 @@ jobs:
       - run:
           name: "Install cloudfoundry dependencies"
           command: |
-            wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
-            echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-            sudo apt update
-            sudo apt install -y cf8-cli gettext git
+            source ./scripts/pipeline/deb-basic-deps.sh
+            source ./scripts/pipeline/deb-cf-install.sh
       - run:
           name: "Deploy"
           command: |
@@ -95,10 +89,8 @@ jobs:
       - run:
           name: "Install cloudfoundry dependencies"
           command: |
-            wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
-            echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-            sudo apt update
-            sudo apt install -y cf8-cli gettext git
+            source ./scripts/pipeline/deb-basic-deps.sh
+            source ./scripts/pipeline/deb-cf-install.sh
       - run:
           name: "Deploy"
           command: |
@@ -119,13 +111,10 @@ jobs:
       - run:
           name: "Install cloudfoundry & dependencies"
           command: |
-            wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
-            echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-            wget https://dev.mysql.com/get/mysql-apt-config_0.8.18-1_all.deb
-            sudo dpkg -i mysql-apt-config_0.8.18-1_all.deb
-            sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 467B942D3A79BD29
-            sudo apt update
-            sudo apt install -y cf8-cli mysql-client
+            source ./scripts/pipeline/deb-basic-deps.sh
+            source ./scripts/pipeline/deb-cf-install.sh
+            source ./scripts/pipeline/deb-mysql-client-install.sh
+
             cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/1.1.0/cf-service-connect-linux-amd64
 
       - run:
@@ -146,22 +135,12 @@ jobs:
           name: "Install PHP dependencies"
           command: |
             apk add git curl php-curl php-dom php-gd php-xml
-            php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-            php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-            php composer-setup.php
-            php -r "unlink('composer-setup.php');"
-            mv composer.phar /usr/local/bin/composer
+            source ./scripts/pipeline/composer-install.sh
       - checkout
       - run:
           name: "PHP CodeSniffer"
           command: |
-            git clone --branch 8.3.x http://git.drupal.org/project/coder.git
-            cd coder
-            composer install
-            cd ..
-            ls -al
-            export PATH="$PATH:$HOME/project/coder/vendor/bin"
-            echo $PWD
+            source ./scripts/pipeline/phpcs-install.sh
             if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "test" || "${CIRCLE_BRANCH}" == "stage" || "${CIRCLE_BRANCH}" == "prod" ]]; then
               phpcs \
                 --standard=Drupal \
@@ -182,6 +161,10 @@ workflows:
       and:
         - equal: [webhook, << pipeline.trigger_source >>]
     jobs:
+      - approval:
+          type: approval
+          requires:
+            - prod
       - php-lint
       - build-theme:
           filters:
