@@ -135,8 +135,11 @@ jobs:
           name: "Install PHP dependencies"
           command: |
             apk add git curl php-curl php-dom php-gd php-xml
-            source ./scripts/pipeline/composer-install.sh
       - checkout
+      - run:
+          name: Install PHPCS
+          command: |
+            source ./scripts/pipeline/composer-install.sh
       - run:
           name: "PHP CodeSniffer"
           command: |
