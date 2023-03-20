@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "808d384d98d0706989c5e95dd6aafc46",
+    "content-hash": "9f424c074220c1432556ca167a1c927b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -8632,8 +8632,14 @@
             "version": "8.3.16",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/coder.git",
+                "url": "https://github.com/pfrenssen/coder.git",
                 "reference": "d6f6112e5e84ff4f6baaada223c93dadbd6d3887"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pfrenssen/coder/zipball/d6f6112e5e84ff4f6baaada223c93dadbd6d3887",
+                "reference": "d6f6112e5e84ff4f6baaada223c93dadbd6d3887",
+                "shasum": ""
             },
             "require": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
@@ -11986,6 +11992,7 @@
     "stability-flags": {
         "drupal-tome/tome_drush": 20,
         "drupal/inline_entity_form": 5,
+        "drupal/node_revision_delete": 5,
         "drupal/publication_date": 10
     },
     "prefer-stable": true,
