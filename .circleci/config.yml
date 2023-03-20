@@ -178,7 +178,7 @@ jobs:
             npm install -g snyk
             snyk auth
             snyk code
-downsync:
+  downsync:
     docker:
       - image: cimg/base:stable
     environment:
