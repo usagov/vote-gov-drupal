@@ -3,6 +3,8 @@
 application=$1
 command=$2
 
+path="PATH=$PATH:/home/vcap/app/php/bin:/home/vcap/app/vendor/drush/drush"
+
 echo $1
 echo $2
 
@@ -10,5 +12,5 @@ echo $2
 
 echo "Running command: '$(echo ${command} | cut -d' ' -f1,2)'..."
 {
-  cf ssh ${application} -c "${command}"
+  ${path}; cf ssh ${application} -c "${command}"
 } >/dev/null 2>&1
