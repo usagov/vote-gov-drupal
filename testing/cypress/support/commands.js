@@ -15,7 +15,7 @@ Cypress.Commands.add('createUser', (user, pass, role) => {
     let drush = "lando ssh -c \"drush";
   }
   
-  cy.exec(`${drush} user-create \"${user}\" --mail=\"${user}@example.com\" --password=\"${pass}\""`,
+  cy.exec(`${drush} user-create \"${user}\" --mail=\"${user}@example.com\" --password=\"${pass}\"`,
     //Code will continue to execute if the given user account data already exists
     { failOnNonZeroExit: true }
   );
@@ -55,7 +55,7 @@ Cypress.Commands.add('deleteUser', function (user) {
   else {
     let drush = "lando ssh -c \"drush";
   }
-  cy.exec(`${drush} -y user:cancel --delete-content \"${user}\""`, {
+  cy.exec(`${drush} -y user:cancel --delete-content \"${user}\"`, {
       timeout: 120000
   });
 });
