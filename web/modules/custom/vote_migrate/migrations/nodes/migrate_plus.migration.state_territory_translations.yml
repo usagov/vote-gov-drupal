@@ -1,7 +1,7 @@
 # Migration configuration for State/Territory content type - Translations.
 id: state_territory_translations
 label: State/Territory Nodes Translations
-migration_group: nodes
+migration_group: nodes__state_territory
 source:
   plugin: url
   data_fetcher_plugin: http
@@ -17,6 +17,7 @@ source:
     - localhost/vote_migrate/import_nodes_state_territory/translation/vi/json
     - localhost/vote_migrate/import_nodes_state_territory/translation/ypk/json
     - localhost/vote_migrate/import_nodes_state_territory/translation/zh/json
+    - localhost/vote_migrate/import_nodes_state_territory/translation/zh-hans/json
   item_selector: data
   fields:
     - name: id
@@ -40,6 +41,18 @@ source:
     - name: confirm_registration_link
       label: 'Confirm Registration Link'
       selector: confirm_registration_link
+    - name: hp_link_override
+      label: 'HP Link Override'
+      selector: hp_link_override
+    - name: registration_link_override
+      label: 'Registration Link Override'
+      selector: registration_link_override
+    - name: more_info_link_override
+      label: 'More Info Link Override'
+      selector: more_info_link_override
+    - name: confirm_registration_link_override
+      label: 'Confirm Registration Link Override'
+      selector: confirm_registration_link_override
     - name: in_person_deadline
       label: 'In-person Deadline'
       selector: default_ip_deadline
@@ -86,20 +99,36 @@ process:
       plugin: skip_on_empty
       method: process
       source: confirm_registration_link
+  field_override_election_hp_link/uri:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: hp_link_override
+  field_override_registration_link/uri:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: registration_link_override
+  field_override_more_info_link/uri:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: more_info_link_override
+  field_override_confirm_reg_link/uri:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: confirm_registration_link_override
   field_g_in_person_deadline:
     -
       plugin: skip_on_empty
       method: process
       source: in_person_deadline
-    -
-      plugin: convert_state_territory_deadline
   field_g_mail_postmarked_deadline:
     -
       plugin: skip_on_empty
       method: process
       source: mail_postmarked_deadline
-    -
-      plugin: convert_state_territory_deadline
   langcode: langcode
   content_translation_source:
     plugin: default_value
@@ -110,7 +139,7 @@ process:
   moderation_state:
     plugin: static_map
     source: state
-    default_value: draft
+    default_value: published
     map:
       '0': draft
       '1': published
