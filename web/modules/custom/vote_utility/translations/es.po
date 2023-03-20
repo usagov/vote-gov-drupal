@@ -15,6 +15,10 @@ msgstr "Español"
 msgid "Select language"
 msgstr "Seleccione el idioma"
 
+#main
+msgid "Go back"
+msgstr "Volver"
+
 #identifier
 msgid "An official website of the %link%."
 msgstr "Un sitio web oficial de la %link%"
