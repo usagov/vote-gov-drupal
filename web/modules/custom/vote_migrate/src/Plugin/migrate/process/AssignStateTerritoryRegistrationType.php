@@ -6,7 +6,6 @@ use Drupal\migrate\ProcessPluginBase;
 use Drupal\migrate\MigrateExecutableInterface;
 use Drupal\migrate\Row;
 
-
 /**
  * Perform custom value transformations.
  *
@@ -21,24 +20,23 @@ use Drupal\migrate\Row;
  *   plugin: assign_state_territory_registration_type
  *   source: text
  * @endcode
- *
  */
-
 class AssignStateTerritoryRegistrationType extends ProcessPluginBase {
-	/**
-	 * {@inheritdoc}
-	*/
-	public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
-        switch ($value) {
-            case 'online':
-                return ['online', 'by-mail', 'in-person'];
-                break;
-            case 'by-mail':
-                return ['by-mail', 'in-person'];
-                break;
-            default:
-                return $value;
-                break;
-        }
-	}
+
+  /**
+   * {@inheritdoc}
+   */
+  public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
+    switch ($value) {
+      case 'online':
+        return ['online', 'by-mail', 'in-person'];
+
+      case 'by-mail':
+        return ['by-mail', 'in-person'];
+
+      default:
+        return $value;
+    }
+  }
+
 }

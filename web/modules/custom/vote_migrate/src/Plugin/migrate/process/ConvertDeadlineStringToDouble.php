@@ -6,7 +6,6 @@ use Drupal\migrate\ProcessPluginBase;
 use Drupal\migrate\MigrateExecutableInterface;
 use Drupal\migrate\Row;
 
-
 /**
  * Perform custom value transformations.
  *
@@ -21,15 +20,15 @@ use Drupal\migrate\Row;
  *   plugin: convert_state_territory_deadline
  *   source: text
  * @endcode
- *
  */
-
 class ConvertDeadlineStringToDouble extends ProcessPluginBase {
-	/**
-	 * {@inheritdoc}
-	*/
-	public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
-        $value = preg_replace('/[^0-9]/', '', $value);
-		return is_numeric($value) ? (double)$value : 0;
-	}
+
+  /**
+   * {@inheritdoc}
+   */
+  public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
+    $value = preg_replace('/[^0-9]/', '', $value);
+    return is_numeric($value) ? (double) $value : 0;
+  }
+
 }

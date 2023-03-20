@@ -6,7 +6,6 @@ use Drupal\migrate\ProcessPluginBase;
 use Drupal\migrate\MigrateExecutableInterface;
 use Drupal\migrate\Row;
 
-
 /**
  * Perform custom value transformations.
  *
@@ -21,14 +20,14 @@ use Drupal\migrate\Row;
  *   plugin: convert_string_to_boolean
  *   source: text
  * @endcode
- *
  */
-
 class ConvertStringToBoolean extends ProcessPluginBase {
-	/**
-	 * {@inheritdoc}
-	*/
-	public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
-		return $value === 'true' ? true : false;
-	}
+
+  /**
+   * {@inheritdoc}
+   */
+  public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
+    return $value === 'true' ? TRUE : FALSE;
+  }
+
 }
