@@ -175,6 +175,9 @@ jobs:
       - run:
           name: "Snyk"
           command: |
+            {
+              nyk config set api=${SNYK_TOKEN}
+            } >/dev/null 2>&1
             npm install -g snyk
             snyk auth
             snyk code
@@ -230,18 +233,11 @@ workflows:
                 - prod
           requires:
             - build-theme-prod
-      - snyk:
-          filters:
-            branches:
-              ignore:
-                - prod
       - php-lint:
           filters:
             branches:
               ignore:
                 - prod
-          requires:
-            - snyk
       - build-theme:
           filters:
             branches:
@@ -251,6 +247,13 @@ workflows:
                 - test
           requires:
             - php-lint
+      - snyk:
+          filters:
+            branches:
+              ignore:
+                - prod
+          requires:
+            - build-theme
       - deploy-test:
           filters:
             branches:
@@ -259,17 +262,16 @@ workflows:
                 - stage
                 - test
           requires:
-            - build-theme
-
+            - snyk
       - cypress:
-          requires:
-            - deploy-test
           filters:
             branches:
               only:
                 - dev
                 - stage
                 - test
+          requires:
+            - deploy-test
       - deploy:
           filters:
             branches:
