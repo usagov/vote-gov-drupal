@@ -210,7 +210,21 @@ workflows:
                 - prod
           requires:
             - production-approval
-      - php-lint
+      - deploy-prod:
+          filters:
+            branches:
+              only:
+                - prod
+          requires:
+            - build-theme-prod
+
+      - php-lint:
+          filters:
+            branches:
+              only:
+                - dev
+                - stage
+                - test
       - build-theme:
           filters:
             branches:
@@ -220,6 +234,16 @@ workflows:
                 - test
           requires:
             - php-lint
+      - deploy-test:
+          filters:
+            branches:
+              only:
+                - dev
+                - stage
+                - test
+          requires:
+            - build-theme
+
       - cypress:
           requires:
             - deploy-test
@@ -238,22 +262,7 @@ workflows:
                 - test
           requires:
             - cypress
-      - deploy-prod:
-          filters:
-            branches:
-              only:
-                - prod
-          requires:
-            - build-theme-prod
-      - deploy-test:
-          filters:
-            branches:
-              only:
-                - dev
-                - stage
-                - test
-          requires:
-            - build-theme
+
   downsync-workflow:
     when:
       and:
