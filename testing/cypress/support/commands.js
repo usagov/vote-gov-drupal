@@ -9,13 +9,13 @@ Cypress.Commands.add('createUser', (user, pass, role) => {
   let drush = ""
   cy.log("Creating new user...");
   if (Cypress.env('pipeline') === 1) {
-    let drush = "../scripts/pipeline/cloud-gov-remote-command.sh \"vote-drupal-test\" \"drush"
+    drush = "../scripts/pipeline/cloud-gov-remote-command.sh \"vote-drupal-test\" \"drush"
   }
   else {
-    let drush = "lando ssh -c \"drush";
+    drush = "lando ssh -c \"drush";
   }
   
-  cy.exec(`${drush} user-create \"${user}\" --mail=\"${user}@example.com\" --password=\"${pass}\"`,
+  cy.exec(`${drush} user-create "${user}" --mail=\"${user}@example.com\" --password=\"${pass}\""`,
     //Code will continue to execute if the given user account data already exists
     { failOnNonZeroExit: true }
   );
@@ -50,12 +50,12 @@ Cypress.Commands.add('deleteUser', function (user) {
   let drush = ""
 
   if (Cypress.env('pipeline') === 1) {
-    let drush = "../scripts/pipeline/cloud-gov-remote-command.sh \"vote-drupal-test\" \"drush"
+    drush = "../scripts/pipeline/cloud-gov-remote-command.sh \"vote-drupal-test\" \"drush"
   }
   else {
-    let drush = "lando ssh -c \"drush";
+    drush = "lando ssh -c \"drush";
   }
-  cy.exec(`${drush} -y user:cancel --delete-content \"${user}\"`, {
+  cy.exec(`${drush} -y user:cancel --delete-content \"${user}\""`, {
       timeout: 120000
   });
 });
