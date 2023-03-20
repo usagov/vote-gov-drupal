@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  snyk: snyk/snyk@1.4.1
 parameters:
   backup:
     type: string
@@ -120,6 +122,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/
+      - snyk/scan
       - run:
           name: "Install cloudfoundry dependencies"
           command: |
