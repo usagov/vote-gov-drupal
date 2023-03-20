@@ -7,7 +7,7 @@
 Cypress.Commands.add('createUser', (user, pass, role) => {
   
   let drush = ""
-
+  cy.log("Creating new user...")
   if (Cypress.env('pipeline') === 1) {
     let drush = "../scripts/pipeline/cloud-gov-remote-command.sh \"vote-drupal-test\" \"drush"
   }
@@ -17,16 +17,17 @@ Cypress.Commands.add('createUser', (user, pass, role) => {
   
   cy.exec(`${drush} user-create \"${user}\" --mail=\"${user}@example.com\" --password=\"${pass}\""`,
     //Code will continue to execute if the given user account data already exists
-    { failOnNonZeroExit: false }
+    { failOnNonZeroExit: true }
   );
 
+  cy.log("Adding user to role...")
   cy.exec(
     `${drush} user-add-role \"${role}\" \"${user}\""`,
-    { failOnNonZeroExit: false }
+    { failOnNonZeroExit: true }
   );
 
   cy.exec(`${drush} user-information \"${user}\""`,
-  { failOnNonZeroExit: false }
+  { failOnNonZeroExit: true }
   );
   //we didn’t explicitly set the failOnNonZeroExit property here and the test will fail
   //if the given user account doesn’t exist.
