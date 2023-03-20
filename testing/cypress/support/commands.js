@@ -7,7 +7,7 @@
 Cypress.Commands.add('createUser', (user, pass, role) => {
   
   let drush = ""
-  cy.log("Creating new user...")
+  cy.log("Creating new user...");
   if (Cypress.env('pipeline') === 1) {
     let drush = "../scripts/pipeline/cloud-gov-remote-command.sh \"vote-drupal-test\" \"drush"
   }
@@ -20,7 +20,7 @@ Cypress.Commands.add('createUser', (user, pass, role) => {
     { failOnNonZeroExit: true }
   );
 
-  cy.log("Adding user to role...")
+  cy.log("Adding user to role...");
   cy.exec(
     `${drush} user-add-role \"${role}\" \"${user}\""`,
     { failOnNonZeroExit: true }
@@ -31,7 +31,7 @@ Cypress.Commands.add('createUser', (user, pass, role) => {
   );
   //we didn’t explicitly set the failOnNonZeroExit property here and the test will fail
   //if the given user account doesn’t exist.
-
+  cy.log("Done");
 });
 
 
