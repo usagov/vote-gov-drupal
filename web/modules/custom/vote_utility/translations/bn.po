@@ -48,7 +48,7 @@ msgstr "সরকারি তথ্য ও সেবা"
 msgid "in partnership with"
 msgstr "এর সাথে অংশীদারিত্বে"
 
-msgid "In partnership with U.S. Election Assistance Commission"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
 msgstr "এর সাথে অংশীদারিত্বে U.S. Election Assistance Commission"
 
 msgid "Follow Vote.gov on Twitter"

@@ -49,7 +49,7 @@ msgstr "Impormasyon at mga serbisyo ng gobyerno"
 msgid "in partnership with"
 msgstr "sa pakikipagtulungan sa"
 
-msgid "In partnership with U.S. Election Assistance Commission"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
 msgstr "sa pakikipagtulungan sa Election Assistance Commission"
 
 msgid "Follow Vote.gov on Twitter"

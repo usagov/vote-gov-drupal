@@ -48,7 +48,7 @@ msgstr "W1ashindoonj7 dahane' d00 bee 1k1 an7da'awo'"
 msgid "in partnership with"
 msgstr "yi[ nidaalnish"
 
-msgid "In partnership with U.S. Election Assistance Commission"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
 msgstr "U.S. Election Assistance Commission yi[ nidaalnish"
 
 msgid "Follow Vote.gov on Twitter"

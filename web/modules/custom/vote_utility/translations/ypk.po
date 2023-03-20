@@ -48,7 +48,7 @@ msgstr "Kavemem ungipiillu salqumsugillu"
 msgid "in partnership with"
 msgstr "ilalkiilluteng"
 
-msgid "In partnership with U.S. Election Assistance Commission"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
 msgstr "ilalkiilluteng U.S. Election Assistance Commission"
 
 msgid "Follow Vote.gov on Twitter"

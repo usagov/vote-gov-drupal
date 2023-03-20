@@ -48,7 +48,7 @@ msgstr "정부 관련 정보 및 제공 서비스"
 msgid "in partnership with"
 msgstr "협력 제공 기관"
 
-msgid "In partnership with U.S. Election Assistance Commission"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
 msgstr "협력 제공 기관: U.S. Election Assistance Commission"
 
 msgid "Follow Vote.gov on Twitter"
