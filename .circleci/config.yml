@@ -38,7 +38,7 @@ jobs:
       - image: cypress/included:cypress-12.3.0-node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
     environment:
       cypress_pipeline: 1
-      cypress_application_name: "vote-drupal-test"
+      cypress_cloudgov_application_name: "vote-drupal-test"
     steps:
       - checkout
       - attach_workspace:

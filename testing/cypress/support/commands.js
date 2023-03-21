@@ -9,7 +9,7 @@ Cypress.Commands.add('createUser', (user, pass, role) => {
   let drush = ""
 
   if (Cypress.env('pipeline') === 1) {
-    let drush = "../scripts/pipeline/cloud-gov-remote-command.sh '" + Cypress.env(cloudgov_app_name) + "' 'drush"
+    let drush = "../scripts/pipeline/cloud-gov-remote-command.sh '" + Cypress.env(cloudgov_application_name) + "' 'drush"
   }
   else {
     let drush = "lando ssh -c 'drush";
@@ -49,7 +49,7 @@ Cypress.Commands.add('deleteUser', function (user) {
   let drush = ""
 
   if (Cypress.env('pipeline') === 1) {
-    let drush = "../scripts/pipeline/cloud-gov-remote-command.sh '" + Cypress.env(cloudgov_app_name) + "' 'drush"
+    let drush = "../scripts/pipeline/cloud-gov-remote-command.sh '" + Cypress.env(cloudgov_application_name) + "' 'drush"
   }
   else {
     let drush = "lando ssh -c 'drush";
