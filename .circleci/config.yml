@@ -168,8 +168,8 @@ jobs:
   snyk:
     docker:
       - image: snyk/snyk:php
-    environment:
-      SNYK_TOKEN: ${SNYK_TOKEN}
+    # environment:
+    #   SNYK_TOKEN: ${SNYK_TOKEN }
     steps:
       - checkout
       - attach_workspace:
@@ -177,7 +177,7 @@ jobs:
       - run:
           name: "Snyk"
           command: |
-            SNYK_TOKEN=${SNYK_TOKEN}; snyk test --severity-threshold=$THRESHOLD
+            snyk test --org=${SNYK_ORG} --severity-threshold=$THRESHOLD
   downsync:
     docker:
       - image: cimg/base:stable
