@@ -62,8 +62,8 @@ jobs:
             sed -i "s/^      \"pipeline\": .*/      \"pipeline\": 1,/" cypress.config.js
             
             npm install
-            npm run cy:backEnd || exit 0
-            npm run cy:test || exit 0
+            npm run cy:backEnd
+            npm run cy:test
 
       - store_artifacts:
           path: testing/cypress/screenshots
@@ -151,17 +151,13 @@ jobs:
           name: "PHP CodeSniffer"
           command: |
             source ./scripts/pipeline/phpcs-install.sh
-            if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "test" || "${CIRCLE_BRANCH}" == "stage" || "${CIRCLE_BRANCH}" == "prod" ]]; then
-              phpcs \
-                --standard=Drupal \
-                --ignore=*/node_modules/* \
-                --extensions=php,module,inc,install,test,profile,theme,info,yml,twig \
-                --report=csv \
-                --report-file=/tmp/phpcs.csv \
-                ~/project/web || exit 0
-            else
-              phpcs --standard=Drupal --ignore=*/node_modules/* --extensions=php,module,inc,install,test,profile,theme,info,yml,twig --report=csv --report-file=/tmp/phpcs.csv ${HOME}/project/web
-            fi
+            phpcs \
+              --standard=Drupal \
+              --ignore=*/node_modules/* \
+              --extensions=php,module,inc,install,test,profile,theme,info,yml,twig \
+              --report=csv \
+              --report-file=/tmp/phpcs.csv \
+              ~/project/web
       - store_artifacts:
           path: /tmp/phpcs.csv
           destination: phpcs_<<pipeline.number>>.csv
