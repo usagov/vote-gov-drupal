@@ -67,7 +67,9 @@ describe('Sitewide Banner Function', () => {
 
     // cy.get('[class="ck ck-editor__main"]').find('[contenteditable="true"]').type('test')
 
-    cy.type_ckeditor("ck-blurred ck ck-content ck-editor__editable ck-rounded-corners ck-editor__editable_inline", '<p>test</p>')
+    // cy.type_ckeditor("ck-blurred ck ck-content ck-editor__editable ck-rounded-corners ck-editor__editable_inline", '<p>test</p>')
+
+    cy.type_ckeditor("edit-field-conditional-approval-email-0-value", 'ConditionalApproval@TestEmail.com');
     
     
 
