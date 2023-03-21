@@ -177,7 +177,7 @@ jobs:
       - run:
           name: "Snyk"
           command: |
-            snyk test --severity-threshold=$THRESHOLD
+            SNYK_TOKEN=${SNYK_TOKEN}; snyk test --severity-threshold=$THRESHOLD
   downsync:
     docker:
       - image: cimg/base:stable
