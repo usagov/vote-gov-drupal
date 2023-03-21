@@ -231,6 +231,13 @@ workflows:
             branches:
               ignore:
                 - prod
+      - snyk:
+          filters:
+            branches:
+              ignore:
+                - prod
+          requires:
+            - php-lint
       - build-theme:
           filters:
             branches:
@@ -239,14 +246,7 @@ workflows:
                 - stage
                 - test
           requires:
-            - php-lint
-      - snyk:
-          filters:
-            branches:
-              ignore:
-                - prod
-          requires:
-            - build-theme
+            - snyk
       - deploy-test:
           filters:
             branches:
@@ -255,7 +255,7 @@ workflows:
                 - stage
                 - test
           requires:
-            - snyk
+            - build-theme
       - cypress:
           filters:
             branches:
