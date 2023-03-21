@@ -165,9 +165,9 @@ jobs:
       - store_artifacts:
           path: /tmp/phpcs.csv
           destination: phpcs_<<pipeline.number>>.csv
-  snyk-node:
+  snyk:
     docker:
-      - image: snyk/snyk:node-16
+      - image: snyk/snyk:php
     environment:
       SNYK_TOKEN: ${SNYK_TOKEN}
     steps:
@@ -175,19 +175,7 @@ jobs:
       - attach_workspace:
           at: ~/
       - run:
-          name: "Snyk: Node"
-          command: |
-            cd web/themes/custom/vote_gov
-            snyk test --severity-threshold=$THRESHOLD
-  snyk-php:
-    docker:
-      - image: snyk/snyk:php
-    environment:
-      SNYK_TOKEN: ${SNYK_TOKEN}
-    steps:
-      - checkout
-      - run:
-          name: "Snyk: PHP"
+          name: "Snyk"
           command: |
             snyk test --severity-threshold=$THRESHOLD
   downsync:
@@ -256,14 +244,7 @@ workflows:
                 - test
           requires:
             - php-lint
-      - snyk-php:
-          filters:
-            branches:
-              ignore:
-                - prod
-          requires:
-            - build-theme
-      - snyk-node:
+      - snyk:
           filters:
             branches:
               ignore:
@@ -278,8 +259,7 @@ workflows:
                 - stage
                 - test
           requires:
-            - snyk-node
-            - snyk-php
+            - snyk
       - cypress:
           filters:
             branches:
