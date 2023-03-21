@@ -139,3 +139,6 @@ tooling:
 events:
   post-set:
     - echo "Successfully enabled local development settings and services files!"
+  pre-db-import:
+    # Fix MySQL 8 import issue (dropping DB with Drush). https://github.com/lando/lando/issues/2679
+    - appserver: echo "Dropping the DB with Drush" && drush sql:drop -y
