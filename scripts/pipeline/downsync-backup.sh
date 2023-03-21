@@ -49,13 +49,13 @@ echo "Backing up '${BACKUP_ENV}' database..."
   ## Patch out any MySQL 'SET' commands that require admin.
   sed -i 's/^SET /-- &/' backup_dev.sql
 
-} 2>&1 >/dev/null
+} >/dev/null 2>&1
 
 ## Kill the backgrounded SSH tunnel.
 echo "Cleaning up old connections..."
 {
   kill_pids "connect-to-service"
-} 2>&1 >/dev/null
+} >/dev/null 2>&1
 
 ## Clean up.
 rm -rf backup.txt ~/.mysql
