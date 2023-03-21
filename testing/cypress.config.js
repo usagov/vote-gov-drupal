@@ -16,7 +16,7 @@ reporter: 'cypress-mochawesome-reporter',
     "blockHosts": ["www.google-analytics.com", "ssl.google-analytics.com"],
 
     env: {
-      "application_name": "vote-gov-test",
+      "cloudgov_app_name": "vote-gov-test",
       "pipeline": 0,
       "test_pass": "password",
       "roles": {
