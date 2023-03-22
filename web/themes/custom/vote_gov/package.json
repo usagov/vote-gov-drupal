@@ -21,6 +21,6 @@
     "gulp": "^4.0.2",
     "gulp-stylelint": "^13.0.0",
     "gulp-uglify": "^3.0.2",
-    "uglify-es": "^3.3.9"
+    "uglify-es": "^3.3.10"
   }
 }
