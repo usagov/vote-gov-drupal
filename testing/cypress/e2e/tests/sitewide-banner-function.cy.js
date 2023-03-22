@@ -1,5 +1,6 @@
 // <reference types="cypress" />
 
+
 describe('Sitewide Banner Function', () => {
 
   it('check site admin access', () => {
@@ -65,13 +66,23 @@ describe('Sitewide Banner Function', () => {
 
     cy.get('[data-drupal-selector="edit-field-alert-type"]').select('Informational')
 
-    // cy.get('[class="ck ck-editor__main"]').find('[contenteditable="true"]').type('test')
-
-    // cy.type_ckeditor("ck-blurred ck ck-content ck-editor__editable ck-rounded-corners ck-editor__editable_inline", '<p>test</p>')
-
-    cy.type_ckeditor("edit-field-conditional-approval-email-0-value", 'ConditionalApproval@TestEmail.com');
+    // cy.get('[class="ck-blurred ck ck-content ck-editor__editable ck-rounded-corners ck-editor__editable_inline"]').type('test')
     
+    // cy.get('.ck-editor__main > .ck')
+    // .then(function ($iframe) {
+    //   const $body = $iframe.contents().find('p');
+    //   cy.wrap($body[0]).type("Random text");
+    // });
+      
+    // cy.get('[class="ck ck-button ck-source-editing-button ck-off ck-button_with-text"]').click({force: true})
+
+    cy.get('.ck-content[contenteditable=true').realType('test')
+
+    // cy.type_ckeditor("ck ck-editor__main", 'test')
+
+    // cy.type_ckeditor("edit-field-conditional-approval-email-0-value", 'ConditionalApproval@TestEmail.com');
     
+    // cy.get('.ck-editor__main > .ck').setData('test')
 
     // cy.get('[data-cke-filler="true"]').type('test')
 

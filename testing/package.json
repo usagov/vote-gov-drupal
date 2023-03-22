@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/usagov/vote-gov-drupal/issues"
   },
-  "homepage": "https://github.com/usagov/vote-gov-drupal#readme"
+  "homepage": "https://github.com/usagov/vote-gov-drupal#readme",
+  "dependencies": {
+    "cypress-real-events": "^1.7.6"
+  }
 }
