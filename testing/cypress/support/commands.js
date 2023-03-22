@@ -72,38 +72,3 @@ Cypress.Commands.add('logout', function () {
       expect(resp.status).to.eq(302)
   });
 });
-
-// Cypress.Commands.add("type_ckeditor", (element, content) => {
-//   cy.window()
-//     .then(win => {
-//       win.CKEDITOR.instances[element].setData(content);
-//     });
-// });
-
-// Cypress.Commands.add("type_ckeditor", (element, content) => {
-//   cy.window()
-//       .then(win => {
-//           // Look for an exact match first.
-//           if (element in win.CKEDITOR.instances) {
-//               win.CKEDITOR.instances[element].setData(content);
-//           }
-//           // When new CK editors are added to the page with AJAX, the form element ID
-//           // has a random string appended to it. Find the real element ID by
-//           // looking through the instances and figuring out if it starts with
-//           // the element given, not that it matches perfecly.
-//           let foundKey = ''
-//           for (let propertyName in win.CKEDITOR.instances) {
-//               let startsWith = propertyName.substr(0, element.length);
-//               if (startsWith === element) {
-//                   foundKey = propertyName
-//               }
-//           }
-//           if (foundKey.length === 0) {
-//               throw new Error('The element "' + element + '" for type_ckeditor does not exist. Valid values: ' + Object.keys(win.CKEDITOR.instances))
-//               return
-//           }
-//           win.CKEDITOR.instances[foundKey].setData(content);
-//       });
-// });
-
-Cypress.Commands.add("type_ckeditor", (element, content) => { cy.window() .then(win => { win.CKEDITOR[element].setData(content); }); });
