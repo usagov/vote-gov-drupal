@@ -11,13 +11,15 @@
     <div class="grid-container">
       <div class="grid-row grid-gap">
         <div class="tablet:grid-col-4">
-		  {% set logo_sitename = language != 'en' ? sitename ~ ' in ' ~ languagename : sitename %}
+		      {% set logo_sitename = language != 'en' ? sitename ~ ' in ' ~ languagename : sitename %}
           <a class="site-logo" href="{{ '/' ~ (language != 'en' ? language) }}" aria-label="{{ logo_sitename | t }}">
-            <div class="logo-text">{{ logo_sitename }}</div>
+            <div class="logo-text">
+              {{ logo_sitename }}
+            </div>
             <div id="SiteLogo">
-				{{ source( directory ~ '/img/ballot_box-blue.svg' ) }}
-			</div>
-			</a>
+				      {{ source( directory ~ '/img/ballot_box-blue.svg' ) }}
+			      </div>
+			    </a>
         </div>
         <div id="skip-target" class="tablet:grid-col-8 right-shift">
           <div class="align-center">
@@ -26,4 +28,4 @@
         </div>
       </div>
     </div>
-  </div>
+</div>

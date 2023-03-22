@@ -31,6 +31,7 @@
   'margin-0',
   'padding-0',
   'site-prose',
+  node_type == 'landing' ? 'page-vote'
 ] %}
 
 <!DOCTYPE html>
@@ -41,7 +42,8 @@
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token }}">
       <js-placeholder token="{{ placeholder_token }}">
-        </head>
+  </head>
+</head>
 
 <body{{ attributes.addClass(body_classes) }}>
 {#

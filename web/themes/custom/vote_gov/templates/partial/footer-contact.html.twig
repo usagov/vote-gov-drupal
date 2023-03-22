@@ -1,10 +1,11 @@
-<div class="bg-lightblue footer-contact" data-test="footer-contact">
+<div class="bg-lightblue footer-contact" data-test="footer-contact" aria-label="Contact">
   <div class="grid-container eac-vote-partnership">
     <div class="grid-row">
       <div class="tablet:grid-col-auto">
         <div class="vote-txt">{{ 'Vote.gov' | t }}</div>
-        <img class="vote-logo" loading="lazy" width="130" height="160" src="{{ theme_path }}/img/ballot_box-blue.svg" alt="{{ 'Illustration of voter box with checked ballot being inserted' | t }}" aria-label="Vote.gov>
-      </div>
+        <img class="vote-logo" loading="lazy" width="130" height="160" src="{{ theme_path }}/img/ballot_box-blue.svg" alt="{{ 'Illustration of voter box with checked ballot being inserted' | t }}" aria-label="Vote.gov">
+    </div>
+
       <div class="tablet:grid-col-auto partnership-txt">{{ 'in partnership with' | t }}</div>
       <div class="tablet:grid-col-auto eac-container">
         <a href="{{ language == 'es' ? 'https://www.eac.gov/translations/spanish' : 'https://www.eac.gov/' }}" target="_blank">
