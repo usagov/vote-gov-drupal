@@ -83,6 +83,10 @@ source:
       name: mail_postmarked_deadline
       label: 'Mail Postmark Deadline'
       selector: default_mail_postmarked_deadline
+    -
+      name: mail_received_deadline
+      label: 'Mail Received Deadline'
+      selector: default_mail_received_deadline
   ids:
     id:
       type: string
@@ -150,6 +154,16 @@ process:
       plugin: skip_on_empty
       method: process
       source: mail_postmarked_deadline
+  field_g_online_deadline:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: online_deadline
+  field_g_mail_received_deadline:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: mail_received_deadline
   langcode: langcode
   content_translation_source:
     plugin: default_value

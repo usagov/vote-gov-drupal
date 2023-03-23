@@ -61,6 +61,10 @@ source:
       name: mail_postmarked_deadline
       label: 'Mail Postmark Deadline'
       selector: default_mail_postmarked_deadline
+    -
+      name: mail_received_deadline
+      label: 'Mail Received Deadline'
+      selector: default_mail_received_deadline
   ids:
     abbreviation:
       type: string
@@ -77,13 +81,26 @@ process:
   field_registration_link/uri: registration_link
   field_more_info_link/uri: more_info_link
   field_confirm_registration_link/uri: confirm_registration_link
-  field_g_in_person_deadline: in_person_deadline
+  field_g_in_person_deadline:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: in_person_deadline
   field_g_online_deadline:
     -
       plugin: skip_on_empty
       method: process
       source: online_deadline
-  field_g_mail_postmarked_deadline: mail_postmarked_deadline
+  field_g_mail_postmarked_deadline:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: mail_postmarked_deadline
+  field_g_mail_received_deadline:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: mail_received_deadline
   langcode:
     plugin: default_value
     default_value: en
