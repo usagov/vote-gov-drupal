@@ -15,6 +15,10 @@ msgstr "한국어"
 msgid "Select language"
 msgstr "언어 선택"
 
+#main
+msgid "Go back"
+msgstr "이전 화면"
+
 #identifier
 msgid "An official website of the %link%."
 msgstr "%link%의 공식 웹사이트"

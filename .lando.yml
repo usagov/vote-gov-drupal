@@ -5,6 +5,7 @@ recipe: drupal10
 # Define services, remove any services your project doesn't need.
 # https://docs.lando.dev/config/services.html#supported-services
 config:
+  database: mysql:8.0
   # Adjust this to point to directory where index.php exist.
   webroot: web
   # Make false if you need better performance and don't need to use XDebug.
@@ -36,6 +37,7 @@ services:
         DRUSH_OPTIONS_URI: 'http://vote-gov.lndo.site'
         # Adding this variable for PHPStorm
         PHP_IDE_CONFIG: "serverName=appserver"
+        cypress_random_pass: "password"
   tome:
     type: apache
     webroot: html

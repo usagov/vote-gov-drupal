@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "604329c3147ab7b34054acce6c5f9dec",
+    "content-hash": "9f424c074220c1432556ca167a1c927b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2076,17 +2076,17 @@
         },
         {
             "name": "drupal/double_field",
-            "version": "4.1.0",
+            "version": "4.1.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/double_field.git",
-                "reference": "4.1.0"
+                "reference": "4.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/double_field-4.1.0.zip",
-                "reference": "4.1.0",
-                "shasum": "736f65ab27a13b6b6920e9b3ebe39764dffe656e"
+                "url": "https://ftp.drupal.org/files/projects/double_field-4.1.1.zip",
+                "reference": "4.1.1",
+                "shasum": "4aeee34cbd2136af726d74e28222c2ab5e922d05"
             },
             "require": {
                 "drupal/core": "^8.9 || ^9 || ^10",
@@ -2095,8 +2095,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.1.0",
-                    "datestamp": "1668537054",
+                    "version": "4.1.1",
+                    "datestamp": "1677408828",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
