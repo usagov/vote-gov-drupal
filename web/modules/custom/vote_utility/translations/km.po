@@ -19,6 +19,9 @@ msgstr "ជ្រើសរើសភាសា"
 msgid "Go back"
 msgstr "ត្រឡប់ក្រោយ"
 
+msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
+msgid "រូបភាពនៃប្រអប់អ្នកបោះឆ្នោតដែលមានសន្លឹកឆ្នោតបានគូសធីកត្រូវបានបញ្ចូល ដើម្បីបង្ហាញពីសកម្មភាពបោះឆ្នោត"
+
 #identifier
 msgid "An official website of the %link%."
 msgstr "គេហទំព័រផ្លូវការនៃ %link%"

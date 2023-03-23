@@ -19,6 +19,9 @@ msgstr "Saad choid77['88[7g77"
 msgid "Go back"
 msgstr "N1t'33'"
 
+msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
+msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
+
 #identifier
 msgid "An official website of the %link%."
 msgstr "!l32j8' han1lki'7g77 website kod00 %link%"

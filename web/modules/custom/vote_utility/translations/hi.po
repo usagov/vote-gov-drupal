@@ -19,6 +19,9 @@ msgstr "भाषा चुनें"
 msgid "Go back"
 msgstr "वापस जाएं"
 
+msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
+msgid "मतदान क्रिया को इंगित करने के लिए मतदाता पेटी में चेक किए गए मतपत्र को डाले जाने का चित्रण"
+
 #identifier
 msgid "An official website of the %link%."
 msgstr "%link% की आधिकारिक वेबसाइट"

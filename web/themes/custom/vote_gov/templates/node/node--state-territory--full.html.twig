@@ -8,9 +8,14 @@
 {% extends 'node.html.twig' %}
 
 {% block content %}
+    <div style="color:darkgray;">- "Not needed" registration types like North Dakota should override everything and use text "Voter registration is not required in North Dakota. Learn more about voting on North Dakota's election website."</div>
 
     {# How to register to vote #}
     <h2>{{ 'How to register to vote in @state_name' | t({ '@state_name': label | render }) }}</h2>
+    
+    <div style="color:red;">1. What cases use alt text instead of hiding this when online reg type is not selected?</div>
+    <div style="color:darkgray;">- Arkansas should use alt text: "Online registration is currently not available. Find out ways to register to vote at Arkansas’s state election website." <br>- American Samoa should be hidden.</div>
+
     {% if content.field_registration_link | render %}
       <p>{{ 'Start your online registration on <a href="@link">@state_name\'s election website</a>.' | t({
           '@link': content.field_override_registration_link | field_value | render | default( content.field_registration_link | field_value | render ),
@@ -19,21 +24,29 @@
       </p>
     {% endif %}
 
+      <div style="color:red;">2. What determines which States/Territories this use alertnate text?
+      </div>
+      <div style="color:darkgray;">- American Samoa should use alt text: "Register in person at your local election office. Learn more about how to register on American Samoa’s election website."</div>
     {% if content.field_more_info_link | render %}
       <p>{{ 'You can also register to vote by mail or in person on <a href="@link">@state_name\'s election website</a>.' | t({
           '@link': content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ),
           '@state_name': label | render
         }) }}
       </p>
+
     {% endif %}
 
     {# Registration deadlines #}
     <h2>{{ 'Voter registration deadlines in @state_name' | t ({ '@state_name': label | render }) }}</h2>
+      <div style="color:darkgray;">- Registration deadlines should show/hide based off of registration type check list and not what fields are filled in. <br>- Fix punctuation issue.
+      </div>    
     <ul class="registered-resources">
       {% include '@vote_gov/partial/registration-date-online.html.twig' %}
       {% include '@vote_gov/partial/registration-date-mail.html.twig' %}
       {% include '@vote_gov/partial/registration-date-in-person.html.twig' %}
     </ul>
+
+
 
     {# Check voter registration #}
     {% if content.field_more_info_link | render %}
@@ -45,6 +58,9 @@
       </p>
     {% endif %}
     {# NVRF Selector and download button #}
+
+    <div style="color:red;">3. What determines which States/Territories use NVRF block?
+    </div>
     <div>
       {{ drupal_entity('block_content', 3) }}
     </div>

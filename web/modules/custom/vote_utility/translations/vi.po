@@ -19,6 +19,9 @@ msgstr "Lựa chọn ngôn ngữ"
 msgid "Go back"
 msgstr "Quay lại"
 
+msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
+msgid "Hình minh họa của ô bỏ phiếu với lá phiếu đã đánh dấu được chèn vào để biểu thị hành động bỏ phiếu"
+
 #identifier
 msgid "An official website of the %link%."
 msgstr "Một trang web chính thức của %link%"

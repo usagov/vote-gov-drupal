@@ -19,6 +19,9 @@ msgstr "选择语言"
 msgid "Go back"
 msgstr "回去"
 
+msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
+msgid "插有已勾选选票的选票箱图样，表示投票动作"
+
 #identifier
 msgid "An official website of the %link%."
 msgstr "%link%官方网站"

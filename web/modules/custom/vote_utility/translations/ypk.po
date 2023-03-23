@@ -19,6 +19,9 @@ msgstr "Ulu nakmiighhu"
 msgid "Go back"
 msgstr "Uteghten"
 
+msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
+msgid "Teruwiiq nakmikellghem salngaganeng igaq apeghiiqaq kananghtekanga kelgutilghii nakmikilleghmeng. "
+
 #identifier
 msgid "An official website of the %link%."
 msgstr "Website-eghpigaa %link%-em"
