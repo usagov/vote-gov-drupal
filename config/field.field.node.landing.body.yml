@@ -6,7 +6,12 @@ dependencies:
     - field.storage.node.body
     - node.type.landing
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - simple_html
 id: node.landing.body
 field_name: body
 entity_type: node

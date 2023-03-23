@@ -16,6 +16,10 @@ msgstr ""
 msgid "Select language"
 msgstr "Pumili ng wika"
 
+#main
+msgid "Go back"
+msgstr "Bumalik"
+
 #identifier
 msgid "An official website of the %link%."
 msgstr "Isang opisyal na website ng %link%"

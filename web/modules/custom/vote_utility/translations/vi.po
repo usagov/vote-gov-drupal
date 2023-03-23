@@ -15,6 +15,10 @@ msgstr "Tiếng Việt"
 msgid "Select language"
 msgstr "Lựa chọn ngôn ngữ"
 
+#main
+msgid "Go back"
+msgstr "Quay lại"
+
 #identifier
 msgid "An official website of the %link%."
 msgstr "Một trang web chính thức của %link%"
