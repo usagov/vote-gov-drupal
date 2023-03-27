@@ -494,52 +494,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        type:
-          id: type
-          table: block_content_field_data
-          field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: block_content
-          entity_field: type
-          plugin_id: bundle
-          operator: in
-          value:
-            sitewide_alert: sitewide_alert
-          group: 1
-          exposed: true
-          expose:
-            operator_id: type_op
-            label: 'Block type'
-            description: ''
-            use_operator: false
-            operator: type_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: type
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              content_manager: '0'
-              site_admin: '0'
-            reduce: true
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
         langcode:
           id: langcode
           table: block_content_field_data
@@ -624,7 +578,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: '<a href="/link-to-path" class="button button--action button--primary">Add Site Alert</a>'
+          content: '<a href="/block/add/sitewide_alert?destination=/admin/content/site-alerts" class="button button--action button--primary">Add Site Alert</a>'
           tokenize: false
       footer: {  }
       display_extenders: {  }

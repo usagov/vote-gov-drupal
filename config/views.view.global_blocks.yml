@@ -6,7 +6,6 @@ dependencies:
     - block_content.type.email_signup
     - block_content.type.government_banner
     - block_content.type.registration_form_selector
-    - block_content.type.registration_tool
     - block_content.type.search
   module:
     - block_content
@@ -480,7 +479,6 @@ display:
             email_signup: email_signup
             government_banner: government_banner
             registration_form_selector: registration_form_selector
-            registration_tool: registration_tool
             search: search
           group: 1
           exposed: true
@@ -530,7 +528,6 @@ display:
             email_signup: email_signup
             government_banner: government_banner
             registration_form_selector: registration_form_selector
-            registration_tool: registration_tool
             search: search
           group: 1
           exposed: false
