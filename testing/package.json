@@ -28,7 +28,5 @@
   "bugs": {
     "url": "https://github.com/usagov/vote-gov-drupal/issues"
   },
-  "homepage": "https://github.com/usagov/vote-gov-drupal#readme",
-  "dependencies": {
-  }
+  "homepage": "https://github.com/usagov/vote-gov-drupal#readme"
 }
