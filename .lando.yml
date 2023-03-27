@@ -57,7 +57,7 @@ proxy:
 # https://docs.lando.dev/config/tooling.html#usage
 tooling:
   coder-sniffer:
-    cmd: '/app/vendor/squizlabs/php_codesniffer/bin/phpcs --standard=/app/vendor/drupal/coder/coder_sniffer/Drupal,vendor/drupal/coder/coder_sniffer/DrupalPractice --extensions=php,module,inc,theme,info,yml,twig --report=full /app/web/modules/custom /app/web/themes/custom'
+    cmd: '/app/vendor/squizlabs/php_codesniffer/bin/phpcs --ignore=*/node_modules/* --standard=/app/vendor/drupal/coder/coder_sniffer/Drupal,vendor/drupal/coder/coder_sniffer/DrupalPractice --extensions=php,module,inc,theme,info,yml,twig --report=full /app/web/modules/custom /app/web/themes/custom -n'
     service: appserver
   npm-testing:
     service: node
