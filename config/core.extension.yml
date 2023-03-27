@@ -38,6 +38,9 @@ module:
   metatag_favicons: 0
   metatag_open_graph: 0
   metatag_twitter_cards: 0
+  migrate: 0
+  migrate_plus: 0
+  migrate_tools: 0
   mysql: 0
   node: 0
   node_revision_delete: 0
@@ -59,6 +62,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  vote_migrate: 0
   vote_utility: 0
   workflows: 0
   pathauto: 1
