@@ -1,5 +1,10 @@
 # Navajo translation of Vote.gov
 #
+
+# Translation strings for screen reader text are not needed for this language 
+because it requires a font to transform the characters that get rendered 
+#
+
 msgid ""
 msgstr ""
 "Project-Id-Version: Vote.gov Utility\\n"
@@ -18,9 +23,6 @@ msgstr "Saad choid77['88[7g77"
 #main
 msgid "Go back"
 msgstr "N1t'33'"
-
-msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
 
 #identifier
 msgid "An official website of the %link%."
