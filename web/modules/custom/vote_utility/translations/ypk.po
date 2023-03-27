@@ -15,6 +15,10 @@ msgstr ""
 msgid "Select language"
 msgstr "Ulu nakmiighhu"
 
+#main
+msgid "Go back"
+msgstr "Uteghten"
+
 #identifier
 msgid "An official website of the %link%."
 msgstr "Website-eghpigaa %link%-em"
