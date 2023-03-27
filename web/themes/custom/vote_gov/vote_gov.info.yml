@@ -23,5 +23,4 @@ regions:
 
 # define custom css for wysiwyg
 ckeditor5-stylesheets:
-  - dist/css/styles.css
   - ckeditor/ckeditor.css
