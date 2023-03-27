@@ -1,0 +1,10 @@
+name: Vote.gov migrate module
+type: module
+description: 'Migrate external content using Drupal Migrate module and tools.'
+core_version_requirement: ^8.9 || ^9 || ^10
+package: 'Custom'
+dependencies:
+  - drupal:migrate
+  - drupal:migrate_plus
+  - drupal:migrate_tools
+interface translation project: vote_migrate

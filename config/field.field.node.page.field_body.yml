@@ -12,6 +12,7 @@ third_party_settings:
   allowed_formats:
     allowed_formats:
       - basic_html
+      - full_html
 id: node.page.field_body
 field_name: field_body
 entity_type: node

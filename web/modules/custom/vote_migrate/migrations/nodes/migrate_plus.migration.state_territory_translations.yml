@@ -1,0 +1,165 @@
+# Migration configuration for State/Territory content type - Translations.
+id: state_territory_translations
+label: State/Territory Nodes Translations
+migration_group: nodes__state_territory
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls:
+    - localhost/vote_migrate/import_nodes_state_territory/translation/es/json
+    - localhost/vote_migrate/import_nodes_state_territory/translation/ko/json
+    - localhost/vote_migrate/import_nodes_state_territory/translation/tl/json
+    - localhost/vote_migrate/import_nodes_state_territory/translation/bn/json
+    - localhost/vote_migrate/import_nodes_state_territory/translation/hi/json
+    - localhost/vote_migrate/import_nodes_state_territory/translation/km/json
+    - localhost/vote_migrate/import_nodes_state_territory/translation/nv/json
+    - localhost/vote_migrate/import_nodes_state_territory/translation/vi/json
+    - localhost/vote_migrate/import_nodes_state_territory/translation/ypk/json
+    - localhost/vote_migrate/import_nodes_state_territory/translation/zh/json
+    - localhost/vote_migrate/import_nodes_state_territory/translation/zh-hans/json
+  item_selector: data
+  fields:
+    - name: id
+      label: 'Migration ID'
+      selector: migration_id
+    - name: abbreviation
+      label: 'Abbreviation'
+      selector: state_abbreviation
+    - name: langcode
+      label: 'Language'
+      selector: langcode
+    - name: hp_link
+      label: 'HP Link'
+      selector: hp_link
+    - name: registration_link
+      label: 'Registration Link'
+      selector: registration_link
+    - name: more_info_link
+      label: 'More Info Link'
+      selector: more_info_link
+    - name: confirm_registration_link
+      label: 'Confirm Registration Link'
+      selector: confirm_registration_link
+    - name: hp_link_override
+      label: 'HP Link Override'
+      selector: hp_link_override
+    - name: registration_link_override
+      label: 'Registration Link Override'
+      selector: registration_link_override
+    - name: more_info_link_override
+      label: 'More Info Link Override'
+      selector: more_info_link_override
+    - name: confirm_registration_link_override
+      label: 'Confirm Registration Link Override'
+      selector: confirm_registration_link_override
+    - name: in_person_deadline
+      label: 'In-person Deadline'
+      selector: default_ip_deadline
+    - name: online_deadline
+      label: 'Online Deadline'
+      selector: default_online_deadline
+    - name: mail_postmarked_deadline
+      label: 'Mail Postmark Deadline'
+      selector: default_mail_postmarked_deadline
+    - name: mail_received_deadline
+      label: 'Mail Received Deadline'
+      selector: default_mail_received_deadline
+  ids:
+    id:
+      type: string
+process:
+  title:
+    -
+      plugin: migration_lookup
+      source: abbreviation
+      migration: state_territory
+    -
+      plugin: entity_value
+      entity_type: node
+      field_name: title
+  nid:
+    plugin: migration_lookup
+    source: abbreviation
+    migration: state_territory
+  field_election_homepage_link/uri:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: hp_link
+  field_registration_link/uri:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: registration_link
+  field_more_info_link/uri:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: more_info_link
+  field_confirm_registration_link/uri:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: confirm_registration_link
+  field_override_election_hp_link/uri:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: hp_link_override
+  field_override_registration_link/uri:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: registration_link_override
+  field_override_more_info_link/uri:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: more_info_link_override
+  field_override_confirm_reg_link/uri:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: confirm_registration_link_override
+  field_g_in_person_deadline:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: in_person_deadline
+  field_g_mail_postmarked_deadline:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: mail_postmarked_deadline
+  field_g_online_deadline:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: online_deadline
+  field_g_mail_received_deadline:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: mail_received_deadline
+  langcode: langcode
+  content_translation_source:
+    plugin: default_value
+    default_value: 'en'
+  uid:
+    plugin: default_value
+    default_value: 1
+  moderation_state:
+    plugin: static_map
+    source: state
+    default_value: published
+    map:
+      '0': draft
+      '1': published
+destination:
+  plugin: 'entity:node'
+  translations: true
+migration_dependencies:
+  required:
+    - state_territory
+  optional: []

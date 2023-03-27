@@ -1,0 +1,122 @@
+uuid: 9b0c1d10-a694-471b-8aa1-17a26aca1b4e
+langcode: en
+status: true
+dependencies: {  }
+id: state_territory
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: nodes__state_territory
+label: 'State/Territory Nodes'
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls:
+    - localhost/vote_migrate/import_nodes_state_territory/json
+  item_selector: data
+  fields:
+    -
+      name: title
+      label: Name
+      selector: state_name
+    -
+      name: abbreviation
+      label: Abbreviation
+      selector: state_abbreviation
+    -
+      name: is_state
+      label: 'Is State'
+      selector: is_state
+    -
+      name: registration_type
+      label: 'Registration Type'
+      selector: registration_type
+    -
+      name: hp_link
+      label: 'HP Link'
+      selector: hp_link
+    -
+      name: registration_link
+      label: 'Registration Link'
+      selector: registration_link
+    -
+      name: more_info_link
+      label: 'More Info Link'
+      selector: more_info_link
+    -
+      name: confirm_registration_link
+      label: 'Confirm Registration Link'
+      selector: confirm_registration_link
+    -
+      name: in_person_deadline
+      label: 'In-person Deadline'
+      selector: default_ip_deadline
+    -
+      name: online_deadline
+      label: 'Online Deadline'
+      selector: default_online_deadline
+    -
+      name: mail_postmarked_deadline
+      label: 'Mail Postmark Deadline'
+      selector: default_mail_postmarked_deadline
+    -
+      name: mail_received_deadline
+      label: 'Mail Received Deadline'
+      selector: default_mail_received_deadline
+  ids:
+    abbreviation:
+      type: string
+process:
+  title: title
+  field_state_abbreviation: abbreviation
+  field_is_state:
+    plugin: convert_string_to_boolean
+    source: is_state
+  field_registration_type:
+    plugin: assign_state_territory_registration_type
+    source: registration_type
+  field_election_homepage_link/uri: hp_link
+  field_registration_link/uri: registration_link
+  field_more_info_link/uri: more_info_link
+  field_confirm_registration_link/uri: confirm_registration_link
+  field_g_in_person_deadline:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: in_person_deadline
+  field_g_online_deadline:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: online_deadline
+  field_g_mail_postmarked_deadline:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: mail_postmarked_deadline
+  field_g_mail_received_deadline:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: mail_received_deadline
+  langcode:
+    plugin: default_value
+    default_value: en
+  uid:
+    plugin: default_value
+    default_value: 1
+  moderation_state:
+    plugin: static_map
+    source: state
+    default_value: published
+    map:
+      - draft
+      - published
+destination:
+  plugin: 'entity:node'
+  default_bundle: state_territory
+migration_dependencies:
+  required: {  }
+  optional: {  }
