@@ -16,6 +16,8 @@ reporter: 'cypress-mochawesome-reporter',
     "blockHosts": ["www.google-analytics.com", "ssl.google-analytics.com"],
 
     env: {
+      "cloudgov_application_name": "test",
+      "pipeline": 0,
       "test_pass": "password",
       "roles": {
             // info for site admin role
