@@ -8,46 +8,90 @@
 {% extends 'node.html.twig' %}
 
 {% block content %}
+{% set reg_type = content.field_registration_type | field_value | column('#markup') %}
 
-    {# How to register to vote #}
-    <h2>{{ 'How to register to vote in @state_name' | t({ '@state_name': label | render }) }}</h2>
-    {% if content.field_registration_link | render %}
-      <p>{{ 'Start your online registration on <a href="@link">@state_name\'s election website</a>.' | t({
-          '@link': content.field_override_registration_link | field_value | render | default( content.field_registration_link | field_value | render ),
-          '@state_name': label | render
-        }) }}
-      </p>
-    {% endif %}
+{% if 'Not needed' in reg_type %}
+    {% set not_needed = 'true' %}
+{% elseif 'Online' in reg_type %}
+    {% set online = 'true' %}
+{% elseif 'By-mail' in reg_type %}
+    {% set by_mail = 'true' %}
+{% elseif 'In-person' in reg_type %}
+    {% set in_person = 'true' %}
+{% endif %}
 
-    {% if content.field_more_info_link | render %}
-      <p>{{ 'You can also register to vote by mail or in person on <a href="@link">@state_name\'s election website</a>.' | t({
-          '@link': content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ),
-          '@state_name': label | render
-        }) }}
-      </p>
-    {% endif %}
+  {# How to register to vote #}
+{% if not_needed == false %}
+  <h2>{{ 'How to register to vote in @state_name' | t({ '@state_name': label | render }) }}</h2>
+{% endif %}
 
+{% if online == true %} {# if online show both links #}
+  {% if content.field_registration_link | render %}
+    <p>{{ 'Start your online registration on <a href="@link">@state_name\'s election website</a>.' | t({
+        '@link': content.field_override_registration_link | field_value | render | default( content.field_registration_link | field_value | render ),
+        '@state_name': label | render
+      }) }}
+    </p>
+  {% endif %}
+  {% if content.field_more_info_link | render %}
+    <p>{{ 'You can also register to vote by mail or in person on <a href="@link">@state_name\'s election website</a>.' | t({
+        '@link': content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ),
+        '@state_name': label | render
+      }) }}
+    </p>
+  {% endif %} 
+
+{% elseif by_mail == true %} {# if by mail show more info link #}
+  {% if content.field_more_info_link | render %}
+    <p>{{ 'Online registration is currently not available. Find out ways to register to vote at <a href="@link">@state_name\'s election website</a>.' | t({
+        '@link': content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ),
+        '@state_name': label | render
+      }) }}
+    </p>
+  {% endif %} 
+
+{% elseif in_person == true %} {# if in person show more info link but with alt text #}
+  {% if content.field_more_info_link | render %}
+    <p>{{ 'Register in person at your local election office. Learn more about how to register on <a href="@link">@state_name\'s election website</a>.' | t({
+        '@link': content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ),
+        '@state_name': label | render
+      }) }}
+    </p>
+  {% endif %} 
+
+{% endif %}
+
+
+{% if not_needed == false %}
     {# Registration deadlines #}
-    <h2>{{ 'Voter registration deadlines in @state_name' | t ({ '@state_name': label | render }) }}</h2>
-    <ul class="registered-resources">
-      {% include '@vote_gov/partial/registration-date-online.html.twig' %}
-      {% include '@vote_gov/partial/registration-date-mail.html.twig' %}
-      {% include '@vote_gov/partial/registration-date-in-person.html.twig' %}
-    </ul>
+  <h2>{{ 'Voter registration deadlines in @state_name' | t ({ '@state_name': label | render }) }}</h2>
+  <ul class="registered-resources">
+    {% include '@vote_gov/partial/registration-date-online.html.twig' %}
+    {% include '@vote_gov/partial/registration-date-mail.html.twig' %}
+    {% include '@vote_gov/partial/registration-date-in-person.html.twig' %}
+  </ul>
 
     {# Check voter registration #}
-    {% if content.field_more_info_link | render %}
-    <h2>{{ 'How to check your voter registration' | t }}</h2>
-      <p>{{ 'You can confirm your voter registration status on <a href="@link">@state_name\'s election website</a>.' | t ({
-        '@link': content.field_override_confirm_reg_link | field_value | render | default( content.field_confirm_registration_link | field_value | render ),
-        '@state_name': label | render
-        }) }}
-      </p>
-    {% endif %}
+  {% if content.field_more_info_link | render %}
+  <h2>{{ 'How to check your voter registration' | t }}</h2>
+    <p>{{ 'You can confirm your voter registration status on <a href="@link">@state_name\'s election website</a>.' | t ({
+      '@link': content.field_override_confirm_reg_link | field_value | render | default( content.field_confirm_registration_link | field_value | render ),
+      '@state_name': label | render
+      }) }}
+    </p>
+  {% endif %}
+
     {# NVRF Selector and download button #}
+  {% if (by_mail == true) %}
     <div>
       {{ drupal_entity('block_content', 3) }}
     </div>
+  {% endif %}
 
-     <p> {{'Last updated ' | t }}{{ node.revision_timestamp.value | date('F d, Y') }} </p>
+{% else %}
+  <h2>{{ 'How to register to vote in @state_name' | t({ '@state_name': label | render }) }}</h2>
+  <div>{{ 'Voter registration is not required in @state_name. Learn more about voting on @state_name\'s election website.' | t({ '@state_name': label | render }) }}</div>
+{% endif %}
+
+  <p> {{'Last updated ' | t }}{{ node.revision_timestamp.value | date('F d, Y') }} </p>
 {% endblock %}
