@@ -3,7 +3,7 @@
 
 describe('Footer Menu Function', () => {
 
-  it.only('check function', () => {
+  it('check function', () => {
 
     // before test create a link
     cy.signin(Cypress.env('roles').site_admin.username, Cypress.env('test_pass'))
