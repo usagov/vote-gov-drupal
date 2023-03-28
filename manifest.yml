@@ -8,6 +8,9 @@ default_config: &defaults
     LD_LIBRARY_PATH: /home/vcap/app/php/lib/
     PHP_INI_SCAN_DIR: /home/vcap/app/php/etc/:/home/vcap/app/php/etc/php.ini.d/
   timeout: 180
+  routes:
+    - route: vote-drupal-${CIRCLE_BRANCH}.apps.internal
+      protocol: http1
   services:
     - vote-mysql-${CIRCLE_BRANCH}
     - vote-secrets-${CIRCLE_BRANCH}
