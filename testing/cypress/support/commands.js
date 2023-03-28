@@ -9,23 +9,23 @@ Cypress.Commands.add('createUser', (user, pass, role) => {
   let drush = ""
 
   if (Cypress.env('pipeline') === 1) {
-    let drush = "../scripts/pipeline/cloud-gov-remote-command.sh 'vote-drupal-test' 'drush"
+    drush = "../scripts/pipeline/cloud-gov-remote-command.sh '" + Cypress.env('cloudgov_application_name') + "' 'drush"
   }
   else {
-    let drush = "lando ssh -c 'drush";
+    drush = "lando ssh -c 'drush";
   }
   
-  cy.exec(`${drush} user-create "${user}" --mail="${user}@example.com" --password="${pass}"'`,
+  cy.exec(`${drush} user-create ${user} --mail=${user}@example.com --password=${pass}'`,
     //Code will continue to execute if the given user account data already exists
     { failOnNonZeroExit: false }
   );
 
   cy.exec(
-    `${drush} user-add-role "${role}" "${user}"`,
+    `${drush} user-add-role ${role} ${user}'`,
     { failOnNonZeroExit: false }
   );
 
-  cy.exec(`${drush} user-information "${user}"`,
+  cy.exec(`${drush} user-information ${user}'`,
   { failOnNonZeroExit: false }
   );
   //we didn’t explicitly set the failOnNonZeroExit property here and the test will fail
@@ -49,12 +49,12 @@ Cypress.Commands.add('deleteUser', function (user) {
   let drush = ""
 
   if (Cypress.env('pipeline') === 1) {
-    let drush = "../scripts/pipeline/cloud-gov-remote-command.sh '" + Cypress.env(application_name) + "' 'drush"
+    drush = "../scripts/pipeline/cloud-gov-remote-command.sh '" + Cypress.env('cloudgov_application_name') + "' 'drush"
   }
   else {
-    let drush = "lando ssh -c 'drush";
+    drush = "lando ssh -c 'drush";
   }
-  cy.exec(`${drush} -y user:cancel --delete-content "${user}"'`, {
+  cy.exec(`${drush} -y user:cancel --delete-content ${user}'`, {
       timeout: 120000
   });
 });
