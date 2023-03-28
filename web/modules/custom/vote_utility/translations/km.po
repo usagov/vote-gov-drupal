@@ -15,6 +15,10 @@ msgstr "ភាសាខ្មែរ"
 msgid "Select language"
 msgstr "ជ្រើសរើសភាសា"
 
+#main
+msgid "Go back"
+msgstr "ត្រឡប់ក្រោយ"
+
 #identifier
 msgid "An official website of the %link%."
 msgstr "គេហទំព័រផ្លូវការនៃ %link%"

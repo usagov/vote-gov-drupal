@@ -15,6 +15,10 @@ msgstr "हिन्दी"
 msgid "Select language"
 msgstr "भाषा चुनें"
 
+#main
+msgid "Go back"
+msgstr "वापस जाएं"
+
 #identifier
 msgid "An official website of the %link%."
 msgstr "%link% की आधिकारिक वेबसाइट"

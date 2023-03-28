@@ -15,6 +15,10 @@ msgstr "中文"
 msgid "Select language"
 msgstr "选择语言"
 
+#main
+msgid "Go back"
+msgstr "回去"
+
 #identifier
 msgid "An official website of the %link%."
 msgstr "%link%官方网站"
