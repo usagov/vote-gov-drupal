@@ -1,10 +1,13 @@
 #!/bin/bash
 
 ## To work for rootless and root images.
-[ "$(whoami)" != "root" ] && sudo su
-
 echo "Installing basic dependencies..."
 {
-  apt-get update
-  apt-get install -y wget gnupg gettext
+  if [ "$(whoami)" != "root" ]; then
+    sudo apt-get update
+    sudo apt-get install -y wget gnupg gettext
+  else
+    apt-get update
+    apt-get install -y wget gnupg gettext
+  fi
 } >/dev/null 2>&1

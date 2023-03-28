@@ -1,8 +1,6 @@
 #!/bin/bash
 
 ## To work for rootless and root images.
-[ "$(whoami)" != "root" ] && sudo su
-
 echo "Installing composer..."
 {
   php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -10,5 +8,9 @@ echo "Installing composer..."
   php composer-setup.php
   php -r "unlink('composer-setup.php');"
   chmod +x composer.phar
-  mv composer.phar /usr/local/bin/composer
+  if [ "$(whoami)" != "root" ]; then
+    sudo mv composer.phar /usr/local/bin/composer
+  else
+    mv composer.phar /usr/local/bin/composer
+  fi
 } >/dev/null 2>&1
