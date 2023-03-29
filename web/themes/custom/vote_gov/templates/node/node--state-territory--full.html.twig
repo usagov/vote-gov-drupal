@@ -25,39 +25,53 @@
   <h2>{{ 'How to register to vote in @state_name' | t({ '@state_name': label | render }) }}</h2>
 {% endif %}
 
-{% if online == true %} {# if online show both links #}
-  {% if content.field_registration_link | render %}
-    <p>{{ 'Start your online registration on <a href="@link">@state_name\'s election website</a>.' | t({
-        '@link': content.field_override_registration_link | field_value | render | default( content.field_registration_link | field_value | render ),
-        '@state_name': label | render
-      }) }}
-    </p>
-  {% endif %}
-  {% if content.field_more_info_link | render %}
-    <p>{{ 'You can also register to vote by mail or in person on <a href="@link">@state_name\'s election website</a>.' | t({
-        '@link': content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ),
-        '@state_name': label | render
-      }) }}
-    </p>
-  {% endif %} 
-
-{% elseif by_mail == true %} {# if by mail show more info link #}
-  {% if content.field_more_info_link | render %}
-    <p>{{ 'Online registration is currently not available. Find out ways to register to vote at <a href="@link">@state_name\'s election website</a>.' | t({
-        '@link': content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ),
-        '@state_name': label | render
-      }) }}
-    </p>
-  {% endif %} 
-
-{% elseif in_person == true %} {# if in person show more info link but with alt text #}
+{% set state_abrev = content.field_state_abbreviation | field_value | render %}
+{% if (state_abrev == 'as') or (state_abrev == 'gu') or (state_abrev == 'nh') %}
+  {# alt text #}
   {% if content.field_more_info_link | render %}
     <p>{{ 'Register in person at your local election office. Learn more about how to register on <a href="@link">@state_name\'s election website</a>.' | t({
         '@link': content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ),
         '@state_name': label | render
       }) }}
     </p>
-  {% endif %} 
+  {% endif %}
+
+{% else %}
+  {# regular text #}
+  {% if online == true %} {# if online show both links #}
+    {% if content.field_registration_link | render %}
+      <p>{{ 'Start your online registration on <a href="@link">@state_name\'s election website</a>.' | t({
+          '@link': content.field_override_registration_link | field_value | render | default( content.field_registration_link | field_value | render ),
+          '@state_name': label | render
+        }) }}
+      </p>
+    {% endif %}
+    {% if content.field_more_info_link | render %}
+      <p>{{ 'You can also register to vote by mail or in person on <a href="@link">@state_name\'s election website</a>.' | t({
+          '@link': content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ),
+          '@state_name': label | render
+        }) }}
+      </p>
+    {% endif %} 
+
+  {% elseif by_mail == true %} {# if by mail show more info link #}
+    {% if content.field_more_info_link | render %}
+      <p>{{ 'Online registration is currently not available. Find out ways to register to vote at <a href="@link">@state_name\'s election website</a>.' | t({
+          '@link': content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ),
+          '@state_name': label | render
+        }) }}
+      </p>
+    {% endif %} 
+
+  {% elseif in_person == true %} {# if in person show more info link but with alt text #}
+    {% if content.field_more_info_link | render %}
+      <p>{{ 'Register in person at your local election office. Learn more about how to register on <a href="@link">@state_name\'s election website</a>.' | t({
+          '@link': content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ),
+          '@state_name': label | render
+        }) }}
+      </p>
+    {% endif %} 
+  {% endif %}
 
 {% endif %}
 
@@ -66,19 +80,30 @@
     {# Registration deadlines #}
   <h2>{{ 'Voter registration deadlines in @state_name' | t ({ '@state_name': label | render }) }}</h2>
   <ul class="registered-resources">
+  {% if (online == true) or (state_abrev == 'gu') %}
     {% include '@vote_gov/partial/registration-date-online.html.twig' %}
+  {% endif %}
+  {% if (by_mail == true) or (online == true) or (state_abrev == 'gu') or (state_abrev == 'as') or (state_abrev == 'nh') %}
     {% include '@vote_gov/partial/registration-date-mail.html.twig' %}
+  {% endif %}
     {% include '@vote_gov/partial/registration-date-in-person.html.twig' %}
   </ul>
 
     {# Check voter registration #}
   {% if content.field_more_info_link | render %}
   <h2>{{ 'How to check your voter registration' | t }}</h2>
+    {% if state_abrev != 'wy' %}
     <p>{{ 'You can confirm your voter registration status on <a href="@link">@state_name\'s election website</a>.' | t ({
       '@link': content.field_override_confirm_reg_link | field_value | render | default( content.field_confirm_registration_link | field_value | render ),
       '@state_name': label | render
       }) }}
     </p>
+    {% else %} {# Wyoming alt text #}
+    <p>{{ 'You can confirm your voter registration status by contacting your local registration office. <a href="@link">Click here to view Wyoming\'s county clerk contact information (PDF)</a>.' | t ({
+      '@link': content.field_override_confirm_reg_link | field_value | render | default( content.field_confirm_registration_link | field_value | render )
+      }) }}
+    </p>
+    {% endif %}
   {% endif %}
 
     {# NVRF Selector and download button #}
