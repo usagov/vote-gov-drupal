@@ -1,8 +1,8 @@
 # Navajo translation of Vote.gov
 #
 
-# Translation strings for screen reader text are not needed for this language 
-because it requires a font to transform the characters that get rendered 
+# Translation strings for screen reader text are not needed for this language
+# because it requires a font to transform the characters that get rendered
 #
 
 msgid ""
