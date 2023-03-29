@@ -16,6 +16,9 @@
     "cy:links": "cypress run --spec 'cypress/e2e/internalLinks/**/*'",
     "cy:proofer": "cypress run --spec 'cypress/e2e/externalLinks/**/*'",
     "cy:backEnd": "cypress run --spec 'cypress/e2e/backend/**/*'",
+    "cy:createUser": "cypress run --spec 'cypress/e2e/createUser/**/*'",
+    "cy:deleteUser": "cypress run --spec 'cypress/e2e/deleteUser/**/*'",
+    "cy:fullTests": "cypress run --spec cypress/e2e/full-testing-flow.cy.js",
     "testSuite": "npm run cy:test && npm run cy:links && npm run cy:axe",
     "cypress": "cypress"
   },
