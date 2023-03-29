@@ -243,8 +243,6 @@ workflows:
             branches:
               ignore:
                 - prod
-          requires:
-            - php-lint
       - build-theme:
           filters:
             branches:
@@ -252,8 +250,7 @@ workflows:
                 - dev
                 - stage
                 - test
-          requires:
-            - snyk
+                - prod
       - deploy-test:
           filters:
             branches:
@@ -279,8 +276,9 @@ workflows:
                 - dev
                 - stage
                 - test
+                - prod
           requires:
-            - cypress
+            - build-theme
   downsync-workflow:
     when:
       and:
