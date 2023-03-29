@@ -12,7 +12,7 @@ $application_environment = explode("-", $cf_application_data['space_name'])[coun
 
 $application_hostname = "https://" . $_SERVER['SERVER_NAME'];
 
-$applicaiton_fqdn_regex = "^.+\.app\.cloud\.gov$";
+$applicaiton_fqdn_regex = "^.+\.(app\.cloud\.gov|apps\.internal)$";
 
 $settings['tome_static_directory'] = dirname(DRUPAL_ROOT) . '/html';
 $settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config';
