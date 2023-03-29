@@ -19,6 +19,9 @@ msgstr "भाषा चुनें"
 msgid "Go back"
 msgstr "वापस जाएं"
 
+msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
+msgid "मतदान क्रिया को इंगित करने के लिए मतदाता पेटी में चेक किए गए मतपत्र को डाले जाने का चित्रण"
+
 #identifier
 msgid "An official website of the %link%."
 msgstr "%link% की आधिकारिक वेबसाइट"
@@ -48,7 +51,7 @@ msgstr "सरकारी सूचना और सेवाएं"
 msgid "in partnership with"
 msgstr "के साथ साझेदारी में"
 
-msgid "In partnership with U.S. Election Assistance Commission"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
 msgstr "U.S. Election Assistance Commission के साथ साझेदारी में"
 
 msgid "Follow Vote.gov on Twitter"

@@ -19,7 +19,7 @@
 
 {% set affiliated_search = content.field_translated_affiliate | field_value | render %}
 
-<div class="bg-lightblue search-container">
+<div class="bg-lightblue search-container" role="search" aria-label="{{ content.field_search_placeholder | field_value }}">
   <div class="grid-container">
     <form class="usa-search usa-search--small search-bar" role="search" id="search_form" action="https://search.vote.gov/search" accept-charset="UTF-8" method="get">
       <input type="hidden" name="affiliate" id="affiliate" value="vote_{{ affiliated_search == '1' ? language : 'en' }}" autocomplete="off">
