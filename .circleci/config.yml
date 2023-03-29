@@ -54,7 +54,7 @@ jobs:
             source ./scripts/pipeline/cloud-gov-login.sh "test"
             
             cd testing
-            cypress_baseurl=$(cf routes | grep drupal-test | awk '{print $2"."$3}')
+            cypress_baseurl=$(cf routes | grep drupal-test | grep gov | awk '{print $2"."$3}')
             cypress_random_pass="$(date | sha256sum | cut -d" " -f1)"
 
             sed -i "s/^    baseUrl: .*/    baseUrl: 'https:\/\/${cypress_baseurl}',/" cypress.config.js
