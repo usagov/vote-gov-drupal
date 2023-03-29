@@ -90,9 +90,17 @@ tooling:
     service: node
     cmd:  npm run cy:proofer --prefix /app/testing
     description: run cypress external links test - headless
+  'cy:createUser':
+    service: node
+    cmd:  npm run cy:createUser --prefix /app/testing
+    description: run cypress create user script - headless
+  'cy:deleteUser':
+    service: node
+    cmd:  npm run cy:deleteUser --prefix /app/testing
+    description: run cypress delete user script - headless
   'cy:test':
     service: node
-    cmd:  npm run cy:test --prefix /app/testing
+    cmd:  npm run cy:test --prefix /app/testing 
     description: run cypress functional tests - headless
   'cy:testSuite':
     service: node
