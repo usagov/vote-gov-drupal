@@ -1,0 +1,32 @@
+uuid: 3d39ee2b-68b9-4ccb-a22f-30a50e5422ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - double_field
+    - paragraphs
+id: paragraph.field_accordions
+field_name: field_accordions
+entity_type: paragraph
+type: double_field
+settings:
+  storage:
+    first:
+      type: string
+      maxlength: 255
+      precision: 10
+      scale: 2
+      datetime_type: datetime
+    second:
+      type: text_long
+      maxlength: 255
+      precision: 10
+      scale: 2
+      datetime_type: datetime
+module: double_field
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

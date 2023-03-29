@@ -35,6 +35,7 @@
         "drupal/migrate_plus": "^6.0",
         "drupal/migrate_tools": "^6.0",
         "drupal/node_revision_delete": "^1.0@RC",
+        "drupal/paragraphs": "^1.15",
         "drupal/pathauto": "^1.11",
         "drupal/publication_date": "^2.0@beta",
         "drupal/redirect": "^1.8",
