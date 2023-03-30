@@ -9,6 +9,7 @@
 {% set GSAlink = link('General Services Administration' | t, 'https://www.gsa.gov/') %}
 {% set infoLink = link('Visit USA.gov' | t, (language == 'es' ? 'https://www.usa.gov/espanol/' : 'https://www.usa.gov/')) %}
 
+<section>
 {# contact start #}
 {% include '@vote_gov/partial/footer-contact.html.twig' %}
 {# contact end #}
@@ -35,3 +36,4 @@
   </div>
 </div>
 {# identifier end #}
+</section>

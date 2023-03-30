@@ -20,6 +20,9 @@ msgstr "Pumili ng wika"
 msgid "Go back"
 msgstr "Bumalik"
 
+msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
+msgid "Ilustrasyon ng kahon ng botante na may naka-tsek na balota na inilalagay upang ipahiwatig ang aksyon sa pagboto"
+
 #identifier
 msgid "An official website of the %link%."
 msgstr "Isang opisyal na website ng %link%"
@@ -49,7 +52,7 @@ msgstr "Impormasyon at mga serbisyo ng gobyerno"
 msgid "in partnership with"
 msgstr "sa pakikipagtulungan sa"
 
-msgid "In partnership with U.S. Election Assistance Commission"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
 msgstr "sa pakikipagtulungan sa Election Assistance Commission"
 
 msgid "Follow Vote.gov on Twitter"

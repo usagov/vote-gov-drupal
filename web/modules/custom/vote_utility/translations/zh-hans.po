@@ -19,6 +19,9 @@ msgstr "选择语言"
 msgid "Go back"
 msgstr "回去"
 
+msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
+msgid "插有已勾选选票的选票箱图样，表示投票动作"
+
 #identifier
 msgid "An official website of the %link%."
 msgstr "%link%官方网站"
@@ -48,7 +51,7 @@ msgstr "政府信息和服务"
 msgid "in partnership with"
 msgstr "与合作"
 
-msgid "In partnership with U.S. Election Assistance Commission"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
 msgstr "与 U.S. Election Assistance Commission合作"
 
 msgid "Follow Vote.gov on Twitter"

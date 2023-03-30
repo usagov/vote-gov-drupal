@@ -1,0 +1,46 @@
+uuid: e8f621bc-a270-4e7d-9bda-06051e9b18a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.accordion_group.field_accordions
+    - field.field.paragraph.accordion_group.field_heading
+    - paragraphs.paragraphs_type.accordion_group
+  module:
+    - double_field
+id: paragraph.accordion_group.default
+targetEntityType: paragraph
+bundle: accordion_group
+mode: default
+content:
+  field_accordions:
+    type: double_field_unformatted_list
+    label: hidden
+    settings:
+      first:
+        format_type: medium
+        link: false
+        hidden: false
+        decimal_separator: .
+        thousand_separator: ''
+        scale: 2
+      second:
+        format_type: medium
+        link: false
+        hidden: false
+        decimal_separator: .
+        thousand_separator: ''
+        scale: 2
+      inline: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -7,12 +7,13 @@ dependencies:
     - field.field.node.landing.body
     - field.field.node.landing.field_metatags
     - field.field.node.landing.field_page_components
+    - field.field.node.landing.field_paragraph_components
     - node.type.landing
-    - workflows.workflow.publishing_content
   module:
     - content_moderation
     - inline_entity_form
     - metatag
+    - paragraphs
     - path
     - publication_date
     - text
@@ -39,7 +40,7 @@ content:
     third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
-    weight: 13
+    weight: 14
     region: content
     settings:
       sidebar: true
@@ -62,9 +63,28 @@ content:
       collapsed: false
       revision: true
     third_party_settings: {  }
+  field_paragraph_components:
+    type: paragraphs
+    weight: 12
+    region: content
+    settings:
+      title: Component
+      title_plural: Components
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: '0'
+    third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 12
+    weight: 13
     region: content
     settings:
       include_locked: true

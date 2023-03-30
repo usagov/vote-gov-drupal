@@ -46,13 +46,16 @@ echo "Restoring '${BACKUP_ENV}' database to '${RESTORE_ENV}'..."
   --protocol=TCP \
   --database=${dbname} < backup_${BACKUP_ENV}.sql
 
-} 2>&1 >/dev/null
+} >/dev/null 2>&1
 
 ## Kill the backgrounded SSH tunnel.
 echo "Cleaning up old connections..."
 {
   kill_pids "connect-to-service"
-} 2>&1 >/dev/null
+} >/dev/null 2>&1
 
 ## Clean up.
 rm -rf restore.txt ~/.mysql backup_${BACKUP_ENV}.sql
+
+echo "Running 'drush cr' on '${BACKUP_ENV}' database..."
+source $(pwd $(dirname $0))/cloud-gov-remote-command.sh "vote-drupal-${RESTORE_ENV}" "drush cr"

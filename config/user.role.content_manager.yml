@@ -20,6 +20,7 @@ dependencies:
     - media
     - menu_link_content
     - node
+    - paragraphs
     - system
     - toolbar
 id: content_manager
@@ -124,3 +125,4 @@ permissions:
   - 'view restricted block content'
   - 'view state_territory revisions'
   - 'view the administration theme'
+  - 'view unpublished paragraphs'
