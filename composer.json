@@ -39,6 +39,7 @@
         "drupal/pathauto": "^1.11",
         "drupal/publication_date": "^2.0@beta",
         "drupal/redirect": "^1.8",
+        "drupal/remove_http_headers": "^2.0",
         "drupal/s3fs": "^3.1",
         "drupal/simple_sitemap": "^4.1",
         "drupal/stable": "^2.0",
