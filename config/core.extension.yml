@@ -4,6 +4,7 @@ module:
   admin_toolbar: 0
   allowed_formats: 0
   auto_entitylabel: 0
+  autologout: 0
   block: 0
   block_content: 0
   block_content_permissions: 0
