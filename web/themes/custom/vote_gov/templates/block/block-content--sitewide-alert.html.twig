@@ -11,7 +11,7 @@
 
 {% set classes = [
   'usa-alert',
-  content.field_alert_type.0 | render == 'Informational' ? 'usa-alert--info' : 'usa-alert--emergency'
+  content.field_alert_type | render ? 'usa-alert--' ~ content.field_alert_type | field_value | render
 ] %}
 
 <div{{ attributes.addClass(classes)}}>

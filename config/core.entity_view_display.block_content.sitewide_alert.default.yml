@@ -22,7 +22,7 @@ content:
     weight: 2
     region: content
   field_alert_type:
-    type: list_default
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
