@@ -127,7 +127,7 @@ tooling:
     service: appserver
     description: Manually recompiles static site and assets
     cmd:
-      - drush tome:static --uri=https://vote.gov
+      - drush tome:static --uri=http://html.vote-gov.lndo.site
   xoff:
     cmd: "rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && /etc/init.d/apache2 reload"
     description: Disable xdebug.
