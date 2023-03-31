@@ -1,0 +1,10 @@
+uuid: 5fb8ce93-f7c6-4bbd-8c93-ea6b18776e87
+langcode: en
+status: true
+dependencies: {  }
+id: registration_tool
+label: 'Registration tool'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

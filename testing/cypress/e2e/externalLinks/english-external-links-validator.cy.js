@@ -1,6 +1,5 @@
 /// <reference types="Cypress" />
 
-
 const allPages = require("../../fixtures/testing-page.json");
 
 const excludedlinks = [
@@ -47,20 +46,16 @@ describe("External Link Validator Test", () => {
         cy.visit({
           url: page.route,
         });
-          // the follow code will be brought back in once content is on site
-        // cy.get("div[role='main'] a[href^='https://']").each(link => {
-        //   if (excludedlinks.indexOf(link.prop('href')) == -1) {
-        //     cy.request({
-        //       url: link.prop('href'),
-        //       failOnStatusCode: false
-        //     }).then((response) => {
-        //       expect(response.status).to.eq(200)
-        //     })
-        //   }
-        // })
-
-          // the follow is to just verify the test is set up correctly and can fucntion 
-          cy.get('a').should('be.visible')
+        cy.get("a[href^='https://']").each(link => {
+          if (excludedlinks.indexOf(link.prop('href')) == -1) {
+            cy.request({
+              url: link.prop('href'),
+              failOnStatusCode: false
+            }).then((response) => {
+              expect(response.status).to.eq(200)
+            })
+          }
+        })
       }
     );
   });    

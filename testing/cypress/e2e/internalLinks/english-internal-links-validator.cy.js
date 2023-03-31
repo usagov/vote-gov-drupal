@@ -1,25 +1,6 @@
 /// <reference types="Cypress" />
 
-
 const allPages = require("../../fixtures/testing-page.json");
-
-const excludedlinks = [
-  'https://voterregistration.ct.gov/OLVR/welcome.do?ref=voteusa_en',
-  // the above link will throw error code "read ECONNRESET" this will not pass through cypress test and has been checked manually but has not been added to `excluded-links.cy.js` test 
-  'https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1?ref=voteusa_en',
-  'https://www.sec.state.ma.us/ovr/?ref=voteusa_en',
-  'https://olvr.ohiosos.gov/?ref=voteusa_en',
-  'https://voterlookup.ohiosos.gov/voterlookup.aspx?ref=voteusa_en',
-  'https://olvr.hawaii.gov/?ref=voteusa_en',
-  'https://elections.hawaii.gov/voters/registration/?ref=voteusa_en',
-  'https://vote.sos.ri.gov/Home/RegistertoVote?ref=voteusa_en',
-  'https://vote.sos.ri.gov/Voter/RegisterToVote?ref=voteusa_en',
-  'https://vote.sos.ri.gov/Home/UpdateVoterRecord?ActiveFlag=0&?ref=voteusa_en',
-  // sc links
-  'https://vrems.scvotes.sc.gov/Voter/Login?ref=voteusa_en',
-  'https://scvotes.gov/voters/register-to-vote/?ref=voteusa_en',
-  'https://info.scvotes.sc.gov/eng/ovr/start.aspx?ref=voteusa_en'
-];
 
 describe("Internal Link Validator Test", () => {
   const singlePage =
@@ -47,18 +28,14 @@ describe("Internal Link Validator Test", () => {
         cy.visit({
           url: page.route,
         });
-          // the follow code will be brought back in once content is on site
-        //   cy.get("a[href^='/']").each(link => {
-        //     cy.request({
-        //       url: link.prop('href'),
-        //       failOnStatusCode: false
-        //     }).then((response) => {
-        //       expect(response.status).to.eq(200)
-        //     })
-        // })
-
-          // the follow is to just verify the test is set up correctly and can fucntion 
-          cy.get('a').should('be.visible')
+          cy.get("a[href^='/']").each(link => {
+            cy.request({
+              url: link.prop('href'),
+              failOnStatusCode: false
+            }).then((response) => {
+              expect(response.status).to.eq(200)
+            })
+        })
       }
     );
   });    

@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.landing.body
     - field.field.node.landing.field_metatags
     - field.field.node.landing.field_page_components
+    - field.field.node.landing.field_paragraph_components
     - node.type.landing
   module:
     - entity_reference_revisions
@@ -44,6 +45,15 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 7
+    region: content
+  field_paragraph_components:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 8
     region: content
   langcode:
     type: language
