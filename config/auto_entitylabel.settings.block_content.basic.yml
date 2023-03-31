@@ -1,5 +1,5 @@
-status: 2
-pattern: 'Basic [block_content:id]'
+status: 0
+pattern: ''
 escape: false
 preserve_titles: false
 save: false
