@@ -9,7 +9,9 @@
  */
 #}
 
-<div class="usa-alert usa-alert--info">
+{% set variant = content.field_alert_type.0 | render == 'Informational' ? 'info' : 'emergency' %}
+
+<div class="usa-alert usa-alert--{{ variant }}">
   <div class="grid-container">
     <div class="usa-alert__body">
       <div class="usa-alert__text">
