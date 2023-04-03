@@ -11,15 +11,13 @@
   },
   "scripts": {
     "cy:open": "cypress open",
-    "cy:test": "cypress run --spec 'cypress/e2e/tests/**/*'",
+    "cy:test": "cypress run --spec 'cypress/e2e/createUser/**/*','cypress/e2e/tests/**/*','cypress/e2e/deleteUser/**/*'",
     "cy:axe": "cypress run --spec 'cypress/e2e/accessibility/**/*'",
     "cy:links": "cypress run --spec 'cypress/e2e/internalLinks/**/*'",
     "cy:proofer": "cypress run --spec 'cypress/e2e/externalLinks/**/*'",
-    "cy:backEnd": "cypress run --spec 'cypress/e2e/backend/**/*'",
     "cy:createUser": "cypress run --spec 'cypress/e2e/createUser/**/*'",
     "cy:deleteUser": "cypress run --spec 'cypress/e2e/deleteUser/**/*'",
-    "cy:fullTests": "cypress run --spec cypress/e2e/full-testing-flow.cy.js",
-    "testSuite": "npm run cy:test && npm run cy:links && npm run cy:axe",
+    "testSuite": "npm run cy:test && npm run cy:links && npm run cy:proofer && npm run cy:axe",
     "cypress": "cypress"
   },
   "repository": {
