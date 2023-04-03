@@ -1,0 +1,52 @@
+  {# How to register to vote #}
+  <h2>{{ 'How to register to vote in @state_name' | t({ '@state_name': label | render }) }}</h2>
+
+{% set state_abrev = content.field_state_abbreviation | field_value | render %}
+{% if (state_abrev == 'as') or (state_abrev == 'gu') or (state_abrev == 'nh') %}
+    {# alt text #}
+    {% if content.field_more_info_link | render %}
+        <p>{{ 'Register in person at your local election office. Learn more about how to register on <a href="@link">@state_name\'s election website</a>.' | t({
+            '@link': content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ),
+            '@state_name': label | render
+            }) }}
+        </p>
+    {% endif %}
+{% else %}
+    {# regular text #} {# show more info link with alt text #}
+    {% if content.field_more_info_link | render %}
+        <p>{{ 'Register in person at your local election office. Learn more about how to register on <a href="@link">@state_name\'s election website</a>.' | t({
+            '@link': content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ),
+            '@state_name': label | render
+        }) }}
+        </p>
+    {% endif %} 
+{% endif %}
+
+    {# Registration deadlines #}
+<h2>{{ 'Voter registration deadlines in @state_name' | t ({ '@state_name': label | render }) }}</h2>
+    <ul class="registered-resources">
+    {% if (state_abrev == 'gu') %}
+        {% include '@vote_gov/partial/registration-date-online.html.twig' %}
+    {% endif %}
+    {% if (state_abrev == 'gu') or (state_abrev == 'as') or (state_abrev == 'nh') %}
+        {% include '@vote_gov/partial/registration-date-mail.html.twig' %}
+    {% endif %}
+    {% include '@vote_gov/partial/registration-date-in-person.html.twig' %}
+    </ul>
+
+    {# Check voter registration #}
+{% if content.field_more_info_link | render %}
+<h2>{{ 'How to check your voter registration' | t }}</h2>
+    {% if state_abrev != 'wy' %}
+        <p>{{ 'You can confirm your voter registration status on <a href="@link">@state_name\'s election website</a>.' | t ({
+        '@link': content.field_override_confirm_reg_link | field_value | render | default( content.field_confirm_registration_link | field_value | render ),
+        '@state_name': label | render
+        }) }}
+        </p>
+    {% else %} {# Wyoming alt text #}
+        <p>{{ 'You can confirm your voter registration status by contacting your local registration office. <a href="@link">Click here to view Wyoming\'s county clerk contact information (PDF)</a>.' | t ({
+        '@link': content.field_override_confirm_reg_link | field_value | render | default( content.field_confirm_registration_link | field_value | render )
+        }) }}
+        </p>
+    {% endif %}
+{% endif %}
