@@ -19,6 +19,9 @@ msgstr "ជ្រើសរើសភាសា"
 msgid "Go back"
 msgstr "ត្រឡប់ក្រោយ"
 
+msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
+msgid "រូបភាពនៃប្រអប់អ្នកបោះឆ្នោតដែលមានសន្លឹកឆ្នោតបានគូសធីកត្រូវបានបញ្ចូល ដើម្បីបង្ហាញពីសកម្មភាពបោះឆ្នោត"
+
 #identifier
 msgid "An official website of the %link%."
 msgstr "គេហទំព័រផ្លូវការនៃ %link%"
@@ -48,7 +51,7 @@ msgstr "ព័ត៌មាននិងសេវាកម្មរដ្ឋាភ
 msgid "in partnership with"
 msgstr "ក្នុងភាពជាដៃគូជាមួយ"
 
-msgid "In partnership with U.S. Election Assistance Commission"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
 msgstr "ក្នុងភាពជាដៃគូជាមួយ U.S. Election Assistance Commission"
 
 msgid "Follow Vote.gov on Twitter"

@@ -1,0 +1,10 @@
+_core:
+  default_config_hash: LNYrEZMNvotD7ZS_X0b59tq3Jyl-f5lNMUOZWTLuC9A
+headers_to_remove:
+  - X-Generator
+  - X-Drupal-Dynamic-Cache
+  - X-Drupal-Cache
+dependencies:
+  enforced:
+    module:
+      - remove_http_headers

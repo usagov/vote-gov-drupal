@@ -1,0 +1,19 @@
+uuid: 0efabcd4-3307-46a0-a889-d25954d32662
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_submit_button_label
+    - paragraphs.paragraphs_type.registration_tool
+id: paragraph.registration_tool.field_submit_button_label
+field_name: field_submit_button_label
+entity_type: paragraph
+bundle: registration_tool
+label: 'Submit button label'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -17,6 +17,9 @@ wait_for_tunnel() {
   done 
 }
 
+echo "Running 'drush cr' on '${BACKUP_ENV}' database..."
+source $(pwd $(dirname $0))/cloud-gov-remote-command.sh "vote-drupal-${BACKUP_ENV}" "drush cr"
+
 ## Create a tunnel through the application to pull the database.
 echo "Creating tunnel to database..."
 cf connect-to-service --no-client vote-drupal-${BACKUP_ENV} vote-mysql-${BACKUP_ENV} > backup.txt &
@@ -49,13 +52,13 @@ echo "Backing up '${BACKUP_ENV}' database..."
   ## Patch out any MySQL 'SET' commands that require admin.
   sed -i 's/^SET /-- &/' backup_dev.sql
 
-} 2>&1 >/dev/null
+} >/dev/null 2>&1
 
 ## Kill the backgrounded SSH tunnel.
 echo "Cleaning up old connections..."
 {
   kill_pids "connect-to-service"
-} 2>&1 >/dev/null
+} >/dev/null 2>&1
 
 ## Clean up.
 rm -rf backup.txt ~/.mysql

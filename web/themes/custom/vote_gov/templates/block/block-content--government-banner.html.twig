@@ -15,7 +15,7 @@
   'block-content--view-mode-' ~ view_mode|clean_class
 ] %}
 
-<section class="usa-banner" aria-label={{ 'Official government website' | t }}>
+<section class="usa-banner" aria-label="{{ 'Official government website' | t }}">
   <div class="usa-accordion">
     <div class="usa-banner__header">
       <div class="usa-banner__inner">
@@ -25,9 +25,12 @@
                  src="{{ theme_path }}/dist/assets/img/us_flag_small.png" alt={{ 'U.S. flag' | t }}>
           </div>
           <div class="grid-col-fill tablet:grid-col-auto">
-            <div class="usa-banner__header-text">{{ content.field_accordion_text | field_value }}</div>
-            <div class="usa-banner__header-action"
-                 aria-hidden="true">{{ content.field_accordion_link_label | field_value }}</div>
+            <div class="usa-banner__header-text">
+              {{ content.field_accordion_text | field_value }}
+            </div>
+            <div class="usa-banner__header-action" aria-hidden="true">
+              {{ content.field_accordion_link_label | field_value }}
+            </div>
           </div>
           <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false"
                   aria-controls="gov-banner" data-test="header-button">
@@ -60,10 +63,11 @@
           <p>
             <strong>{{ content.field_https_heading | field_value }}</strong>
             <br>
-            {% set lock_icon = '(<span class="icon-lock"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 64" class="usa-banner__lock-image">
+            {% set lock_icon = '(<span class="icon-lock"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 64" class="usa-banner__lock-image" role="graphics-symbol" aria-label="lock icon">
+                    <title>lock icon</title>
                     <path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z">
                     </path>
-                  </svg></span>)' %}
+                  </svg></span>)' | replace({ 'lock icon' : 'lock icon' | t }) %}
             {{ content.field_https_text | field_value | render | replace({
               '%lock_icon%': lock_icon,
               '%https%': '<strong>https://</strong>'
@@ -72,6 +76,5 @@
         </div>
       </div>
     </div>
-  </div>
   </div>
 </section>
