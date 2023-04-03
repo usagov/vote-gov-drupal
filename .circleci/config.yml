@@ -18,7 +18,7 @@ jobs:
             source ./scripts/pipeline/build-theme.sh
       - persist_to_workspace:
           root: ~/
-          paths: 
+          paths:
             - project/web/themes/custom/vote_gov/dist
   build-theme-prod:
     docker:
@@ -31,7 +31,7 @@ jobs:
             source ./scripts/pipeline/build-theme.sh
       - persist_to_workspace:
           root: ~/
-          paths: 
+          paths:
             - project/web/themes/custom/vote_gov/dist
   cypress:
     docker:
@@ -52,7 +52,7 @@ jobs:
           name: "Cypress"
           command: |
             source ./scripts/pipeline/cloud-gov-login.sh "test"
-            
+
             cd testing
             cypress_baseurl=$(cf routes | grep drupal-test | grep gov | awk '{print $2"."$3}')
             cypress_random_pass="$(date | sha256sum | cut -d" " -f1)"
@@ -61,7 +61,7 @@ jobs:
             sed -i "s/^      \"test_pass\": .*/      \"test_pass\": \"${cypress_random_pass}\",/" cypress.config.js
             sed -i "s/^      \"pipeline\": .*/      \"pipeline\": 1,/" cypress.config.js
             sed -i "s/^      \"cloudgov_application_name\": .*/      \"cloudgov_application_name\": \"${cypress_cloudgov_application_name}\",/" cypress.config.js
-            
+
             npm install
 
             if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "stage" || "${CIRCLE_BRANCH}" == "prod" ]]; then
@@ -93,8 +93,8 @@ jobs:
 
             mv manifest.yml manifest.tmp
             envsubst < manifest.tmp > manifest.yml
-            
-            if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "test" || "${CIRCLE_BRANCH}" == "stage" || "${CIRCLE_BRANCH}" == "prod" ]]; then            
+
+            if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "test" || "${CIRCLE_BRANCH}" == "stage" || "${CIRCLE_BRANCH}" == "prod" ]]; then
               cf push
             fi
   deploy-prod:
@@ -116,8 +116,8 @@ jobs:
 
             mv manifest.yml manifest.tmp
             envsubst < manifest.tmp > manifest.yml
-            
-            if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "test" || "${CIRCLE_BRANCH}" == "stage" || "${CIRCLE_BRANCH}" == "prod" ]]; then            
+
+            if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "test" || "${CIRCLE_BRANCH}" == "stage" || "${CIRCLE_BRANCH}" == "prod" ]]; then
               cf push
             fi
   deploy-test:
@@ -139,7 +139,7 @@ jobs:
 
             mv manifest.yml manifest.tmp
             envsubst < manifest.tmp > manifest.yml
-            
+
             cf push
   php-lint:
     docker:
@@ -203,7 +203,7 @@ jobs:
             source ./scripts/pipeline/cloud-gov-login.sh "${BACKUP_ENV}"
             source ./scripts/pipeline/downsync-backup.sh
             cf logout
-            
+
             source ./scripts/pipeline/cloud-gov-login.sh "${RESTORE_ENV}"
             source ./scripts/pipeline/downsync-restore.sh
 

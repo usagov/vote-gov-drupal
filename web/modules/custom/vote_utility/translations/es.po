@@ -19,6 +19,9 @@ msgstr "Seleccione el idioma"
 msgid "Go back"
 msgstr "Volver"
 
+msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
+msgid "Ilustración del acto del voto donde una boleta marcada está siendo insertada en una urna"
+
 #identifier
 msgid "An official website of the %link%."
 msgstr "Un sitio web oficial de la %link%"
@@ -48,7 +51,7 @@ msgstr "Información y servicios del gobierno"
 msgid "in partnership with"
 msgstr "en colaboración con"
 
-msgid "In partnership with U.S. Election Assistance Commission"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
 msgstr "En colaboración con la U.S. Election Assistance Commission"
 
 msgid "Follow Vote.gov on Twitter"

@@ -1,0 +1,19 @@
+uuid: 5e35facf-9d13-428e-b66e-94ae072633a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dropdown_label
+    - paragraphs.paragraphs_type.registration_tool
+id: paragraph.registration_tool.field_dropdown_label
+field_name: field_dropdown_label
+entity_type: paragraph
+bundle: registration_tool
+label: 'Dropdown label'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

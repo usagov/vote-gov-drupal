@@ -1,7 +1,12 @@
+@use "uswds-core" as *;
+@use "../mixins/mixins";
 @use '../variables' as *;
 
 .search-container {
     border-top: 1px solid $dark-cool-gray;
+    min-width: 100%;
+    background: $color-blue-light;
+    color: $color-blue-dark;
   }
 
   .search-bar {

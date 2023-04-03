@@ -19,6 +19,9 @@ msgstr "언어 선택"
 msgid "Go back"
 msgstr "이전 화면"
 
+msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
+msgid "표시한 투표 용지를 유권자 투표 상자에 삽입하는 투표 과정을 보여주는 그림"
+
 #identifier
 msgid "An official website of the %link%."
 msgstr "%link%의 공식 웹사이트"
@@ -48,7 +51,7 @@ msgstr "정부 관련 정보 및 제공 서비스"
 msgid "in partnership with"
 msgstr "협력 제공 기관"
 
-msgid "In partnership with U.S. Election Assistance Commission"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
 msgstr "협력 제공 기관: U.S. Election Assistance Commission"
 
 msgid "Follow Vote.gov on Twitter"
