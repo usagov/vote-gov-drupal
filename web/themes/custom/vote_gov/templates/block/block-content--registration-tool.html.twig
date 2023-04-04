@@ -1,14 +1,14 @@
 {% block content %}
-<div class="bg-blue css-arrow">
-  <div class="grid-container">
-    <div class="grid-row grid-gap">
-      <div class="tablet:grid-col-4">
-        {% set logo_sitename = language != 'en' ? sitename ~ ' in ' ~ languagename : sitename %}
-        <a class="site-logo" href="{{ '/' ~ (language != 'en' ? language) }}" aria-label="{{ logo_sitename | t }}">
-          <div class="logo-text">{{ logo_sitename }}</div>
-          <div id="SiteLogo">{{ source( directory ~ '/img/ballot_box-blue.svg' ) }}</div>
-        </a>
-      </div>
+  <div class="bg-blue css-arrow">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="tablet:grid-col-4">
+          {% set logo_sitename = language != 'en' ? sitename ~ ' in ' ~ languagename : sitename %}
+          <a class="site-logo" href="{{ '/' ~ (language != 'en' ? language) }}" aria-label="{{ logo_sitename | t }}">
+            <div class="logo-text">{{ logo_sitename }}</div>
+            <div id="SiteLogo">{{ source( directory ~ '/img/ballot_box-blue.svg' ) }}</div>
+          </a>
+        </div>
         <div id="skip-target" class="tablet:grid-col-8 right-shift">
           <section class="register align-bottom" role="region" aria-label="{{ content.field_heading | field_value }}">
             <header>
@@ -19,10 +19,9 @@
               <label class="usa-sr-only" for="js-user-selection">
                 {{ content.field_dropdown_label | field_value }}
               </label>
-              <select class="usa-select max-width-input" name="userselection" id="js-user-selection" data-test="state-selection">
-                <option value="default">
-                  {{ content.field_dropdown_label | field_value }}
-                </option>
+              <select class="usa-select max-width-input" name="userselection" id="js-user-selection"
+                      data-test="state-selection">
+                <option value="default">{{ content.field_dropdown_label | field_value }}</option>
                 {% set states = [
                   {"abrev": "al", "name": "Alabama"},
                   {"abrev": "ak", "name": "Alaska"},
@@ -80,11 +79,9 @@
                   {"abrev": "wv", "name": "West Virginia"},
                   {"abrev": "wi", "name": "Wisconsin"},
                   {"abrev": "wy", "name": "Wyoming"}
-                      ] %}
+                ] %}
                 {% for state in states %}
-                <option value="{{ state.abrev }}">
-                  {{ state.name }}
-                </option>
+                  <option value="{{ state.abrev }}">{{ state.name }}</option>
                 {% endfor %}
               </select>
               <button class="usa-button max-width-input" id="js-user-submit" type="submit" data-test="register-button">
@@ -93,7 +90,7 @@
             </form>
           </section>
         </div>
+      </div>
     </div>
   </div>
-</div>
 {% endblock %}
