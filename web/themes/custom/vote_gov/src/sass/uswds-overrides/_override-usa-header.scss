@@ -27,6 +27,16 @@
   margin-top: 0;
 }
 
+.usa-header {
+  [role=search] {
+    @include at-media($theme-header-min-width) {
+      float: right;
+      max-width: 340px;
+      width: 100%;
+    }
+  }
+}
+
 .banner__text-container {
   flex: 1;
 }
