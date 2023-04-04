@@ -65,8 +65,8 @@ jobs:
             npm install
 
             if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "stage" || "${CIRCLE_BRANCH}" == "prod" ]]; then
-              npm run cy:backEnd || exit 0
-              npm run cy:test || exit 0
+              npm run cy:backEnd
+              npm run cy:test
             else
               npm run cy:backEnd
               npm run cy:test
@@ -181,7 +181,7 @@ jobs:
       - run:
           name: "Snyk"
           command: |
-            snyk test --org=${SNYK_ORG} --severity-threshold=$THRESHOLD || exit 0
+            snyk test --org=${SNYK_ORG} --severity-threshold=$THRESHOLD
   downsync:
     docker:
       - image: cimg/base:stable
