@@ -137,7 +137,7 @@ jobs:
           command: |
             export CIRCLE_BRANCH="test"
             source ./scripts/pipeline/cloud-gov-login.sh ${CIRCLE_BRANCH}
-            
+
             mv manifest.yml manifest.tmp
             envsubst < manifest.tmp > manifest.yml
 
@@ -276,7 +276,6 @@ workflows:
               only:
                 - dev
                 - stage
-                - test
                 - prod
           requires:
             - build-theme
