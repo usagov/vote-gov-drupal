@@ -8,7 +8,6 @@ describe('check search bar', () => {
     cy.get('[data-test="search-box"]').type('test')
     cy.get('[data-test="search-btn"]').click()
 
-    // get the url and verity its search.vote.gov
     cy.url().should('contain', 'search.vote.gov')
   })
 
