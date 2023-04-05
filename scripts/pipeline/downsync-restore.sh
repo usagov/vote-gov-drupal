@@ -58,4 +58,4 @@ echo "Cleaning up old connections..."
 rm -rf restore.txt ~/.mysql backup_${BACKUP_ENV}.sql
 
 echo "Running 'drush cr' on '${BACKUP_ENV}' database..."
-source $(pwd $(dirname $0))/cloud-gov-remote-command.sh "vote-drupal-${RESTORE_ENV}" "drush cr"
+source $(pwd $(dirname $0))/scripts/pipeline/cloud-gov-remote-command.sh "vote-drupal-${RESTORE_ENV}" "drush cr"
