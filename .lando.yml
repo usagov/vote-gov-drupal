@@ -90,14 +90,23 @@ tooling:
     service: node
     cmd:  npm run cy:proofer --prefix /app/testing
     description: run cypress external links test - headless
-  'cy:test':
-    service: node
-    cmd:  npm run cy:test --prefix /app/testing
-    description: run cypress functional tests - headless
-  'cy:testSuite':
-    service: node
-    cmd:  npm run cypress run --prefix /app/testing
-    description: run full testing suite, functional, internal links, external links and accessibility - headless
+# removing the follow script until further work can be done for cypress and cli commands to work together 
+  # 'cy:createUser':
+  #   service: node
+  #   cmd:  npm run cy:createUser --prefix /app/testing
+  #   description: run cypress create user script - headless
+  # 'cy:deleteUser':
+  #   service: node
+  #   cmd:  npm run cy:deleteUser --prefix /app/testing
+  #   description: run cypress delete user script - headless
+  # 'cy:test':
+  #   service: node
+  #   cmd:  npm run cy:test --prefix /app/testing 
+  #   description: run cypress functional tests - headless
+  # 'cy:testSuite':
+  #   service: node
+  #   cmd:  npm run cypress run --prefix /app/testing
+  #   description: run full testing suite, functional, internal links, external links and accessibility - headless
   retune:
     service: appserver
     description: Branch update (run composer / db updates / import config / clear caches).
