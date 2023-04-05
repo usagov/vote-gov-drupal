@@ -24,6 +24,9 @@ msgstr "Saad choid77['88[7g77"
 msgid "Go back"
 msgstr "N1t'33'"
 
+msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
+msgstr "&'ii'n77[ b1 sits'aa y1zh7 si'1n7g77 biyi' asdzoh naashch'22'7g77 47 n7l47 o'oot'ah n7igo yaa y1[ti'go si'32go 1lyaa "
+
 #identifier
 msgid "An official website of the %link%."
 msgstr "!l32j8' han1lki'7g77 website kod00 %link%"
@@ -55,6 +58,9 @@ msgstr "yi[ nidaalnish"
 
 msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
 msgstr "U.S. Election Assistance Commission yi[ nidaalnish"
+
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
+msgstr "US Election Assistance Commission bee bik'7'diidlid7g77 47 biniy4h7g77 Vote.gov yi[ ah77'1azhgo yaa halne'"
 
 msgid "Follow Vote.gov on Twitter"
 msgstr "Vote.gov bik44' nanin1 Twitter biyi'"
