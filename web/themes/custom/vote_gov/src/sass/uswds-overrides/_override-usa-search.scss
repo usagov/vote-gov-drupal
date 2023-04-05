@@ -14,10 +14,6 @@
     padding-bottom: 0.5rem;
     margin-left: auto;
 
-    @media (min-width: 40em) {
-      max-width: 340px;
-    }
-
     [dir="rtl"] & {
       margin-left: unset;
       margin-right: auto;

@@ -29,10 +29,8 @@
 
 .usa-header {
   [role=search] {
-    @include at-media($theme-header-min-width) {
-      float: right;
+    @media (min-width: 40em) {
       max-width: 340px;
-      width: 100%;
     }
   }
 }
