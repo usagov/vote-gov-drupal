@@ -31,3 +31,25 @@ function vote_gov_preprocess(&$variables) {
     $variables['currentnode'] = $node;
   }
 }
+
+/**
+ * Use language code for the language switcher
+ */
+function vote_gov_preprocess_links__language_block(&$variables) {
+
+  //Set title to translated laguage name
+  foreach ($variables['links'] as $i => $link) {
+    $linkLanguage = $link['link']['#options']['language'];
+    $variables['links'][$i]['link']['#title'] = $linkLanguage->getName();
+  }
+
+  //Append the title with the language name in English
+  $node = $variables['currentnode'];
+  $languages = $node->getTranslationLanguages();
+  foreach ($languages as $i => $language) {
+    //if translated lang name is different from english lang name
+    if ($variables['links'][$i]['link']['#title'] != $language->getName() ) {
+      $variables['links'][$i]['link']['#title'] = $variables['links'][$i]['link']['#title'] . " (" . $language->getName() . ")";
+    }
+  }
+}
