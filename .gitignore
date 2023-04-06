@@ -79,3 +79,6 @@ node_modules
 # Ignore Cypress Reports
 /testing/cypress/reports
 /testing/cypress/screenshots
+
+# Tome static files
+/html

@@ -27,6 +27,14 @@
   margin-top: 0;
 }
 
+.usa-header {
+  [role=search] {
+    @media (min-width: 40em) {
+      max-width: 340px;
+    }
+  }
+}
+
 .banner__text-container {
   flex: 1;
 }
