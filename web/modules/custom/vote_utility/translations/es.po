@@ -20,7 +20,7 @@ msgid "Go back"
 msgstr "Volver"
 
 msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgid "Ilustración del acto del voto donde una boleta marcada está siendo insertada en una urna"
+msgstr "Ilustración del acto del voto donde una boleta marcada está siendo insertada en una urna"
 
 #identifier
 msgid "An official website of the %link%."

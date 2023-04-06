@@ -18,7 +18,7 @@ wait_for_tunnel() {
 }
 
 echo "Running 'drush cr' on '${BACKUP_ENV}' database..."
-source $(pwd $(dirname $0))/cloud-gov-remote-command.sh "vote-drupal-${BACKUP_ENV}" "drush cr"
+source $(pwd $(dirname $0))/scripts/pipeline/cloud-gov-remote-command.sh "vote-drupal-${BACKUP_ENV}" "drush cr"
 
 ## Create a tunnel through the application to pull the database.
 echo "Creating tunnel to database..."
