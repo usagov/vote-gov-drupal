@@ -67,6 +67,8 @@
  *
  */
 #}
+{% set node_type = node.bundle() %}
+
 {% set classes = [
   'node',
   'node--type-' ~ node.bundle|clean_class,
@@ -74,6 +76,7 @@
   node.isSticky() ? 'node--sticky',
   not node.isPublished() ? 'node--unpublished',
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  node_type == 'state_territory' ? 'voter-info'
 ] %}
 
 <article{{ attributes.addClass(classes) }}>
