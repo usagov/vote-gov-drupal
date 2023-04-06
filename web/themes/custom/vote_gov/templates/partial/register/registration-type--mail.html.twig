@@ -10,7 +10,7 @@
             '@state_name': state_name
         }) }}
         </p>
-    {% endif %} 
+    {% endif %}
 
     {# Registration deadlines #}
 <h2>{{ 'Voter registration deadlines in @state_name' | t({ '@state_name': state_name }) }}</h2>
@@ -38,7 +38,5 @@
 
     {# NVRF Selector and download button #}
 {% if state_abrev != 'wy' %}
-    <div>
-        {{ drupal_entity('block_content', 3) }}
-    </div>
+  {{ drupal_entity('block_content', 3) }}
 {% endif %}
