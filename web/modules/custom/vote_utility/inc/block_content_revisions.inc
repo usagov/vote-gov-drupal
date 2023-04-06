@@ -8,7 +8,7 @@
 use Drupal\Core\Entity\EntityInterface;
 
 /**
- * Implements hook_ENTITY_TYPE_update() {.
+ * Implements hook_ENTITY_TYPE_update().
  */
 function vote_utility_block_content_update(EntityInterface $entity) {
 
