@@ -16,7 +16,7 @@ dependencies:
 _core:
   default_config_hash: GDIFCs-lTKQIMvaNZ95zofFcqpTxDYakxx02_zZFkmM
 id: media_library
-label: 'Media library'
+label: 'Admin: Media library'
 module: views
 description: 'Find and manage media.'
 tag: ''
@@ -478,13 +478,22 @@ display:
     cache_metadata:
       max-age: 0
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
         - 'url.query_args:sort_by'
         - user
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:core.entity_view_display.media.audio.default'
+        - 'config:core.entity_view_display.media.audio.media_library'
+        - 'config:core.entity_view_display.media.document.default'
+        - 'config:core.entity_view_display.media.document.media_library'
+        - 'config:core.entity_view_display.media.image.default'
+        - 'config:core.entity_view_display.media.image.media_library'
+        - 'config:core.entity_view_display.media.remote_video.default'
+        - 'config:core.entity_view_display.media.remote_video.media_library'
   page:
     id: page
     display_title: Page
@@ -781,7 +790,15 @@ display:
         - 'url.query_args:sort_by'
         - user
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:core.entity_view_display.media.audio.default'
+        - 'config:core.entity_view_display.media.audio.media_library'
+        - 'config:core.entity_view_display.media.document.default'
+        - 'config:core.entity_view_display.media.document.media_library'
+        - 'config:core.entity_view_display.media.image.default'
+        - 'config:core.entity_view_display.media.image.media_library'
+        - 'config:core.entity_view_display.media.remote_video.default'
+        - 'config:core.entity_view_display.media.remote_video.media_library'
   widget:
     id: widget
     display_title: Widget
@@ -1101,7 +1118,15 @@ display:
         - url.query_args
         - 'url.query_args:sort_by'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:core.entity_view_display.media.audio.default'
+        - 'config:core.entity_view_display.media.audio.media_library'
+        - 'config:core.entity_view_display.media.document.default'
+        - 'config:core.entity_view_display.media.document.media_library'
+        - 'config:core.entity_view_display.media.image.default'
+        - 'config:core.entity_view_display.media.image.media_library'
+        - 'config:core.entity_view_display.media.remote_video.default'
+        - 'config:core.entity_view_display.media.remote_video.media_library'
   widget_table:
     id: widget_table
     display_title: 'Widget (table)'
