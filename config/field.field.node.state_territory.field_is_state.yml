@@ -11,7 +11,7 @@ entity_type: node
 bundle: state_territory
 label: 'This is a state'
 description: "<b>Checked</b> - This page is for one of the 50 states in the United States<br>\r\n<b>Unchecked</b> - This page is for a territory or district of the United States"
-required: true
+required: false
 translatable: false
 default_value:
   -
