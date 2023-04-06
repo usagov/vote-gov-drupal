@@ -26,12 +26,12 @@
 <h2>{{ 'Voter registration deadlines in @state_name' | t ({ '@state_name': label | render }) }}</h2>
     <ul class="registered-resources">
     {% if (state_abrev == 'gu') %}
-        {% include '@vote_gov/partial/registration-date-online.html.twig' %}
+        {% include '@vote_gov/partial/register/registration-date-online.html.twig' %}
     {% endif %}
     {% if (state_abrev == 'gu') or (state_abrev == 'as') or (state_abrev == 'nh') %}
-        {% include '@vote_gov/partial/registration-date-mail.html.twig' %}
+        {% include '@vote_gov/partial/register/registration-date-mail.html.twig' %}
     {% endif %}
-    {% include '@vote_gov/partial/registration-date-in-person.html.twig' %}
+    {% include '@vote_gov/partial/register/registration-date-in-person.html.twig' %}
     </ul>
 
     {# Check voter registration #}

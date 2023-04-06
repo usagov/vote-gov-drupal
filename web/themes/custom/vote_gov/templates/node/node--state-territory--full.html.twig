@@ -15,10 +15,14 @@
 {% elseif 'Online' in reg_type %}
     {% include '@vote_gov/partial/register/registration-type--online.html.twig' %}
 {% elseif 'By-mail' in reg_type %}
-    {% include '@vote_gov/partial/register/registration-type--by-mail.html.twig' %}
+    {% include '@vote_gov/partial/register/registration-type--mail.html.twig' %}
 {% elseif 'In-person' in reg_type %}
     {% include '@vote_gov/partial/register/registration-type--in-person.html.twig' %}
 {% endif %}
 
-  <p> {{'Last updated ' | t }}{{ node.revision_timestamp.value | date('F d, Y') }} </p>
+<p>{{'Last updated:' | t }}{{ node.revision_timestamp.value | date('F d, Y') }}</p>
+    
+    {# Homepage link #}
+{% include '@vote_gov/partial/homepage-link.html.twig' %}
+
 {% endblock %}
