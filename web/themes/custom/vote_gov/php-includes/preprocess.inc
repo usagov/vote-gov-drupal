@@ -37,18 +37,17 @@ function vote_gov_preprocess(&$variables) {
  */
 function vote_gov_preprocess_links__language_block(&$variables) {
 
-  // Send the untranslated english language name to the template.
-  if (isset($variables['currentnode'])) {
-    $node = $variables['currentnode'];
-    $languages = $node->getTranslationLanguages();
+  // Send the untranslated english language names to the template.
+  $en = \Drupal::languageManager()->getLanguage('en');
+  $languages = \Drupal::languageManager()->getLanguages();
+  \Drupal::languageManager()->setConfigOverrideLanguage($en);
 
-    foreach ($variables['links'] as $i => $link) {
-      // Append the english language name after the translated one
-      // if they are unique.
-      if (isset($languages[$i])
-          && $variables['links'][$i]['link']['#title'] != $languages[$i]->getName()) {
-        $variables['links'][$i]['link']['#title'] .= " ({$languages[$i]->getName()})";
-      }
+  foreach ($variables['links'] as $i => $link) {
+    // Append the english language name after the translated one
+    // if they are unique.
+    if (isset($languages[$i])
+        && $variables['links'][$i]['link']['#title'] != $languages[$i]->getName()) {
+      $variables['links'][$i]['link']['#title'] .= " ({$languages[$i]->getName()})";
     }
   }
 }
