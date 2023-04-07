@@ -42,7 +42,8 @@ function vote_gov_preprocess_links__language_block(&$variables) {
   $languages = $node->getTranslationLanguages();
 
   foreach ($variables['links'] as $i => $link) {
-    // Append the english language name after the translated one if they are unique.
+    // Append the english language name after the translated one
+    // if they are unique.
     if (isset($languages[$i])
         && $variables['links'][$i]['link']['#title'] != $languages[$i]->getName()) {
       $variables['links'][$i]['link']['#title'] .= " ({$languages[$i]->getName()})";

@@ -58,7 +58,7 @@ proxy:
 # it knows the service to use.
 # https://docs.lando.dev/config/tooling.html#usage
 tooling:
-  coder-sniffer:
+  phplint:
     cmd: '/app/vendor/squizlabs/php_codesniffer/bin/phpcs --ignore=*/node_modules/* --standard=/app/vendor/drupal/coder/coder_sniffer/Drupal,vendor/drupal/coder/coder_sniffer/DrupalPractice --extensions=php,module,inc,theme,info,yml,twig --report=full /app/web/modules/custom /app/web/themes/custom -n'
     service: appserver
   npm-testing:
@@ -90,7 +90,7 @@ tooling:
     service: node
     cmd:  npm run cy:proofer --prefix /app/testing
     description: run cypress external links test - headless
-# removing the follow script until further work can be done for cypress and cli commands to work together 
+# removing the follow script until further work can be done for cypress and cli commands to work together
   # 'cy:createUser':
   #   service: node
   #   cmd:  npm run cy:createUser --prefix /app/testing
@@ -101,7 +101,7 @@ tooling:
   #   description: run cypress delete user script - headless
   # 'cy:test':
   #   service: node
-  #   cmd:  npm run cy:test --prefix /app/testing 
+  #   cmd:  npm run cy:test --prefix /app/testing
   #   description: run cypress functional tests - headless
   # 'cy:testSuite':
   #   service: node
