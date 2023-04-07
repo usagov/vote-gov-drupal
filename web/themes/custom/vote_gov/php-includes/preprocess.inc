@@ -38,15 +38,17 @@ function vote_gov_preprocess(&$variables) {
 function vote_gov_preprocess_links__language_block(&$variables) {
 
   // Send the untranslated english language name to the template.
-  $node = $variables['currentnode'];
-  $languages = $node->getTranslationLanguages();
+  if (isset($variables['currentnode'])) {
+    $node = $variables['currentnode'];
+    $languages = $node->getTranslationLanguages();
 
-  foreach ($variables['links'] as $i => $link) {
-    // Append the english language name after the translated one
-    // if they are unique.
-    if (isset($languages[$i])
-        && $variables['links'][$i]['link']['#title'] != $languages[$i]->getName()) {
-      $variables['links'][$i]['link']['#title'] .= " ({$languages[$i]->getName()})";
+    foreach ($variables['links'] as $i => $link) {
+      // Append the english language name after the translated one
+      // if they are unique.
+      if (isset($languages[$i])
+          && $variables['links'][$i]['link']['#title'] != $languages[$i]->getName()) {
+        $variables['links'][$i]['link']['#title'] .= " ({$languages[$i]->getName()})";
+      }
     }
   }
 }
