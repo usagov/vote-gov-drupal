@@ -21,10 +21,13 @@ describe('Government Banner Function', () => {
   it('check content editor access', () => {
     cy.signin(Cypress.env('roles').content_editor.username, Cypress.env('test_pass'))
 
-     // each role should have access to edit
-    cy.request('/block/1').then((response) => {
-      expect(response.status).to.eq(200)
-        }) 
+    // content editor should not have access to url
+    cy.request({
+      url: '/block/1',
+      failOnStatusCode:false,
+    }).then((resp) => {
+      expect(resp.status).to.eq(403)
+    })
 
     // only site admin should be able to create banner, editor and manager should not have access to url
     cy.request({
@@ -34,7 +37,7 @@ describe('Government Banner Function', () => {
           expect(resp.status).to.eq(403)
       })
 
-    cy.logout()    
+    cy.logout()
   })
 
   it('check content manager access', () => {
@@ -45,13 +48,13 @@ describe('Government Banner Function', () => {
       expect(response.status).to.eq(200)
         })
 
-    // only site admin should be able to create banner, editor and manager should not have access to url 
+    // only site admin should be able to create banner, editor and manager should not have access to url
     cy.request({
           url: '/block/add/government_banner',
           failOnStatusCode:false,
       }).then((resp) => {
           expect(resp.status).to.eq(403)
-      })    
+      })
 
     cy.logout()
   })

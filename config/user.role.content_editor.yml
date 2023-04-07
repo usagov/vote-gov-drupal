@@ -13,7 +13,6 @@ dependencies:
     - workflows.workflow.publishing_content
   module:
     - block_content
-    - block_content_permissions
     - content_moderation
     - content_translation
     - file
@@ -32,9 +31,7 @@ permissions:
   - 'access files overview'
   - 'access media overview'
   - 'access toolbar'
-  - 'create accordion_group block content'
   - 'create audio media'
-  - 'create basic block content'
   - 'create content translations'
   - 'create document media'
   - 'create image media'
@@ -42,7 +39,6 @@ permissions:
   - 'create media'
   - 'create page content'
   - 'create remote_video media'
-  - 'create sitewide_alert block content'
   - 'create state_territory content'
   - 'edit any landing content'
   - 'edit any page content'
@@ -63,14 +59,6 @@ permissions:
   - 'translate page node'
   - 'translate remote_video media'
   - 'translate state_territory node'
-  - 'update any accordion_group block content'
-  - 'update any basic block content'
-  - 'update any email_signup block content'
-  - 'update any government_banner block content'
-  - 'update any registration_form_selector block content'
-  - 'update any registration_tool block content'
-  - 'update any search block content'
-  - 'update any sitewide_alert block content'
   - 'update content translations'
   - 'update media'
   - 'use publishing_content transition create_new_draft'
@@ -84,6 +72,5 @@ permissions:
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view page revisions'
-  - 'view restricted block content'
   - 'view state_territory revisions'
   - 'view the administration theme'
