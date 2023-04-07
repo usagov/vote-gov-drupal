@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.landing.body
     - field.field.node.landing.field_metatags
-    - field.field.node.landing.field_page_components
     - field.field.node.landing.field_paragraph_components
     - node.type.landing
   module:
@@ -29,7 +28,6 @@ content:
 hidden:
   body: true
   field_metatags: true
-  field_page_components: true
   field_paragraph_components: true
   langcode: true
   published_at: true

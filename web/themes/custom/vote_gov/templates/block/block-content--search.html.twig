@@ -26,10 +26,10 @@
 
       <label class="usa-sr-only" for="search-field-en-small">{{ content.field_search_placeholder | field_value }}</label>
 
-      <input class="usa-input" id="search-field-en-small" type="search" name="query" autocomplete="off" placeholder="{{ content.field_search_placeholder | field_value }} {{ affiliated_search != '1' ? '(in english)' | t }}">
+      <input class="usa-input" data-test="search-box" id="search-field-en-small" type="search" name="query" autocomplete="off" placeholder="{{ content.field_search_placeholder | field_value }} {{ affiliated_search != '1' ? '(in english)' | t }}">
 
-      <button class="usa-button" type="submit" name="commit" data-disable-with="Search">
-        <img src="{{ theme_path }}/dist/assets/img/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt={{ 'Search Vote.gov' | t }}>
+      <button class="usa-button" data-test="search-btn" type="submit" name="commit" data-disable-with="Search">
+        <img src="{{ theme_path }}/dist/assets/img/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="{{ 'Search Vote.gov' | t }}">
       </button>
     </form>
   </div>

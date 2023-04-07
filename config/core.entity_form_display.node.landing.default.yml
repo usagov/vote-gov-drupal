@@ -3,15 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_form_mode.block_content.landing_page_component
     - field.field.node.landing.body
     - field.field.node.landing.field_metatags
-    - field.field.node.landing.field_page_components
     - field.field.node.landing.field_paragraph_components
     - node.type.landing
   module:
     - content_moderation
-    - inline_entity_form
     - metatag
     - paragraphs
     - path
@@ -45,23 +42,6 @@ content:
     settings:
       sidebar: true
       use_details: true
-    third_party_settings: {  }
-  field_page_components:
-    type: inline_entity_form_complex
-    weight: 11
-    region: content
-    settings:
-      form_mode: landing_page_component
-      override_labels: true
-      label_singular: Component
-      label_plural: Components
-      allow_new: true
-      allow_existing: false
-      match_operator: CONTAINS
-      allow_duplicate: false
-      collapsible: false
-      collapsed: false
-      revision: true
     third_party_settings: {  }
   field_paragraph_components:
     type: paragraphs

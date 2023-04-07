@@ -243,7 +243,7 @@ content:
     weight: 4
     region: content
   field_registration_type:
-    type: list_default
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
