@@ -60,3 +60,55 @@ msgstr "Vote.gov को Twitter पर फ़ॉलो करें"
 #search
 msgid "Search Vote.gov"
 msgstr "Vote.gov पर खोजें"
+
+#state
+msgid "Register to vote in %state_name%"
+msgstr "%state_name% में मतदान करने के लिए पंजीकरण करें"
+
+msgid "How to register to vote in %state_name%"
+msgstr "%state_name% में मतदान करने के लिए पंजीकरण कैसे करें"
+
+msgid "Online registration is currently not available. Find out ways to register to vote at %link%."
+msgstr "ऑनलाइन पंजीकरण अभी उपलब्ध नहीं है। %link% पर मतदान के लिए पंजीकरण करने के तरीके देखें।"
+
+msgid "%state_name%’s state election website"
+msgstr "%state_name% की चुनाव वेबसाइट"
+
+msgid "Register in person at your local election office. Learn more about how to register on %link%."
+msgstr "अपने स्थानीय चुनाव कार्यालय में व्यक्तिगत रूप से पंजीकरण करें। %link% पर पंजीकरण करने के तरीके के बारे में और जानें।"
+
+msgid "Voter registration is not required in %state_name%. Learn more about voting on %link%."
+msgstr "%state_name% में मतदाता पंजीकरण की आवश्यकता नहीं है। %link% पर मतदान के बारे में और जानें।"
+
+msgid "Start your online registration on %link%."
+msgstr "%link% पर अपना ऑनलाइन पंजीकरण शुरू करें।"
+
+msgid "You can also register to vote by mail or in person on %link%."
+msgstr "आप %link% पर डाक द्वारा या व्यक्तिगत रूप से मतदान करने के लिए पंजीकरण कर सकते हैं।"
+
+msgid "Other ways to register to vote in %state_name%"
+msgstr "%state_name% में मतदान के लिए पंजीकरण करने के अन्य तरीके"
+
+msgid "Register by mail deadline:"
+msgstr "डाक द्वारा पंजीकरण की अंतिम तिथि:"
+
+msgid "Online registration deadline:"
+msgstr "ऑनलाइन पंजीकरण की अंतिम तिथि:"
+
+msgid "Voter registration deadlines in %state_name%"
+msgstr "%state_name% में मतदाता पंजीकरण की अंतिम तिथियां"
+
+msgid "In person registration deadline:"
+msgstr "व्यक्तिगत रूप से पंजीकरण की अंतिम तिथि:"
+
+msgid "How to check your voter registration"
+msgstr "अपने मतदाता पंजीकरण की जांच कैसे करें"
+
+msgid "You can confirm your voter registration status on %link%."
+msgstr "आप %link% पर अपने मतदाता पंजीकरण की स्थिति की पुष्टि कर सकते हैं।"
+
+msgid "You can confirm your voter registration status by contacting your local registration office. %link%"
+msgstr "आप अपने स्थानीय पंजीकरण कार्यालय से संपर्क करके अपने मतदाता पंजीकरण की स्थिति की पुष्टि कर सकते हैं। %link%"
+
+msgid "Click here to view Wyoming's county clerk contact information (PDF)"
+msgstr "(व्योमिंग के काउंटी क्लर्क की संपर्क जानकारी (पीडीएफ) देखने के लिए यहां क्लिक करें)।"

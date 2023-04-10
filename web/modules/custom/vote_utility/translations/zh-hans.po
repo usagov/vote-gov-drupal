@@ -60,3 +60,55 @@ msgstr "在 Twitter 上关注 Vote.gov"
 #search
 msgid "Search Vote.gov"
 msgstr "搜索 Vote.gov"
+
+#state
+msgid "Register to vote in %state_name%"
+msgstr "在 %state_name% 注册投票"
+
+msgid "How to register to vote in %state_name%"
+msgstr "如何在 %state_name% 注册投票"
+
+msgid "Online registration is currently not available. Find out ways to register to vote at %link%."
+msgstr "目前不提供在线注册。在 %link% 找到登记投票的方法"
+
+msgid "%state_name%’s state election website"
+msgstr "%state_name% 的州选举网站"
+
+msgid "Register in person at your local election office. Learn more about how to register on %link%."
+msgstr "亲自到您当地的选举办公室登记。详细了解如何在 %link% 上注册"
+
+msgid "Voter registration is not required in %state_name%. Learn more about voting on %link%."
+msgstr "%state_name% 不需要选民登记。了解有关在 %link% 上投票的更多信息"
+
+msgid "Start your online registration on %link%."
+msgstr "在 %link% 开始您的在线注册"
+
+msgid "You can also register to vote by mail or in person on %link%."
+msgstr "您也可以通过邮件或亲自在 %link% 上登记投票"
+
+msgid "Other ways to register to vote in %state_name%"
+msgstr "在 %state_name% 登记投票的其他方式"
+
+msgid "Register by mail deadline:"
+msgstr "邮寄报名截止日期："
+
+msgid "Online registration deadline:"
+msgstr "网上报名截止日期："
+
+msgid "Voter registration deadlines in %state_name%"
+msgstr "%state_name% 的选民登记截止日期"
+
+msgid "In person registration deadline:"
+msgstr "亲自报名截止日期："
+
+msgid "How to check your voter registration"
+msgstr "如何检查您的选民登记"
+
+msgid "You can confirm your voter registration status on %link%."
+msgstr "您可以在 %link% 上确认您的选民登记状态"
+
+msgid "You can confirm your voter registration status by contacting your local registration office. %link%"
+msgstr "您可以聯繫當地的登記處確認您的選民登記狀態。%link%。"
+
+msgid "Click here to view Wyoming's county clerk contact information (PDF)"
+msgstr "點擊此處查看懷俄明州縣書記聯繫資訊 (PDF）"

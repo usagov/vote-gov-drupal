@@ -60,3 +60,36 @@ msgstr "টুইটারে Vote.gov অনুসরণ করুন"
 #search
 msgid "Search Vote.gov"
 msgstr "Vote.gov অনুসন্ধান করুন"
+
+#state
+"heading": "Register to vote in %state_name%",	"heading": "%state_name% এ ভোট দিতে নিবন্ধন করুন",
+
+"heading2": "How to register to vote in %state_name%",	"heading2": "%state_name% এ ভোট দেওয়ার জন্য কীভাবে নিবন্ধন করবেন",
+
+"by_mail__intro": "Online registration is currently not available. Find out ways to register to vote at %link%.",	"by_mail__intro": "বর্তমানে অনলাইন নিবন্ধন সুবিধা নেই। %link% ভোট দেওয়ার জন্য নিবন্ধন করার উপায়গুলি খুঁজুন",
+"by_mail__link": "%state_name%’s state election website",	"by_mail__link": "%state_name%-এর রাজ্য নির্বাচনের ওয়েবসাইট",
+
+"in_person__intro": "Register in person at your local election office. Learn more about how to register on %link%.",	"in_person__intro": "আপনার স্থানীয় নির্বাচন অফিসে ব্যক্তিগতভাবে নিবন্ধন করুন। কীভাবে নিবন্ধন করবেন সে সম্পর্কে আরও জানুন %link%",
+"in_person__link": "%state_name%’s election website",	"in_person__link": "%state_name%-এর রাজ্য নির্বাচনের ওয়েবসাইট",
+
+"not_needed__intro": "Voter registration is not required in %state_name%. Learn more about voting on %link%.",	"not_needed__intro": "%state_name%-এ ভোটার নিবন্ধনের প্রয়োজন নেই। ভোট দেওয়ার বিষয়ে আরও জানুন %link%",
+
+"not_needed__link": "%state_name%'s election website",	"not_needed__link": "%state_name%-এর রাজ্য নির্বাচনী ওয়েবসাইট",
+
+"online__answer1": "Start your online registration on %link%.",	"online__answer1": "আপনার অনলাইন নিবন্ধন শুরু করুন %link%",
+"online__answer1_link": "%state_name%’s election website",	"online__answer1_link": "%state_name%-এর রাজ্য নির্বাচনী ওয়েবসাইট",
+
+"online__answer2": "You can also register to vote by mail or in person on %link%.",	"online__answer2": "আপনি ডাকযোগে বা ব্যক্তিগতভাবে ভোট দেওয়ার জন্য নিবন্ধন করতে পারেন %link%",
+"online__h2_question2": "Other ways to register to vote in %state_name%",	"online__h2_question2": "%state_name% এ ভোট দেওয়ার জন্য নিবন্ধন করার অন্যান্য উপায়",
+
+"dates__bymail_deadline": "Register by mail deadline:",	"dates__bymail_deadline": "ডাকযোগে নিবন্ধনের সময়সীমা:",
+"dates__byonline_deadline": "Online registration deadline:",	"dates__byonline_deadline": "অনলাইন নিবন্ধনের সময়সীমা:",
+"dates__heading": "Voter registration deadlines in %state_name%",	"dates__heading": "%state_name% এ ভোটার নিবন্ধনের সময়সীমা",
+
+"dates__inperson_deadline": "In person registration deadline:",	"dates__inperson_deadline": "ব্যক্তিগতভাবে নিবন্ধনের সময়সীমা:",
+"confirm_registration__heading": "How to check your voter registration",	"confirm_registration__heading": "কীভাবে আপনার ভোটার নিবন্ধন পরীক্ষা করবেন",
+"confirm_registration__intro": "You can confirm your voter registration status on %link%.",	"confirm_registration__intro": "আপনি আপনার ভোটার রেজিস্ট্রেশন স্ট্যাটাস নিশ্চিত করতে পারেন %link%",
+"confirm_registration__link": "%state_name%’s election website",	"confirm_registration__link": "%state_name%-এর রাজ্য নির্বাচনী ওয়েবসাইট",
+
+"confirm_registration__intro_WY": "You can confirm your voter registration status by contacting your local registration office. %link%",	"confirm_registration__intro_WY": "আপনি আপনার স্থানীয় নিবন্ধন অফিসে যোগাযোগ করে আপনার ভোটার নিবন্ধন স্থিতি নিশ্চিত করতে পারেন। %link%।",
+"confirm_registration__link_WY": "Click here to view Wyoming's county clerk contact information (PDF)"	"confirm_registration__link_WY": "Wyoming এর কাউন্টি ক্লার্ক যোগাযোগের তথ্য (PDF) দেখতে এখানে ক্লিকরুন"

@@ -61,3 +61,55 @@ msgstr "I-follow ang Vote.gov sa Twitter"
 #search
 msgid "Search Vote.gov"
 msgstr "I-search ang Vote.gov"
+
+#state
+msgid "Register to vote in %state_name%"
+msgstr "Magparehistro para bumoto sa %state_name%"
+
+msgid "How to register to vote in %state_name%"
+msgstr "Paano magparehistro para bumoto sa  %state_name%"
+
+msgid "Online registration is currently not available. Find out ways to register to vote at %link%."
+msgstr "Kasalukuyan walang online na pagpaparehistro na magagamit. Alamin ang mga paraan para magparehistro para bumoto sa %link%."
+
+msgid "%state_name%’s state election website"
+msgstr "website ng eleksyon ng estado ng %state_name%."
+
+msgid "Register in person at your local election office. Learn more about how to register on %link%."
+msgstr "Magparehistro nang personal sa inyong lokal na opisina ng eleksyon. Matuto nang higit pa tungkol sa kung paano magparehistro sa %link%."
+
+msgid "Voter registration is not required in %state_name%. Learn more about voting on %link%."
+msgstr "Kasalukuyang hindi kinakailangan ang pagpaparehistro ng botante sa %state_name%. Matuto ng  higit pa tungkol sa pagboto sa %link%."
+
+msgid "Start your online registration on %link%."
+msgstr "Simulan ang inyong online na pagpaparehistro sa %link%."
+
+msgid "You can also register to vote by mail or in person on %link%."
+msgstr "Maaari din kayong magparehistro para bumoto sa pamamagitan ng koreo o nang personal sa %link%."
+
+msgid "Other ways to register to vote in %state_name%"
+msgstr "Iba pang mga paraan para magparehistro para bumoto sa %state_name%"
+
+msgid "Register by mail deadline:"
+msgstr "Deadline ng pagpaparehistro sa pamamagitan ng koreo"
+
+msgid "Online registration deadline:"
+msgstr "Deadline ng pagpaparehistro sa online"
+
+msgid "Voter registration deadlines in %state_name%"
+msgstr "Mga deadline ng pagpaparehistro ng botante sa %state_name%"
+
+msgid "In person registration deadline:"
+msgstr "Deadline ng personal na pagpaparehistro"
+
+msgid "How to check your voter registration"
+msgstr "Paano i-tsek ang inyong rehistrasyon ng botante"
+
+msgid "You can confirm your voter registration status on %link%."
+msgstr "Maaari ninyong kumpirmahin ang istado ng inyong rehistrasyon ng botante sa %link%."
+
+msgid "You can confirm your voter registration status by contacting your local registration office. %link%"
+msgstr "Maaari ninyong kumpirmahin ang estado ng inyong rehistrasyon ng botante sa pamamagitan ng pakikipag-ugnayan sa inyong lokal na opisina ng rehistrasyon. %link%"
+
+msgid "Click here to view Wyoming's county clerk contact information (PDF)"
+msgstr "I-click ito upang makita ang impormasyon sa pakikipag-ugnayan sa clerk ng county (PDF) ng Wyoming."

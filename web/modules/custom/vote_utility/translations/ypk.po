@@ -60,3 +60,55 @@ msgstr "Maligtigu Vote.gov Twitter-ekun"
 #search
 msgid "Search Vote.gov"
 msgstr "Ivaghivikigu vote.gov"
+
+#state
+msgid "Register to vote in %state_name%"
+msgstr "Ilaten nakmikinaluten %state_name%-mi"
+
+msgid "How to register to vote in %state_name%"
+msgstr "Naten ilannayaghsin nakmikimun %state_name%-mi"
+
+msgid "Online registration is currently not available. Find out ways to register to vote at %link%."
+msgstr "Whaa maaten online-kun ilatelleq pilleghqiituq. Esghaghhu naten ilatelleghqan %link%-mi"
+
+msgid "%state_name%’s state election website"
+msgstr "%state_name%'s state election website"
+
+msgid "Register in person at your local election office. Learn more about how to register on %link%."
+msgstr "Ilaten gginasaghlluku negpek ilatellghan qepghaghvigani. Wata liitaghaghhu ilatelleghqaq %link%-mi"
+
+msgid "Voter registration is not required in %state_name%. Learn more about voting on %link%."
+msgstr "Nakmikimun ilanniituq %state_name%-mi. Wata liitaghaghhu nakmikimun %link%-emi. "
+
+msgid "Start your online registration on %link%."
+msgstr "Piinlighhu online-ekun ilatellghen %link%-emi"
+
+msgid "You can also register to vote by mail or in person on %link%."
+msgstr "Ilasaghngaaghpek ama tuyughqunllu gginasaghllukillu %link%-mi"
+
+msgid "Other ways to register to vote in %state_name%"
+msgstr "Ilangi nakmikilleghmun ilatellghet %state_name%-emi "
+
+msgid "Register by mail deadline:"
+msgstr "Ilatelleq tuyuqayugkun tuuniviga:"
+
+msgid "Online registration deadline:"
+msgstr "Online-ekun ilatellghem tuuniviga:"
+
+msgid "Voter registration deadlines in %state_name%"
+msgstr "Nakmikilleghmun ilatellghan tuunivigi %state_name%-emi"
+
+msgid "In person registration deadline:"
+msgstr "Gginasaghlluku ilatellghem tuuniviga: "
+
+msgid "How to check your voter registration"
+msgstr "Esghalleghqan nakmikimun ilatellghen"
+
+msgid "You can confirm your voter registration status on %link%."
+msgstr "Ipapighqennayaghan nakmikimun ilatellghen %link%-mi"
+
+msgid "You can confirm your voter registration status by contacting your local registration office. %link%"
+msgstr "Ipapighqesaghngaaghpegu nakmikillgheghpek ilatellghan natetulnga tuqluquvgu negpek ilatfigan qepghaghviga. %link%."
+
+msgid "Click here to view Wyoming's county clerk contact information (PDF)"
+msgstr "Click here to view Wyoming's county clerk contact information (PDF)"
