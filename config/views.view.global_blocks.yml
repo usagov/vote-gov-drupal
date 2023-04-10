@@ -7,13 +7,14 @@ dependencies:
     - block_content.type.government_banner
     - block_content.type.registration_form_selector
     - block_content.type.search
+    - user.role.authenticated
   module:
     - block_content
     - user
 _core:
   default_config_hash: jvd5Pu6jy-lra4oMr-mR7zuY6CVDv9CaNeoj0Y70gV4
 id: global_blocks
-label: 'Global Blocks'
+label: 'Admin: Global Blocks'
 module: views
 description: 'Find and manage custom blocks.'
 tag: default
@@ -360,9 +361,10 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: perm
+        type: role
         options:
-          perm: 'administer blocks'
+          role:
+            authenticated: authenticated
       cache:
         type: tag
         options: {  }
@@ -609,19 +611,7 @@ display:
           entity_field: langcode
           plugin_id: language
           operator: in
-          value:
-            en: en
-            es: es
-            bn: bn
-            zh-hans: zh-hans
-            zh: zh
-            hi: hi
-            km: km
-            ko: ko
-            nv: nv
-            tl: tl
-            vi: vi
-            ypk: ypk
+          value: {  }
           group: 1
           exposed: true
           expose:
@@ -642,7 +632,7 @@ display:
               content_editor: '0'
               content_manager: '0'
               site_admin: '0'
-            reduce: true
+            reduce: false
           is_grouped: false
           group_info:
             label: ''
@@ -727,7 +717,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user.permissions
+        - user.roles
       tags: {  }
   page_1:
     id: page_1
@@ -753,5 +743,5 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user.permissions
+        - user.roles
       tags: {  }
