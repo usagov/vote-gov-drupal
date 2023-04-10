@@ -5,11 +5,12 @@
 <h2>{{ 'How to register to vote in @state_name' | t({ '@state_name': state_name }) }}</h2>
     {# more info link #}
     {% if content.field_more_info_link | render %}
-        <p>{{ 'Online registration is currently not available. Find out ways to register to vote at <a href="@link">@state_name\'s election website</a>.' | t({
-            '@link': content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ),
-            '@state_name': state_name
+      {% set more_info_link = content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ) %}
+      {% set more_info_link_text = "@state_name’s election website" | t({ '@state_name': state_name }) %}
+      <p>{{ 'Online registration is currently not available. Find out ways to register to vote at @link.' | t({
+          '@link': { "#markup": "<a href=\"#{more_info_link}\">#{more_info_link_text}</a>" } | render
         }) }}
-        </p>
+      </p>
     {% endif %}
 
     {# Registration deadlines #}
@@ -21,18 +22,20 @@
 
     {# Check voter registration #}
 {% if content.field_confirm_registration_link | render %}
-<h2>{{ 'How to check your voter registration' | t }}</h2>
+  {% set confirm_reg_link = content.field_override_confirm_reg_link | field_value | render | default( content.field_confirm_registration_link | field_value | render ) %}
+  {% set confirm_reg_link_text = "@state_name’s election website" | t({ '@state_name': state_name }) %}
+  <h2>{{ 'How to check your voter registration' | t({ '@state_name': state_name }) }}</h2>
     {% if state_abrev != 'wy' %}
-        <p>{{ 'You can confirm your voter registration status on <a href="@link">@state_name\'s election website</a>.' | t({
-        '@link': content.field_override_confirm_reg_link | field_value | render | default( content.field_confirm_registration_link | field_value | render ),
-        '@state_name': state_name
+      <p>{{ 'You can confirm your voter registration status on @link.' | t({
+          '@link': { "#markup": "<a href=\"#{confirm_reg_link}\">#{confirm_reg_link_text}</a>" } | render
         }) }}
-        </p>
+      </p>
     {% else %} {# Wyoming alt text #}
-        <p>{{ 'You can confirm your voter registration status by contacting your local registration office. <a href="@link">Click here to view Wyoming\'s county clerk contact information (PDF)</a>.' | t({
-        '@link': content.field_override_confirm_reg_link | field_value | render | default( content.field_confirm_registration_link | field_value | render )
+      {% set alt_confirm_reg_link_text = "Click here to view Wyoming's county clerk contact information (PDF)" | t %}
+      <p>{{ 'You can confirm your voter registration status by contacting your local registration office. @link.' | t({
+          '@link': { "#markup": "<a href=\"#{confirm_reg_link}\">#{alt_confirm_reg_link_text}</a>" } | render
         }) }}
-        </p>
+      </p>
     {% endif %}
 {% endif %}
 

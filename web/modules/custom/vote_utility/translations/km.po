@@ -19,18 +19,21 @@ msgstr "ជ្រើសរើសភាសា"
 msgid "Go back"
 msgstr "ត្រឡប់ក្រោយ"
 
+msgid "Last updated:"
+msgstr "បានធ្វើបច្ចុប្បន្នភាពលើកចុងក្រោយ៖"
+
 msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
 msgstr "រូបភាពនៃប្រអប់អ្នកបោះឆ្នោតដែលមានសន្លឹកឆ្នោតបានគូសធីកត្រូវបានបញ្ចូល ដើម្បីបង្ហាញពីសកម្មភាពបោះឆ្នោត"
 
 #identifier
-msgid "An official website of the %link%."
-msgstr "គេហទំព័រផ្លូវការនៃ %link%"
+msgid "An official website of the @link."
+msgstr "គេហទំព័រផ្លូវការនៃ @link"
 
 msgid "General Services Administration"
 msgstr "រដ្ឋបាលសេវាកម្មទូទៅ"
 
-msgid "Looking for U.S. government information and services? %link%"
-msgstr "កំពុងស្វែងរកព័ត៌មាននិងសេវាកម្មរដ្ឋាភិបាលអាមេរិចមែនទេ? %link%"
+msgid "Looking for U.S. government information and services? @link."
+msgstr "កំពុងស្វែងរកព័ត៌មាននិងសេវាកម្មរដ្ឋាភិបាលអាមេរិចមែនទេ? @link"
 
 msgid "Visit USA.gov"
 msgstr "ចូលមើល​ USA.gov"
@@ -62,32 +65,32 @@ msgid "Search Vote.gov"
 msgstr "ស្រាវជ្រាវរក Vote.gov"
 
 #state
-msgid "Register to vote in %state_name%"
-msgstr "ចុះឈ្មោះដើម្បីបោះឆ្នោតនៅរដ្ឋ %state_name%"
+msgid "Register to vote in @state_name"
+msgstr "ចុះឈ្មោះដើម្បីបោះឆ្នោតនៅរដ្ឋ @state_name"
 
-msgid "How to register to vote in %state_name%"
-msgstr "របៀបចុះឈ្មោះបោះឆ្នោតនៅរដ្ឋ %state_name%"
+msgid "How to register to vote in @state_name"
+msgstr "របៀបចុះឈ្មោះបោះឆ្នោតនៅរដ្ឋ @state_name"
 
-msgid "Online registration is currently not available. Find out ways to register to vote at %link%."
-msgstr "ការចុះឈ្មោះអនឡាញគឺមិនមានទេនៅពេលបច្ចុប្បន្ន។ ស្វែងយល់របៀបផ្សេងៗដើម្បីចុះឈ្មោះបោះឆ្នោតនៅ %link%"
+msgid "Online registration is currently not available. Find out ways to register to vote at @link."
+msgstr "ការចុះឈ្មោះអនឡាញគឺមិនមានទេនៅពេលបច្ចុប្បន្ន។ ស្វែងយល់របៀបផ្សេងៗដើម្បីចុះឈ្មោះបោះឆ្នោតនៅ @link"
 
-msgid "%state_name%’s state election website"
-msgstr "គេហទំព័របោះឆ្នោតរដ្ឋរបស់ %state_name%"
+msgid "@state_name’s election website"
+msgstr "គេហទំព័របោះឆ្នោតរដ្ឋរបស់ @state_name"
 
-msgid "Register in person at your local election office. Learn more about how to register on %link%."
-msgstr "ចុះឈ្មោះដោយមកផ្ទាល់នៅឯការិយាល័យបោះឆ្នោតក្នុងមូលដ្ឋាន។ ស្វែងយល់បន្ថែមអំពីរបៀបចុះឈ្មោះនៅលើ %link%"
+msgid "Register in person at your local election office. Learn more about how to register on @link."
+msgstr "ចុះឈ្មោះដោយមកផ្ទាល់នៅឯការិយាល័យបោះឆ្នោតក្នុងមូលដ្ឋាន។ ស្វែងយល់បន្ថែមអំពីរបៀបចុះឈ្មោះនៅលើ @link"
 
-msgid "Voter registration is not required in %state_name%. Learn more about voting on %link%."
-msgstr "ការចុះឈ្មោះអ្នកបោះឆ្នោតមិនត្រូវបានតម្រូវទេនៅរដ្ឋ %state_name%។ ស្វែងយល់បន្ថែមអំពីការបោះឆ្នោតនៅ %link%"
+msgid "Voter registration is not required in @state_name. Learn more about voting on @link."
+msgstr "ការចុះឈ្មោះអ្នកបោះឆ្នោតមិនត្រូវបានតម្រូវទេនៅរដ្ឋ @state_name។ ស្វែងយល់បន្ថែមអំពីការបោះឆ្នោតនៅ @link"
 
-msgid "Start your online registration on %link%."
-msgstr "ចាប់ផ្តើមការចុះឈ្មោះអនឡាញរបស់អ្នកនៅលើ %link%",
+msgid "Start your online registration on @link."
+msgstr "ចាប់ផ្តើមការចុះឈ្មោះអនឡាញរបស់អ្នកនៅលើ @link"
 
-msgid "You can also register to vote by mail or in person on %link%."
-msgstr "អ្នកក៏អាចចុះឈ្មោះដើម្បីបោះឆ្នោតតាមសំបុត្រឬដោយមកផ្ទាល់នៅលើ %link%"
+msgid "You can also register to vote by mail or in person on @link."
+msgstr "អ្នកក៏អាចចុះឈ្មោះដើម្បីបោះឆ្នោតតាមសំបុត្រឬដោយមកផ្ទាល់នៅលើ @link"
 
-msgid "Other ways to register to vote in %state_name%"
-msgstr "របៀបផ្សេងៗទៀតដើម្បីចុះឈ្មោះបោះឆ្នោតនៅរដ្ឋ %state_name%"
+msgid "Other ways to register to vote in @state_name"
+msgstr "របៀបផ្សេងៗទៀតដើម្បីចុះឈ្មោះបោះឆ្នោតនៅរដ្ឋ @state_name"
 
 msgid "Register by mail deadline:"
 msgstr "ថ្ងៃផុតកំណត់ចុះឈ្មោះតាមសំបុត្រ៖"
@@ -95,8 +98,8 @@ msgstr "ថ្ងៃផុតកំណត់ចុះឈ្មោះតាមស
 msgid "Online registration deadline:"
 msgstr "ថ្ងៃផុតកំណត់ការចុះឈ្មោះអនឡាញ៖"
 
-msgid "Voter registration deadlines in %state_name%"
-msgstr "ថ្ងៃផុតកំណត់ការចុះឈ្មោះអ្នកបោះឆ្នោតនៅរដ្ឋ %state_name%"
+msgid "Voter registration deadlines in @state_name"
+msgstr "ថ្ងៃផុតកំណត់ការចុះឈ្មោះអ្នកបោះឆ្នោតនៅរដ្ឋ @state_name"
 
 msgid "In person registration deadline:"
 msgstr "ថ្ងៃផុតកំណត់ការចុះឈ្មោះដោយមកផ្ទាល់៖"
@@ -104,11 +107,11 @@ msgstr "ថ្ងៃផុតកំណត់ការចុះឈ្មោះដ
 msgid "How to check your voter registration"
 msgstr "ររបៀបពិនិត្យមើលការចុះឈ្មោះឣ្នកបោះឆ្នោតរបស់ឣ្នក"
 
-msgid "You can confirm your voter registration status on %link%."
-msgstr "អ្នកអាចបញ្ជាក់ស្ថានភាពការចុះឈ្មោះអ្នកបោះឆ្នោតរបស់អ្នកនៅលើ %link%"
+msgid "You can confirm your voter registration status on @link."
+msgstr "អ្នកអាចបញ្ជាក់ស្ថានភាពការចុះឈ្មោះអ្នកបោះឆ្នោតរបស់អ្នកនៅលើ @link"
 
-msgid "You can confirm your voter registration status by contacting your local registration office. %link%"
-msgstr "អ្នកអាចបញ្ជាក់ស្ថានភាពការចុះឈ្មោះបោះឆ្នោតរបស់អ្នកដោយទំនាក់ទំនងទៅការិយាល័យផ្នែកចុឈ្មោះក្នុងមូលដ្ឋានរបស់អ្នក។ %link%។"
+msgid "You can confirm your voter registration status by contacting your local registration office. @link."
+msgstr "អ្នកអាចបញ្ជាក់ស្ថានភាពការចុះឈ្មោះបោះឆ្នោតរបស់អ្នកដោយទំនាក់ទំនងទៅការិយាល័យផ្នែកចុឈ្មោះក្នុងមូលដ្ឋានរបស់អ្នក។ @link។"
 
 msgid "Click here to view Wyoming's county clerk contact information (PDF)"
 msgstr " ចុចទីនេះដើម្បីមើលព័ត៌មានទំនាក់ទំនងទៅស្មៀនប្រចាំខោនធីរបស់រដ្ឋ Wyoming (PDF)"

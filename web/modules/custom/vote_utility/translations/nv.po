@@ -24,15 +24,18 @@ msgstr "Saad choid77['88[7g77"
 msgid "Go back"
 msgstr "N1t'33'"
 
+msgid "Last updated:"
+msgstr "Ak44'di n1zk'33z:"
+
 #identifier
-msgid "An official website of the %link%."
-msgstr "!l32j8' han1lki'7g77 website kod00 %link%"
+msgid "An official website of the @link."
+msgstr "!l32j8' han1lki'7g77 website kod00 @link"
 
 msgid "General Services Administration"
 msgstr "General Services Administration woly4ego t'11 a[tso yee 1k1 an7daalwo'd00 &lt;Bilag1ana k'ehj7&gt;ß"
 
-msgid "Looking for U.S. government information and services? %link%"
-msgstr "W1ashindoon da'7n77shj77sh hane' d00 bee 1k1 an7da'awo' han7t1h? %link%"
+msgid "Looking for U.S. government information and services? @link."
+msgstr "W1ashindoon da'7n77shj77sh hane' d00 bee 1k1 an7da'awo' han7t1h? @link"
 
 msgid "Visit USA.gov"
 msgstr "USA.gov d7n77['88["
@@ -64,32 +67,32 @@ msgid "Search Vote.gov"
 msgstr "vote.gov hanit1h"
 
 #state
-msgid "Register to vote in %state_name%"
-msgstr "Ha'did77l77[ i'ii'n77[ biniiy4 %state_name%"
+msgid "Register to vote in @state_name"
+msgstr "Ha'did77l77[ i'ii'n77[ biniiy4 @state_name"
 
-msgid "How to register to vote in %state_name%"
-msgstr "Hait'1o i'ii'n77[ biniiy4 ha'dil'88h %state_name%"
+msgid "How to register to vote in @state_name"
+msgstr "Hait'1o i'ii'n77[ biniiy4 ha'dil'88h @state_name"
 
-msgid "Online registration is currently not available. Find out ways to register to vote at %link%."
-msgstr "B44sh [ich7'ii biyi' ha'dilne'7g77 1den k'ad. Hait'1o i'ii'n77[ biniiy4 hazh'dii['88h7g77 han7t1h %link%"
+msgid "Online registration is currently not available. Find out ways to register to vote at @link."
+msgstr "B44sh [ich7'ii biyi' ha'dilne'7g77 1den k'ad. Hait'1o i'ii'n77[ biniiy4 hazh'dii['88h7g77 han7t1h @link"
 
-msgid "%state_name%’s state election website"
-msgstr "%state_name% hahoodzoh bee w0j7h7g77 biwebsite biyi'"
+msgid "@state_name’s election website"
+msgstr "@state_name hahoodzoh bee w0j7h7g77 biwebsite biyi'"
 
-msgid "Register in person at your local election office. Learn more about how to register on %link%."
-msgstr "T'11 ni yah anin11hgo ha'did77l77[ k44hon7t'8n7gi i'ii'n77[ bi[ haz'32gi. N11s baa 77n7[ta' doogo i'iin77[ biniiy4 ha'diln44h7g77 %link%"
+msgid "Register in person at your local election office. Learn more about how to register on @link."
+msgstr "T'11 ni yah anin11hgo ha'did77l77[ k44hon7t'8n7gi i'ii'n77[ bi[ haz'32gi. N11s baa 77n7[ta' doogo i'iin77[ biniiy4 ha'diln44h7g77 @link"
 
-msgid "Voter registration is not required in %state_name%. Learn more about voting on %link%."
-msgstr "Doo ha'd7l44hg00 bee haz'3 %state_name% biyi'.  N11s baa 77n7[ta' doogo i'iin77[ biniiy4 ha'diln44h7g77 %link%"
+msgid "Voter registration is not required in @state_name. Learn more about voting on @link."
+msgstr "Doo ha'd7l44hg00 bee haz'3 @state_name biyi'.  N11s baa 77n7[ta' doogo i'iin77[ biniiy4 ha'diln44h7g77 @link"
 
-msgid "Start your online registration on %link%."
-msgstr "B44sh [ich7'ii bee ha'd7l44h7g77 baatiihnin11h %link%"
+msgid "Start your online registration on @link."
+msgstr "B44sh [ich7'ii bee ha'd7l44h7g77 baatiihnin11h @link"
 
-msgid "You can also register to vote by mail or in person on %link%."
-msgstr "Ha'd7l44h7g77 a[d0' naaltsoos nin1h1jeehd00 47 doodago t'11 ni yah anin11hgo bee ah00t'i' %link%"
+msgid "You can also register to vote by mail or in person on @link."
+msgstr "Ha'd7l44h7g77 a[d0' naaltsoos nin1h1jeehd00 47 doodago t'11 ni yah anin11hgo bee ah00t'i' @link"
 
-msgid "Other ways to register to vote in %state_name%"
-msgstr "A['22 1daat'1o hazh'dii['88h i'ii'n77[ biniiy4 %state_name%"
+msgid "Other ways to register to vote in @state_name"
+msgstr "A['22 1daat'1o hazh'dii['88h i'ii'n77[ biniiy4 @state_name"
 
 msgid "Register by mail deadline:"
 msgstr "Naaltsoos nin1h1jeehd00 ha'd7l44hgo koj8' b1 ah00t'i':"
@@ -97,20 +100,20 @@ msgstr "Naaltsoos nin1h1jeehd00 ha'd7l44hgo koj8' b1 ah00t'i':"
 msgid "Online registration deadline:"
 msgstr "B44sh [ich7'ii bee ha'd7l44hgo koj8' b1 ah00t'i':"
 
-msgid "Voter registration deadlines in %state_name%"
-msgstr "I'ii'n77[ biniiy4 ha'dilne' bee nihoolzh77sh %state_name%"
+msgid "Voter registration deadlines in @state_name"
+msgstr "I'ii'n77[ biniiy4 ha'dilne' bee nihoolzh77sh @state_name"
 
 msgid "In person registration deadline:"
 msgstr "I'ii'n77[ biniiy4 yah ajigh11hgo ha'dilne' bee nihoolzh77sh"
 
 msgid "How to check your voter registration"
-msgstr "Hait'1o i'ii'n77[ biniiy4 hazh'dii['88h7g77 han7t1h %state_name%"
+msgstr "Hait'1o i'ii'n77[ biniiy4 hazh'dii['88h7g77 han7t1h @state_name"
 
-msgid "You can confirm your voter registration status on %link%."
-msgstr "I'ii'n77[ biniiy4 ha'dinila1g77 b7na'7d7[kidgo koj8' hod77lnih %link%"
+msgid "You can confirm your voter registration status on @link."
+msgstr "I'ii'n77[ biniiy4 ha'dinila1g77 b7na'7d7[kidgo koj8' hod77lnih @link"
 
-msgid "You can confirm your voter registration status by contacting your local registration office. %link%"
-msgstr "I'ii'n77[ biniiy4 ha'dinilaago k44hon7t'98gi i'ii'n77[ bi[ na'anishgi b7na'7d7[kid. %link%"
+msgid "You can confirm your voter registration status by contacting your local registration office. @link."
+msgstr "I'ii'n77[ biniiy4 ha'dinilaago k44hon7t'98gi i'ii'n77[ bi[ na'anishgi b7na'7d7[kid. @link"
 
 msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr "Kwe'4 bi[ ad7lch77d Wyoming hahoodzohj7 county clerk woly4ego bi[ da'7n77shj7 hane' <PDF> d7n77['88[go"
+msgstr "Kwe'4 bi[ ad7lch77d Wyoming hahoodzohj7 county clerk woly4ego bi[ da'7n77shj7 hane' &lt;PDF&gt; d7n77['88[go"
