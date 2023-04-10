@@ -63,33 +63,21 @@ msgstr "Vote.gov 사이트 검색"
 
 #state
 msgid "Register to vote in %state_name%"
-msgstr "%state_name% 주 유권자 등록 안내 "
-
-msgid ""
 msgstr "%state_name% 유권자 등록 안내 "
 
 msgid "How to register to vote in %state_name%"
-msgstr "%state_name% 주에서 유권자로 등록하는 방법"
-
-msgid ""
 msgstr "%state_name% 에서 유권자로 등록하는 방법"
 
 msgid "Online registration is currently not available. Find out ways to register to vote at %link%."
 msgstr "온라인 등록은 현재 이용하실 수 없습니다. %link%."
 
 msgid "%state_name%’s state election website"
-msgstr "%state_name% 주 선거 사무국 웹사이트에서 유권자 등록 방법을 확인하시기 바랍니다"
-
-msgid ""
 msgstr "%state_name% 선거 사무국 웹사이트에서 유권자 등록 방법을 확인하시기 바랍니다"
 
 msgid "Register in person at your local election office. Learn more about how to register on %link%."
 msgstr "귀하의 현지 선거 사무소를 직접 내방하여 등록할 수 있습니다. %link%."
 
 msgid "Voter registration is not required in %state_name%. Learn more about voting on %link%."
-msgstr "%state_name% 주는 유권자 등록이 필요하지 않습니다. %link%."
-
-msgid ""
 msgstr "%state_name% 는 유권자 등록이 필요하지 않습니다. %link%."
 
 msgid "Start your online registration on %link%."
@@ -111,9 +99,6 @@ msgid "Online registration deadline:"
 msgstr "온라인 등록 마감일:"
 
 msgid "Voter registration deadlines in %state_name%"
-msgstr "%state_name% 주 유권자 등록 마감일 ",
-
-msgid ""
 msgstr "%state_name% 유권자 등록 마감일 "
 
 msgid "In person registration deadline:"
