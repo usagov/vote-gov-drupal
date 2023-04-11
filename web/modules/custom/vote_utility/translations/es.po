@@ -19,18 +19,21 @@ msgstr "Seleccione el idioma"
 msgid "Go back"
 msgstr "Volver"
 
+msgid "Last updated:"
+msgstr "Última actualización:"
+
 msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
 msgstr "Ilustración del acto del voto donde una boleta marcada está siendo insertada en una urna"
 
 #identifier
-msgid "An official website of the %link%."
-msgstr "Un sitio web oficial de la %link%"
+msgid "An official website of the @link."
+msgstr "Un sitio web oficial de la @link"
 
 msgid "General Services Administration"
 msgstr "Administración General de Servicios (GSA, en inglés)"
 
-msgid "Looking for U.S. government information and services? %link%"
-msgstr "¿Busca información y servicios del Gobierno de Estados Unidos? %link%"
+msgid "Looking for U.S. government information and services? @link."
+msgstr "¿Busca información y servicios del Gobierno de Estados Unidos? @link"
 
 msgid "Visit USA.gov"
 msgstr "USAGov en Español"
@@ -60,3 +63,55 @@ msgstr "Siga a Vote.gov en Twitter (en inglés)"
 #search
 msgid "Search Vote.gov"
 msgstr "Busque en Vote.gov"
+
+#state
+msgid "Register to vote in @state_name"
+msgstr "Regístrese para votar en @state_name"
+
+msgid "How to register to vote in @state_name"
+msgstr "¿Cómo registrarse para votar en @state_name?"
+
+msgid "Online registration is currently not available. Find out ways to register to vote at @link."
+msgstr "La inscripción por Internet no está disponible actualmente. Vea otras formas de inscribirse para votar en @link."
+
+msgid "@state_name’s election website"
+msgstr "el sitio web electoral de @state_name"
+
+msgid "Register in person at your local election office. Learn more about how to register on @link."
+msgstr "Puede inscribirse en persona. Vea más información en @link."
+
+msgid "Voter registration is not required in @state_name. Learn more about voting on @link."
+msgstr "Este estado no requiere inscripción para votar. Vea más información en @link."
+
+msgid "Start your online registration on @link."
+msgstr "Empiece su inscripción por internet en @link."
+
+msgid "You can also register to vote by mail or in person on @link."
+msgstr " También puede inscribirse para votar por correo o en persona en @link."
+
+msgid "Other ways to register to vote in @state_name"
+msgstr "¿Otras formas para registrarse para votar en @state_name?"
+
+msgid "Register by mail deadline:"
+msgstr "Registrarse por correo postal:"
+
+msgid "Online registration deadline:"
+msgstr "Inscripción por internet:"
+
+msgid "Voter registration deadlines in @state_name"
+msgstr "Fecha límite para registrarse en @state_name"
+
+msgid "In person registration deadline:"
+msgstr "Registrarse en persona:"
+
+msgid "How to check your voter registration"
+msgstr "Cómo comprobar su registro de votante"
+
+msgid "You can confirm your voter registration status on @link."
+msgstr "Usted puede comprobar el estado de su registro de votante en @link."
+
+msgid "You can confirm your voter registration status by contacting your local registration office. @link."
+msgstr "Usted puede confirmar el estado de su inscripción de votante comunicándose con su oficina de registro local. @link."
+
+msgid "Click here to view Wyoming's county clerk contact information (PDF)"
+msgstr "Haga clic aquí para ver la información de contacto de los secretarios de los condados de Wyoming"

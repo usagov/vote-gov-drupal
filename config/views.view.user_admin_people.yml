@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: njaZigMvB4ap21Fg_tQcJhWgYJCGNi49Z5rRL_N6RI0
 id: user_admin_people
-label: People
+label: 'Admin: People'
 module: user
 description: 'Find and manage people interacting with your site.'
 tag: default

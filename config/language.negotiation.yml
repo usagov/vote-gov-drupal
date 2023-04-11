@@ -17,6 +17,7 @@ url:
     nv: nv
     vi: vi
     ypk: ypk
+    '': null
   domains:
     en: ''
     es: ''

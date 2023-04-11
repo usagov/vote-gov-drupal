@@ -37,9 +37,10 @@ function vote_gov_preprocess(&$variables) {
  */
 function vote_gov_preprocess_links__language_block(&$variables) {
 
-  // Send the untranslated english language name to the template.
-  $node = $variables['currentnode'];
-  $languages = $node->getTranslationLanguages();
+  // Send the untranslated english language names to the template.
+  $en = \Drupal::languageManager()->getLanguage('en');
+  $languages = \Drupal::languageManager()->getLanguages();
+  \Drupal::languageManager()->setConfigOverrideLanguage($en);
 
   foreach ($variables['links'] as $i => $link) {
     // Append the english language name after the translated one

@@ -2,8 +2,11 @@
     {# More info #}
 {% if content.field_more_info_link | render %}
 <h2>{{ 'How to register to vote in @state_name' | t({ '@state_name': state_name }) }}</h2>
-    <p>{{ 'Voter registration is not required in @state_name. <a href="@link">Learn more about voting</a> on @state_name\'s election website.' | t({ 
-        '@link': content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ),
-        '@state_name': state_name }) }}
-    </p>
+  {% set more_info_link = content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ) %}
+  {% set more_info_link_text = "@state_name’s election website" | t({ '@state_name': state_name }) %}
+  <p>{{ 'Voter registration is not required in @state_name. Learn more about voting on @link.' | t({
+      '@link': { "#markup": "<a href=\"#{more_info_link}\">#{more_info_link_text}</a>"} | render,
+      '@state_name': state_name
+    }) }}
+  </p>
 {% endif %}

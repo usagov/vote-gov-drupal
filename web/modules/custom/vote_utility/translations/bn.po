@@ -19,18 +19,21 @@ msgstr "ভাষা নির্বাচন করুন"
 msgid "Go back"
 msgstr "ফিরে যাও"
 
+msgid "Last updated:"
+msgstr "সর্বশেষ সংষ্করণ"
+
 msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
 msgstr "চেক করা ব্যালট ঢোকানো হচ্ছে সহ ভোটার বাক্সের চিত্র ভোটিং কার্যক্রম নির্দেশ করে"
 
 #identifier
-msgid "An official website of the %link%."
-msgstr "%link% এর একটি দাপ্তরিক ওয়েবসাইট"
+msgid "An official website of the @link."
+msgstr "@link এর একটি দাপ্তরিক ওয়েবসাইট"
 
 msgid "General Services Administration"
 msgstr "সাধারণ পরিষেবা প্রশাসন"
 
-msgid "Looking for U.S. government information and services? %link%"
-msgstr "মার্কিন সরকারের তথ্য এবং পরিষেবা খুঁজছেন? %link%"
+msgid "Looking for U.S. government information and services? @link."
+msgstr "মার্কিন সরকারের তথ্য এবং পরিষেবা খুঁজছেন? @link"
 
 msgid "Visit USA.gov"
 msgstr "USA.gov দেখুন"
@@ -60,3 +63,55 @@ msgstr "টুইটারে Vote.gov অনুসরণ করুন"
 #search
 msgid "Search Vote.gov"
 msgstr "Vote.gov অনুসন্ধান করুন"
+
+#state
+msgid "Register to vote in @state_name"
+msgstr "@state_name এ ভোট দিতে নিবন্ধন করুন"
+
+msgid "How to register to vote in @state_name"
+msgstr "@state_name এ ভোট দেওয়ার জন্য কীভাবে নিবন্ধন করবেন"
+
+msgid "Online registration is currently not available. Find out ways to register to vote at @link."
+msgstr "বর্তমানে অনলাইন নিবন্ধন সুবিধা নেই। @link ভোট দেওয়ার জন্য নিবন্ধন করার উপায়গুলি খুঁজুন"
+
+msgid "@state_name’s election website"
+msgstr "@state_name-এর রাজ্য নির্বাচনের ওয়েবসাইট"
+
+msgid "Register in person at your local election office. Learn more about how to register on @link."
+msgstr "আপনার স্থানীয় নির্বাচন অফিসে ব্যক্তিগতভাবে নিবন্ধন করুন। কীভাবে নিবন্ধন করবেন সে সম্পর্কে আরও জানুন @link"
+
+msgid "Voter registration is not required in @state_name. Learn more about voting on @link."
+msgstr "@state_name-এ ভোটার নিবন্ধনের প্রয়োজন নেই। ভোট দেওয়ার বিষয়ে আরও জানুন @link"
+
+msgid "Start your online registration on @link."
+msgstr "আপনার অনলাইন নিবন্ধন শুরু করুন @link"
+
+msgid "You can also register to vote by mail or in person on @link."
+msgstr "আপনি ডাকযোগে বা ব্যক্তিগতভাবে ভোট দেওয়ার জন্য নিবন্ধন করতে পারেন @link"
+
+msgid "Other ways to register to vote in @state_name"
+msgstr "@state_name এ ভোট দেওয়ার জন্য নিবন্ধন করার অন্যান্য উপায়"
+
+msgid "Register by mail deadline:"
+msgstr "ডাকযোগে নিবন্ধনের সময়সীমা:"
+
+msgid "Online registration deadline:"
+msgstr "অনলাইন নিবন্ধনের সময়সীমা:"
+
+msgid "Voter registration deadlines in @state_name"
+msgstr "@state_name এ ভোটার নিবন্ধনের সময়সীমা"
+
+msgid "In person registration deadline:"
+msgstr "ব্যক্তিগতভাবে নিবন্ধনের সময়সীমা:"
+
+msgid "How to check your voter registration"
+msgstr "কীভাবে আপনার ভোটার নিবন্ধন পরীক্ষা করবেন"
+
+msgid "You can confirm your voter registration status on @link."
+msgstr "আপনি আপনার ভোটার রেজিস্ট্রেশন স্ট্যাটাস নিশ্চিত করতে পারেন @link"
+
+msgid "You can confirm your voter registration status by contacting your local registration office. @link."
+msgstr "আপনি আপনার স্থানীয় নিবন্ধন অফিসে যোগাযোগ করে আপনার ভোটার নিবন্ধন স্থিতি নিশ্চিত করতে পারেন। @link।"
+
+msgid "Click here to view Wyoming's county clerk contact information (PDF)"
+msgstr "Wyoming এর কাউন্টি ক্লার্ক যোগাযোগের তথ্য (PDF) দেখতে এখানে ক্লিকরুন"

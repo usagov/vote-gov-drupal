@@ -5,4 +5,5 @@
  * Custom functions.
  */
 
+require_once dirname(__FILE__) . '/inc/block_content_revisions.inc';
 require_once dirname(__FILE__) . '/inc/token.inc';
