@@ -19,18 +19,21 @@ msgstr "Lựa chọn ngôn ngữ"
 msgid "Go back"
 msgstr "Quay lại"
 
+msgid "Last updated:"
+msgstr "Cập nhật lần cuối:"
+
 msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
 msgstr "Hình minh họa của ô bỏ phiếu với lá phiếu đã đánh dấu được chèn vào để biểu thị hành động bỏ phiếu"
 
 #identifier
-msgid "An official website of the %link%."
-msgstr "Một trang web chính thức của %link%"
+msgid "An official website of the @link."
+msgstr "Một trang web chính thức của @link"
 
 msgid "General Services Administration"
 msgstr "Cơ quan Quản lý Dịch vụ Tổng hợp"
 
-msgid "Looking for U.S. government information and services? %link%"
-msgstr "Tìm kiếm thông tin và dịch vụ của chính phủ Hoa Kỳ %link%"
+msgid "Looking for U.S. government information and services? @link."
+msgstr "Tìm kiếm thông tin và dịch vụ của chính phủ Hoa Kỳ @link"
 
 msgid "Visit USA.gov"
 msgstr "Vào trang USA.gov"
@@ -60,3 +63,55 @@ msgstr "Theo dõi Vote.gov trên Twitter"
 #search
 msgid "Search Vote.gov"
 msgstr "Tìm kiếm Vote.gov"
+
+#state
+msgid "Register to vote in @state_name"
+msgstr "Đăng ký bỏ phiếu bầu ở @state_name"
+
+msgid "How to register to vote in @state_name"
+msgstr "Đăng ký bỏ phiếu bầu như thế nào ở @state_name"
+
+msgid "Online registration is currently not available. Find out ways to register to vote at @link."
+msgstr "Đăng kí trực tuyến trên mạng hiện tại không có sẵn. Tìm hiểu các phương thức đăng kí bầu cử tại @link"
+
+msgid "@state_name’s election website"
+msgstr "trang web bầu cử của tiểu bang @state_name"
+
+msgid "Register in person at your local election office. Learn more about how to register on @link."
+msgstr "Đăng kí bỏ phiếu trực tiếp tại văn phòng bầu cử địa phương. Xem thêm cách đăng kí trên @link"
+
+msgid "Voter registration is not required in @state_name. Learn more about voting on @link."
+msgstr "Không bắt buộc đăng ký bầu cử ở @state_name. Tìm hiểu thêm về bỏ phiếu bầu cử ở @link"
+
+msgid "Start your online registration on @link."
+msgstr "Bạn bắt đầu bảng đăng ký trực tuyến trên @link"
+
+msgid "You can also register to vote by mail or in person on @link."
+msgstr "Bạn cũng có thể đăng ký chọn bỏ phiếu bằng thư hoặc trực tiếp trên @link"
+
+msgid "Other ways to register to vote in @state_name"
+msgstr "Các cách đăng kí bầu cử khác ở @state_name"
+
+msgid "Register by mail deadline:"
+msgstr "Thời hạn đăng ký qua đường bưu điện: "
+
+msgid "Online registration deadline:"
+msgstr "Thời hạn đăng ký trực tuyến: "
+
+msgid "Voter registration deadlines in @state_name"
+msgstr "Thời hạn đăng ký bỏ phiếu ở @state_name"
+
+msgid "In person registration deadline:"
+msgstr "Thời hạn đăng ký trực tiếp: "
+
+msgid "How to check your voter registration"
+msgstr "Làm thế nào kiểm tra đăng ký cử tri của bạn"
+
+msgid "You can confirm your voter registration status on @link."
+msgstr "Bạn có thể xác nhận hiện trạng đăng ký cử tri của mình trên @link"
+
+msgid "You can confirm your voter registration status by contacting your local registration office. @link."
+msgstr "Ban có thể xác nhận tình trạng đăng ký bầu cử của mình bằng cách liên lạc với văn phòng đăng ký địa phương. @link."
+
+msgid "Click here to view Wyoming's county clerk contact information (PDF)"
+msgstr "Nhấp vào đây để xem thông tin liên lạc của thư ký quận Wyoming (PDF)"

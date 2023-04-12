@@ -21,7 +21,7 @@
       <div><img src="/themes/custom/vote_gov/img/gsa-logo.svg" alt="GSA logo" width="40" height="40"></div>
       <div class="grid-col-auto" aria-label="{{ 'Agency description' | t }}">
         {{ 'Vote.gov' }}<br>
-        <strong>{{ 'An official website of the %link%' | t({'%link%': GSAlink | render}) }}</strong>
+        <strong>{{ 'An official website of the @link.' | t({'@link': GSAlink | render}) }}</strong>
       </div>
     </section>
       {# Menu items (uses template /navigation/menu--footer.html.twig) #}
@@ -31,7 +31,7 @@
     {% endblock %}
     </nav>
     <section aria-label="{{ 'Government information and services' | t }}" class="identifier-gov-info">
-        {{ 'Looking for U.S. government information and services? %link%' | t({'%link%': infoLink | render}) }}
+        {{ 'Looking for U.S. government information and services? @link.' | t({'@link': infoLink | render}) }}
     </section>
   </div>
 </div>
