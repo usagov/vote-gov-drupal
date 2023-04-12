@@ -68,7 +68,6 @@ jobs:
               npm run cy:backEnd
               npm run cy:test
             else
-              npm run cy:backEnd
               npm run cy:test
             fi
 
