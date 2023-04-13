@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "44680315079339d3fafa21e9e5cdd8a2",
+    "content-hash": "2e47a8ef64b1d29c683e52229b129e9a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2452,6 +2452,26 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/language_switcher_extended"
             }
+        },
+        {
+            "name": "drupal/log_stdout",
+            "version": "dev-3339853-drupal-10-compatibility",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/issue/log_stdout-3339853.git",
+                "reference": "15cc7d90410d846024d35f111385ae7df555cbd4"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "This module provides an hook for Drupal Watchdog that directs log messages to php://stdout or php://stderr for better log handling with Docker.",
+            "homepage": "https://www.drupal.org/project/log_stdout",
+            "support": {
+                "issues": "https://www.drupal.org/project/issues/log_stdout",
+                "irc": "irc://irc.freenode.org/drupal-support"
+            },
+            "time": "2020-09-03T01:06:58+00:00"
         },
         {
             "name": "drupal/metatag",
