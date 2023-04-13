@@ -65,7 +65,6 @@ jobs:
             npm install
 
             if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "stage" || "${CIRCLE_BRANCH}" == "prod" ]]; then
-              npm run cy:backEnd
               npm run cy:test
             else
               npm run cy:test
