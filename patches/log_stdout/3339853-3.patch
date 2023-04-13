@@ -1,0 +1,28 @@
+diff --git a/log_stdout.info.yml b/log_stdout.info.yml
+index 26253ce..81532aa 100644
+--- a/log_stdout.info.yml
++++ b/log_stdout.info.yml
+@@ -2,9 +2,4 @@ name: Log Stdout
+ description: Log watchdog messages to stdout
+ package: Logging
+ type: module
+-
+-# Information added by Drupal.org packaging script on 2017-08-08
+-version: '8.x-2.0'
+-core: '8.x'
+-project: 'log_stdout'
+-datestamp: 1502196546
++core_version_requirement: ^8.8 || ^9 || ^10
+diff --git a/src/Logger/Stdout.php b/src/Logger/Stdout.php
+index 1ef0570..4666abc 100644
+--- a/src/Logger/Stdout.php
++++ b/src/Logger/Stdout.php
+@@ -43,7 +43,7 @@ class Stdout implements LoggerInterface {
+   /**
+    * {@inheritdoc}
+    */
+-  public function log($level, $message, array $context = []) {
++  public function log($level, $message, array $context = []):void {
+     global $base_url;
+ 
+     if ($this->config->get('use_stderr') == '1' && $level <= RfcLogLevel::WARNING) {
