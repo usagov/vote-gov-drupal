@@ -3,7 +3,7 @@
 while true
 do
   echo "Running 'drush cron'..."
-  drush --root=$HOME/web core:cron
+  drush --root=$HOME/web core:cron --uri
   echo "'drush cron' task completed!"
   sleep 60m
 done
