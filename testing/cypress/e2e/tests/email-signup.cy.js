@@ -2,7 +2,7 @@
 
 describe('check email signup', () => {
   
-  it.only('Check Email Sign Up Function', () => {
+  it('Check Email Sign Up Function', () => {
     cy.visit('/')
 
     cy.get('[data-test="email-signup"]').type('test@test.com')
