@@ -1,4 +1,4 @@
 _core:
   default_config_hash: yX5KFeprjrWh6mUnLnHgKQoDGmhnSXNpgCaeQ91O4V4
-format: '{"base_url":"@base_url", "timestamp":"@timestamp", "type":"@type", "ip":"@ip", "request_uri":"@request_uri", "referer":"@referer", "uid":"@uid", "link":"@link", "message":"@message"}'
+format: '[@severity] [@type] [@date] @message | uid: @uid | request-uri: @request_uri | refer: @referer | ip:  @ip | link: @link'
 use_stderr: '1'

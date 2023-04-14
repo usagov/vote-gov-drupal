@@ -32,3 +32,8 @@ remote_video:
   version: VERSION
   js:
     dist/js/bx-remote-video.js: { minified: true }
+
+touchpoints:
+  version: VERSION
+  js:
+    https://touchpoints.app.cloud.gov/touchpoints/5fdce4ac.js: { type: external, attributes: { async: true } }
