@@ -37,6 +37,7 @@
         "drupal/double_field": "^4.1",
         "drupal/entity_reference_revisions": "^1.10",
         "drupal/field_group": "^3.4",
+        "drupal/google_tag": "^2.0",
         "drupal/language_switcher_extended": "^1.1",
         "drupal/metatag": "^1.22",
         "drupal/migrate_plus": "^6.0",

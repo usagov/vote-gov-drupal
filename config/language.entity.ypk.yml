@@ -3,7 +3,7 @@ langcode: ypk
 status: true
 dependencies: {  }
 id: ypk
-label: Yupʼik
+label: Yupʼik-Akuzipik
 direction: ltr
 weight: 1
 locked: false
