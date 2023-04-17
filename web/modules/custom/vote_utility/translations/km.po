@@ -71,24 +71,6 @@ msgstr "ចុះឈ្មោះដើម្បីបោះឆ្នោតនៅ
 msgid "How to register to vote in @state_name"
 msgstr "របៀបចុះឈ្មោះបោះឆ្នោតនៅរដ្ឋ @state_name"
 
-msgid "Online registration is currently not available. Find out ways to register to vote at @link."
-msgstr "ការចុះឈ្មោះអនឡាញគឺមិនមានទេនៅពេលបច្ចុប្បន្ន។ ស្វែងយល់របៀបផ្សេងៗដើម្បីចុះឈ្មោះបោះឆ្នោតនៅ @link"
-
-msgid "@state_name’s election website"
-msgstr "គេហទំព័របោះឆ្នោតរដ្ឋរបស់ @state_name"
-
-msgid "Register in person at your local election office. Learn more about how to register on @link."
-msgstr "ចុះឈ្មោះដោយមកផ្ទាល់នៅឯការិយាល័យបោះឆ្នោតក្នុងមូលដ្ឋាន។ ស្វែងយល់បន្ថែមអំពីរបៀបចុះឈ្មោះនៅលើ @link"
-
-msgid "Voter registration is not required in @state_name. Learn more about voting on @link."
-msgstr "ការចុះឈ្មោះអ្នកបោះឆ្នោតមិនត្រូវបានតម្រូវទេនៅរដ្ឋ @state_name។ ស្វែងយល់បន្ថែមអំពីការបោះឆ្នោតនៅ @link"
-
-msgid "Start your online registration on @link."
-msgstr "ចាប់ផ្តើមការចុះឈ្មោះអនឡាញរបស់អ្នកនៅលើ @link"
-
-msgid "You can also register to vote by mail or in person on @link."
-msgstr "អ្នកក៏អាចចុះឈ្មោះដើម្បីបោះឆ្នោតតាមសំបុត្រឬដោយមកផ្ទាល់នៅលើ @link"
-
 msgid "Other ways to register to vote in @state_name"
 msgstr "របៀបផ្សេងៗទៀតដើម្បីចុះឈ្មោះបោះឆ្នោតនៅរដ្ឋ @state_name"
 

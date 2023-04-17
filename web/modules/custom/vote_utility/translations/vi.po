@@ -71,24 +71,6 @@ msgstr "Đăng ký bỏ phiếu bầu ở @state_name"
 msgid "How to register to vote in @state_name"
 msgstr "Đăng ký bỏ phiếu bầu như thế nào ở @state_name"
 
-msgid "Online registration is currently not available. Find out ways to register to vote at @link."
-msgstr "Đăng kí trực tuyến trên mạng hiện tại không có sẵn. Tìm hiểu các phương thức đăng kí bầu cử tại @link"
-
-msgid "@state_name’s election website"
-msgstr "trang web bầu cử của tiểu bang @state_name"
-
-msgid "Register in person at your local election office. Learn more about how to register on @link."
-msgstr "Đăng kí bỏ phiếu trực tiếp tại văn phòng bầu cử địa phương. Xem thêm cách đăng kí trên @link"
-
-msgid "Voter registration is not required in @state_name. Learn more about voting on @link."
-msgstr "Không bắt buộc đăng ký bầu cử ở @state_name. Tìm hiểu thêm về bỏ phiếu bầu cử ở @link"
-
-msgid "Start your online registration on @link."
-msgstr "Bạn bắt đầu bảng đăng ký trực tuyến trên @link"
-
-msgid "You can also register to vote by mail or in person on @link."
-msgstr "Bạn cũng có thể đăng ký chọn bỏ phiếu bằng thư hoặc trực tiếp trên @link"
-
 msgid "Other ways to register to vote in @state_name"
 msgstr "Các cách đăng kí bầu cử khác ở @state_name"
 

@@ -71,24 +71,6 @@ msgstr "Regístrese para votar en @state_name"
 msgid "How to register to vote in @state_name"
 msgstr "¿Cómo registrarse para votar en @state_name?"
 
-msgid "Online registration is currently not available. Find out ways to register to vote at @link."
-msgstr "La inscripción por Internet no está disponible actualmente. Vea otras formas de inscribirse para votar en @link."
-
-msgid "@state_name’s election website"
-msgstr "el sitio web electoral de @state_name"
-
-msgid "Register in person at your local election office. Learn more about how to register on @link."
-msgstr "Puede inscribirse en persona. Vea más información en @link."
-
-msgid "Voter registration is not required in @state_name. Learn more about voting on @link."
-msgstr "Este estado no requiere inscripción para votar. Vea más información en @link."
-
-msgid "Start your online registration on @link."
-msgstr "Empiece su inscripción por internet en @link."
-
-msgid "You can also register to vote by mail or in person on @link."
-msgstr " También puede inscribirse para votar por correo o en persona en @link."
-
 msgid "Other ways to register to vote in @state_name"
 msgstr "¿Otras formas para registrarse para votar en @state_name?"
 
