@@ -102,3 +102,39 @@ msgstr "I'ii'n77[ biniiy4 ha'dinilaago k44hon7t'98gi i'ii'n77[ bi[ na'anishgi b7
 
 msgid "Click here to view Wyoming's county clerk contact information (PDF)"
 msgstr "Kwe'4 bi[ ad7lch77d Wyoming hahoodzohj7 county clerk woly4ego bi[ da'7n77shj7 hane' &lt;PDF&gt; d7n77['88[go"
+
+msgid "Find out ways to register"
+msgstr "A['22 1t'4ego azhdoo'a[ b1 hadi'deesh[77[ jin7zingo hazh'd7'88h @&lt;Bilag1ana k'ehj7&gt;"
+
+msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
+msgstr "B44sh nits7kees biyi' a'doot'a[7g77 k'ad bee haz'3. @link kwe'4 @state_name b1 an7da'ii'ni[7gi bi-website"
+
+msgid "Learn more about how to register"
+msgstr "Ada'ii'n77[ biniy4 hazh'dil4h7g77 hazh0'0 shi[ b44hodooz88[ @&lt;Bilag1ana k'ehj7&gt;"
+
+msgid "Register in person at your local election office. @link on @state_name’s election website."
+msgstr "A'deesh'a[ jin7zingo t'11 h0 ho[ haz'1agi ada'ii'n77[ b1 haz'1n7gi yah ajigh11h d00 hazh'dii['88h. @link @state_name b1 an7da'ii'ni[7gi bi-website jin7zingo "
+
+msgid "Learn more about voting"
+msgstr "I'iin77[ hazh0'0 shi[ b44hodooz88[ jin7zingo @&lt;Bilag1ana k'ehj7&gt;"
+
+msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
+msgstr "@state_name biyi' i'ii'n77[ biniy4 hadazh'dile'7g77 doo bee haz'32 da. @link @state_name b1 an7da'ii'ni[7gi bi-website jin7zingo    "
+
+msgid "Start your online registration"
+msgstr "K'ad b44sh nits7kees7 biyi'j8' ha'd7l44h @&lt;Bilag1ana k'ehj7&gt;"
+
+msgid "@link on @state_name’s election website."
+msgstr "@link @state_name b1 an7da'ii'ni[7gi bi-website-gi"
+
+msgid "register to vote by mail or in person"
+msgstr "naaltsoos haa nin1dahajeeh7d00 hazh'diil'88hgo aji'a' 47 dooda t'11 h0 yah ajigh1ahgo hazh'diil'88h @&lt;Bilag1ana k'ehj7&gt;"
+
+msgid "You can also @link on @state_name’s election website."
+msgstr "A'doot'a[ biniy4 b1 hazh'dil4ehgo a[d0' @link @state_name b1 an7da'ii'ni[7gi bi-website-gi "
+
+msgid "confirm your voter registration status"
+msgstr "A'doot'1[ biniy4 hazh'diilaay65 hazh0'0 bee l3 adeesh[ee[ jin7zingo @&lt;Bilag1ana k'ehj7&gt;"
+
+msgid "You can @link on @state_name’s election website."
+msgstr "@link t'11 b7ighah n7l47 @state_name b1 an7da'ii'ni[7gi bi-website-gi   "
