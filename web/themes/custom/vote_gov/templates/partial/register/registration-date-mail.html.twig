@@ -46,7 +46,7 @@
         "name": "{{ 'Voter registration deadlines in @state_name' | t({ '@state_name': state_name }) }}",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "{{ 'Register by mail deadline:' | t }}{{ deadline }} "
+          "text": "{{ 'Register by mail deadline:' | t }} {{ deadline }}"
         }
       }{{ end }}]
   }
