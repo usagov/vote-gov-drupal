@@ -4,7 +4,7 @@
   "description": "## Requirements",
   "main": "index.js",
   "devDependencies": {
-    "axe-core": "^4.6.3",
+    "axe-core": "^4.7.0",
     "cypress": "^12.9.0",
     "cypress-axe": "^1.4.0",
     "cypress-mochawesome-reporter": "^3.3.0"
