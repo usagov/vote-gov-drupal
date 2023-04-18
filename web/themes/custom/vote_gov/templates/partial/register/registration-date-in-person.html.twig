@@ -20,9 +20,9 @@
       "name": "{{ 'How to register to vote in @state_name' | t({ '@state_name': state_name }) }}",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": {{ 'Register in person at your local election office. Learn more about how to register on @link.' | t({
+        "text": "{{ 'Register in person at your local election office. Learn more about how to register on @link.' | t({
             '@link': { "#markup": "<a href=\"#{more_info_link}\">#{more_info_link_text}</a>" } | render
-        }) }}
+        }) }}"
     }
     },{
         "@type": "Question",
