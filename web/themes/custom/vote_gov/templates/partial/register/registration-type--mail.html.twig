@@ -6,8 +6,9 @@
     {# more info link #}
     {% if content.field_more_info_link | render %}
       {% set more_info_link = content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ) %}
-      {% set more_info_link_text = "Find out ways to register" | t({ '@state_name': state_name }) %}
+      {% set more_info_link_text = "Find out ways to register" | t %}
       <p>{{ 'Online registration is currently not available. @link to vote at @state_name’s election website.' | t({
+          '@state_name': state_name,
           '@link': { "#markup": "<a href=\"#{more_info_link}\">#{more_info_link_text}</a>" } | render
         }) }}
       </p>
