@@ -21,6 +21,9 @@ msgid "Select language"
 msgstr "Saad choid77['88[7g77"
 
 #main
+msgid "@sitename in language"
+msgstr "@sitename Diné"
+
 msgid "Go back"
 msgstr "N1t'33'"
 

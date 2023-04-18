@@ -17,6 +17,9 @@ msgid "Select language"
 msgstr "Pumili ng wika"
 
 #main
+msgid "@sitename in language"
+msgstr "@sitename sa Tagalog"
+
 msgid "Go back"
 msgstr "Bumalik"
 

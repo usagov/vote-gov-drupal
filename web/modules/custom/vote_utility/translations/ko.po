@@ -16,6 +16,9 @@ msgid "Select language"
 msgstr "언어 선택"
 
 #main
+msgid "@sitename in language"
+msgstr "@sitename 한국어 "
+
 msgid "Go back"
 msgstr "이전 화면"
 

@@ -16,6 +16,9 @@ msgid "Select language"
 msgstr "भाषा चुनें"
 
 #main
+msgid "@sitename in language"
+msgstr "@sitename हिन्दी में"
+
 msgid "Go back"
 msgstr "वापस जाएं"
 
