@@ -16,6 +16,9 @@ msgid "Select language"
 msgstr "選擇語言"
 
 #main
+msgid "@sitename in language"
+msgstr "@sitename 中文"
+
 msgid "Go back"
 msgstr "上一頁"
 

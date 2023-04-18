@@ -16,6 +16,9 @@ msgid "Select language"
 msgstr "Lựa chọn ngôn ngữ"
 
 #main
+msgid "@sitename in language"
+msgstr "@sitename bằng Tiếng Việt"
+
 msgid "Go back"
 msgstr "Quay lại"
 

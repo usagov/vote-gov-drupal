@@ -16,6 +16,9 @@ msgid "Select language"
 msgstr "Ulu nakmiighhu"
 
 #main
+msgid "@sitename in language"
+msgstr "@sitename Akuzipigestun"
+
 msgid "Go back"
 msgstr "Uteghten"
 
