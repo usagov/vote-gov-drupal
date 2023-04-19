@@ -7,23 +7,23 @@ _core:
 id: global
 label: Global
 tags:
-  apple_touch_icon_114x114: '[site:url]/assets/img/favicon-114.png'
-  apple_touch_icon_144x144: '[site:url]/assets/img/favicon-144.png'
-  apple_touch_icon_72x72: '[site:url]/assets/img/favicon-72.png'
+  apple_touch_icon_114x114: '[site:url]assets/img/favicon-114.png'
+  apple_touch_icon_144x144: '[site:url]assets/img/favicon-144.png'
+  apple_touch_icon_72x72: '[site:url]assets/img/favicon-72.png'
   canonical_url: '[current-page:url]'
   description: 'Official voter registration website of the US federal government. Register to vote. Learn the voting registration deadlines and laws in your state.'
-  icon_192x192: '[site:url]/assets/img/favicon-192.png'
+  icon_192x192: '[site:url]assets/img/favicon-192.png'
   og_description: 'Official voter registration website of the US federal government. Register to vote. Learn the voting registration deadlines and laws in your state.'
-  og_image: '[site:url]/assets/img/ballot-box-OG.png'
+  og_image: '[site:url]assets/img/ballot-box-OG.png'
   og_site_name: '[site:name]'
   og_title: '[site:slogan]'
   og_type: website
   og_url: '[site:url]'
-  shortcut_icon: '[site:url]/assets/img/favicon.ico'
+  shortcut_icon: '[site:url]assets/img/favicon.ico'
   title: '[site:slogan] | [site:name]'
   twitter_cards_description: 'Official voter registration website of the US federal government. Register to vote. Learn the voting registration deadlines and laws in your state.'
   twitter_cards_donottrack: 'on'
-  twitter_cards_image: '[site:url]/assets/img/ballot-box-OG.png'
+  twitter_cards_image: '[site:url]assets/img/ballot-box-OG.png'
   twitter_cards_site: '@votegov'
   twitter_cards_title: '[site:slogan]'
   twitter_cards_type: summary_large_image
