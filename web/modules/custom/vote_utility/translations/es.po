@@ -71,24 +71,6 @@ msgstr "Regístrese para votar en @state_name"
 msgid "How to register to vote in @state_name"
 msgstr "¿Cómo registrarse para votar en @state_name?"
 
-msgid "Online registration is currently not available. Find out ways to register to vote at @link."
-msgstr "La inscripción por Internet no está disponible actualmente. Vea otras formas de inscribirse para votar en @link."
-
-msgid "@state_name’s election website"
-msgstr "el sitio web electoral de @state_name"
-
-msgid "Register in person at your local election office. Learn more about how to register on @link."
-msgstr "Puede inscribirse en persona. Vea más información en @link."
-
-msgid "Voter registration is not required in @state_name. Learn more about voting on @link."
-msgstr "Este estado no requiere inscripción para votar. Vea más información en @link."
-
-msgid "Start your online registration on @link."
-msgstr "Empiece su inscripción por internet en @link."
-
-msgid "You can also register to vote by mail or in person on @link."
-msgstr " También puede inscribirse para votar por correo o en persona en @link."
-
 msgid "Other ways to register to vote in @state_name"
 msgstr "¿Otras formas para registrarse para votar en @state_name?"
 
@@ -115,3 +97,39 @@ msgstr "Usted puede confirmar el estado de su inscripción de votante comunicán
 
 msgid "Click here to view Wyoming's county clerk contact information (PDF)"
 msgstr "Haga clic aquí para ver la información de contacto de los secretarios de los condados de Wyoming"
+
+msgid "Find out ways to register"
+msgstr "Encuentre cómo inscribirse (en inglés)"
+
+msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
+msgstr "La inscripción en línea no está disponible actualmente. @link para votar, visitando el sitio web de elecciones estatales de @state_name."
+
+msgid "Learn more about how to register"
+msgstr "Para más información sobre cómo inscribirse (en inglés)"
+
+msgid "Register in person at your local election office. @link on @state_name’s election website."
+msgstr "Inscríbase en persona en su oficina electoral local. @link, visite el sitio web de elecciones estatales de @state_name."
+
+msgid "Learn more about voting"
+msgstr "Para más información sobre la votación (en inglés)"
+
+msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
+msgstr "En Virginia no es obligatorio inscribirse para votar. @link, visite el sitio web de elecciones estatales de @state_name."
+
+msgid "Start your online registration"
+msgstr "Inicie su inscripción en línea (en inglés)"
+
+msgid "@link on @state_name’s election website."
+msgstr "@link en el sitio web de elecciones estatales de @state_name."
+
+msgid "register to vote by mail or in person"
+msgstr "inscribirse para votar por correo o en persona (en inglés)"
+
+msgid "You can also @link on @state_name’s election website."
+msgstr "Usted también puede @link en el sitio web de elecciones estatales de @state_name."
+
+msgid "confirm your voter registration status"
+msgstr "verificar el estado de su inscripción en el registro electoral (en inglés)"
+
+msgid "You can @link on @state_name’s election website."
+msgstr "Usted puede @link en el sitio web de elecciones estatales de @state_name."
