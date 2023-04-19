@@ -9,8 +9,8 @@ elif [ "${cf_env}" == "stage" ]; then
   export cf_space=${stage_cf_space}
   export drupal_memory=${stage_drupal_memory}
 elif [ "${cf_env}" == "test" ]; then
-  export cf_space=${dev_cf_space}
-  export drupal_memory=${dev_drupal_memory}
+  export cf_space=${test_cf_space}
+  export drupal_memory=${test_drupal_memory}
 elif [ "${cf_env}" == "dev" ]; then
   export cf_space=${dev_cf_space}
   export drupal_memory=${dev_drupal_memory}
