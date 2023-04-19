@@ -140,7 +140,7 @@ jobs:
             envsubst < manifest.tmp > manifest.yml
 
             cf push
-            cf add-network-policy ${project}-drupal-${CIRCLE_BRANCH} -s ${proxy_space} ${proxy_name} --protocol tcp --port ${proxy_port}
+            cf add-network-policy ${project}-drupal-${CIRCLE_BRANCH} ${proxy_name} -s ${proxy_space} --protocol tcp --port ${proxy_port}
   php-lint:
     docker:
       - image: php:8.2-alpine

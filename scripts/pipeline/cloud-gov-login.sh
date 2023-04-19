@@ -13,6 +13,7 @@ elif [ "${cf_env}" == "test" ]; then
   export drupal_memory=${test_drupal_memory}
 elif [ "${cf_env}" == "dev" ]; then
   export cf_space=${dev_cf_space}
+  [ -z "${cf_space}" ] && export cf_space=${CF_SPACE_DEV}
   export drupal_memory=${dev_drupal_memory}
 fi
 
