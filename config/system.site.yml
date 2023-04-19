@@ -4,7 +4,7 @@ langcode: en
 uuid: b1908ecb-c232-4ad6-88fc-f15acbb1c7d4
 name: Vote.gov
 mail: raymond.estrada@gsa.gov
-slogan: 'Check Voter Registration Deadlines and Laws in Your State'
+slogan: ''
 page:
   403: /node/4
   404: /node/4
