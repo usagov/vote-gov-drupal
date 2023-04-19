@@ -9,16 +9,18 @@ default_config: &defaults
     PHP_INI_SCAN_DIR: /home/vcap/app/php/etc/:/home/vcap/app/php/etc/php.ini.d/
   timeout: 180
   routes:
-    - route: vote-drupal-${CIRCLE_BRANCH}.apps.internal
-      protocol: http1
+    - route: ${project}-drupal-${CIRCLE_BRANCH}.apps.internal
+      protocol: http2
   services:
-    - vote-mysql-${CIRCLE_BRANCH}
-    - vote-secrets-${CIRCLE_BRANCH}
-    - vote-storage-${CIRCLE_BRANCH}
+    - ${project}-mysql-${CIRCLE_BRANCH}
+    - ${project}-secrets-${CIRCLE_BRANCH}
+    - ${project}-static-${CIRCLE_BRANCH}
+    - ${project}-storage-${CIRCLE_BRANCH}
 
 applications:
-- name: vote-drupal-${CIRCLE_BRANCH}
+- name: ${project}-drupal-${CIRCLE_BRANCH}
   <<: *defaults
-  memory: ${DRUPAL_MEMORY}
+  memory: ${DRUPAL_MEMORY}M
+  stack: cflinuxfs4
   instances: 1
   random-route: false

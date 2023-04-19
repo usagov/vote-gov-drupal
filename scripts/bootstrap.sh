@@ -1,6 +1,20 @@
 #!/bin/bash
 set -uo pipefail
 
+## Export proxy servers.
+export http_proxy=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentials.proxy_uri')
+export https_proxy=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentials.proxy_uri')
+
+home="/home/vcap"
+
+## Updated ~/.bashrc to update $PATH when someone logs in.
+[ -z $(cat ${home}/.bashrc | grep PATH) ] && \
+  touch ${home}/.bashrc && \
+  echo "export http_proxy=${http_proxy}" >> ${home}/.bashrc && \
+  echo "export https_proxy=${https_proxy}" >> ${home}/.bashrc
+
+source ${home}/.bashrc
+
 if [ -z "${VCAP_SERVICES:-}" ]; then
     echo "VCAP_SERVICES must a be set in the environment: aborting bootstrap";
     exit 1;
