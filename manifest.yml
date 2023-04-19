@@ -2,6 +2,7 @@
 default_config: &defaults
   buildpacks:
     - php_buildpack
+  command: ./scripts/start
   disk_quota: 768M
   env:
     ENV: ${CIRCLE_BRANCH}
