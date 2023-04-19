@@ -15,15 +15,6 @@ home="/home/vcap"
 
 source ${home}/.bashrc
 
-## Wait for the egress proxy access to be allowed.
-while : ; do
-  echo "Waiting for network..."
-  response=$(curl -LIks --connect-timeout 2 "https://www.github.com")
-  sleep 3
-
-  [[ "${response}" == *"HTTP/2 200"* ]] && break
-done
-
 if [ -z "${VCAP_SERVICES:-}" ]; then
     echo "VCAP_SERVICES must a be set in the environment: aborting bootstrap";
     exit 1;
