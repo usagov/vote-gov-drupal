@@ -20,7 +20,7 @@ default_config: &defaults
 applications:
 - name: ${project}-drupal-${CIRCLE_BRANCH}
   <<: *defaults
-  memory: ${DRUPAL_MEMORY}M
+  memory: ${DRUPAL_MEMORY}
   stack: cflinuxfs4
   instances: 1
   random-route: false
