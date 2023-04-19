@@ -85,28 +85,6 @@ for dir in $dirs; do
   fi
 done
 
-if [[ "${CF_INSTANCE_INDEX:-''}" == "0" && -z "${SKIP_DRUPAL_BOOTSTRAP:-}" ]]; then
-
-    echo  "Updating drupal ... "
-    drush state:set system.maintenance_mode 1 -y
-    drush cr
-    drush updatedb --no-cache-clear -y
-    drush cim -y
-    drush locale-check
-    drush locale-update
-
-    echo "Uploading public files to S3 ..."
-    drush s3fs-rc
-    drush s3fs-cl -y --scheme=public --condition=newer
-    
-    drush cr
-    drush state:set system.maintenance_mode 0 -y
-
-    echo "Bootstrap finished"
-else
-    echo "Bootstrap skipping Drupal CIM because: Instance=${CF_INSTANCE_INDEX:-''} Skip=${SKIP_DRUPAL_BOOTSTRAP:-''}"
-fi
-
 echo "PATH=$PATH:/home/vcap/app/php/bin:/home/vcap/app/vendor/drush/drush" >> /home/vcap/.bashrc
 
 chmod +x ${HOME}/scripts/cronish.sh
