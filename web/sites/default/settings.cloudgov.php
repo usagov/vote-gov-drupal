@@ -71,8 +71,8 @@ foreach ($cf_service_data as $service_list) {
       ];
     }
     elseif (stristr($service['name'], 'secrets')) {
-      $settings['hash_salt'] = $service['credentials']['hash_salt'];
-      $settings['cron_key'] = $service['credentials']['cron_key'];
+      $settings['hash_salt'] = hash('sha256', $service['credentials']['hash_salt']);
+      $settings['cron_key'] = hash('sha256', $service['credentials']['cron_key']);
     }
     elseif (stristr($service['name'], 'storage')) {
       $settings['s3fs.access_key'] = $service['credentials']['access_key_id'];
