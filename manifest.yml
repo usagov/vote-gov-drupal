@@ -4,7 +4,7 @@ default_config: &defaults
     - https://github.com/cloudfoundry/apt-buildpack
     - php_buildpack
   command: ./scripts/start
-  disk_quota: 768M
+  disk_quota: 1G
   env:
     ENV: ${CIRCLE_BRANCH}
     LD_LIBRARY_PATH: /home/vcap/app/php/lib/
