@@ -21,9 +21,9 @@ tags:
   og_url: '[site:url]'
   shortcut_icon: '[site:url]assets/img/favicon.ico'
   title: 'Register to vote | [site:name]'
-  twitter_cards_description: 'Official voter registration website of the US federal government. Register to vote. Learn the voting registration deadlines and laws in your state.'
+  twitter_cards_description: '[current-page:metatag:description]'
   twitter_cards_donottrack: 'on'
   twitter_cards_image: '[site:url]assets/img/ballot-box-OG.png'
   twitter_cards_site: '@votegov'
-  twitter_cards_title: '[site:slogan]'
+  twitter_cards_title: '[current-page:metatag:title]'
   twitter_cards_type: summary_large_image
