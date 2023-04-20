@@ -11,7 +11,14 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://packages.drupal.org/8"
+            "url": "https://packages.drupal.org/8",
+            "exclude": [
+                "drupal/log_stdout"
+            ]
+        },
+        {
+            "type": "git",
+            "url": "https://git.drupalcode.org/issue/log_stdout-3339853.git"
         }
     ],
     "require": {
@@ -30,6 +37,7 @@
         "drupal/double_field": "^4.1",
         "drupal/entity_reference_revisions": "^1.10",
         "drupal/field_group": "^3.4",
+        "drupal/google_tag": "^2.0",
         "drupal/language_switcher_extended": "^1.1",
         "drupal/metatag": "^1.22",
         "drupal/migrate_plus": "^6.0",
@@ -72,6 +80,9 @@
         "patches": {
             "drupal/double_field": {
                 "Support input filters on text formats (original issue: https://www.drupal.org/node/2091587)": "patches/double_field/2091587-text_long-60_2.patch"
+            },
+            "drupal/log_stdout": {
+                "Update D8 contrib module to work in D10 without error (original issue: https://www.drupal.org/project/log_stdout/issues/3339853)": "patches/log_stdout/3339853-3.patch"
             }
         },
         "drupal-scaffold": {

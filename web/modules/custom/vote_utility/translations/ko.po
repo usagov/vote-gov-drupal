@@ -16,6 +16,9 @@ msgid "Select language"
 msgstr "언어 선택"
 
 #main
+msgid "@sitename in language"
+msgstr "@sitename 한국어 "
+
 msgid "Go back"
 msgstr "이전 화면"
 
@@ -71,24 +74,6 @@ msgstr "@state_name 유권자 등록 안내 "
 msgid "How to register to vote in @state_name"
 msgstr "@state_name 에서 유권자로 등록하는 방법"
 
-msgid "Online registration is currently not available. Find out ways to register to vote at @link."
-msgstr "온라인 등록은 현재 이용하실 수 없습니다. @link."
-
-msgid "@state_name’s election website"
-msgstr "@state_name 선거 사무국 웹사이트에서 유권자 등록 방법을 확인하시기 바랍니다"
-
-msgid "Register in person at your local election office. Learn more about how to register on @link."
-msgstr "귀하의 현지 선거 사무소를 직접 내방하여 등록할 수 있습니다. @link."
-
-msgid "Voter registration is not required in @state_name. Learn more about voting on @link."
-msgstr "@state_name 는 유권자 등록이 필요하지 않습니다. @link."
-
-msgid "Start your online registration on @link."
-msgstr "@link."
-
-msgid "You can also register to vote by mail or in person on @link."
-msgstr "@link."
-
 msgid "Other ways to register to vote in @state_name"
 msgstr "기타 @state_name 주 유권자 등록 방법"
 
@@ -118,3 +103,39 @@ msgstr "귀하의 유권자 등록 상태는 지역 등록 사무소에 연락�
 
 msgid "Click here to view Wyoming's county clerk contact information (PDF)"
 msgstr "와이오밍 카운티 기록 보관 사무소 연락처는 여기를 클릭하십시오 (PDF파일)"
+
+msgid "Find out ways to register"
+msgstr "등록 방법 검색하기 (영어로 제공)"
+
+msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
+msgstr "현재는 온라인 등록이 불가합니다. 투표를 하시려면 @state_name 주 선거 사무국 웹사이트에서 @link를 이용하시기 바랍니다."
+
+msgid "Learn more about how to register"
+msgstr "등록 방법에 대해 자세히 알아보기 (영어로 제공)"
+
+msgid "Register in person at your local election office. @link on @state_name’s election website."
+msgstr "귀하가 거주하는 지역의 선거 사무소를 직접 방문하여 등록하시기 바랍니다. @state_name 주 선거국 웹사이트에서 @link를  이용하시기 바랍니다."
+
+msgid "Learn more about voting"
+msgstr "투표에 대해 자세히 알아보기 (영어로 제공)"
+
+msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
+msgstr "버지니아 주에서는 유권자 등록이 필요하지 않습니다.  @state_name 주 선거국 웹사이트에서 @link를 이용하시기 바랍니다."
+
+msgid "Start your online registration"
+msgstr "온라인 등록 시작하기 (영어로 제공)"
+
+msgid "@link on @state_name’s election website."
+msgstr " @state_name 주 선거국 웹사이트에서 @link를 이용하시기 바랍니다."
+
+msgid "register to vote by mail or in person"
+msgstr "우편 우표 또는 직접 투표 등록하기 (영어로 제공)"
+
+msgid "You can also @link on @state_name’s election website."
+msgstr "@state_name 주 선거국 웹사이트에서 @link를 선택하실 수 있습니다."
+
+msgid "confirm your voter registration status"
+msgstr "유권자 등록 상태 확인하기 (영어로 제공)"
+
+msgid "You can @link on @state_name’s election website."
+msgstr "@state_name 주 선거국 웹사이트에서 @link를 하실 수 있습니다."
