@@ -16,6 +16,9 @@ msgid "Select language"
 msgstr "Ulu nakmiighhu"
 
 #main
+msgid "@sitename in language"
+msgstr "@sitename Akuzipigestun"
+
 msgid "Go back"
 msgstr "Uteghten"
 
@@ -71,24 +74,6 @@ msgstr "Ilaten nakmikinaluten @state_name-mi"
 msgid "How to register to vote in @state_name"
 msgstr "Naten ilannayaghsin nakmikimun @state_name-mi"
 
-msgid "Online registration is currently not available. Find out ways to register to vote at @link."
-msgstr "Whaa maaten online-kun ilatelleq pilleghqiituq. Esghaghhu naten ilatelleghqan @link-mi"
-
-msgid "@state_name’s election website"
-msgstr "@state_name's election website"
-
-msgid "Register in person at your local election office. Learn more about how to register on @link."
-msgstr "Ilaten gginasaghlluku negpek ilatellghan qepghaghvigani. Wata liitaghaghhu ilatelleghqaq @link-mi"
-
-msgid "Voter registration is not required in @state_name. Learn more about voting on @link."
-msgstr "Nakmikimun ilanniituq @state_name-mi. Wata liitaghaghhu nakmikimun @link-emi. "
-
-msgid "Start your online registration on @link."
-msgstr "Piinlighhu online-ekun ilatellghen @link-emi"
-
-msgid "You can also register to vote by mail or in person on @link."
-msgstr "Ilasaghngaaghpek ama tuyughqunllu gginasaghllukillu @link-mi"
-
 msgid "Other ways to register to vote in @state_name"
 msgstr "Ilangi nakmikilleghmun ilatellghet @state_name-emi "
 
@@ -115,3 +100,39 @@ msgstr "Ipapighqesaghngaaghpegu nakmikillgheghpek ilatellghan natetulnga tuqluqu
 
 msgid "Click here to view Wyoming's county clerk contact information (PDF)"
 msgstr "Click here to view Wyoming's county clerk contact information (PDF)"
+
+msgid "Find out ways to register"
+msgstr "Naalkigu naten alla ilatelleghqan (Laluramkestun)"
+
+msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
+msgstr "Online-ekun ilatelleq pivigituq maaten. @link nakmikinaluten @state_name-mi state-angan nakmikillghan website-angani. "
+
+msgid "Learn more about how to register"
+msgstr "Liitaghaghhu ilatelleghqan (Laluramkestun)"
+
+msgid "Register in person at your local election office. @link on @state_name’s election website."
+msgstr "Ilaten gginasaghlluku negpek nkmikivigan qepghaghvigani. @link @state_name-em state-angan nakmikillghan website-angani. "
+
+msgid "Learn more about voting"
+msgstr "Liitaghaghhu nakmilleq (Laluramkestun)"
+
+msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
+msgstr "Nakmikimun ilaasughniituq Virginia-mi. @link @state_name-em state-angan nakmikillghan website-angani. "
+
+msgid "Start your online registration"
+msgstr "Piinlighhu online-ekun ilatelleq (Laluramkestun)"
+
+msgid "@link on @state_name’s election website."
+msgstr "@link @state_name-em state-angan nakmikillghan website-angani. "
+
+msgid "register to vote by mail or in person"
+msgstr "Ilaasaghngaaghpek tuyuqayugkun nalighmeng gginasaghlluku (Laluramkestun)"
+
+msgid "You can also @link on @state_name’s election website."
+msgstr "@link @state_name-em state-angan nakmikillghan website-angani. "
+
+msgid "confirm your voter registration status"
+msgstr "Ipapighqesaghngaaghpegu ilatellghen (Laluramkestun)"
+
+msgid "You can @link on @state_name’s election website."
+msgstr "@link @state_name-em state-angan nakmikillghan webstte-angani. "
