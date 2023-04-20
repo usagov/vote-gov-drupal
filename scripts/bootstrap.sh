@@ -87,7 +87,3 @@ done
 
 echo "PATH=$PATH:/home/vcap/app/php/bin:/home/vcap/app/vendor/drush/drush" >> /home/vcap/.bashrc
 
-chmod +x ${HOME}/scripts/cronish.sh
-
-## Only run 'drush cron' in the first instance of an application.
-[ "${CF_INSTANCE_INDEX:-''}" == "0" ] && ${HOME}/scripts/cronish.sh &
