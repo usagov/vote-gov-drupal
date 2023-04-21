@@ -16,6 +16,9 @@ msgid "Select language"
 msgstr "Lựa chọn ngôn ngữ"
 
 #main
+msgid "@sitename in language"
+msgstr "@sitename bằng Tiếng Việt"
+
 msgid "Go back"
 msgstr "Quay lại"
 
@@ -71,24 +74,6 @@ msgstr "Đăng ký bỏ phiếu bầu ở @state_name"
 msgid "How to register to vote in @state_name"
 msgstr "Đăng ký bỏ phiếu bầu như thế nào ở @state_name"
 
-msgid "Online registration is currently not available. Find out ways to register to vote at @link."
-msgstr "Đăng kí trực tuyến trên mạng hiện tại không có sẵn. Tìm hiểu các phương thức đăng kí bầu cử tại @link"
-
-msgid "@state_name’s election website"
-msgstr "trang web bầu cử của tiểu bang @state_name"
-
-msgid "Register in person at your local election office. Learn more about how to register on @link."
-msgstr "Đăng kí bỏ phiếu trực tiếp tại văn phòng bầu cử địa phương. Xem thêm cách đăng kí trên @link"
-
-msgid "Voter registration is not required in @state_name. Learn more about voting on @link."
-msgstr "Không bắt buộc đăng ký bầu cử ở @state_name. Tìm hiểu thêm về bỏ phiếu bầu cử ở @link"
-
-msgid "Start your online registration on @link."
-msgstr "Bạn bắt đầu bảng đăng ký trực tuyến trên @link"
-
-msgid "You can also register to vote by mail or in person on @link."
-msgstr "Bạn cũng có thể đăng ký chọn bỏ phiếu bằng thư hoặc trực tiếp trên @link"
-
 msgid "Other ways to register to vote in @state_name"
 msgstr "Các cách đăng kí bầu cử khác ở @state_name"
 
@@ -115,3 +100,39 @@ msgstr "Ban có thể xác nhận tình trạng đăng ký bầu cử của mìn
 
 msgid "Click here to view Wyoming's county clerk contact information (PDF)"
 msgstr "Nhấp vào đây để xem thông tin liên lạc của thư ký quận Wyoming (PDF)"
+
+msgid "Find out ways to register"
+msgstr "Tìm hiểu cách đăng ký (bằng Tiếng Anh)"
+
+msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
+msgstr "Đăng ký trực tuyến hiện không có sẵn. @link bỏ phiếu tại trang website bầu cử cấp tiểu bang của @state_name. "
+
+msgid "Learn more about how to register"
+msgstr "Tìm hiểu thêm về cách đăng ký (bằng Tiếng Anh)"
+
+msgid "Register in person at your local election office. @link on @state_name’s election website."
+msgstr "Đăng ký trực tiếp tại văn phòng bầu cử địa phương của bạn. @link tại trang website bầu cử cấp tiểu bang của @state_name."
+
+msgid "Learn more about voting"
+msgstr "Tìm hiểu thêm về cách đăng ký (bằng Tiếng Anh)"
+
+msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
+msgstr "Ở tiểu bang Virginia không yêu cầu bắt buộc phải đăng ký bầu cử. @link tại trang website bầu cử cấp tiểu bang của @state_name."
+
+msgid "Start your online registration"
+msgstr "Hãy bắt đầu đăng ký bầu cử trực tuyến (bằng Tiếng Anh)"
+
+msgid "@link on @state_name’s election website."
+msgstr "@link trên trang website bầu cử cấp tiểu bang của @state_name."
+
+msgid "register to vote by mail or in person"
+msgstr "đăng ký bỏ phiếu qua thư hoặc trực tiếp (bằng Tiếng Anh)"
+
+msgid "You can also @link on @state_name’s election website."
+msgstr "Bạn cũng có thể @link trên trang web bầu cử cấp tiểu bang của @state_name."
+
+msgid "confirm your voter registration status"
+msgstr "xác nhận hiện trạng đăng ký cử tri của mình (bằng Tiếng Anh)"
+
+msgid "You can @link on @state_name’s election website."
+msgstr "Bạn có thể @link trên trang web bầu cử cấp tiểu bang của @state_name."
