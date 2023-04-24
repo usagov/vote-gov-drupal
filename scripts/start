@@ -18,6 +18,12 @@ while : ; do
   [[ "${response}" == *"HTTP/2 200"* ]] && break
 done
 
+echo "Installing awscli..."
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip"
+unzip "/tmp/awscliv2.zip"
+/tmp/aws/install --bin-dir ${home}/deps/0/bin --install-dir ${home}/deps/0/usr/local/aws-cli
+rm -rf /tmp/awscliv2.zip /tmp/aws
+
 if [[ "${CF_INSTANCE_INDEX:-''}" == "0" && -z "${SKIP_DRUPAL_BOOTSTRAP:-}" ]]; then
 
     echo  "Updating drupal ... "
