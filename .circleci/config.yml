@@ -6,6 +6,9 @@ parameters:
   restore:
     type: string
     default: "none"
+  build_static:
+    type: boolean
+    default: false
 jobs:
   build-theme:
     docker:
@@ -205,6 +208,21 @@ jobs:
             source ./scripts/pipeline/cloud-gov-login.sh "${RESTORE_ENV}"
             source ./scripts/pipeline/downsync-restore.sh
 
+  build-static:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Install cloudfoundry & dependencies"
+          command: |
+            source ./scripts/pipeline/deb-basic-deps.sh
+            source ./scripts/pipeline/deb-cf-install.sh
+      - run:
+          name: "Sync Static Bucket"
+          command: |
+            source ./scripts/pipeline/cloud-gov-login.sh ${CIRCLE_BRANCH}
+
 workflows:
   deploy-workflow:
     when:
@@ -279,15 +297,22 @@ workflows:
   downsync-workflow:
     when:
       and:
-        - equal: [api, << pipeline.trigger_source >>]
+        - equal:  [api, << pipeline.trigger_source >> ]
         - or:
-          - equal: [dev, << pipeline.parameters.backup >> ]
-          - equal: [prod, << pipeline.parameters.backup >> ]
-          - equal: [stage, << pipeline.parameters.backup >> ]
-          - equal: [test, << pipeline.parameters.backup >> ]
+          - equal: [ dev, << pipeline.parameters.backup >> ]
+          - equal: [ prod, << pipeline.parameters.backup >> ]
+          - equal:  [stage, << pipeline.parameters.backup >> ]
+          - equal: [ test, << pipeline.parameters.backup >> ]
         - or:
-          - equal: [dev, << pipeline.parameters.restore >> ]
-          - equal: [stage, << pipeline.parameters.restore >> ]
-          - equal: [test, << pipeline.parameters.restore >> ]
+          - equal: [ dev, << pipeline.parameters.restore >> ]
+          - equal: [ stage, << pipeline.parameters.restore >> ]
+          - equal: [ test, << pipeline.parameters.restore >> ]
     jobs:
       - downsync
+  build-static-workflow:
+    when:
+      and:
+        - equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]
+        - equal: [ true, << pipeline.parameters.build_static >> ]
+    jobs:
+      - build-static

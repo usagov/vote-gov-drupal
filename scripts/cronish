@@ -9,11 +9,3 @@ do
   echo "'drush cron' task completed!"
   sleep 60m
 done
-
-while true
-do
-  echo "Running 'drush tome:static'..."
-  s3_uri=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | contains("static")).credentials.uri')
-  drush --root=$HOME/web tome:static --uri https://${waf_external_endpoint} --process-count=1
-  echo "'drush tome:static' task completed!"
-done
