@@ -16,7 +16,7 @@ source ${home}/.bashrc
 
 cd ${app_path}
 echo "Running 'drush tome:static'..."
-drush --root=${app_path} tome:static --uri https://${waf_external_endpoint} --process-count=1
+drush tome:static --uri https://${waf_external_endpoint} --process-count=1
 echo "'drush tome:static' task completed!"
 
 cd ${app_path}/html
