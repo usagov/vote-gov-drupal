@@ -72,6 +72,9 @@ foreach ($cf_service_data as $service_list) {
     }
     elseif (stristr($service['name'], 'secrets')) {
       $settings['hash_salt'] = hash('sha256', $service['credentials']['hash_salt']);
+      if (empty($settings['hash_salt'])) { 
+        hash('sha256', $service['credentials']['HASH_SALT']);
+      }
       $settings['cron_key'] = hash('sha256', $service['credentials']['cron_key']);
     }
     elseif (stristr($service['name'], 'storage')) {
