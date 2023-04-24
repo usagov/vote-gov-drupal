@@ -9,7 +9,7 @@ export AWS_SECRET_ACCESS_KEY=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name
 export AWS_DEFAULT_REGION=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.region')
 
 export bucket_name=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).name')
-export bucket_uri=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).name).credentials.uri')
+export bucket_uri=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.uri')
 
 source ${home}/.bashrc
 
