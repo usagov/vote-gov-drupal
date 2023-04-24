@@ -9,6 +9,7 @@ default_config: &defaults
     ENV: ${CIRCLE_BRANCH}
     LD_LIBRARY_PATH: /home/vcap/app/php/lib/
     PHP_INI_SCAN_DIR: /home/vcap/app/php/etc/:/home/vcap/app/php/etc/php.ini.d/
+    waf_external_endpoint: ${waf_external_endpoint}
   timeout: 180
   routes:
     - route: ${project}-drupal-${CIRCLE_BRANCH}.apps.internal
