@@ -22,4 +22,4 @@ echo "'drush tome:static' task completed!"
 cd ${app_path}/html
 echo "Copying static files to '${bucket_name}'..."
 aws s3 sync . ${bucket_uri} --delete
-echo "Copy to '${bucket_name}' completed!'
+echo "Copy to '${bucket_name}' completed!"
