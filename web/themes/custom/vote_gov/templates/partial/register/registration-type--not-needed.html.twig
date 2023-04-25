@@ -10,3 +10,21 @@
     }) }}
   </p>
 {% endif %}
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "{{ 'How to register to vote in @state_name' | t({ '@state_name': state_name }) }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ 'Voter registration is not required in @state_name. Learn more about voting on @link.' | t({
+      '@link': { "#markup": "<a href=\"#{more_info_link}\">#{more_info_link_text}</a>"} | render,
+      '@state_name': state_name
+    }) }}"
+    }
+    }{{ end }}]
+  }
+</script>

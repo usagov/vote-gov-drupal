@@ -10,3 +10,36 @@
 {% if deadline %}
   <li><span class="bold-text">{{ 'Online registration deadline:' | t }}</span> {{ deadline }}</li>
 {% endif %}
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "{{ 'How to register to vote in @state_name' | t({ '@state_name': state_name }) }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ 'Start your online registration on @link.' | t({
+          '@link': { "#markup": "<a href=\"#{registration_link}\">#{registration_link_text}</a>" } | render
+        }) }}"
+    }
+    },{
+        "@type": "Question",
+        "name": "{{ 'Other ways to register to vote in @state_name' | t({ '@state_name': state_name }) }}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{ 'You can also register to vote by mail or in person on @link.' | t({
+          '@link': { "#markup": "<a href=\"#{more_info_link}\">#{more_info_link_text}</a>" } | render
+        }) }}"
+    }
+    },{
+        "@type": "Question",
+        "name": "{{ 'Voter registration deadlines in @state_name' | t({ '@state_name': state_name }) }}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{ 'Register by mail deadline:' | t }} {{ deadline }}"
+        }
+      }{{ end }}]
+  }
+</script>
