@@ -40,6 +40,7 @@ module:
   metatag_favicons: 0
   metatag_open_graph: 0
   metatag_twitter_cards: 0
+  miniorange_saml: 0
   mysql: 0
   node: 0
   node_revision_delete: 0
@@ -50,6 +51,7 @@ module:
   redirect: 0
   remove_http_headers: 0
   s3fs: 0
+  samlauth: 0
   simple_sitemap: 0
   system: 0
   text: 0
@@ -66,6 +68,7 @@ module:
   workflows: 0
   pathauto: 1
   content_translation: 10
+  externalauth: 10
   views: 10
   paragraphs: 11
   publication_date: 99
