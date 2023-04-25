@@ -10,7 +10,8 @@ export AWS_SECRET_ACCESS_KEY=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name
 export AWS_DEFAULT_REGION=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.region')
 
 export bucket_name=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).name')
-export bucket_uri=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.uri')
+export bucket=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.bucket')
+export bucket_endpoint=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.endpoint')
 
 source ${home}/.bashrc
 
@@ -21,5 +22,5 @@ echo "'drush tome:static' task completed!"
 
 cd ${app_path}/html
 echo "Copying static files to '${bucket_name}'..."
-aws s3 sync . ${bucket_uri} --delete
+aws s3 sync . "s3://${bucket}.${bucket_endpoint}" --delete
 echo "Copy to '${bucket_name}' completed!"
