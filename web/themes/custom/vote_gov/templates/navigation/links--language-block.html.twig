@@ -35,12 +35,12 @@
   {%- for key, item in links -%}
     <li class="usa-language__submenu-item" {{ item.attributes.removeAttribute('hreflang') }} data-lang="lang-{{ key }}">
       {%- if item.link -%}
-      <a href="/{{ key }}/" title="/{{ key }}/">
+      <a href="/{{ key == 'en' ? '' : key }}/" title="/{{ key }}/">
         <span lang="{{ key }}" xml:lang="{{ key }}" >
-          <strong>{{ item.text }}</strong>
+          <strong>{{ item.link['#title'] }}</strong>
         </span>      
       </a>
-      {%- endif -%}
+        {%- endif -%}
     </li>
   {%- endfor -%}
 {%- endif %}
