@@ -24,5 +24,6 @@ echo "'drush tome:static' task completed!"
 
 cd ${app_path}/html
 echo "Copying static files to '${bucket_name}'..."
-aws s3 sync . "s3://${bucket}" --delete --no-verify-ssl
+aws s3 sync . s3://${bucket} --delete --no-verify-ssl
+aws s3 website s3://${bucket} --index-document index.html --error-document /404/index.html
 echo "Copy to '${bucket_name}' completed!"
