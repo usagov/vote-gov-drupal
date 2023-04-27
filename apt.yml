@@ -1,6 +1,5 @@
 ---
 packages:
-  #- awscli
-  - s3fs
+  - awscli
   - htop
   - vim

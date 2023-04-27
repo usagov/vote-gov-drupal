@@ -6,7 +6,6 @@ export http_proxy=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credential
 export https_proxy=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentials.proxy_uri')
 
 home="/home/vcap"
-app_path="${home}/app"
 
 ## Updated ~/.bashrc to update $PATH when someone logs in.
 [ -z $(cat ${home}/.bashrc | grep PATH) ] && \
@@ -17,18 +16,6 @@ app_path="${home}/app"
   echo "alias vim=\"VIMRUNTIME=${home}/deps/0/apt/usr/share/vim/vim82 ${home}/deps/0/bin/vim.basic\"" >> ${home}/.bashrc
 
 source ${home}/.bashrc
-
-export AWS_ACCESS_KEY_ID=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.access_key_id')
-export AWS_SECRET_ACCESS_KEY=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.secret_access_key')
-export bucket=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.bucket')
-export bucket_name=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).name')
-
-echo "Mounting S3 bucket '${bucket_name}'..."
-echo ${AWS_ACCESS_KEY_ID}:${AWS_SECRET_ACCESS_KEY} > ${home}/.passwd-s3fs
-chmod 600 ${home}/.passwd-s3fs
-mkdir -p ${app_path}/html
-s3fs ${bucket} ${app_path}/html -o passwd_file=${home}/.passwd-s3fs
-
 
 if [ -z "${VCAP_SERVICES:-}" ]; then
     echo "VCAP_SERVICES must a be set in the environment: aborting bootstrap";

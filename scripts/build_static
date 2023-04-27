@@ -20,8 +20,8 @@ echo "Running 'drush tome:static'..."
 drush tome:static --uri https://${waf_external_endpoint} --process-count=1 -y
 echo "'drush tome:static' task completed!"
 
-# cd ${app_path}/html
-# echo "Copying static files to '${bucket_name}'..."
-# PYTHONWARNINGS="ignore:Unverified HTTPS request" aws s3 sync . s3://${bucket} --delete --no-verify-ssl
-# PYTHONWARNINGS="ignore:Unverified HTTPS request" aws s3 website s3://${bucket} --index-document index.html --error-document /404/index.html
-# echo "Copy to '${bucket_name}' completed!"
+cd ${app_path}/html
+echo "Copying static files to '${bucket_name}'..."
+PYTHONWARNINGS="ignore:Unverified HTTPS request" aws s3 sync . s3://${bucket} --delete --no-verify-ssl
+PYTHONWARNINGS="ignore:Unverified HTTPS request" aws s3 website s3://${bucket} --index-document index.html --error-document /404/index.html
+echo "Copy to '${bucket_name}' completed!"
