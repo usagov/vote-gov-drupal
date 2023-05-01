@@ -2455,6 +2455,26 @@
             }
         },
         {
+            "name": "drupal/log_stdout",
+            "version": "dev-3339853-drupal-10-compatibility",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/issue/log_stdout-3339853.git",
+                "reference": "15cc7d90410d846024d35f111385ae7df555cbd4"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "This module provides an hook for Drupal Watchdog that directs log messages to php://stdout or php://stderr for better log handling with Docker.",
+            "homepage": "https://www.drupal.org/project/log_stdout",
+            "support": {
+                "issues": "https://www.drupal.org/project/issues/log_stdout",
+                "irc": "irc://irc.freenode.org/drupal-support"
+            },
+            "time": "2020-09-03T01:06:58+00:00"
+        },
+        {
             "name": "drupal/metatag",
             "version": "1.22.0",
             "source": {
