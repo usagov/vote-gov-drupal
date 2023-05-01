@@ -31,16 +31,34 @@
  * @see template_preprocess_links()
  */
 #}
-{% if links -%}
+ {% if links -%}
   {%- for key, item in links -%}
     <li class="usa-language__submenu-item" {{ item.attributes.removeAttribute('hreflang') }} data-lang="lang-{{ key }}">
       {%- if item.link -%}
-      <a href="/{{ key == 'en' ? '' : key }}/" title="/{{ key }}/">
+      <a href="{{ path('<current>') }}/" title="/{{ key }}/" class="language-link" data-drupal-link-system-path="node/63">
         <span lang="{{ key }}" xml:lang="{{ key }}" >
           <strong>{{ item.link['#title'] }}</strong>
         </span>      
-      </a>
+      </a>{{ dump(item.link.system_path | field_value ) }}
         {%- endif -%}
     </li>
   {%- endfor -%}
 {%- endif %}
+{# {{ key == 'en' ? '' : '/' ~ key }} #}
+{# {% if links -%}
+  {%- for key, item in links -%}
+<li class="usa-language__submenu-item" {{ item.attributes.removeAttribute('hreflang') }} data-lang="lang-{{ key }}">
+      {%- if item.link -%}
+        {% if key == 'en' %}
+        <a href="{{ item.link['#url'] |  }}" title="/{{ key }}/">
+        {% else %}
+        <a href="/{{ key }}/" title="/{{ key }}/">
+        {%- endif -%}
+          <span lang="{{ key }}" xml:lang="{{ key }}" >
+            <strong>{{ item.link['#title'] }}</strong>
+          </span>
+        </a>
+      {%- endif -%}
+    </li>
+  {%- endfor -%}
+{%- endif %} #}
