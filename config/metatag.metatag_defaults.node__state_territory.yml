@@ -1,0 +1,16 @@
+uuid: f2f476f7-8abe-40a6-b99a-6f0cf1537e6d
+langcode: en
+status: true
+dependencies: {  }
+id: node__state_territory
+label: 'Content: State/Territory Page'
+tags:
+  description: 'Find out how to register to vote in [current-page:title]'
+  og_description: '[current-page:metatag:description]'
+  og_title: '[current-page:metatag:title]'
+  og_url: '[current-page:url]'
+  title: 'Voter Registration in [current-page:title] | [site:name]'
+  twitter_cards_description: '[current-page:metatag:description]'
+  twitter_cards_page_url: '[current-page:url]'
+  twitter_cards_title: '[current-page:metatag:title]'
+  twitter_cards_type: summary_large_image

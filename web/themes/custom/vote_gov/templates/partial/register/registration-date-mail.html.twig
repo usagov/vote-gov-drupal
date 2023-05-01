@@ -26,3 +26,28 @@
 {% if deadline %}
   <li><span class="bold-text">{{ 'Register by mail deadline:' | t }}</span> {{ deadline }}</li>
 {% endif %}
+
+{# JSON Schema #}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "{{ 'How to register to vote in @state_name' | t({ '@state_name': state_name }) }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ 'Online registration is currently not available. Find out ways to register to vote at @link.' | t({
+          '@link': { "#markup": "<a href=\"#{more_info_link}\">#{more_info_link_text}</a>" } | render
+        }) }}"
+    }
+    },{
+        "@type": "Question",
+        "name": "{{ 'Voter registration deadlines in @state_name' | t({ '@state_name': state_name }) }}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{ 'Register by mail deadline:' | t }} {{ deadline }}"
+        }
+      }{{ end }}]
+  }
+</script>

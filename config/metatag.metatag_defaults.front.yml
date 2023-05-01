@@ -8,4 +8,6 @@ id: front
 label: 'Front page'
 tags:
   canonical_url: '[site:url]'
+  description: 'Official voter registration website of the US federal government. Register to vote. Learn the voting registration deadlines and laws in your state.'
   shortlink: '[site:url]'
+  title: 'Check Voter Registration Deadlines and Laws in Your State | [site:name]'
