@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8df4ca5180ee20a736421a3787e7e93e",
+    "content-hash": "1a506158172301e4bd6cae9d0316dcf9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2904,67 +2904,18 @@
         },
         {
             "name": "drupal/publication_date",
-            "version": "2.0.0-beta7",
+            "version": "dev-3328575-fix-php-8.2",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/publication_date.git",
-                "reference": "8.x-2.0-beta7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/publication_date-8.x-2.0-beta7.zip",
-                "reference": "8.x-2.0-beta7",
-                "shasum": "699232945890528f97b83f49a31ea7c7831c3ca8"
-            },
-            "require": {
-                "drupal/core": "^9.1 || ^10"
+                "url": "https://git.drupalcode.org/issue/publication_date-3328575.git",
+                "reference": "c610c2b5a74c282b09fd7eff9b31c94a64c93e9b"
             },
             "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-2.0-beta7",
-                    "datestamp": "1669679282",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
                 "GPL-2.0+"
             ],
-            "authors": [
-                {
-                    "name": "Clever Age",
-                    "homepage": "https://www.drupal.org/user/547746"
-                },
-                {
-                    "name": "dgtlmoon",
-                    "homepage": "https://www.drupal.org/user/25027"
-                },
-                {
-                    "name": "jstoller",
-                    "homepage": "https://www.drupal.org/user/99012"
-                },
-                {
-                    "name": "Sheldon Rampton",
-                    "homepage": "https://www.drupal.org/user/13085"
-                },
-                {
-                    "name": "tmarly",
-                    "homepage": "https://www.drupal.org/user/159040"
-                },
-                {
-                    "name": "webflo",
-                    "homepage": "https://www.drupal.org/user/254778"
-                }
-            ],
             "description": "Add a field containing the publication date.",
-            "homepage": "https://www.drupal.org/project/publication_date",
-            "support": {
-                "source": "https://git.drupalcode.org/project/publication_date"
-            }
+            "time": "2022-12-21T11:44:37+00:00"
         },
         {
             "name": "drupal/redirect",
@@ -12410,7 +12361,7 @@
         "drupal-tome/tome_drush": 20,
         "drupal/log_stdout": 20,
         "drupal/node_revision_delete": 5,
-        "drupal/publication_date": 10
+        "drupal/publication_date": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
