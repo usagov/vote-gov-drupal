@@ -14,7 +14,8 @@
             "url": "https://packages.drupal.org/8",
             "exclude": [
                 "drupal/log_stdout",
-                "drupal/pathauto"
+                "drupal/pathauto",
+                "drupal/publication_date"
             ]
         },
         "drupal/log_stdout": {
@@ -24,6 +25,10 @@
         "drupal/pathauto": {
             "type": "git",
             "url": "https://git.drupalcode.org/issue/pathauto-3328670.git"
+        },
+        "drupal/publication_date": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/issue/publication_date-3328575.git"
         }
     },
     "require": {
@@ -51,7 +56,7 @@
         "drupal/node_revision_delete": "^1.0@RC",
         "drupal/paragraphs": "^1.15",
         "drupal/pathauto": "dev-3328670-php-8.2-compatibility",
-        "drupal/publication_date": "^2.0@beta",
+        "drupal/publication_date": "dev-3328575-fix-php-8.2",
         "drupal/redirect": "^1.8",
         "drupal/remove_http_headers": "^2.0",
         "drupal/s3fs": "^3.1",
