@@ -14,12 +14,17 @@
             "url": "https://packages.drupal.org/8",
             "exclude": [
                 "drupal/log_stdout",
+                "drupal/pathauto",
                 "drupal/publication_date"
             ]
         },
         "drupal/log_stdout": {
             "type": "git",
             "url": "https://git.drupalcode.org/issue/log_stdout-3339853.git"
+        },
+        "drupal/pathauto": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/issue/pathauto-3328670.git"
         },
         "drupal/publication_date": {
             "type": "git",
@@ -50,7 +55,7 @@
         "drupal/migrate_tools": "^6.0",
         "drupal/node_revision_delete": "^1.0@RC",
         "drupal/paragraphs": "^1.15",
-        "drupal/pathauto": "^1.11",
+        "drupal/pathauto": "dev-3328670-php-8.2-compatibility",
         "drupal/publication_date": "dev-3328575-fix-php-8.2",
         "drupal/redirect": "^1.8",
         "drupal/remove_http_headers": "^2.0",
