@@ -111,7 +111,7 @@ tooling:
     service: appserver
     description: Branch update (run composer / db updates / import config / clear caches).
     cmd:
-      - composer install --no-dev
+      - composer install
       - drush cr
       - drush updb
       - drush cim -y
