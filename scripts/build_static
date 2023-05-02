@@ -20,11 +20,6 @@ export PYTHONWARNINGS="ignore:Unverified HTTPS request"
 
 mkdir -p ${html_path}
 
-cd ${html_path}
-echo "Copying static files from '${bucket_name}'..."
-aws s3 sync s3://${bucket} . --delete --no-verify-ssl 2>/dev/null
-echo "Copy from '${bucket_name}' completed!"
-
 cd ${app_path}
 echo "Running 'drush tome:static'..."
 drush tome:static --uri=https://${waf_external_endpoint} --process-count=1 -y
