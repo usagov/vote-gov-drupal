@@ -2,6 +2,7 @@
 
 home="/home/vcap"
 app_path="${home}/app"
+html_path="${app_path}/html"
 
 export application_uri=$(echo $VCAP_APPLICATION | jq -r '.application_uris[]')
 
@@ -15,13 +16,22 @@ export bucket_endpoint=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | str
 
 source ${home}/.bashrc
 
+export PYTHONWARNINGS="ignore:Unverified HTTPS request"
+
+mkdir -p ${html_path}
+
+cd ${html_path}
+echo "Copying static files from '${bucket_name}'..."
+aws s3 sync s3://${bucket} . --delete --no-verify-ssl 2>/dev/null
+echo "Copy from '${bucket_name}' completed!"
+
 cd ${app_path}
 echo "Running 'drush tome:static'..."
 drush tome:static --uri=https://${waf_external_endpoint} --process-count=1 -y
 echo "'drush tome:static' task completed!"
 
-cd ${app_path}/html
+cd ${html_path}
 echo "Copying static files to '${bucket_name}'..."
-PYTHONWARNINGS="ignore:Unverified HTTPS request" aws s3 sync . s3://${bucket} --delete --no-verify-ssl
-PYTHONWARNINGS="ignore:Unverified HTTPS request" aws s3 website s3://${bucket} --index-document index.html --error-document /404/index.html
+aws s3 sync . s3://${bucket} --delete --no-verify-ssl 2>/dev/null
+aws s3 website s3://${bucket} --index-document index.html --error-document /404/index.html  --no-verify-ssl 2>/dev/null
 echo "Copy to '${bucket_name}' completed!"
