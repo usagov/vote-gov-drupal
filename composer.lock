@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8df4ca5180ee20a736421a3787e7e93e",
+    "content-hash": "91f944a080e1288e750e3ac6ba0d0ef8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2836,20 +2836,13 @@
         },
         {
             "name": "drupal/pathauto",
-            "version": "1.11.0",
+            "version": "dev-3328670-php-8.2-compatibility",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/pathauto.git",
-                "reference": "8.x-1.11"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/pathauto-8.x-1.11.zip",
-                "reference": "8.x-1.11",
-                "shasum": "a006fe9e6046a9833711a1ae56aa4752e65bcdc8"
+                "url": "https://git.drupalcode.org/issue/pathauto-3328670.git",
+                "reference": "a49bb051fbebdf529373232a26b80b37faf1c66d"
             },
             "require": {
-                "drupal/core": "^9.3 || ^10",
                 "drupal/ctools": "*",
                 "drupal/token": "*"
             },
@@ -2858,49 +2851,23 @@
             },
             "type": "drupal-module",
             "extra": {
-                "drupal": {
-                    "version": "8.x-1.11",
-                    "datestamp": "1660129564",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
                 "drush": {
                     "services": {
                         "drush.services.yml": "^9 || ^10"
                     }
                 }
             },
-            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
                 "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Berdir",
-                    "homepage": "https://www.drupal.org/user/214652"
-                },
-                {
-                    "name": "Dave Reid",
-                    "homepage": "https://www.drupal.org/user/53892"
-                },
-                {
-                    "name": "Freso",
-                    "homepage": "https://www.drupal.org/user/27504"
-                },
-                {
-                    "name": "greggles",
-                    "homepage": "https://www.drupal.org/user/36762"
-                }
             ],
             "description": "Provides a mechanism for modules to automatically generate aliases for the content they manage.",
             "homepage": "https://www.drupal.org/project/pathauto",
             "support": {
-                "source": "https://cgit.drupalcode.org/pathauto",
                 "issues": "https://www.drupal.org/project/issues/pathauto",
-                "documentation": "https://www.drupal.org/docs/8/modules/pathauto"
-            }
+                "documentation": "https://www.drupal.org/docs/8/modules/pathauto",
+                "source": "https://cgit.drupalcode.org/pathauto"
+            },
+            "time": "2023-03-02T07:31:39+00:00"
         },
         {
             "name": "drupal/publication_date",
@@ -12410,6 +12377,7 @@
         "drupal-tome/tome_drush": 20,
         "drupal/log_stdout": 20,
         "drupal/node_revision_delete": 5,
+        "drupal/pathauto": 20,
         "drupal/publication_date": 10
     },
     "prefer-stable": true,
