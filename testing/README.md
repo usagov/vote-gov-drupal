@@ -6,9 +6,9 @@ __Please note all scripts/commands must be run in the `testing` folder__
 
 See [Installing Cypress Documentation](https://docs.cypress.io/guides/getting-started/installing-cypress#System-requirements) to get Cypress set up on local. If this is your first time using Cypress you will need to run the install script in your command line.
 
-### Command line for download
+### Command line for download - ensure you are in the testing folder
 ```
-npm install cypress --save-dev
+npm install
 ```
 
 ## Testing scripts and their use
@@ -29,7 +29,7 @@ Before you can run any test please review the Project [README.md](../../README.m
 
 
 Note: 
-- ^ this will run all function tests headless and have the `createUser` and `delteUser` command already added.
+- ^ this will run all function tests headless and have the `createUser` and `deleteUser` command already added.
 - ^^ this script will need to be run first any time you plan to open the cypress runner, this will create the users needed to compete most functional tests 
 - ^^^ this script will need to be run after any time you plan to open the cypress runner, this will delete the users needed to compete most functional tests 
 
