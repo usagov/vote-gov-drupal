@@ -31,16 +31,13 @@
  * @see template_preprocess_links()
  */
 #}
-{% if links -%}
-  {%- for item in links -%}
-    <li class="usa-language__submenu-item" {{ item.attributes }}>
+ {% if links -%}
+  {%- for key, item in links -%}
+    <li class="usa-language__submenu-item" {{ item.attributes.removeAttribute('hreflang') }} data-lang="lang-{{ key }}">
       {%- if item.link -%}
-        {{ item.link }}
-      {%- elseif item.text_attributes -%}
-        <span{{ item.text_attributes }}>{{ item.text }}</span>
-      {%- else -%}
-        {{ item.text }}
-      {%- endif -%}
+        {{ item.link|merge({'#attributes': {'lang': key, 'xml:lang': key}}) }}    
+      </a>
+        {%- endif -%}
     </li>
   {%- endfor -%}
 {%- endif %}
