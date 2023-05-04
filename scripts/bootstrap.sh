@@ -1,6 +1,22 @@
 #!/bin/bash
 set -uo pipefail
 
+## Export proxy servers.
+export http_proxy=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentials.proxy_uri')
+export https_proxy=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentials.proxy_uri')
+
+home="/home/vcap"
+
+## Updated ~/.bashrc to update $PATH when someone logs in.
+[ -z $(cat ${home}/.bashrc | grep PATH) ] && \
+  touch ${home}/.bashrc && \
+  echo "export http_proxy=${http_proxy}" >> ${home}/.bashrc && \
+  echo "export https_proxy=${https_proxy}" >> ${home}/.bashrc && \
+  echo "alias vi=\"VIMRUNTIME=${home}/deps/0/apt/usr/share/vim/vim82 ${home}/deps/0/bin/vim.basic\"" >> ${home}/.bashrc && \
+  echo "alias vim=\"VIMRUNTIME=${home}/deps/0/apt/usr/share/vim/vim82 ${home}/deps/0/bin/vim.basic\"" >> ${home}/.bashrc
+
+source ${home}/.bashrc
+
 if [ -z "${VCAP_SERVICES:-}" ]; then
     echo "VCAP_SERVICES must a be set in the environment: aborting bootstrap";
     exit 1;
@@ -71,31 +87,5 @@ for dir in $dirs; do
   fi
 done
 
-if [[ "${CF_INSTANCE_INDEX:-''}" == "0" && -z "${SKIP_DRUPAL_BOOTSTRAP:-}" ]]; then
-
-    echo  "Updating drupal ... "
-    drush state:set system.maintenance_mode 1 -y
-    drush cr
-    drush updatedb --no-cache-clear -y
-    drush cim -y
-    drush locale-check
-    drush locale-update
-
-    echo "Uploading public files to S3 ..."
-    drush s3fs-rc
-    drush s3fs-cl -y --scheme=public --condition=newer
-    
-    drush cr
-    drush state:set system.maintenance_mode 0 -y
-
-    echo "Bootstrap finished"
-else
-    echo "Bootstrap skipping Drupal CIM because: Instance=${CF_INSTANCE_INDEX:-''} Skip=${SKIP_DRUPAL_BOOTSTRAP:-''}"
-fi
-
 echo "PATH=$PATH:/home/vcap/app/php/bin:/home/vcap/app/vendor/drush/drush" >> /home/vcap/.bashrc
 
-chmod +x ${HOME}/scripts/cronish.sh
-
-## Only run 'drush cron' in the first instance of an application.
-[ "${CF_INSTANCE_INDEX:-''}" == "0" ] && ${HOME}/scripts/cronish.sh &

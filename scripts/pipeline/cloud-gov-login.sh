@@ -1,37 +1,34 @@
 #!/bin/bash
 
-CF_ENV=$1
+cf_env=$1
 
-if [ "${CF_ENV}" == "prod" ]; then
-  export CF_USERNAME=${CF_USERNAME_PROD}
-  export CF_PASSWORD=${CF_PASSWORD_PROD}
-  export CF_SPACE=${CF_SPACE_PROD}
-  export DRUPAL_MEMORY=${DRUPAL_MEMORY_PROD}
-elif [ "${CF_ENV}" == "stage" ]; then
-  export CF_USERNAME=${CF_USERNAME_STAGE}
-  export CF_PASSWORD=${CF_PASSWORD_STAGE}
-  export CF_SPACE=${CF_SPACE_STAGE}
-  export DRUPAL_MEMORY=${DRUPAL_MEMORY_STAGE}
-elif [ "${CF_ENV}" == "test" ]; then
-  export CF_USERNAME=${CF_USERNAME_DEV}
-  export CF_PASSWORD=${CF_PASSWORD_DEV}
-  export CF_SPACE=${CF_SPACE_DEV}
-  export DRUPAL_MEMORY=${DRUPAL_MEMORY_DEV}
-elif [ "${CF_ENV}" == "dev" ]; then
-  export CF_USERNAME=${CF_USERNAME_DEV}
-  export CF_PASSWORD=${CF_PASSWORD_DEV}
-  export CF_SPACE=${CF_SPACE_DEV}
-  export DRUPAL_MEMORY=${DRUPAL_MEMORY_DEV}
+if [ "${cf_env}" == "prod" ]; then
+  export cf_space=${prod_cf_space}
+  export drupal_memory=${prod_drupal_memory}
+  export waf_name=${prod_waf_name}
+elif [ "${cf_env}" == "stage" ]; then
+  export cf_space=${stage_cf_space}
+  export drupal_memory=${stage_drupal_memory}
+  export waf_name=${stage_waf_name}
+elif [ "${cf_env}" == "test" ]; then
+  export cf_space=${test_cf_space}
+  export drupal_memory=${test_drupal_memory}
+  export waf_name=${test_waf_name}
+elif [ "${cf_env}" == "dev" ]; then
+  export cf_space=${dev_cf_space}
+  [ -z "${cf_space}" ] && export cf_space=${CF_SPACE_DEV}
+  export waf_name=${dev_waf_name}
+  export drupal_memory=${dev_drupal_memory}
 fi
 
 echo "Logging into Cloud.gov..."
 {
   cf login \
     -a https://api.fr.cloud.gov \
-    -u ${CF_USERNAME} \
-    -p ${CF_PASSWORD} \
-    -o ${CF_ORG} \
-    -s ${CF_SPACE} > login.log || login_error=1
+    -u ${cloudgov_username} \
+    -p ${cloudgov_password} \
+    -o ${cf_org} \
+    -s ${cf_space} > login.log || login_error=1
 } >/dev/null 2>&1
 
 [ -n "${login_error}" ] && echo "Error logging into Cloud.gov!" && exit 1
