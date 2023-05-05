@@ -32,8 +32,7 @@
  */
 #}
  {% if links -%}
-{# 2 languages #}
-  {% if links|length < 3 %}
+  {% if links|length == 2 %}
     {% for key, item in links %}  
       {%- if item.link -%}
         {% if language != key %}
@@ -43,8 +42,7 @@
         {% endif %}
       {%- endif -%}
     {% endfor %}
-{# more than 2 languages #}
-  {% elseif links|length > 3 %}
+  {% elseif links|length > 2 %}
     {%- for key, item in links -%}
       <li class="usa-language__submenu-item" {{ item.attributes.removeAttribute('hreflang') }} data-lang="lang-{{ key }}">
         {%- if item.link -%}

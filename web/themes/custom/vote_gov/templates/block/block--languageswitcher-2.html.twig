@@ -29,11 +29,9 @@
 <div class="switcher-desktop">
   {% block content %}
   <div class="usa-language-container usa-language--big">
-      {# render toggle switcher #}
-    {% if content['#links']|length < 3 %}
+    {% if content['#links']|length == 2 %}
       {{ content }}
-      {# render full switcher #}
-    {% elseif content['#links']|length > 3 %}
+    {% elseif content['#links']|length > 2 %}
     <ul class="usa-language__primary usa-accordion">
       <li class="usa-language__primary-item">
         <button class="usa-button usa-language__link" data-test="language-button" aria-expanded="false" aria-controls="language-options-2">
@@ -47,7 +45,6 @@
       </li>
     </ul>
     {% elseif content['#links']|length == 1 %}
-      {# render no switcher #}
     {% endif %}
   </div>
   {% endblock %}
