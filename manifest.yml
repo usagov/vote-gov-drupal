@@ -6,11 +6,12 @@ default_config: &defaults
   command: ./scripts/start
   disk_quota: 1.5G
   env:
+    COMPOSER_NO_DEV: 1
     ENV: ${CIRCLE_BRANCH}
     LD_LIBRARY_PATH: /home/vcap/app/php/lib/
+    no_proxy: ${no_proxy}
     PHP_INI_SCAN_DIR: /home/vcap/app/php/etc/:/home/vcap/app/php/etc/php.ini.d/
     waf_external_endpoint: ${waf_external_endpoint}
-    COMPOSER_NO_DEV: 1
   timeout: 180
   routes:
     - route: ${project}-drupal-${CIRCLE_BRANCH}.apps.internal

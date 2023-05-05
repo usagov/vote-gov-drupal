@@ -5,17 +5,9 @@ set -uo pipefail
 export http_proxy=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentials.proxy_uri')
 export https_proxy=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentials.proxy_uri')
 
+export newrelic_key=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentials.newrelic_key')
+
 home="/home/vcap"
-
-## Updated ~/.bashrc to update $PATH when someone logs in.
-[ -z $(cat ${home}/.bashrc | grep PATH) ] && \
-  touch ${home}/.bashrc && \
-  echo "export http_proxy=${http_proxy}" >> ${home}/.bashrc && \
-  echo "export https_proxy=${https_proxy}" >> ${home}/.bashrc && \
-  echo "alias vi=\"VIMRUNTIME=${home}/deps/0/apt/usr/share/vim/vim82 ${home}/deps/0/bin/vim.basic\"" >> ${home}/.bashrc && \
-  echo "alias vim=\"VIMRUNTIME=${home}/deps/0/apt/usr/share/vim/vim82 ${home}/deps/0/bin/vim.basic\"" >> ${home}/.bashrc
-
-source ${home}/.bashrc
 
 if [ -z "${VCAP_SERVICES:-}" ]; then
     echo "VCAP_SERVICES must a be set in the environment: aborting bootstrap";
@@ -87,5 +79,19 @@ for dir in $dirs; do
   fi
 done
 
-echo "PATH=$PATH:/home/vcap/app/php/bin:/home/vcap/app/vendor/drush/drush" >> /home/vcap/.bashrc
+sed -i -e "s/REPLACE_WITH_REAL_KEY/${newrelic_key}/" \
+  -e "s/newrelic.appname[[:space:]]=[[:space:]].*/newrelic.appname=\"${APP_NAME}\"/" \
+  $(php -r "echo(PHP_CONFIG_FILE_SCAN_DIR);")/newrelic.ini
+
+## Updated ~/.bashrc to update $PATH when someone logs in.
+[ -z $(cat ${home}/.bashrc | grep PATH) ] && \
+  touch ${home}/.bashrc && \
+  echo "export http_proxy=${http_proxy}" >> ${home}/.bashrc && \
+  echo "export https_proxy=${https_proxy}" >> ${home}/.bashrc && \
+  echo "alias vi=\"VIMRUNTIME=${home}/deps/0/apt/usr/share/vim/vim82 ${home}/deps/0/bin/vim.basic\"" >> ${home}/.bashrc && \
+  echo "alias vim=\"VIMRUNTIME=${home}/deps/0/apt/usr/share/vim/vim82 ${home}/deps/0/bin/vim.basic\"" >> ${home}/.bashrc && \
+  echo "PATH=$PATH:/home/vcap/app/php/bin:/home/vcap/app/vendor/drush/drush" >> /home/vcap/.bashrc
+
+source ${home}/.bashrc
+
 
