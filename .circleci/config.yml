@@ -54,7 +54,9 @@ jobs:
       - run:
           name: "Cypress"
           command: |
-            source ./scripts/pipeline/cloud-gov-login.sh "test"
+            export CIRCLE_BRANCH="test"
+            source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
+            source ./scripts/pipeline/cloud-gov-login.sh
 
             cd testing
             cypress_baseurl=$(cf routes | grep waf-test | grep gov | awk '{print $2"."$3}')
@@ -84,7 +86,8 @@ jobs:
       - run:
           name: "Deploy"
           command: |
-            source ./scripts/pipeline/cloud-gov-login.sh "${CIRCLE_BRANCH}"
+            source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
+            source ./scripts/pipeline/cloud-gov-login.sh
 
             mv manifest.yml manifest.tmp
             envsubst < manifest.tmp > manifest.yml
@@ -109,7 +112,8 @@ jobs:
       - run:
           name: "Deploy production"
           command: |
-            source ./scripts/pipeline/cloud-gov-login.sh "${CIRCLE_BRANCH}"
+            source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
+            source ./scripts/pipeline/cloud-gov-login.sh
 
             mv manifest.yml manifest.tmp
             envsubst < manifest.tmp > manifest.yml
@@ -134,7 +138,8 @@ jobs:
           name: "Deploy"
           command: |
             export CIRCLE_BRANCH="test"
-            source ./scripts/pipeline/cloud-gov-login.sh ${CIRCLE_BRANCH}
+            source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
+            source ./scripts/pipeline/cloud-gov-login.sh
 
             mv manifest.yml manifest.tmp
             envsubst < manifest.tmp > manifest.yml
@@ -201,11 +206,13 @@ jobs:
       - run:
           name: "Run downsync"
           command: |
-            source ./scripts/pipeline/cloud-gov-login.sh "${BACKUP_ENV}"
+            source ./scripts/pipeline/exports.sh "${BACKUP_ENV}"
+            source ./scripts/pipeline/cloud-gov-login.sh 
             source ./scripts/pipeline/downsync-backup.sh
             cf logout
 
-            source ./scripts/pipeline/cloud-gov-login.sh "${RESTORE_ENV}"
+            source ./scripts/pipeline/exports.sh "${RESTORE_ENV}"
+            source ./scripts/pipeline/cloud-gov-login.sh
             source ./scripts/pipeline/downsync-restore.sh
 
   build-static:
@@ -221,7 +228,8 @@ jobs:
       - run:
           name: "Sync Static Bucket"
           command: |
-            source ./scripts/pipeline/cloud-gov-login.sh ${CIRCLE_BRANCH}
+            source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}""
+            source ./scripts/pipeline/cloud-gov-login.sh
 
 workflows:
   deploy-workflow:
