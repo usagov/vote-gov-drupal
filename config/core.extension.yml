@@ -1,6 +1,7 @@
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
+  new_relic_rpm: -20
   admin_toolbar: 0
   allowed_formats: 0
   auto_entitylabel: 0
@@ -14,6 +15,7 @@ module:
   config: 0
   config_translation: 0
   content_moderation: 0
+  crazyegg: 0
   datetime: 0
   dblog: 0
   double_field: 0
@@ -24,6 +26,7 @@ module:
   field_group: 0
   field_ui: 0
   file: 0
+  file_delete: 0
   filter: 0
   google_tag: 0
   image: 0

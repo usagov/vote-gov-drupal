@@ -8,19 +8,29 @@
         "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
         "chat": "https://www.drupal.org/node/314178"
     },
-    "repositories": [
-        {
+    "repositories": {
+        "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8",
             "exclude": [
-                "drupal/log_stdout"
+                "drupal/log_stdout",
+                "drupal/pathauto",
+                "drupal/publication_date"
             ]
         },
-        {
+        "drupal/log_stdout": {
             "type": "git",
             "url": "https://git.drupalcode.org/issue/log_stdout-3339853.git"
+        },
+        "drupal/pathauto": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/issue/pathauto-3328670.git"
+        },
+        "drupal/publication_date": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/issue/publication_date-3328575.git"
         }
-    ],
+    },
     "require": {
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
@@ -34,19 +44,22 @@
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",
+        "drupal/crazyegg": "^1.4",
         "drupal/double_field": "^4.1",
         "drupal/entity_reference_revisions": "^1.10",
         "drupal/field_group": "^3.4",
+        "drupal/file_delete": "^2.0",
         "drupal/google_tag": "^2.0",
         "drupal/language_switcher_extended": "^1.1",
         "drupal/log_stdout": "dev-3339853-drupal-10-compatibility",
         "drupal/metatag": "^1.22",
         "drupal/migrate_plus": "^6.0",
         "drupal/migrate_tools": "^6.0",
+        "drupal/new_relic_rpm": "^2.1",
         "drupal/node_revision_delete": "^1.0@RC",
         "drupal/paragraphs": "^1.15",
-        "drupal/pathauto": "^1.11",
-        "drupal/publication_date": "^2.0@beta",
+        "drupal/pathauto": "dev-3328670-php-8.2-compatibility",
+        "drupal/publication_date": "dev-3328575-fix-php-8.2",
         "drupal/redirect": "^1.8",
         "drupal/remove_http_headers": "^2.0",
         "drupal/s3fs": "^3.1",

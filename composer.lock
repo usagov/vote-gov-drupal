@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8df4ca5180ee20a736421a3787e7e93e",
+    "content-hash": "fa13fc5a716e1000334d5e93c2d5030c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2070,6 +2070,58 @@
             "time": "2023-04-19T16:14:25+00:00"
         },
         {
+            "name": "drupal/crazyegg",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/crazyegg.git",
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/crazyegg-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "05d107313cbc65f098283d1d9ec6d9967d9fd817"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.4",
+                    "datestamp": "1682505284",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "crazyegg",
+                    "homepage": "https://www.drupal.org/user/3561241"
+                },
+                {
+                    "name": "maxim.filipovich",
+                    "homepage": "https://www.drupal.org/user/3756986"
+                },
+                {
+                    "name": "shravan.crazyegg",
+                    "homepage": "https://www.drupal.org/user/3645723"
+                }
+            ],
+            "description": "The official Crazy Egg Plugin for Drupal. The easiest, free way to add your Crazy Egg tracking script to your Drupal site.",
+            "homepage": "https://drupal.org/project/crazyegg",
+            "support": {
+                "source": "https://git.drupalcode.org/project/crazyegg"
+            }
+        },
+        {
             "name": "drupal/ctools",
             "version": "4.0.3",
             "source": {
@@ -2335,6 +2387,59 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/field_group",
                 "issues": "https://www.drupal.org/project/issues/field_group"
+            }
+        },
+        {
+            "name": "drupal/file_delete",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/file_delete.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/file_delete-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "39933b698ed2f6500f1d94a681172b2c4cc94feb"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "require-dev": {
+                "drupal/coder": "^8.3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1664902819",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Eom",
+                    "homepage": "https://www.drupal.org/user/3458427",
+                    "email": "jonnyeom@gmail.com"
+                }
+            ],
+            "description": "Provides the ability to easily delete files within Drupal administration.",
+            "homepage": "https://www.drupal.org/project/file_delete",
+            "keywords": [
+                "Drupal",
+                "File"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/file_delete",
+                "issues": "https://www.drupal.org/project/issues/file_delete"
             }
         },
         {
@@ -2678,6 +2783,81 @@
             }
         },
         {
+            "name": "drupal/new_relic_rpm",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/new_relic_rpm.git",
+                "reference": "2.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/new_relic_rpm-2.1.1.zip",
+                "reference": "2.1.1",
+                "shasum": "751f1d91793dfa6bc0da627fbb90b651a64e95aa"
+            },
+            "require": {
+                "drupal/core": "^9.1 || ^10",
+                "php": ">=8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.1.1",
+                    "datestamp": "1675887846",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "Chris Charlton",
+                    "homepage": "https://www.drupal.org/user/17089"
+                },
+                {
+                    "name": "hosef",
+                    "homepage": "https://www.drupal.org/user/1203298"
+                },
+                {
+                    "name": "Jonathan Webb",
+                    "homepage": "https://www.drupal.org/user/61512"
+                },
+                {
+                    "name": "neclimdul",
+                    "homepage": "https://www.drupal.org/user/48673"
+                },
+                {
+                    "name": "nterbogt",
+                    "homepage": "https://www.drupal.org/user/102218"
+                },
+                {
+                    "name": "soyarma",
+                    "homepage": "https://www.drupal.org/user/286273"
+                }
+            ],
+            "description": "Provides additional newrelic integration with Drupal.",
+            "homepage": "https://drupal.org/project/new_relic_rpm",
+            "support": {
+                "source": "https://git.drupalcode.org/project/new_relic_rpm",
+                "issues": "https://drupal.org/project/issues/new_relic_rpm"
+            }
+        },
+        {
             "name": "drupal/node_revision_delete",
             "version": "1.0.0-rc6",
             "source": {
@@ -2836,20 +3016,13 @@
         },
         {
             "name": "drupal/pathauto",
-            "version": "1.11.0",
+            "version": "dev-3328670-php-8.2-compatibility",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/pathauto.git",
-                "reference": "8.x-1.11"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/pathauto-8.x-1.11.zip",
-                "reference": "8.x-1.11",
-                "shasum": "a006fe9e6046a9833711a1ae56aa4752e65bcdc8"
+                "url": "https://git.drupalcode.org/issue/pathauto-3328670.git",
+                "reference": "a49bb051fbebdf529373232a26b80b37faf1c66d"
             },
             "require": {
-                "drupal/core": "^9.3 || ^10",
                 "drupal/ctools": "*",
                 "drupal/token": "*"
             },
@@ -2858,113 +3031,38 @@
             },
             "type": "drupal-module",
             "extra": {
-                "drupal": {
-                    "version": "8.x-1.11",
-                    "datestamp": "1660129564",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
                 "drush": {
                     "services": {
                         "drush.services.yml": "^9 || ^10"
                     }
                 }
             },
-            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
                 "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Berdir",
-                    "homepage": "https://www.drupal.org/user/214652"
-                },
-                {
-                    "name": "Dave Reid",
-                    "homepage": "https://www.drupal.org/user/53892"
-                },
-                {
-                    "name": "Freso",
-                    "homepage": "https://www.drupal.org/user/27504"
-                },
-                {
-                    "name": "greggles",
-                    "homepage": "https://www.drupal.org/user/36762"
-                }
             ],
             "description": "Provides a mechanism for modules to automatically generate aliases for the content they manage.",
             "homepage": "https://www.drupal.org/project/pathauto",
             "support": {
-                "source": "https://cgit.drupalcode.org/pathauto",
                 "issues": "https://www.drupal.org/project/issues/pathauto",
-                "documentation": "https://www.drupal.org/docs/8/modules/pathauto"
-            }
+                "documentation": "https://www.drupal.org/docs/8/modules/pathauto",
+                "source": "https://cgit.drupalcode.org/pathauto"
+            },
+            "time": "2023-03-02T07:31:39+00:00"
         },
         {
             "name": "drupal/publication_date",
-            "version": "2.0.0-beta7",
+            "version": "dev-3328575-fix-php-8.2",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/publication_date.git",
-                "reference": "8.x-2.0-beta7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/publication_date-8.x-2.0-beta7.zip",
-                "reference": "8.x-2.0-beta7",
-                "shasum": "699232945890528f97b83f49a31ea7c7831c3ca8"
-            },
-            "require": {
-                "drupal/core": "^9.1 || ^10"
+                "url": "https://git.drupalcode.org/issue/publication_date-3328575.git",
+                "reference": "c610c2b5a74c282b09fd7eff9b31c94a64c93e9b"
             },
             "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-2.0-beta7",
-                    "datestamp": "1669679282",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
                 "GPL-2.0+"
             ],
-            "authors": [
-                {
-                    "name": "Clever Age",
-                    "homepage": "https://www.drupal.org/user/547746"
-                },
-                {
-                    "name": "dgtlmoon",
-                    "homepage": "https://www.drupal.org/user/25027"
-                },
-                {
-                    "name": "jstoller",
-                    "homepage": "https://www.drupal.org/user/99012"
-                },
-                {
-                    "name": "Sheldon Rampton",
-                    "homepage": "https://www.drupal.org/user/13085"
-                },
-                {
-                    "name": "tmarly",
-                    "homepage": "https://www.drupal.org/user/159040"
-                },
-                {
-                    "name": "webflo",
-                    "homepage": "https://www.drupal.org/user/254778"
-                }
-            ],
             "description": "Add a field containing the publication date.",
-            "homepage": "https://www.drupal.org/project/publication_date",
-            "support": {
-                "source": "https://git.drupalcode.org/project/publication_date"
-            }
+            "time": "2022-12-21T11:44:37+00:00"
         },
         {
             "name": "drupal/redirect",
@@ -12410,7 +12508,8 @@
         "drupal-tome/tome_drush": 20,
         "drupal/log_stdout": 20,
         "drupal/node_revision_delete": 5,
-        "drupal/publication_date": 10
+        "drupal/pathauto": 20,
+        "drupal/publication_date": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
