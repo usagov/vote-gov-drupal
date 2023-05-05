@@ -1,10 +1,4 @@
 {% set state_abrev = content.field_state_abbreviation | field_value | render %}
-{% if language == 'ko' and node.field_is_state.value %}
-  {% set korean_state_char = "state" | t %}
-  {% set state_name = (label | field_value | render)  ~ " " ~ korean_state_char %}
-{% else %}
-  {% set state_name = label | field_value | render %}
-{% endif %}
 
   {# How to register to vote #}
   <h2>{{ 'How to register to vote in @state_name' | t({ '@state_name': state_name }) }}</h2>
