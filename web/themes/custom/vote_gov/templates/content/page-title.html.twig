@@ -14,6 +14,11 @@
 #}
 {% set title = title | render | striptags | trim %}
 {% set node_type = currentnode.bundle() %}
+
+{% if node_type == "state_territory" and language == 'ko' and currentnode.field_is_state.value %}
+  {% set korean_state_char = "state" | t %}
+  {% set title = title ~ " " ~ korean_state_char %}
+{% endif %}
 {% set title = 'Register to vote in @state_name' | t ({"@state_name": title}) %}
 
 {{ title_prefix }}
