@@ -136,3 +136,6 @@ msgstr "xác nhận hiện trạng đăng ký cử tri của mình (bằng Tiế
 
 msgid "You can @link on @state_name’s election website."
 msgstr "Bạn có thể @link trên trang web bầu cử cấp tiểu bang của @state_name."
+
+msgid "External link opens in new window"
+msgstr "Liên kết bên ngoài mở cửa sổ mới"
