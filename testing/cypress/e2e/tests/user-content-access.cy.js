@@ -71,9 +71,11 @@ describe('Test User Role Access to Content Moderation', () => {
     // Can update the content moderation settings
     cy.request('/admin/people/permissions').then((response) => {
       expect(response.status).to.eq(200)})
+
+      cy.logout()
   })
 
-  it.only('Test content manager', () => {
+  it('Test content manager', () => {
     cy.signin(Cypress.env('roles').content_manager.username, Cypress.env('test_pass'))
 
     // Can create a draft
@@ -136,19 +138,21 @@ describe('Test User Role Access to Content Moderation', () => {
     cy.get('[class="usa-alert__body"]').should('contain', 'The Basic Page Test Page has been deleted.')
 
     // Can not create/edit/delete media
-      cy.request({
-        url: '/admin/structure/media/add',
-        failOnStatusCode: false,
-      }).then((resp) => {
-        expect(resp.status).to.eq(403)
-      })
+    cy.request({
+      url: '/admin/structure/media/add',
+      failOnStatusCode: false,
+    }).then((resp) => {
+      expect(resp.status).to.eq(403)
+    })
 
     // should not be able to update the content moderation settings
-      cy.request({
-        url: '/admin/people/permissions',
-        failOnStatusCode: false,
-      }).then((resp) => {
-        expect(resp.status).to.eq(403)
-      })
+    cy.request({
+      url: '/admin/people/permissions',
+      failOnStatusCode: false,
+    }).then((resp) => {
+      expect(resp.status).to.eq(403)
+    })
+
+    cy.logout()
   })
 })
