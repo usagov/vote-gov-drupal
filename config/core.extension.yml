@@ -15,6 +15,7 @@ module:
   config: 0
   config_translation: 0
   content_moderation: 0
+  crazyegg: 0
   datetime: 0
   dblog: 0
   double_field: 0
