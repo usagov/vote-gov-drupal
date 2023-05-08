@@ -127,7 +127,7 @@ else
     echo "Bootstrap skipping Drupal CIM because: Instance=${CF_INSTANCE_INDEX:-''} Skip=${SKIP_DRUPAL_BOOTSTRAP:-''}"
 fi
 
-${app_path}/scripts/build_static
+${app_path}/scripts/build_static &
 
 ## Only run 'drush cron' in the first instance of an application.
 [ "${CF_INSTANCE_INDEX:-''}" == "0" ] && ${HOME}/scripts/cronish &
