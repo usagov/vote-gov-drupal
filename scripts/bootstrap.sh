@@ -84,7 +84,7 @@ newrelic_ini="${home}/deps/0/apt/usr/lib/newrelic-php5/scripts/newrelic.ini"
 cp ${newrelic_ini}.template ${newrelic_ini}
 sed -i "s/REPLACE_WITH_REAL_KEY/${newrelic_key}/" ${newrelic_ini}
 sed -i "s/newrelic.appname[[:space:]]=[[:space:]].*/newrelic.appname=\"${APP_NAME}\"/" ${newrelic_ini}
-
+mv ${newrelic_ini} /home/vcap/app/php/etc/php.ini.d/
 
 ## Updated ~/.bashrc to update $PATH when someone logs in.
 [ -z $(cat ${home}/.bashrc | grep PATH) ] && \
