@@ -75,7 +75,7 @@ describe('Test User Role Access to Content Moderation', () => {
       cy.logout()
   })
 
-  it('Test content manager', () => {
+  it('Test Content Manager', () => {
     cy.signin(Cypress.env('roles').content_manager.username, Cypress.env('test_pass'))
 
     // Can create a draft
