@@ -18,5 +18,7 @@ while : ; do
   [[ "${response}" == *"HTTP/2 200"* ]] && break
 done
 
+${app_path}/scripts/build_static &
+
 ## Run entry point
 ${app_path}/scripts/entrypoint &
