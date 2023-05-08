@@ -72,11 +72,3 @@ Cypress.Commands.add('logout', function () {
       expect(resp.status).to.eq(302)
   });
 });
-
-
-Cypress.Commands.add("type_ckeditor", (element, content) => {
-  cy.window()
-    .then(win => {
-      win.CKEDITOR.instances[element].setData(content);
-    });
-});
