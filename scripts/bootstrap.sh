@@ -8,6 +8,7 @@ export https_proxy=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentia
 export newrelic_key=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentials.newrelic_key')
 
 home="/home/vcap"
+app_path="${home}/app"
 
 if [ -z "${VCAP_SERVICES:-}" ]; then
     echo "VCAP_SERVICES must a be set in the environment: aborting bootstrap";
@@ -124,7 +125,7 @@ else
     echo "Bootstrap skipping Drupal CIM because: Instance=${CF_INSTANCE_INDEX:-''} Skip=${SKIP_DRUPAL_BOOTSTRAP:-''}"
 fi
 
-${app_path}/scripts/build_static &
+${app_path}/scripts/build_static
 
 ## Only run 'drush cron' in the first instance of an application.
 [ "${CF_INSTANCE_INDEX:-''}" == "0" ] && ${HOME}/scripts/cronish &
