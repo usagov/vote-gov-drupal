@@ -51,3 +51,7 @@ function vote_gov_preprocess_links__language_block(&$variables) {
     }
   }
 }
+
+function vote_gov_preprocess_paragraph__registration_tool(&$variables) {
+    $variables['states_list'] = views_embed_view('registration_tool_list', 'block');
+}
