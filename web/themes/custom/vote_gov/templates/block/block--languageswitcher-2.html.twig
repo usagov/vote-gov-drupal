@@ -1,3 +1,4 @@
+
 {#
 /**
  * @file
@@ -26,23 +27,24 @@
  */
 #}
 <div class="switcher-desktop">
-
+  {% block content %}
   <div class="usa-language-container usa-language--big">
-
+    {% if content['#links']|length == 2 %}
+      {{ content }}
+    {% elseif content['#links']|length > 2 %}
     <ul class="usa-language__primary usa-accordion">
       <li class="usa-language__primary-item">
-        <button class="usa-button usa-language__link" data-test="language-button" aria-expanded="false" aria-controls="language-options-2">
+        <button class="usa-button usa-language__link" data-test="language-dropdown" aria-expanded="false" aria-controls="language-options-2">
           {{ "Select language" | t }}
         </button>
         {# Language menu items:
            links--language-block.html.twig #}
-        {% block content %}
-          <ul id="language-options-2" class="usa-language__submenu" data-test="language-switcher" name="language-switcher" hidden="true"{{ attributes }}>
+          <ul id="language-options-2" class="usa-language__submenu" data-test="language-selection" name="language-switcher" hidden="true"{{ attributes }}>
             {{ content }}
           </ul>
-        {% endblock %}
       </li>
     </ul>
-
+    {% endif %}
   </div>
+  {% endblock %}
 </div>
