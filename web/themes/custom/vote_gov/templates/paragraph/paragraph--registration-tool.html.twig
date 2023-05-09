@@ -25,7 +25,6 @@
             <header>
               <h1 class="main-heading" data-test="main-header">{{ content.field_heading | field_value }}</h1>
             </header>
-
             <form class="form-register" method="get" id="register">
               <h2>{{ content.field_form_heading | field_value }}</h2>
               <label class="usa-sr-only" for="js-user-selection">
@@ -35,10 +34,19 @@
                 <option value="default">
                   {{ content.field_dropdown_label | field_value }}
                 </option>
-                {% set results = drupal_view_result('registration_tool_list', 'block') %}
-                {% for result in results %}
-                    <option value={{result._entity.field_state_abbreviation.value}}>{{ result.node_field_data_title }}</option>
-                {% endfor %}
+              {% set results = drupal_view_result('registration_tool_list', 'block') %}
+              {% for result in results %}
+                  {% set state_abrev = result._entity.field_state_abbreviation.value %}
+                  {% set nodeID = result._entity.id() %}
+                  {% set node_path = path('entity.node.canonical', {'node': nodeID}) %}
+                  <option 
+                    value="{{ state_abrev }}"
+                    id="{{ state_abrev }}"
+                    data="{{ node_path }}"
+                  >
+                    {{ result.node_field_data_title }}
+                  </option>
+              {% endfor %}
               </select>
               <button class="usa-button max-width-input" id="js-user-submit" type="submit" data-test="register-button">
                 {{ content.field_submit_button_label | field_value }}
