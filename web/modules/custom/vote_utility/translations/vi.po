@@ -136,3 +136,80 @@ msgstr "xác nhận hiện trạng đăng ký cử tri của mình (bằng Tiế
 
 msgid "You can @link on @state_name’s election website."
 msgstr "Bạn có thể @link trên trang web bầu cử cấp tiểu bang của @state_name."
+
+#month and day names
+msgctxt "Long month name"
+msgid "January"
+msgstr "tháng một"
+
+msgctxt "Long month name"
+msgid "February"
+msgstr "tháng hai"
+
+msgctxt "Long month name"
+msgid "March"
+msgstr "tháng ba"
+
+msgctxt "Long month name"
+msgid "April"
+msgstr "tháng tư"
+
+msgctxt "Long month name"
+msgid "May"
+msgstr "tháng năm"
+
+msgctxt "Long month name"
+msgid "June"
+msgstr "tháng sáu"
+
+msgctxt "Long month name"
+msgid "July"
+msgstr "tháng bảy"
+
+msgctxt "Long month name"
+msgid "August"
+msgstr "tháng tám"
+
+msgctxt "Long month name"
+msgid "September"
+msgstr "tháng chín"
+
+msgctxt "Long month name"
+msgid "October"
+msgstr "tháng mười"
+
+msgctxt "Long month name"
+msgid "November"
+msgstr "tháng mười một"
+
+msgctxt "Long month name"
+msgid "December"
+msgstr "tháng mười hai"
+
+msgctxt "day name"
+msgid "Monday"
+msgstr "Thứ Hai"
+
+msgctxt "day name"
+msgid "Tuesday
+msgstr "Thứ Ba"
+
+msgctxt "day name"
+msgid "Wednesday"
+msgstr "Thứ Tư"
+
+msgctxt "day name"
+msgid "Thursday"
+msgstr "Thứ Năm"
+
+msgctxt "day name"
+msgid "Friday"
+msgstr "Thứ Sáu"
+
+msgctxt "day name"
+msgid "Saturday"
+msgstr "Thứ Bảy"
+
+msgctxt "day name"
+msgid "Sunday"
+msgstr "Chủ Nhật"
