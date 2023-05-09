@@ -24,8 +24,8 @@ function vote_gov_preprocess(&$variables) {
   // Set global variable for site name.
   $sitename = Drupal::config('system.site')->get('name');
   $variables['sitename'] = $sitename;
-  
-  // Global external link title variable
+
+  // Global external link title variable.
   $variables['#attached']['drupalSettings']['title_text'] = "External link opens in new window";
 
   // Set variable for node object.
@@ -55,6 +55,9 @@ function vote_gov_preprocess_links__language_block(&$variables) {
   }
 }
 
+/**
+ * Implements hook_preprocess_HOOK().
+ */
 function vote_gov_preprocess_html(&$variables) {
   $variables['ext_link_text'] = 'External link opens in new window';
 }
