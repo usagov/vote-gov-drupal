@@ -5,9 +5,9 @@
   "main": "index.js",
   "devDependencies": {
     "axe-core": "^4.7.0",
-    "cypress": "^12.10.0",
+    "cypress": "^12.11.0",
     "cypress-axe": "^1.4.0",
-    "cypress-mochawesome-reporter": "^3.3.0"
+    "cypress-mochawesome-reporter": "^3.4.0"
   },
   "scripts": {
     "cy:open": "cypress open",
