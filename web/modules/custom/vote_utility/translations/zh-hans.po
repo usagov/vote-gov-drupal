@@ -139,52 +139,53 @@ msgstr "您可以在 @state_name 州的选举网站上 @link"
 
 #month and day names
 msgctxt "Long month name"
+msgctxt "Long month name"
 msgid "January"
-msgstr "一月"
+msgstr "1月"
 
 msgctxt "Long month name"
 msgid "February"
-msgstr "二月"
+msgstr "2月"
 
 msgctxt "Long month name"
 msgid "March"
-msgstr "行进"
+msgstr "3月"
 
 msgctxt "Long month name"
 msgid "April"
-msgstr "四月"
+msgstr "4月"
 
 msgctxt "Long month name"
 msgid "May"
-msgstr "可能"
+msgstr "5月"
 
 msgctxt "Long month name"
 msgid "June"
-msgstr "六月"
+msgstr "6月"
 
 msgctxt "Long month name"
 msgid "July"
-msgstr "七月"
+msgstr "7月"
 
 msgctxt "Long month name"
 msgid "August"
-msgstr "八月"
+msgstr "8月"
 
 msgctxt "Long month name"
 msgid "September"
-msgstr "九月"
+msgstr "9月"
 
 msgctxt "Long month name"
 msgid "October"
-msgstr "十月"
+msgstr "10月"
 
 msgctxt "Long month name"
 msgid "November"
-msgstr "十一月"
+msgstr "11月"
 
 msgctxt "Long month name"
 msgid "December"
-msgstr "十二月"
+msgstr "12月"
 
 msgctxt "day name"
 msgid "Monday"
