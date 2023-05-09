@@ -137,6 +137,9 @@ msgstr "确认您的选民注册状态 (英语)"
 msgid "You can @link on @state_name’s election website."
 msgstr "您可以在 @state_name 州的选举网站上 @link"
 
+msgid "External link opens in new window"
+msgstr "外部链接打开新窗口"
+
 #month and day names
 msgctxt "Long month name"
 msgctxt "Long month name"

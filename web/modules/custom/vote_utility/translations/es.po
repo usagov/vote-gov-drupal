@@ -137,6 +137,9 @@ msgstr "verificar el estado de su inscripción en el registro electoral (en ingl
 msgid "You can @link on @state_name’s election website."
 msgstr "Usted puede @link en el sitio web de elecciones estatales de @state_name."
 
+msgid "External link opens in new window"
+msgstr "El enlace externo se abre en una nueva ventana"
+
 #month and day names
 msgctxt "Long month name"
 msgid "January"
