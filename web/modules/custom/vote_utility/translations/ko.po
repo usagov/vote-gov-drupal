@@ -139,3 +139,6 @@ msgstr "유권자 등록 상태 확인하기 (영어로 제공)"
 
 msgid "You can @link on @state_name’s election website."
 msgstr "@state_name 주 선거국 웹사이트에서 @link를 하실 수 있습니다."
+
+msgid "External link opens in new window"
+msgstr "외부 링크 사이트는 새 창에서 연결됩니다"

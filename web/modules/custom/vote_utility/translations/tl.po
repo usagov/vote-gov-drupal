@@ -137,3 +137,6 @@ msgstr "kumpirmahin ang estado ng inyong rehistrasyon ng botante (sa Ingles)"
 
 msgid "You can @link on @state_name’s election website."
 msgstr "Maaari ninyong  @link sa website ng eleksyon ng estado ng @state_name."
+
+msgid "External link opens in new window"
+msgstr "Ang panlabas na link ay magbubukas ng bagong window"
