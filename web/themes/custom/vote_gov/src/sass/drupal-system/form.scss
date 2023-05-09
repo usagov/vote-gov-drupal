@@ -3,7 +3,7 @@
 
 .usa-form {
   @include at-media("mobile-lg") {
-    @include u-maxw('tablet')
+    @include u-maxw('tablet');
   }
 }
 

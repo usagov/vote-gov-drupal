@@ -1,19 +1,25 @@
 @use '../variables' as *;
 
 .usa-language-container {
-    display: flex;
-    justify-content: flex-end;
-    padding: 0.5rem 1rem 0.5rem 0;
-  }
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 1rem 0.5rem 0;
 
-  .switcher-desktop {
-    @media (max-width: 800px) {
-      display: none;
+  .usa-button {
+    a {
+      color: #fff;
     }
   }
+}
 
-  .switcher-mobile {
-    @media (min-width: 800px) {
-      display: none;
-    }
+.switcher-desktop {
+  @media (max-width: 800px) {
+    display: none;
   }
+}
+
+.switcher-mobile {
+  @media (min-width: 800px) {
+    display: none;
+  }
+}

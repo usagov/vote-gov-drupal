@@ -24,7 +24,7 @@ services:
     build_as_root:
       - apt update -y && apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb -y
     build:
-      - npm install --prefix /app/testing && npm install -g cypress@12.3.0
+      - npm install --prefix /app/testing && npm install -g cypress@12.9.0
     overrides:
       ports:
         - "32654:32654"
@@ -58,7 +58,7 @@ proxy:
 # it knows the service to use.
 # https://docs.lando.dev/config/tooling.html#usage
 tooling:
-  coder-sniffer:
+  phplint:
     cmd: '/app/vendor/squizlabs/php_codesniffer/bin/phpcs --ignore=*/node_modules/* --standard=/app/vendor/drupal/coder/coder_sniffer/Drupal,vendor/drupal/coder/coder_sniffer/DrupalPractice --extensions=php,module,inc,theme,info,yml,twig --report=full /app/web/modules/custom /app/web/themes/custom -n'
     service: appserver
   npm-testing:
@@ -90,14 +90,23 @@ tooling:
     service: node
     cmd:  npm run cy:proofer --prefix /app/testing
     description: run cypress external links test - headless
-  'cy:test':
-    service: node
-    cmd:  npm run cy:test --prefix /app/testing
-    description: run cypress functional tests - headless
-  'cy:testSuite':
-    service: node
-    cmd:  npm run cypress run --prefix /app/testing
-    description: run full testing suite, functional, internal links, external links and accessibility - headless
+# removing the follow script until further work can be done for cypress and cli commands to work together
+  # 'cy:createUser':
+  #   service: node
+  #   cmd:  npm run cy:createUser --prefix /app/testing
+  #   description: run cypress create user script - headless
+  # 'cy:deleteUser':
+  #   service: node
+  #   cmd:  npm run cy:deleteUser --prefix /app/testing
+  #   description: run cypress delete user script - headless
+  # 'cy:test':
+  #   service: node
+  #   cmd:  npm run cy:test --prefix /app/testing
+  #   description: run cypress functional tests - headless
+  # 'cy:testSuite':
+  #   service: node
+  #   cmd:  npm run cypress run --prefix /app/testing
+  #   description: run full testing suite, functional, internal links, external links and accessibility - headless
   retune:
     service: appserver
     description: Branch update (run composer / db updates / import config / clear caches).
@@ -127,7 +136,7 @@ tooling:
     service: appserver
     description: Manually recompiles static site and assets
     cmd:
-      - drush tome:static --uri=https://vote.gov
+      - drush tome:static --uri=http://html.vote-gov.lndo.site
   xoff:
     cmd: "rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && /etc/init.d/apache2 reload"
     description: Disable xdebug.

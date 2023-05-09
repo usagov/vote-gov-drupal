@@ -1,0 +1,55 @@
+#! /bin/bash
+
+home="/home/vcap"
+app_path="${home}/app"
+
+## Start PHP FPM
+${app_path}/php/sbin/php-fpm -p "${app_path}/php/etc" -y "${app_path}/php/etc/php-fpm.conf" -c "${app_path}/php/etc" &
+
+## Start Apache
+${app_path}/httpd/bin/apachectl -f "${app_path}/httpd/conf/httpd.conf" -k start -DFOREGROUND &
+
+## Wait for the egress proxy access to be allowed.
+while : ; do
+  echo "Waiting for network..."
+  response=$(curl -LIks --connect-timeout 2 "https://www.github.com")
+  sleep 3
+
+  [[ "${response}" == *"HTTP/2 200"* ]] && break
+done
+
+echo "Installing awscli..."
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip"
+unzip /tmp/awscliv2.zip -d /tmp/
+/tmp/aws/install --bin-dir ${home}/deps/0/bin --install-dir ${home}/deps/0/usr/local/aws-cli
+rm -rf /tmp/awscliv2.zip /tmp/aws
+
+if [[ "${CF_INSTANCE_INDEX:-''}" == "0" && -z "${SKIP_DRUPAL_BOOTSTRAP:-}" ]]; then
+
+    echo  "Updating drupal ... "
+    drush state:set system.maintenance_mode 1 -y
+    drush cr
+    drush updatedb --no-cache-clear -y
+    drush cim -y
+    drush locale-check
+    drush locale-update
+
+    echo "Uploading public files to S3 ..."
+    drush s3fs-rc
+    drush s3fs-cl -y --scheme=public --condition=newer
+    
+    drush cr
+    drush state:set system.maintenance_mode 0 -y
+
+    echo "Bootstrap finished"
+else
+    echo "Bootstrap skipping Drupal CIM because: Instance=${CF_INSTANCE_INDEX:-''} Skip=${SKIP_DRUPAL_BOOTSTRAP:-''}"
+fi
+
+${app_path}/scripts/build_static &
+
+## Only run 'drush cron' in the first instance of an application.
+[ "${CF_INSTANCE_INDEX:-''}" == "0" ] && ${HOME}/scripts/cronish &
+
+## Run entry point
+${app_path}/scripts/entrypoint &

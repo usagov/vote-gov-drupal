@@ -1,24 +1,31 @@
 ---
 default_config: &defaults
   buildpacks:
+    - https://github.com/cloudfoundry/apt-buildpack
     - php_buildpack
-  disk_quota: 768M
+  command: ./scripts/start
+  disk_quota: 1.5G
   env:
+    COMPOSER_NO_DEV: 1
     ENV: ${CIRCLE_BRANCH}
     LD_LIBRARY_PATH: /home/vcap/app/php/lib/
+    no_proxy: ${no_proxy}
     PHP_INI_SCAN_DIR: /home/vcap/app/php/etc/:/home/vcap/app/php/etc/php.ini.d/
+    waf_external_endpoint: ${waf_external_endpoint}
   timeout: 180
   routes:
-    - route: vote-drupal-${CIRCLE_BRANCH}.apps.internal
-      protocol: http1
+    - route: ${project}-drupal-${CIRCLE_BRANCH}.apps.internal
+      protocol: http2
   services:
-    - vote-mysql-${CIRCLE_BRANCH}
-    - vote-secrets-${CIRCLE_BRANCH}
-    - vote-storage-${CIRCLE_BRANCH}
+    - ${project}-mysql-${CIRCLE_BRANCH}
+    - ${project}-secrets-${CIRCLE_BRANCH}
+    - ${project}-static-${CIRCLE_BRANCH}
+    - ${project}-storage-${CIRCLE_BRANCH}
 
 applications:
-- name: vote-drupal-${CIRCLE_BRANCH}
+- name: ${project}-drupal-${CIRCLE_BRANCH}
   <<: *defaults
   memory: ${DRUPAL_MEMORY}
+  stack: cflinuxfs4
   instances: 1
   random-route: false

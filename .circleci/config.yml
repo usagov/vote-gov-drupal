@@ -6,6 +6,9 @@ parameters:
   restore:
     type: string
     default: "none"
+  build_static:
+    type: boolean
+    default: false
 jobs:
   build-theme:
     docker:
@@ -18,7 +21,7 @@ jobs:
             source ./scripts/pipeline/build-theme.sh
       - persist_to_workspace:
           root: ~/
-          paths: 
+          paths:
             - project/web/themes/custom/vote_gov/dist
   build-theme-prod:
     docker:
@@ -31,7 +34,7 @@ jobs:
             source ./scripts/pipeline/build-theme.sh
       - persist_to_workspace:
           root: ~/
-          paths: 
+          paths:
             - project/web/themes/custom/vote_gov/dist
   cypress:
     docker:
@@ -51,27 +54,21 @@ jobs:
       - run:
           name: "Cypress"
           command: |
-            source ./scripts/pipeline/cloud-gov-login.sh "test"
-            
+            export CIRCLE_BRANCH="test"
+            source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
+            source ./scripts/pipeline/cloud-gov-login.sh
+
             cd testing
-            cypress_baseurl=$(cf routes | grep drupal-test | grep gov | awk '{print $2"."$3}')
+            cypress_baseurl=$(cf routes | grep waf-test | grep gov | awk '{print $2"."$3}')
             cypress_random_pass="$(date | sha256sum | cut -d" " -f1)"
 
             sed -i "s/^    baseUrl: .*/    baseUrl: 'https:\/\/${cypress_baseurl}',/" cypress.config.js
             sed -i "s/^      \"test_pass\": .*/      \"test_pass\": \"${cypress_random_pass}\",/" cypress.config.js
             sed -i "s/^      \"pipeline\": .*/      \"pipeline\": 1,/" cypress.config.js
             sed -i "s/^      \"cloudgov_application_name\": .*/      \"cloudgov_application_name\": \"${cypress_cloudgov_application_name}\",/" cypress.config.js
-            
+
             npm install
-
-            if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "stage" || "${CIRCLE_BRANCH}" == "prod" ]]; then
-              npm run cy:backEnd || exit 0
-              npm run cy:test || exit 0
-            else
-              npm run cy:backEnd
-              npm run cy:test
-            fi
-
+            npm run cy:test
       - store_artifacts:
           path: testing/cypress/screenshots
   deploy:
@@ -89,13 +86,16 @@ jobs:
       - run:
           name: "Deploy"
           command: |
-            source ./scripts/pipeline/cloud-gov-login.sh "${CIRCLE_BRANCH}"
+            source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
+            source ./scripts/pipeline/cloud-gov-login.sh
 
             mv manifest.yml manifest.tmp
             envsubst < manifest.tmp > manifest.yml
-            
-            if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "test" || "${CIRCLE_BRANCH}" == "stage" || "${CIRCLE_BRANCH}" == "prod" ]]; then            
+
+            if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "stage" ]]; then
               cf push
+              cf add-network-policy ${project}-drupal-${CIRCLE_BRANCH} ${proxy_name} -s ${proxy_space} --protocol tcp --port ${proxy_port}
+              cf add-network-policy ${waf_name} ${project}-drupal-${CIRCLE_BRANCH} -s "${project}-${CIRCLE_BRANCH}" --protocol tcp --port ${drupal_port}
             fi
   deploy-prod:
     docker:
@@ -112,13 +112,15 @@ jobs:
       - run:
           name: "Deploy production"
           command: |
-            source ./scripts/pipeline/cloud-gov-login.sh "${CIRCLE_BRANCH}"
+            source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
+            source ./scripts/pipeline/cloud-gov-login.sh
 
             mv manifest.yml manifest.tmp
             envsubst < manifest.tmp > manifest.yml
-            
-            if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "test" || "${CIRCLE_BRANCH}" == "stage" || "${CIRCLE_BRANCH}" == "prod" ]]; then            
-              cf push
+
+            cf push
+            cf add-network-policy ${project}-drupal-${CIRCLE_BRANCH} ${proxy_name} -s ${proxy_space} --protocol tcp --port ${proxy_port}
+            cf add-network-policy ${waf_name} ${project}-drupal-${CIRCLE_BRANCH} -s "${project}-dev" --protocol tcp --port ${drupal_port}
             fi
   deploy-test:
     docker:
@@ -135,12 +137,16 @@ jobs:
       - run:
           name: "Deploy"
           command: |
-            source ./scripts/pipeline/cloud-gov-login.sh "test"
+            export CIRCLE_BRANCH="test"
+            source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
+            source ./scripts/pipeline/cloud-gov-login.sh
 
             mv manifest.yml manifest.tmp
             envsubst < manifest.tmp > manifest.yml
-            
+
             cf push
+            cf add-network-policy ${project}-drupal-${CIRCLE_BRANCH} ${proxy_name} -s ${proxy_space} --protocol tcp --port ${proxy_port}
+            cf add-network-policy ${waf_name} ${project}-drupal-${CIRCLE_BRANCH} -s "${project}-dev" --protocol tcp --port ${drupal_port}
   php-lint:
     docker:
       - image: php:8.2-alpine
@@ -180,7 +186,7 @@ jobs:
       - run:
           name: "Snyk"
           command: |
-            snyk test --org=${SNYK_ORG} --severity-threshold=$THRESHOLD || exit 0
+            snyk test --org=${SNYK_ORG} --severity-threshold=$THRESHOLD
   downsync:
     docker:
       - image: cimg/base:stable
@@ -200,12 +206,30 @@ jobs:
       - run:
           name: "Run downsync"
           command: |
-            source ./scripts/pipeline/cloud-gov-login.sh "${BACKUP_ENV}"
+            source ./scripts/pipeline/exports.sh "${BACKUP_ENV}"
+            source ./scripts/pipeline/cloud-gov-login.sh 
             source ./scripts/pipeline/downsync-backup.sh
             cf logout
-            
-            source ./scripts/pipeline/cloud-gov-login.sh "${RESTORE_ENV}"
+
+            source ./scripts/pipeline/exports.sh "${RESTORE_ENV}"
+            source ./scripts/pipeline/cloud-gov-login.sh
             source ./scripts/pipeline/downsync-restore.sh
+
+  build-static:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Install cloudfoundry & dependencies"
+          command: |
+            source ./scripts/pipeline/deb-basic-deps.sh
+            source ./scripts/pipeline/deb-cf-install.sh
+      - run:
+          name: "Sync Static Bucket"
+          command: |
+            source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}""
+            source ./scripts/pipeline/cloud-gov-login.sh
 
 workflows:
   deploy-workflow:
@@ -243,8 +267,6 @@ workflows:
             branches:
               ignore:
                 - prod
-          requires:
-            - php-lint
       - build-theme:
           filters:
             branches:
@@ -252,8 +274,7 @@ workflows:
                 - dev
                 - stage
                 - test
-          requires:
-            - snyk
+                - prod
       - deploy-test:
           filters:
             branches:
@@ -278,21 +299,28 @@ workflows:
               only:
                 - dev
                 - stage
-                - test
+                - prod
           requires:
-            - cypress
+            - build-theme
   downsync-workflow:
     when:
       and:
-        - equal: [api, << pipeline.trigger_source >>]
+        - equal:  [api, << pipeline.trigger_source >> ]
         - or:
-          - equal: [dev, << pipeline.parameters.backup >> ]
-          - equal: [prod, << pipeline.parameters.backup >> ]
-          - equal: [stage, << pipeline.parameters.backup >> ]
-          - equal: [test, << pipeline.parameters.backup >> ]
+          - equal: [ dev, << pipeline.parameters.backup >> ]
+          - equal: [ prod, << pipeline.parameters.backup >> ]
+          - equal:  [stage, << pipeline.parameters.backup >> ]
+          - equal: [ test, << pipeline.parameters.backup >> ]
         - or:
-          - equal: [dev, << pipeline.parameters.restore >> ]
-          - equal: [stage, << pipeline.parameters.restore >> ]
-          - equal: [test, << pipeline.parameters.restore >> ]
+          - equal: [ dev, << pipeline.parameters.restore >> ]
+          - equal: [ stage, << pipeline.parameters.restore >> ]
+          - equal: [ test, << pipeline.parameters.restore >> ]
     jobs:
       - downsync
+  build-static-workflow:
+    when:
+      and:
+        - equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]
+        - equal: [ true, << pipeline.parameters.build_static >> ]
+    jobs:
+      - build-static

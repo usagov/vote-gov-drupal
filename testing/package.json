@@ -4,19 +4,20 @@
   "description": "## Requirements",
   "main": "index.js",
   "devDependencies": {
-    "axe-core": "^4.6.3",
-    "cypress": "^12.3.0",
-    "cypress-axe": "^1.3.0",
-    "cypress-mochawesome-reporter": "^3.3.0"
+    "axe-core": "^4.7.0",
+    "cypress": "^12.11.0",
+    "cypress-axe": "^1.4.0",
+    "cypress-mochawesome-reporter": "^3.4.0"
   },
   "scripts": {
     "cy:open": "cypress open",
-    "cy:test": "cypress run --spec 'cypress/e2e/tests/**/*'",
+    "cy:test": "cypress run --spec 'cypress/e2e/createUser/**/*','cypress/e2e/tests/**/*','cypress/e2e/deleteUser/**/*'",
     "cy:axe": "cypress run --spec 'cypress/e2e/accessibility/**/*'",
     "cy:links": "cypress run --spec 'cypress/e2e/internalLinks/**/*'",
     "cy:proofer": "cypress run --spec 'cypress/e2e/externalLinks/**/*'",
-    "cy:backEnd": "cypress run --spec 'cypress/e2e/backend/**/*'",
-    "testSuite": "npm run cy:test && npm run cy:links && npm run cy:axe",
+    "cy:createUser": "cypress run --spec 'cypress/e2e/createUser/**/*'",
+    "cy:deleteUser": "cypress run --spec 'cypress/e2e/deleteUser/**/*'",
+    "testSuite": "npm run cy:test && npm run cy:links && npm run cy:proofer && npm run cy:axe",
     "cypress": "cypress"
   },
   "repository": {

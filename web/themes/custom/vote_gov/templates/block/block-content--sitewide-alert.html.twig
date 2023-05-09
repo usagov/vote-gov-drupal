@@ -9,7 +9,12 @@
  */
 #}
 
-<div class="usa-alert usa-alert--info">
+{% set classes = [
+  'usa-alert',
+  content.field_alert_type | render ? 'usa-alert--' ~ content.field_alert_type | field_value | render
+] %}
+
+<div{{ attributes.addClass(classes)}}>
   <div class="grid-container">
     <div class="usa-alert__body">
       <div class="usa-alert__text">

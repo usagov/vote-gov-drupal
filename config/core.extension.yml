@@ -1,6 +1,7 @@
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
+  new_relic_rpm: -20
   admin_toolbar: 0
   allowed_formats: 0
   auto_entitylabel: 0
@@ -14,6 +15,7 @@ module:
   config: 0
   config_translation: 0
   content_moderation: 0
+  crazyegg: 0
   datetime: 0
   dblog: 0
   double_field: 0
@@ -24,13 +26,15 @@ module:
   field_group: 0
   field_ui: 0
   file: 0
+  file_delete: 0
   filter: 0
+  google_tag: 0
   image: 0
-  inline_entity_form: 0
   language: 0
   language_switcher_extended: 0
   link: 0
   locale: 0
+  log_stdout: 0
   media: 0
   media_library: 0
   menu_link_content: 0
@@ -39,9 +43,6 @@ module:
   metatag_favicons: 0
   metatag_open_graph: 0
   metatag_twitter_cards: 0
-  migrate: 0
-  migrate_plus: 0
-  migrate_tools: 0
   mysql: 0
   node: 0
   node_revision_delete: 0
@@ -68,7 +69,6 @@ module:
   update: 0
   user: 0
   views_ui: 0
-  vote_migrate: 0
   vote_utility: 0
   workflows: 0
   pathauto: 1

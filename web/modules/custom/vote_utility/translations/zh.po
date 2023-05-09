@@ -16,21 +16,27 @@ msgid "Select language"
 msgstr "選擇語言"
 
 #main
+msgid "@sitename in language"
+msgstr "@sitename 中文"
+
 msgid "Go back"
 msgstr "上一頁"
 
+msgid "Last updated:"
+msgstr "最近更新時間："
+
 msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgid "插有已勾選選票的投票箱圖示，表示投票行為"
+msgstr "插有已勾選選票的投票箱圖示，表示投票行為"
 
 #identifier
-msgid "An official website of the %link%."
-msgstr "%link%官方網站"
+msgid "An official website of the @link."
+msgstr "@link官方網站"
 
 msgid "General Services Administration"
 msgstr "總管理局"
 
-msgid "Looking for U.S. government information and services? %link%"
-msgstr "尋找美國政府資訊與服務？ %link%"
+msgid "Looking for U.S. government information and services? @link."
+msgstr "尋找美國政府資訊與服務？ @link"
 
 msgid "Visit USA.gov"
 msgstr "访问 USA.gov"
@@ -60,3 +66,73 @@ msgstr "在 Twitter 上追蹤 Vote.gov"
 #search
 msgid "Search Vote.gov"
 msgstr "搜尋 Vote.gov"
+
+#state
+msgid "Register to vote in @state_name"
+msgstr "在 @state_name 登記投票"
+
+msgid "How to register to vote in @state_name"
+msgstr "如何在 @state_name 登記投票"
+
+msgid "Other ways to register to vote in @state_name"
+msgstr "在 @state_name 登記投票的其他方式"
+
+msgid "Register by mail deadline:"
+msgstr "郵寄報名截止日期："
+
+msgid "Online registration deadline:"
+msgstr "網路報名截止日期："
+
+msgid "Voter registration deadlines in @state_name"
+msgstr "@state_name 的選民登記截止日期"
+
+msgid "In person registration deadline:"
+msgstr "親自報名截止日期："
+
+msgid "How to check your voter registration"
+msgstr "如何檢查您的選民登記"
+
+msgid "You can confirm your voter registration status on @link."
+msgstr "您可以在@link上確認您的選民登記狀態"
+
+msgid "You can confirm your voter registration status by contacting your local registration office. @link."
+msgstr "您可以聯繫當地的登記處確認您的選民登記狀態。 @link。"
+
+msgid "Click here to view Wyoming's county clerk contact information (PDF)"
+msgstr "點擊此處查看懷俄明州縣書記聯繫資訊 (PDF)"
+
+msgid "Find out ways to register"
+msgstr "瞭解如何註冊 (英語)"
+
+msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
+msgstr "目前不提供線上註冊。 @link 在 @state_name 州選舉網站上投票。"
+
+msgid "Learn more about how to register"
+msgstr "詳細瞭解如何註冊 (英語)"
+
+msgid "Register in person at your local election office. @link on @state_name’s election website."
+msgstr "親自到您當地的選舉辦公室登記。 @link @state_name 州的選舉網站"
+
+msgid "Learn more about voting"
+msgstr "詳細瞭解如何註冊 (英語)"
+
+msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
+msgstr "維吉尼亞州不要求選民註冊。 @link @state_name 州的選舉網站"
+
+msgid "Start your online registration"
+msgstr "開始線上註冊 (英語)"
+
+msgid "@link on @state_name’s election website."
+msgstr "在 @state_name 州的選舉網站上 @link"
+
+msgid "register to vote by mail or in person"
+msgstr "郵寄或現場註冊 (英語)"
+
+msgid "You can also @link on @state_name’s election website."
+msgstr "您也可以 @link @state_name 州的選舉網站"
+
+msgid "confirm your voter registration status"
+msgstr "確認您的選民註冊狀態 (英語)"
+
+msgid "You can @link on @state_name’s election website."
+msgstr "您可以在 @state_name 州的選舉網站上 @link"

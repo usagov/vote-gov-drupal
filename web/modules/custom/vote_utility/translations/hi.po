@@ -16,21 +16,27 @@ msgid "Select language"
 msgstr "भाषा चुनें"
 
 #main
+msgid "@sitename in language"
+msgstr "@sitename हिन्दी में"
+
 msgid "Go back"
 msgstr "वापस जाएं"
 
+msgid "Last updated:"
+msgstr "नवीनतम अपडेट:"
+
 msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgid "मतदान क्रिया को इंगित करने के लिए मतदाता पेटी में चेक किए गए मतपत्र को डाले जाने का चित्रण"
+msgstr "मतदान क्रिया को इंगित करने के लिए मतदाता पेटी में चेक किए गए मतपत्र को डाले जाने का चित्रण"
 
 #identifier
-msgid "An official website of the %link%."
-msgstr "%link% की आधिकारिक वेबसाइट"
+msgid "An official website of the @link."
+msgstr "@link की आधिकारिक वेबसाइट"
 
 msgid "General Services Administration"
 msgstr "सामान्य सेवा प्रशासन/जनरल सर्विसेज़ एडमिनिस्ट्रेशन"
 
-msgid "Looking for U.S. government information and services? %link%"
-msgstr "यू.एस. सरकार की जानकारी और सेवाएं खोज रहे हैं? %link%"
+msgid "Looking for U.S. government information and services? @link."
+msgstr "यू.एस. सरकार की जानकारी और सेवाएं खोज रहे हैं? @link"
 
 msgid "Visit USA.gov"
 msgstr "USA.gov पर जाएं"
@@ -60,3 +66,73 @@ msgstr "Vote.gov को Twitter पर फ़ॉलो करें"
 #search
 msgid "Search Vote.gov"
 msgstr "Vote.gov पर खोजें"
+
+#state
+msgid "Register to vote in @state_name"
+msgstr "@state_name में मतदान करने के लिए पंजीकरण करें"
+
+msgid "How to register to vote in @state_name"
+msgstr "@state_name में मतदान करने के लिए पंजीकरण कैसे करें"
+
+msgid "Other ways to register to vote in @state_name"
+msgstr "@state_name में मतदान के लिए पंजीकरण करने के अन्य तरीके"
+
+msgid "Register by mail deadline:"
+msgstr "डाक द्वारा पंजीकरण की अंतिम तिथि:"
+
+msgid "Online registration deadline:"
+msgstr "ऑनलाइन पंजीकरण की अंतिम तिथि:"
+
+msgid "Voter registration deadlines in @state_name"
+msgstr "@state_name में मतदाता पंजीकरण की अंतिम तिथियां"
+
+msgid "In person registration deadline:"
+msgstr "व्यक्तिगत रूप से पंजीकरण की अंतिम तिथि:"
+
+msgid "How to check your voter registration"
+msgstr "अपने मतदाता पंजीकरण की जांच कैसे करें"
+
+msgid "You can confirm your voter registration status on @link."
+msgstr "आप @link पर अपने मतदाता पंजीकरण की स्थिति की पुष्टि कर सकते हैं।"
+
+msgid "You can confirm your voter registration status by contacting your local registration office. @link."
+msgstr "आप अपने स्थानीय पंजीकरण कार्यालय से संपर्क करके अपने मतदाता पंजीकरण की स्थिति की पुष्टि कर सकते हैं। @link"
+
+msgid "Click here to view Wyoming's county clerk contact information (PDF)"
+msgstr "(व्योमिंग के काउंटी क्लर्क की संपर्क जानकारी (पीडीएफ) देखने के लिए यहां क्लिक करें)।"
+
+msgid "Find out ways to register"
+msgstr "पंजीकरण करने के तरीकों के बारे में जानकारी प्राप्त करें (अंग्रेज़ी में)"
+
+msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
+msgstr "ऑनलाइन पंजीकरण अभी उपलब्ध नहीं है। @state_name राज्य की चुनाव वेबसाइट पर मतदान करने के लिए @link।"
+
+msgid "Learn more about how to register"
+msgstr "पंजीकरण करने की विधि के बारे में अधिक जानकारी प्राप्त करें (अंग्रेज़ी में)"
+
+msgid "Register in person at your local election office. @link on @state_name’s election website."
+msgstr "अपने स्थानीय चुनाव कार्यालय में व्यक्तिगत रूप से पंजीकरण करें। @state_name राज्य की चुनाव वेबसाइट पर @link।"
+
+msgid "Learn more about voting"
+msgstr "मतदान के बारे में अधिक जानकारी प्राप्त करें (अंग्रेज़ी में)"
+
+msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
+msgstr "वर्जीनिया में मतदाता पंजीकरण की आवश्यकता नहीं है। @state_name राज्य की चुनाव वेबसाइट पर @link।"
+
+msgid "Start your online registration"
+msgstr "अपना ऑनलाइन पंजीकरण शुरू करें (अंग्रेज़ी में)"
+
+msgid "@link on @state_name’s election website."
+msgstr "@state_name राज्य की चुनाव वेबसाइट पर @link।"
+
+msgid "register to vote by mail or in person"
+msgstr "डाक या व्यक्तिगत रूप से मतदान करने के लिए पंजीकरण (अंग्रेज़ी में)"
+
+msgid "You can also @link on @state_name’s election website."
+msgstr "आप @state_name राज्य की चुनाव वेबसाइट पर @link भी कर सकते हैं।"
+
+msgid "confirm your voter registration status"
+msgstr "अपनी मतदाता पंजीकरण की स्थिति की पुष्टि (अंग्रेज़ी में)"
+
+msgid "You can @link on @state_name’s election website."
+msgstr "आप @state_name राज्य की चुनाव वेबसाइट पर @link कर सकते हैं।"
