@@ -32,12 +32,23 @@
  */
 #}
  {% if links -%}
-  {%- for key, item in links -%}
-    <li class="usa-language__submenu-item" {{ item.attributes.removeAttribute('hreflang') }} data-lang="lang-{{ key }}">
+  {% if links|length == 2 %}
+    {% for key, item in links %}  
       {%- if item.link -%}
-        {{ item.link|merge({'#attributes': {'lang': key, 'xml:lang': key}}) }}    
-      </a>
+        {% if language != key %}
+          <div class='usa-button'>
+              {{ item.link|merge({'#attributes': {'lang': key, 'xml:lang': key} }) }}    
+          </div>
+        {% endif %}
+      {%- endif -%}
+    {% endfor %}
+  {% elseif links|length > 2 %}
+    {%- for key, item in links -%}
+      <li class="usa-language__submenu-item" {{ item.attributes.removeAttribute('hreflang') }} data-lang="lang-{{ key }}">
+        {%- if item.link -%}
+          {{ item.link|merge({'#attributes': {'lang': key, 'xml:lang': key}}) }}    
         {%- endif -%}
-    </li>
-  {%- endfor -%}
+      </li>
+    {%- endfor -%}
+  {% endif %}
 {%- endif %}
