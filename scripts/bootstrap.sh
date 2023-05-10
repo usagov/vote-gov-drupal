@@ -86,8 +86,8 @@ sed -i "s/REPLACE_WITH_REAL_KEY/${newrelic_key}/" ${newrelic_ini}
 sed -i "s/newrelic.appname[[:space:]]=[[:space:]].*/newrelic.appname=\"${APP_NAME}\"/" ${newrelic_ini}
 mv ${newrelic_ini} ${app_path}/php/etc/php.ini.d/
 
-export newrelic_so=$(find ${home} | grep -e newrelic.*\.so | sort -r | head -1 | sed "s#.#${home}#")
-export newrelic_so_file=$(basename $(find ${home} | grep -e newrelic.*\.so | sort -r | head -1 | sed "s#.#${home}#"))
+export newrelic_so=$(find ${home} | grep -e newrelic.*\.so | sort -r | head -1)
+export newrelic_so_file=$(basename ${newrelic_so})
 export php_so_path=$(dirname $(find ${app_path} | grep php | grep -e "\.so" | head -1))
 ln -s $newrelic_so ${php_so_path}/${newrelic_so_file}
 
