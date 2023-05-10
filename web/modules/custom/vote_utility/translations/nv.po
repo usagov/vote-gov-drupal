@@ -196,7 +196,7 @@ msgid "Monday"
 msgstr "Dam0o biisk3n7"
 
 msgctxt "day name"
-msgid "Tuesday
+msgid "Tuesday"
 msgstr "Dam0o naakiij9"
 
 msgctxt "day name"

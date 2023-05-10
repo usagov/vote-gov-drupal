@@ -200,7 +200,7 @@ msgid "Monday"
 msgstr "월요일"
 
 msgctxt "day name"
-msgid "Tuesday
+msgid "Tuesday"
 msgstr "화요일"
 
 msgctxt "day name"
