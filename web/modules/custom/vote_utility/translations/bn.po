@@ -136,3 +136,6 @@ msgstr "আপনার ভোটার নিবন্ধন স্থিতি
 
 msgid "You can @link on @state_name’s election website."
 msgstr "আপনি রাজ্য নির্বাচনের ওয়েবসাইটে @link"
+
+msgid "External link opens in new window"
+msgstr "বাহ্যিক লিঙ্ক নতুন উইন্ডো খোলে"

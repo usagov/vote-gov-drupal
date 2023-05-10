@@ -1,5 +1,4 @@
 {% set state_abrev = content.field_state_abbreviation | field_value | render %}
-{% set state_name = label | field_value | render %}
 
     {# How to register #}
 <h2>{{ 'How to register to vote in @state_name' | t({ '@state_name': state_name }) }}</h2>
