@@ -7,8 +7,6 @@ export https_proxy=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentia
 
 export newrelic_key=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentials.newrelic_key')
 
-export newrelic_key=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentials.newrelic_key')
-
 home="/home/vcap"
 app_path="${home}/app"
 
@@ -86,7 +84,12 @@ newrelic_ini="${home}/deps/0/apt/usr/lib/newrelic-php5/scripts/newrelic.ini"
 cp ${newrelic_ini}.template ${newrelic_ini}
 sed -i "s/REPLACE_WITH_REAL_KEY/${newrelic_key}/" ${newrelic_ini}
 sed -i "s/newrelic.appname[[:space:]]=[[:space:]].*/newrelic.appname=\"${APP_NAME}\"/" ${newrelic_ini}
-mv ${newrelic_ini} /home/vcap/app/php/etc/php.ini.d/
+mv ${newrelic_ini} ${app_path}/php/etc/php.ini.d/
+
+export newrelic_so=$(find ${home} | grep -e newrelic.*\.so | sort -r | head -1 | sed "s#.#${home}#")
+export newrelic_so_file=$(basename $(find ${home} | grep -e newrelic.*\.so | sort -r | head -1 | sed "s#.#${home}#"))
+export php_so_path=$(dirname $(find ${app_path} | grep php | grep -e "\.so" | head -1))
+ln -s $newrelic_so ${php_so_path}/${newrelic_so_file}
 
 ## Updated ~/.bashrc to update $PATH when someone logs in.
 [ -z $(cat ${home}/.bashrc | grep PATH) ] && \
