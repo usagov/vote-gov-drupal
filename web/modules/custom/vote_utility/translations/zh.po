@@ -136,3 +136,6 @@ msgstr "確認您的選民註冊狀態 (英語)"
 
 msgid "You can @link on @state_name’s election website."
 msgstr "您可以在 @state_name 州的選舉網站上 @link"
+
+msgid "External link opens in new window"
+msgstr "外部鏈接打開新窗口"

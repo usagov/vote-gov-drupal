@@ -136,3 +136,6 @@ msgstr "បញ្ជាក់ស្ថានភាពចុះឈ្មោះអ
 
 msgid "You can @link on @state_name’s election website."
 msgstr "អ្នកអាច @link នៅលើគេហទំព័របោះឆ្នោតរដ្ឋរបស់ @state_name"
+
+msgid "External link opens in new window"
+msgstr "តំណខាងក្រៅបើកផ្ទាំងបង្ឣួចថ្មី"
