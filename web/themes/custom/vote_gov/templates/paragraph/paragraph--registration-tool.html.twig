@@ -34,16 +34,11 @@
                 <option value="default">
                   {{ content.field_dropdown_label | field_value }}
                 </option>
-              {% set results = drupal_view_result('registration_tool_list', 'block') %}
+              {% set results = drupal_view_result('state_territory', 'block') %}
               {% for result in results %}
-                  {% set state_abrev = result._entity.field_state_abbreviation.value %}
                   {% set nodeID = result._entity.id() %}
                   {% set node_path = path('entity.node.canonical', {'node': nodeID}) %}
-                  <option 
-                    value="{{ state_abrev }}"
-                    id="{{ state_abrev }}"
-                    data="{{ node_path }}"
-                  >
+                  <option value="{{ node_path }}">
                     {{ result.node_field_data_title }}
                   </option>
               {% endfor %}

@@ -8,8 +8,8 @@ dependencies:
   module:
     - node
     - user
-id: registration_tool_list
-label: 'Registration tool list'
+id: state_territory
+label: 'Node: State/Territory'
 module: views
 description: ''
 tag: ''
@@ -22,7 +22,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Registration tool list'
+      title: 'State/territory list for Registration tool'
       fields:
         title:
           id: title
