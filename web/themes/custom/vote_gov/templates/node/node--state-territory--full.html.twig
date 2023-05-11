@@ -27,7 +27,7 @@
     {% include '@vote_gov/partial/register/registration-type--in-person.html.twig' %}
 {% endif %}
 
-<p>{{'Last updated:' | t }} {{ node.revision_timestamp.value | date('F d, Y') }}</p>
+<p>{{'Last updated:' | t }} {{ node.revision_timestamp.value | date('U') | format_date('revision_date') }}</p>
 
     {# Homepage link #}
 {% include '@vote_gov/partial/homepage-link.html.twig' %}

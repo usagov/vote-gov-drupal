@@ -153,3 +153,80 @@ msgstr "联系"
 
 msgid "GSA logo"
 msgstr "GSA 标志"
+#month and day names
+msgctxt "Long month name"
+msgctxt "Long month name"
+msgid "January"
+msgstr "1月"
+
+msgctxt "Long month name"
+msgid "February"
+msgstr "2月"
+
+msgctxt "Long month name"
+msgid "March"
+msgstr "3月"
+
+msgctxt "Long month name"
+msgid "April"
+msgstr "4月"
+
+msgctxt "Long month name"
+msgid "May"
+msgstr "5月"
+
+msgctxt "Long month name"
+msgid "June"
+msgstr "6月"
+
+msgctxt "Long month name"
+msgid "July"
+msgstr "7月"
+
+msgctxt "Long month name"
+msgid "August"
+msgstr "8月"
+
+msgctxt "Long month name"
+msgid "September"
+msgstr "9月"
+
+msgctxt "Long month name"
+msgid "October"
+msgstr "10月"
+
+msgctxt "Long month name"
+msgid "November"
+msgstr "11月"
+
+msgctxt "Long month name"
+msgid "December"
+msgstr "12月"
+
+msgctxt "day name"
+msgid "Monday"
+msgstr "星期一"
+
+msgctxt "day name"
+msgid "Tuesday"
+msgstr "星期二"
+
+msgctxt "day name"
+msgid "Wednesday"
+msgstr "星期三"
+
+msgctxt "day name"
+msgid "Thursday"
+msgstr "星期四"
+
+msgctxt "day name"
+msgid "Friday"
+msgstr "星期五"
+
+msgctxt "day name"
+msgid "Saturday"
+msgstr "sábado"
+
+msgctxt "day name"
+msgid "Sunday"
+msgstr "星期日"

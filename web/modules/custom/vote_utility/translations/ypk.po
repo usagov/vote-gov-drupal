@@ -150,3 +150,79 @@ msgstr "Contact"
 
 msgid "GSA logo"
 msgstr "GSA logo"
+#month and day names
+msgctxt "Long month name"
+msgid "January"
+msgstr "Qaluvik"
+
+msgctxt "Long month name"
+msgid "February"
+msgstr "Nazighaghsiq"
+
+msgctxt "Long month name"
+msgid "March"
+msgstr "Teghiglugsiq"
+
+msgctxt "Long month name"
+msgid "April"
+msgstr "Lluughvik"
+
+msgctxt "Long month name"
+msgid "May"
+msgstr "Kiigem Aghnaa"
+
+msgctxt "Long month name"
+msgid "June"
+msgstr "Pinaghvik"
+
+msgctxt "Long month name"
+msgid "July"
+msgstr "Ellngaghvik"
+
+msgctxt "Long month name"
+msgid "August"
+msgstr "Palighvik"
+
+msgctxt "Long month name"
+msgid "September"
+msgstr "Kumlavik"
+
+msgctxt "Long month name"
+msgid "October"
+msgstr "Naayvaghvik"
+
+msgctxt "Long month name"
+msgid "November"
+msgstr "Aqumuq"
+
+msgctxt "Long month name"
+msgid "December"
+msgstr "Kaneghyengesi"
+
+msgctxt "day name"
+msgid "Monday"
+msgstr "Manti"
+
+msgctxt "day name"
+msgid "Tuesday"
+msgstr "Tuwesti"
+
+msgctxt "day name"
+msgid "Wednesday"
+msgstr "Winesti"
+
+msgctxt "day name"
+msgid "Thursday"
+msgstr "Thursday-a"
+
+msgctxt "day name"
+msgid "Friday"
+msgstr "Friday-a"
+
+msgctxt "day name"
+msgid "Saturday"
+msgstr "Sareri"
+
+msgctxt "day name"
+msgid "Sunday"
+msgstr "Santi"

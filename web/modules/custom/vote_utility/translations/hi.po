@@ -153,3 +153,79 @@ msgstr "संपर्क करें"
 
 msgid "GSA logo"
 msgstr "GSA का लोगो (प्रतीक चिन्ह)"
+#month and day names
+msgctxt "Long month name"
+msgid "January"
+msgstr "जनवरी"
+
+msgctxt "Long month name"
+msgid "February"
+msgstr "फरवरी"
+
+msgctxt "Long month name"
+msgid "March"
+msgstr "मार्च"
+
+msgctxt "Long month name"
+msgid "April"
+msgstr "अप्रैल"
+
+msgctxt "Long month name"
+msgid "May"
+msgstr "मई"
+
+msgctxt "Long month name"
+msgid "June"
+msgstr "जून"
+
+msgctxt "Long month name"
+msgid "July"
+msgstr "जुलाई"
+
+msgctxt "Long month name"
+msgid "August"
+msgstr "अगस्त"
+
+msgctxt "Long month name"
+msgid "September"
+msgstr "सितंबर"
+
+msgctxt "Long month name"
+msgid "October"
+msgstr "अक्तूबर"
+
+msgctxt "Long month name"
+msgid "November"
+msgstr "नवंबर"
+
+msgctxt "Long month name"
+msgid "December"
+msgstr "दिसंबर"
+
+msgctxt "day name"
+msgid "Monday"
+msgstr "सोमवार"
+
+msgctxt "day name"
+msgid "Tuesday"
+msgstr "मंगलवार"
+
+msgctxt "day name"
+msgid "Wednesday"
+msgstr "बुधवार"
+
+msgctxt "day name"
+msgid "गुरूवार"
+msgstr "jueves"
+
+msgctxt "day name"
+msgid "Friday"
+msgstr "शुक्रवार"
+
+msgctxt "day name"
+msgid "Saturday"
+msgstr "शनिवार"
+
+msgctxt "day name"
+msgid "Sunday"
+msgstr "रविवार"
