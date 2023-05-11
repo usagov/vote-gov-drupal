@@ -42,3 +42,8 @@ registration_tool:
   version: VERSION
   js:
     dist/js/registration-tool.js: { minified: true }
+
+pdf_download_button:
+  version: VERSION
+  js:
+    dist/js/pdf-download-button.js: { minified: true }
