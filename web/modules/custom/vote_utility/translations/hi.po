@@ -153,6 +153,7 @@ msgstr "संपर्क करें"
 
 msgid "GSA logo"
 msgstr "GSA का लोगो (प्रतीक चिन्ह)"
+
 #month and day names
 msgctxt "Long month name"
 msgid "January"

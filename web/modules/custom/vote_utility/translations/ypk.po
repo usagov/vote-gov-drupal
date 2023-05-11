@@ -150,6 +150,7 @@ msgstr "Contact"
 
 msgid "GSA logo"
 msgstr "GSA logo"
+
 #month and day names
 msgctxt "Long month name"
 msgid "January"

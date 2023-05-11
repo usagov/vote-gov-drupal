@@ -153,6 +153,7 @@ msgstr "Contacto"
 
 msgid "GSA logo"
 msgstr "Logotipo de la GSA (Administración General de Servicios)"
+
 #month and day names
 msgctxt "Long month name"
 msgid "January"

@@ -153,8 +153,8 @@ msgstr "联系"
 
 msgid "GSA logo"
 msgstr "GSA 标志"
+
 #month and day names
-msgctxt "Long month name"
 msgctxt "Long month name"
 msgid "January"
 msgstr "1月"

@@ -156,6 +156,7 @@ msgstr "연락처"
 
 msgid "GSA logo"
 msgstr "GSA 로고"
+
 #month and day names
 msgctxt "Long month name"
 msgid "January"

@@ -153,6 +153,7 @@ msgstr "លេខទំនាក់ទំនង"
 
 msgid "GSA logo"
 msgstr "និមិត្តសញ្ញារបស់ GSA"
+
 #month and day names
 msgctxt "Long month name"
 msgid "January"

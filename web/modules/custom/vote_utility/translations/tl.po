@@ -154,6 +154,7 @@ msgstr "Kontak"
 
 msgid "GSA logo"
 msgstr "Logo ng GSA"
+
 #month and day names
 msgctxt "Long month name"
 msgid "January"

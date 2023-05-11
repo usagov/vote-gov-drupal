@@ -153,6 +153,7 @@ msgstr "Liên hệ"
 
 msgid "GSA logo"
 msgstr "Biểu trưng GSA"
+
 #month and day names
 msgctxt "Long month name"
 msgid "January"
