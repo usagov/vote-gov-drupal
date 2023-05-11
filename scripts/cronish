@@ -1,7 +1,5 @@
 #!/bin/bash
 
-export application_uri=$(echo $VCAP_APPLICATION | jq -r '.application_uris[]')
-
 while true
 do
   echo "Running 'drush cron'..."
