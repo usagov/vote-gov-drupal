@@ -139,3 +139,17 @@ msgstr "您可以在 @state_name 州的选举网站上 @link"
 
 msgid "External link opens in new window"
 msgstr "外部链接打开新窗口"
+
+#banner
+msgid "Official government website"
+msgstr "官方政府网站"
+
+#footer
+msgid "Email sign-up"
+msgstr "电邮注册"
+
+msgid "Contact"
+msgstr "联系"
+
+msgid "GSA logo"
+msgstr "GSA 标志"

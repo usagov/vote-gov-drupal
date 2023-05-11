@@ -139,3 +139,17 @@ msgstr "អ្នកអាច @link នៅលើគេហទំព័របោ�
 
 msgid "External link opens in new window"
 msgstr "តំណខាងក្រៅបើកផ្ទាំងបង្ឣួចថ្មី"
+
+#banner
+msgid "Official government website"
+msgstr "គេហទំព័រផ្លូវការរបស់រដ្ឋាភិបាល"
+
+#footer
+msgid "Email sign-up"
+msgstr "ការចុះឈ្មោះដើម្បីទទួលសារឣ៊ីមែល"
+
+msgid "Contact"
+msgstr "លេខទំនាក់ទំនង"
+
+msgid "GSA logo"
+msgstr "និមិត្តសញ្ញារបស់ GSA"

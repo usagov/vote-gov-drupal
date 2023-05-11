@@ -140,3 +140,17 @@ msgstr "Maaari ninyong  @link sa website ng eleksyon ng estado ng @state_name."
 
 msgid "External link opens in new window"
 msgstr "Ang panlabas na link ay magbubukas ng bagong window"
+
+#banner
+msgid "Official government website"
+msgstr "Opisyal na website ng gobyerno"
+
+#footer
+msgid "Email sign-up"
+msgstr "sign-up sa EMAIL"
+
+msgid "Contact"
+msgstr "Kontak"
+
+msgid "GSA logo"
+msgstr "Logo ng GSA"

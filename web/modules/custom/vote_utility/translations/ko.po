@@ -80,9 +80,6 @@ msgstr "@state_name 에서 유권자로 등록하는 방법"
 msgid "Other ways to register to vote in @state_name"
 msgstr "기타 @state_name 유권자 등록 방법"
 
-msgid "Other ways to register to vote in @state_name"
-msgstr "기타 @state_name 유권자 등록 방법"
-
 msgid "Register by mail deadline:"
 msgstr "우편 투표자 등록 마감일:"
 
@@ -145,3 +142,17 @@ msgstr "@state_name 선거국 웹사이트에서 @link를 하실 수 있습니�
 
 msgid "External link opens in new window"
 msgstr "외부 링크 사이트는 새 창에서 연결됩니다"
+
+#banner
+msgid "Official government website"
+msgstr "공식 정부 웹사이트"
+
+#footer
+msgid "Email sign-up"
+msgstr "이메일 등록"
+
+msgid "Contact"
+msgstr "연락처"
+
+msgid "GSA logo"
+msgstr "GSA 로고"

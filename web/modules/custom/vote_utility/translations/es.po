@@ -139,3 +139,17 @@ msgstr "Usted puede @link en el sitio web de elecciones estatales de @state_name
 
 msgid "External link opens in new window"
 msgstr "El enlace externo se abre en una nueva ventana"
+
+#banner
+msgid "Official government website"
+msgstr "Sitio web oficial del gobierno"
+
+#footer
+msgid "Email sign-up"
+msgstr "Email para inscripción"
+
+msgid "Contact"
+msgstr "Contacto"
+
+msgid "GSA logo"
+msgstr "Logotipo de la GSA (Administración General de Servicios)"
