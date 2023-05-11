@@ -83,8 +83,7 @@ done
 newrelic_ini="${home}/deps/0/apt/usr/lib/newrelic-php5/scripts/newrelic.ini"
 cp ${newrelic_ini}.template ${newrelic_ini}
 sed -i "s/;newrelic.enabled = true/newrelic.enabled = true/" ${newrelic_ini}
-sed -i 's/newrelic.logfile = "/var/log/newrelic/php_agent.log"/newrelic.logfile = "/home/vcap/tmp/newrelic/php_agent.log"/' ${newrelic_ini}
-sed -i 's/newrelic.daemon.logfile = "/var/log/newrelic/newrelic-daemon.log"/newrelic.daemon.logfile = "/home/vcap/tmp/newrelic/newrelic-daemon.log"/' ${newrelic_ini}
+sed -i 's#/var/log/#/home/vcap/tmp/#g' ${newrelic_ini}
 sed -i "s/REPLACE_WITH_REAL_KEY/${newrelic_key}/" ${newrelic_ini}
 sed -i "s/newrelic.appname[[:space:]]=[[:space:]].*/newrelic.appname=\"${APP_NAME}\"/" ${newrelic_ini}
 mv ${newrelic_ini} ${app_path}/php/etc/php.ini.d/
