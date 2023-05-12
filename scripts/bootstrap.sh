@@ -11,6 +11,12 @@ app_path="${home}/app"
 rm -rf ${app_path}/newrelic/agent
 ln -s ${home}/deps/0/apt/usr/lib/newrelic-php5/agent ${app_path}/newrelic/agent
 
+rm -f ${app_path}/newrelic/daemon/newrelic-daemon.x64
+ln -s ${home}/deps/0/apt/usr/bin/newrelic-daemon ${app_path}/newrelic/daemon/newrelic-daemon.x64
+
+rm -f ${app_path}/newrelic/scripts/newrelic-iutil.x64
+ln -s ${app_path}/newrelic/scripts/newrelic-iutil.x64 ${home}/deps/0/apt/usr/lib/newrelic-php5/scripts/newrelic-iutil.x64
+
 if [ -z "${VCAP_SERVICES:-}" ]; then
     echo "VCAP_SERVICES must a be set in the environment: aborting bootstrap";
     exit 1;
