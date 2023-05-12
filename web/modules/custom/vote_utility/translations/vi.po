@@ -140,6 +140,20 @@ msgstr "Bạn có thể @link trên trang web bầu cử cấp tiểu bang của
 msgid "External link opens in new window"
 msgstr "Liên kết bên ngoài mở cửa sổ mới"
 
+#banner
+msgid "Official government website"
+msgstr "Trang web chính thức của chính phủ"
+
+#footer
+msgid "Email sign-up"
+msgstr "Đăng ký thư điện tử email"
+
+msgid "Contact"
+msgstr "Liên hệ"
+
+msgid "GSA logo"
+msgstr "Biểu trưng GSA"
+
 #month and day names
 msgctxt "Long month name"
 msgid "January"

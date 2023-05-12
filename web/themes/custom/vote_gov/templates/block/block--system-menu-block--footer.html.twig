@@ -11,7 +11,6 @@
 {% set GSAlink = link('General Services Administration' | t, 'https://www.gsa.gov/') %}
 {% set infoLink = link('Visit USA.gov' | t, (language == 'es' ? 'https://www.usa.gov/espanol/' : 'https://www.usa.gov/')) %}
 
-<section>
 {# contact start #}
 {% include '@vote_gov/partial/footer-contact.html.twig' %}
 {# contact end #}
@@ -20,7 +19,7 @@
 <div class="footer-identifier" data-test="footer">
   <div class="grid-container">
     <section class="identifier-gsa grid-row grid-gap-2" aria-label="{{ 'Agency identifier' | t }}">
-      <div><img src="/themes/custom/vote_gov/img/gsa-logo.svg" alt="GSA logo" width="40" height="40"></div>
+      <div><img src="/themes/custom/vote_gov/img/gsa-logo.svg" alt="{{'GSA logo'|t}}" width="40" height="40"></div>
       <div class="grid-col-auto" aria-label="{{ 'Agency description' | t }}">
         {{ 'Vote.gov' }}<br>
         <strong>{{ 'An official website of the @link.' | t({'@link': GSAlink | render}) }}</strong>
@@ -43,4 +42,3 @@
   <div class="desktop:grid-col">
     <button id="touchpoints-form-embed" class="usa-button">How can we improve Vote.gov?</button>
   </div>
-</section>
