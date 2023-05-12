@@ -105,10 +105,12 @@ ln -s $newrelic_so ${php_so_path}/newrelic.so
 source ${home}/.bashrc
 
 echo "Installing awscli..."
-curl -S "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip"
-unzip -qq /tmp/awscliv2.zip -d /tmp/
-/tmp/aws/install --bin-dir ${home}/deps/0/bin --install-dir ${home}/deps/0/usr/local/aws-cli
-rm -rf /tmp/awscliv2.zip /tmp/aws
+{
+  curl -S "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip"
+  unzip -qq /tmp/awscliv2.zip -d /tmp/
+  /tmp/aws/install --bin-dir ${home}/deps/0/bin --install-dir ${home}/deps/0/usr/local/aws-cli
+  rm -rf /tmp/awscliv2.zip /tmp/aws
+} >/dev/null 2>&1
 
 if [[ "${CF_INSTANCE_INDEX:-''}" == "0" && -z "${SKIP_DRUPAL_BOOTSTRAP:-}" ]]; then
 
