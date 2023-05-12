@@ -1,10 +1,10 @@
 ---
-#keys:
-  #- https://download.newrelic.com/548C16BF.gpg
-#repos:
-  #- deb http://apt.newrelic.com/debian/ newrelic non-free
+keys:
+  - https://download.newrelic.com/548C16BF.gpg
+repos:
+  - deb http://apt.newrelic.com/debian/ newrelic non-free
 packages:
   - awscli
   - htop
-  #- newrelic-php5
+  - newrelic-php5
   - vim
