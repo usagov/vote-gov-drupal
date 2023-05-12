@@ -5,8 +5,6 @@ set -uo pipefail
 export http_proxy=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentials.proxy_uri')
 export https_proxy=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentials.proxy_uri')
 
-export newrelic_key=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentials.newrelic_key')
-
 home="/home/vcap"
 app_path="${home}/app"
 
