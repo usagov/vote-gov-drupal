@@ -80,10 +80,11 @@ for dir in $dirs; do
   fi
 done
 
+mkdir -p ${home}/tmp/newrelic/
 newrelic_ini="${home}/deps/0/apt/usr/lib/newrelic-php5/scripts/newrelic.ini"
 cp ${newrelic_ini}.template ${newrelic_ini}
 sed -i "s/;newrelic.enabled = true/newrelic.enabled = true/" ${newrelic_ini}
-sed -i 's#/var/log/#/home/vcap/tmp/#g' ${newrelic_ini}
+sed -i "s#/var/log/#${home}/tmp/#g" ${newrelic_ini}
 sed -i "s/REPLACE_WITH_REAL_KEY/${newrelic_key}/" ${newrelic_ini}
 sed -i "s/newrelic.appname[[:space:]]=[[:space:]].*/newrelic.appname=\"${APP_NAME}\"/" ${newrelic_ini}
 sed -i 's/;newrelic.loglevel = "info"/newrelic.loglevel = "debug"/' ${newrelic_ini}
