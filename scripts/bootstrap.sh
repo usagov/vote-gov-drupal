@@ -8,6 +8,7 @@ export https_proxy=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentia
 home="/home/vcap"
 app_path="${home}/app"
 
+rm -f ${app_path}/newrelic/agent
 ln -s ${home}/deps/0/apt/usr/lib/newrelic-php5/agent ${app_path}/newrelic/agent
 
 if [ -z "${VCAP_SERVICES:-}" ]; then
