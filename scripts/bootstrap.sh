@@ -86,6 +86,7 @@ sed -i "s/;newrelic.enabled = true/newrelic.enabled = true/" ${newrelic_ini}
 sed -i 's#/var/log/#/home/vcap/tmp/#g' ${newrelic_ini}
 sed -i "s/REPLACE_WITH_REAL_KEY/${newrelic_key}/" ${newrelic_ini}
 sed -i "s/newrelic.appname[[:space:]]=[[:space:]].*/newrelic.appname=\"${APP_NAME}\"/" ${newrelic_ini}
+sed -i 's/;newrelic.loglevel = "info"/newrelic.loglevel = "debug"/' ${newrelic_ini}
 mv ${newrelic_ini} ${app_path}/php/etc/php.ini.d/
 
 export newrelic_so=$(find ${home} | grep -e newrelic.*\.so | sort -r | head -1)
