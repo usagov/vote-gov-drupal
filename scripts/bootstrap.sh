@@ -8,6 +8,8 @@ export https_proxy=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentia
 home="/home/vcap"
 app_path="${home}/app"
 
+ln -s ${home}/deps/0/apt/usr/lib/newrelic-php5/agent ${app_path}/newrelic/agent
+
 if [ -z "${VCAP_SERVICES:-}" ]; then
     echo "VCAP_SERVICES must a be set in the environment: aborting bootstrap";
     exit 1;
@@ -120,27 +122,27 @@ echo "Installing awscli..."
   rm -rf /tmp/awscliv2.zip /tmp/aws
 } >/dev/null 2>&1
 
-if [[ "${CF_INSTANCE_INDEX:-''}" == "0" && -z "${SKIP_DRUPAL_BOOTSTRAP:-}" ]]; then
+# if [[ "${CF_INSTANCE_INDEX:-''}" == "0" && -z "${SKIP_DRUPAL_BOOTSTRAP:-}" ]]; then
 
-    echo  "Updating drupal ... "
-    drush state:set system.maintenance_mode 1 -y
-    drush cr
-    drush updatedb --no-cache-clear -y
-    drush cim -y
-    drush locale-check
-    drush locale-update
+#     echo  "Updating drupal ... "
+#     drush state:set system.maintenance_mode 1 -y
+#     drush cr
+#     drush updatedb --no-cache-clear -y
+#     drush cim -y
+#     drush locale-check
+#     drush locale-update
 
-    echo "Uploading public files to S3 ..."
-    drush s3fs-rc
-    drush s3fs-cl -y --scheme=public --condition=newer
+#     echo "Uploading public files to S3 ..."
+#     drush s3fs-rc
+#     drush s3fs-cl -y --scheme=public --condition=newer
     
-    drush cr
-    drush state:set system.maintenance_mode 0 -y
+#     drush cr
+#     drush state:set system.maintenance_mode 0 -y
 
-    echo "Bootstrap finished"
-else
-    echo "Bootstrap skipping Drupal CIM because: Instance=${CF_INSTANCE_INDEX:-''} Skip=${SKIP_DRUPAL_BOOTSTRAP:-''}"
-fi
+#     echo "Bootstrap finished"
+# else
+#     echo "Bootstrap skipping Drupal CIM because: Instance=${CF_INSTANCE_INDEX:-''} Skip=${SKIP_DRUPAL_BOOTSTRAP:-''}"
+# fi
 
 ## Only run 'drush cron' in the first instance of an application.
 [ "${CF_INSTANCE_INDEX:-''}" == "0" ] && ${HOME}/scripts/cronish &
