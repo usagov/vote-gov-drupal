@@ -95,6 +95,14 @@ export newrelic_so_file=$(basename ${newrelic_so})
 export php_so_path=$(dirname $(find ${app_path} | grep php | grep -e "\.so" | grep "no-debug-non-zts" | head -1))
 ln -s $newrelic_so ${php_so_path}/newrelic.so
 
+
+newrelic_cfg="${home}/deps/0/apt/etc/newrelic/newrelic.cfg"
+cp ${newrelic_cfg}.template ${newrelic_cfg}
+sed -i "s,/var/log/,${home}/tmp/,g" ${newrelic_cfg}
+sed -i "s,#loglevel=info,loglevel=debug," ${newrelic_cfg}
+sed -i "s,#address=\"/tmp/.newrelic.sock\",address=\"${home}/tmp/.newrelic.sock\"" ${newrelic_cfg}
+cp ${newrelic_cfg} ${app_path}
+
 ## Updated ~/.bashrc to update $PATH when someone logs in.
 [ -z $(cat ${home}/.bashrc | grep PATH) ] && \
   touch ${home}/.bashrc && \
