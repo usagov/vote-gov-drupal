@@ -18,7 +18,7 @@ while : ; do
   [[ "${response}" == *"HTTP/2 200"* ]] && break
 done
 
-${home}/deps/0/apt/usr/bin/newrelic-daemon -c ${app_path}/newrelic.cfg
+#${home}/deps/0/apt/usr/bin/newrelic-daemon -c ${app_path}/newrelic.cfg
 
 ${app_path}/scripts/build_static &
 
