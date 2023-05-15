@@ -1,7 +1,13 @@
 uuid: 5c8d89ba-70ae-445e-8a48-0a86c4bb3334
-langcode: en
+langcode: nv
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - disable_language
+third_party_settings:
+  disable_language:
+    disable: true
+    redirect_language: en
 id: nv
 label: Navajo
 direction: ltr
