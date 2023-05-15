@@ -5,17 +5,22 @@ set -uo pipefail
 export http_proxy=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentials.proxy_uri')
 export https_proxy=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentials.proxy_uri')
 
-home="/home/vcap"
-app_path="${home}/app"
+export home="/home/vcap"
+export app_path="${home}/app"
 
-rm -rf ${app_path}/newrelic/agent
-ln -s ${home}/deps/0/apt/usr/lib/newrelic-php5/agent ${app_path}/newrelic/agent
+export apt_path="${home}/deps/0/apt"
 
-rm -f ${app_path}/newrelic/daemon/newrelic-daemon.x64
-ln -s ${home}/deps/0/apt/usr/bin/newrelic-daemon ${app_path}/newrelic/daemon/newrelic-daemon.x64
+export newrelic_apt="${apt_path}/usr/lib/newrelic-php5"
+export newrelic_app="${app_path}/newrelic/"
+
+rm -rf ${newrelic_app}/agent
+ln -s ${newrelic_apt}/agent ${newrelic_app}/agent
+
+rm -f ${newrelic_app}/daemon/newrelic-daemon.x64
+ln -s ${apt_path}/usr/bin/newrelic-daemon ${newrelic_app}/daemon/newrelic-daemon.x64
 
 rm -f ${app_path}/newrelic/scripts/newrelic-iutil.x64
-ln -s ${home}/deps/0/apt/usr/lib/newrelic-php5/scripts/newrelic-iutil.x64 ${app_path}/newrelic/scripts/newrelic-iutil.x64
+ln -s ${newrelic_apt}/scripts/newrelic-iutil.x64 ${newrelic_app}/scripts/newrelic-iutil.x64
 
 if [ -z "${VCAP_SERVICES:-}" ]; then
     echo "VCAP_SERVICES must a be set in the environment: aborting bootstrap";
