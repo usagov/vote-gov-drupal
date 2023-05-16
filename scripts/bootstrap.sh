@@ -27,7 +27,7 @@ if [ -z "${VCAP_SERVICES:-}" ]; then
     exit 1;
 fi
 
-echo 'newrelic.host=gov-collector.newrelic.com' >> ${app_path}/php/etc/php.ini
+echo 'newrelic.daemon.collector_host=gov-collector.newrelic.com' >> ${app_path}/php/etc/php.ini
 
 if [ ! -f ./container_start_timestamp ]; then
   touch ./container_start_timestamp
