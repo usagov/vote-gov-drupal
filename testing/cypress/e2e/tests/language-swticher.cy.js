@@ -1,18 +1,22 @@
 /// <reference types="Cypress" />
 
-// const testPages = [
-//   "localhost:1313/",
-//   "localhost:1313/register/ak/",
-//   "localhost:1313/register/as/",
-//   "localhost:1313/register/ar/",
-//   "localhost:1313/register/nd/"
-// ]
+const testPages = [
+  "http://vote-gov.lndo.site/",
+  "http://vote-gov.lndo.site/register/al/",
+  "http://vote-gov.lndo.site/register/ak/",
+  "http://vote-gov.lndo.site/register/as/",
+  "http://vote-gov.lndo.site/register/ar/",
+  "http://vote-gov.lndo.site/register/nd/",
+  "http://vote-gov.lndo.site/register/wy/",
+  "http://vote-gov.lndo.site/about-us",
+  "http://vote-gov.lndo.site/404",
+]
 
 describe('Test Language Switcher Function', () => {
 
-  // testPages.forEach((page) => {
+  testPages.forEach((page) => {
     it(`test spanish`, () => {
-      cy.visit('/')
+      cy.visit(page)
       cy.get('[data-test="language-dropdown"]').click().get('[data-test="language-selection"]').then(options =>
         cy.get(options[0]).find('li').then(li => {
           cy.get(li[1]).click()
@@ -22,7 +26,7 @@ describe('Test Language Switcher Function', () => {
     })
 
     it(`test bengali`, () => {
-      cy.visit('/')
+      cy.visit(page)
       cy.get('[data-test="language-dropdown"]').click().get('[data-test="language-selection"]').then(options =>
         cy.get(options[0]).find('li').then(li => {
           cy.get(li[2]).click()
@@ -32,7 +36,7 @@ describe('Test Language Switcher Function', () => {
     })
 
     it(`test simplified chinese`, () => {
-      cy.visit('/')
+      cy.visit(page)
       cy.get('[data-test="language-dropdown"]').click().get('[data-test="language-selection"]').then(options =>
         cy.get(options[0]).find('li').then(li => {
           cy.get(li[3]).click()
@@ -42,7 +46,7 @@ describe('Test Language Switcher Function', () => {
     })
 
     it(`test traditional chinese`, () => {
-      cy.visit('/')
+      cy.visit(page)
       cy.get('[data-test="language-dropdown"]').click().get('[data-test="language-selection"]').then(options =>
         cy.get(options[0]).find('li').then(li => {
           cy.get(li[4]).click()
@@ -52,7 +56,7 @@ describe('Test Language Switcher Function', () => {
     })
 
     it(`test hindi`, () => {
-      cy.visit('/')
+      cy.visit(page)
       cy.get('[data-test="language-dropdown"]').click().get('[data-test="language-selection"]').then(options =>
         cy.get(options[0]).find('li').then(li => {
           cy.get(li[5]).click()
@@ -62,7 +66,7 @@ describe('Test Language Switcher Function', () => {
     })
 
     it(`test khmer`, () => {
-      cy.visit('/')
+      cy.visit(page)
       cy.get('[data-test="language-dropdown"]').click().get('[data-test="language-selection"]').then(options =>
         cy.get(options[0]).find('li').then(li => {
           cy.get(li[6]).click()
@@ -72,7 +76,7 @@ describe('Test Language Switcher Function', () => {
     })
 
     it(`test korean`, () => {
-      cy.visit('/')
+      cy.visit(page)
       cy.get('[data-test="language-dropdown"]').click().get('[data-test="language-selection"]').then(options =>
         cy.get(options[0]).find('li').then(li => {
           cy.get(li[7]).click()
@@ -82,7 +86,7 @@ describe('Test Language Switcher Function', () => {
     })
 
     // it(`test navajo `, () => {
-    //   cy.visit('/')
+    //   cy.visit(page)
     //   cy.get('[data-test="language-dropdown"]').click().get('[data-test="language-selection"]').then(options =>
     //     cy.get(options[0]).find('li').then(li => {
     //       cy.get(li[8]).click()
@@ -92,7 +96,7 @@ describe('Test Language Switcher Function', () => {
     // })
 
     it(`test tagalog`, () => {
-      cy.visit('/')
+      cy.visit(page)
       cy.get('[data-test="language-dropdown"]').click().get('[data-test="language-selection"]').then(options =>
         cy.get(options[0]).find('li').then(li => {
           cy.get(li[9]).click()
@@ -102,7 +106,7 @@ describe('Test Language Switcher Function', () => {
     })
 
     it(`test vietnamese`, () => {
-      cy.visit('/')
+      cy.visit(page)
       cy.get('[data-test="language-dropdown"]').click().get('[data-test="language-selection"]').then(options =>
         cy.get(options[0]).find('li').then(li => {
           cy.get(li[10]).click()
@@ -112,7 +116,7 @@ describe('Test Language Switcher Function', () => {
     })
 
   it(`test yup'ik`, () => {
-    cy.visit('/')
+    cy.visit(page)
     cy.get('[data-test="language-dropdown"]').click().get('[data-test="language-selection"]').then(options =>
       cy.get(options[0]).find('li').then(li => {
         cy.get(li[11]).click()
@@ -120,5 +124,5 @@ describe('Test Language Switcher Function', () => {
       })
       )
   })
-  // })
+  })
 })
