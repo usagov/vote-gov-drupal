@@ -20,7 +20,7 @@ done
 
 #${home}/deps/0/apt/usr/bin/newrelic-daemon -c ${app_path}/newrelic.cfg
 
-${app_path}/scripts/build_static &
+#${app_path}/scripts/build_static &
 
 ## Run entry point
 ${app_path}/scripts/entrypoint &
