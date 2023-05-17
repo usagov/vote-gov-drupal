@@ -15,3 +15,4 @@ echo "Installing AWS CLI..."
     pip3 install awscliv2
   fi
 } >/dev/null 2>&1
+echo "Done!"
