@@ -36,7 +36,7 @@ remote_video:
 touchpoints:
   version: VERSION
   js:
-    https://touchpoints.app.cloud.gov/touchpoints/5fdce4ac.js: { type: external, attributes: { async: true } }
+    https://touchpoints.app.cloud.gov/touchpoints/5941f5a3.js: { type: external, attributes: { async: true } }
 
 registration_tool:
   version: VERSION
