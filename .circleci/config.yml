@@ -22,7 +22,6 @@ jobs:
           name: "Install cloudfoundry & dependencies"
           command: |
             source ./scripts/pipeline/deb-basic-deps.sh
-            source ./scripts/pipeline/deb-awscli.sh
             source ./scripts/pipeline/deb-cf-install.sh
       - run:
           name: "Sync Static Bucket"
@@ -30,16 +29,7 @@ jobs:
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
 
-            ## Create service key.
-            source ./scripts/pipeline/export-aws.sh -b static -e ${CIRCLE_BRANCH} -p ${project}
-
-            cf task ${project}-drupal-${CIRCLE_BRANCH} "scripts/build_static" --name "${project}-${CIRCLE_BRANCH}-tome"  -k "2G" -m 256M
-
-            ## Make sure the bucket is configured to be a website.
-            aws s3 website s3://${static_s3_bucket} --index-document index.html --error-document 404/index.html
-
-            ## Delete key.
-            source ./scripts/pipeline/export-aws.sh -b static -e ${CIRCLE_BRANCH} -p ${project} -d
+            cf run-task ${project}-drupal-${CIRCLE_BRANCH} "scripts/build_static" --name "${project}-${CIRCLE_BRANCH}-tome"  -k "2G" -m 256M
   build-theme:
     docker:
       - image: node:18-slim
@@ -193,7 +183,7 @@ jobs:
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
 
-            cf task ${project}-drupal-${CIRCLE_BRANCH} "drush cron" --name "${project}-${CIRCLE_BRANCH}-tome"  -k "2G" -m 256M
+            cf run-task ${project}-drupal-${CIRCLE_BRANCH} "drush cron" --name "${project}-${CIRCLE_BRANCH}-tome"  -k "2G" -m 256M
   php-lint:
     docker:
       - image: php:8.2-alpine
