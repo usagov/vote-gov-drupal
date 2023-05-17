@@ -31,7 +31,7 @@ function vote_gov_preprocess(&$variables) {
     $variables['currentnode'] = $node;
   }
 
-  // Set variable for frontpage
+  // Set variable for frontpage.
   $variables['is_frontpage'] = \Drupal::service('path.matcher')->isFrontPage();
 }
 
