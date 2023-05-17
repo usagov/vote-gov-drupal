@@ -42,3 +42,8 @@ registration_tool:
   version: VERSION
   js:
     dist/js/registration-tool.js: { minified: true }
+
+nvrf_pdf_download:
+  version: VERSION
+  js:
+    dist/js/nvrf-pdf-download.js: { minified: true }
