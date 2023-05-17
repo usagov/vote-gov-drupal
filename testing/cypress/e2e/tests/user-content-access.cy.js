@@ -2,8 +2,6 @@
 
 describe('Test User Role Access to Content Moderation', () => {
 
-  // todo: add and after command to log in a site admin and delete all content that was created
-
   it('Test Site Admin', () => {
     cy.signin(Cypress.env('roles').site_admin.username, Cypress.env('test_pass'))
 
@@ -63,13 +61,15 @@ describe('Test User Role Access to Content Moderation', () => {
     })
     cy.get('[class="page-title"]').should('contain', 'delete')
 
-    // Can create/edit/delete media
+    // Can create and delete media
     cy.request('/admin/structure/media/add').then((response) => {
       expect(response.status).to.eq(200)})
+    cy.visit('/admin/content/media')
+    cy.get('[class="edit dropbutton__item dropbutton-action"]').should('contain', 'Edit')
 
-    // Can update the content moderation settings
-    cy.request('/admin/config/workflow/workflows/manage/publishing_content').then((response) => {
-      expect(response.status).to.eq(200)})
+  // Can update the content moderation settings
+  cy.request('/admin/config/workflow/workflows/manage/publishing_content').then((response) => {
+    expect(response.status).to.eq(200)})
 
       cy.logout()
   })
@@ -133,14 +133,12 @@ describe('Test User Role Access to Content Moderation', () => {
     })
     cy.get('[class="page-title"]').should('contain', 'delete')
 
-    // ! check to make sure this is right... it needs to be able to create and to delete check line 71
-    // Can not create/edit/delete media
-    cy.request({
-      url: '/admin/structure/media/add',
-      failOnStatusCode: false,
-    }).then((resp) => {
-      expect(resp.status).to.eq(403)
-    })
+    // Can create and delete media
+    cy.request('/media/add').then((response) => {
+      expect(response.status).to.eq(200)})
+
+    cy.visit('/admin/content/media')
+    cy.get('[class="edit dropbutton__item dropbutton-action"]').should('contain', 'Edit')
 
     // should not be able to update the content moderation settings
     cy.request({
@@ -175,55 +173,41 @@ describe('Test User Role Access to Content Moderation', () => {
     cy.request('/cypress-content-moderation-test').then((response) => {
       expect(response.status).to.eq(200)})
    
-    // Can modify draft content
-    // * this is for own content 
+    // Can modify draft content 
     cy.visit('/test-page-0')
     cy.get('[class="usa-button-group__item"]').then(btn => {
       cy.get(btn[1]).click()
     })
     cy.url().should('contain', 'edit')
-
-    // todo: add something to check if it can edit the site admins draft 
-
-    FIXME: // change to be that they can not publish content 
-    // Can publish content
+ 
+    // Can not publish content
     cy.visit('/test-page-0')
-    cy.get('[data-drupal-selector="edit-new-state"]').select('Published')
-    cy.get('[data-drupal-selector="edit-submit"]').click()
-    cy.get('[class="usa-alert__body"]').should('contain', 'The moderation state has been updated.')
+    cy.get('[data-drupal-selector="edit-submit"]').should('not.exist')
 
-    // FIXME: Change to be they can view archived content
-    // Can move content to archived status 
-    cy.visit('/test-page-0')
+    // can view archived content
+    cy.request('/admin/content/moderated').then((response) => {
+      expect(response.status).to.eq(200)})
+
+    // Can move archived content to draft
+    cy.visit('/cypress-content-moderation-test')
     cy.get('[class="usa-button-group__item"]').then(btn => {
       cy.get(btn[1]).click()
     })
-    cy.get('[data-drupal-selector="edit-moderation-state-0-state"]').select('Archived')
     cy.get('[data-drupal-selector="edit-submit"]').click()
-    cy.get('[id="edit-current"]').should('contain', 'Archived')
 
-    // Can move archived content to draft
-    cy.visit('/test-page-0')
-    cy.get('[data-drupal-selector="edit-new-state"]').select('Draft')
-    cy.get('[data-drupal-selector="edit-submit"]').click()
-    cy.get('[id="edit-current"]').should('contain', 'Draft')
-
-    // Can delete content
-    cy.visit('/test-page-0')
-    cy.get('[class="usa-button-group__item"]').then(btn => {
-      cy.get(btn[2]).click()
+    // Can not delete content
+    cy.visit('/admin/content')
+    cy.get('[class="dropbutton__toggle"]').then(btn => {
+      cy.get(btn[0]).click()
     })
-    cy.get('[data-drupal-selector="edit-submit"]').click()
-    cy.get('[class="usa-alert__body"]').should('contain', 'The Basic Page Test Page has been deleted.')
+    cy.get('[class="translate dropbutton__item dropbutton-action secondary-action"]').should('not.contain', 'delete')
 
-    // FIXME: change to that they can add media but not delete media
-    // Can not create/edit/delete media
-    cy.request({
-      url: '/admin/structure/media/add',
-      failOnStatusCode: false,
-    }).then((resp) => {
-      expect(resp.status).to.eq(403)
-    })
+    // Can create media but not delete media
+    cy.request('/media/add').then((response) => {
+      expect(response.status).to.eq(200)})
+
+    cy.visit('/admin/content/media')
+    cy.get('[class="translate dropbutton__item dropbutton-action"]').should('not.contain', 'edit')
 
     // should not be able to update the content moderation settings
     cy.request({
