@@ -47,29 +47,6 @@ for dir in $dirs; do
   fi
 done
 
-# mkdir -p ${home}/tmp/newrelic/
-# newrelic_ini="${home}/deps/0/apt/usr/lib/newrelic-php5/scripts/newrelic.ini"
-# cp ${newrelic_ini}.template ${newrelic_ini}
-# sed -i "s/;newrelic.enabled = true/newrelic.enabled = true/" ${newrelic_ini}
-# sed -i "s#/var/log/#${home}/tmp/#g" ${newrelic_ini}
-# sed -i "s/REPLACE_WITH_REAL_KEY/${newrelic_key}/" ${newrelic_ini}
-# sed -i "s/newrelic.appname[[:space:]]=[[:space:]].*/newrelic.appname=\"${APP_NAME}\"/" ${newrelic_ini}
-# sed -i 's/;newrelic.loglevel = "info"/newrelic.loglevel = "debug"/' ${newrelic_ini}
-# mv ${newrelic_ini} ${app_path}/php/etc/php.ini.d/
-
-# export newrelic_so=$(find ${home} | grep -e newrelic.*\.so | sort -r | head -1)
-# export newrelic_so_file=$(basename ${newrelic_so})
-# export php_so_path=$(dirname $(find ${app_path} | grep php | grep -e "\.so" | grep "no-debug-non-zts" | head -1))
-# ln -s $newrelic_so ${php_so_path}/newrelic.so
-
-# newrelic_cfg="${home}/deps/0/apt/etc/newrelic/newrelic.cfg"
-# cp ${newrelic_cfg}.template ${newrelic_cfg}
-# sed -i "s,/var/log/,${home}/tmp/,g" ${newrelic_cfg}
-# sed -i "s,#loglevel=info,loglevel=debug," ${newrelic_cfg}
-# sed -i "s,#address=\"/tmp/.newrelic.sock\",address=\"${home}/tmp/.newrelic.sock\"" ${newrelic_cfg}
-# sed -i "/#logfile/s/^#//" ${newrelic_cfg}
-# cp ${newrelic_cfg} ${app_path}
-
 ## Updated ~/.bashrc to update $PATH when someone logs in.
 [ -z $(cat ${home}/.bashrc | grep PATH) ] && \
   touch ${home}/.bashrc && \
@@ -88,28 +65,3 @@ echo "Installing awscli..."
   /tmp/aws/install --bin-dir ${home}/deps/0/bin --install-dir ${home}/deps/0/usr/local/aws-cli
   rm -rf /tmp/awscliv2.zip /tmp/aws
 } >/dev/null 2>&1
-
-# if [[ "${CF_INSTANCE_INDEX:-''}" == "0" && -z "${SKIP_DRUPAL_BOOTSTRAP:-}" ]]; then
-
-#     echo  "Updating drupal ... "
-#     drush state:set system.maintenance_mode 1 -y
-#     drush cr
-#     drush updatedb --no-cache-clear -y
-#     drush cim -y
-#     drush locale-check
-#     drush locale-update
-
-#     echo "Uploading public files to S3 ..."
-#     drush s3fs-rc
-#     drush s3fs-cl -y --scheme=public --condition=newer
-    
-#     drush cr
-#     drush state:set system.maintenance_mode 0 -y
-
-#     echo "Bootstrap finished"
-# else
-#     echo "Bootstrap skipping Drupal CIM because: Instance=${CF_INSTANCE_INDEX:-''} Skip=${SKIP_DRUPAL_BOOTSTRAP:-''}"
-# fi
-
-## Only run 'drush cron' in the first instance of an application.
-#[ "${CF_INSTANCE_INDEX:-''}" == "0" ] && ${HOME}/scripts/cronish &

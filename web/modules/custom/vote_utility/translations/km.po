@@ -139,3 +139,94 @@ msgstr "អ្នកអាច @link នៅលើគេហទំព័របោ�
 
 msgid "External link opens in new window"
 msgstr "តំណខាងក្រៅបើកផ្ទាំងបង្ឣួចថ្មី"
+
+#banner
+msgid "Official government website"
+msgstr "គេហទំព័រផ្លូវការរបស់រដ្ឋាភិបាល"
+
+#footer
+msgid "Email sign-up"
+msgstr "ការចុះឈ្មោះដើម្បីទទួលសារឣ៊ីមែល"
+
+msgid "Contact"
+msgstr "លេខទំនាក់ទំនង"
+
+msgid "GSA logo"
+msgstr "និមិត្តសញ្ញារបស់ GSA"
+
+#month and day names
+msgctxt "Long month name"
+msgid "January"
+msgstr "ខែមករា"
+
+msgctxt "Long month name"
+msgid "February"
+msgstr "ខែកុម្ភៈ"
+
+msgctxt "Long month name"
+msgid "March"
+msgstr "ខែមិនា"
+
+msgctxt "Long month name"
+msgid "April"
+msgstr "ខែមេសា"
+
+msgctxt "Long month name"
+msgid "May"
+msgstr "ខែឧសភា"
+
+msgctxt "Long month name"
+msgid "June"
+msgstr "ខែមិថុនា"
+
+msgctxt "Long month name"
+msgid "July"
+msgstr "ខែកក្កដា"
+
+msgctxt "Long month name"
+msgid "August"
+msgstr "ខែសីហា"
+
+msgctxt "Long month name"
+msgid "September"
+msgstr "ខែកញ្"
+
+msgctxt "Long month name"
+msgid "October"
+msgstr "ខែតុលា"
+
+msgctxt "Long month name"
+msgid "November"
+msgstr "ខែវិច្ឆិកា"
+
+msgctxt "Long month name"
+msgid "December"
+msgstr "ខែធ្នូ"
+
+msgctxt "day name"
+msgid "Monday"
+msgstr "ថ្ងៃច័ន្ទ"
+
+msgctxt "day name"
+msgid "Tuesday"
+msgstr "ថ្ងៃអង្គារ"
+
+msgctxt "day name"
+msgid "Wednesday"
+msgstr "ថ្ងៃពុធ"
+
+msgctxt "day name"
+msgid "Thursday"
+msgstr "ថ្ងៃព្រហស្បតិ៍"
+
+msgctxt "day name"
+msgid "Friday"
+msgstr "ថ្ងៃសុក្"
+
+msgctxt "day name"
+msgid "Saturday"
+msgstr "ថ្ងៃសៅរ៍"
+
+msgctxt "day name"
+msgid "Sunday"
+msgstr "ថ្ងៃអាទិត្"

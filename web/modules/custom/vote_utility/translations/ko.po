@@ -80,9 +80,6 @@ msgstr "@state_name 에서 유권자로 등록하는 방법"
 msgid "Other ways to register to vote in @state_name"
 msgstr "기타 @state_name 유권자 등록 방법"
 
-msgid "Other ways to register to vote in @state_name"
-msgstr "기타 @state_name 유권자 등록 방법"
-
 msgid "Register by mail deadline:"
 msgstr "우편 투표자 등록 마감일:"
 
@@ -145,3 +142,94 @@ msgstr "@state_name 선거국 웹사이트에서 @link를 하실 수 있습니�
 
 msgid "External link opens in new window"
 msgstr "외부 링크 사이트는 새 창에서 연결됩니다"
+
+#banner
+msgid "Official government website"
+msgstr "공식 정부 웹사이트"
+
+#footer
+msgid "Email sign-up"
+msgstr "이메일 등록"
+
+msgid "Contact"
+msgstr "연락처"
+
+msgid "GSA logo"
+msgstr "GSA 로고"
+
+#month and day names
+msgctxt "Long month name"
+msgid "January"
+msgstr "1월"
+
+msgctxt "Long month name"
+msgid "February"
+msgstr "2월"
+
+msgctxt "Long month name"
+msgid "March"
+msgstr "3월"
+
+msgctxt "Long month name"
+msgid "April"
+msgstr "4월"
+
+msgctxt "Long month name"
+msgid "May"
+msgstr "5월"
+
+msgctxt "Long month name"
+msgid "June"
+msgstr "6월"
+
+msgctxt "Long month name"
+msgid "July"
+msgstr "7월"
+
+msgctxt "Long month name"
+msgid "August"
+msgstr "8월"
+
+msgctxt "Long month name"
+msgid "September"
+msgstr "9월"
+
+msgctxt "Long month name"
+msgid "October"
+msgstr "10월"
+
+msgctxt "Long month name"
+msgid "November"
+msgstr "11월"
+
+msgctxt "Long month name"
+msgid "December"
+msgstr "12월"
+
+msgctxt "day name"
+msgid "Monday"
+msgstr "월요일"
+
+msgctxt "day name"
+msgid "Tuesday"
+msgstr "화요일"
+
+msgctxt "day name"
+msgid "Wednesday"
+msgstr "수요일"
+
+msgctxt "day name"
+msgid "Thursday"
+msgstr "목요일"
+
+msgctxt "day name"
+msgid "Friday"
+msgstr "금요일"
+
+msgctxt "day name"
+msgid "Saturday"
+msgstr "토요일"
+
+msgctxt "day name"
+msgid "Sunday"
+msgstr "일요일"
