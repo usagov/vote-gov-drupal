@@ -24,7 +24,7 @@ jobs:
             source ./scripts/pipeline/deb-basic-deps.sh
             source ./scripts/pipeline/deb-cf-install.sh
       - run:
-          name: "Sync Static Bucket"
+          name: "Generate Static Site"
           command: |
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
@@ -49,7 +49,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Build theme production"
+          name: "Build theme"
           command: |
             source ./scripts/pipeline/build-theme.sh
       - persist_to_workspace:
@@ -106,17 +106,9 @@ jobs:
       - run:
           name: "Deploy"
           command: |
-            source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
+            source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
-
-            mv manifest.yml manifest.tmp
-            envsubst < manifest.tmp > manifest.yml
-
-            if [[ "${CIRCLE_BRANCH}" == "dev" || "${CIRCLE_BRANCH}" == "stage" ]]; then
-              cf push
-              cf add-network-policy ${project}-drupal-${CIRCLE_BRANCH} ${proxy_name} -s ${proxy_space} --protocol tcp --port ${proxy_port}
-              cf add-network-policy ${waf_name} ${project}-drupal-${CIRCLE_BRANCH} -s "${project}-${CIRCLE_BRANCH}" --protocol tcp --port ${drupal_port}
-            fi
+            source ./scripts/pipeline/cloud-gov-deploy.sh
   deploy-prod:
     docker:
       - image: cimg/base:stable
@@ -132,16 +124,9 @@ jobs:
       - run:
           name: "Deploy production"
           command: |
-            source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
+            source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
-
-            mv manifest.yml manifest.tmp
-            envsubst < manifest.tmp > manifest.yml
-
-            cf push
-            cf add-network-policy ${project}-drupal-${CIRCLE_BRANCH} ${proxy_name} -s ${proxy_space} --protocol tcp --port ${proxy_port}
-            cf add-network-policy ${waf_name} ${project}-drupal-${CIRCLE_BRANCH} -s "${project}-dev" --protocol tcp --port ${drupal_port}
-            fi
+            source ./scripts/pipeline/cloud-gov-deploy.sh
   deploy-test:
     docker:
       - image: cimg/base:stable
@@ -158,15 +143,9 @@ jobs:
           name: "Deploy"
           command: |
             export CIRCLE_BRANCH="test"
-            source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
+            source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
-
-            mv manifest.yml manifest.tmp
-            envsubst < manifest.tmp > manifest.yml
-
-            cf push
-            cf add-network-policy ${project}-drupal-${CIRCLE_BRANCH} ${proxy_name} -s ${proxy_space} --protocol tcp --port ${proxy_port}
-            cf add-network-policy ${waf_name} ${project}-drupal-${CIRCLE_BRANCH} -s "${project}-dev" --protocol tcp --port ${drupal_port}
+            source ./scripts/pipeline/cloud-gov-deploy.sh
   drush-cron:
     docker:
       - image: cimg/base:stable
@@ -183,7 +162,7 @@ jobs:
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
 
-            cf run-task ${project}-drupal-${CIRCLE_BRANCH} --command "drush cron" --name "${project}-${CIRCLE_BRANCH}-cron"  -k "2G" -m 256M
+            cf run-task ${project}-drupal-${CIRCLE_BRANCH} --command "drush cron" --name "${project}-${CIRCLE_BRANCH}-cron"  -k "2G" -m 128M
   php-lint:
     docker:
       - image: php:8.2-alpine
@@ -257,7 +236,7 @@ workflows:
       and:
         - equal: [webhook, << pipeline.trigger_source >>]
     jobs:
-      - production-approval:
+      - approval-prod:
           type: approval
           filters:
             branches:
@@ -269,7 +248,7 @@ workflows:
               only:
                 - prod
           requires:
-            - production-approval
+            - approval-prod
       - deploy-prod:
           filters:
             branches:
