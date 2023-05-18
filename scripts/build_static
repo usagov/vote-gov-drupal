@@ -4,6 +4,8 @@ home="/home/vcap"
 app_path="${home}/app"
 html_path="${app_path}/html"
 
+source ${app_path}/scripts/bootstrap.sh
+
 export application_uri=$(echo $VCAP_APPLICATION | jq -r '.application_uris[]')
 
 export AWS_ACCESS_KEY_ID=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.access_key_id')
