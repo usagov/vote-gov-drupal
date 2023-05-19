@@ -5,69 +5,37 @@ set -uo pipefail
 export http_proxy=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentials.proxy_uri')
 export https_proxy=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentials.proxy_uri')
 
-export newrelic_key=$(echo ${VCAP_SERVICES} | jq -r '."user-provided"[].credentials.newrelic_key')
-
-home="/home/vcap"
+export home="/home/vcap"
+export app_path="${home}/app"
+export apt_path="${home}/deps/0/apt"
 
 if [ -z "${VCAP_SERVICES:-}" ]; then
     echo "VCAP_SERVICES must a be set in the environment: aborting bootstrap";
     exit 1;
 fi
 
+## NewRelic configuration
+export newrelic_apt="${apt_path}/usr/lib/newrelic-php5"
+export newrelic_app="${app_path}/newrelic/"
+
+rm -rf ${newrelic_app}/agent
+ln -s ${newrelic_apt}/agent ${newrelic_app}/agent
+
+rm -f ${newrelic_app}/daemon/newrelic-daemon.x64
+ln -s ${apt_path}/usr/bin/newrelic-daemon ${newrelic_app}/daemon/newrelic-daemon.x64
+
+rm -f ${app_path}/newrelic/scripts/newrelic-iutil.x64
+ln -s ${newrelic_apt}/scripts/newrelic-iutil.x64 ${newrelic_app}/scripts/newrelic-iutil.x64
+
+echo 'newrelic.daemon.collector_host=gov-collector.newrelic.com' >> ${app_path}/php/etc/php.ini
+
+source ${app_path}/scripts/exports.sh
+
 if [ ! -f ./container_start_timestamp ]; then
   touch ./container_start_timestamp
   chmod a+r ./container_start_timestamp
   echo "$(date +'%s')" > ./container_start_timestamp
 fi
-
-SECRETS=$(echo $VCAP_SERVICES | jq -r '.["user-provided"][] | select(.name == "secrets") | .credentials')
-SECAUTHSECRETS=$(echo $VCAP_SERVICES | jq -r '.["user-provided"][] | select(.name == "secauthsecrets") | .credentials')
-
-APP_NAME=$(echo $VCAP_APPLICATION | jq -r '.name')
-APP_ROOT=$(dirname "$0")
-APP_ID=$(echo "$VCAP_APPLICATION" | jq -r '.application_id')
-
-DB_NAME=$(echo $VCAP_SERVICES | jq -r '.["aws-rds"][] | .credentials.db_name')
-DB_USER=$(echo $VCAP_SERVICES | jq -r '.["aws-rds"][] | .credentials.username')
-DB_PW=$(echo $VCAP_SERVICES | jq -r '.["aws-rds"][] | .credentials.password')
-DB_HOST=$(echo $VCAP_SERVICES | jq -r '.["aws-rds"][] | .credentials.host')
-DB_PORT=$(echo $VCAP_SERVICES | jq -r '.["aws-rds"][] | .credentials.port')
-
-ADMIN_EMAIL=$(echo $SECRETS | jq -r '.ADMIN_EMAIL')
-
-export ENV=$(echo "$VCAP_APPLICATION" | jq -r '.space_name' | rev | cut -d- -f1 | rev)
- 
-export S3_BUCKET=$(echo "$VCAP_SERVICES" | jq -r '.["s3"][]? | select(.name == "storage") | .credentials.bucket')
-export S3_ENDPOINT=$(echo "$VCAP_SERVICES" | jq -r '.["s3"][]? | select(.name == "storage") | .credentials.fips_endpoint')
-
-SPACE=$(echo $VCAP_APPLICATION | jq -r '.["space_name"]')
-#WWW_HOST=${WWW_HOST:-$(echo $VCAP_APPLICATION | jq -r '.["application_uris"][]' | grep 'beta\|www' | head -n 1)}
-#CMS_HOST=${CMS_HOST:-$(echo $VCAP_APPLICATION | jq -r '.["application_uris"][]' | grep cms  | head -n 1)}
-WWW_HOST=${WWW_HOST:-$(echo $VCAP_APPLICATION | jq -r '.["application_uris"][]' | grep 'beta\|www' | tr '\n' ' ')}
-CMS_HOST=${CMS_HOST:-$(echo $VCAP_APPLICATION | jq -r '.["application_uris"][]' | grep cms | tr '\n' ' ')}
-if [ -z "$WWW_HOST" ]; then
-  export WWW_HOST="*.app.cloud.gov"
-fi
-if [ -z "$CMS_HOST" ]; then
-  export CMS_HOST=$(echo $VCAP_APPLICATION | jq -r '.["application_uris"][]' | head -n 1)
-fi
-
-export S3_ROOT_WEB=${S3_ROOT_WEB:-/web}
-export S3_ROOT_CMS=${S3_ROOT_CMS:-/cms/public}
-export S3_HOST=${S3_HOST:-$S3_BUCKET.$S3_ENDPOINT}
-export S3_PROXY_WEB=${S3_PROXY_WEB:-$S3_HOST$S3_ROOT_WEB}
-export S3_PROXY_CMS=${S3_PROXY_CMS:-$S3_HOST$S3_ROOT_CMS}
-export S3_PROXY_PATH_CMS=${S3_PROXY_PATH_CMS:-/s3/files}
-
-# export DNS_SERVER=${DNS_SERVER:-$(grep -i '^nameserver' /etc/resolv.conf|head -n1|cut -d ' ' -f2)}
-
-# export EN_404_PAGE=${EN_404_PAGE:-/page-error/index.html};
-# export ES_404_PAGE=${ES_404_PAGE:-/es/pagina-error/index.html};
-
-# export NEW_RELIC_DISPLAY_NAME=${NEW_RELIC_DISPLAY_NAME:-$(echo $SECRETS | jq -r '.NEW_RELIC_DISPLAY_NAME')}
-# export NEW_RELIC_APP_NAME=${NEW_RELIC_APP_NAME:-$(echo $SECRETS | jq -r '.NEW_RELIC_APP_NAME')}
-# export NEW_RELIC_API_KEY=${NEW_RELIC_API_KEY:-$(echo $SECRETS | jq -r '.NEW_RELIC_API_KEY')}
-# export NEW_RELIC_LICENSE_KEY=${NEW_RELIC_LICENSE_KEY:-$(echo $SECRETS | jq -r '.NEW_RELIC_LICENSE_KEY')}
 
 dirs=( "${HOME}/private" "${HOME}/web/sites/default/files" )
 
@@ -78,10 +46,6 @@ for dir in $dirs; do
     chown vcap. $dir
   fi
 done
-
-sed -i -e "s/REPLACE_WITH_REAL_KEY/${newrelic_key}/" \
-  -e "s/newrelic.appname[[:space:]]=[[:space:]].*/newrelic.appname=\"${APP_NAME}\"/" \
-  $(php -r "echo(PHP_CONFIG_FILE_SCAN_DIR);")/newrelic.ini
 
 ## Updated ~/.bashrc to update $PATH when someone logs in.
 [ -z $(cat ${home}/.bashrc | grep PATH) ] && \
@@ -94,4 +58,10 @@ sed -i -e "s/REPLACE_WITH_REAL_KEY/${newrelic_key}/" \
 
 source ${home}/.bashrc
 
-
+echo "Installing awscli..."
+{
+  curl -S "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip"
+  unzip -qq /tmp/awscliv2.zip -d /tmp/
+  /tmp/aws/install --bin-dir ${home}/deps/0/bin --install-dir ${home}/deps/0/usr/local/aws-cli
+  rm -rf /tmp/awscliv2.zip /tmp/aws
+} >/dev/null 2>&1

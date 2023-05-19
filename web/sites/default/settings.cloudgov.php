@@ -26,11 +26,6 @@ $settings['tome_static_path_exclude'] = [
   '/es/jsonapi', '/es/jsonapi/deleted-nodes',
 ];
 
-if (getenv('NEW_RELIC_API_KEY')) {
-  $settings['new_relic_rpm.api_key'] = getenv('NEW_RELIC_API_KEY');
-  $config['new_relic_rpm.settings']['api_key'] = getenv('NEW_RELIC_API_KEY');
-}
-
 $is_cloudgov = FALSE;
 
 if (!empty($cf_application_data['space_name']) &&
@@ -72,8 +67,9 @@ foreach ($cf_service_data as $service_list) {
     }
     elseif (stristr($service['name'], 'secrets')) {
       $settings['hash_salt'] = hash('sha256', $service['credentials']['hash_salt']);
-      if (empty($settings['hash_salt'])) {
-        hash('sha256', $service['credentials']['HASH_SALT']);
+      if (!empty($service['credentials']['newrelic_key'])) {
+        $settings['new_relic_rpm.api_key'] = $service['credentials']['newrelic_key'];
+        $config['new_relic_rpm.settings']['api_key'] = $service['credentials']['newrelic_key'];
       }
       $settings['cron_key'] = hash('sha256', $service['credentials']['cron_key']);
     }
