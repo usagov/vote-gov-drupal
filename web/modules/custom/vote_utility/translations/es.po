@@ -1,0 +1,232 @@
+# Spanish translation of Vote.gov
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Vote.gov Utility\\n"
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=utf-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\\n"
+
+#language selector
+msgid "Spanish"
+msgstr "Español"
+
+msgid "Select language"
+msgstr "Seleccione el idioma"
+
+#main
+msgid "@sitename in language"
+msgstr "@sitename en Español"
+
+msgid "Go back"
+msgstr "Volver"
+
+msgid "Last updated:"
+msgstr "Última actualización:"
+
+msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
+msgstr "Ilustración del acto del voto donde una boleta marcada está siendo insertada en una urna"
+
+#identifier
+msgid "An official website of the @link."
+msgstr "Un sitio web oficial de la @link"
+
+msgid "General Services Administration"
+msgstr "Administración General de Servicios (GSA, en inglés)"
+
+msgid "Looking for U.S. government information and services? @link."
+msgstr "¿Busca información y servicios del Gobierno de Estados Unidos? @link"
+
+msgid "Visit USA.gov"
+msgstr "USAGov en Español"
+
+msgid "Agency identifier"
+msgstr "Identificador de la agencia"
+
+msgid "Agency description"
+msgstr "Descripción de la agencia"
+
+msgid "Important links"
+msgstr "Enlaces importantes"
+
+msgid "Government information and services"
+msgstr "Información y servicios del gobierno"
+
+#contact
+msgid "in partnership with"
+msgstr "en colaboración con"
+
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
+msgstr "En colaboración con la U.S. Election Assistance Commission"
+
+msgid "Follow Vote.gov on Twitter"
+msgstr "Siga a Vote.gov en Twitter (en inglés)"
+
+#search
+msgid "Search Vote.gov"
+msgstr "Busque en Vote.gov"
+
+#state
+msgid "Register to vote in @state_name"
+msgstr "Regístrese para votar en @state_name"
+
+msgid "How to register to vote in @state_name"
+msgstr "¿Cómo registrarse para votar en @state_name?"
+
+msgid "Other ways to register to vote in @state_name"
+msgstr "¿Otras formas para registrarse para votar en @state_name?"
+
+msgid "Register by mail deadline:"
+msgstr "Registrarse por correo postal:"
+
+msgid "Online registration deadline:"
+msgstr "Inscripción por internet:"
+
+msgid "Voter registration deadlines in @state_name"
+msgstr "Fecha límite para registrarse en @state_name"
+
+msgid "In person registration deadline:"
+msgstr "Registrarse en persona:"
+
+msgid "How to check your voter registration"
+msgstr "Cómo comprobar su registro de votante"
+
+msgid "You can confirm your voter registration status on @link."
+msgstr "Usted puede comprobar el estado de su registro de votante en @link."
+
+msgid "You can confirm your voter registration status by contacting your local registration office. @link."
+msgstr "Usted puede confirmar el estado de su inscripción de votante comunicándose con su oficina de registro local. @link."
+
+msgid "Click here to view Wyoming's county clerk contact information (PDF)"
+msgstr "Haga clic aquí para ver la información de contacto de los secretarios de los condados de Wyoming"
+
+msgid "Find out ways to register"
+msgstr "Encuentre cómo inscribirse (en inglés)"
+
+msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
+msgstr "La inscripción en línea no está disponible actualmente. @link para votar, visitando el sitio web de elecciones estatales de @state_name."
+
+msgid "Learn more about how to register"
+msgstr "Para más información sobre cómo inscribirse (en inglés)"
+
+msgid "Register in person at your local election office. @link on @state_name’s election website."
+msgstr "Inscríbase en persona en su oficina electoral local. @link, visite el sitio web de elecciones estatales de @state_name."
+
+msgid "Learn more about voting"
+msgstr "Para más información sobre la votación (en inglés)"
+
+msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
+msgstr "En Virginia no es obligatorio inscribirse para votar. @link, visite el sitio web de elecciones estatales de @state_name."
+
+msgid "Start your online registration"
+msgstr "Inicie su inscripción en línea (en inglés)"
+
+msgid "@link on @state_name’s election website."
+msgstr "@link en el sitio web de elecciones estatales de @state_name."
+
+msgid "register to vote by mail or in person"
+msgstr "inscribirse para votar por correo o en persona (en inglés)"
+
+msgid "You can also @link on @state_name’s election website."
+msgstr "Usted también puede @link en el sitio web de elecciones estatales de @state_name."
+
+msgid "confirm your voter registration status"
+msgstr "verificar el estado de su inscripción en el registro electoral (en inglés)"
+
+msgid "You can @link on @state_name’s election website."
+msgstr "Usted puede @link en el sitio web de elecciones estatales de @state_name."
+
+msgid "External link opens in new window"
+msgstr "El enlace externo se abre en una nueva ventana"
+
+#banner
+msgid "Official government website"
+msgstr "Sitio web oficial del gobierno"
+
+#footer
+msgid "Email sign-up"
+msgstr "Email para inscripción"
+
+msgid "Contact"
+msgstr "Contacto"
+
+msgid "GSA logo"
+msgstr "Logotipo de la GSA (Administración General de Servicios)"
+
+#month and day names
+msgctxt "Long month name"
+msgid "January"
+msgstr "enero"
+
+msgctxt "Long month name"
+msgid "February"
+msgstr "febrero"
+
+msgctxt "Long month name"
+msgid "March"
+msgstr "marzo"
+
+msgctxt "Long month name"
+msgid "April"
+msgstr "abril"
+
+msgctxt "Long month name"
+msgid "May"
+msgstr "mayo"
+
+msgctxt "Long month name"
+msgid "June"
+msgstr "junio"
+
+msgctxt "Long month name"
+msgid "July"
+msgstr "julio"
+
+msgctxt "Long month name"
+msgid "August"
+msgstr "agosto"
+
+msgctxt "Long month name"
+msgid "September"
+msgstr "septiembre"
+
+msgctxt "Long month name"
+msgid "October"
+msgstr "octubre"
+
+msgctxt "Long month name"
+msgid "November"
+msgstr "noviembre"
+
+msgctxt "Long month name"
+msgid "December"
+msgstr "diciembre"
+
+msgctxt "day name"
+msgid "Monday"
+msgstr "lunes"
+
+msgctxt "day name"
+msgid "Tuesday"
+msgstr "martes"
+
+msgctxt "day name"
+msgid "Wednesday"
+msgstr "miércoles"
+
+msgctxt "day name"
+msgid "Thursday"
+msgstr "jueves"
+
+msgctxt "day name"
+msgid "Friday"
+msgstr "viernes"
+
+msgctxt "day name"
+msgid "Saturday"
+msgstr "sábado"
+
+msgctxt "day name"
+msgid "Sunday"
+msgstr "domingo"

@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display an accordion group paragraph.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% block paragraph %}
+  <div class="bg-lightblue">
+    <div class="grid-container accordion homepage-acc">
+      <div class="grid-row grid-gap">
+        <div class="tablet:grid-col-4">
+        </div>
+        <div class="tablet:grid-col-8 right-shift">
+          <section aria-label="{{ content.field_heading | field_value }}">
+            <header>
+              <h2 class="content-heading">{{ content.field_heading | field_value }}</h2>
+            </header>
+            {{ content.field_accordions }}
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

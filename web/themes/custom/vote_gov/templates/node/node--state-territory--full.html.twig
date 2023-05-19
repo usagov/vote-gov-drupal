@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ *  Vote.gov USWDS Theme override to display: full for State/Territory page node.
+ *
+ */
+#}
+{% extends 'node.html.twig' %}
+
+{% block content %}
+{% set reg_type = content.field_registration_type | field_value | column('#markup') %}
+{% set state_name = label | field_value | render %}
+
+{# Korean 'state' character logic #}
+{% if language == 'ko' and node.field_is_state.value %}
+  {% set korean_state_char = "state" | t %}
+  {% set state_name = state_name ~ " " ~ korean_state_char %}
+{% endif %}
+
+{% if 'not-needed' in reg_type %}
+    {% include '@vote_gov/partial/register/registration-type--not-needed.html.twig' %}
+{% elseif 'online' in reg_type %}
+    {% include '@vote_gov/partial/register/registration-type--online.html.twig' %}
+{% elseif 'by-mail' in reg_type %}
+    {% include '@vote_gov/partial/register/registration-type--mail.html.twig' %}
+{% elseif 'in-person' in reg_type %}
+    {% include '@vote_gov/partial/register/registration-type--in-person.html.twig' %}
+{% endif %}
+
+<p>{{'Last updated:' | t }} {{ node.revision_timestamp.value | date('U') | format_date('revision_date') }}</p>
+
+    {# Homepage link #}
+{% include '@vote_gov/partial/homepage-link.html.twig' %}
+
+{% endblock %}

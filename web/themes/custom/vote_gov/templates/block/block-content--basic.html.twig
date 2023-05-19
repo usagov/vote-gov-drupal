@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block content.
+ *
+ * @see template_preprocess_block_content_template()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+  'block-content',
+  'block-content--type-' ~ bundle|clean_class,
+  'block-content--' ~ id,
+  'block-content--view-mode-' ~ view_mode|clean_class,
+  content.field_classes | field_value
+]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  <div class="block-content__content">
+    <section class="page-section registered" aria-label="{{ content.field_heading | field_value }}">
+      <header>
+        <h2 class="content-heading">{{ content.field_heading | field_value }}</h2>
+      </header>
+      <div class="voter-resources">
+        {{ content.body | field_value }}
+      </div>
+    </section>
+  </div>
+</div>
+{% endblock %}

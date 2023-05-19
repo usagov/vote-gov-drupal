@@ -1,0 +1,36 @@
+{
+  "name": "vote.gov-cypress-testing-suite",
+  "version": "1.0.0",
+  "description": "## Requirements",
+  "main": "index.js",
+  "devDependencies": {
+    "axe-core": "^4.7.0",
+    "cypress": "^12.11.0",
+    "cypress-axe": "^1.4.0",
+    "cypress-mochawesome-reporter": "^3.4.0"
+  },
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:test": "cypress run --spec 'cypress/e2e/createUser/**/*','cypress/e2e/tests/**/*','cypress/e2e/deleteUser/**/*'",
+    "cy:axe": "cypress run --spec 'cypress/e2e/accessibility/**/*'",
+    "cy:links": "cypress run --spec 'cypress/e2e/internalLinks/**/*'",
+    "cy:proofer": "cypress run --spec 'cypress/e2e/externalLinks/**/*'",
+    "cy:createUser": "cypress run --spec 'cypress/e2e/createUser/**/*'",
+    "cy:deleteUser": "cypress run --spec 'cypress/e2e/deleteUser/**/*'",
+    "testSuite": "npm run cy:test && npm run cy:links && npm run cy:proofer && npm run cy:axe",
+    "cypress": "cypress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usagov/vote-gov-drupal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/usagov/vote-gov-drupal/issues"
+  },
+  "homepage": "https://github.com/usagov/vote-gov-drupal#readme",
+  "dependencies": {
+    "cypress-real-events": "^1.7.6"
+  }
+}

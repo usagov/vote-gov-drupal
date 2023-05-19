@@ -1,0 +1,17 @@
+@use "uswds-core" as *;
+@use "../mixins/mixins";
+
+// Custom usa-hero overrides using USWDS mixins and other settings.
+.usa-hero {
+  @include mixins.full-width();
+
+  @include at-media("desktop-lg") {
+    min-height: units('mobile-lg');
+  }
+}
+
+.usa-hero__heading {
+  @include u-font-family('ui');
+  font-size: size("ui", 12);
+  @include u-text('accent-warm-light');
+}

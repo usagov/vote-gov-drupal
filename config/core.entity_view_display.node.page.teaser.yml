@@ -1,11 +1,12 @@
 uuid: de789151-ff08-4312-b21a-ba4573764d16
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
-    - field.field.node.page.field_attachment
+    - field.field.node.page.field_body
+    - field.field.node.page.field_metatags
     - node.type.page
   module:
     - user
@@ -26,5 +27,7 @@ content:
     region: content
 hidden:
   body: true
-  field_attachment: true
+  field_body: true
+  field_metatags: true
   langcode: true
+  published_at: true

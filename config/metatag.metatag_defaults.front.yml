@@ -1,0 +1,13 @@
+uuid: 4600224b-b7eb-4f9d-870f-664b445cdd44
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  canonical_url: '[site:url]'
+  description: 'Official voter registration website of the US federal government. Register to vote. Learn the voting registration deadlines and laws in your state.'
+  shortlink: '[site:url]'
+  title: 'Check Voter Registration Deadlines and Laws in Your State | [site:name]'

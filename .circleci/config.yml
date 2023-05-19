@@ -1,0 +1,332 @@
+version: 2.1
+parameters:
+  backup:
+    type: string
+    default: "none"
+  restore:
+    type: string
+    default: "none"
+  build_static:
+    type: boolean
+    default: false
+  drush_cron:
+    type: boolean
+    default: false
+jobs:
+  build-static:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Install cloudfoundry & dependencies"
+          command: |
+            source ./scripts/pipeline/deb-basic-deps.sh
+            source ./scripts/pipeline/deb-cf-install.sh
+      - run:
+          name: "Generate Static Site"
+          command: |
+            source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
+            source ./scripts/pipeline/cloud-gov-login.sh
+
+            cf run-task ${project}-drupal-${CIRCLE_BRANCH} --command "scripts/build_static" --name "${project}-${CIRCLE_BRANCH}-tome"  -k "2G" -m 256M
+  build-theme:
+    docker:
+      - image: node:18-slim
+    steps:
+      - checkout
+      - run:
+          name: "Build theme"
+          command: |
+            source ./scripts/pipeline/build-theme.sh
+      - persist_to_workspace:
+          root: ~/
+          paths:
+            - project/web/themes/custom/vote_gov/dist
+  build-theme-prod:
+    docker:
+      - image: node:18-slim
+    steps:
+      - checkout
+      - run:
+          name: "Build theme"
+          command: |
+            source ./scripts/pipeline/build-theme.sh
+      - persist_to_workspace:
+          root: ~/
+          paths:
+            - project/web/themes/custom/vote_gov/dist
+  # cypress:
+  #   docker:
+  #     - image: cypress/included:cypress-12.3.0-node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
+  #   environment:
+  #     cypress_pipeline: 1
+  #     cypress_cloudgov_application_name: "vote-drupal-test"
+  #   steps:
+  #     - checkout
+  #     - attach_workspace:
+  #         at: ~/
+  #     - run:
+  #         name: "Install cloudfoundry dependencies"
+  #         command: |
+  #           source ./scripts/pipeline/deb-basic-deps.sh
+  #           source ./scripts/pipeline/deb-cf-install.sh
+  #     - run:
+  #         name: "Cypress"
+  #         command: |
+  #           export CIRCLE_BRANCH="test"
+  #           source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
+  #           source ./scripts/pipeline/cloud-gov-login.sh
+
+  #           cd testing
+  #           cypress_baseurl=$(cf routes | grep waf-test | grep gov | awk '{print $2"."$3}')
+  #           cypress_random_pass="$(date | sha256sum | cut -d" " -f1)"
+
+  #           sed -i "s/^    baseUrl: .*/    baseUrl: 'https:\/\/${cypress_baseurl}',/" cypress.config.js
+  #           sed -i "s/^      \"test_pass\": .*/      \"test_pass\": \"${cypress_random_pass}\",/" cypress.config.js
+  #           sed -i "s/^      \"pipeline\": .*/      \"pipeline\": 1,/" cypress.config.js
+  #           sed -i "s/^      \"cloudgov_application_name\": .*/      \"cloudgov_application_name\": \"${cypress_cloudgov_application_name}\",/" cypress.config.js
+
+  #           npm install
+  #           npm run cy:test
+  #     - store_artifacts:
+  #         path: testing/cypress/screenshots
+  deploy:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: "Install cloudfoundry dependencies"
+          command: |
+            source ./scripts/pipeline/deb-basic-deps.sh
+            source ./scripts/pipeline/deb-cf-install.sh
+      - run:
+          name: "Deploy"
+          command: |
+            source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
+            source ./scripts/pipeline/cloud-gov-login.sh
+            source ./scripts/pipeline/cloud-gov-deploy.sh
+  deploy-prod:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: "Install cloudfoundry dependencies"
+          command: |
+            source ./scripts/pipeline/deb-basic-deps.sh
+            source ./scripts/pipeline/deb-cf-install.sh
+      - run:
+          name: "Deploy production"
+          command: |
+            source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
+            source ./scripts/pipeline/cloud-gov-login.sh
+            source ./scripts/pipeline/cloud-gov-deploy.sh
+  deploy-test:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: "Install cloudfoundry dependencies"
+          command: |
+            source ./scripts/pipeline/deb-basic-deps.sh
+            source ./scripts/pipeline/deb-cf-install.sh
+      - run:
+          name: "Deploy"
+          command: |
+            export CIRCLE_BRANCH="test"
+            source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
+            source ./scripts/pipeline/cloud-gov-login.sh
+            source ./scripts/pipeline/cloud-gov-deploy.sh
+  drush-cron:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Install cloudfoundry & dependencies"
+          command: |
+            source ./scripts/pipeline/deb-basic-deps.sh
+            source ./scripts/pipeline/deb-cf-install.sh
+      - run:
+          name: "Drush Cron"
+          command: |
+            source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
+            source ./scripts/pipeline/cloud-gov-login.sh
+
+            cf run-task ${project}-drupal-${CIRCLE_BRANCH} --command "drush cron" --name "${project}-${CIRCLE_BRANCH}-cron"  -k "2G" -m 128M
+  php-lint:
+    docker:
+      - image: php:8.2-alpine
+    steps:
+      - run:
+          name: "Install PHP dependencies"
+          command: |
+            apk add git curl php-curl php-dom php-gd php-xml
+      - checkout
+      - run:
+          name: Install PHPCS
+          command: |
+            source ./scripts/pipeline/composer-install.sh
+      - run:
+          name: "PHP CodeSniffer"
+          command: |
+            source ./scripts/pipeline/phpcs-install.sh
+            phpcs \
+              --standard=Drupal \
+              --ignore=*/node_modules/* \
+              --extensions=php,module,inc,install,test,profile,theme,info,yml,twig \
+              --report=csv \
+              --report-file=/tmp/phpcs.csv \
+              ~/project/web
+      - store_artifacts:
+          path: /tmp/phpcs.csv
+          destination: phpcs_<<pipeline.number>>.csv
+  snyk:
+    docker:
+      - image: snyk/snyk:php
+    # environment:
+    #   SNYK_TOKEN: ${SNYK_TOKEN }
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: "Snyk"
+          command: |
+            snyk test --org=${SNYK_ORG} --severity-threshold=$THRESHOLD
+  downsync:
+    docker:
+      - image: cimg/base:stable
+    environment:
+      BACKUP_ENV: << pipeline.parameters.backup>>
+      RESTORE_ENV: << pipeline.parameters.restore>>
+    steps:
+      - checkout
+      - run:
+          name: "Install cloudfoundry & dependencies"
+          command: |
+            source ./scripts/pipeline/deb-basic-deps.sh
+            source ./scripts/pipeline/deb-cf-install.sh
+            source ./scripts/pipeline/deb-mysql-client-install.sh
+
+            cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/1.1.0/cf-service-connect-linux-amd64
+      - run:
+          name: "Run downsync"
+          command: |
+            source ./scripts/pipeline/exports.sh "${BACKUP_ENV}"
+            source ./scripts/pipeline/cloud-gov-login.sh 
+            source ./scripts/pipeline/downsync-backup.sh
+            cf logout
+
+            source ./scripts/pipeline/exports.sh "${RESTORE_ENV}"
+            source ./scripts/pipeline/cloud-gov-login.sh
+            source ./scripts/pipeline/downsync-restore.sh
+workflows:
+  deploy-workflow:
+    when:
+      and:
+        - equal: [webhook, << pipeline.trigger_source >>]
+    jobs:
+      - approval-prod:
+          type: approval
+          filters:
+            branches:
+              only:
+                - prod
+      - build-theme-prod:
+          filters:
+            branches:
+              only:
+                - prod
+          requires:
+            - approval-prod
+      - deploy-prod:
+          filters:
+            branches:
+              only:
+                - prod
+          requires:
+            - build-theme-prod
+      - php-lint:
+          filters:
+            branches:
+              ignore:
+                - prod
+      - snyk:
+          filters:
+            branches:
+              ignore:
+                - prod
+      - build-theme:
+          filters:
+            branches:
+              only:
+                - dev
+                - stage
+                - test
+                - prod
+      - deploy-test:
+          filters:
+            branches:
+              only:
+                - dev
+                - stage
+                - test
+          requires:
+            - build-theme
+      # - cypress:
+      #     filters:
+      #       branches:
+      #         only:
+      #           - dev
+      #           - stage
+      #           - test
+      #     requires:
+      #       - deploy-test
+      - deploy:
+          filters:
+            branches:
+              only:
+                - dev
+                - stage
+                - prod
+          requires:
+            - build-theme
+  downsync-workflow:
+    when:
+      and:
+        - equal:  [api, << pipeline.trigger_source >> ]
+        - or:
+          - equal: [ dev, << pipeline.parameters.backup >> ]
+          - equal: [ prod, << pipeline.parameters.backup >> ]
+          - equal:  [stage, << pipeline.parameters.backup >> ]
+          - equal: [ test, << pipeline.parameters.backup >> ]
+        - or:
+          - equal: [ dev, << pipeline.parameters.restore >> ]
+          - equal: [ stage, << pipeline.parameters.restore >> ]
+          - equal: [ test, << pipeline.parameters.restore >> ]
+    jobs:
+      - downsync
+  build-static-workflow:
+    when:
+      and:
+        - equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]
+        - equal: [ true, << pipeline.parameters.build_static >> ]
+    jobs:
+      - build-static
+  drush-cron-workflow:
+    when:
+      and:
+        - equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]
+        - equal: [ true, << pipeline.parameters.drush_cron >> ]
+    jobs:
+      - drush-cron

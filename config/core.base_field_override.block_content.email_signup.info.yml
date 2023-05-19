@@ -1,0 +1,18 @@
+uuid: 5299b00b-aed1-4d67-bb45-6f224226f376
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.email_signup
+id: block_content.email_signup.info
+field_name: info
+entity_type: block_content
+bundle: email_signup
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -9,9 +9,26 @@ url:
     es: es
     ko: ko
     tl: tl
+    bn: bn
+    zh-hans: zh-hans
+    zh: zh
+    hi: hi
+    km: km
+    nv: nv
+    vi: vi
+    ypk: ypk
+    '': null
   domains:
     en: ''
     es: ''
     ko: ''
     tl: ''
+    bn: ''
+    zh-hans: ''
+    zh: ''
+    hi: ''
+    km: ''
+    nv: ''
+    vi: ''
+    ypk: ''
 selected_langcode: site_default

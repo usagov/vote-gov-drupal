@@ -1,0 +1,36 @@
+uuid: bf80ac80-e875-4b70-bed6-42fdcc156f4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.page.body
+    - field.field.node.page.field_body
+    - field.field.node.page.field_metatags
+    - node.type.page
+  module:
+    - text
+    - user
+id: node.page.full
+targetEntityType: node
+bundle: page
+mode: full
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  body: true
+  field_metatags: true
+  langcode: true
+  links: true
+  published_at: true

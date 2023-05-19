@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ *  Vote.gov USWDS Theme override to display a node.
+ */
+#}
+{% set classes = [
+  'voter-info',
+  'page-type--basic',
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  'voter-info',
+  'page-type--basic',
+] %}
+
+<section{{ attributes.addClass(classes) }}>
+  <div>
+    {# Title banner and main content #}
+    {{ content }}
+  </div>
+</section>
+{# Homepage link #}
+{% include '@vote_gov/partial/homepage-link.html.twig' %}

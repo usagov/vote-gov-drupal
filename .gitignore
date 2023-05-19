@@ -52,6 +52,7 @@
 *.tar
 *.zip
 *.tgz
+*.csv
 
 # Ignore Logs and databases
 *.log
@@ -64,5 +65,20 @@ Thumbs.db
 ._*
 
 # Ignore Local Development files
-/web/sites/development.services.local.yml
+/web/sites/services.local.yml
+/web/sites/settings.local.php
 node_modules
+.lando.local.yml
+
+# Ignore Theme dist files
+/web/themes/custom/vote_gov/dist/
+
+# Allow cloud.gov settings file.
+!web/sites/default/settings.cloudgov.php
+
+# Ignore Cypress Reports
+/testing/cypress/reports
+/testing/cypress/screenshots
+
+# Tome static files
+/html

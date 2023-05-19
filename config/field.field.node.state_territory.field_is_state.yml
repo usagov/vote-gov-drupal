@@ -10,8 +10,8 @@ field_name: field_is_state
 entity_type: node
 bundle: state_territory
 label: 'This is a state'
-description: "<b>Yes</b> - This page is for one of the 50 states in the United States<br>\r\n<b>No</b> - This page is for a territory or district of the United States"
-required: true
+description: "<b>Checked</b> - This page is for one of the 50 states in the United States<br>\r\n<b>Unchecked</b> - This page is for a territory or district of the United States"
+required: false
 translatable: false
 default_value:
   -

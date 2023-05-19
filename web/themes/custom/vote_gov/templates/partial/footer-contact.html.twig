@@ -1,0 +1,26 @@
+<section class="bg-lightblue footer-contact" data-test="footer-contact" title="{{'Contact'|t}}" aria-label="{{'Contact'|t}}">
+  <div class="grid-container eac-vote-partnership">
+    <div class="grid-row">
+      <div class="tablet:grid-col-auto">
+        <div class="vote-txt">{{ 'Vote.gov' | t }}</div>
+        <img class="vote-logo" loading="lazy" width="130" height="160" src="{{ theme_path }}/img/ballot_box-blue.svg" alt="{{ 'Illustration of voter box with checked ballot being inserted to indicate voting action' | t }}" aria-label="Vote.gov">
+    </div>
+
+      <div class="tablet:grid-col-auto partnership-txt">{{ 'in partnership with' | t }}</div>
+      <div class="tablet:grid-col-auto eac-container">
+        <a href="{{ language == 'es' ? 'https://www.eac.gov/translations/spanish' : 'https://www.eac.gov/' }}" target="_blank">
+          <img class="eac-logo" width="146" height="48" src="{{ theme_path }}/img/eac-logo.webp" alt="{{ 'U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov' | t }}">
+        </a>
+      </div>
+      <div class="tablet:grid-col"></div>
+      <div class="tablet:grid-col-auto twitter-container">
+        <a href="https://twitter.com/votegov" class="twitter-link" target="_blank">
+          <span>{{ 'Follow Vote.gov on Twitter' | t }}</span>
+          <svg class="usa-icon" aria-hidden="true" focusable="false" role="img" height="28" width="28">
+            <use xlink:href="{{ theme_path }}/dist/assets/img/sprite.svg#twitter"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

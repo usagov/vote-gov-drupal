@@ -1,0 +1,232 @@
+# Chinese - simplified translation of Vote.gov
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Vote.gov Utility\\n"
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=utf-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\\n"
+
+#language selector
+msgid "Chinese - simplified"
+msgstr "中文"
+
+msgid "Select language"
+msgstr "选择语言"
+
+#main
+msgid "@sitename in language"
+msgstr "@sitename 中文"
+
+msgid "Go back"
+msgstr "回去"
+
+msgid "Last updated:"
+msgstr "最近更新时间："
+
+msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
+msgstr "插有已勾选选票的选票箱图样，表示投票动作"
+
+#identifier
+msgid "An official website of the @link."
+msgstr "@link官方网站"
+
+msgid "General Services Administration"
+msgstr "总务管理局"
+
+msgid "Looking for U.S. government information and services? @link."
+msgstr "寻找美国政府信息和服务？ @link"
+
+msgid "Visit USA.gov"
+msgstr "訪問 USA.gov"
+
+msgid "Agency identifier"
+msgstr "机构标识符"
+
+msgid "Agency description"
+msgstr "机构描述"
+
+msgid "Important links"
+msgstr "重要链接"
+
+msgid "Government information and services"
+msgstr "政府信息和服务"
+
+#contact
+msgid "in partnership with"
+msgstr "与合作"
+
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
+msgstr "与 U.S. Election Assistance Commission合作"
+
+msgid "Follow Vote.gov on Twitter"
+msgstr "在 Twitter 上关注 Vote.gov"
+
+#search
+msgid "Search Vote.gov"
+msgstr "搜索 Vote.gov"
+
+#state
+msgid "Register to vote in @state_name"
+msgstr "在 @state_name 注册投票"
+
+msgid "How to register to vote in @state_name"
+msgstr "如何在 @state_name 注册投票"
+
+msgid "Other ways to register to vote in @state_name"
+msgstr "在 @state_name 登记投票的其他方式"
+
+msgid "Register by mail deadline:"
+msgstr "邮寄报名截止日期："
+
+msgid "Online registration deadline:"
+msgstr "网上报名截止日期："
+
+msgid "Voter registration deadlines in @state_name"
+msgstr "@state_name 的选民登记截止日期"
+
+msgid "In person registration deadline:"
+msgstr "亲自报名截止日期："
+
+msgid "How to check your voter registration"
+msgstr "如何检查您的选民登记"
+
+msgid "You can confirm your voter registration status on @link."
+msgstr "您可以在 @link 上确认您的选民登记状态"
+
+msgid "You can confirm your voter registration status by contacting your local registration office. @link."
+msgstr "您可以聯繫當地的登記處確認您的選民登記狀態。@link。"
+
+msgid "Click here to view Wyoming's county clerk contact information (PDF)"
+msgstr "點擊此處查看懷俄明州縣書記聯繫資訊 (PDF）"
+
+msgid "Find out ways to register"
+msgstr "了解如何注册 (英语)"
+
+msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
+msgstr "目前不提供在线注册。 @link 在 @state_name 州的选举网站上投票。"
+
+msgid "Learn more about how to register"
+msgstr "详细了解如何注册 (英语)"
+
+msgid "Register in person at your local election office. @link on @state_name’s election website."
+msgstr "亲自到您当地的选举办公室注册。 @link @state_name 州的选举网站"
+
+msgid "Learn more about voting"
+msgstr "详细了解如何注册 (英语)"
+
+msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
+msgstr "弗吉尼亚州不要求选民注册。 @link @state_name 州的选举网站"
+
+msgid "Start your online registration"
+msgstr "开始在线注册 (英语)"
+
+msgid "@link on @state_name’s election website."
+msgstr "在 @state_name 州的选举网站上 @link"
+
+msgid "register to vote by mail or in person"
+msgstr "邮寄或现场注册 (英语)"
+
+msgid "You can also @link on @state_name’s election website."
+msgstr "您也可以 @link @state_name 州的选举网站"
+
+msgid "confirm your voter registration status"
+msgstr "确认您的选民注册状态 (英语)"
+
+msgid "You can @link on @state_name’s election website."
+msgstr "您可以在 @state_name 州的选举网站上 @link"
+
+msgid "External link opens in new window"
+msgstr "外部链接打开新窗口"
+
+#banner
+msgid "Official government website"
+msgstr "官方政府网站"
+
+#footer
+msgid "Email sign-up"
+msgstr "电邮注册"
+
+msgid "Contact"
+msgstr "联系"
+
+msgid "GSA logo"
+msgstr "GSA 标志"
+
+#month and day names
+msgctxt "Long month name"
+msgid "January"
+msgstr "1月"
+
+msgctxt "Long month name"
+msgid "February"
+msgstr "2月"
+
+msgctxt "Long month name"
+msgid "March"
+msgstr "3月"
+
+msgctxt "Long month name"
+msgid "April"
+msgstr "4月"
+
+msgctxt "Long month name"
+msgid "May"
+msgstr "5月"
+
+msgctxt "Long month name"
+msgid "June"
+msgstr "6月"
+
+msgctxt "Long month name"
+msgid "July"
+msgstr "7月"
+
+msgctxt "Long month name"
+msgid "August"
+msgstr "8月"
+
+msgctxt "Long month name"
+msgid "September"
+msgstr "9月"
+
+msgctxt "Long month name"
+msgid "October"
+msgstr "10月"
+
+msgctxt "Long month name"
+msgid "November"
+msgstr "11月"
+
+msgctxt "Long month name"
+msgid "December"
+msgstr "12月"
+
+msgctxt "day name"
+msgid "Monday"
+msgstr "星期一"
+
+msgctxt "day name"
+msgid "Tuesday"
+msgstr "星期二"
+
+msgctxt "day name"
+msgid "Wednesday"
+msgstr "星期三"
+
+msgctxt "day name"
+msgid "Thursday"
+msgstr "星期四"
+
+msgctxt "day name"
+msgid "Friday"
+msgstr "星期五"
+
+msgctxt "day name"
+msgid "Saturday"
+msgstr "sábado"
+
+msgctxt "day name"
+msgid "Sunday"
+msgstr "星期日"

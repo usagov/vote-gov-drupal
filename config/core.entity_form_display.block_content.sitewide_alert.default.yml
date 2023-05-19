@@ -6,6 +6,7 @@ dependencies:
     - block_content.type.sitewide_alert
     - field.field.block_content.sitewide_alert.field_alert_content
     - field.field.block_content.sitewide_alert.field_alert_type
+    - field.field.block_content.sitewide_alert.field_publish
   module:
     - text
 id: block_content.sitewide_alert.default
@@ -15,7 +16,7 @@ mode: default
 content:
   field_alert_content:
     type: text_textarea
-    weight: 2
+    weight: 4
     region: content
     settings:
       rows: 5
@@ -23,9 +24,16 @@ content:
     third_party_settings: {  }
   field_alert_type:
     type: options_select
-    weight: 1
+    weight: 3
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_publish:
+    type: boolean_checkbox
+    weight: 26
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   info:
     type: string_textfield
@@ -35,10 +43,16 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   translation:
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  langcode: true
+hidden: {  }

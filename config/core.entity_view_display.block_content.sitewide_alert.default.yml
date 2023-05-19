@@ -6,6 +6,7 @@ dependencies:
     - block_content.type.sitewide_alert
     - field.field.block_content.sitewide_alert.field_alert_content
     - field.field.block_content.sitewide_alert.field_alert_type
+    - field.field.block_content.sitewide_alert.field_publish
   module:
     - options
     - text
@@ -16,17 +17,27 @@ mode: default
 content:
   field_alert_content:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 2
     region: content
   field_alert_type:
-    type: list_default
-    label: above
+    type: list_key
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_publish:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
     region: content
 hidden:
   langcode: true

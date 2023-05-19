@@ -1,0 +1,4 @@
+_core:
+  default_config_hash: yX5KFeprjrWh6mUnLnHgKQoDGmhnSXNpgCaeQ91O4V4
+format: '[@severity] [@type] [@date] @message | uid: @uid | request-uri: @request_uri | refer: @referer | ip:  @ip | link: @link'
+use_stderr: '1'

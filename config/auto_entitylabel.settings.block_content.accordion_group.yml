@@ -1,0 +1,9 @@
+status: 2
+pattern: 'Accordion Group [block_content:id]'
+escape: false
+preserve_titles: false
+save: true
+chunk: 50
+dependencies:
+  config:
+    - block_content.type.accordion_group

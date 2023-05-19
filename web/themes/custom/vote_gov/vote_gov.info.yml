@@ -1,0 +1,26 @@
+name: Vote.gov USWDS Theme (version 3.2.0)
+type: theme
+description: "Custom Drupal theme based on USWDS 3."
+package: Core
+core_version_requirement: "^9.4 || ^10"
+base theme: stable
+dependencies:
+  - drupal:twig_tweak
+  - drupal:twig_field_value
+  - drupal:admin_toolbar
+
+libraries:
+  - vote_gov/global
+
+regions:
+  header: "Header"
+  admin: "Admin local tasks"
+  page_title: "Page title"
+  content: "Content"
+  sidebar: "Sidebar"
+  footer: "Footer"
+  no_region: "Blocks for Twig Tweak, hidden, or other purposes"
+
+# define custom css for wysiwyg
+ckeditor5-stylesheets:
+  - ckeditor/ckeditor.css

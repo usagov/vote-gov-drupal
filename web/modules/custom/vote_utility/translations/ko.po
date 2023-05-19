@@ -1,0 +1,235 @@
+# Korean translation of Vote.gov
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Vote.gov Utility\\n"
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=utf-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\\n"
+
+#language selector
+msgid "Korean"
+msgstr "한국어"
+
+msgid "Select language"
+msgstr "언어 선택"
+
+#main
+msgid "@sitename in language"
+msgstr "@sitename 한국어 "
+
+msgid "Go back"
+msgstr "이전 화면"
+
+msgid "Last updated:"
+msgstr "마지막 업데이트일자:"
+
+msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
+msgstr "표시한 투표 용지를 유권자 투표 상자에 삽입하는 투표 과정을 보여주는 그림"
+
+msgid "state"
+msgstr "주"
+
+#identifier
+msgid "An official website of the @link."
+msgstr "@link의 공식 웹사이트"
+
+msgid "General Services Administration"
+msgstr "미국 연방 조달청"
+
+msgid "Looking for U.S. government information and services? @link."
+msgstr "미국 정부 정보 및 서비스를 검색하고 싶으신가요? @link"
+
+msgid "Visit USA.gov"
+msgstr "USA.gov 사이트로 가기"
+
+msgid "Agency identifier"
+msgstr "기관 식별자"
+
+msgid "Agency description"
+msgstr "기관 설명"
+
+msgid "Important links"
+msgstr "주요 사이트 링크"
+
+msgid "Government information and services"
+msgstr "정부 관련 정보 및 제공 서비스"
+
+#contact
+msgid "in partnership with"
+msgstr "협력 제공 기관"
+
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
+msgstr "협력 제공 기관: U.S. Election Assistance Commission"
+
+msgid "Follow Vote.gov on Twitter"
+msgstr "Vote.gov 사이트 트위터 팔로우하기"
+
+#search
+msgid "Search Vote.gov"
+msgstr "Vote.gov 사이트 검색"
+
+#state
+msgid "Register to vote in @state_name"
+msgstr "@state_name 유권자 등록 안내 "
+
+msgid "How to register to vote in @state_name"
+msgstr "@state_name 에서 유권자로 등록하는 방법"
+
+msgid "Other ways to register to vote in @state_name"
+msgstr "기타 @state_name 유권자 등록 방법"
+
+msgid "Register by mail deadline:"
+msgstr "우편 투표자 등록 마감일:"
+
+msgid "Online registration deadline:"
+msgstr "온라인 등록 마감일:"
+
+msgid "Voter registration deadlines in @state_name"
+msgstr "@state_name 유권자 등록 마감일 "
+
+msgid "In person registration deadline:"
+msgstr "직접 투표자 등록 마감일: "
+
+msgid "How to check your voter registration"
+msgstr "유권자 등록 정보 확인 방법 안내"
+
+msgid "You can confirm your voter registration status on @link."
+msgstr "@link."
+
+msgid "You can confirm your voter registration status by contacting your local registration office. @link."
+msgstr "귀하의 유권자 등록 상태는 지역 등록 사무소에 연락하여 확인할 수 있습니다. @link."
+
+msgid "Click here to view Wyoming's county clerk contact information (PDF)"
+msgstr "와이오밍 카운티 기록 보관 사무소 연락처는 여기를 클릭하십시오 (PDF파일)"
+
+msgid "Find out ways to register"
+msgstr "등록 방법 검색하기 (영어로 제공)"
+
+msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
+msgstr "현재는 온라인 등록이 불가합니다. 투표를 하시려면 @state_name 선거 사무국 웹사이트에서 @link를 이용하시기 바랍니다."
+
+msgid "Learn more about how to register"
+msgstr "등록 방법에 대해 자세히 알아보기 (영어로 제공)"
+
+msgid "Register in person at your local election office. @link on @state_name’s election website."
+msgstr "귀하가 거주하는 지역의 선거 사무소를 직접 방문하여 등록하시기 바랍니다. @state_name 선거국 웹사이트에서 @link를  이용하시기 바랍니다."
+
+msgid "Learn more about voting"
+msgstr "투표에 대해 자세히 알아보기 (영어로 제공)"
+
+msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
+msgstr "버지니아 주에서는 유권자 등록이 필요하지 않습니다.  @state_name 선거국 웹사이트에서 @link를 이용하시기 바랍니다."
+
+msgid "Start your online registration"
+msgstr "온라인 등록 시작하기 (영어로 제공)"
+
+msgid "@link on @state_name’s election website."
+msgstr " @state_name 선거국 웹사이트에서 @link를 이용하시기 바랍니다."
+
+msgid "register to vote by mail or in person"
+msgstr "우편 우표 또는 직접 투표 등록하기 (영어로 제공)"
+
+msgid "You can also @link on @state_name’s election website."
+msgstr "@state_name 선거국 웹사이트에서 @link를 선택하실 수 있습니다."
+
+msgid "confirm your voter registration status"
+msgstr "유권자 등록 상태 확인하기 (영어로 제공)"
+
+msgid "You can @link on @state_name’s election website."
+msgstr "@state_name 선거국 웹사이트에서 @link를 하실 수 있습니다."
+
+msgid "External link opens in new window"
+msgstr "외부 링크 사이트는 새 창에서 연결됩니다"
+
+#banner
+msgid "Official government website"
+msgstr "공식 정부 웹사이트"
+
+#footer
+msgid "Email sign-up"
+msgstr "이메일 등록"
+
+msgid "Contact"
+msgstr "연락처"
+
+msgid "GSA logo"
+msgstr "GSA 로고"
+
+#month and day names
+msgctxt "Long month name"
+msgid "January"
+msgstr "1월"
+
+msgctxt "Long month name"
+msgid "February"
+msgstr "2월"
+
+msgctxt "Long month name"
+msgid "March"
+msgstr "3월"
+
+msgctxt "Long month name"
+msgid "April"
+msgstr "4월"
+
+msgctxt "Long month name"
+msgid "May"
+msgstr "5월"
+
+msgctxt "Long month name"
+msgid "June"
+msgstr "6월"
+
+msgctxt "Long month name"
+msgid "July"
+msgstr "7월"
+
+msgctxt "Long month name"
+msgid "August"
+msgstr "8월"
+
+msgctxt "Long month name"
+msgid "September"
+msgstr "9월"
+
+msgctxt "Long month name"
+msgid "October"
+msgstr "10월"
+
+msgctxt "Long month name"
+msgid "November"
+msgstr "11월"
+
+msgctxt "Long month name"
+msgid "December"
+msgstr "12월"
+
+msgctxt "day name"
+msgid "Monday"
+msgstr "월요일"
+
+msgctxt "day name"
+msgid "Tuesday"
+msgstr "화요일"
+
+msgctxt "day name"
+msgid "Wednesday"
+msgstr "수요일"
+
+msgctxt "day name"
+msgid "Thursday"
+msgstr "목요일"
+
+msgctxt "day name"
+msgid "Friday"
+msgstr "금요일"
+
+msgctxt "day name"
+msgid "Saturday"
+msgstr "토요일"
+
+msgctxt "day name"
+msgid "Sunday"
+msgstr "일요일"

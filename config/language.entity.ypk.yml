@@ -1,0 +1,9 @@
+uuid: 99092e89-4355-4b44-a65e-e830ffca173b
+langcode: ypk
+status: true
+dependencies: {  }
+id: ypk
+label: Yupʼik-Akuzipik
+direction: ltr
+weight: 1
+locked: false

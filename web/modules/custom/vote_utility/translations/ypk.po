@@ -1,0 +1,229 @@
+# Yupʼik translation of Vote.gov
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Vote.gov Utility\\n"
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=utf-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\\n"
+
+#language selector
+msgid "Yupʼik"
+msgstr ""
+
+msgid "Select language"
+msgstr "Ulu nakmiighhu"
+
+#main
+msgid "@sitename in language"
+msgstr "@sitename Akuzipigestun"
+
+msgid "Go back"
+msgstr "Uteghten"
+
+msgid "Last updated:"
+msgstr "Kingulighmi Nutaghtekat:"
+
+msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
+msgstr "Teruwiiq nakmikellghem salngaganeng igaq apeghiiqaq kananghtekanga kelgutilghii nakmikilleghmeng"
+
+#identifier
+msgid "An official website of the @link."
+msgstr "Website-eghpigaa @link-em"
+
+msgid "General Services Administration"
+msgstr "General Services Administration"
+
+msgid "Looking for U.S. government information and services? @link."
+msgstr "Ivaghiiqsin U.S.-em kavemengan sameng pillghillu qepghaghvigillu? @link"
+
+msgid "Visit USA.gov"
+msgstr "Takugu USA.gov"
+
+msgid "Agency identifier"
+msgstr "Qepghaghvigem nalluniighusii"
+
+msgid "Agency description"
+msgstr "Qepghaghvigem apellgha"
+
+msgid "Important links"
+msgstr "Megnunalghiit kelgutisit"
+
+msgid "Government information and services"
+msgstr "Kavemem ungipiillu salqumsugillu"
+
+#contact
+msgid "in partnership with"
+msgstr "ilalkiilluteng"
+
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
+msgstr "ilalkiilluteng U.S. Election Assistance Commission"
+
+msgid "Follow Vote.gov on Twitter"
+msgstr "Maligtigu Vote.gov Twitter-ekun"
+
+#search
+msgid "Search Vote.gov"
+msgstr "Ivaghivikigu vote.gov"
+
+#state
+msgid "Register to vote in @state_name"
+msgstr "Ilaten nakmikinaluten @state_name-mi"
+
+msgid "How to register to vote in @state_name"
+msgstr "Naten ilannayaghsin nakmikimun @state_name-mi"
+
+msgid "Other ways to register to vote in @state_name"
+msgstr "Ilangi nakmikilleghmun ilatellghet @state_name-emi "
+
+msgid "Register by mail deadline:"
+msgstr "Ilatelleq tuyuqayugkun tuuniviga:"
+
+msgid "Online registration deadline:"
+msgstr "Online-ekun ilatellghem tuuniviga:"
+
+msgid "Voter registration deadlines in @state_name"
+msgstr "Nakmikilleghmun ilatellghan tuunivigi @state_name-emi"
+
+msgid "In person registration deadline:"
+msgstr "Gginasaghlluku ilatellghem tuuniviga: "
+
+msgid "How to check your voter registration"
+msgstr "Esghalleghqan nakmikimun ilatellghen"
+
+msgid "You can confirm your voter registration status on @link."
+msgstr "Ipapighqennayaghan nakmikimun ilatellghen @link-mi"
+
+msgid "You can confirm your voter registration status by contacting your local registration office. @link."
+msgstr "Ipapighqesaghngaaghpegu nakmikillgheghpek ilatellghan natetulnga tuqluquvgu negpek ilatfigan qepghaghviga. @link."
+
+msgid "Click here to view Wyoming's county clerk contact information (PDF)"
+msgstr "Click here to view Wyoming's county clerk contact information (PDF)"
+
+msgid "Find out ways to register"
+msgstr "Naalkigu naten alla ilatelleghqan (Laluramkestun)"
+
+msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
+msgstr "Online-ekun ilatelleq pivigituq maaten. @link nakmikinaluten @state_name-mi state-angan nakmikillghan website-angani. "
+
+msgid "Learn more about how to register"
+msgstr "Liitaghaghhu ilatelleghqan (Laluramkestun)"
+
+msgid "Register in person at your local election office. @link on @state_name’s election website."
+msgstr "Ilaten gginasaghlluku negpek nkmikivigan qepghaghvigani. @link @state_name-em state-angan nakmikillghan website-angani. "
+
+msgid "Learn more about voting"
+msgstr "Liitaghaghhu nakmilleq (Laluramkestun)"
+
+msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
+msgstr "Nakmikimun ilaasughniituq Virginia-mi. @link @state_name-em state-angan nakmikillghan website-angani. "
+
+msgid "Start your online registration"
+msgstr "Piinlighhu online-ekun ilatelleq (Laluramkestun)"
+
+msgid "@link on @state_name’s election website."
+msgstr "@link @state_name-em state-angan nakmikillghan website-angani. "
+
+msgid "register to vote by mail or in person"
+msgstr "Ilaasaghngaaghpek tuyuqayugkun nalighmeng gginasaghlluku (Laluramkestun)"
+
+msgid "You can also @link on @state_name’s election website."
+msgstr "@link @state_name-em state-angan nakmikillghan website-angani. "
+
+msgid "confirm your voter registration status"
+msgstr "Ipapighqesaghngaaghpegu ilatellghen (Laluramkestun)"
+
+msgid "You can @link on @state_name’s election website."
+msgstr "@link @state_name-em state-angan nakmikillghan webstte-angani. "
+
+#banner
+msgid "Official government website"
+msgstr "Official government website"
+
+#footer
+msgid "Email sign-up"
+msgstr "Email sign-up"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "GSA logo"
+msgstr "GSA logo"
+
+#month and day names
+msgctxt "Long month name"
+msgid "January"
+msgstr "Qaluvik"
+
+msgctxt "Long month name"
+msgid "February"
+msgstr "Nazighaghsiq"
+
+msgctxt "Long month name"
+msgid "March"
+msgstr "Teghiglugsiq"
+
+msgctxt "Long month name"
+msgid "April"
+msgstr "Lluughvik"
+
+msgctxt "Long month name"
+msgid "May"
+msgstr "Kiigem Aghnaa"
+
+msgctxt "Long month name"
+msgid "June"
+msgstr "Pinaghvik"
+
+msgctxt "Long month name"
+msgid "July"
+msgstr "Ellngaghvik"
+
+msgctxt "Long month name"
+msgid "August"
+msgstr "Palighvik"
+
+msgctxt "Long month name"
+msgid "September"
+msgstr "Kumlavik"
+
+msgctxt "Long month name"
+msgid "October"
+msgstr "Naayvaghvik"
+
+msgctxt "Long month name"
+msgid "November"
+msgstr "Aqumuq"
+
+msgctxt "Long month name"
+msgid "December"
+msgstr "Kaneghyengesi"
+
+msgctxt "day name"
+msgid "Monday"
+msgstr "Manti"
+
+msgctxt "day name"
+msgid "Tuesday"
+msgstr "Tuwesti"
+
+msgctxt "day name"
+msgid "Wednesday"
+msgstr "Winesti"
+
+msgctxt "day name"
+msgid "Thursday"
+msgstr "Thursday-a"
+
+msgctxt "day name"
+msgid "Friday"
+msgstr "Friday-a"
+
+msgctxt "day name"
+msgid "Saturday"
+msgstr "Sareri"
+
+msgctxt "day name"
+msgid "Sunday"
+msgstr "Santi"

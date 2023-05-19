@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - node.type.page
+    - node.type.state_territory
   module:
     - content_moderation
 id: publishing_content
@@ -62,4 +63,5 @@ type_settings:
   entity_types:
     node:
       - page
+      - state_territory
   default_moderation_state: draft

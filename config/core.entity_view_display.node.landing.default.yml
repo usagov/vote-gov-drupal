@@ -4,9 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.landing.body
-    - field.field.node.landing.field_page_components
+    - field.field.node.landing.field_metatags
+    - field.field.node.landing.field_paragraph_components
     - node.type.landing
   module:
+    - entity_reference_revisions
+    - metatag
     - text
     - user
 id: node.landing.default
@@ -19,20 +22,51 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 104
+    weight: 1
     region: content
-  field_page_components:
-    type: entity_reference_label
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_metatags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_paragraph_components:
+    type: entity_reference_revisions_entity_view
     label: above
     settings:
-      link: true
+      view_mode: default
+      link: ''
     third_party_settings: {  }
-    weight: 103
+    weight: 8
+    region: content
+  langcode:
+    type: language
+    label: above
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
+    weight: 0
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 6
     region: content
-hidden:
-  langcode: true
+  published_at:
+    type: timestamp
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

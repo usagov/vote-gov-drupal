@@ -1,11 +1,12 @@
 uuid: 023465d0-703d-4639-8946-edc5c3f47e53
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.landing.body
-    - field.field.node.landing.field_page_components
+    - field.field.node.landing.field_metatags
+    - field.field.node.landing.field_paragraph_components
     - node.type.landing
   module:
     - user
@@ -14,6 +15,11 @@ targetEntityType: node
 bundle: landing
 mode: teaser
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -21,5 +27,7 @@ content:
     region: content
 hidden:
   body: true
-  field_page_components: true
+  field_metatags: true
+  field_paragraph_components: true
   langcode: true
+  published_at: true

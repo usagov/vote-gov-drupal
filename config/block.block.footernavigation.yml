@@ -1,4 +1,4 @@
-uuid: acb18c9a-ba01-4c90-9eb7-baaf57649fb1
+uuid: 67ee4e15-1273-44f3-9d1e-dd2c07723621
 langcode: en
 status: true
 dependencies:
@@ -7,19 +7,19 @@ dependencies:
   module:
     - system
   theme:
-    - stark
+    - vote_gov
 id: footernavigation
-theme: stark
+theme: vote_gov
 region: footer
-weight: 0
+weight: -3
 provider: null
 plugin: 'system_menu_block:footer'
 settings:
   id: 'system_menu_block:footer'
-  label: 'Footer navigation'
-  label_display: visible
+  label: 'Footer menu'
+  label_display: '0'
   provider: system
   level: 1
-  depth: 1
+  depth: 0
   expand_all_items: false
 visibility: {  }

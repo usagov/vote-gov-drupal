@@ -13,7 +13,7 @@ mode: default
 content:
   field_search_placeholder:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -21,9 +21,9 @@ content:
     region: content
   field_translated_affiliate:
     type: boolean
-    label: above
+    label: hidden
     settings:
-      format: default
+      format: boolean
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }

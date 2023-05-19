@@ -1,0 +1,55 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a registration tool paragraph.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{{ attach_library('vote_gov/registration_tool') }}
+
+{% block paragraph %}
+  <div class="bg-blue css-arrow page-vote">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="tablet:grid-col-4">
+          {% set logo_sitename = language != 'en' ? '@sitename in language' | t({ '@sitename': sitename }) | render : sitename %}
+          <a class="site-logo" href="{{ '/' ~ (language != 'en' ? language) }}" aria-label="{{ logo_sitename | t }}">
+            <div class="logo-text">{{ logo_sitename }}</div>
+            <div id="SiteLogo">{{ source( directory ~ '/img/ballot_box-blue.svg' ) }}</div>
+          </a>
+        </div>
+        <div id="skip-target" class="tablet:grid-col-8 right-shift">
+          <section class="register align-bottom" role="region" aria-label="{{ content.field_heading | field_value }}">
+            <header>
+              <h1 class="main-heading" data-test="main-header">{{ content.field_heading | field_value }}</h1>
+            </header>
+            <form class="form-register" method="get" id="register">
+              <h2>{{ content.field_form_heading | field_value }}</h2>
+              <label class="usa-sr-only" for="js-user-selection">
+                {{ content.field_dropdown_label | field_value }}
+              </label>
+              <select class="usa-select max-width-input" name="userselection" id="js-user-selection" data-test="state-selection">
+                <option value="default">
+                  {{ content.field_dropdown_label | field_value }}
+                </option>
+              {% set results = drupal_view_result('state_territory', 'block') %}
+              {% for result in results %}
+                  {% set nodeID = result._entity.id() %}
+                  {% set node_path = path('entity.node.canonical', {'node': nodeID}) %}
+                  <option value="{{ node_path }}">
+                    {{ result.node_field_data_title }}
+                  </option>
+              {% endfor %}
+              </select>
+              <button class="usa-button max-width-input" id="js-user-submit" type="submit" data-test="register-button">
+                {{ content.field_submit_button_label | field_value }}
+              </button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

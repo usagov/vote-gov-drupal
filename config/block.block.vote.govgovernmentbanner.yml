@@ -1,0 +1,25 @@
+uuid: 01eafbb6-4baa-49df-bdd8-12fb940577ef
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:government_banner:1447b063-7391-47e1-9bd8-6589be38bf12'
+  module:
+    - block_content
+  theme:
+    - vote_gov
+id: vote.govgovernmentbanner
+theme: vote_gov
+region: header
+weight: -6
+provider: null
+plugin: 'block_content:1447b063-7391-47e1-9bd8-6589be38bf12'
+settings:
+  id: 'block_content:1447b063-7391-47e1-9bd8-6589be38bf12'
+  label: 'Vote.gov Government Banner'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

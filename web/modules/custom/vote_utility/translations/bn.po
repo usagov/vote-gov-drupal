@@ -1,0 +1,232 @@
+# Bengali translation of Vote.gov
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Vote.gov Utility\\n"
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=utf-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\\n"
+
+#language selector
+msgid "Bengali"
+msgstr "বাংলা"
+
+msgid "Select language"
+msgstr "ভাষা নির্বাচন করুন"
+
+#main
+msgid "@sitename in language"
+msgstr "বাংলায় @sitename"
+
+msgid "Go back"
+msgstr "ফিরে যাও"
+
+msgid "Last updated:"
+msgstr "সর্বশেষ সংষ্করণ"
+
+msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
+msgstr "চেক করা ব্যালট ঢোকানো হচ্ছে সহ ভোটার বাক্সের চিত্র ভোটিং কার্যক্রম নির্দেশ করে"
+
+#identifier
+msgid "An official website of the @link."
+msgstr "@link এর একটি দাপ্তরিক ওয়েবসাইট"
+
+msgid "General Services Administration"
+msgstr "সাধারণ পরিষেবা প্রশাসন"
+
+msgid "Looking for U.S. government information and services? @link."
+msgstr "মার্কিন সরকারের তথ্য এবং পরিষেবা খুঁজছেন? @link"
+
+msgid "Visit USA.gov"
+msgstr "USA.gov দেখুন"
+
+msgid "Agency identifier"
+msgstr "সংস্থা শনাক্তকারী"
+
+msgid "Agency description"
+msgstr "সংস্থার বিবরণ"
+
+msgid "Important links"
+msgstr "গুরুত্বপূর্ণ লিঙ্ক"
+
+msgid "Government information and services"
+msgstr "সরকারি তথ্য ও সেবা"
+
+#contact
+msgid "in partnership with"
+msgstr "এর সাথে অংশীদারিত্বে"
+
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
+msgstr "এর সাথে অংশীদারিত্বে U.S. Election Assistance Commission"
+
+msgid "Follow Vote.gov on Twitter"
+msgstr "টুইটারে Vote.gov অনুসরণ করুন"
+
+#search
+msgid "Search Vote.gov"
+msgstr "Vote.gov অনুসন্ধান করুন"
+
+#state
+msgid "Register to vote in @state_name"
+msgstr "@state_name এ ভোট দিতে নিবন্ধন করুন"
+
+msgid "How to register to vote in @state_name"
+msgstr "@state_name এ ভোট দেওয়ার জন্য কীভাবে নিবন্ধন করবেন"
+
+msgid "Other ways to register to vote in @state_name"
+msgstr "@state_name এ ভোট দেওয়ার জন্য নিবন্ধন করার অন্যান্য উপায়"
+
+msgid "Register by mail deadline:"
+msgstr "ডাকযোগে নিবন্ধনের সময়সীমা:"
+
+msgid "Online registration deadline:"
+msgstr "অনলাইন নিবন্ধনের সময়সীমা:"
+
+msgid "Voter registration deadlines in @state_name"
+msgstr "@state_name এ ভোটার নিবন্ধনের সময়সীমা"
+
+msgid "In person registration deadline:"
+msgstr "ব্যক্তিগতভাবে নিবন্ধনের সময়সীমা:"
+
+msgid "How to check your voter registration"
+msgstr "কীভাবে আপনার ভোটার নিবন্ধন পরীক্ষা করবেন"
+
+msgid "You can confirm your voter registration status on @link."
+msgstr "আপনি আপনার ভোটার রেজিস্ট্রেশন স্ট্যাটাস নিশ্চিত করতে পারেন @link"
+
+msgid "You can confirm your voter registration status by contacting your local registration office. @link."
+msgstr "আপনি আপনার স্থানীয় নিবন্ধন অফিসে যোগাযোগ করে আপনার ভোটার নিবন্ধন স্থিতি নিশ্চিত করতে পারেন। @link।"
+
+msgid "Click here to view Wyoming's county clerk contact information (PDF)"
+msgstr "Wyoming এর কাউন্টি ক্লার্ক যোগাযোগের তথ্য (PDF) দেখতে এখানে ক্লিকরুন"
+
+msgid "Find out ways to register"
+msgstr "নিবন্ধন করার উপায় খুঁজে বের করুন (ইংরেজীতে)"
+
+msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
+msgstr "অনলাইন নিবন্ধন বর্তমানে উপলব্ধ নেই. রাজ্য নির্বাচনের ওয়েবসাইটে ভোট দেওয়ার জন্য @link।"
+
+msgid "Learn more about how to register"
+msgstr "কীভাবে নিবন্ধন করবেন সে সম্পর্কে আরও জানুন (ইংরেজীতে)"
+
+msgid "Register in person at your local election office. @link on @state_name’s election website."
+msgstr "আপনার স্থানীয় নির্বাচন অফিসে ব্যক্তিগতভাবে নিবন্ধন করুন। রাজ্য নির্বাচনের ওয়েবসাইটে @link।"
+
+msgid "Learn more about voting"
+msgstr "ভোটিং সম্পর্কে আরও জানুন (ইংরেজীতে)"
+
+msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
+msgstr "ভার্জিনিয়ায় ভোটার নিবন্ধনের প্রয়োজন নেই। @link রাজ্য নির্বাচনের ওয়েবসাইটে"
+
+msgid "Start your online registration"
+msgstr "আপনার অনলাইন নিবন্ধন শুরু করুন (ইংরেজীতে)"
+
+msgid "@link on @state_name’s election website."
+msgstr "রাজ্য নির্বাচনের ওয়েবসাইটে @link"
+
+msgid "register to vote by mail or in person"
+msgstr "মেইলে বা ব্যক্তিগতভাবে ভোট দিতে নিবন্ধন করতে পারেন (ইংরেজীতে)"
+
+msgid "You can also @link on @state_name’s election website."
+msgstr "আপনি রাজ্য নির্বাচনের ওয়েবসাইটেও @link"
+
+msgid "confirm your voter registration status"
+msgstr "আপনার ভোটার নিবন্ধন স্থিতি নিশ্চিত করতে পারেন (ইংরেজীতে)"
+
+msgid "You can @link on @state_name’s election website."
+msgstr "আপনি রাজ্য নির্বাচনের ওয়েবসাইটে @link"
+
+msgid "External link opens in new window"
+msgstr "বাহ্যিক লিঙ্ক নতুন উইন্ডো খোলে"
+
+#banner
+msgid "Official government website"
+msgstr "দাপ্তরিক সরকারী ওয়েবসাইট"
+
+#footer
+msgid "Email sign-up"
+msgstr "ইমেল নিবন্ধন করুন"
+
+msgid "Contact"
+msgstr "যোগাযোগ"
+
+msgid "GSA logo"
+msgstr "জিএসএ লোগো"
+
+#month and day names
+msgctxt "Long month name"
+msgid "January"
+msgstr "জানুয়ারী"
+
+msgctxt "Long month name"
+msgid "February"
+msgstr "ফেব্রুয়ারী"
+
+msgctxt "Long month name"
+msgid "March"
+msgstr "মার্চ"
+
+msgctxt "Long month name"
+msgid "April"
+msgstr "এপ্রিল"
+
+msgctxt "Long month name"
+msgid "May"
+msgstr "মে"
+
+msgctxt "Long month name"
+msgid "June"
+msgstr "জুন"
+
+msgctxt "Long month name"
+msgid "July"
+msgstr "জুলাই"
+
+msgctxt "Long month name"
+msgid "August"
+msgstr "আগস্ট"
+
+msgctxt "Long month name"
+msgid "September"
+msgstr "সেপ্টেম্বর"
+
+msgctxt "Long month name"
+msgid "October"
+msgstr "অক্টোবর"
+
+msgctxt "Long month name"
+msgid "November"
+msgstr "নভেম্বর"
+
+msgctxt "Long month name"
+msgid "December"
+msgstr "ডিসেম্বর"
+
+msgctxt "day name"
+msgid "Monday"
+msgstr "সোমবার"
+
+msgctxt "day name"
+msgid "Tuesday"
+msgstr "মঙ্গলবার"
+
+msgctxt "day name"
+msgid "Wednesday"
+msgstr "বুধবার"
+
+msgctxt "day name"
+msgid "Thursday"
+msgstr "বৃহস্পতিবার"
+
+msgctxt "day name"
+msgid "Friday"
+msgstr "শুক্রবার"
+
+msgctxt "day name"
+msgid "Saturday"
+msgstr "শনিবার"
+
+msgctxt "day name"
+msgid "Sunday"
+msgstr "রবিবার"

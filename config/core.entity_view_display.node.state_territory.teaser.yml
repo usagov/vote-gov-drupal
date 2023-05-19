@@ -1,6 +1,6 @@
 uuid: 4658fa2b-280a-496d-9137-69d63d8bd5a4
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.state_territory.field_is_state
     - field.field.node.state_territory.field_mail_postmarked_deadline
     - field.field.node.state_territory.field_mail_received_deadline
+    - field.field.node.state_territory.field_metatags
     - field.field.node.state_territory.field_more_info_link
     - field.field.node.state_territory.field_online_deadline
     - field.field.node.state_territory.field_override_confirm_reg_link
@@ -32,6 +33,11 @@ targetEntityType: node
 bundle: state_territory
 mode: teaser
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -49,6 +55,7 @@ hidden:
   field_is_state: true
   field_mail_postmarked_deadline: true
   field_mail_received_deadline: true
+  field_metatags: true
   field_more_info_link: true
   field_online_deadline: true
   field_override_confirm_reg_link: true
@@ -59,3 +66,4 @@ hidden:
   field_registration_type: true
   field_state_abbreviation: true
   langcode: true
+  published_at: true

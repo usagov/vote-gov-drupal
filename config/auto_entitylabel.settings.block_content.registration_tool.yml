@@ -1,0 +1,9 @@
+status: 2
+pattern: 'Registration Tool [block_content:id]'
+escape: false
+preserve_titles: false
+save: false
+chunk: 50
+dependencies:
+  config:
+    - block_content.type.registration_tool

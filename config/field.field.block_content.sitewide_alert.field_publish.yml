@@ -1,0 +1,23 @@
+uuid: 600c6906-d597-4e7e-8a2f-d8162f7ea5da
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sitewide_alert
+    - field.storage.block_content.field_publish
+id: block_content.sitewide_alert.field_publish
+field_name: field_publish
+entity_type: block_content
+bundle: sitewide_alert
+label: Publish
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
