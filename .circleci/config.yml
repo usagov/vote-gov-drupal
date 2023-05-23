@@ -274,7 +274,6 @@ workflows:
                 - dev
                 - stage
                 - test
-                - prod
       - deploy-test:
           filters:
             branches:
