@@ -4,7 +4,7 @@ mv manifest.yml manifest.tmp
 envsubst < manifest.tmp > manifest.yml
 
 branch=${CIRCLE_BRANCH}
-[ "${CIRCLE_BRANCH}" == "test" ] && branch="dev"
+[ "${CIRCLE_BRANCH}" = "test" ] && branch="dev"
 
 cf push
 cf add-network-policy ${project}-drupal-${branch} ${proxy_name} -s ${proxy_space} --protocol tcp --port ${proxy_port}
