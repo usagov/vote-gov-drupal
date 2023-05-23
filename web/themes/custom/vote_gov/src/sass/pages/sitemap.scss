@@ -1,9 +1,14 @@
 @use 'uswds-core' as *;
 @use '../mixins' as *;
+@use '../variables' as *;
 
 .sitemap {
     ul.main-nav, ul.register-nav {
         list-style-type: none;
+
+        .views-field.views-field-title .field-content a {
+                    color: $color-blue-dark;  
+            }
     }
 
     ul.register-nav {
