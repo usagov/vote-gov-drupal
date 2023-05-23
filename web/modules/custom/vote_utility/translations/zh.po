@@ -136,3 +136,97 @@ msgstr "確認您的選民註冊狀態 (英語)"
 
 msgid "You can @link on @state_name’s election website."
 msgstr "您可以在 @state_name 州的選舉網站上 @link"
+
+msgid "External link opens in new window"
+msgstr "外部鏈接打開新窗口"
+
+#banner
+msgid "Official government website"
+msgstr "官方政府網站"
+
+#footer
+msgid "Email sign-up"
+msgstr "電郵註冊"
+
+msgid "Contact"
+msgstr "聯繫"
+
+msgid "GSA logo"
+msgstr "GSA 標誌"
+
+#month and day names
+msgctxt "Long month name"
+msgid "January"
+msgstr "1月"
+
+msgctxt "Long month name"
+msgid "February"
+msgstr "2月"
+
+msgctxt "Long month name"
+msgid "March"
+msgstr "3月"
+
+msgctxt "Long month name"
+msgid "April"
+msgstr "4月"
+
+msgctxt "Long month name"
+msgid "May"
+msgstr "5月"
+
+msgctxt "Long month name"
+msgid "June"
+msgstr "6月"
+
+msgctxt "Long month name"
+msgid "July"
+msgstr "7月"
+
+msgctxt "Long month name"
+msgid "August"
+msgstr "8月"
+
+msgctxt "Long month name"
+msgid "September"
+msgstr "9月"
+
+msgctxt "Long month name"
+msgid "October"
+msgstr "10月"
+
+msgctxt "Long month name"
+msgid "November"
+msgstr "11月"
+
+msgctxt "Long month name"
+msgid "December"
+msgstr "12月"
+
+msgctxt "day name"
+msgid "Monday"
+msgstr "週一"
+
+msgctxt "day name"
+msgid "Tuesday"
+msgstr "週二"
+
+msgctxt "day name"
+msgid "Wednesday"
+msgstr "週三"
+
+msgctxt "day name"
+msgid "Thursday"
+msgstr "週四"
+
+msgctxt "day name"
+msgid "Friday"
+msgstr "周五"
+
+msgctxt "day name"
+msgid "Saturday"
+msgstr "週六"
+
+msgctxt "day name"
+msgid "Sunday"
+msgstr "周日"

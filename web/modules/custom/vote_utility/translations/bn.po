@@ -136,3 +136,97 @@ msgstr "আপনার ভোটার নিবন্ধন স্থিতি
 
 msgid "You can @link on @state_name’s election website."
 msgstr "আপনি রাজ্য নির্বাচনের ওয়েবসাইটে @link"
+
+msgid "External link opens in new window"
+msgstr "বাহ্যিক লিঙ্ক নতুন উইন্ডো খোলে"
+
+#banner
+msgid "Official government website"
+msgstr "দাপ্তরিক সরকারী ওয়েবসাইট"
+
+#footer
+msgid "Email sign-up"
+msgstr "ইমেল নিবন্ধন করুন"
+
+msgid "Contact"
+msgstr "যোগাযোগ"
+
+msgid "GSA logo"
+msgstr "জিএসএ লোগো"
+
+#month and day names
+msgctxt "Long month name"
+msgid "January"
+msgstr "জানুয়ারী"
+
+msgctxt "Long month name"
+msgid "February"
+msgstr "ফেব্রুয়ারী"
+
+msgctxt "Long month name"
+msgid "March"
+msgstr "মার্চ"
+
+msgctxt "Long month name"
+msgid "April"
+msgstr "এপ্রিল"
+
+msgctxt "Long month name"
+msgid "May"
+msgstr "মে"
+
+msgctxt "Long month name"
+msgid "June"
+msgstr "জুন"
+
+msgctxt "Long month name"
+msgid "July"
+msgstr "জুলাই"
+
+msgctxt "Long month name"
+msgid "August"
+msgstr "আগস্ট"
+
+msgctxt "Long month name"
+msgid "September"
+msgstr "সেপ্টেম্বর"
+
+msgctxt "Long month name"
+msgid "October"
+msgstr "অক্টোবর"
+
+msgctxt "Long month name"
+msgid "November"
+msgstr "নভেম্বর"
+
+msgctxt "Long month name"
+msgid "December"
+msgstr "ডিসেম্বর"
+
+msgctxt "day name"
+msgid "Monday"
+msgstr "সোমবার"
+
+msgctxt "day name"
+msgid "Tuesday"
+msgstr "মঙ্গলবার"
+
+msgctxt "day name"
+msgid "Wednesday"
+msgstr "বুধবার"
+
+msgctxt "day name"
+msgid "Thursday"
+msgstr "বৃহস্পতিবার"
+
+msgctxt "day name"
+msgid "Friday"
+msgstr "শুক্রবার"
+
+msgctxt "day name"
+msgid "Saturday"
+msgstr "শনিবার"
+
+msgctxt "day name"
+msgid "Sunday"
+msgstr "রবিবার"

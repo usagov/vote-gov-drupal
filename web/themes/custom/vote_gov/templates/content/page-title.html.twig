@@ -15,15 +15,15 @@
 {% set title = title | render | striptags | trim %}
 {% set node_type = currentnode.bundle() %}
 
-{# set alt title for state pages #}
-{% if node_type == 'state_territory' %}
-  {% if language == 'ko' and currentnode.field_is_state.0.value == 1 %}
-    {# set title to alt text for state pages in korean #}
-    {% set title = 'Register to vote in @state_name state' | t ({"@state_name": title}) %}
-  {% else %}
-    {% set title = 'Register to vote in @state_name' | t ({"@state_name": title}) %}
+{% if node_type == "state_territory" %}
+  {% if language == 'ko' and currentnode.field_is_state.value %}
+    {% set korean_state_char = "state" | t %}
+    {% set title = title ~ " " ~ korean_state_char %}
   {% endif %}
+
+  {% set title = 'Register to vote in @state_name' | t ({"@state_name": title}) %}
 {% endif %}
+
 
 {{ title_prefix }}
 {% if title %}

@@ -141,3 +141,80 @@ msgstr "A'doot'1[ biniy4 hazh'diilaay65 hazh0'0 bee l3 adeesh[ee[ jin7zingo @&lt
 
 msgid "You can @link on @state_name’s election website."
 msgstr "@link t'11 b7ighah n7l47 @state_name b1 an7da'ii'ni[7gi bi-website-gi   "
+
+#month and day names
+msgctxt "Long month name"
+msgid "January"
+msgstr "Yas Ni[t'ees"
+
+msgctxt "Long month name"
+msgid "February"
+msgstr "Ats1 Biy11zh"
+
+msgctxt "Long month name"
+msgid "March"
+msgstr "W00zhch'99d"
+
+msgctxt "Long month name"
+msgid "April"
+msgstr "T'33chil"
+
+msgctxt "Long month name"
+msgid "May"
+msgstr "T'11tsoh"
+
+msgctxt "Long month name"
+msgid "June"
+msgstr "Ya'iishj33shchil7"
+
+msgctxt "Long month name"
+msgid "July"
+msgstr "Ya'iishj33shtsoh"
+
+msgctxt "Long month name"
+msgid "August"
+msgstr "Bini'anint'33ts'0s7"
+
+msgctxt "Long month name"
+msgid "September"
+msgstr "Bini'anint'33tsoh"
+
+msgctxt "Long month name"
+msgid "October"
+msgstr "Gh22j8'"
+
+msgctxt "Long month name"
+msgid "November"
+msgstr "N7[ch'ihts'0s7"
+
+msgctxt "Long month name"
+msgid "December"
+msgstr "N7[ch'ihtsoh"
+
+msgctxt "day name"
+msgid "Monday"
+msgstr "Dam0o biisk3n7"
+
+msgctxt "day name"
+msgid "Tuesday"
+msgstr "Dam0o naakiij9"
+
+msgctxt "day name"
+msgid "Wednesday"
+msgstr "Dam0o t1g7j9"
+
+msgctxt "day name"
+msgid "Thursday"
+msgstr "Dam0o d9'7j9"
+
+msgctxt "day name"
+msgid "Friday"
+msgstr "Nida'iin77sh"
+
+msgctxt "day name"
+msgid "Saturday"
+msgstr "Dam0o y1zh7"
+
+msgctxt "day name"
+msgid "Sunday"
+msgstr "Dam0o"

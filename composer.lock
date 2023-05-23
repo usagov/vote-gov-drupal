@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab0c31fb044e49555d208d9417f6ffb2",
+    "content-hash": "7f4402352395b8dcb5a6ea6b584a8a67",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2070,6 +2070,58 @@
             "time": "2023-04-19T16:14:25+00:00"
         },
         {
+            "name": "drupal/crazyegg",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/crazyegg.git",
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/crazyegg-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "05d107313cbc65f098283d1d9ec6d9967d9fd817"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.4",
+                    "datestamp": "1682505284",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "crazyegg",
+                    "homepage": "https://www.drupal.org/user/3561241"
+                },
+                {
+                    "name": "maxim.filipovich",
+                    "homepage": "https://www.drupal.org/user/3756986"
+                },
+                {
+                    "name": "shravan.crazyegg",
+                    "homepage": "https://www.drupal.org/user/3645723"
+                }
+            ],
+            "description": "The official Crazy Egg Plugin for Drupal. The easiest, free way to add your Crazy Egg tracking script to your Drupal site.",
+            "homepage": "https://drupal.org/project/crazyegg",
+            "support": {
+                "source": "https://git.drupalcode.org/project/crazyegg"
+            }
+        },
+        {
             "name": "drupal/ctools",
             "version": "4.0.3",
             "source": {
@@ -2160,6 +2212,74 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/ctools",
                 "issues": "https://www.drupal.org/project/issues/ctools"
+            }
+        },
+        {
+            "name": "drupal/disable_language",
+            "version": "1.0.0-beta12",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/disable_language.git",
+                "reference": "8.x-1.0-beta12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/disable_language-8.x-1.0-beta12.zip",
+                "reference": "8.x-1.0-beta12",
+                "shasum": "bf3e4206f22e6202a799d94cc9b74d4ee3bd97c4"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-beta12",
+                    "datestamp": "1674038090",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Grayle",
+                    "homepage": "https://www.drupal.org/user/3145497"
+                },
+                {
+                    "name": "L_VanDamme",
+                    "homepage": "https://www.drupal.org/user/3162503"
+                },
+                {
+                    "name": "nginex",
+                    "homepage": "https://www.drupal.org/user/2822325"
+                },
+                {
+                    "name": "nielsaers",
+                    "homepage": "https://www.drupal.org/user/752444"
+                },
+                {
+                    "name": "sandboxpl",
+                    "homepage": "https://www.drupal.org/user/2187728"
+                },
+                {
+                    "name": "Thomas Cys",
+                    "homepage": "https://www.drupal.org/user/2575770"
+                }
+            ],
+            "description": "Disable language lets you disable language",
+            "homepage": "http://drupal.org/project/disable_language",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/disable_language",
+                "issues": "http://drupal.org/project/issues/disable_language"
             }
         },
         {

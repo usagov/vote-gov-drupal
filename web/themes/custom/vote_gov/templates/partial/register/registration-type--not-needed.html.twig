@@ -1,5 +1,4 @@
-{% set state_name = label | field_value | render %}
-    {# More info #}
+{# More info #}
 {% if content.field_more_info_link | render %}
 <h2>{{ 'How to register to vote in @state_name' | t({ '@state_name': state_name }) }}</h2>
   {% set more_info_link = content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ) %}

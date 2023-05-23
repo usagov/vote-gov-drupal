@@ -1,0 +1,26 @@
+#! /bin/bash
+
+home="/home/vcap"
+app_path="${home}/app"
+
+## Start PHP FPM
+${app_path}/php/sbin/php-fpm -p "${app_path}/php/etc" -y "${app_path}/php/etc/php-fpm.conf" -c "${app_path}/php/etc" &
+
+## Start Apache
+${app_path}/httpd/bin/apachectl -f "${app_path}/httpd/conf/httpd.conf" -k start -DFOREGROUND &
+
+## Wait for the egress proxy access to be allowed.
+while : ; do
+  echo "Waiting for network..."
+  response=$(curl -LIks --connect-timeout 2 "https://www.github.com")
+  sleep 3
+
+  [[ "${response}" == *"HTTP/2 200"* ]] && break
+done
+
+#${home}/deps/0/apt/usr/bin/newrelic-daemon -c ${app_path}/newrelic.cfg
+
+#${app_path}/scripts/build_static &
+
+## Run entry point
+${app_path}/scripts/entrypoint &

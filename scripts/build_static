@@ -1,0 +1,34 @@
+#!/bin/bash
+
+home="/home/vcap"
+app_path="${home}/app"
+html_path="${app_path}/html"
+
+source ${app_path}/scripts/bootstrap.sh
+
+export application_uri=$(echo $VCAP_APPLICATION | jq -r '.application_uris[]')
+
+export AWS_ACCESS_KEY_ID=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.access_key_id')
+export AWS_SECRET_ACCESS_KEY=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.secret_access_key')
+export AWS_DEFAULT_REGION=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.region')
+
+export bucket_name=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).name')
+export bucket=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.bucket')
+export bucket_endpoint=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.endpoint')
+
+source ${home}/.bashrc
+
+export PYTHONWARNINGS="ignore:Unverified HTTPS request"
+
+mkdir -p ${html_path}
+
+cd ${app_path}
+echo "Running 'drush tome:static'..."
+drush tome:static --uri=https://${waf_external_endpoint} --process-count=1 -y
+echo "'drush tome:static' task completed!"
+
+cd ${html_path}
+echo "Copying static files to '${bucket_name}'..."
+aws s3 sync . s3://${bucket} --delete --no-verify-ssl 2>/dev/null
+aws s3 website s3://${bucket} --index-document index.html --error-document /404/index.html  --no-verify-ssl 2>/dev/null
+echo "Copy to '${bucket_name}' completed!"
