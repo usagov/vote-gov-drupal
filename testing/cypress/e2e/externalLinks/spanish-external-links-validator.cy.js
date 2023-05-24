@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-const allPages = require("../../fixtures/site-pages.json");
+const allPages = require("../../fixtures/spanish-site.json");
 
 const excludedlinks = [
   'https://voterregistration.ct.gov/OLVR/welcome.do?ref=voteusa_en',
@@ -20,7 +20,7 @@ const excludedlinks = [
   'https://info.scvotes.sc.gov/eng/ovr/start.aspx?ref=voteusa_en'
 ];
 
-describe("English - External Link Validator Test", () => {
+describe("Spanish - External Link Validator Test", () => {
   const singlePage =
     Cypress.env("name") && Cypress.env("route")
       ? [
