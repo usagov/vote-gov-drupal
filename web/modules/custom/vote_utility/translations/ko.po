@@ -239,3 +239,22 @@ msgstr "토요일"
 msgctxt "day name"
 msgid "Sunday"
 msgstr "일요일"
+
+#ordinals
+msgid "first"
+msgstr "첫번째"
+
+msgid "second"
+msgstr "두번째"
+
+msgid "third"
+msgstr "세번째"
+
+msgid "fourth"
+msgstr "네번째"
+
+msgid "fifth"
+msgstr "다섯번째"
+
+msgid "last"
+msgstr "마지막"

@@ -236,3 +236,22 @@ msgstr "শনিবার"
 msgctxt "day name"
 msgid "Sunday"
 msgstr "রবিবার"
+
+#ordinals
+msgid "first"
+msgstr "প্রথম"
+
+msgid "second"
+msgstr "দ্বিতীয়"
+
+msgid "third"
+msgstr "তৃতীয়"
+
+msgid "fourth"
+msgstr "চতুর্থ"
+
+msgid "fifth"
+msgstr "পঞ্চম"
+
+msgid "last"
+msgstr "শেষ"

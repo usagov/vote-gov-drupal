@@ -236,3 +236,22 @@ msgstr "Thứ Bảy"
 msgctxt "day name"
 msgid "Sunday"
 msgstr "Chủ Nhật"
+
+#ordinals
+msgid "first"
+msgstr "thứ nhất"
+
+msgid "second"
+msgstr "thứ hai"
+
+msgid "third"
+msgstr "thứ ba"
+
+msgid "fourth"
+msgstr "thứ tư"
+
+msgid "fifth"
+msgstr "thứ năm"
+
+msgid "last"
+msgstr "cuối cùng"

@@ -237,3 +237,22 @@ msgstr "Sabado"
 msgctxt "day name"
 msgid "Sunday"
 msgstr "Linggo"
+
+#ordinals
+msgid "first"
+msgstr "ika-una"
+
+msgid "second"
+msgstr "ika-dalawa"
+
+msgid "third"
+msgstr "ika-tatlo"
+
+msgid "fourth"
+msgstr "ika-apat"
+
+msgid "fifth"
+msgstr "ika-lima"
+
+msgid "last"
+msgstr "panghuli"

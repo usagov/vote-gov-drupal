@@ -236,3 +236,22 @@ msgstr "sábado"
 msgctxt "day name"
 msgid "Sunday"
 msgstr "星期日"
+
+#ordinals
+msgid "first"
+msgstr "第一"
+
+msgid "second"
+msgstr "第二"
+
+msgid "third"
+msgstr "第三"
+
+msgid "fourth"
+msgstr "第四"
+
+msgid "fifth"
+msgstr "第五"
+
+msgid "last"
+msgstr "最后的"
