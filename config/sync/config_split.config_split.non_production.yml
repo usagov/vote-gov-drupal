@@ -1,0 +1,15 @@
+uuid: c781a3c2-aac2-434a-9290-50efe8045dd0
+langcode: en
+status: false
+dependencies: {  }
+id: non_production
+label: Non-Production
+description: 'This configuration split it used for non-production cloud.gov environments.'
+weight: 0
+folder: ../config/non_production
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

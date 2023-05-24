@@ -167,4 +167,5 @@ $databases['default']['default'] = array (
 );
 
 $settings['tome_static_directory'] = dirname(DRUPAL_ROOT) . '/html';
-$settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config';
+$settings['config_sync_directory'] = '../config/sync';
+$config['config_split.config_split.local']['status'] = True;

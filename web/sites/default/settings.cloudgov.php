@@ -15,7 +15,6 @@ $application_hostname = "https://" . $_SERVER['SERVER_NAME'];
 $applicaiton_fqdn_regex = "^.+\.(app\.cloud\.gov|apps\.internal)$";
 
 $settings['tome_static_directory'] = dirname(DRUPAL_ROOT) . '/html';
-$settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config';
 $settings['file_private_path'] = dirname(DRUPAL_ROOT) . '/private';
 $settings['install_profile'] = 'minimal';
 
@@ -34,16 +33,22 @@ if (!empty($cf_application_data['space_name']) &&
     case "dev":
       $is_cloudgov = TRUE;
       // $server_http_host = 'cms-dev.vote.gov';
+      // If develop we want to activate non_production settings.
+      $config['config_split.config_split.non_production']['status'] = True;
       break;
 
     case "stage":
       $is_cloudgov = TRUE;
       // $server_http_host = 'cms-stage.vote.gov';
+      // If stage we want to activate non_production settings.
+      $config['config_split.config_split.non_production']['status'] = True;
       break;
 
     case "prod":
       $is_cloudgov = TRUE;
       // $server_http_host = 'cms.vote.gov';
+      // If production we want to activate production settings.
+      $config['config_split.config_split.production']['status'] = True;
       break;
   }
   $server_http_host = $application_hostname;

@@ -1,0 +1,15 @@
+uuid: aab44be0-650c-4d6c-b2f0-bb13e833bc83
+langcode: en
+status: true
+dependencies: {  }
+id: production
+label: Production
+description: 'This configuration split is used for the production cloud.gov env.'
+weight: 0
+folder: ../config/production
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

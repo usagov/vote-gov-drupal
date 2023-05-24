@@ -1,0 +1,17 @@
+uuid: 02034098-dfa6-459b-aef9-8aa4e2a98766
+langcode: en
+status: false
+dependencies: {  }
+id: local
+label: Local
+description: 'This configuration split us used for the Lando local env.'
+weight: 0
+folder: ../config/local
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist:
+  - autologout.settings
+  - system.logging
+graylist_dependents: true
+graylist_skip_equal: true

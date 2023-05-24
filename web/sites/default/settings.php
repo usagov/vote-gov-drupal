@@ -235,7 +235,16 @@ $databases = [];
  * directory in the public files path. The setting below allows you to set
  * its location.
  */
-# $settings['config_sync_directory'] = '/directory/outside/webroot';
+$settings['config_sync_directory'] = '../config/sync';
+
+/**
+ * config_sync settings per environment. We will start with
+ * the default config_sync set to false and then override it
+ * in included setting files
+ */
+$config['config_split.config_split.local']['status'] = FALSE;
+$config['config_split.config_split.non_production']['status'] = FALSE;
+$config['config_split.config_split.production']['status'] = FALSE;
 
 /**
  * Settings:
