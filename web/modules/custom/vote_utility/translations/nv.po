@@ -145,6 +145,9 @@ msgstr "@link t'11 b7ighah n7l47 @state_name b1 an7da'ii'ni[7gi bi-website-gi   
 msgid "Skip to main content"
 msgstr "&yis77 baa hane'7gi nin7[keed"
 
+msgid "(in English)"
+msgstr "<Bilag1ana k'ehj7>"
+
 #month and day names
 msgctxt "Long month name"
 msgid "January"

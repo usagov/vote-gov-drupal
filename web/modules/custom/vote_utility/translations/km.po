@@ -143,6 +143,9 @@ msgstr "តំណខាងក្រៅបើកផ្ទាំងបង្ឣួ
 msgid "Skip to main content"
 msgstr "រំលងចូលទៅមាតិកាសំខាន់"
 
+msgid "(in English)"
+msgstr "(ជាភាសាអង់គ្លេស)"
+
 #banner
 msgid "Official government website"
 msgstr "គេហទំព័រផ្លូវការរបស់រដ្ឋាភិបាល"

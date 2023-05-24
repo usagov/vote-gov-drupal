@@ -143,6 +143,9 @@ msgstr "外部链接打开新窗口"
 msgid "Skip to main content"
 msgstr "跳到主要内容"
 
+msgid "(in English)"
+msgstr "(英语)"
+
 #banner
 msgid "Official government website"
 msgstr "官方政府网站"

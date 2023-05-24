@@ -146,6 +146,9 @@ msgstr "외부 링크 사이트는 새 창에서 연결됩니다"
 msgid "Skip to main content"
 msgstr "메인 화면 바로 가기"
 
+msgid "(in English)"
+msgstr "(영어로 제공)"
+
 #banner
 msgid "Official government website"
 msgstr "공식 정부 웹사이트"

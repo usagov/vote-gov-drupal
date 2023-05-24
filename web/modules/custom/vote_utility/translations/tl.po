@@ -144,6 +144,9 @@ msgstr "Ang panlabas na link ay magbubukas ng bagong window"
 msgid "Skip to main content"
 msgstr "Lumaktaw sa pangunahing nilalaman"
 
+msgid "(in English)"
+msgstr "(sa Ingles)"
+
 #banner
 msgid "Official government website"
 msgstr "Opisyal na website ng gobyerno"
