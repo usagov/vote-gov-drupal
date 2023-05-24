@@ -141,6 +141,9 @@ msgstr "Maaari ninyong  @link sa website ng eleksyon ng estado ng @state_name."
 msgid "External link opens in new window"
 msgstr "Ang panlabas na link ay magbubukas ng bagong window"
 
+msgid "Skip to main content"
+msgstr "Lumaktaw sa pangunahing nilalaman"
+
 #banner
 msgid "Official government website"
 msgstr "Opisyal na website ng gobyerno"

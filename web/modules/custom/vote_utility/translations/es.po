@@ -140,6 +140,9 @@ msgstr "Usted puede @link en el sitio web de elecciones estatales de @state_name
 msgid "External link opens in new window"
 msgstr "El enlace externo se abre en una nueva ventana"
 
+msgid "Skip to main content"
+msgstr "Ir al contenido principal"
+
 #banner
 msgid "Official government website"
 msgstr "Sitio web oficial del gobierno"

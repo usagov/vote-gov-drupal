@@ -137,6 +137,9 @@ msgstr "Ipapighqesaghngaaghpegu ilatellghen (Laluramkestun)"
 msgid "You can @link on @state_name’s election website."
 msgstr "@link @state_name-em state-angan nakmikillghan webstte-angani. "
 
+msgid "Skip to main content"
+msgstr "Naghughaghten pighpigaghmun"
+
 #banner
 msgid "Official government website"
 msgstr "Official government website"

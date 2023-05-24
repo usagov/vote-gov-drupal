@@ -140,6 +140,9 @@ msgstr "អ្នកអាច @link នៅលើគេហទំព័របោ�
 msgid "External link opens in new window"
 msgstr "តំណខាងក្រៅបើកផ្ទាំងបង្ឣួចថ្មី"
 
+msgid "Skip to main content"
+msgstr "រំលងចូលទៅមាតិកាសំខាន់"
+
 #banner
 msgid "Official government website"
 msgstr "គេហទំព័រផ្លូវការរបស់រដ្ឋាភិបាល"

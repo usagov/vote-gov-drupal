@@ -140,6 +140,9 @@ msgstr "您可以在 @state_name 州的選舉網站上 @link"
 msgid "External link opens in new window"
 msgstr "外部鏈接打開新窗口"
 
+msgid "Skip to main content"
+msgstr "跳到主要內容"
+
 #banner
 msgid "Official government website"
 msgstr "官方政府網站"

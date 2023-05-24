@@ -140,6 +140,9 @@ msgstr "Bạn có thể @link trên trang web bầu cử cấp tiểu bang của
 msgid "External link opens in new window"
 msgstr "Liên kết bên ngoài mở cửa sổ mới"
 
+msgid "Skip to main content"
+msgstr "Bỏ qua để đi thẳng vào nội dung chính"
+
 #banner
 msgid "Official government website"
 msgstr "Trang web chính thức của chính phủ"
