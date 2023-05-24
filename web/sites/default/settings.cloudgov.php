@@ -34,21 +34,21 @@ if (!empty($cf_application_data['space_name']) &&
       $is_cloudgov = TRUE;
       // $server_http_host = 'cms-dev.vote.gov';
       // If develop we want to activate non_production settings.
-      $config['config_split.config_split.non_production']['status'] = True;
+      $config['config_split.config_split.non_production']['status'] = TRUE;
       break;
 
     case "stage":
       $is_cloudgov = TRUE;
       // $server_http_host = 'cms-stage.vote.gov';
       // If stage we want to activate non_production settings.
-      $config['config_split.config_split.non_production']['status'] = True;
+      $config['config_split.config_split.non_production']['status'] = TRUE;
       break;
 
     case "prod":
       $is_cloudgov = TRUE;
       // $server_http_host = 'cms.vote.gov';
       // If production we want to activate production settings.
-      $config['config_split.config_split.production']['status'] = True;
+      $config['config_split.config_split.production']['status'] = TRUE;
       break;
   }
   $server_http_host = $application_hostname;
