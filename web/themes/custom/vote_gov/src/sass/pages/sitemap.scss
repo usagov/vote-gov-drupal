@@ -3,19 +3,20 @@
 @use '../variables' as *;
 
 .sitemap {
-    ul.main-nav, ul.register-nav {
-        list-style-type: none;
+  ul.main-nav,
+  ul.register-nav {
+    list-style-type: none;
 
-        .views-field.views-field-title .field-content a {
-                    color: $color-blue-dark;  
-            }
+    .views-field.views-field-title .field-content a,
+    li a {
+      color: $color-blue-dark;
     }
+  }
 
-    ul.register-nav {
-        columns: 2;
-
-        @include at-media('tablet') {
-            columns: 3;
-        }
+  ul.register-nav {
+    columns: 2;
+    @include at-media('tablet') {
+      columns: 3;
     }
+  }
 }

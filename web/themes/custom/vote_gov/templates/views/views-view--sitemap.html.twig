@@ -36,17 +36,13 @@
 
 <div class="sitemap">
   <h2>Main Navigation</h2>
-  <ul class="main-nav usa-list">
-{{ drupal_menu('main') }}
-  </ul>
+    {{ drupal_menu('main') }}
   <h2>Register to Vote - by State and Territory</h2>
   <ul class="register-nav usa-list">
   {% if rows %}
       {{ rows }}
   {% elseif empty %}
-    <div class="">
       {{ empty }}
-    </div>
   {% endif %}
   </ul> 
 </div>
