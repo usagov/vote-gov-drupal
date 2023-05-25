@@ -146,7 +146,7 @@ msgid "Skip to main content"
 msgstr "&yis77 baa hane'7gi nin7[keed"
 
 msgid "(in English)"
-msgstr "<Bilag1ana k'ehj7>"
+msgstr "&lt;Bilag1ana k'ehj7&gt;"
 
 #month and day names
 msgctxt "Long month name"
