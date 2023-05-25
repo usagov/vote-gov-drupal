@@ -236,22 +236,3 @@ msgstr "ថ្ងៃសៅរ៍"
 msgctxt "day name"
 msgid "Sunday"
 msgstr "ថ្ងៃអាទិត្"
-
-#ordinals
-msgid "first"
-msgstr "ទីមួយ"
-
-msgid "second"
-msgstr "ទីពីរ"
-
-msgid "third"
-msgstr "ទីបី"
-
-msgid "fourth"
-msgstr "ទីបួន"
-
-msgid "fifth"
-msgstr "ទីប្រាំ"
-
-msgid "last"
-msgstr "ចុងក្រោយ"

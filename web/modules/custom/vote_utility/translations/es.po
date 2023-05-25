@@ -236,22 +236,3 @@ msgstr "sábado"
 msgctxt "day name"
 msgid "Sunday"
 msgstr "domingo"
-
-#ordinals
-msgid "first"
-msgstr "primero"
-
-msgid "second"
-msgstr "segundo"
-
-msgid "third"
-msgstr "tercero"
-
-msgid "fourth"
-msgstr "cuarto"
-
-msgid "fifth"
-msgstr "quinto"
-
-msgid "last"
-msgstr "último"

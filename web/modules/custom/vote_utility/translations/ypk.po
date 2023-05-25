@@ -233,22 +233,3 @@ msgstr "Sareri"
 msgctxt "day name"
 msgid "Sunday"
 msgstr "Santi"
-
-#ordinals
-msgid "first"
-msgstr "Sivuliq"
-
-msgid "second"
-msgstr "Tunglii"
-
-msgid "third"
-msgstr "Pingayaa"
-
-msgid "fourth"
-msgstr "Estamaa"
-
-msgid "fifth"
-msgstr "Tallimaa"
-
-msgid "last"
-msgstr "Kinguliq"
