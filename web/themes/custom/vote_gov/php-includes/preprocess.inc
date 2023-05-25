@@ -30,6 +30,9 @@ function vote_gov_preprocess(&$variables) {
   if (!empty($node)) {
     $variables['currentnode'] = $node;
   }
+
+  // Set variable for frontpage.
+  $variables['is_frontpage'] = \Drupal::service('path.matcher')->isFrontPage();
 }
 
 /**
