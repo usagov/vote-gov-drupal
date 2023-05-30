@@ -29,10 +29,10 @@ function vote_gov_preprocess(&$variables) {
     // Check if current page is designated an error page.
     $system_errors = [
       404 => Drupal::config('system.site')->get('page.404'),
-      403 => Drupal::config('system.site')->get('page.403')
+      403 => Drupal::config('system.site')->get('page.403'),
     ];
 
-    foreach($system_errors as $system_error) {
+    foreach ($system_errors as $system_error) {
       if ($system_error == '/node/' . $node->id()) {
         $variables['status_code'] = 'error';
       }
