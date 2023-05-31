@@ -4,6 +4,7 @@ module.exports = defineConfig({
 reporter: 'cypress-mochawesome-reporter',
   e2e: {
     baseUrl: 'http://vote-gov.lndo.site/',
+    redirectionLimit: 100,
     video: false,
     viewportHeight: 800,
     viewportWidth: 1530,
