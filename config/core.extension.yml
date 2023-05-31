@@ -29,7 +29,6 @@ module:
   file: 0
   file_delete: 0
   filter: 0
-  google_tag: 0
   image: 0
   language: 0
   language_switcher_extended: 0
