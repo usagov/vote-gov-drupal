@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7f4402352395b8dcb5a6ea6b584a8a67",
+    "content-hash": "85ce2f29d6cbcf189c4c1b21c6dc56e5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3667,6 +3667,51 @@
             "homepage": "https://www.drupal.org/project/tome",
             "support": {
                 "source": "https://git.drupalcode.org/project/tome"
+            }
+        },
+        {
+            "name": "drupal/translatable_menu_link_uri",
+            "version": "dev-2.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/translatable_menu_link_uri.git",
+                "reference": "822d97123531cb3bfa5de75f18ec220f08d5d3bb"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "2.x-dev",
+                    "datestamp": "1675005734",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "jsobiecki",
+                    "homepage": "https://www.drupal.org/user/112744"
+                },
+                {
+                    "name": "wiktorb",
+                    "homepage": "https://www.drupal.org/user/762836"
+                }
+            ],
+            "description": "This module enables support for translation of link field in menu_link_content entity.",
+            "homepage": "https://www.drupal.org/project/translatable_menu_link_uri",
+            "support": {
+                "source": "https://git.drupalcode.org/project/translatable_menu_link_uri"
             }
         },
         {
@@ -12574,6 +12619,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal-tome/tome_drush": 20,
+        "drupal/disable_language": 10,
         "drupal/log_stdout": 20,
         "drupal/node_revision_delete": 5,
         "drupal/pathauto": 20,
