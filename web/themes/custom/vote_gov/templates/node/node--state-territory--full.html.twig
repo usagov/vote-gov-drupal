@@ -29,7 +29,13 @@
 
 <p>{{'Last updated:' | t }} {{ node.revision_timestamp.value | date('U') | format_date('revision_date') }}</p>
 
+{% endblock %}
+
+{% block goback %}
+
     {# Homepage link #}
 {% include '@vote_gov/partial/homepage-link.html.twig' %}
 
 {% endblock %}
+
+
