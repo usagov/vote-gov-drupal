@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-const allPages = require("../../fixtures/testing-page.json");
+const allPages = require("../../fixtures/site-pages.json");
 
 describe("Internal Link Validator Test", () => {
   const singlePage =
