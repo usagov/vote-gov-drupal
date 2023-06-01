@@ -59,6 +59,7 @@ module:
   tome_base: 0
   tome_static: 0
   toolbar: 0
+  translatable_menu_link_uri: 0
   twig_field_value: 0
   twig_tweak: 0
   update: 0
