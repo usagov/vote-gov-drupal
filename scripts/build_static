@@ -28,7 +28,6 @@ cd ${app_path}
 echo "Running 'drush tome:static'..."
 drush tome:static --uri=https://${external_endpoint} --process-count=2 -y
 echo "'drush tome:static' task completed!"
-ic' task completed!"
 
 cd ${html_path}
 echo "Copying static files to '${bucket_name}'..."
