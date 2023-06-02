@@ -220,7 +220,7 @@ describe('Test User Role Access to Content Moderation', () => {
     cy.logout()
   })
 
-  it.only('test anonymous user access', () => {
+  it('test anonymous user access', () => {
      // Can not view draft content  
     cy.request({
       url: '/cypress-content-moderation-test',
