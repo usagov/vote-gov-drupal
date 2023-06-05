@@ -25,7 +25,7 @@ export external_endpoint="https://ssg-${ENV}.vote.gov"
 [ "${ENV}" = "prod" ] && export external_endpoint="https://ssg.vote.gov"
 
 cd ${app_path}
-echo "Running 'drush tome:static'..."
+echo "Running 'drush tome:static' in '${ENV}'..."
 drush tome:static --uri=${external_endpoint} --process-count=2 --retry-count=0 -y
 echo "'drush tome:static' task completed!"
 
