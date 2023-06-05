@@ -13,7 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "@uswds/uswds": "^3.4.1",
-    "a11y-tabs": "^0.1.2"
+    "a11y-tabs": "^0.1.2",
+    "stylelint": "^15.6.3"
   },
   "devDependencies": {
     "@uswds/compile": "^1.0.0-beta.3",
@@ -21,6 +22,6 @@
     "gulp": "^4.0.2",
     "gulp-stylelint": "^13.0.0",
     "gulp-uglify": "^3.0.2",
-    "uglify-es": "^3.3.10"
+    "uglify-js": "^3.17.4"
   }
 }
