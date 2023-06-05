@@ -37,14 +37,17 @@ if (!empty($cf_application_data['space_name']) &&
       $is_cloudgov = TRUE;
       $server_http_host = 'cms-dev.vote.gov';
       break;
+
     case "prod":
       $is_cloudgov = TRUE;
       $server_http_host = 'cms.vote.gov';
       break;
+
     case "stage":
       $is_cloudgov = TRUE;
       $server_http_host = 'cms-stage.vote.gov';
       break;
+
     case "test":
       $is_cloudgov = TRUE;
       $server_http_host = 'cms-test.vote.gov';
@@ -81,7 +84,7 @@ foreach ($cf_service_data as $service_list) {
       $settings['s3fs.secret_key'] = $service['credentials']['secret_access_key'];
       $config['s3fs.settings']['bucket'] = $service['credentials']['bucket'];
       $config['s3fs.settings']['region'] = $service['credentials']['region'];
-      
+
       $config['s3fs.settings']['disable_cert_verify'] = FALSE;
 
       $config['s3fs.settings']['root_folder'] = 'cms';
@@ -99,7 +102,7 @@ foreach ($cf_service_data as $service_list) {
 
       $config['s3fs.settings']['use_cssjs_host'] = FALSE;
       $config['s3fs.settings']['cssjs_host'] = '';
-      
+
       $config['s3fs.settings']['use_https'] = TRUE;
       $settings['s3fs.upload_as_private'] = FALSE;
       $settings['s3fs.use_s3_for_public'] = TRUE;
