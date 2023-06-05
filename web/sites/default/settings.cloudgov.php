@@ -8,7 +8,7 @@
 $cf_application_data = json_decode(getenv('VCAP_APPLICATION') ?? '{}', TRUE);
 $cf_service_data = json_decode(getenv('VCAP_SERVICES') ?? '{}', TRUE);
 
-$application_environment = explode("-", $cf_application_data['space_name'])[count(explode("-", $cf_application_data['space_name'])) - 1] ?? 'local';
+$application_environment = getenv('ENV') ?? 'local';
 
 $application_hostname = "https://" . $_SERVER['SERVER_NAME'];
 
