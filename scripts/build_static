@@ -4,7 +4,6 @@ home="/home/vcap"
 app_path="${home}/app"
 html_path="${app_path}/html"
 
-source ${app_path}/scripts/bootstrap.sh
 source ${home}/.bashrc
 
 mkdir -p ${html_path}
