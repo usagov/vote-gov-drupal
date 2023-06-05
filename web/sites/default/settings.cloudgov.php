@@ -35,22 +35,22 @@ if (!empty($cf_application_data['space_name']) &&
   switch ($application_environment) {
     case "dev":
       $is_cloudgov = TRUE;
-      $server_http_host = 'cms-dev.vote.gov';
+      $server_http_host = 'ssg-dev.vote.gov';
       break;
 
     case "prod":
       $is_cloudgov = TRUE;
-      $server_http_host = 'cms.vote.gov';
+      $server_http_host = 'ssg.vote.gov';
       break;
 
     case "stage":
       $is_cloudgov = TRUE;
-      $server_http_host = 'cms-stage.vote.gov';
+      $server_http_host = 'ssg-stage.vote.gov';
       break;
 
     case "test":
       $is_cloudgov = TRUE;
-      $server_http_host = 'cms-test.vote.gov';
+      $server_http_host = 'ssg-test.vote.gov';
       break;
   }
 }

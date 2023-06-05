@@ -29,7 +29,7 @@ jobs:
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
 
-            cf run-task ${project}-drupal-${CIRCLE_BRANCH} --command "scripts/build_static" --name "${project}-${CIRCLE_BRANCH}-tome"  -k "2G" -m 256M
+            cf run-task ${project}-drupal-${CIRCLE_BRANCH} --command "ENV=${CIRCLE_BRANCH} scripts/build_static" --name "${project}-${CIRCLE_BRANCH}-tome"  -k "2G" -m 256M
   build-theme:
     docker:
       - image: node:18-slim
