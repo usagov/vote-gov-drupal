@@ -52,6 +52,7 @@ done
   touch ${home}/.bashrc && \
   echo "export http_proxy=${http_proxy}" >> ${home}/.bashrc && \
   echo "export https_proxy=${https_proxy}" >> ${home}/.bashrc && \
+  echo "alias nano=\"${home}/deps/0/bin/nano\"" >> ${home}/.bashrc && \
   echo "alias vi=\"VIMRUNTIME=${home}/deps/0/apt/usr/share/vim/vim82 ${home}/deps/0/bin/vim.basic\"" >> ${home}/.bashrc && \
   echo "alias vim=\"VIMRUNTIME=${home}/deps/0/apt/usr/share/vim/vim82 ${home}/deps/0/bin/vim.basic\"" >> ${home}/.bashrc && \
   echo "PATH=$PATH:/home/vcap/app/php/bin:/home/vcap/app/vendor/drush/drush" >> /home/vcap/.bashrc
