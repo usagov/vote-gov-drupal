@@ -34,9 +34,9 @@ aws s3 sync . s3://${bucket} --delete --no-verify-ssl 2>/dev/null
 aws s3 website s3://${bucket} --index-document index.html --error-document /404/index.html  --no-verify-ssl 2>/dev/null
 echo "Copy to '${bucket_name}' completed!"
 
-export objects=($(aws s3 ls ${bucket} --recursive --no-verify-ssl 2>/dev/null | awk '{print $(NF)}' | sed -z -e 's/\n/ /g'))
+# export objects=($(aws s3 ls s3://${bucket} --recursive --no-verify-ssl 2>/dev/null | awk '{print $(NF)}' | sed -z -e 's/\n/ /g'))
 
-for object in "${objects[@]}"; do
-  echo $object
-  aws s3api put-object-acl --bucket ${bucket} --key $object --grant-full-control id=c0eaf99010b9e4b073052b3a9b242980a2badf4e1db4044f53f49950609bf6cf --grant-read uri=http://acs.amazonaws.com/groups/global/AllUsers --no-verify-ssl 2>/dev/null
-done
+# for object in "${objects[@]}"; do
+#   echo $object
+#   aws s3api put-object-acl --bucket s3://${bucket} --key $object --grant-full-control id=c0eaf99010b9e4b073052b3a9b242980a2badf4e1db4044f53f49950609bf6cf --grant-read uri=http://acs.amazonaws.com/groups/global/AllUsers --no-verify-ssl 2>/dev/null
+# done
