@@ -13,7 +13,6 @@ $application_environment = getenv('ENV') ?? 'local';
 $application_hostname = "https://" . $_SERVER['SERVER_NAME'];
 
 $applicaiton_fqdn_regex = "^.+\.(app\.cloud\.gov|apps\.internal|vote\.gov)$";
-
 $s3_proxy_path_cms = getenv('S3_PROXY_PATH_CMS') ?: '/s3/files';
 
 $settings['tome_static_directory'] = dirname(DRUPAL_ROOT) . '/html';
