@@ -1,26 +1,26 @@
 /// <reference types="Cypress" />
 
-const allPages = require("../../fixtures/site-pages.json");
+const allPages = require("../../fixtures/spanish-site.json");
 
 const excludedlinks = [
-  'https://voterregistration.ct.gov/OLVR/welcome.do?ref=voteusa_en',
+  'https://voterregistration.ct.gov/OLVR/welcome.do?ref=voteusa_es',
   // the above link will throw error code "read ECONNRESET" this will not pass through cypress test and has been checked manually but has not been added to `excluded-links.cy.js` test 
-  'https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1?ref=voteusa_en',
-  'https://www.sec.state.ma.us/ovr/?ref=voteusa_en',
-  'https://olvr.ohiosos.gov/?ref=voteusa_en',
-  'https://voterlookup.ohiosos.gov/voterlookup.aspx?ref=voteusa_en',
-  'https://olvr.hawaii.gov/?ref=voteusa_en',
-  'https://elections.hawaii.gov/voters/registration/?ref=voteusa_en',
-  'https://vote.sos.ri.gov/Home/RegistertoVote?ref=voteusa_en',
-  'https://vote.sos.ri.gov/Voter/RegisterToVote?ref=voteusa_en',
-  'https://vote.sos.ri.gov/Home/UpdateVoterRecord?ActiveFlag=0&?ref=voteusa_en',
+  'https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1?ref=voteusa_es',
+  'https://www.sec.state.ma.us/ovr/?ref=voteusa_es',
+  'https://olvr.ohiosos.gov/?ref=voteusa_es',
+  'https://voterlookup.ohiosos.gov/voterlookup.aspx?ref=voteusa_es',
+  'https://olvr.hawaii.gov/?ref=voteusa_es',
+  'https://elections.hawaii.gov/voters/registration/?ref=voteusa_es',
+  'https://vote.sos.ri.gov/Home/RegistertoVote?ref=voteusa_es',
+  'https://vote.sos.ri.gov/Voter/RegisterToVote?ref=voteusa_es',
+  'https://vote.sos.ri.gov/Home/UpdateVoterRecord?ActiveFlag=0&?ref=voteusa_es',
   // sc links
-  'https://vrems.scvotes.sc.gov/Voter/Login?ref=voteusa_en',
-  'https://scvotes.gov/voters/register-to-vote/?ref=voteusa_en',
-  'https://info.scvotes.sc.gov/eng/ovr/start.aspx?ref=voteusa_en'
+  'https://vrems.scvotes.sc.gov/Voter/Login?ref=voteusa_es',
+  'https://scvotes.gov/voters/register-to-vote/?ref=voteusa_es',
+  'https://info.scvotes.sc.gov/eng/ovr/start.aspx?ref=voteusa_es'
 ];
 
-describe("English - External Link Validator Test", () => {
+describe("Spanish - External Link Validator Test", () => {
   const singlePage =
     Cypress.env("name") && Cypress.env("route")
       ? [

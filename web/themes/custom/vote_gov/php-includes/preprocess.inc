@@ -10,16 +10,13 @@
  */
 function vote_gov_preprocess(&$variables) {
   // Set global variable for language.
-  $language = Drupal::languageManager()->getCurrentLanguage()->getId();
-  $variables['language'] = $language;
+  $language = Drupal::languageManager()->getCurrentLanguage();
+  $variables['language'] = $language->getId();
+  $variables['languagename'] = $language->getName();
 
   // Set global variable for theme directory.
   $theme_path = \Drupal::request()->getBasePath() . '/' . \Drupal::service('extension.list.theme')->getPath('vote_gov');
   $variables['theme_path'] = $theme_path;
-
-  // Set global variables for language name.
-  $languagename = Drupal::languageManager()->getCurrentLanguage()->getName();
-  $variables['languagename'] = $languagename;
 
   // Set global variable for site name.
   $sitename = Drupal::config('system.site')->get('name');
@@ -29,6 +26,17 @@ function vote_gov_preprocess(&$variables) {
   $node = \Drupal::request()->attributes->get('node');
   if (!empty($node)) {
     $variables['currentnode'] = $node;
+    // Check if current page is designated an error page.
+    $system_errors = [
+      404 => Drupal::config('system.site')->get('page.404'),
+      403 => Drupal::config('system.site')->get('page.403'),
+    ];
+
+    foreach ($system_errors as $system_error) {
+      if ($system_error == '/node/' . $node->id()) {
+        $variables['status_code'] = 'error';
+      }
+    }
   }
 
   // Set variable for frontpage.

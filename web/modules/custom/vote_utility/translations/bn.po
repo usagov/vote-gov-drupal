@@ -140,6 +140,12 @@ msgstr "আপনি রাজ্য নির্বাচনের ওয়ে
 msgid "External link opens in new window"
 msgstr "বাহ্যিক লিঙ্ক নতুন উইন্ডো খোলে"
 
+msgid "Skip to main content"
+msgstr "স্কিপ করে মূল কন্টেন্ট এ যাও"
+
+msgid "(in English)"
+msgstr "(ইংরেজীতে)"
+
 #banner
 msgid "Official government website"
 msgstr "দাপ্তরিক সরকারী ওয়েবসাইট"
