@@ -15,7 +15,6 @@ module:
   config: 0
   config_translation: 0
   content_moderation: 0
-  crazyegg: 0
   datetime: 0
   dblog: 0
   disable_language: 0
@@ -29,7 +28,6 @@ module:
   file: 0
   file_delete: 0
   filter: 0
-  google_tag: 0
   image: 0
   language: 0
   language_switcher_extended: 0
@@ -61,6 +59,7 @@ module:
   tome_base: 0
   tome_static: 0
   toolbar: 0
+  translatable_menu_link_uri: 0
   twig_field_value: 0
   twig_tweak: 0
   update: 0

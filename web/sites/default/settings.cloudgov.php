@@ -8,11 +8,12 @@
 $cf_application_data = json_decode(getenv('VCAP_APPLICATION') ?? '{}', TRUE);
 $cf_service_data = json_decode(getenv('VCAP_SERVICES') ?? '{}', TRUE);
 
-$application_environment = explode("-", $cf_application_data['space_name'])[count(explode("-", $cf_application_data['space_name'])) - 1] ?? 'local';
+$application_environment = getenv('environment') ?? 'local';
 
 $application_hostname = "https://" . $_SERVER['SERVER_NAME'];
 
-$applicaiton_fqdn_regex = "^.+\.(app\.cloud\.gov|apps\.internal)$";
+$applicaiton_fqdn_regex = "^.+\.(app\.cloud\.gov|apps\.internal|vote\.gov)$";
+$s3_proxy_path_cms = getenv('S3_PROXY_PATH_CMS') ?: '/s3/files';
 
 $settings['tome_static_directory'] = dirname(DRUPAL_ROOT) . '/html';
 $settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config';
@@ -33,20 +34,24 @@ if (!empty($cf_application_data['space_name']) &&
   switch ($application_environment) {
     case "dev":
       $is_cloudgov = TRUE;
-      // $server_http_host = 'cms-dev.vote.gov';
-      break;
-
-    case "stage":
-      $is_cloudgov = TRUE;
-      // $server_http_host = 'cms-stage.vote.gov';
+      $server_http_host = 'ssg-dev.vote.gov';
       break;
 
     case "prod":
       $is_cloudgov = TRUE;
-      // $server_http_host = 'cms.vote.gov';
+      $server_http_host = 'ssg.vote.gov';
+      break;
+
+    case "stage":
+      $is_cloudgov = TRUE;
+      $server_http_host = 'ssg-stage.vote.gov';
+      break;
+
+    case "test":
+      $is_cloudgov = TRUE;
+      $server_http_host = 'ssg-test.vote.gov';
       break;
   }
-  $server_http_host = $application_hostname;
 }
 
 foreach ($cf_service_data as $service_list) {
@@ -78,20 +83,29 @@ foreach ($cf_service_data as $service_list) {
       $settings['s3fs.secret_key'] = $service['credentials']['secret_access_key'];
       $config['s3fs.settings']['bucket'] = $service['credentials']['bucket'];
       $config['s3fs.settings']['region'] = $service['credentials']['region'];
+
       $config['s3fs.settings']['disable_cert_verify'] = FALSE;
-      $config['s3fs.settings']['root_folder'] = '';
-      $config['s3fs.settings']['public_folder'] = 'sites/default/files';
+
+      $config['s3fs.settings']['root_folder'] = 'cms';
+
+      $config['s3fs.settings']['public_folder'] = 'public';
       $config['s3fs.settings']['private_folder'] = 'private';
+
+      $config['s3fs.settings']['use_cname'] = TRUE;
+      $config['s3fs.settings']['domain'] = $server_http_host . $s3_proxy_path_cms;
       $config['s3fs.settings']['domain_root'] = 'public';
-      $config['s3fs.settings']['use_customhost'] = FALSE;
+
+      $config['s3fs.settings']['use_customhost'] = TRUE;
       $config['s3fs.settings']['hostname'] = $service['credentials']['fips_endpoint'];
       $config['s3fs.settings']['use-path-style-endpoint'] = FALSE;
+
       $config['s3fs.settings']['use_cssjs_host'] = FALSE;
       $config['s3fs.settings']['cssjs_host'] = '';
+
       $config['s3fs.settings']['use_https'] = TRUE;
       $settings['s3fs.upload_as_private'] = FALSE;
       $settings['s3fs.use_s3_for_public'] = TRUE;
-      $settings['s3fs.use_s3_for_private'] = FALSE;
+      $settings['s3fs.use_s3_for_private'] = TRUE;
     }
   }
 }

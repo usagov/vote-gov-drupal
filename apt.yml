@@ -5,6 +5,7 @@ repos:
   - deb http://apt.newrelic.com/debian/ newrelic non-free
 packages:
   - awscli
-  - htop
+  - bsdmainutils
   - newrelic-php5
+  - nano
   - vim
