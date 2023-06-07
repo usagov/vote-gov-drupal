@@ -6,9 +6,9 @@ wait_for_task(){
   echo "task id: '${task_id}'"
   while : ; do
     tasks=$(cf tasks ${project}-drupal-${CIRCLE_BRANCH})
-    task=$(echo $tasks | grep "${task_id}")
-    status=$(echo $task | awk '{print $3}'| tr '[:upper:]' '[:lower:]')
-    if [ "${status}" = "succeeded" ]; then
+    task=$(echo ${tasks} | awk '{print $1" "$3}' | grep "${task_id}")
+    status=$(echo $task | awk '{print $2}')
+    if [ "${status}" = "SUCCEEDED" ]; then
       break
     elif [ "${status}" = "failed" ]; then
       echo "Task failed!"
