@@ -67,6 +67,6 @@ echo "Installing awscli..."
   rm -rf /tmp/awscliv2.zip /tmp/aws
 } >/dev/null 2>&1
 
-if [ "${CF_INSTANCE_INDEX:-''}" == "0" ]; then
-  ${app_path}/scripts/post-deploy
-fi
+# if [ "${CF_INSTANCE_INDEX:-''}" == "0" ]; then
+#   ${app_path}/scripts/post-deploy
+# fi
