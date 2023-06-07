@@ -4,7 +4,7 @@ while getopts 'b:de:p:' flag; do
   case "${flag}" in
     b) bucket="${OPTARG}" ;;
     d) delete=1 ;;
-    e) env="${OPTARG}" ;;
+    e) environment="${OPTARG}" ;;
     h) help && exit 0 ;;
     p) project="${OPTARG}" ;;
     *) help && exit 1 ;;
@@ -21,8 +21,8 @@ fi
 echo "Creating service key..."
 
 {
-  service_instance_name=${project}-${bucket}-${env}
-  key_name=${project}-${bucket}-${env}-key
+  service_instance_name=${project}-${bucket}-${environment}
+  key_name=${project}-${bucket}-${environment}-key
 
   cf create-service-key "${service_instance_name}" "${key_name}"
   S3_CREDENTIALS=`cf service-key "${service_instance_name}" "${key_name}" | tail -n +2`

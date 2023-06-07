@@ -8,12 +8,11 @@
 $cf_application_data = json_decode(getenv('VCAP_APPLICATION') ?? '{}', TRUE);
 $cf_service_data = json_decode(getenv('VCAP_SERVICES') ?? '{}', TRUE);
 
-$application_environment = getenv('ENV') ?? 'local';
+$application_environment = getenv('environment') ?? 'local';
 
 $application_hostname = "https://" . $_SERVER['SERVER_NAME'];
 
 $applicaiton_fqdn_regex = "^.+\.(app\.cloud\.gov|apps\.internal|vote\.gov)$";
-
 $s3_proxy_path_cms = getenv('S3_PROXY_PATH_CMS') ?: '/s3/files';
 
 $settings['tome_static_directory'] = dirname(DRUPAL_ROOT) . '/html';
