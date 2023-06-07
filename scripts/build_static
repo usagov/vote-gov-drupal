@@ -20,11 +20,11 @@ export bucket_name=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings
 export bucket=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.bucket')
 export bucket_endpoint=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.endpoint')
 
-export external_endpoint="https://ssg-${ENV}.vote.gov"
-[ "${ENV}" = "prod" ] && export external_endpoint="https://ssg.vote.gov"
+export external_endpoint="https://ssg-${environment}.vote.gov"
+[ "${environment}" = "prod" ] && export external_endpoint="https://ssg.vote.gov"
 
 cd ${app_path}
-echo "Running 'drush tome:static' in '${ENV}'..."
+echo "Running 'drush tome:static' in '${environment}'..."
 drush tome:static --uri=${external_endpoint} --process-count=2 --retry-count=0 -y
 echo "'drush tome:static' task completed!"
 
