@@ -3,6 +3,7 @@
 wait_for_task(){
   task_id=$1
   count=0
+  echo "task id: '${task_id}'"
   while : ; do
     tasks=$(cf tasks ${project}-drupal-${CIRCLE_BRANCH})
     task=$(echo $tasks | grep "${task_id}")
@@ -16,6 +17,7 @@ wait_for_task(){
       echo "Task timed out!"
       kill -SIGPIPE "$$"
     else
+      echo "Waiting for task '${task_id}'..."
       sleep 5
       count=$((${count}+1))
     fi
