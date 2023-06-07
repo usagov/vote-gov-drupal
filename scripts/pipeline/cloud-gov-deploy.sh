@@ -12,7 +12,7 @@ wait_for_task(){
     elif [ "${status}" = "failed" ]; then
       echo "Task failed!"
       kill -SIGPIPE "$$"
-    elif [ "${count}" -gt "10" ]; then
+    elif [ "${count}" -gt "60" ]; then
       echo "Task timed out!"
       kill -SIGPIPE "$$"
     else
