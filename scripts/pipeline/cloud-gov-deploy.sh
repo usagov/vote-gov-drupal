@@ -5,7 +5,7 @@ wait_for_task(){
   count=0
   echo "task id: '${task_id}'"
   while : ; do
-    status=$(cf tasks ${project}-drupal-${CIRCLE_BRANCH} | awk '{print $1" "$3}' | grep -E "^${task_id}\ .*" | awk '{print $2}')
+    status=$(cf tasks ${project}-drupal-${CIRCLE_BRANCH} | awk '$1==${task_id} {print $3}')
     echo "status: ${status:-NA}"
     if [ "${status}" = "SUCCEEDED" ]; then
       break
