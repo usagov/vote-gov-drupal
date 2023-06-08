@@ -5,12 +5,11 @@ wait_for_task(){
   count=0
   echo "task id: '${task_id}'"
   while : ; do
-    tasks=$(cf tasks ${project}-drupal-${CIRCLE_BRANCH})
-    task=$(echo ${tasks} | awk '{print $1" "$3}' | grep "${task_id}")
-    status=$(echo $task | awk '{print $2}')
+    status=$(cf tasks ${project}-drupal-${CIRCLE_BRANCH} | awk '{print $1" "$3}' | grep -E "^${task_id}\ .*" | awk '{print $2}')
+    echo "status: ${status:-NA}"
     if [ "${status}" = "SUCCEEDED" ]; then
       break
-    elif [ "${status}" = "failed" ]; then
+    elif [ "${status}" = "FAILED" ]; then
       echo "Task failed!"
       kill -SIGPIPE "$$"
     elif [ "${count}" -gt "60" ]; then
@@ -34,6 +33,8 @@ cf push
 
 cf add-network-policy ${project}-drupal-${CIRCLE_BRANCH} ${proxy_name} -s ${proxy_space} --protocol tcp --port ${proxy_port}
 cf add-network-policy ${waf_name} ${project}-drupal-${CIRCLE_BRANCH} -s "${project}-${space}" --protocol tcp --port ${drupal_port}
-export task_id=$(cf run-task ${project}-drupal-${CIRCLE_BRANCH} --command "./scripts/post-deploy" --name "${project}-${CIRCLE_BRANCH}-post-deploy"  -k "2G" -m "256M" | grep 'task id:' | awk '{print $NF}')
+echo "Running post deploy steps..."
+task_id=$(cf run-task ${project}-drupal-${CIRCLE_BRANCH} --command "./scripts/post-deploy" --name "${project}-${CIRCLE_BRANCH}-post-deploy"  -k "2G" -m "256M" | grep 'task id:' | awk '{print $NF}')
 wait_for_task ${task_id}
-cf run-task ${project}-drupal-${CIRCLE_BRANCH} --command "./scripts/build_static" --name "${project}-${CIRCLE_BRANCH}-tome"  -k "2G" -m "256M"
+echo "Running static site export..."
+task_id=$(cf run-task ${project}-drupal-${CIRCLE_BRANCH} --command "./scripts/build_static" --name "${project}-${CIRCLE_BRANCH}-tome"  -k "2G" -m "256M")
