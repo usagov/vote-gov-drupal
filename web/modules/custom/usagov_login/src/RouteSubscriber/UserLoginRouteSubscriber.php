@@ -5,10 +5,13 @@ namespace Drupal\usagov_login\RouteSubscriber;
 use Drupal\Core\Routing\RouteSubscriberBase;
 use Symfony\Component\Routing\RouteCollection;
 
+/**
+ * User login route subscriber.
+ */
 class UserLoginRouteSubscriber extends RouteSubscriberBase {
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
    */
   protected function alterRoutes(RouteCollection $collection) {
     if ($route = $collection->get('user.pass')) {
