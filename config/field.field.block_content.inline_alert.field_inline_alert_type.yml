@@ -1,0 +1,21 @@
+uuid: 78379874-0e60-4a7f-9740-59d9737a8604
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.inline_alert
+    - field.storage.block_content.field_inline_alert_type
+  module:
+    - options
+id: block_content.inline_alert.field_inline_alert_type
+field_name: field_inline_alert_type
+entity_type: block_content
+bundle: inline_alert
+label: 'Alert type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
