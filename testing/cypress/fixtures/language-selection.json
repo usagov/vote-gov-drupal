@@ -31,9 +31,5 @@
   {
     "name": "About us",
     "route": "/about-us"
-  },
-  {
-    "name": "404 Error",
-    "route": "/404"
   }
 ]
