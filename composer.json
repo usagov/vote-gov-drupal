@@ -62,6 +62,7 @@
         "drupal/redirect": "^1.8",
         "drupal/remove_http_headers": "^2.0",
         "drupal/s3fs": "^3.1",
+        "drupal/samlauth": "^3.8",
         "drupal/simple_sitemap": "^4.1",
         "drupal/stable": "^2.0",
         "drupal/tome": "^1.8",

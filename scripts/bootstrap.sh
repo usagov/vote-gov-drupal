@@ -52,8 +52,9 @@ done
   touch ${home}/.bashrc && \
   echo "export http_proxy=${http_proxy}" >> ${home}/.bashrc && \
   echo "export https_proxy=${https_proxy}" >> ${home}/.bashrc && \
-  echo "alias vi=\"VIMRUNTIME=${home}/deps/0/apt/usr/share/vim/vim82 ${home}/deps/0/bin/vim.basic\"" >> ${home}/.bashrc && \
-  echo "alias vim=\"VIMRUNTIME=${home}/deps/0/apt/usr/share/vim/vim82 ${home}/deps/0/bin/vim.basic\"" >> ${home}/.bashrc && \
+  echo "alias nano=\"${home}/deps/0/apt/bin/nano\"" >> ${home}/.bashrc && \
+  echo "alias vi=\"VIMRUNTIME=${home}/deps/0/apt/usr/share/vim/vim82 ${home}/deps/0/apt/bin/vim.basic\"" >> ${home}/.bashrc && \
+  echo "alias vim=\"VIMRUNTIME=${home}/deps/0/apt/usr/share/vim/vim82 ${home}/deps/0/apt/bin/vim.basic\"" >> ${home}/.bashrc && \
   echo "PATH=$PATH:/home/vcap/app/php/bin:/home/vcap/app/vendor/drush/drush" >> /home/vcap/.bashrc
 
 source ${home}/.bashrc
@@ -65,3 +66,7 @@ echo "Installing awscli..."
   /tmp/aws/install --bin-dir ${home}/deps/0/bin --install-dir ${home}/deps/0/usr/local/aws-cli
   rm -rf /tmp/awscliv2.zip /tmp/aws
 } >/dev/null 2>&1
+
+# if [ "${CF_INSTANCE_INDEX:-''}" == "0" ]; then
+#   ${app_path}/scripts/post-deploy
+# fi
