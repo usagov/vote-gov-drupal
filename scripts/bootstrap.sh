@@ -9,6 +9,12 @@ export home="/home/vcap"
 export app_path="${home}/app"
 export apt_path="${home}/deps/0/apt"
 
+echo $VCAP_SERVICES | jq -r '."user-provided"[].credentials.ca_certificate' | base64 -d > ${app_path}/ca_certificate.pem
+echo $VCAP_SERVICES | jq -r '."user-provided"[].credentials.ca_key' | base64 -d > ${app_path}/ca_key.pem
+
+chmod 600 ${app_path}/ca_certificate.pem
+chmod 600 ${app_path}/ca_key.pem
+
 if [ -z "${VCAP_SERVICES:-}" ]; then
     echo "VCAP_SERVICES must a be set in the environment: aborting bootstrap";
     exit 1;
