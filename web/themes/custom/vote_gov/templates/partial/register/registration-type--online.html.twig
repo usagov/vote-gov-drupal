@@ -7,26 +7,12 @@
     
       {% set registration_link = content.field_override_registration_link | field_value | render | default( content.field_registration_link | field_value | render ) %}
 
-      {#this is where we change#}
       {% set registration_link_text = "Start your online registration" | t %}
 
-      {#
-      If override is empty and not english then add "in english"
-      else leave it off (spanish is the example of having an override)
-
-        {% if label: 'Registration link (override)' === false and != en %}
-          {% set registration_link_text = "Start your online registration in English" | t %}
-        {% else %}
-           {% set registration_link_text = "Start your online registration" | t %}
-        {% endif %}
-
-        {% if label: 'Registration link (override)' === false and != en  %}
-          {% set registration_link_text = "Start your online registration" ~ "in English" | t %}
-        {% endif %} 
-
-      #}
-
-      {# Add in english to the variable #}
+     {% if language != "en" and content.field-override-registration-link is empty %}
+          {% set in_english = "(in English)" | t %}
+          {% set registration_link_text = registration_link_text ~ in_english %}
+      {% endif %} 
 
       <p>{{ '@link on @state_name’s election website.' | t({
           '@state_name': state_name,
