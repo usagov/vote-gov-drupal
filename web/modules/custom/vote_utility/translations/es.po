@@ -120,7 +120,7 @@ msgid "Voter registration is not required in @state_name. @link on @state_name�
 msgstr "En Virginia no es obligatorio inscribirse para votar. @link, visite el sitio web de elecciones estatales de @state_name."
 
 msgid "Start your online registration"
-msgstr "Inicie su inscripción en línea (en inglés)"
+msgstr "Inicie su inscripción en línea"
 
 msgid "@link on @state_name’s election website."
 msgstr "@link en el sitio web de elecciones estatales de @state_name."
@@ -142,6 +142,9 @@ msgstr "El enlace externo se abre en una nueva ventana"
 
 msgid "Skip to main content"
 msgstr "Ir al contenido principal"
+
+msgid "(in English)"
+msgstr "(en inglés)"
 
 #banner
 msgid "Official government website"
