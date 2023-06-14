@@ -1,0 +1,8 @@
+uuid: cd826e05-a035-4a43-99cf-9391b493da5a
+langcode: en
+status: true
+dependencies: {  }
+id: inline_alert
+label: 'Inline alert'
+revision: 1
+description: ''

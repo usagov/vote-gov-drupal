@@ -18,6 +18,7 @@ url:
     vi: vi
     ypk: ypk
     '': null
+    ru: ru
   domains:
     en: ''
     es: ''
@@ -31,4 +32,5 @@ url:
     nv: ''
     vi: ''
     ypk: ''
+    ru: ''
 selected_langcode: site_default

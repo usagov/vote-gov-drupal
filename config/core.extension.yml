@@ -15,7 +15,6 @@ module:
   config: 0
   config_translation: 0
   content_moderation: 0
-  crazyegg: 0
   datetime: 0
   dblog: 0
   disable_language: 0
@@ -29,7 +28,6 @@ module:
   file: 0
   file_delete: 0
   filter: 0
-  google_tag: 0
   image: 0
   language: 0
   language_switcher_extended: 0
@@ -54,6 +52,7 @@ module:
   redirect: 0
   remove_http_headers: 0
   s3fs: 0
+  samlauth: 0
   simple_sitemap: 0
   system: 0
   text: 0
@@ -61,6 +60,7 @@ module:
   tome_base: 0
   tome_static: 0
   toolbar: 0
+  translatable_menu_link_uri: 0
   twig_field_value: 0
   twig_tweak: 0
   update: 0
@@ -70,6 +70,7 @@ module:
   workflows: 0
   pathauto: 1
   content_translation: 10
+  externalauth: 10
   views: 10
   paragraphs: 11
   publication_date: 99
