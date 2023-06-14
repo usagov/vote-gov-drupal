@@ -143,9 +143,6 @@ msgstr "El enlace externo se abre en una nueva ventana"
 msgid "Skip to main content"
 msgstr "Ir al contenido principal"
 
-msgid "(in English)"
-msgstr "(en inglés)"
-
 #banner
 msgid "Official government website"
 msgstr "Sitio web oficial del gobierno"
