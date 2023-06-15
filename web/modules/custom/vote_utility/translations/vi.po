@@ -102,37 +102,37 @@ msgid "Click here to view Wyoming's county clerk contact information (PDF)"
 msgstr "Nhấp vào đây để xem thông tin liên lạc của thư ký quận Wyoming (PDF)"
 
 msgid "Find out ways to register"
-msgstr "Tìm hiểu cách đăng ký (bằng Tiếng Anh)"
+msgstr "Tìm hiểu cách đăng ký"
 
 msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
 msgstr "Đăng ký trực tuyến hiện không có sẵn. @link bỏ phiếu tại trang website bầu cử cấp tiểu bang của @state_name. "
 
 msgid "Learn more about how to register"
-msgstr "Tìm hiểu thêm về cách đăng ký (bằng Tiếng Anh)"
+msgstr "Tìm hiểu thêm về cách đăng ký"
 
 msgid "Register in person at your local election office. @link on @state_name’s election website."
 msgstr "Đăng ký trực tiếp tại văn phòng bầu cử địa phương của bạn. @link tại trang website bầu cử cấp tiểu bang của @state_name."
 
 msgid "Learn more about voting"
-msgstr "Tìm hiểu thêm về cách đăng ký (bằng Tiếng Anh)"
+msgstr "Tìm hiểu thêm về cách đăng ký"
 
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
 msgstr "Ở tiểu bang Virginia không yêu cầu bắt buộc phải đăng ký bầu cử. @link tại trang website bầu cử cấp tiểu bang của @state_name."
 
 msgid "Start your online registration"
-msgstr "Hãy bắt đầu đăng ký bầu cử trực tuyến (bằng Tiếng Anh)"
+msgstr "Hãy bắt đầu đăng ký bầu cử trực tuyến"
 
 msgid "@link on @state_name’s election website."
 msgstr "@link trên trang website bầu cử cấp tiểu bang của @state_name."
 
 msgid "register to vote by mail or in person"
-msgstr "đăng ký bỏ phiếu qua thư hoặc trực tiếp (bằng Tiếng Anh)"
+msgstr "đăng ký bỏ phiếu qua thư hoặc trực tiếp"
 
 msgid "You can also @link on @state_name’s election website."
 msgstr "Bạn cũng có thể @link trên trang web bầu cử cấp tiểu bang của @state_name."
 
 msgid "confirm your voter registration status"
-msgstr "xác nhận hiện trạng đăng ký cử tri của mình (bằng Tiếng Anh)"
+msgstr "xác nhận hiện trạng đăng ký cử tri của mình"
 
 msgid "You can @link on @state_name’s election website."
 msgstr "Bạn có thể @link trên trang web bầu cử cấp tiểu bang của @state_name."
