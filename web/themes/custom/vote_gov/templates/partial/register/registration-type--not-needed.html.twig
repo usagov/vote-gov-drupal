@@ -3,6 +3,12 @@
 <h2>{{ 'How to register to vote in @state_name' | t({ '@state_name': state_name }) }}</h2>
   {% set more_info_link = content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ) %}
   {% set more_info_link_text = "Learn more about voting" | t %}
+
+  {% if language != "en" and not content.field_override_more_info_link | render %}
+          {% set in_english = "(in English)" | t %}
+          {% set more_info_link_text = more_info_link_text ~ ' ' ~ in_english %}
+  {% endif %} 
+
   <p>{{ 'Voter registration is not required in @state_name. @link on @state_name’s election website.' | t({
       '@link': { "#markup": "<a href=\"#{more_info_link}\">#{more_info_link_text}</a>"} | render,
       '@state_name': state_name
