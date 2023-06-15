@@ -11,6 +11,12 @@ global:
     - core/drupal.active-link
     - vote_gov/external_links
 
+navajo-font:
+  version: VERSION
+  css:
+    theme:
+      fonts/navajo-font/stylesheet.css: { minified: true }
+
 external_links:
   version: VERSION
   js:

@@ -1,0 +1,23 @@
+uuid: d1f49984-6647-46a9-9034-47e2634a7b54
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.inline_alert
+    - field.storage.block_content.field_publish
+id: block_content.inline_alert.field_publish
+field_name: field_publish
+entity_type: block_content
+bundle: inline_alert
+label: Publish
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

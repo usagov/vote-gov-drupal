@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-const allPages = require("../../fixtures/testing-page.json");
+const allPages = require("../../fixtures/site-pages.json");
 
 const excludedlinks = [
   'https://voterregistration.ct.gov/OLVR/welcome.do?ref=voteusa_en',
@@ -20,7 +20,7 @@ const excludedlinks = [
   'https://info.scvotes.sc.gov/eng/ovr/start.aspx?ref=voteusa_en'
 ];
 
-describe("External Link Validator Test", () => {
+describe("English - External Link Validator Test", () => {
   const singlePage =
     Cypress.env("name") && Cypress.env("route")
       ? [
@@ -46,14 +46,14 @@ describe("External Link Validator Test", () => {
         cy.visit({
           url: page.route,
         });
-        cy.get("a[href^='https://']").each(link => {
+        cy.get('[data-test="main-content"]').find("a[href^='https://']").each(link => {
           if (excludedlinks.indexOf(link.prop('href')) == -1) {
-            cy.request({
-              url: link.prop('href'),
-              failOnStatusCode: false
-            }).then((response) => {
-              expect(response.status).to.eq(200)
-            })
+              cy.request({
+                url: link.prop('href'),
+                failOnStatusCode: false
+              }).then((response) => {
+                expect(response.status).to.eq(200)
+              })
           }
         })
       }

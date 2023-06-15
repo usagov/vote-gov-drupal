@@ -142,6 +142,12 @@ msgstr "A'doot'1[ biniy4 hazh'diilaay65 hazh0'0 bee l3 adeesh[ee[ jin7zingo @&lt
 msgid "You can @link on @state_name’s election website."
 msgstr "@link t'11 b7ighah n7l47 @state_name b1 an7da'ii'ni[7gi bi-website-gi   "
 
+msgid "Skip to main content"
+msgstr "&yis77 baa hane'7gi nin7[keed"
+
+msgid "(in English)"
+msgstr "&lt;Bilag1ana k'ehj7&gt;"
+
 #month and day names
 msgctxt "Long month name"
 msgid "January"

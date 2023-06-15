@@ -120,7 +120,7 @@ msgid "Learn more about voting"
 msgstr "투표에 대해 자세히 알아보기 (영어로 제공)"
 
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
-msgstr "버지니아 주에서는 유권자 등록이 필요하지 않습니다.  @state_name 선거국 웹사이트에서 @link를 이용하시기 바랍니다."
+msgstr "@state_name 는 유권자 등록이 필요하지 않습니다. @state_name 선거국 웹사이트에서 @link를 이용하시기 바랍니다."
 
 msgid "Start your online registration"
 msgstr "온라인 등록 시작하기 (영어로 제공)"
@@ -142,6 +142,12 @@ msgstr "@state_name 선거국 웹사이트에서 @link를 하실 수 있습니�
 
 msgid "External link opens in new window"
 msgstr "외부 링크 사이트는 새 창에서 연결됩니다"
+
+msgid "Skip to main content"
+msgstr "메인 화면 바로 가기"
+
+msgid "(in English)"
+msgstr "(영어로 제공)"
 
 #banner
 msgid "Official government website"

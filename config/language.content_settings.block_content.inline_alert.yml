@@ -1,0 +1,16 @@
+uuid: a04f8e5e-d9f1-4144-b056-5381c7ee50ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.inline_alert
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.inline_alert
+target_entity_type_id: block_content
+target_bundle: inline_alert
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,19 @@
+uuid: fd0d7ac9-f276-441e-a277-2e7662543b9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.inline_alert
+    - field.storage.block_content.field_heading
+id: block_content.inline_alert.field_heading
+field_name: field_heading
+entity_type: block_content
+bundle: inline_alert
+label: Heading
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
