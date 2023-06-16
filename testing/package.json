@@ -18,6 +18,7 @@
     "cy:proofer": "cypress run --spec 'cypress/e2e/externalLinks/**/*'",
     "cy:createUser": "cypress run --spec 'cypress/e2e/createUser/**/*'",
     "cy:deleteUser": "cypress run --spec 'cypress/e2e/deleteUser/**/*'",
+    "cy:visual": "cypress run --spec 'cypress/e2e/visualTesting/**/*'",
     "testSuite": "npm run cy:test && npm run cy:links && npm run cy:proofer && npm run cy:axe",
     "cypress": "cypress"
   },

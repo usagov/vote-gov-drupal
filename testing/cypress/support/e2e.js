@@ -11,3 +11,6 @@ return false;});
 import 'cypress-mochawesome-reporter/register';
 
 import "cypress-real-events";
+
+const compareSnapshotCommand = require('cypress-image-diff-js/dist/command');
+compareSnapshotCommand();

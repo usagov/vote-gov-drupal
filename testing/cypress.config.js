@@ -1,9 +1,11 @@
 const { defineConfig } = require("cypress");
+const getCompareSnapshotsPlugin = require('cypress-image-diff-js/dist/plugin');
 
 module.exports = defineConfig({
 reporter: 'cypress-mochawesome-reporter',
   e2e: {
     baseUrl: 'http://vote-gov.lndo.site/',
+    // baseUrl: 'https://ssg-test.vote.gov/',
     redirectionLimit: 100,
     video: false,
     viewportHeight: 800,
@@ -41,7 +43,7 @@ reporter: 'cypress-mochawesome-reporter',
     setupNodeEvents(on, config) {
       // implement node event listeners here
       require('cypress-mochawesome-reporter/plugin')(on);
-
+      getCompareSnapshotsPlugin(on, config);
       on('task', {
         log(message) {
           console.log(message)
