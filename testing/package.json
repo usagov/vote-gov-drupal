@@ -4,10 +4,10 @@
   "description": "## Requirements",
   "main": "index.js",
   "devDependencies": {
-    "axe-core": "^4.7.0",
-    "cypress": "^12.11.0",
+    "axe-core": "^4.7.2",
+    "cypress": "^12.13.0",
     "cypress-axe": "^1.4.0",
-    "cypress-mochawesome-reporter": "^3.4.0"
+    "cypress-mochawesome-reporter": "^3.5.0"
   },
   "scripts": {
     "cy:open": "cypress open",
@@ -31,6 +31,6 @@
   },
   "homepage": "https://github.com/usagov/vote-gov-drupal#readme",
   "dependencies": {
-    "cypress-real-events": "^1.7.6"
+    "cypress-real-events": "^1.8.1"
   }
 }
