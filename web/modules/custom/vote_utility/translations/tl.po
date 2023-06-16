@@ -103,37 +103,37 @@ msgid "Click here to view Wyoming's county clerk contact information (PDF)"
 msgstr "I-click ito upang makita ang impormasyon sa pakikipag-ugnayan sa clerk ng county (PDF) ng Wyoming."
 
 msgid "Find out ways to register"
-msgstr "Alamin ang mga paraan para magparehistro (sa Ingles)"
+msgstr "Alamin ang mga paraan para magparehistro"
 
 msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
 msgstr "Kasalukuyang hindi magagamit ang online na rehistrasyon. @link para bumoto sa website ng eleksyon ng estado ng @state_name."
 
 msgid "Learn more about how to register"
-msgstr "Matuto nang higit pa tungkol sa kung paano magparehistro (sa Ingles)"
+msgstr "Matuto nang higit pa tungkol sa kung paano magparehistro"
 
 msgid "Register in person at your local election office. @link on @state_name’s election website."
 msgstr "Magrehistro nang personal sa inyong lokal na tanggapan ng eleksyon. @link sa website ng eleksyon ng estado ng @state_name."
 
 msgid "Learn more about voting"
-msgstr "Matuto pa tungkol sa pagboto (sa Ingles)"
+msgstr "Matuto pa tungkol sa pagboto"
 
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
 msgstr "Ang pagpaparehistro ng botante ay hindi kinakailangan sa Virginia. @link sa website ng eleksyon ng estado ng @state_name."
 
 msgid "Start your online registration"
-msgstr "Simulan ang inyong online na rehistrasyon (sa Ingles)"
+msgstr "Simulan ang inyong online na rehistrasyon"
 
 msgid "@link on @state_name’s election website."
 msgstr "@link sa website ng eleksyon ng estado ng @state_name."
 
 msgid "register to vote by mail or in person"
-msgstr "magparehistro para bumoto sa pamamagitan ng koreo o nang personal (sa Ingles)"
+msgstr "magparehistro para bumoto sa pamamagitan ng koreo o nang personal"
 
 msgid "You can also @link on @state_name’s election website."
 msgstr "Maaari  rin kayong  @link sa website ng eleksyon ng estado ng @state_name."
 
 msgid "confirm your voter registration status"
-msgstr "kumpirmahin ang estado ng inyong rehistrasyon ng botante (sa Ingles)"
+msgstr "kumpirmahin ang estado ng inyong rehistrasyon ng botante"
 
 msgid "You can @link on @state_name’s election website."
 msgstr "Maaari ninyong  @link sa website ng eleksyon ng estado ng @state_name."
