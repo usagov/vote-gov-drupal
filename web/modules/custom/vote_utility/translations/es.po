@@ -102,7 +102,7 @@ msgid "Click here to view Wyoming's county clerk contact information (PDF)"
 msgstr "Haga clic aquí para ver la información de contacto de los secretarios de los condados de Wyoming"
 
 msgid "Find out ways to register"
-msgstr "Encuentre cómo inscribirse (en inglés)"
+msgstr "Encuentre cómo inscribirse"
 
 msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
 msgstr "La inscripción en línea no está disponible actualmente. @link para votar, visitando el sitio web de elecciones estatales de @state_name."

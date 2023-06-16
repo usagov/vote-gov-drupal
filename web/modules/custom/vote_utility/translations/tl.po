@@ -128,7 +128,6 @@ msgstr "@link sa website ng eleksyon ng estado ng @state_name."
 
 msgid "register to vote by mail or in person"
 msgstr "magparehistro para bumoto sa pamamagitan ng koreo o nang personal"
-msgstr "Simulan ang inyong online na rehistrasyon"
 
 msgid "You can also @link on @state_name’s election website."
 msgstr "Maaari  rin kayong  @link sa website ng eleksyon ng estado ng @state_name."
