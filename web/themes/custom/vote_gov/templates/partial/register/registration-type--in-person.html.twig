@@ -9,7 +9,6 @@
       {% set more_info_link_text = "Learn more about how to register" | t %}
 
     {% if language != "en" and not content.field_override_more_info_link  | render %}
-          {% set in_english = "(in English)" | t %}
           {% set more_info_link_text = more_info_link_text ~ ' ' ~ in_english %}
     {% endif %}
 
@@ -32,7 +31,6 @@
   {% set confirm_reg_link_text = "confirm your voter registration status" | t %}
 
     {% if language != "en" and not content.field_override_confirm_reg_link  | render %}
-          {% set in_english = "(in English)" | t %}
           {% set confirm_reg_link_text = confirm_reg_link_text ~ ' ' ~ in_english %}
     {% endif %}
 

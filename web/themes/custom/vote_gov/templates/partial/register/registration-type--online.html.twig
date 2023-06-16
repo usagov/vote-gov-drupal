@@ -4,13 +4,10 @@
   <h2>{{ 'How to register to vote in @state_name' | t({ '@state_name': state_name }) }}</h2>
     {# registration link, more info link #}
     {% if content.field_registration_link | render %}
-    
       {% set registration_link = content.field_override_registration_link | field_value | render | default( content.field_registration_link | field_value | render ) %}
-
       {% set registration_link_text = "Start your online registration" | t %}
 
       {% if language != "en" and not content.field_override_registration_link | render %}
-          {% set in_english = "(in English)" | t %}
           {% set registration_link_text = registration_link_text ~ ' ' ~ in_english %}
       {% endif %} 
 
@@ -25,7 +22,6 @@
       {% set more_info_link_text = "register to vote by mail or in person" | t %}
 
       {% if language != "en" and not content.field_override_more_info_link | render %}
-          {% set in_english = "(in English)" | t %}
           {% set more_info_link_text = more_info_link_text ~ ' ' ~ in_english %}
       {% endif %} 
 
@@ -50,7 +46,6 @@
   {% set confirm_reg_link_text = "confirm your voter registration status" | t %}
 
     {% if language != "en" and not content.field_override_confirm_reg_link  | render %}
-          {% set in_english = "(in English)" | t %}
           {% set confirm_reg_link_text = confirm_reg_link_text ~ ' ' ~ in_english %}
     {% endif %}
 

@@ -5,7 +5,6 @@
   {% set more_info_link_text = "Learn more about voting" | t %}
 
   {% if language != "en" and not content.field_override_more_info_link | render %}
-          {% set in_english = "(in English)" | t %}
           {% set more_info_link_text = more_info_link_text ~ ' ' ~ in_english %}
   {% endif %} 
 
