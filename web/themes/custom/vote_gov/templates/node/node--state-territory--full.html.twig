@@ -10,6 +10,7 @@
 {% block content %}
 {% set reg_type = content.field_registration_type | field_value | column('#markup') %}
 {% set state_name = label | field_value | render %}
+{% set in_english = "(in English)" | t %}
 
 {# Korean 'state' character logic #}
 {% if language == 'ko' and node.field_is_state.value %}
