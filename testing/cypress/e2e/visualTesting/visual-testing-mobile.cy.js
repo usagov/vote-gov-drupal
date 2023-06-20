@@ -2,7 +2,7 @@
 
 const allPages = require("../../fixtures/visual-pages.json");
 
-describe("visual testing - desktop", () => {
+describe("visual testing - mobile", () => {
   before(() => {
     // Mobile View Port
     cy.viewport(320, 720)
