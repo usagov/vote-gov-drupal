@@ -3,6 +3,10 @@
 const allPages = require("../../fixtures/visual-pages.json");
 
 describe("visual testing - desktop", () => {
+  before(() => {
+    // Mobile View Port
+    cy.viewport(320, 720)
+  })
   after(() => {
     cy.task("generateReport");
   });

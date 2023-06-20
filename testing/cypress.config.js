@@ -4,8 +4,9 @@ const getCompareSnapshotsPlugin = require('cypress-image-diff-js/dist/plugin');
 module.exports = defineConfig({
 reporter: 'cypress-mochawesome-reporter',
   e2e: {
-    baseUrl: 'http://vote-gov.lndo.site/',
-    // baseUrl: 'https://ssg-test.vote.gov/',
+    // baseUrl: 'http://vote-gov.lndo.site/',
+    baseUrl: 'https://ssg-test.vote.gov/',
+    baseUrl: 'https://vote.gov/',
     redirectionLimit: 100,
     video: false,
     viewportHeight: 800,
