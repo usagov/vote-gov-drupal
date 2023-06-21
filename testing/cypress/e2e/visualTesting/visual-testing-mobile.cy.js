@@ -3,10 +3,6 @@
 const allPages = require("../../fixtures/visual-pages.json");
 
 describe("visual testing - mobile", () => {
-  before(() => {
-    // Mobile View Port
-    cy.viewport(320, 720)
-  })
   after(() => {
     cy.task("generateReport");
   });
@@ -35,6 +31,7 @@ describe("visual testing - mobile", () => {
         cy.visit({
           url: page.route,
         });
+    cy.viewport(320, 720)
         cy.get("button#touchpoints-form-embed").hideElement()
         cy.wait(500)
         cy.compareSnapshot(page.name + "Snapshot", 0.13)
