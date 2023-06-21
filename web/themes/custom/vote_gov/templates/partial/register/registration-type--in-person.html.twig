@@ -21,7 +21,7 @@
 
     {# Registration deadlines #}
 <h2>{{ 'Voter registration deadlines in @state_name' | t({ '@state_name': state_name }) }}</h2>
-    <ul class="registered-resources">
+    <ul class="registered-resources" data-test="registration-info">
     {% include '@vote_gov/partial/register/registration-date-in-person.html.twig' %}
     </ul>
 
