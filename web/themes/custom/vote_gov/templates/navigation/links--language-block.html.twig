@@ -55,12 +55,6 @@
             {{ item.link|merge({'#attributes': {'lang': key, 'xml:lang': key}}) }}
           {%- endif -%}
         {%- endif -%}
-
-        {% if language == "nv" | render %}
-
- 
-        {% endif %}
-
       </li>
     {%- endfor -%}
   {% endif %}
