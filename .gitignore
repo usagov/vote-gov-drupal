@@ -83,5 +83,5 @@ node_modules
 # Tome static files
 /html
 
-testing/cypress-visual-screenshots
-testing/src/cypress-visual-report
+# testing/cypress-visual-screenshots
+# testing/src/cypress-visual-report
