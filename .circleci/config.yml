@@ -6,6 +6,9 @@ parameters:
   restore:
     type: string
     default: "none"
+  scheduled_backup:
+    type: boolean
+    default: false
   build_static:
     type: boolean
     default: false
@@ -146,6 +149,33 @@ jobs:
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
             source ./scripts/pipeline/cloud-gov-deploy.sh
+  downsync:
+    docker:
+      - image: cimg/base:stable
+    environment:
+      BACKUP_ENV: << pipeline.parameters.backup>>
+      RESTORE_ENV: << pipeline.parameters.restore>>
+    steps:
+      - checkout
+      - run:
+          name: "Install cloudfoundry & dependencies"
+          command: |
+            source ./scripts/pipeline/deb-basic-deps.sh
+            source ./scripts/pipeline/deb-cf-install.sh
+            source ./scripts/pipeline/deb-mysql-client-install.sh
+
+            cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/1.1.0/cf-service-connect-linux-amd64
+      - run:
+          name: "Run downsync"
+          command: |
+            source ./scripts/pipeline/exports.sh "${BACKUP_ENV}"
+            source ./scripts/pipeline/cloud-gov-login.sh 
+            source ./scripts/pipeline/downsync-backup.sh
+            cf logout
+
+            source ./scripts/pipeline/exports.sh "${RESTORE_ENV}"
+            source ./scripts/pipeline/cloud-gov-login.sh
+            source ./scripts/pipeline/downsync-restore.sh
   drush-cron:
     docker:
       - image: cimg/base:stable
@@ -190,6 +220,28 @@ jobs:
       - store_artifacts:
           path: /tmp/phpcs.csv
           destination: phpcs_<<pipeline.number>>.csv
+  scheduled-backup:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Install cloudfoundry & dependencies"
+          command: |
+            source ./scripts/pipeline/deb-basic-deps.sh
+            source ./scripts/pipeline/deb-cf-install.sh
+            source ./scripts/pipeline/deb-mysql-client-install.sh
+            source ./scripts/pipeline/deb-awscli.sh
+
+            cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/1.1.0/cf-service-connect-linux-amd64
+      - run:
+          name: "Run backup"
+          command: |
+            export BACKUP_ENV=${CIRCLE_BRANCH}
+            source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
+            source ./scripts/pipeline/cloud-gov-login.sh 
+            source ./scripts/pipeline/downsync-backup.sh
+            ./scripts/pipeline/scheduled_backup.sh "${prod_cf_space}"
   snyk:
     docker:
       - image: snyk/snyk:php
@@ -203,33 +255,6 @@ jobs:
           name: "Snyk"
           command: |
             snyk test --org=${SNYK_ORG} --severity-threshold=$THRESHOLD
-  downsync:
-    docker:
-      - image: cimg/base:stable
-    environment:
-      BACKUP_ENV: << pipeline.parameters.backup>>
-      RESTORE_ENV: << pipeline.parameters.restore>>
-    steps:
-      - checkout
-      - run:
-          name: "Install cloudfoundry & dependencies"
-          command: |
-            source ./scripts/pipeline/deb-basic-deps.sh
-            source ./scripts/pipeline/deb-cf-install.sh
-            source ./scripts/pipeline/deb-mysql-client-install.sh
-
-            cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/1.1.0/cf-service-connect-linux-amd64
-      - run:
-          name: "Run downsync"
-          command: |
-            source ./scripts/pipeline/exports.sh "${BACKUP_ENV}"
-            source ./scripts/pipeline/cloud-gov-login.sh 
-            source ./scripts/pipeline/downsync-backup.sh
-            cf logout
-
-            source ./scripts/pipeline/exports.sh "${RESTORE_ENV}"
-            source ./scripts/pipeline/cloud-gov-login.sh
-            source ./scripts/pipeline/downsync-restore.sh
 workflows:
   deploy-workflow:
     when:
@@ -300,6 +325,27 @@ workflows:
                 - prod
           requires:
             - build-theme
+  build-static-workflow:
+    when:
+      and:
+        - equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]
+        - equal: [ true, << pipeline.parameters.build_static >> ]
+    jobs:
+      - build-static
+  drush-cron-workflow:
+    when:
+      and:
+        - equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]
+        - equal: [ true, << pipeline.parameters.drush_cron >> ]
+    jobs:
+      - drush-cron
+  scheduled-backup-workflow:
+    when:
+      and:
+        - equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]
+        - equal: [ true, << pipeline.parameters.scheduled_backup >> ]
+    jobs:
+      - scheduled-backup
   downsync-workflow:
     when:
       and:
@@ -315,17 +361,4 @@ workflows:
           - equal: [ test, << pipeline.parameters.restore >> ]
     jobs:
       - downsync
-  build-static-workflow:
-    when:
-      and:
-        - equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]
-        - equal: [ true, << pipeline.parameters.build_static >> ]
-    jobs:
-      - build-static
-  drush-cron-workflow:
-    when:
-      and:
-        - equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]
-        - equal: [ true, << pipeline.parameters.drush_cron >> ]
-    jobs:
-      - drush-cron
+
