@@ -50,6 +50,7 @@ describe("Run AXE core on site pages", () => {
         cy.visit({
           url: page.route,
         });
+        cy.get('[class="usa-banner__button-text"]').click()
         cy.injectAxe()
         cy.configureAxe({
             runOnly: {
