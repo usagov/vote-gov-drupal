@@ -11,5 +11,5 @@ third_party_settings:
 id: ht
 label: 'Haitian Creole'
 direction: ltr
-weight: 3
+weight: -5
 locked: false
