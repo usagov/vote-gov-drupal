@@ -77,6 +77,22 @@ class LoginSettingsForm extends ConfigFormBase {
       '#required' => FALSE,
     ];
 
+    $form['sso_cancel_path'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('SSO Cancel Path'),
+      '#default_value' => $this->config('usagov_login.settings')
+        ->get('sso_cancel_path'),
+      '#required' => FALSE,
+    ];
+
+    $form['sso_cancel_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Cancel Text'),
+      '#default_value' => $this->config('usagov_login.settings')
+        ->get('sso_cancel_text'),
+      '#required' => FALSE,
+    ];
+
     $form['display_local'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Display the local login form'),
@@ -99,6 +115,14 @@ class LoginSettingsForm extends ConfigFormBase {
 
     $this->config('usagov_login.settings')
       ->set('sso_login_text', $form_state->getValue('sso_login_text'))
+      ->save();
+
+    $this->config('usagov_login.settings')
+      ->set('sso_cancel_path', $form_state->getValue('sso_cancel_path'))
+      ->save();
+
+    $this->config('usagov_login.settings')
+      ->set('sso_cancel_text', $form_state->getValue('sso_cancel_text'))
       ->save();
 
     parent::submitForm($form, $form_state);

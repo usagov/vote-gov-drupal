@@ -64,6 +64,7 @@ module:
   twig_field_value: 0
   twig_tweak: 0
   update: 0
+  usagov_login: 0
   user: 0
   views_ui: 0
   vote_utility: 0
