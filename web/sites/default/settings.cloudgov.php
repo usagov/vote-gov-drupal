@@ -114,13 +114,13 @@ $settings['php_storage']['twig']['directory'] = '../storage/php';
 $settings['cache']['bins']['data'] = 'cache.backend.php';
 $settings['trusted_host_patterns'][] = $applicaiton_fqdn_regex;
 
-// SSO - SAML Auth Config
+// SSO - SAML Auth Config.
 $config['samlauth.authentication']['idp_certs'] = json_decode($service['credentials']['ca_certificate']);
-// @Todo: DC - Move the following to config split for respective environments
+// @todo: DC - Move the following to config split for respective environments.
 switch ($application_environment) {
   case "dev":
     $config['samlauth.authentication']['sp_entity_id'] = 'dev.vote.gov';
-    $config['samlauth.authentication']['idp_single_sign_on_service'] =  'https://secureauth.dev.gsa.gov/SecureAuth592';
+    $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://secureauth.dev.gsa.gov/SecureAuth592';
     break;
 
   case "prod":
@@ -130,11 +130,11 @@ switch ($application_environment) {
 
   case "stage":
     $config['samlauth.authentication']['sp_entity_id'] = 'cms-stage.vote.gov';
-    $config['samlauth.authentication']['idp_single_sign_on_service'] =  'https://secureauth.dev.gsa.gov/SecureAuth616';
+    $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://secureauth.dev.gsa.gov/SecureAuth616';
     break;
 
   case "test":
     $config['samlauth.authentication']['sp_entity_id'] = 'cms-test.vote.gov';
-    $config['samlauth.authentication']['idp_single_sign_on_service'] =  'https://secureauth.dev.gsa.gov/SecureAuth615';
+    $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://secureauth.dev.gsa.gov/SecureAuth615';
     break;
 }
