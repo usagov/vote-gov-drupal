@@ -116,7 +116,7 @@ $settings['trusted_host_patterns'][] = $applicaiton_fqdn_regex;
 
 // SSO - SAML Auth Config.
 $config['samlauth.authentication']['idp_certs'] = json_decode($service['credentials']['ca_certificate']);
-// @todo: DC - Move the following to config split for respective environments.
+// @todo DC - Move the following to config split for respective environments.
 switch ($application_environment) {
   case "dev":
     $config['samlauth.authentication']['sp_entity_id'] = 'dev.vote.gov';
