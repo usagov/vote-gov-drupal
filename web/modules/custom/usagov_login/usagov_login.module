@@ -51,7 +51,7 @@ function usagov_login_form_user_login_form_alter(&$form, FormStateInterface $for
       '#tag' => 'a',
       '#attributes' => [
         'href' => $cancelPath,
-        'class' => ['cancel-link']
+        'class' => ['cancel-link'],
       ],
       '#value' => $cancelText,
       '#weight' => '-20',
@@ -64,12 +64,12 @@ function usagov_login_form_user_login_form_alter(&$form, FormStateInterface $for
 }
 
 /**
- * Implements hook_preprocess_page_title()
+ * Implements hook_preprocess_page_title().
  */
 function usagov_login_preprocess_page_title(&$variables) {
 
   $route_match = \Drupal::routeMatch();
   if ($route_match->getRouteName() == 'user.login') {
-      $variables['title'] = t('Security Notification');
+    $variables['title'] = t('Security Notification');
   }
 }
