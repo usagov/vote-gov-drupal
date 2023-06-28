@@ -36,7 +36,7 @@ function vote_gov_form_alter(&$form, FormStateInterface $form_state, $form_id): 
   }
 
   // Add the USWDS form class.
-  $form['#attributes']['class'][] = 'usa-form';
+  $form['#attributes']['class'] = 'usa-form';
 }
 
 /**
