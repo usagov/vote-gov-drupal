@@ -4,7 +4,7 @@ kill_pids() {
   app=$1
   ids=$(ps aux | grep ${app} | grep -v grep | awk '{print $2}')
   for id in ${ids}; do
-    kill -9 ${id}
+    kill -9 ${id} >/dev/null 2>&1
   done
 }
 
@@ -18,7 +18,7 @@ wait_for_tunnel() {
 }
 
 echo "Running 'drush cr' on '${BACKUP_ENV}' database..."
-source $(pwd $(dirname $0))/scripts/pipeline/cloud-gov-remote-command.sh "vote-drupal-${BACKUP_ENV}" "drush cr"
+source ./scripts/pipeline/cloud-gov-remote-command.sh "vote-drupal-${BACKUP_ENV}" "drush cr"
 
 ## Create a tunnel through the application to pull the database.
 echo "Creating tunnel to database..."
@@ -50,7 +50,7 @@ echo "Backing up '${BACKUP_ENV}' database..."
   ${dbname} > backup_${BACKUP_ENV}.sql
 
   ## Patch out any MySQL 'SET' commands that require admin.
-  sed -i 's/^SET /-- &/' backup_dev.sql
+  sed -i 's/^SET /-- &/' backup_${BACKUP_ENV}.sql
 
 } >/dev/null 2>&1
 

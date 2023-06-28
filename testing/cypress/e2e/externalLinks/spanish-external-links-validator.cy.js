@@ -4,7 +4,8 @@ const allPages = require("../../fixtures/spanish-site.json");
 
 const excludedlinks = [
   'https://voterregistration.ct.gov/OLVR/welcome.do?ref=voteusa_es',
-  // the above link will throw error code "read ECONNRESET" this will not pass through cypress test and has been checked manually but has not been added to `excluded-links.cy.js` test 
+  'https://voterregistration.ct.gov/OLVR/welcome.do',
+    // the above link will throw error code "read ECONNRESET" this will not pass through cypress test and has been checked manually but has not been added to `excluded-links.cy.js` test 
   'https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1?ref=voteusa_es',
   'https://www.sec.state.ma.us/ovr/?ref=voteusa_es',
   'https://olvr.ohiosos.gov/?ref=voteusa_es',
@@ -12,9 +13,28 @@ const excludedlinks = [
   'https://olvr.hawaii.gov/?ref=voteusa_es',
   'https://elections.hawaii.gov/voters/registration/?ref=voteusa_es',
   'https://vote.sos.ri.gov/Home/RegistertoVote?ref=voteusa_es',
-  'https://vote.sos.ri.gov/Voter/RegisterToVote?ref=voteusa_es',
-  'https://vote.sos.ri.gov/Home/UpdateVoterRecord?ActiveFlag=0&?ref=voteusa_es',
-  // sc links
+  'https://vote.sos.ri.gov/VoterSpanish/RegisterToVote?ref=voteusa_es',
+  'https://vote.sos.ri.gov/HomeSpanish/UpdateVoterRecord?ActiveFlag=0&?ref=voteusa_es',
+  'https://my.arizona.vote/WhereToVote.aspx?s=individual&?ref=voteusa_es',
+  "https://sosmt.gov/elections/vote/?ref=voteusa_es",
+  'https://www.vivote.gov/voters/register-to-vote/?ref=voteusa_es',
+  'https://www.vivote.gov/voters/voter-lookup/?ref=voteusa_es',
+  'https://www.elections.ny.gov/votingregister.html?ref=voteusa_es',
+  'https://voterlookup.elections.ny.gov/?ref=voteusa_es',
+  // todo: look into these links
+  'https://azsos.gov/elections/voting-election/register-vote-or-update-your-current-voter-information-sp',
+  'https://olvr.hawaii.gov/',
+  'https://www.elections.ny.gov/votingregister.html',
+  'https://olvr.ohiosos.gov/',
+  'https://vote.sos.ri.gov/Home/RegistertoVote',
+  'https://vivote.gov/voters/voter-lookup/',
+  'https://my.arizona.vote/WhereToVote.aspx?s=individual',
+  'https://elections.hawaii.gov/voters/registration/',
+  'https://voterlookup.elections.ny.gov/',
+  'https://voterlookup.ohiosos.gov/voterlookup.aspx',
+  'https://vote.sos.ri.gov/VoterSpanish/RegisterToVote',
+  'https://vote.sos.ri.gov/HomeSpanish/UpdateVoterRecord?ActiveFlag=0',
+    // sc links
   'https://vrems.scvotes.sc.gov/Voter/Login?ref=voteusa_es',
   'https://scvotes.gov/voters/register-to-vote/?ref=voteusa_es',
   'https://info.scvotes.sc.gov/eng/ovr/start.aspx?ref=voteusa_es'

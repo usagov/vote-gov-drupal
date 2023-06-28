@@ -4,7 +4,7 @@ kill_pids() {
   app=$1
   ids=$(ps aux | grep ${app} | grep -v grep | awk '{print $2}')
   for id in ${ids}; do
-    kill -9 ${id}
+    kill -9 ${id} >/dev/null 2>&1
   done
 }
 
@@ -38,7 +38,7 @@ echo "Restoring '${BACKUP_ENV}' database to '${RESTORE_ENV}'..."
   echo "user=${username}" >> ~/.mysql/mysql.cnf
   echo "password=${password}" >> ~/.mysql/mysql.cnf
   chmod 400 ~/.mysql/mysql.cnf
-
+ 
   mysql \
   --defaults-extra-file=~/.mysql/mysql.cnf \
   --host=${host} \
