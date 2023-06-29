@@ -1,5 +1,5 @@
-uuid: 3d488e76-7cdd-4cbf-bd4c-21027dab973d
-langcode: en
+uuid: 1e6d0861-4abc-403a-bf58-09b3bafa6226
+langcode: pt
 status: true
 dependencies:
   module:
@@ -8,8 +8,8 @@ third_party_settings:
   disable_language:
     disable: true
     redirect_language: en
-id: ru
-label: Russian
+id: pt
+label: Portuguese
 direction: ltr
-weight: 1
+weight: 0
 locked: false
