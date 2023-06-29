@@ -71,11 +71,11 @@ msgstr "ស្រាវជ្រាវរក Vote.gov"
 msgid "Register to vote in @state_name"
 msgstr "ចុះឈ្មោះដើម្បីបោះឆ្នោតនៅរដ្ឋ @state_name"
 
-msgid "How to register to vote in @state_name"
-msgstr "របៀបចុះឈ្មោះបោះឆ្នោតនៅរដ្ឋ @state_name"
+msgid "How to register to vote"
+msgstr "របៀបចុះឈ្មោះដើម្បីបោះឆ្នោត"
 
-msgid "Other ways to register to vote in @state_name"
-msgstr "របៀបផ្សេងៗទៀតដើម្បីចុះឈ្មោះបោះឆ្នោតនៅរដ្ឋ @state_name"
+msgid "Other ways to register to vote"
+msgstr "វិធីផ្សេងៗទៀតដើម្បីចុះឈ្មោះបោះឆ្នោត"
 
 msgid "Register by mail deadline:"
 msgstr "ថ្ងៃផុតកំណត់ចុះឈ្មោះតាមសំបុត្រ៖"
@@ -83,8 +83,8 @@ msgstr "ថ្ងៃផុតកំណត់ចុះឈ្មោះតាមស
 msgid "Online registration deadline:"
 msgstr "ថ្ងៃផុតកំណត់ការចុះឈ្មោះអនឡាញ៖"
 
-msgid "Voter registration deadlines in @state_name"
-msgstr "ថ្ងៃផុតកំណត់ការចុះឈ្មោះអ្នកបោះឆ្នោតនៅរដ្ឋ @state_name"
+msgid "Voter registration deadlines"
+msgstr "កាលបរិច្ឆេទផុតកំណត់ការចុះឈ្មោះឣ្នកបោះឆ្នោត"
 
 msgid "In person registration deadline:"
 msgstr "ថ្ងៃផុតកំណត់ការចុះឈ្មោះដោយមកផ្ទាល់៖"

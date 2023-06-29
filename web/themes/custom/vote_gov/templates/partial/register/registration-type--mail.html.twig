@@ -1,7 +1,7 @@
 {% set state_abrev = content.field_state_abbreviation | field_value | render %}
 
   {# How to register to vote #}
-<h2>{{ 'How to register to vote in @state_name' | t({ '@state_name': state_name }) }}</h2>
+<h2>{{ 'How to register to vote' | t({ '@state_name': state_name }) }}</h2>
     {# more info link #}
     {% if content.field_more_info_link | render %}
       {% set more_info_link = content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ) %}
@@ -19,7 +19,7 @@
     {% endif %}
 
     {# Registration deadlines #}
-<h2>{{ 'Voter registration deadlines in @state_name' | t({ '@state_name': state_name }) }}</h2>
+<h2>{{ 'Voter registration deadlines' | t({ '@state_name': state_name }) }}</h2>
     <ul class="registered-resources" data-test="registration-info">
     {% include '@vote_gov/partial/register/registration-date-mail.html.twig' %}
     {% include '@vote_gov/partial/register/registration-date-in-person.html.twig' %}
