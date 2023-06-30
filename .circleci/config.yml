@@ -59,7 +59,7 @@ jobs:
           root: ~/
           paths:
             - project/web/themes/custom/vote_gov/dist
-# cypress:
+  # cypress:
   #   docker:
   #     - image: cypress/included:cypress-12.3.0-node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
   #   environment:
