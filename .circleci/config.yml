@@ -80,13 +80,16 @@ jobs:
   #           export CIRCLE_BRANCH="test"
   #           source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
   #           source ./scripts/pipeline/cloud-gov-login.sh
+
   #           cd testing
   #           cypress_baseurl=$(cf routes | grep waf-test | grep gov | awk '{print $2"."$3}')
   #           cypress_random_pass="$(date | sha256sum | cut -d" " -f1)"
+
   #           sed -i "s/^    baseUrl: .*/    baseUrl: 'https:\/\/${cypress_baseurl}',/" cypress.config.js
   #           sed -i "s/^      \"test_pass\": .*/      \"test_pass\": \"${cypress_random_pass}\",/" cypress.config.js
   #           sed -i "s/^      \"pipeline\": .*/      \"pipeline\": 1,/" cypress.config.js
   #           sed -i "s/^      \"cloudgov_application_name\": .*/      \"cloudgov_application_name\": \"${cypress_cloudgov_application_name}\",/" cypress.config.js
+
   #           npm install
   #           npm run cy:test
   #     - store_artifacts:
@@ -358,4 +361,3 @@ workflows:
           - equal: [ test, << pipeline.parameters.restore >> ]
     jobs:
       - downsync
-
