@@ -55,7 +55,7 @@ function usagov_login_form_user_login_form_alter(&$form, FormStateInterface $for
       ],
       '#value' => $cancelText,
       '#weight' => '-20',
-      '#prefix' => '<div class="sso-cancel-link-wrapper">',
+      '#prefix' => '<div class="sso-cancel-link-wrapper margin-top-2 margin-bottom-6">',
       '#suffix' => '</div>',
     ];
 
