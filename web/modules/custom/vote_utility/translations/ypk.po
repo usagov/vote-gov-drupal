@@ -71,10 +71,10 @@ msgstr "Ivaghivikigu vote.gov"
 msgid "Register to vote in @state_name"
 msgstr "Ilaten nakmikinaluten @state_name-mi"
 
-msgid "How to register to vote in @state_name"
+msgid "How to register to vote"
 msgstr "Naten ilannayaghsin nakmikimun @state_name-mi"
 
-msgid "Other ways to register to vote in @state_name"
+msgid "Other ways to register to vote"
 msgstr "Ilangi nakmikilleghmun ilatellghet @state_name-emi "
 
 msgid "Register by mail deadline:"
@@ -83,7 +83,7 @@ msgstr "Ilatelleq tuyuqayugkun tuuniviga:"
 msgid "Online registration deadline:"
 msgstr "Online-ekun ilatellghem tuuniviga:"
 
-msgid "Voter registration deadlines in @state_name"
+msgid "Voter registration deadlines"
 msgstr "Nakmikilleghmun ilatellghan tuunivigi @state_name-emi"
 
 msgid "In person registration deadline:"

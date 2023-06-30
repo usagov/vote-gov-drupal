@@ -112,12 +112,12 @@ msgstr "Página web oficial do governo"
 msgid "Register to vote in @state_name"
 msgstr "Registrar-se para votar em @state_name"
 
-# data.translations.register.heading2
-msgid "How to register to vote in @state_name"
+# data.translations.register.heading2 (state phrase updates)
+msgid "How to register to vote"
 msgstr "Como registrar-se para votar"
 
-# data.translations.register.other_language_selection__heading
-msgid "Other ways to register to vote in @state_name"
+# data.translations.register.other_language_selection__heading (state phrase updates)
+msgid "Other ways to register to vote"
 msgstr "Outras maneiras de registrar-se para votar"
 
 # data.translations.register.dates__bymail_deadline
@@ -132,8 +132,8 @@ msgstr "Prazo final para registrar-se on-line:"
 msgid "In person registration deadline:"
 msgstr "Prazo final de registro em pessoa:"
 
-# data.translations.register.dates__heading
-msgid "Voter registration deadlines in @state_name"
+# data.translations.register.dates__heading (state phrase updates)
+msgid "Voter registration deadlines"
 msgstr "Os prazos de registro de eleitores"
 
 # data.translations.register.confirm_registration__heading
