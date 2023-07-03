@@ -1,66 +1,15 @@
 _core:
   default_config_hash: oDGEkhP0h5rXXqlDplxeBDre0goLigOJupHKMDMwcqM
-login_menu_item_title: ''
-logout_menu_item_title: ''
-login_redirect_url: ''
-logout_redirect_url: ''
-error_redirect_url: ''
-error_throw: false
-local_login_saml_error: false
-logout_different_user: false
-drupal_login_roles:
-  authenticated: '0'
-  content_editor: '0'
-  content_manager: '0'
-  site_admin: '0'
-sp_entity_id: ''
-sp_name_id_format: 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress'
-sp_x509_certificate: 'file:/home/vcap/app/ca_certificate.pem'
-sp_new_certificate: ''
-sp_private_key: 'file:/home/vcap/app/ca_key.pem'
-metadata_valid_secs: 60
 metadata_cache_http: false
-idp_entity_id: GSASecAuth
-idp_single_sign_on_service: ''
-idp_single_log_out_service: ''
-idp_change_password_service: ''
-idp_certs: ''
-idp_cert_encryption: ''
-unique_id_attribute: mail
-map_users: false
-map_users_name: false
-map_users_mail: true
-map_users_roles:
-  content_editor: content_editor
-  content_manager: content_manager
-  site_admin: site_admin
-create_users: false
-sync_name: false
-sync_mail: false
-user_name_attribute: ''
-user_mail_attribute: mail
-request_set_name_id_policy: false
-strict: false
-security_metadata_sign: false
-security_authn_requests_sign: false
-security_logout_requests_sign: false
-security_logout_responses_sign: false
-security_nameid_encrypt: false
-security_signature_algorithm: ''
-security_encryption_algorithm: ''
-security_messages_sign: false
-security_assertions_signed: false
-security_assertions_encrypt: false
-security_nameid_encrypted: false
-security_want_name_id: false
-security_request_authn_context: false
-security_lowercase_url_encoding: false
-security_logout_reuse_sigs: false
-security_allow_repeat_attribute_name: false
-debug_display_error_details: false
-debug_log_in: false
-debug_log_saml_in: false
-debug_log_saml_out: false
-debug_phpsaml: false
-use_proxy_headers: false
-use_base_url: false
+metadata_valid_secs: 60
+local_login_saml_error: false
+security_authn_requests_sign: true
+security_logout_requests_sign: true
+security_logout_responses_sign: true
+strict: true
+security_messages_sign: true
+security_lowercase_url_encoding: true
+request_set_name_id_policy: true
+security_want_name_id: true
+security_request_authn_context: true
+use_base_url: true
