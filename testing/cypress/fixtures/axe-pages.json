@@ -2,7 +2,27 @@
 
   {
     "name": "homePage",
-    "route": "https://vote-gov.lndo.site/"
+    "route": "/"
+  },
+
+  {
+    "name": "Alaska",
+    "route": "register/ak/"
+  },
+
+  {
+    "name": "Arkansas",
+    "route": "register/ar/"
+  },
+
+  {
+    "name": "American Soma",
+    "route": "register/as/"
+  },
+
+  {
+    "name": "North Dakota",
+    "route": "register/nd/"
   }
 
 ]

@@ -60,7 +60,13 @@ function vote_gov_preprocess_links__language_block(&$variables) {
     // if they are unique.
     if (isset($languages[$i])
         && $variables['links'][$i]['link']['#title'] != $languages[$i]->getName()) {
-      $variables['links'][$i]['link']['#title'] .= " ({$languages[$i]->getName()})";
+      if ($variables['language'] == "nv") {
+        $getName = str_replace("-", "", $languages[$i]->getName());
+        $variables['links'][$i]['link']['#title'] .= " <{$getName}>";
+      }
+      else {
+        $variables['links'][$i]['link']['#title'] .= " ({$languages[$i]->getName()})";
+      }
     }
   }
 }

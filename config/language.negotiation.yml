@@ -19,6 +19,8 @@ url:
     ypk: ypk
     '': null
     ru: ru
+    ht: ht
+    pt: pt
   domains:
     en: ''
     es: ''
@@ -33,4 +35,6 @@ url:
     vi: ''
     ypk: ''
     ru: ''
+    ht: ''
+    pt: ''
 selected_langcode: site_default
