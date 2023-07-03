@@ -4,15 +4,14 @@
 echo "Installing AWS CLI..."
 {
   if [ "$(whoami)" != "root" ]; then
-    sudo apt-get update
-    sudo apt-get install -y python3 python3-pip
-    sudo pip3 install --upgrade pip
-    sudo pip3 install awscliv2
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    unzip awscliv2.zip
+    sudo ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update
   else
-    apt-get update
-    apt-get install -y python3 python3-pip
-    pip3 install --upgrade pip
-    pip3 install awscliv2
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    unzip awscliv2.zip
+    ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update
   fi
+
 } >/dev/null 2>&1
 echo "Done!"
