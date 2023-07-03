@@ -3,6 +3,12 @@
 ## Table of Contents
 
 1. [Prerequisites](#prerequisites)
+    1. [Administrative](#administrative)
+    1. [Application](#application)
+    1. [Data](#data)
+    1. [Software](#software)
+        1. [Debian/Ubuntu](#debianubuntu)
+        1. [MacOS](#macos)
 1. [Restore Process](#restore-process)
     1. [Initialization](#initialization)
     1. [Data Extraction](#data-extraction)
@@ -13,15 +19,143 @@
 
 ## Prerequisites
 
-View the prerequisites and required tools for using scripts in the [devops.md](devops.md) file, in the `Prerequisites` section.
+### Administrative
+
+  - Cloud.gov Spaces
+
+    The Cloud.gov spaces should already be created. This project uses:
+
+      - dev
+      - dmz
+      - prod
+      - stage
+      - test
+
+    The naming convention is typically: `{project_name}-{environment_name}`.
+
+  ### Application
+
+  Clone of both the [application](https://github.com/usagov/vote-gov-drupal/) and [terraform](https://github.com/usagov/vote-gov-tf/) repositories.
+
+  ### Data
+
+  Obtain a copy of the latest backup archive available. This will likely have been moved to Google Drive or some other storage.
+
+  ### Software
+
+  #### Debian/Ubuntu
+
+  - awscli
+  
+    [Instructions](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+  
+    ```
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    unzip awscliv2.zip
+    sudo ./aws/install
+    ```
+
+  - CloudFoundry CLI v8
+    
+    [Instructions](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html)
+    
+    ```
+    wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+    echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+    sudo apt-get update
+    sudo apt-get install cf8-cli
+    cf install-plugin https://github.com/cloud-gov/cf-service-connect/releases/download/1.1.0/cf-service-connect-darwin-amd64
+    ```
+
+  - jq
+
+    ```
+    sudo apt install jq
+    ```
+
+  - mysql-client
+
+    ```
+    apt-get install mysql-client
+    ```
+
+  - Terraform
+    
+    [Instructions](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+    
+    ```
+    sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
+    wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+    gpg --no-default-keyring --keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg --fingerprint
+    echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" sudo tee /etc/apt/sources.list.d/hashicorp.list
+    sudo apt update
+    sudo apt-get install terraform
+    ```
+
+
+  #### MacOS
+
+  - Homebrew
+    
+    [Instructions](https://brew.sh)
+    
+    ```
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
+  
+    NOTE: `sudo` rights are need on the laptop to install `homebrew`, otherwise permissions will be incorrect.
+    
+  - awscli
+  
+    [Instructions](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+  
+    ```
+    brew install awscli
+    ```
+    
+  - CloudFoundry CLI v8
+    
+    [Instructions](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html)
+    
+    ```
+    brew install cloudfoundry/tap/cf-cli@8
+    cf install-plugin https://github.com/cloud-gov/cf-service-connect/releases/download/1.1.0/cf-service-connect-darwin-amd64
+    ```
+    
+  - coreutils
+    
+    ```
+    brew install coreutils
+    ```
+     
+  - jq
+      
+    ```
+    brew install jq
+    ```
+
+  - mysql-client
+
+    ```
+    brew install mysql-client
+    ```
+
+  - Terraform
+    
+    [Instructions](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+  
+    ```
+    brew tap hashicorp/tap
+    brew install hashicorp/tap/terraform
+    brew update
+    brew upgrade hashicorp/tap/terraform
+    ```
 
 ## Restore Process
 
   This section outlines the restoration process from a backup.
 
 ### Initialization
-
-[[top]](#votegov-disaster-recovery)
 
 1. Open a terminal window.
 
@@ -36,8 +170,6 @@ This step will create the pipeline accounts and various S3 buckets needed for th
 
 ### Data Extraction
 
-[[top]](#votegov-disaster-recovery)
-
 1. Download the latest copy of the backup archive. You can move this file to the `terraform` repository root folder for easier access.
 
 ![Download Backup Archive](images/disaster_recovery/restore_process_step1.png)
@@ -47,8 +179,6 @@ This step will create the pipeline accounts and various S3 buckets needed for th
 ![Extract Backup Archive](images/disaster_recovery/restore_process_step4.png)
 
 ### Terraform Restore Process
-
-[[top]](#votegov-disaster-recovery)
 
 1. Extract the data archive: `tar xf {terraform_archive_name}.tar.gz`. This will create a new folder called `env:/`.
 
@@ -112,8 +242,6 @@ Each environment deployment will take 5 - 10 minutes to complete, with the datab
 
 ### Application Restore Process
 
-[[top]](#votegov-disaster-recovery)
-
 1. In the terminal, change directory to the `application` repository, trigger a deployment by pushing to the branch of the environment that needs to be restored. Change a file or add a new temporary file and commit it to the repository.
 
 ```
@@ -132,8 +260,6 @@ git push
  
 
 ### Database Restore Process
-
-[[top]](#votegov-disaster-recovery)
 
 1. In a terminal window, change directory to the directory that has the database backup. The filename is `backup_{timestamp}.sql.gz`.
 
@@ -170,8 +296,6 @@ cf disable-ssh {APP_NAME}
 7. Use the `downsync` functionality in the pipeline to migrate the database to other environments. 
 
 ### Media Restore Process
-
-[[top]](#votegov-disaster-recovery)
 
 Media files are user uploaded files, that were uploaded via the CMS. These can be a variety of files, such as PDF's, images, etc.
 
