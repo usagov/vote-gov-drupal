@@ -112,13 +112,13 @@ msgstr "Официальный правительственный сайт"
 msgid "Register to vote in @state_name"
 msgstr "Зарегистрируйтесь для голосования в @state_name"
 
-# data.translations.register.heading2
-msgid "How to register to vote in @state_name"
-msgstr "Как зарегистрироваться для голосования в @state_name"
+# data.translations.register.heading2 (state phrase updates)
+msgid "How to register to vote"
+msgstr "Как зарегистрироваться для голосования"
 
-# data.translations.register.other_language_selection__heading
-msgid "Other ways to register to vote in @state_name"
-msgstr "Другие способы регистрации для голосования в @state_name"
+# data.translations.register.other_language_selection__heading (state phrase updates)
+msgid "Other ways to register to vote"
+msgstr "Другие способы зарегистрироваться для голосования"
 
 # data.translations.register.dates__bymail_deadline
 msgid "Register by mail deadline:"
@@ -132,9 +132,9 @@ msgstr "Крайний срок регистрации он-лайн:"
 msgid "In person registration deadline:"
 msgstr "Крайний срок личной регистрации:"
 
-# data.translations.register.dates__heading
-msgid "Voter registration deadlines in @state_name"
-msgstr "Крайний срок регистрации он-лайн в @state_name"
+# data.translations.register.dates__heading (state phrase updates)
+msgid "Voter registration deadlines"
+msgstr "Крайние сроки регистрации избирателей"
 
 # data.translations.register.confirm_registration__heading
 msgid "How to check your voter registration"

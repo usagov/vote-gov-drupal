@@ -1,4 +1,4 @@
-# Russian translation of Vote.gov
+# Portuguese translation of Vote.gov
 #
 msgid ""
 msgstr ""
@@ -9,284 +9,284 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
 # config.languages.languageName
-msgid "Haitian Creole"
-msgstr "Kreyòl Ayisyen"
+msgid "Portuguese"
+msgstr "Português"
 
 # config.languages.params.select_language
 msgid "Select language"
-msgstr "Chwazi lang"
+msgstr "Selecionar a língua"
 
 # config.languages.params.Owner
 msgid "@sitename in language"
-msgstr "@sitename an Kreyòl Ayisyen"
+msgstr "@sitename em Português"
 
 # config.languages.params.go_back
 msgid "Go back"
-msgstr "Retounen"
+msgstr "Voltar"
 
 # config.languages.params.last_updated
 msgid "Last updated:"
-msgstr "Dènye mizajou:"
+msgstr "Última Atualização:"
 
 # config.languages.params.ext_link_title
 msgid "External link opens in new window"
-msgstr "Lyen ekstèn lan ap louvri yon nouvo fenèt"
+msgstr "Links externos abrem novas páginas web"
 
 # config.languages.params.skip_text
 msgid "Skip to main content"
-msgstr "Ale nan kontni prensipal la"
+msgstr "Saltar para o conteúdo principal"
 
 # config.languages.params.english_only
 msgid "(in English)"
-msgstr "(ann Anglè)"
+msgstr "(em inglês)"
 
-# data.translations.footer.vote_logo_alt_text
+# data.translations.footer.vote_logo_alt_text (see accessibility updates)
 msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgstr "Ilistrasyon sou bwat votè montre bilten vòt ki gen tchèk pou endike aksyon pou vote"
+msgstr "Ilustração da caixa do eleitor com voto marcado ao ser inserido para indicar ação de votação"
 
 # data.translations.footer.identifier_gsa_txt
 msgid "An official website of the @link."
-msgstr "Sitwèb ofisyèl @link la"
+msgstr "Uma página web oficial da @link"
 
 # data.translations.footer.identifier_gsa_txt__1
 msgid "General Services Administration"
-msgstr "Administrasyon Sèvis Jeneral"
+msgstr "Administração dos Serviços Gerais"
 
 # data.translations.footer.identifier_more_info
 msgid "Looking for U.S. government information and services? @link."
-msgstr "Èske w ap chèche enfòmasyon ak sèvis gouvènman ameriken lofri? @link"
+msgstr "Você procura informação e serviços do governo dos EUA? @link"
 
 # data.translations.footer.identifier_more_info__1
 msgid "Visit USA.gov"
-msgstr "Vizite USA.gov"
+msgstr "Visite USA.gov (em inglês)"
 
 # data.translations.footer.identifier_aria
 msgid "Agency identifier"
-msgstr "Idantifikasyon Ajans lan"
+msgstr "Identificador da agência"
 
 # data.translations.footer.identifier_gsa_txt_aria
 msgid "Agency description"
-msgstr "Deskripsyon ajans lan"
+msgstr "Descrição da agência"
 
 # data.translations.footer.identifier_link_aria
 msgid "Important links"
-msgstr "Lyen enpòtan yo"
+msgstr "Links importantes"
 
 # data.translations.footer.identifier_more_info_aria
 msgid "Government information and services"
-msgstr "Enfòmasyon ak sèvis gouvènman an"
+msgstr "Informação e serviços do governo"
 
 # data.translations.footer.eac_text
 msgid "in partnership with"
-msgstr "an patenarya ak"
+msgstr "em parceria com"
 
-# data.translations.footer.eac_logo_alt_text
+# data.translations.footer.eac_logo_alt_text (see accessibility updates)
 msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
-msgstr "Logo Komisyon Etazini Asistans pou Eleksyon (US Election Assistance Commission) ki endike patenarya ak Vote.gov"
+msgstr "Logomarca da Comissão de Assistência das Eleições dos EUA que indica uma parceria com Vote.gov"
 
 # data.translations.footer.twitter_text
 msgid "Follow Vote.gov on Twitter"
-msgstr "Swiv Vote.org sou Twitter (ann Anglè)"
+msgstr "Siga Vote.gov no Twitter (em inglês)"
 
 # data.translations.footer.section_sign_up
 msgid "Email sign-up"
-msgstr "Enskripsyon imèl"
+msgstr "Inscrição por e-mail"
 
 # data.translations.footer.section_contact
 msgid "Contact"
-msgstr "Kontak"
+msgstr "Contato"
 
 # data.translations.footer.gsa_logo_alt
 msgid "GSA logo"
-msgstr "Logo GSA a"
+msgstr "Logotipo do GSA"
 
 # data.translations.homepage.search_placeholder
 msgid "Search Vote.gov"
-msgstr "Fè rechèch sou vote.gov"
+msgstr "Pesquisar Vote.gov"
 
 # data.translations.homepage.section_banner
 msgid "Official government website"
-msgstr "Sit entènèt ofisyèl gouvènman an"
+msgstr "Página web oficial do governo"
 
 # data.translations.register.heading
 msgid "Register to vote in @state_name"
-msgstr "Enskri pou vote nan @state_name"
+msgstr "Registrar-se para votar em @state_name"
 
-# data.translations.register.heading2 (state phrase update)
+# data.translations.register.heading2 (state phrase updates)
 msgid "How to register to vote"
-msgstr "Kijan pou enskri pou vote"
+msgstr "Como registrar-se para votar"
 
-# data.translations.register.other_language_selection__heading (state phrase update)
+# data.translations.register.other_language_selection__heading (state phrase updates)
 msgid "Other ways to register to vote"
-msgstr "Lòt fason pou enskri pou vote"
+msgstr "Outras maneiras de registrar-se para votar"
 
 # data.translations.register.dates__bymail_deadline
 msgid "Register by mail deadline:"
-msgstr "Dat limit enskripsyon pa korespondans:"
+msgstr "Prazo final para registrar-se por correspondência:"
 
 # data.translations.register.dates__byonline_deadline
 msgid "Online registration deadline:"
-msgstr "Dat limit enskripsyon anliy:"
+msgstr "Prazo final para registrar-se on-line:"
 
 # data.translations.register.dates__inperson_deadline
 msgid "In person registration deadline:"
-msgstr "Dat limit enskripsyon an pèsòn:"
+msgstr "Prazo final de registro em pessoa:"
 
-# data.translations.register.dates__heading (state phrase update)
+# data.translations.register.dates__heading (state phrase updates)
 msgid "Voter registration deadlines"
-msgstr "Dat limit pou votè yo enskri"
+msgstr "Os prazos de registro de eleitores"
 
 # data.translations.register.confirm_registration__heading
 msgid "How to check your voter registration"
-msgstr "Kijan pou tcheke enskripsyon votè w"
+msgstr "Como você pode verificar seu registro de eleitor"
 
 # data.translations.register.confirm_registration__intro_WY
 msgid "You can confirm your voter registration status by contacting your local registration office. @link."
-msgstr "Ou ka konfime nan ki pwen enskripsyon votè w te fè a rive, lè w antre an kontak avèk biwo enskripsyon lokal ou a. @link."
+msgstr "Você pode confirmar seu status de registro de eleitor entrando em contato com o cartório de registro local. @link."
 
 # @link: data.translations.register.confirm_registration__link_WY
 msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr "Klike la a pou w wè enfòmasyon pou kontakte grefye Konte Wyoming la (PDF)"
+msgstr "Clique aqui para ver as informações de contato do secretário do condado de Wyoming (PDF)"
 
 # data.translations.register.confirm_registration__intro (see accessibility updates)
 msgid "You can @link on @state_name’s election website."
-msgstr "Ou kapab @link sou sit entènèt eleksyon Eta w la @state_name "
+msgstr "Também pode @link na página web de eleição estadual do @state_name"
 
 # @link: data.translations.register.confirm_registration__intro (see accessibility updates)
 msgid "confirm your voter registration status"
-msgstr "konfime estati enskripsyon elektè w la"
+msgstr "confirmar o status do seu registro de eleitor"
 
 # data.translations.register.by_mail__intro (see accessibility updates)
 msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
-msgstr "Enskripsyon anliy pa disponib kounye a. @link pou vote sou sit entènèt eleksyon Eta w la @state_name."
+msgstr "O registro on-line não está disponível no momento. @link para votar na página web de eleição estadual do @state_name."
 
 # @link: data.translations.register.by_mail__intro (see accessibility updates)
 msgid "Find out ways to register"
-msgstr "Chache fason pou w enskri"
+msgstr "Descubra maneiras de registrar-se"
 
 # data.translations.register.in_person__intro (see accessibility updates)
 msgid "Register in person at your local election office. @link on @state_name’s election website."
-msgstr "Al enskri an pèsòn nan biwo eleksyon lokal ou. @link sou sit entènèt eleksyon Eta w la @state_name."
+msgstr "Registre-se em pessoa no seu escritório de eleições local. @link na página web de eleição estadual do @state_name."
 
 # @link: data.translations.register.in_person__intro (see accessibility updates)
 msgid "Learn more about how to register"
-msgstr "Jwenn plis enfòmasyon sou fason pou w enskri"
+msgstr "Aprenda mais sobre como registrar-se"
 
 # data.translations.register.not_needed__intro (see accessibility updates)
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
-msgstr "Enskripsyon pou elektè pa obligatwa nan @state_name. @link sou sit wèb eleksyon Eta w la @state_name"
+msgstr "O registro de eleitores não é mandatório em @state_name. @link na página web de eleição estadual de @state_name."
 
 # @link: data.translations.register.not_needed__intro (see accessibility updates)
 msgid "Learn more about voting"
-msgstr "Aprann plis sou pwosesis vòt la"
+msgstr "Aprenda mais sobre a votação"
 
 # data.translations.register.online__answer1 (see accessibility updates)
 msgid "@link on @state_name’s election website."
-msgstr "@link sou sit wèb eleksyon Eta w la sou @state_name"
+msgstr "@link na página web de eleição estadual do @state_name"
 
 # @link: data.translations.register.online__answer1 (see accessibility updates)
 msgid "Start your online registration"
-msgstr "Kòmanse enskripsyon ou anliy"
+msgstr "Comece o seu registro on-line"
 
 # data.translations.register.online__answer2 (see accessibility updates)
 msgid "You can also @link on @state_name’s election website."
-msgstr "Ou kapab @link sou sit entènèt eleksyon Eta w la @state_name"
+msgstr "Também pode @link na página web de eleição estadual do @state_name"
 
 # @link: data.translations.register.online__answer2 (see accessibility updates)
 msgid "register to vote by mail or in person"
-msgstr "enskri pou vote tou pa lapòs oswa an pèsòn"
+msgstr "registrar-se para votar por correspondência ou em pessoa"
 
 # data.translations.months.january
 msgctxt "Long month name"
 msgid "January"
-msgstr "Janvye"
+msgstr "janeiro"
 
 # data.translations.months.february
 msgctxt "Long month name"
 msgid "February"
-msgstr "Fevriye"
+msgstr "fevereiro"
 
 # data.translations.months.march
 msgctxt "Long month name"
 msgid "March"
-msgstr "Mas"
+msgstr "março"
 
 # data.translations.months.april
 msgctxt "Long month name"
 msgid "April"
-msgstr "Avril"
+msgstr "abril"
 
 # data.translations.months.may
 msgctxt "Long month name"
 msgid "May"
-msgstr "Me"
+msgstr "maio"
 
 # data.translations.months.june
 msgctxt "Long month name"
 msgid "June"
-msgstr "Jen"
+msgstr "junho"
 
 # data.translations.months.july
 msgctxt "Long month name"
 msgid "July"
-msgstr "Jiyè"
+msgstr "julho"
 
 # data.translations.months.august
 msgctxt "Long month name"
 msgid "August"
-msgstr "Out"
+msgstr "agosto"
 
 # data.translations.months.september
 msgctxt "Long month name"
 msgid "September"
-msgstr "Septanm"
+msgstr "setembro"
 
 # data.translations.months.october
 msgctxt "Long month name"
 msgid "October"
-msgstr "Oktòb"
+msgstr "outubro"
 
 # data.translations.months.november
 msgctxt "Long month name"
 msgid "November"
-msgstr "Novanm"
+msgstr "novembro"
 
 # data.translations.months.december
 msgctxt "Long month name"
 msgid "December"
-msgstr "Desanm"
-
-# data.translations.days.monday
-msgctxt "day name"
-msgid "Monday"
-msgstr "Lendi"
-
-# data.translations.days.tuesday
-msgctxt "day name"
-msgid "Tuesday"
-msgstr "Madi"
-
-# data.translations.days.wednesday
-msgctxt "day name"
-msgid "Wednesday"
-msgstr "Mèkredi"
-
-# data.translations.days.thursday
-msgctxt "day name"
-msgid "Thursday"
-msgstr "Jedi"
-
-# data.translations.days.friday
-msgctxt "day name"
-msgid "Friday"
-msgstr "Vandredi"
-
-# data.translations.days.saturday
-msgctxt "day name"
-msgid "Saturday"
-msgstr "Samdi"
+msgstr "dezembro"
 
 # data.translations.days.sunday
 msgctxt "day name"
 msgid "Sunday"
-msgstr "Dimanch"
+msgstr "domingo"
+
+# data.translations.days.monday
+msgctxt "day name"
+msgid "Monday"
+msgstr "segunda-feira"
+
+# data.translations.days.tuesday
+msgctxt "day name"
+msgid "Tuesday"
+msgstr "terça-feira"
+
+# data.translations.days.wednesday
+msgctxt "day name"
+msgid "Wednesday"
+msgstr "quarta-feira"
+
+# data.translations.days.thursday
+msgctxt "day name"
+msgid "Thursday"
+msgstr "quinta-feira"
+
+# data.translations.days.friday
+msgctxt "day name"
+msgid "Friday"
+msgstr "sexta-feira"
+
+# data.translations.days.saturday
+msgctxt "day name"
+msgid "Saturday"
+msgstr "sábado"
