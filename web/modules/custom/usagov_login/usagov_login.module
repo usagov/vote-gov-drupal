@@ -59,7 +59,7 @@ function usagov_login_form_user_login_form_alter(&$form, FormStateInterface $for
       '#suffix' => '</div>',
     ];
 
-    $form['#attributes']['class'] = 'usa-list.usa-list--unstyled';
+    $form['#attributes']['class'][] = 'usa-list.usa-list--unstyled';
   }
 }
 
