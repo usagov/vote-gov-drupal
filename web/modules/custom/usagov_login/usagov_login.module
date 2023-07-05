@@ -16,6 +16,8 @@ function usagov_login_form_user_login_form_alter(&$form, FormStateInterface $for
   $config = \Drupal::config('usagov_login.settings');
   $loginPath = $config->get('sso_login_path');
   $loginText = $config->get('sso_login_text');
+  $cancelPath = $config->get('sso_cancel_path');
+  $cancelText = $config->get('sso_cancel_text');
 
   // Allow override for local login forms via drush sset,
   // or $settings[] in settings.local.php.
@@ -44,6 +46,30 @@ function usagov_login_form_user_login_form_alter(&$form, FormStateInterface $for
       '#weight' => '-20',
     ];
 
-    $form['#attributes']['class'] = 'usa-list.usa-list--unstyled';
+    $form['sso_cancel_link'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'a',
+      '#attributes' => [
+        'href' => $cancelPath,
+        'class' => ['cancel-link'],
+      ],
+      '#value' => $cancelText,
+      '#weight' => '-20',
+      '#prefix' => '<div class="sso-cancel-link-wrapper margin-top-2 margin-bottom-6">',
+      '#suffix' => '</div>',
+    ];
+
+    $form['#attributes']['class'][] = 'usa-list.usa-list--unstyled';
+  }
+}
+
+/**
+ * Implements hook_preprocess_page_title().
+ */
+function usagov_login_preprocess_page_title(&$variables) {
+
+  $route_match = \Drupal::routeMatch();
+  if ($route_match->getRouteName() == 'user.login') {
+    $variables['title'] = t('Security Notification');
   }
 }
