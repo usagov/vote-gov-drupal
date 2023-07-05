@@ -59,41 +59,40 @@ jobs:
           root: ~/
           paths:
             - project/web/themes/custom/vote_gov/dist
-  # cypress:
-  #   docker:
-  #     - image: cypress/included:cypress-12.3.0-node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
-  #   environment:
-  #     cypress_pipeline: 1
-  #     cypress_cloudgov_application_name: "vote-drupal-test"
-  #   steps:
-  #     - checkout
-  #     - attach_workspace:
-  #         at: ~/
-  #     - run:
-  #         name: "Install cloudfoundry dependencies"
-  #         command: |
-  #           source ./scripts/pipeline/deb-basic-deps.sh
-  #           source ./scripts/pipeline/deb-cf-install.sh
-  #     - run:
-  #         name: "Cypress"
-  #         command: |
-  #           export CIRCLE_BRANCH="test"
-  #           source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
-  #           source ./scripts/pipeline/cloud-gov-login.sh
+  cypress:
+    docker:
+      - image: cypress/included:cypress-12.3.0-node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
+    environment:
+      cypress_pipeline: 1
+      cypress_cloudgov_application_name: "vote-drupal-test"
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: "Install cloudfoundry dependencies"
+          command: |
+            source ./scripts/pipeline/deb-basic-deps.sh
+            source ./scripts/pipeline/deb-cf-install.sh
+      - run:
+          name: "Cypress"
+          command: |
+            export CIRCLE_BRANCH="test"
+            source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
+            source ./scripts/pipeline/cloud-gov-login.sh
 
-  #           cd testing
-  #           cypress_baseurl=$(cf routes | grep waf-test | grep gov | awk '{print $2"."$3}')
-  #           cypress_random_pass="$(date | sha256sum | cut -d" " -f1)"
+            cd testing
+            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
 
-  #           sed -i "s/^    baseUrl: .*/    baseUrl: 'https:\/\/${cypress_baseurl}',/" cypress.config.js
-  #           sed -i "s/^      \"test_pass\": .*/      \"test_pass\": \"${cypress_random_pass}\",/" cypress.config.js
-  #           sed -i "s/^      \"pipeline\": .*/      \"pipeline\": 1,/" cypress.config.js
-  #           sed -i "s/^      \"cloudgov_application_name\": .*/      \"cloudgov_application_name\": \"${cypress_cloudgov_application_name}\",/" cypress.config.js
+            sed -i "s/^    baseUrl: .*/    baseUrl: 'https:\/\/${cypress_baseurl}',/" pipeline.config.js
+            sed -i "s/^      \"test_pass\": .*/      \"test_pass\": \"${cypress_random_pass}\",/" pipeline.config.js
+            sed -i "s/^      \"pipeline\": .*/      \"pipeline\": 1,/" pipeline.config.js
+            sed -i "s/^      \"cloudgov_application_name\": .*/      \"cloudgov_application_name\": \"${cypress_cloudgov_application_name}\",/" pipeline.config.js
 
-  #           npm install
-  #           npm run cy:test
-  #     - store_artifacts:
-  #         path: testing/cypress/screenshots
+            npm install
+            npm run cy:pipeline
+      - store_artifacts:
+          path: testing/cypress/screenshots
   deploy:
     docker:
       - image: cimg/base:stable
@@ -307,15 +306,15 @@ workflows:
                 - test
           requires:
             - build-theme
-      # - cypress:
-      #     filters:
-      #       branches:
-      #         only:
-      #           - dev
-      #           - stage
-      #           - test
-      #     requires:
-      #       - deploy-test
+      - cypress:
+          filters:
+            branches:
+              only:
+                - dev
+                - stage
+                - test
+          requires:
+            - deploy-test
       - deploy:
           filters:
             branches:
