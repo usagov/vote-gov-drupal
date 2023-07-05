@@ -27,7 +27,9 @@
         1. [bootstrap.sh](#bootstrapsh)
         1. [build_static](#build_static)
         1. [bash-exports.sh](#bash-exportssh)
+        1. [entrypoint](#entrypoint)
         1. [post-deploy](#post-deploy)
+        1. [start](#start)
     1. [Pipeline Scripts](#pipeline-scripts)
         1. [build-theme.sh](#build-themesh)
         1. [cloud-gov-deploy.sh](#cloud-gov-deploysh)
@@ -298,9 +300,17 @@ proxy variables, and the installation of `awscli`.
 
 Compiles the static website via the Drupal Tome module, then syncs the newly generated static files via `awscli` to S3. This script runs as a scheduled pipeline in CircleCI, where it is launched as a CloudFoundry task in cloud.gov.
 
+#### entrypoint
+
+A simple script that is used to hold the container open with a infinite sleep loop.
+
 #### post-deploy
 
 Used to do post deployment house keeping tasks. These include various `drush` commands, such as running cache rebuild, config import, and the s3fs module tasks.
+
+#### start
+
+Used to start the PHP and Apache processes. It will then run [entrypoint](#entrypoint).
 
 [[top]](#devops-documentation)
 ### Pipeline Scripts
