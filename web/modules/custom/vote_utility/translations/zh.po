@@ -71,11 +71,11 @@ msgstr "搜尋 Vote.gov"
 msgid "Register to vote in @state_name"
 msgstr "在 @state_name 登記投票"
 
-msgid "How to register to vote in @state_name"
-msgstr "如何在 @state_name 登記投票"
+msgid "How to register to vote"
+msgstr "如何登記投票"
 
-msgid "Other ways to register to vote in @state_name"
-msgstr "在 @state_name 登記投票的其他方式"
+msgid "Other ways to register to vote"
+msgstr "登記投票的其他方式"
 
 msgid "Register by mail deadline:"
 msgstr "郵寄報名截止日期："
@@ -83,8 +83,8 @@ msgstr "郵寄報名截止日期："
 msgid "Online registration deadline:"
 msgstr "網路報名截止日期："
 
-msgid "Voter registration deadlines in @state_name"
-msgstr "@state_name 的選民登記截止日期"
+msgid "Voter registration deadlines"
+msgstr "選民登記截止日期"
 
 msgid "In person registration deadline:"
 msgstr "親自報名截止日期："

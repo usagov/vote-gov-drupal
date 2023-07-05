@@ -74,11 +74,11 @@ msgstr "Vote.gov 사이트 검색"
 msgid "Register to vote in @state_name"
 msgstr "@state_name 유권자 등록 안내 "
 
-msgid "How to register to vote in @state_name"
-msgstr "@state_name 에서 유권자로 등록하는 방법"
+msgid "How to register to vote"
+msgstr "유권자 등록 방법"
 
-msgid "Other ways to register to vote in @state_name"
-msgstr "기타 @state_name 유권자 등록 방법"
+msgid "Other ways to register to vote"
+msgstr "기타 유권자 등록 방법"
 
 msgid "Register by mail deadline:"
 msgstr "우편 투표자 등록 마감일:"
@@ -86,8 +86,8 @@ msgstr "우편 투표자 등록 마감일:"
 msgid "Online registration deadline:"
 msgstr "온라인 등록 마감일:"
 
-msgid "Voter registration deadlines in @state_name"
-msgstr "@state_name 유권자 등록 마감일 "
+msgid "Voter registration deadlines"
+msgstr "유권자 등록 마감일"
 
 msgid "In person registration deadline:"
 msgstr "직접 투표자 등록 마감일: "
