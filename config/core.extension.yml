@@ -4,7 +4,6 @@ module:
   new_relic_rpm: -20
   admin_toolbar: 0
   allowed_formats: 0
-  auto_entitylabel: 0
   autologout: 0
   block: 0
   block_content: 0
@@ -13,6 +12,8 @@ module:
   breakpoint: 0
   ckeditor5: 0
   config: 0
+  config_filter: 0
+  config_ignore: 0
   config_translation: 0
   content_moderation: 0
   datetime: 0
@@ -64,6 +65,7 @@ module:
   twig_field_value: 0
   twig_tweak: 0
   update: 0
+  usagov_login: 0
   user: 0
   views_ui: 0
   vote_utility: 0

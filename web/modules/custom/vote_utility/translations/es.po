@@ -71,11 +71,11 @@ msgstr "Busque en Vote.gov"
 msgid "Register to vote in @state_name"
 msgstr "Regístrese para votar en @state_name"
 
-msgid "How to register to vote in @state_name"
-msgstr "¿Cómo registrarse para votar en @state_name?"
+msgid "How to register to vote"
+msgstr "Cómo registrarse para votar"
 
-msgid "Other ways to register to vote in @state_name"
-msgstr "¿Otras formas para registrarse para votar en @state_name?"
+msgid "Other ways to register to vote"
+msgstr "Otras formas de registrarse para votar"
 
 msgid "Register by mail deadline:"
 msgstr "Registrarse por correo postal:"
@@ -83,8 +83,8 @@ msgstr "Registrarse por correo postal:"
 msgid "Online registration deadline:"
 msgstr "Inscripción por internet:"
 
-msgid "Voter registration deadlines in @state_name"
-msgstr "Fecha límite para registrarse en @state_name"
+msgid "Voter registration deadlines"
+msgstr "Plazos para el registro de votantes"
 
 msgid "In person registration deadline:"
 msgstr "Registrarse en persona:"

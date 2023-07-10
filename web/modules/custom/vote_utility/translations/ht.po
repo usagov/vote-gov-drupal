@@ -112,13 +112,13 @@ msgstr "Sit entènèt ofisyèl gouvènman an"
 msgid "Register to vote in @state_name"
 msgstr "Enskri pou vote nan @state_name"
 
-# data.translations.register.heading2
-msgid "How to register to vote in @state_name"
-msgstr "Kijan pou enskri pou vote nan @state_name"
+# data.translations.register.heading2 (state phrase update)
+msgid "How to register to vote"
+msgstr "Kijan pou enskri pou vote"
 
-# data.translations.register.other_language_selection__heading
-msgid "Other ways to register to vote in @state_name"
-msgstr "Lòt fason pou enskri nan @state_name"
+# data.translations.register.other_language_selection__heading (state phrase update)
+msgid "Other ways to register to vote"
+msgstr "Lòt fason pou enskri pou vote"
 
 # data.translations.register.dates__bymail_deadline
 msgid "Register by mail deadline:"
@@ -132,9 +132,9 @@ msgstr "Dat limit enskripsyon anliy:"
 msgid "In person registration deadline:"
 msgstr "Dat limit enskripsyon an pèsòn:"
 
-# data.translations.register.dates__heading
-msgid "Voter registration deadlines in @state_name"
-msgstr "Dat limit enskripsyon votè nan @state_name"
+# data.translations.register.dates__heading (state phrase update)
+msgid "Voter registration deadlines"
+msgstr "Dat limit pou votè yo enskri"
 
 # data.translations.register.confirm_registration__heading
 msgid "How to check your voter registration"
