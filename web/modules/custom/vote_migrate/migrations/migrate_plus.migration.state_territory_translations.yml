@@ -7,14 +7,17 @@ source:
   data_fetcher_plugin: http
   data_parser_plugin: json
   urls:
-    - localhost/vote_migrate/import_nodes_state_territory/translation/es/json
-    - localhost/vote_migrate/import_nodes_state_territory/translation/ko/json
-    - localhost/vote_migrate/import_nodes_state_territory/translation/tl/json
     - localhost/vote_migrate/import_nodes_state_territory/translation/bn/json
-    - localhost/vote_migrate/import_nodes_state_territory/translation/hi/json
+    - localhost/vote_migrate/import_nodes_state_territory/translation/es/json
     - localhost/vote_migrate/import_nodes_state_territory/translation/km/json
+    - localhost/vote_migrate/import_nodes_state_territory/translation/ko/json
+    - localhost/vote_migrate/import_nodes_state_territory/translation/hi/json
+    - localhost/vote_migrate/import_nodes_state_territory/translation/ht/json
     - localhost/vote_migrate/import_nodes_state_territory/translation/nv/json
+    - localhost/vote_migrate/import_nodes_state_territory/translation/pt/json
+    - localhost/vote_migrate/import_nodes_state_territory/translation/tl/json
     - localhost/vote_migrate/import_nodes_state_territory/translation/vi/json
+    - localhost/vote_migrate/import_nodes_state_territory/translation/ru/json
     - localhost/vote_migrate/import_nodes_state_territory/translation/ypk/json
     - localhost/vote_migrate/import_nodes_state_territory/translation/zh/json
     - localhost/vote_migrate/import_nodes_state_territory/translation/zh-hans/json
