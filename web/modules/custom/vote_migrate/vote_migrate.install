@@ -1,0 +1,48 @@
+<?php
+
+declare(strict_types = 1);
+
+/**
+ * @file
+ * Install, update and uninstall functions for vote_migrate module.
+ */
+
+use Drupal\migrate_plus\Entity\Migration;
+
+/**
+ * Implements hook_install().
+ *
+ * We need the urls to be absolute for the JSON source plugin to read them, but
+ * the static configuration files on disk doesn't know the server and port to
+ * use. So, in the .yml files we provide the JSON resources relative to the
+ * site root and here rewrite them to fully-qualified paths.
+ */
+function vote_migrate_install(): void {
+  /** @var \Drupal\migrate_plus\Entity\MigrationInterface $state_territory_translations_migration */
+  $state_territory_translations_migration = Migration::load('state_territory_translations');
+  if ($state_territory_translations_migration) {
+    $source = $state_territory_translations_migration->get('source');
+    $request = \Drupal::request();
+    $urls = [];
+    foreach ($source['urls'] as $url) {
+      $urls[] = 'https://' . $request->getHttpHost() . $url;
+    }
+    $source['urls'] = $urls;
+    $state_territory_translations_migration->set('source', $source);
+    $state_territory_translations_migration->save();
+  }
+
+  /** @var \Drupal\migrate_plus\Entity\MigrationInterface $state_territory_migration */
+  $state_territory_migration = Migration::load('state_territory');
+  if ($state_territory_migration) {
+    $source = $state_territory_migration->get('source');
+    $request = \Drupal::request();
+    $urls = [];
+    foreach ($source['urls'] as $url) {
+      $urls[] = 'https://' . $request->getHttpHost() . $url;
+    }
+    $source['urls'] = $urls;
+    $state_territory_migration->set('source', $source);
+    $state_territory_migration->save();
+  }
+}
