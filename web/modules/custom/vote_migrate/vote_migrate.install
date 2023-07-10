@@ -1,11 +1,11 @@
 <?php
 
-declare(strict_types = 1);
-
 /**
  * @file
  * Install, update and uninstall functions for vote_migrate module.
  */
+
+declare(strict_types = 1);
 
 use Drupal\migrate_plus\Entity\Migration;
 
