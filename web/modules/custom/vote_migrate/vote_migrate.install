@@ -23,21 +23,22 @@ function vote_migrate_install(): void {
   $server_http_host = $_SERVER['SERVER_NAME'];
 
   if ($application_environment != 'local') {
+    // Use the internal urls for cloud based environmements.
     switch ($application_environment) {
       case "dev":
-        $server_http_host = 'cms-dev.vote.gov';
+        $server_http_host = 'vote-drupal-dev.apps.internal:8080';
         break;
 
       case "prod":
-        $server_http_host = 'cms.vote.gov';
+        $server_http_host = 'vote-drupal-prod.apps.internal:8080';
         break;
 
       case "stage":
-        $server_http_host = 'cms-stage.vote.gov';
+        $server_http_host = 'vote-drupal-stage.apps.internal:8080';
         break;
 
       case "test":
-        $server_http_host = 'cms-test.vote.gov';
+        $server_http_host = 'vote-drupal-test.apps.internal:8080';
         break;
     }
   }
