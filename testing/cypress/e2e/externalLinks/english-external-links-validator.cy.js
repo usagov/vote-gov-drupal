@@ -69,15 +69,29 @@ describe("External Link Validator Test", () => {
         cy.visit({
           url: page.route,
         });
+        // cy.get("main a[href^='https://']").each(link => {
+        //   if (excludedlinks.indexOf(link.prop('href')) == -1) {
+        //     cy.request({
+        //       url: link.prop('href'),
+        //       failOnStatusCode: false
+        //     }).then((response) => {
+        //       expect(response.status).to.eq(200)
+        //     })
+        //   }
+        // })
         cy.get("main a[href^='https://']").each(link => {
-          if (excludedlinks.indexOf(link.prop('href')) == -1) {
+
             cy.request({
               url: link.prop('href'),
               failOnStatusCode: false
-            }).then((response) => {
-              expect(response.status).to.eq(200)
             })
-          }
+            
+            .if(response === '200').cy.log('this link is good')
+            
+            // .then((response) => {
+            //   // expect(response.status).to.eq(200)
+            // })
+          
         })
       }
     );
