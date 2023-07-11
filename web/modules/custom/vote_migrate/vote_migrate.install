@@ -25,7 +25,7 @@ function vote_migrate_install(): void {
     $request = \Drupal::request();
     $urls = [];
     foreach ($source['urls'] as $url) {
-      $urls[] = 'https://' . $request->getHttpHost() . $url;
+      $urls[] = 'https://' .  $_SERVER['SERVER_NAME'] . $url;
     }
     $source['urls'] = $urls;
     $state_territory_translations_migration->set('source', $source);
@@ -39,10 +39,20 @@ function vote_migrate_install(): void {
     $request = \Drupal::request();
     $urls = [];
     foreach ($source['urls'] as $url) {
-      $urls[] = 'https://' . $request->getHttpHost() . $url;
+      $urls[] = 'https://' .  $_SERVER['SERVER_NAME'] . $url;
     }
     $source['urls'] = $urls;
     $state_territory_migration->set('source', $source);
     $state_territory_migration->save();
   }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function vote_migrate_uninstall() {
+  // Delete all vote_migrate settings variables.
+  \Drupal::configFactory()->getEditable('migrate_plus.migration_group.nodes__state_territory')->delete();
+  \Drupal::configFactory()->getEditable('migrate_plus.migration.state_territory_translations')->delete();
+  \Drupal::configFactory()->getEditable('migrate_plus.migration.state_territory')->delete();
 }
