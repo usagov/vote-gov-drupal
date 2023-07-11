@@ -25,7 +25,7 @@ function vote_migrate_install(): void {
     $request = \Drupal::request();
     $urls = [];
     foreach ($source['urls'] as $url) {
-      $urls[] = 'https://' .  $_SERVER['SERVER_NAME'] . $url;
+      $urls[] = 'https://' . $_SERVER['SERVER_NAME'] . $url;
     }
     $source['urls'] = $urls;
     $state_territory_translations_migration->set('source', $source);
@@ -39,7 +39,7 @@ function vote_migrate_install(): void {
     $request = \Drupal::request();
     $urls = [];
     foreach ($source['urls'] as $url) {
-      $urls[] = 'https://' .  $_SERVER['SERVER_NAME'] . $url;
+      $urls[] = 'https://' . $_SERVER['SERVER_NAME'] . $url;
     }
     $source['urls'] = $urls;
     $state_territory_migration->set('source', $source);
