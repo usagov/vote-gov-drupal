@@ -1,5 +1,5 @@
-uuid: 5c8d89ba-70ae-445e-8a48-0a86c4bb3334
-langcode: nv
+uuid: 117bcbd2-9342-4345-ae42-abfb8c50a0ec
+langcode: en
 status: true
 dependencies:
   module:
@@ -8,8 +8,8 @@ third_party_settings:
   disable_language:
     disable: true
     redirect_language: en
-id: nv
-label: Navajo
-direction: ltr
-weight: 0
+id: ar
+label: Arabic
+direction: rtl
+weight: -8
 locked: false
