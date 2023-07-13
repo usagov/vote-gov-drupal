@@ -82,7 +82,7 @@ msgstr "yi[ nidaalnish"
 
 # data.translations.footer.eac_logo_alt_text
 msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
-msgstr "US Election Assistance Commission bee bik'7'diidlid7g77 47 biniy4h7g77 Vote.gov yi[ ah77'1azhgo yaa halne'"
+msgstr "U.S. Election Assistance Commission bee bik'7'diidlid7g77 47 biniy4h7g77 Vote.gov yi[ ah77'1azhgo yaa halne'"
 
 # data.translations.footer.twitter_text
 msgid "Follow Vote.gov on Twitter"
