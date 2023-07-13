@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.state_territory.body
+    - field.field.node.state_territory.field_accepts_nvrf
     - field.field.node.state_territory.field_confirm_registration_link
     - field.field.node.state_territory.field_election_homepage_link
     - field.field.node.state_territory.field_g_in_person_deadline
@@ -45,6 +46,7 @@ content:
     region: content
 hidden:
   body: true
+  field_accepts_nvrf: true
   field_confirm_registration_link: true
   field_election_homepage_link: true
   field_g_in_person_deadline: true

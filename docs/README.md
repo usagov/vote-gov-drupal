@@ -3,12 +3,12 @@
 ## Environments and git branches
 List of development environments and their equivalent git branches.
 
-| **Cloud.gov environments** | **Git branch** | **Use case**                                             |
-|----------------------------|----------------|----------------------------------------------------------|
-| vote-drupal-dev            | dev            | App work that is ready for testing in cloud.gov          |
-| vote-drupal-test           | test           | Pipeline development work ready for testing in cloud.gov |
-| vote-drupal-stage          | stage          | All work that is ready for release/UAT testing           |
-| vote-drupal-prod           | prod           | All work that is approved and released                   |
+| **Public (static)** | **CMS**            | **Cloud.gov environments** | **Git branch** | **Use case**                                             |
+|---------------------|--------------------|----------------------------|----------------|----------------------------------------------------------|
+| ssg-dev.vote.gov    | cms-dev.vote.gov   | vote-drupal-dev            | dev            | App work that is ready for testing in cloud.gov          |
+| ssg-test.vote.gov   | cms-test.vote.gov  | vote-drupal-test           | test           | Pipeline development work ready for testing in cloud.gov |
+| ssg-stage.vote.gov  | cms-stage.vote.gov | vote-drupal-stage          | stage          | All work that is ready for release/UAT testing           |
+| ssg.vote.gov        | cms.vote.gov       | vote-drupal-prod           | prod           | All work that is approved and released                   |
 
 ## Table of Contents
 - [Git standards](standards.md)

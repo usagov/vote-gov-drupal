@@ -72,11 +72,11 @@ msgstr "I-search ang Vote.gov"
 msgid "Register to vote in @state_name"
 msgstr "Magparehistro para bumoto sa @state_name"
 
-msgid "How to register to vote in @state_name"
-msgstr "Paano magparehistro para bumoto sa @state_name"
+msgid "How to register to vote"
+msgstr "Paano magparehistro para bumoto"
 
-msgid "Other ways to register to vote in @state_name"
-msgstr "Iba pang mga paraan para magparehistro para bumoto sa @state_name"
+msgid "Other ways to register to vote"
+msgstr "Iba pang mga paraan para magrehistro para bumoto"
 
 msgid "Register by mail deadline:"
 msgstr "Deadline ng pagpaparehistro sa pamamagitan ng koreo"
@@ -84,8 +84,8 @@ msgstr "Deadline ng pagpaparehistro sa pamamagitan ng koreo"
 msgid "Online registration deadline:"
 msgstr "Deadline ng pagpaparehistro sa online"
 
-msgid "Voter registration deadlines in @state_name"
-msgstr "Mga deadline ng pagpaparehistro ng botante sa @state_name"
+msgid "Voter registration deadlines"
+msgstr "Mga huling araw para sa rehistrasyon ng botante"
 
 msgid "In person registration deadline:"
 msgstr "Deadline ng personal na pagpaparehistro"

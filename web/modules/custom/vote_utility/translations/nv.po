@@ -76,10 +76,10 @@ msgstr "vote.gov hanit1h"
 msgid "Register to vote in @state_name"
 msgstr "Ha'did77l77[ i'ii'n77[ biniiy4 @state_name"
 
-msgid "How to register to vote in @state_name"
+msgid "How to register to vote"
 msgstr "Hait'1o i'ii'n77[ biniiy4 ha'dil'88h @state_name"
 
-msgid "Other ways to register to vote in @state_name"
+msgid "Other ways to register to vote"
 msgstr "A['22 1daat'1o hazh'dii['88h i'ii'n77[ biniiy4 @state_name"
 
 msgid "Register by mail deadline:"
@@ -88,7 +88,7 @@ msgstr "Naaltsoos nin1h1jeehd00 ha'd7l44hgo koj8' b1 ah00t'i':"
 msgid "Online registration deadline:"
 msgstr "B44sh [ich7'ii bee ha'd7l44hgo koj8' b1 ah00t'i':"
 
-msgid "Voter registration deadlines in @state_name"
+msgid "Voter registration deadlines"
 msgstr "I'ii'n77[ biniiy4 ha'dilne' bee nihoolzh77sh @state_name"
 
 msgid "In person registration deadline:"
