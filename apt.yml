@@ -8,4 +8,3 @@ packages:
   - bsdmainutils
   - newrelic-php5
   - nano
-  - vim

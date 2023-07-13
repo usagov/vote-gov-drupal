@@ -11,5 +11,5 @@ third_party_settings:
 id: ru
 label: Russian
 direction: ltr
-weight: 1
+weight: 2
 locked: false

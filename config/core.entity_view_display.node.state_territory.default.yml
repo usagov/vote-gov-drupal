@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.state_territory.body
+    - field.field.node.state_territory.field_accepts_nvrf
     - field.field.node.state_territory.field_confirm_registration_link
     - field.field.node.state_territory.field_election_homepage_link
     - field.field.node.state_territory.field_g_in_person_deadline
@@ -40,6 +41,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_accepts_nvrf:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 20
     region: content
   field_confirm_registration_link:
     type: link
