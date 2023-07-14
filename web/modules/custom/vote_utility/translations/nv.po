@@ -18,7 +18,7 @@ msgstr "Saad choid77['88[7g77"
 
 # config.languages.params.Owner
 msgid "@sitename in language"
-msgstr "@sitename in Diné"
+msgstr "@sitename Diné"
 
 # config.languages.params.go_back
 msgid "Go back"
@@ -26,11 +26,11 @@ msgstr "N1t'33'"
 
 # config.languages.params.last_updated
 msgid "Last updated:"
-msgstr "Ak44'di n1zk'33z: "
+msgstr "Ak44'di n1zk'33z:"
 
 # config.languages.params.ext_link_title
 msgid "External link opens in new window"
-msgstr "External link opens new window"
+msgstr "External link opens in new window"
 
 # config.languages.params.skip_text
 msgid "Skip to main content"
@@ -50,7 +50,7 @@ msgstr "!l32j8' han1lki'7g77 website kod00 @link"
 
 # data.translations.footer.identifier_gsa_txt__1
 msgid "General Services Administration"
-msgstr "General Services Administration woly4ego t'11 a[tso yee 1k1 an7daalwo'd00 &lt;Bilag1ana k'ehj7&gt;ß"
+msgstr "General Services Administration woly4ego t'11 a[tso yee 1k1 an7daalwo'd00 &lt;Bilag1ana k'ehj7&gt;"
 
 # data.translations.footer.identifier_more_info
 msgid "Looking for U.S. government information and services? @link."
@@ -102,7 +102,7 @@ msgstr "GSA logo"
 
 # data.translations.homepage.search_placeholder
 msgid "Search Vote.gov"
-msgstr "vote.gov"
+msgstr "vote.gov hanit1h"
 
 # data.translations.homepage.section_banner
 msgid "Official government website"
