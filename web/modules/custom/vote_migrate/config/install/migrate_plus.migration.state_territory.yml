@@ -7,7 +7,7 @@ source:
   data_fetcher_plugin: http
   data_parser_plugin: json
   urls:
-    - localhost/vote_migrate/import_nodes_state_territory/json
+    - /vote_migrate/import_nodes_state_territory/json
   item_selector: data
   fields:
     - name: title

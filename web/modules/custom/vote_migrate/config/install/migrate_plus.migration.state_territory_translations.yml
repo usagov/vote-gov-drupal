@@ -7,17 +7,21 @@ source:
   data_fetcher_plugin: http
   data_parser_plugin: json
   urls:
-    - localhost/vote_migrate/import_nodes_state_territory/translation/es/json
-    - localhost/vote_migrate/import_nodes_state_territory/translation/ko/json
-    - localhost/vote_migrate/import_nodes_state_territory/translation/tl/json
-    - localhost/vote_migrate/import_nodes_state_territory/translation/bn/json
-    - localhost/vote_migrate/import_nodes_state_territory/translation/hi/json
-    - localhost/vote_migrate/import_nodes_state_territory/translation/km/json
-    - localhost/vote_migrate/import_nodes_state_territory/translation/nv/json
-    - localhost/vote_migrate/import_nodes_state_territory/translation/vi/json
-    - localhost/vote_migrate/import_nodes_state_territory/translation/ypk/json
-    - localhost/vote_migrate/import_nodes_state_territory/translation/zh/json
-    - localhost/vote_migrate/import_nodes_state_territory/translation/zh-hans/json
+    - /vote_migrate/import_nodes_state_territory/translation/ar/json
+    - /vote_migrate/import_nodes_state_territory/translation/bn/json
+    - /vote_migrate/import_nodes_state_territory/translation/es/json
+    - /vote_migrate/import_nodes_state_territory/translation/km/json
+    - /vote_migrate/import_nodes_state_territory/translation/ko/json
+    - /vote_migrate/import_nodes_state_territory/translation/hi/json
+    - /vote_migrate/import_nodes_state_territory/translation/ht/json
+    - /vote_migrate/import_nodes_state_territory/translation/nv/json
+    - /vote_migrate/import_nodes_state_territory/translation/pt/json
+    - /vote_migrate/import_nodes_state_territory/translation/tl/json
+    - /vote_migrate/import_nodes_state_territory/translation/vi/json
+    - /vote_migrate/import_nodes_state_territory/translation/ru/json
+    - /vote_migrate/import_nodes_state_territory/translation/ypk/json
+    - /vote_migrate/import_nodes_state_territory/translation/zh/json
+    - /vote_migrate/import_nodes_state_territory/translation/zh-hans/json
   item_selector: data
   fields:
     - name: id
