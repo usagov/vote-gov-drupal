@@ -2,7 +2,7 @@
 {% if content.field_more_info_link | render %}
 <h2>{{ 'How to register to vote' | t({ '@state_name': state_name }) }}</h2>
   {% set more_info_link = content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ) %}
-  {% set more_info_link_text = "Learn more about voting" | t %}
+  {% set more_info_link_text = "Learn more about voting" | t({'@state_name': state_name}) %}
 
   {% if language != "en" and not content.field_override_more_info_link | render %}
           {% set more_info_link_text = more_info_link_text ~ ' ' ~ in_english %}
