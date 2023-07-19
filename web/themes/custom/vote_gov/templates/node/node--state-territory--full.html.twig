@@ -7,6 +7,10 @@
 #}
 {% extends 'node.html.twig' %}
 
+{% block alert %}
+    {{ drupal_view('inline_alert', 'embed_1') }}
+{% endblock %}
+
 {% block content %}
 {% set reg_type = content.field_registration_type | field_value | column('#markup') %}
 {% set state_name = label | field_value | render %}
