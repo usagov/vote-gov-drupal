@@ -4,7 +4,11 @@ home="/home/vcap"
 app_path="${home}/app"
 html_path="${app_path}/html"
 
-source ${app_path}/scripts/bootstrap.sh
+source ${home}/.bashrc
+
+mkdir -p ${html_path}
+
+export PYTHONWARNINGS="ignore:Unverified HTTPS request"
 
 export application_uri=$(echo $VCAP_APPLICATION | jq -r '.application_uris[]')
 
@@ -16,15 +20,12 @@ export bucket_name=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings
 export bucket=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.bucket')
 export bucket_endpoint=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.endpoint')
 
-source ${home}/.bashrc
-
-export PYTHONWARNINGS="ignore:Unverified HTTPS request"
-
-mkdir -p ${html_path}
+export external_endpoint="https://ssg-${environment}.vote.gov"
+[ "${environment}" = "prod" ] && export external_endpoint="https://ssg.vote.gov"
 
 cd ${app_path}
-echo "Running 'drush tome:static'..."
-drush tome:static --uri=https://${waf_external_endpoint} --process-count=1 -y
+echo "Running 'drush tome:static' in '${environment}'..."
+drush tome:static --uri=${external_endpoint} --process-count=2 --retry-count=0 -y
 echo "'drush tome:static' task completed!"
 
 cd ${html_path}
@@ -32,3 +33,10 @@ echo "Copying static files to '${bucket_name}'..."
 aws s3 sync . s3://${bucket} --delete --no-verify-ssl 2>/dev/null
 aws s3 website s3://${bucket} --index-document index.html --error-document /404/index.html  --no-verify-ssl 2>/dev/null
 echo "Copy to '${bucket_name}' completed!"
+
+# export objects=($(aws s3 ls s3://${bucket} --recursive --no-verify-ssl 2>/dev/null | awk '{print $(NF)}' | sed -z -e 's/\n/ /g'))
+
+# for object in "${objects[@]}"; do
+#   echo $object
+#   aws s3api put-object-acl --bucket s3://${bucket} --key $object --grant-full-control id=c0eaf99010b9e4b073052b3a9b242980a2badf4e1db4044f53f49950609bf6cf --grant-read uri=http://acs.amazonaws.com/groups/global/AllUsers --no-verify-ssl 2>/dev/null
+# done

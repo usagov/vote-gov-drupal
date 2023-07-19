@@ -11,5 +11,5 @@ third_party_settings:
 id: nv
 label: Navajo
 direction: ltr
-weight: -2
+weight: 0
 locked: false

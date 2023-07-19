@@ -5,5 +5,5 @@ dependencies: {  }
 id: ypk
 label: Yupʼik-Akuzipik
 direction: ltr
-weight: 1
+weight: 5
 locked: false

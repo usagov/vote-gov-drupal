@@ -1,0 +1,292 @@
+# Russian translation of Vote.gov
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Vote.gov Utility\\n"
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=utf-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\\n"
+
+# config.languages.languageName
+msgid "Russian"
+msgstr "Русский"
+
+# config.languages.params.select_language
+msgid "Select language"
+msgstr "Выберите Язык"
+
+# config.languages.params.Owner
+msgid "@sitename in language"
+msgstr "@sitename in Русский"
+
+# config.languages.params.go_back
+msgid "Go back"
+msgstr "Вернитесь назад"
+
+# config.languages.params.last_updated
+msgid "Last updated:"
+msgstr "Последнее обновление:"
+
+# config.languages.params.ext_link_title
+msgid "External link opens in new window"
+msgstr "Внешняя ссылка открывает новое окно"
+
+# config.languages.params.skip_text
+msgid "Skip to main content"
+msgstr "Перейдите к основному содержанию"
+
+# config.languages.params.english_only
+msgid "(in English)"
+msgstr "(по-английски)"
+
+# data.translations.footer.vote_logo_alt_text
+msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
+msgstr "Иллюстрация ящика для голосования, в который вставляется отмеченный галочкой бюллетень для обозначения действия при голосовании"
+
+# data.translations.footer.identifier_gsa_txt
+msgid "An official website of the @link."
+msgstr "Официальный веб-сайт @link"
+
+# data.translations.footer.identifier_gsa_txt__1
+msgid "General Services Administration"
+msgstr "Администрации обслуживания"
+
+# data.translations.footer.identifier_more_info
+msgid "Looking for U.S. government information and services? @link."
+msgstr "Ищете информацию и услуги правительства США? @link"
+
+# data.translations.footer.identifier_more_info__1
+msgid "Visit USA.gov"
+msgstr "Посетите USA.gov"
+
+# data.translations.footer.identifier_aria
+msgid "Agency identifier"
+msgstr "Идентификатор агенства"
+
+# data.translations.footer.identifier_gsa_txt_aria
+msgid "Agency description"
+msgstr "Описание агентства"
+
+# data.translations.footer.identifier_link_aria
+msgid "Important links"
+msgstr "Важные ссылки"
+
+# data.translations.footer.identifier_more_info_aria
+msgid "Government information and services"
+msgstr "Правительственная информация и услуги"
+
+# data.translations.footer.eac_text
+msgid "in partnership with"
+msgstr "в партнерстве с"
+
+# data.translations.footer.eac_logo_alt_text
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
+msgstr "Логотип Комиссии США по содействию выборам, который указывает на партнёрство с Vote.gov"
+
+# data.translations.footer.twitter_text
+msgid "Follow Vote.gov on Twitter"
+msgstr "Следите за новостями Vote.gov в Твиттере (по-английски)"
+
+# data.translations.footer.section_sign_up
+msgid "Email sign-up"
+msgstr "Регистрация по электронной почте"
+
+# data.translations.footer.section_contact
+msgid "Contact"
+msgstr "Контакт"
+
+# data.translations.footer.gsa_logo_alt
+msgid "GSA logo"
+msgstr "Логотип GSA (Администрации общего обслуживания)"
+
+# data.translations.homepage.search_placeholder
+msgid "Search Vote.gov"
+msgstr "Поиск Vote.gov"
+
+# data.translations.homepage.section_banner
+msgid "Official government website"
+msgstr "Официальный правительственный сайт"
+
+# data.translations.register.heading
+msgid "Register to vote in @state_name"
+msgstr "Зарегистрируйтесь для голосования в @state_name"
+
+# data.translations.register.heading2 (state phrase updates)
+msgid "How to register to vote"
+msgstr "Как зарегистрироваться для голосования"
+
+# data.translations.register.other_language_selection__heading (state phrase updates)
+msgid "Other ways to register to vote"
+msgstr "Другие способы зарегистрироваться для голосования"
+
+# data.translations.register.dates__bymail_deadline
+msgid "Register by mail deadline:"
+msgstr "Крайний срок регистрации по почте:"
+
+# data.translations.register.dates__byonline_deadline
+msgid "Online registration deadline:"
+msgstr "Крайний срок регистрации он-лайн:"
+
+# data.translations.register.dates__inperson_deadline
+msgid "In person registration deadline:"
+msgstr "Крайний срок личной регистрации:"
+
+# data.translations.register.dates__heading (state phrase updates)
+msgid "Voter registration deadlines"
+msgstr "Крайние сроки регистрации избирателей"
+
+# data.translations.register.confirm_registration__heading
+msgid "How to check your voter registration"
+msgstr "Как проверить вашу регистрацию избирателя"
+
+# data.translations.register.confirm_registration__intro_WY
+msgid "You can confirm your voter registration status by contacting your local registration office. @link."
+msgstr "Вы можете подтвердить свой статус регистрации избирателя, связавшись с местным регистрационным офисом. @link."
+
+# @link: data.translations.register.confirm_registration__link_WY
+msgid "Click here to view Wyoming's county clerk contact information (PDF)"
+msgstr "Нажмите здесь, чтобы просмотреть контактную информацию клерка округа Вайоминг (PDF)"
+
+# data.translations.register.confirm_registration__intro (see accessibility updates)
+msgid "You can @link on @state_name’s election website."
+msgstr "Вы можете @link на веб-сайте выборов штата @state_name"
+
+# @link: data.translations.register.confirm_registration__intro (see accessibility updates)
+msgid "confirm your voter registration status"
+msgstr "подтвердить свой статус регистрации избирателя"
+
+# data.translations.register.by_mail__intro (see accessibility updates)
+msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
+msgstr "Онлайн-регистрация в настоящее время недоступна. @link для голосования на веб-сайте выборов штата @state_name."
+
+# @link: data.translations.register.by_mail__intro (see accessibility updates)
+msgid "Find out ways to register"
+msgstr "Узнайте, как зарегистрироваться"
+
+# data.translations.register.in_person__intro (see accessibility updates)
+msgid "Register in person at your local election office. @link on @state_name’s election website."
+msgstr "Зарегистрируйтесь лично в своём местном избирательном участке. @link на веб-сайте выборов в штате @state_name."
+
+# @link: data.translations.register.in_person__intro (see accessibility updates)
+msgid "Learn more about how to register"
+msgstr "Узнайте больше о том, как зарегистрироваться"
+
+# data.translations.register.not_needed__intro (see accessibility updates)
+msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
+msgstr "Регистрация избирателей в @state_name не требуется. @link на веб-сайте штата @state_name"
+
+# @link: data.translations.register.not_needed__intro (see accessibility updates)
+msgid "Learn more about voting"
+msgstr "Подробнее о голосовании"
+
+# data.translations.register.online__answer1 (see accessibility updates)
+msgid "@link on @state_name’s election website."
+msgstr "@link на веб-сайте выборов штата @state_name"
+
+# @link: data.translations.register.online__answer1 (see accessibility updates)
+msgid "Start your online registration"
+msgstr "Начните онлайн-регистрацию"
+
+# data.translations.register.online__answer2 (see accessibility updates)
+msgid "You can also @link on @state_name’s election website."
+msgstr "Вы также можете @link на веб-сайте выборов штата @state_name"
+
+# @link: data.translations.register.online__answer2 (see accessibility updates)
+msgid "register to vote by mail or in person"
+msgstr "зарегистрироваться для голосования по почте или лично"
+
+# data.translations.months.january
+msgctxt "Long month name"
+msgid "January"
+msgstr "январь"
+
+# data.translations.months.february
+msgctxt "Long month name"
+msgid "February"
+msgstr "февраль"
+
+# data.translations.months.march
+msgctxt "Long month name"
+msgid "March"
+msgstr "март"
+
+# data.translations.months.april
+msgctxt "Long month name"
+msgid "April"
+msgstr "апрель"
+
+# data.translations.months.may
+msgctxt "Long month name"
+msgid "May"
+msgstr "май"
+
+# data.translations.months.june
+msgctxt "Long month name"
+msgid "June"
+msgstr "июнь"
+
+# data.translations.months.july
+msgctxt "Long month name"
+msgid "July"
+msgstr "июль"
+
+# data.translations.months.august
+msgctxt "Long month name"
+msgid "August"
+msgstr "август"
+
+# data.translations.months.september
+msgctxt "Long month name"
+msgid "September"
+msgstr "сентябрь"
+
+# data.translations.months.october
+msgctxt "Long month name"
+msgid "October"
+msgstr "октябрь"
+
+# data.translations.months.november
+msgctxt "Long month name"
+msgid "November"
+msgstr "ноябрь"
+
+# data.translations.months.december
+msgctxt "Long month name"
+msgid "December"
+msgstr "декабрь"
+
+# data.translations.days.monday
+msgctxt "day name"
+msgid "Monday"
+msgstr "понедельник"
+
+# data.translations.days.tuesday
+msgctxt "day name"
+msgid "Tuesday"
+msgstr "вторник"
+
+# data.translations.days.wednesday
+msgctxt "day name"
+msgid "Wednesday"
+msgstr "среда"
+
+# data.translations.days.thursday
+msgctxt "day name"
+msgid "Thursday"
+msgstr "четверг"
+
+# data.translations.days.friday
+msgctxt "day name"
+msgid "Friday"
+msgstr "пятница"
+
+# data.translations.days.saturday
+msgctxt "day name"
+msgid "Saturday"
+msgstr "суббота"
+
+# data.translations.days.sunday
+msgctxt "day name"
+msgid "Sunday"
+msgstr "воскресенье"

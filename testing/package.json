@@ -4,21 +4,25 @@
   "description": "## Requirements",
   "main": "index.js",
   "devDependencies": {
-    "axe-core": "^4.7.0",
-    "cypress": "^12.11.0",
+    "axe-core": "^4.7.2",
+    "cypress": "^12.17.1",
     "cypress-axe": "^1.4.0",
-    "cypress-mochawesome-reporter": "^3.4.0"
+    "cypress-mochawesome-reporter": "^3.5.1"
   },
   "scripts": {
     "cy:open": "cypress open",
-    "cy:test": "cypress run --spec 'cypress/e2e/createUser/**/*','cypress/e2e/tests/**/*','cypress/e2e/deleteUser/**/*'",
+    "cy:fullTests": "npm run cy:frontEnd && npm run cy:backEnd",
+    "cy:backEnd": "cypress run --spec 'cypress/e2e/backEndTests/createUser/**/*','cypress/e2e/backEndTests/**/*','cypress/e2e/backEndTests/deleteUser/**/*'",
+    "cy:frontEnd": "cypress run --spec 'cypress/e2e/frontEndTests/**/*'",
     "cy:axe": "cypress run --spec 'cypress/e2e/accessibility/**/*'",
     "cy:links": "cypress run --spec 'cypress/e2e/internalLinks/**/*'",
     "cy:proofer": "cypress run --spec 'cypress/e2e/externalLinks/**/*'",
     "cy:createUser": "cypress run --spec 'cypress/e2e/createUser/**/*'",
     "cy:deleteUser": "cypress run --spec 'cypress/e2e/deleteUser/**/*'",
-    "testSuite": "npm run cy:test && npm run cy:links && npm run cy:proofer && npm run cy:axe",
-    "cypress": "cypress"
+    "testSuite": "npm run cy:frontEnd && npm run cy:backEnd && npm run cy:links && npm run cy:proofer && npm run cy:axe",
+    "cypress": "cypress",
+    "cy:pipeline": "cypress run --spec 'cypress/e2e/frontEndTests/**/*' --config-file pipeline.config.js"
+
   },
   "repository": {
     "type": "git",
@@ -31,6 +35,6 @@
   },
   "homepage": "https://github.com/usagov/vote-gov-drupal#readme",
   "dependencies": {
-    "cypress-real-events": "^1.7.6"
+    "cypress-real-events": "^1.9.1"
   }
 }

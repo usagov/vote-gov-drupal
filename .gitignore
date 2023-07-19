@@ -82,3 +82,7 @@ node_modules
 
 # Tome static files
 /html
+
+scheduled_backup/*
+env:/
+cms/

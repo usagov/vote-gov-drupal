@@ -7,6 +7,7 @@ drush updatedb --no-cache-clear -y
 drush cim -y
 drush locale-check
 drush locale-update
+
 echo "Uploading public files to S3 ..."
 drush s3fs-rc
 drush s3fs-cl -y --scheme=public --condition=newer

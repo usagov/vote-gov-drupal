@@ -38,10 +38,14 @@
 #}
 {% set node_type = node.bundle() %}
 
+{% if language == 'nv' %}
+  {{ attach_library('vote_gov/navajo-font') }}
+{% endif %}
+
   {# Header region for USA banner, language selector, search box, and site alert #}
     {{ page.header }}
 
-  <main class="main-content clearfix">
+  <main class="main-content clearfix" data-test="main-content">
     {# link is in html.html.twig #}
     <a id="main-content" tabindex="-1"></a>
 

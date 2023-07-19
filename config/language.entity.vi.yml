@@ -5,5 +5,5 @@ dependencies: {  }
 id: vi
 label: Vietnamese
 direction: ltr
-weight: 0
+weight: 4
 locked: false

@@ -1,0 +1,75 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for USAgov Login Customization module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Site\Settings;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function usagov_login_form_user_login_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  $config = \Drupal::config('usagov_login.settings');
+  $loginPath = $config->get('sso_login_path');
+  $loginText = $config->get('sso_login_text');
+  $cancelPath = $config->get('sso_cancel_path');
+  $cancelText = $config->get('sso_cancel_text');
+
+  // Allow override for local login forms via drush sset,
+  // or $settings[] in settings.local.php.
+  $state = \Drupal::state()->get('usagov_login_local_form', 0);
+  $settings_state = Settings::get('usagov_login_local_form');
+  if ($settings_state || $state) {
+    $state = 1;
+  }
+
+  if ($loginPath) {
+
+    if (!$state) {
+      $form['name']['#access'] = FALSE;
+      $form['pass']['#access'] = FALSE;
+      $form['actions']['#access'] = FALSE;
+    }
+
+    $form['sso_button'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'a',
+      '#attributes' => [
+        'href' => $loginPath,
+        'class' => ['usa-button'],
+      ],
+      '#value' => $loginText,
+      '#weight' => '-20',
+    ];
+
+    $form['sso_cancel_link'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'a',
+      '#attributes' => [
+        'href' => $cancelPath,
+        'class' => ['cancel-link'],
+      ],
+      '#value' => $cancelText,
+      '#weight' => '-20',
+      '#prefix' => '<div class="sso-cancel-link-wrapper margin-top-2 margin-bottom-6">',
+      '#suffix' => '</div>',
+    ];
+
+    $form['#attributes']['class'][] = 'usa-list.usa-list--unstyled';
+  }
+}
+
+/**
+ * Implements hook_preprocess_page_title().
+ */
+function usagov_login_preprocess_page_title(&$variables) {
+
+  $route_match = \Drupal::routeMatch();
+  if ($route_match->getRouteName() == 'user.login') {
+    $variables['title'] = t('Security Notification');
+  }
+}

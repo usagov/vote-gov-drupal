@@ -25,6 +25,7 @@
  * @see template_preprocess_block()
  */
 #}
+{% if status_code != 'error' %}
 <div class="switcher-mobile">
     {% block content %}
   <div class="usa-language-container usa-language--big">
@@ -47,3 +48,4 @@
   </div>
     {% endblock %}
 </div>
+{% endif %}

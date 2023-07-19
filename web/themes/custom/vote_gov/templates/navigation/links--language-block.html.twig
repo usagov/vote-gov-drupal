@@ -31,22 +31,29 @@
  * @see template_preprocess_links()
  */
 #}
- {% if links -%}
+{% if links -%}
   {% if links|length == 2 %}
-    {% for key, item in links %}  
+    {% for key, item in links %}
       {%- if item.link -%}
         {% if language != key %}
           <div class='usa-button'>
-              {{ item.link|merge({'#attributes': {'lang': key, 'xml:lang': key} }) }}    
+            {{ item.link|merge({'#attributes': {'lang': key, 'xml:lang': key} }) }}
           </div>
         {% endif %}
       {%- endif -%}
     {% endfor %}
   {% elseif links|length > 2 %}
     {%- for key, item in links -%}
-      <li class="usa-language__submenu-item" {{ item.attributes.removeAttribute('hreflang') }} data-lang="lang-{{ key }}">
+      <li class="usa-language__submenu-item" {{ item.attributes.removeAttribute('hreflang') }}
+          data-lang="lang-{{ key }}">
         {%- if item.link -%}
-          {{ item.link|merge({'#attributes': {'lang': key, 'xml:lang': key}}) }}    
+          {# Create a custom override for the frontpage links. #}
+          {%- if is_frontpage -%}
+            <a href="/{{ key != 'en' ? key }}" class="language-link" lang="{{ key }}" xml:lang="{{ key }}"
+               hreflang="{{ key }}" data-drupal-link-system-path="{{ path('<current>') }}">{{ item.link['#title'] }}</a>
+          {%- else -%}
+            {{ item.link|merge({'#attributes': {'lang': key, 'xml:lang': key}}) }}
+          {%- endif -%}
         {%- endif -%}
       </li>
     {%- endfor -%}

@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Home",
+    "route": "/"
+  },
+  {
+    "name": "Alabama",
+    "route": "/register/al"
+  },
+
+  {
+    "name": "Alaska",
+    "route": "/register/ak"
+  },
+  {
+    "name": "American Samoa",
+    "route": "/register/as"
+  },
+  {
+    "name": "Arkansas",
+    "route": "/register/ar"
+  },
+  {
+    "name": "North Dakota",
+    "route": "/register/nd"
+  },
+  {
+    "name": "Wyoming",
+    "route": "/register/wy"
+  },
+  {
+    "name": "About us",
+    "route": "/about-us"
+  }
+]

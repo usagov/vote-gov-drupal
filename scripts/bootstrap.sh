@@ -9,6 +9,12 @@ export home="/home/vcap"
 export app_path="${home}/app"
 export apt_path="${home}/deps/0/apt"
 
+echo $VCAP_SERVICES | jq -r '."user-provided"[].credentials.ca_certificate' | base64 -d > ${app_path}/ca_certificate.pem
+echo $VCAP_SERVICES | jq -r '."user-provided"[].credentials.ca_key' | base64 -d > ${app_path}/ca_key.pem
+
+chmod 600 ${app_path}/ca_certificate.pem
+chmod 600 ${app_path}/ca_key.pem
+
 if [ -z "${VCAP_SERVICES:-}" ]; then
     echo "VCAP_SERVICES must a be set in the environment: aborting bootstrap";
     exit 1;
@@ -29,7 +35,7 @@ ln -s ${newrelic_apt}/scripts/newrelic-iutil.x64 ${newrelic_app}/scripts/newreli
 
 echo 'newrelic.daemon.collector_host=gov-collector.newrelic.com' >> ${app_path}/php/etc/php.ini
 
-source ${app_path}/scripts/exports.sh
+source ${app_path}/scripts/bash_exports.sh
 
 if [ ! -f ./container_start_timestamp ]; then
   touch ./container_start_timestamp
@@ -52,8 +58,7 @@ done
   touch ${home}/.bashrc && \
   echo "export http_proxy=${http_proxy}" >> ${home}/.bashrc && \
   echo "export https_proxy=${https_proxy}" >> ${home}/.bashrc && \
-  echo "alias vi=\"VIMRUNTIME=${home}/deps/0/apt/usr/share/vim/vim82 ${home}/deps/0/bin/vim.basic\"" >> ${home}/.bashrc && \
-  echo "alias vim=\"VIMRUNTIME=${home}/deps/0/apt/usr/share/vim/vim82 ${home}/deps/0/bin/vim.basic\"" >> ${home}/.bashrc && \
+  echo "alias nano=\"${home}/deps/0/apt/bin/nano\"" >> ${home}/.bashrc && \
   echo "PATH=$PATH:/home/vcap/app/php/bin:/home/vcap/app/vendor/drush/drush" >> /home/vcap/.bashrc
 
 source ${home}/.bashrc
@@ -65,3 +70,7 @@ echo "Installing awscli..."
   /tmp/aws/install --bin-dir ${home}/deps/0/bin --install-dir ${home}/deps/0/usr/local/aws-cli
   rm -rf /tmp/awscliv2.zip /tmp/aws
 } >/dev/null 2>&1
+
+# if [ "${CF_INSTANCE_INDEX:-''}" == "0" ]; then
+#   ${app_path}/scripts/post-deploy
+# fi
