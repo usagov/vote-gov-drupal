@@ -310,8 +310,6 @@ workflows:
           filters:
             branches:
               only:
-                - dev
-                - stage
                 - test
           requires:
             - deploy-test
