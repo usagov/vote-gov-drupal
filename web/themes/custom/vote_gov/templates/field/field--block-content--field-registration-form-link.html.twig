@@ -7,7 +7,7 @@
 #}
 
 {# NVRF selector fields #}
-<select class="usa-select  max-width-input" name="userselection" id="js-user-selection" value={{ languagename }}>
+<select class="usa-select  max-width-input" name="userselection" id="js-user-selection">
   {% for item in items %}
       {% if item.content['#title'] is same as(languagename) %}
     <option value="{{ item.content['#url_title'] }}"{{ option.selected ? ' selected="selected"' }}>{{ item.content['#title'] }}</option>
