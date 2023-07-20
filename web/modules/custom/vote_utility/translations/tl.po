@@ -31,13 +31,13 @@ msgstr "Ilustrasyon ng kahon ng botante na may naka-tsek na balota na inilalagay
 
 #identifier
 msgid "An official website of the @link."
-msgstr "Isang opisyal na website ng @link"
+msgstr "Isang opisyal na website ng @link (sa Ingles)"
 
 msgid "General Services Administration"
 msgstr "Administrasyon ng Pangkalahatang Serbisyo"
 
 msgid "Looking for U.S. government information and services? @link."
-msgstr "Naghahanap ng impormasyon at mga serbisyo ng gobyerno ng U.S.? @link"
+msgstr "Naghahanap ng impormasyon at mga serbisyo ng gobyerno ng U.S.? @link (sa Ingles)"
 
 msgid "Visit USA.gov"
 msgstr "Bisitahin ang USA.gov"
@@ -62,7 +62,7 @@ msgid "U.S. Election Assistance Commission logo which indicates a partnership wi
 msgstr "sa pakikipagtulungan sa Election Assistance Commission"
 
 msgid "Follow Vote.gov on Twitter"
-msgstr "I-follow ang Vote.gov sa Twitter"
+msgstr "I-follow ang Vote.gov sa Twitter (sa Ingles)"
 
 #search
 msgid "Search Vote.gov"
