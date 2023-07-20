@@ -34,8 +34,8 @@
     {% if content['#links']|length == 2 %}
       {{ content }}
     {% elseif content['#links']|length > 2 %}
-    <ul class="usa-language__primary usa-accordion">
-      <li class="usa-language__primary-item">
+    <div class="usa-language__primary usa-accordion">
+      <div class="usa-language__primary-item">
         <button class="usa-button usa-language__link" data-test="language-dropdown" aria-expanded="false" aria-controls="language-options-2">
           {{ "Select language" | t }}
         </button>
@@ -44,8 +44,8 @@
           <ul id="language-options-2" class="usa-language__submenu" data-test="language-selection" name="language-switcher" hidden="true"{{ attributes }}>
             {{ content }}
           </ul>
-      </li>
-    </ul>
+      </div>
+    </div>
     {% endif %}
   </div>
   {% endblock %}
