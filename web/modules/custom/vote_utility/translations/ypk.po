@@ -30,13 +30,13 @@ msgstr "Teruwiiq nakmikellghem salngaganeng igaq apeghiiqaq kananghtekanga kelgu
 
 #identifier
 msgid "An official website of the @link."
-msgstr "Website-eghpigaa @link-em"
+msgstr "Website-eghpigaa @link-em (Laluramkestun)"
 
 msgid "General Services Administration"
 msgstr "General Services Administration"
 
 msgid "Looking for U.S. government information and services? @link."
-msgstr "Ivaghiiqsin U.S.-em kavemengan sameng pillghillu qepghaghvigillu? @link"
+msgstr "Ivaghiiqsin U.S.-em kavemengan sameng pillghillu qepghaghvigillu? @link (Laluramkestun)"
 
 msgid "Visit USA.gov"
 msgstr "Takugu USA.gov"
@@ -61,7 +61,7 @@ msgid "U.S. Election Assistance Commission logo which indicates a partnership wi
 msgstr "ilalkiilluteng U.S. Election Assistance Commission"
 
 msgid "Follow Vote.gov on Twitter"
-msgstr "Maligtigu Vote.gov Twitter-ekun"
+msgstr "Maligtigu Vote.gov Twitter-ekun (Laluramkestun)"
 
 #search
 msgid "Search Vote.gov"
