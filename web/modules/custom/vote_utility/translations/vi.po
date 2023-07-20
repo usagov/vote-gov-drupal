@@ -30,13 +30,13 @@ msgstr "Hình minh họa của ô bỏ phiếu với lá phiếu đã đánh d�
 
 #identifier
 msgid "An official website of the @link."
-msgstr "Một trang web chính thức của @link"
+msgstr "Một trang web chính thức của @link (bằng Tiếng Anh)"
 
 msgid "General Services Administration"
 msgstr "Cơ quan Quản lý Dịch vụ Tổng hợp"
 
 msgid "Looking for U.S. government information and services? @link."
-msgstr "Tìm kiếm thông tin và dịch vụ của chính phủ Hoa Kỳ @link"
+msgstr "Tìm kiếm thông tin và dịch vụ của chính phủ Hoa Kỳ @link (bằng Tiếng Anh)"
 
 msgid "Visit USA.gov"
 msgstr "Vào trang USA.gov"
@@ -61,7 +61,7 @@ msgid "U.S. Election Assistance Commission logo which indicates a partnership wi
 msgstr "hợp tác với U.S. Election Assistance Commission"
 
 msgid "Follow Vote.gov on Twitter"
-msgstr "Theo dõi Vote.gov trên Twitter"
+msgstr "Theo dõi Vote.gov trên Twitter (bằng Tiếng Anh)"
 
 #search
 msgid "Search Vote.gov"
