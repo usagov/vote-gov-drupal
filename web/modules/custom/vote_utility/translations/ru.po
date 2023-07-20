@@ -46,7 +46,7 @@ msgstr "Иллюстрация ящика для голосования, в ко
 
 # data.translations.footer.identifier_gsa_txt
 msgid "An official website of the @link."
-msgstr "Официальный веб-сайт @link"
+msgstr "Официальный веб-сайт @link (по-английски)"
 
 # data.translations.footer.identifier_gsa_txt__1
 msgid "General Services Administration"
@@ -54,7 +54,7 @@ msgstr "Администрации обслуживания"
 
 # data.translations.footer.identifier_more_info
 msgid "Looking for U.S. government information and services? @link."
-msgstr "Ищете информацию и услуги правительства США? @link"
+msgstr "Ищете информацию и услуги правительства США? @link (по-английски)"
 
 # data.translations.footer.identifier_more_info__1
 msgid "Visit USA.gov"
@@ -90,7 +90,7 @@ msgstr "Следите за новостями Vote.gov в Твиттере (п�
 
 # data.translations.footer.section_sign_up
 msgid "Email sign-up"
-msgstr "Регистрация по электронной почте"
+msgstr "Регистрация по электронной почте (по-английски)"
 
 # data.translations.footer.section_contact
 msgid "Contact"
