@@ -30,13 +30,13 @@ msgstr "插有已勾选选票的选票箱图样，表示投票动作"
 
 #identifier
 msgid "An official website of the @link."
-msgstr "@link官方网站"
+msgstr "@link官方网站 (英语)"
 
 msgid "General Services Administration"
 msgstr "总务管理局"
 
 msgid "Looking for U.S. government information and services? @link."
-msgstr "寻找美国政府信息和服务？ @link"
+msgstr "寻找美国政府信息和服务？ @link (英语)"
 
 msgid "Visit USA.gov"
 msgstr "訪問 USA.gov"
@@ -61,7 +61,7 @@ msgid "U.S. Election Assistance Commission logo which indicates a partnership wi
 msgstr "与 U.S. Election Assistance Commission合作"
 
 msgid "Follow Vote.gov on Twitter"
-msgstr "在 Twitter 上关注 Vote.gov"
+msgstr "在 Twitter 上关注 Vote.gov (英语)"
 
 #search
 msgid "Search Vote.gov"
