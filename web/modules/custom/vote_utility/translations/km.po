@@ -30,13 +30,13 @@ msgstr "រូបភាពនៃប្រអប់អ្នកបោះឆ្ន
 
 #identifier
 msgid "An official website of the @link."
-msgstr "គេហទំព័រផ្លូវការនៃ @link"
+msgstr "គេហទំព័រផ្លូវការនៃ @link (ជាភាសាអង់គ្លេស)"
 
 msgid "General Services Administration"
 msgstr "រដ្ឋបាលសេវាកម្មទូទៅ"
 
 msgid "Looking for U.S. government information and services? @link."
-msgstr "កំពុងស្វែងរកព័ត៌មាននិងសេវាកម្មរដ្ឋាភិបាលអាមេរិចមែនទេ? @link"
+msgstr "កំពុងស្វែងរកព័ត៌មាននិងសេវាកម្មរដ្ឋាភិបាលអាមេរិចមែនទេ? @link (ជាភាសាអង់គ្លេស)"
 
 msgid "Visit USA.gov"
 msgstr "ចូលមើល​ USA.gov"
@@ -61,7 +61,7 @@ msgid "U.S. Election Assistance Commission logo which indicates a partnership wi
 msgstr "ក្នុងភាពជាដៃគូជាមួយ U.S. Election Assistance Commission"
 
 msgid "Follow Vote.gov on Twitter"
-msgstr "តាមដាន Vote.gov នៅលើ Twitter"
+msgstr "តាមដាន Vote.gov នៅលើ Twitter (ជាភាសាអង់គ្លេស)"
 
 #search
 msgid "Search Vote.gov"
