@@ -33,13 +33,13 @@ msgstr "주"
 
 #identifier
 msgid "An official website of the @link."
-msgstr "@link의 공식 웹사이트"
+msgstr "@link의 공식 웹사이트 (영어로 제공)"
 
 msgid "General Services Administration"
 msgstr "미국 연방 조달청"
 
 msgid "Looking for U.S. government information and services? @link."
-msgstr "미국 정부 정보 및 서비스를 검색하고 싶으신가요? @link"
+msgstr "미국 정부 정보 및 서비스를 검색하고 싶으신가요? @link (영어로 제공)"
 
 msgid "Visit USA.gov"
 msgstr "USA.gov 사이트로 가기"
@@ -64,7 +64,7 @@ msgid "U.S. Election Assistance Commission logo which indicates a partnership wi
 msgstr "협력 제공 기관: U.S. Election Assistance Commission"
 
 msgid "Follow Vote.gov on Twitter"
-msgstr "Vote.gov 사이트 트위터 팔로우하기"
+msgstr "Vote.gov 사이트 트위터 팔로우하기 (영어로 제공)"
 
 #search
 msgid "Search Vote.gov"
