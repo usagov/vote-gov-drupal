@@ -30,13 +30,13 @@ msgstr "চেক করা ব্যালট ঢোকানো হচ্ছ�
 
 #identifier
 msgid "An official website of the @link."
-msgstr "@link এর একটি দাপ্তরিক ওয়েবসাইট"
+msgstr "@link এর একটি দাপ্তরিক ওয়েবসাইট (ইংরেজীতে)"
 
 msgid "General Services Administration"
 msgstr "সাধারণ পরিষেবা প্রশাসন"
 
 msgid "Looking for U.S. government information and services? @link."
-msgstr "মার্কিন সরকারের তথ্য এবং পরিষেবা খুঁজছেন? @link"
+msgstr "মার্কিন সরকারের তথ্য এবং পরিষেবা খুঁজছেন? @link (ইংরেজীতে)"
 
 msgid "Visit USA.gov"
 msgstr "USA.gov দেখুন"
@@ -61,7 +61,7 @@ msgid "U.S. Election Assistance Commission logo which indicates a partnership wi
 msgstr "এর সাথে অংশীদারিত্বে U.S. Election Assistance Commission"
 
 msgid "Follow Vote.gov on Twitter"
-msgstr "টুইটারে Vote.gov অনুসরণ করুন"
+msgstr "টুইটারে Vote.gov অনুসরণ করুন (ইংরেজীতে)"
 
 #search
 msgid "Search Vote.gov"
