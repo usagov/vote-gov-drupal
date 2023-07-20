@@ -46,7 +46,7 @@ msgstr "Ilustração da caixa do eleitor com voto marcado ao ser inserido para i
 
 # data.translations.footer.identifier_gsa_txt
 msgid "An official website of the @link."
-msgstr "Uma página web oficial da @link"
+msgstr "Uma página web oficial da @link (em inglês)"
 
 # data.translations.footer.identifier_gsa_txt__1
 msgid "General Services Administration"
