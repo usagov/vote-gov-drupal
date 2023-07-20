@@ -54,7 +54,7 @@ msgstr "General Services Administration woly4ego t'11 a[tso yee 1k1 an7daalwo'd0
 
 # data.translations.footer.identifier_more_info
 msgid "Looking for U.S. government information and services? @link."
-msgstr "W1ashindoon da'7n77shj77sh hane' d00 bee 1k1 an7da'awo' han7t1h? @link"
+msgstr "W1ashindoon da'7n77shj77sh hane' d00 bee 1k1 an7da'awo' han7t1h? @link &lt;Bilag1ana k'ehj7&gt"
 
 # data.translations.footer.identifier_more_info__1
 msgid "Visit USA.gov"
@@ -86,7 +86,7 @@ msgstr "U.S. Election Assistance Commission bee bik'7'diidlid7g77 47 biniy4h7g77
 
 # data.translations.footer.twitter_text
 msgid "Follow Vote.gov on Twitter"
-msgstr "Vote.gov bik44' nanin1 Twitter biyi'"
+msgstr "Vote.gov bik44' nanin1 Twitter biyi' &lt;Bilag1ana k'ehj7&gt"
 
 # data.translations.footer.section_sign_up
 msgid "Email sign-up"
