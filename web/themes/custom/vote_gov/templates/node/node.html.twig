@@ -81,6 +81,9 @@
 
 <article{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass('node__content') }}>
+    {% block alert %}
+    {% endblock %}
+
     {% block content %}
 
       {{ title_prefix }}
