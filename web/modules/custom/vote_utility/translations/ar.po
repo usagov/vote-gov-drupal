@@ -18,7 +18,7 @@ msgstr "اختر اللغة"
 
 # config.languages.params.Owner
 msgid "@sitename in language"
-msgstr "sitename@ باللغة العربية"
+msgstr "@sitename باللغة العربية"
 
 # config.languages.params.go_back
 msgid "Go back"
@@ -46,7 +46,7 @@ msgstr "رسم توضيحي لصندوق الناخب مع إدخال بطاقة
 
 # data.translations.footer.identifier_gsa_txt
 msgid "An official website of the @link."
-msgstr "موقع الكتروني رسمي لـ link@"
+msgstr "موقع الكتروني رسمي لـ @link"
 
 # data.translations.footer.identifier_gsa_txt__1
 msgid "General Services Administration"
@@ -54,7 +54,7 @@ msgstr "إدارة الخدمات العامة"
 
 # data.translations.footer.identifier_more_info
 msgid "Looking for U.S. government information and services? @link."
-msgstr "هل تبحث عن معلومات وخدمات حكومية أمريكية؟ link@"
+msgstr "هل تبحث عن معلومات وخدمات حكومية أمريكية؟ @link"
 
 # data.translations.footer.identifier_more_info__1
 msgid "Visit USA.gov"
@@ -110,7 +110,7 @@ msgstr "الموقع الالكتروني الرسمي للحكومة"
 
 # data.translations.register.heading
 msgid "Register to vote in @state_name"
-msgstr "سجل للتصويت في state_name@"
+msgstr "سجل للتصويت في @state_name"
 
 # data.translations.register.heading2 (state phrase updates)
 msgid "How to register to vote"
@@ -142,7 +142,7 @@ msgstr "كيفية التحقق من تسجيل الناخبين الخاص بك
 
 # data.translations.register.confirm_registration__intro_WY
 msgid "You can confirm your voter registration status by contacting your local registration office. @link."
-msgstr "يمكنك تأكيد حالة تسجيل الناخب الخاص بك عن طريق الاتصال بمكتب التسجيل المحلي. link@."
+msgstr "يمكنك تأكيد حالة تسجيل الناخب الخاص بك عن طريق الاتصال بمكتب التسجيل المحلي. @link."
 
 # @link: data.translations.register.confirm_registration__link_WY
 msgid "Click here to view Wyoming's county clerk contact information (PDF)"
@@ -150,7 +150,7 @@ msgstr "انقر هنا لعرض معلومات الاتصال بموظف مقا
 
 # data.translations.register.confirm_registration__intro (see accessibility updates)
 msgid "You can @link on @state_name’s election website."
-msgstr "يمكنك link@ على state_name@ موقع انتخابات الولاية"
+msgstr "يمكنك @link على @state_name موقع انتخابات الولاية"
 
 # @link: data.translations.register.confirm_registration__intro (see accessibility updates)
 msgid "confirm your voter registration status"
@@ -158,7 +158,7 @@ msgstr "تأكيد حالة تسجيل الناخب"
 
 # data.translations.register.by_mail__intro (see accessibility updates)
 msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
-msgstr "التسجيل عبر الإنترنت غير متاح حاليا. link@ للتصويت على state_name@ موقع انتخابات الولاية."
+msgstr "التسجيل عبر الإنترنت غير متاح حاليا. @link للتصويت على @state_name موقع انتخابات الولاية."
 
 # @link: data.translations.register.by_mail__intro (see accessibility updates)
 msgid "Find out ways to register"
@@ -166,7 +166,7 @@ msgstr "اكتشف طرق التسجيل"
 
 # data.translations.register.in_person__intro (see accessibility updates)
 msgid "Register in person at your local election office. @link on @state_name’s election website."
-msgstr "سجل شخصيًا في مكتب الانتخابات المحلي. link@ على state_name@  موقع انتخابات الولاية."
+msgstr "سجل شخصيًا في مكتب الانتخابات المحلي. @link على @state_name  موقع انتخابات الولاية."
 
 # @link: data.translations.register.in_person__intro (see accessibility updates)
 msgid "Learn more about how to register"
@@ -174,7 +174,7 @@ msgstr "تعرف على المزيد حول كيفية التسجيل"
 
 # data.translations.register.not_needed__intro (see accessibility updates)
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
-msgstr "تسجيل الناخبين غير مطلوب في link .@state_name@ على state_name@ موقع انتخابات الولاية"
+msgstr "تسجيل الناخبين غير مطلوب في ولاية @state_name. @link على @state_name موقع انتخابات الولاية"
 
 # @link: data.translations.register.not_needed__intro (see accessibility updates)
 msgid "Learn more about voting"
@@ -182,7 +182,7 @@ msgstr "تعرف على المزيد حول التصويت"
 
 # data.translations.register.online__answer1 (see accessibility updates)
 msgid "@link on @state_name’s election website."
-msgstr "link@ على state_name@ موقع انتخابات الولاية"
+msgstr "@link على @state_name موقع انتخابات الولاية"
 
 # @link: data.translations.register.online__answer1 (see accessibility updates)
 msgid "Start your online registration"
@@ -190,7 +190,7 @@ msgstr "ابدأ التسجيل عبر الإنترنت"
 
 # data.translations.register.online__answer2 (see accessibility updates)
 msgid "You can also @link on @state_name’s election website."
-msgstr "يمكنك أيضًا link@ على state_name@ موقع انتخابات الولاية"
+msgstr "يمكنك أيضًا @link على @state_name موقع انتخابات الولاية"
 
 # @link: data.translations.register.online__answer2 (see accessibility updates)
 msgid "register to vote by mail or in person"
