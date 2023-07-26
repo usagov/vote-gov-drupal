@@ -12,6 +12,22 @@
   }
 }
 
+.usa-language__submenu {
+  @media (min-width: 30em) {
+    width: 483px;
+  }
+  border-radius: 3px;
+
+  @media (min-width: 30em) {
+    columns: 2 auto;
+  }
+}
+
+.usa-language__submenu-item {
+  padding: 10px;
+  border: unset;
+}
+
 .switcher-desktop {
   @media (max-width: 800px) {
     display: none;
