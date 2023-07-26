@@ -30,16 +30,16 @@ msgstr "Teruwiiq nakmikellghem salngaganeng igaq apeghiiqaq kananghtekanga kelgu
 
 #identifier
 msgid "An official website of the @link."
-msgstr "Website-eghpigaa @link-em (Laluramkestun)"
+msgstr "Website-eghpigaa @link-em"
 
 msgid "General Services Administration"
-msgstr "General Services Administration"
+msgstr "General Services Administration (Laluramkestun)"
 
 msgid "Looking for U.S. government information and services? @link."
-msgstr "Ivaghiiqsin U.S.-em kavemengan sameng pillghillu qepghaghvigillu? @link (Laluramkestun)"
+msgstr "Ivaghiiqsin U.S.-em kavemengan sameng pillghillu qepghaghvigillu? @link"
 
 msgid "Visit USA.gov"
-msgstr "Takugu USA.gov"
+msgstr "Takugu USA.gov (Laluramkestun)"
 
 msgid "Agency identifier"
 msgstr "Qepghaghvigem nalluniighusii"
