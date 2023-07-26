@@ -31,16 +31,16 @@ msgstr "Ilustrasyon ng kahon ng botante na may naka-tsek na balota na inilalagay
 
 #identifier
 msgid "An official website of the @link."
-msgstr "Isang opisyal na website ng @link (sa Ingles)"
+msgstr "Isang opisyal na website ng @link"
 
 msgid "General Services Administration"
-msgstr "Administrasyon ng Pangkalahatang Serbisyo"
+msgstr "Administrasyon ng Pangkalahatang Serbisyo (sa Ingles)"
 
 msgid "Looking for U.S. government information and services? @link."
-msgstr "Naghahanap ng impormasyon at mga serbisyo ng gobyerno ng U.S.? @link (sa Ingles)"
+msgstr "Naghahanap ng impormasyon at mga serbisyo ng gobyerno ng U.S.? @link"
 
 msgid "Visit USA.gov"
-msgstr "Bisitahin ang USA.gov"
+msgstr "Bisitahin ang USA.gov (sa Ingles)"
 
 msgid "Agency identifier"
 msgstr "Tagatukoy ng Ahensya"
