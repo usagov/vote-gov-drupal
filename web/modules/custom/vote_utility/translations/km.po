@@ -30,16 +30,16 @@ msgstr "រូបភាពនៃប្រអប់អ្នកបោះឆ្ន
 
 #identifier
 msgid "An official website of the @link."
-msgstr "គេហទំព័រផ្លូវការនៃ @link (ជាភាសាអង់គ្លេស)"
+msgstr "គេហទំព័រផ្លូវការនៃ @link"
 
 msgid "General Services Administration"
-msgstr "រដ្ឋបាលសេវាកម្មទូទៅ"
+msgstr "រដ្ឋបាលសេវាកម្មទូទៅ (ជាភាសាអង់គ្លេស)"
 
 msgid "Looking for U.S. government information and services? @link."
-msgstr "កំពុងស្វែងរកព័ត៌មាននិងសេវាកម្មរដ្ឋាភិបាលអាមេរិចមែនទេ? @link (ជាភាសាអង់គ្លេស)"
+msgstr "កំពុងស្វែងរកព័ត៌មាននិងសេវាកម្មរដ្ឋាភិបាលអាមេរិចមែនទេ? @link"
 
 msgid "Visit USA.gov"
-msgstr "ចូលមើល​ USA.gov"
+msgstr "ចូលមើល​ USA.gov (ជាភាសាអង់គ្លេស)"
 
 msgid "Agency identifier"
 msgstr "អ្នកស្វែងរកភ្នាក់ងារ"
