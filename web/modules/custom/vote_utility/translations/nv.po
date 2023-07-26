@@ -54,11 +54,11 @@ msgstr "General Services Administration woly4ego t'11 a[tso yee 1k1 an7daalwo'd0
 
 # data.translations.footer.identifier_more_info
 msgid "Looking for U.S. government information and services? @link."
-msgstr "W1ashindoon da'7n77shj77sh hane' d00 bee 1k1 an7da'awo' han7t1h? @link &lt;Bilag1ana k'ehj7&gt"
+msgstr "W1ashindoon da'7n77shj77sh hane' d00 bee 1k1 an7da'awo' han7t1h? @link"
 
 # data.translations.footer.identifier_more_info__1
 msgid "Visit USA.gov"
-msgstr "USA.gov d7n77['88["
+msgstr "USA.gov d7n77['88[ &lt;Bilag1ana k'ehj7&gt;"
 
 # data.translations.footer.identifier_aria
 msgid "Agency identifier"
