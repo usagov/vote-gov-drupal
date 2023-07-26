@@ -30,16 +30,16 @@ msgstr "插有已勾選選票的投票箱圖示，表示投票行為"
 
 #identifier
 msgid "An official website of the @link."
-msgstr "@link官方網站 (英語)"
+msgstr "@link官方網站"
 
 msgid "General Services Administration"
-msgstr "總管理局"
+msgstr "總管理局 (英語)"
 
 msgid "Looking for U.S. government information and services? @link."
-msgstr "尋找美國政府資訊與服務？@link (英語)"
+msgstr "尋找美國政府資訊與服務？@link"
 
 msgid "Visit USA.gov"
-msgstr "访问 USA.gov"
+msgstr "访问 USA.gov (英語)"
 
 msgid "Agency identifier"
 msgstr "機構標誌"
