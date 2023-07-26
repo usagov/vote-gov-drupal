@@ -30,16 +30,16 @@ msgstr "Hình minh họa của ô bỏ phiếu với lá phiếu đã đánh d�
 
 #identifier
 msgid "An official website of the @link."
-msgstr "Một trang web chính thức của @link (bằng Tiếng Anh)"
+msgstr "Một trang web chính thức của @link"
 
 msgid "General Services Administration"
-msgstr "Cơ quan Quản lý Dịch vụ Tổng hợp"
+msgstr "Cơ quan Quản lý Dịch vụ Tổng hợp (bằng Tiếng Anh)"
 
 msgid "Looking for U.S. government information and services? @link."
-msgstr "Tìm kiếm thông tin và dịch vụ của chính phủ Hoa Kỳ @link (bằng Tiếng Anh)"
+msgstr "Tìm kiếm thông tin và dịch vụ của chính phủ Hoa Kỳ @link"
 
 msgid "Visit USA.gov"
-msgstr "Vào trang USA.gov"
+msgstr "Vào trang USA.gov (bằng Tiếng Anh)"
 
 msgid "Agency identifier"
 msgstr "Mã xác định cơ quan"
