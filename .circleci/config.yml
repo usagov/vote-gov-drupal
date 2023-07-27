@@ -82,8 +82,7 @@ jobs:
             source ./scripts/pipeline/cloud-gov-login.sh
 
             cd testing
-            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
-
+            cypress_baseurl="ssg-dev.vote.gov"
 
             sed -i "s/^    baseUrl: .*/    baseUrl: 'https:\/\/${cypress_baseurl}',/" pipeline.config.js
             sed -i "s/^      \"test_pass\": .*/      \"test_pass\": \"${cypress_random_pass}\",/" pipeline.config.js
