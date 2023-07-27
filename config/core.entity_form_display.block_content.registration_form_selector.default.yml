@@ -48,12 +48,14 @@ content:
       placeholder_url: ''
       placeholder_title: ''
       enabled_attributes:
-        id: false
+        id: true
         name: false
-        target: true
-        rel: true
-        class: true
+        target: false
+        rel: false
+        class: false
         accesskey: false
+        aria-label: false
+        title: false
       widget_default_open: expandIfValuesSet
     third_party_settings: {  }
   field_submit_button_label:
