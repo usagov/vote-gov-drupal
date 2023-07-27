@@ -34,25 +34,21 @@ if (!empty($cf_application_data['space_name']) &&
   switch ($application_environment) {
     case "dev":
       $is_cloudgov = TRUE;
-      $s3fs_http_host = 'ssg-dev.vote.gov';
-      $server_http_host = 'ssg-dev.vote.gov';
+      $server_http_host = 'cms-dev.vote.gov';
       break;
 
     case "prod":
       $is_cloudgov = TRUE;
-      $s3fs_http_host = 'ssg.vote.gov';
-      $server_http_host = 'ssg.vote.gov';
+      $server_http_host = 'cms.vote.gov';
       break;
 
     case "stage":
       $is_cloudgov = TRUE;
-      $s3fs_http_host = 'ssg-stage.vote.gov';
-      $server_http_host = 'ssg-stage.vote.gov';
+      $server_http_host = 'cms-stage.vote.gov';
       break;
 
     case "test":
       $is_cloudgov = TRUE;
-      $s3fs_http_host = 'ssg-test.vote.gov';
       $server_http_host = 'cms-test.vote.gov';
       break;
   }
@@ -96,7 +92,7 @@ foreach ($cf_service_data as $service_list) {
       $config['s3fs.settings']['private_folder'] = 'private';
 
       $config['s3fs.settings']['use_cname'] = TRUE;
-      $config['s3fs.settings']['domain'] = $s3fs_http_host . $s3_proxy_path_cms;
+      $config['s3fs.settings']['domain'] = $server_http_host . $s3_proxy_path_cms;
       $config['s3fs.settings']['domain_root'] = 'public';
 
       $config['s3fs.settings']['use_customhost'] = TRUE;
