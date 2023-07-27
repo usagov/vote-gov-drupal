@@ -89,7 +89,7 @@ jobs:
             sed -i "s/^      \"pipeline\": .*/      \"pipeline\": 1,/" pipeline.config.js
             sed -i "s/^      \"cloudgov_application_name\": .*/      \"cloudgov_application_name\": \"${cypress_cloudgov_application_name}\",/" pipeline.config.js
 
-            npm install
+            npm install 
             npm run cy:pipeline
       - store_artifacts:
           path: testing/cypress/screenshots
