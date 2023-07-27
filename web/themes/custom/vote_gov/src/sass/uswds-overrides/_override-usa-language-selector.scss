@@ -13,6 +13,11 @@
 }
 
 .usa-language__submenu {
+  @media (max-width: 30em) {
+    overflow: scroll;
+    height: 80vh;
+  }
+
   @media (min-width: 30em) {
     width: 483px;
   }
