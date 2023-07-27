@@ -83,7 +83,7 @@ jobs:
 
             cd testing
             # cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
-            cypress_baseurl="/"
+            cypress_baseurl="https://ssg-dev.vote.gov"
 
 
             sed -i "s/^    baseUrl: .*/    baseUrl: 'https:\/\/${cypress_baseurl}',/" pipeline.config.js
