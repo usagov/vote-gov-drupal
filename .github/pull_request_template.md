@@ -1,21 +1,29 @@
 <!-- Delete any detail that does not apply to this PR! -->
+
 ## Jira ticket
-Insert Jira ticket link
+
+Insert a link to the Jira ticket (e.g VOTE-XXX).
 
 ## Description
+
 Insert a brief summary of the changes included in this PR and any additional information or context which may help the reviewer.
 
 ## Deployment and testing
+
 ### Pre-deploy
+
 1. Insert any required steps to take before merging and running post-deploy.
 
 ### Post-deploy
+
 1. Insert any required steps to take before beginning test.
 
 ### QA/Test
+
 1. Insert steps to test and confirm the result meets the "definition of done".
 
 ## Checklist for the Developer
+
 <!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
 <!--- If you're unsure about any of these, don't hesitate to ask for help! -->
 - [ ] A link to the JIRA ticket has been included above.
@@ -27,6 +35,7 @@ Insert a brief summary of the changes included in this PR and any additional inf
 - [ ] This work meets the project [standards](/docs/standards.md).
 
 ## Checklist for the Peer Reviewers
+
 - [ ] The code has been reviewed.
 - [ ] The file changes are relevant to the task.
 - [ ] The author of the commits match the assignee.
