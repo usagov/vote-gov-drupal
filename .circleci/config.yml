@@ -77,7 +77,7 @@ jobs:
       - run:
           name: "Cypress"
           command: |
-            export CIRCLE_BRANCH="test"
+            # export CIRCLE_BRANCH="test"
             # source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
             # source ./scripts/pipeline/cloud-gov-login.sh
 
