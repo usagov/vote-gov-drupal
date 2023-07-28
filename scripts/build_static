@@ -26,7 +26,13 @@ export external_endpoint="https://ssg-${environment}.vote.gov"
 cd ${app_path}
 echo "Running 'drush tome:static' in '${environment}'..."
 drush tome:static --uri=${external_endpoint} --process-count=2 --retry-count=0 -y
+drush tome:static-export-path '/sitemap.xml,/sitemap_generator/default/sitemap.xsl' --uri=${external_endpoint} --process-count=2 --retry-count=0 -y
 echo "'drush tome:static' task completed!"
+
+echo "Adding missing module files for Sitemap"
+mkdir -p ${html_path}/modules/contrib/simple_sitemap/xsl
+cp ${app_path}/web/modules/contrib/simple_sitemap/xsl/* ${html_path}/modules/contrib/simple_sitemap/xsl/
+echo "Missing module files for Sitemap completed!"
 
 cd ${html_path}
 echo "Copying static files to '${bucket_name}'..."
