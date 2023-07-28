@@ -79,7 +79,7 @@ jobs:
           command: |
             export CIRCLE_BRANCH="test"
             source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
-            source ./scripts/pipeline/cloud-gov-login.sh
+            # source ./scripts/pipeline/cloud-gov-login.sh
 
             cd testing
             # cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
