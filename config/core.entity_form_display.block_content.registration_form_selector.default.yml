@@ -10,7 +10,7 @@ dependencies:
     - field.field.block_content.registration_form_selector.field_registration_form_link
     - field.field.block_content.registration_form_selector.field_submit_button_label
   module:
-    - link
+    - link_attributes
 id: block_content.registration_form_selector.default
 targetEntityType: block_content
 bundle: registration_form_selector
@@ -41,12 +41,22 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_registration_form_link:
-    type: link_default
+    type: link_attributes
     weight: 5
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
+      enabled_attributes:
+        id: true
+        name: false
+        target: false
+        rel: false
+        class: false
+        accesskey: false
+        aria-label: false
+        title: false
+      widget_default_open: expandIfValuesSet
     third_party_settings: {  }
   field_submit_button_label:
     type: string_textfield
