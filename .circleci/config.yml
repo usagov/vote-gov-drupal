@@ -77,19 +77,9 @@ jobs:
       - run:
           name: "Cypress"
           command: |
-            # export CIRCLE_BRANCH="test"
-            # source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
-            # source ./scripts/pipeline/cloud-gov-login.sh
-
             cd testing
             # cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
             cypress_baseurl="ssg-dev.vote.gov"
-
-            # sed -i "s/^    baseUrl: .*/    baseUrl: 'https:\/\/${cypress_baseurl}',/" pipeline.config.js
-            # sed -i "s/^      \"test_pass\": .*/      \"test_pass\": \"${cypress_random_pass}\",/" pipeline.config.js
-            # sed -i "s/^      \"pipeline\": .*/      \"pipeline\": 1,/" pipeline.config.js
-            # sed -i "s/^      \"cloudgov_application_name\": .*/      \"cloudgov_application_name\": \"${cypress_cloudgov_application_name}\",/" pipeline.config.js
-
             npm install 
             npm run cy:pipeline
       - store_artifacts:
