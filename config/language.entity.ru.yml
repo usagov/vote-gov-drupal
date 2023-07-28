@@ -1,13 +1,7 @@
 uuid: 3d488e76-7cdd-4cbf-bd4c-21027dab973d
-langcode: en
+langcode: ru
 status: true
-dependencies:
-  module:
-    - disable_language
-third_party_settings:
-  disable_language:
-    disable: true
-    redirect_language: en
+dependencies: {  }
 id: ru
 label: Russian
 direction: ltr
