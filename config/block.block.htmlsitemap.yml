@@ -1,0 +1,25 @@
+uuid: 3493453d-7667-4cd4-85a0-4d54512bb8c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - vote_gov
+id: htmlsitemap
+theme: vote_gov
+region: no_region
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

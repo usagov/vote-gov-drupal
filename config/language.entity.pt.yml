@@ -1,15 +1,9 @@
 uuid: 1e6d0861-4abc-403a-bf58-09b3bafa6226
 langcode: pt
 status: true
-dependencies:
-  module:
-    - disable_language
-third_party_settings:
-  disable_language:
-    disable: true
-    redirect_language: en
+dependencies: {  }
 id: pt
 label: Portuguese
 direction: ltr
-weight: 0
+weight: 1
 locked: false

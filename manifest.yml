@@ -11,6 +11,7 @@ default_config: &defaults
     NEWRELIC_LICENSE: ${newrelic_key}
     no_proxy: ${no_proxy}
     PHP_INI_SCAN_DIR: /home/vcap/app/php/etc/:/home/vcap/app/php/etc/php.ini.d/
+    sso_x509_cert: ${sso_x509_cert}
     waf_external_endpoint: ${waf_external_endpoint}
   timeout: 180
   routes:
@@ -25,7 +26,7 @@ default_config: &defaults
 applications:
 - name: ${project}-drupal-${CIRCLE_BRANCH}
   <<: *defaults
-  memory: ${DRUPAL_MEMORY}
+  memory: ${drupal_memory}M
   stack: cflinuxfs4
-  instances: 1
+  instances: ${drupal_instances}
   random-route: false

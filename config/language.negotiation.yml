@@ -21,6 +21,7 @@ url:
     ru: ru
     ht: ht
     pt: pt
+    ar: ar
   domains:
     en: ''
     es: ''
@@ -37,4 +38,5 @@ url:
     ru: ''
     ht: ''
     pt: ''
+    ar: ''
 selected_langcode: site_default

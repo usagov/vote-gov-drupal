@@ -1,15 +1,9 @@
 uuid: a8e97131-147c-4128-8d58-36178e353fe4
 langcode: ht
 status: true
-dependencies:
-  module:
-    - disable_language
-third_party_settings:
-  disable_language:
-    disable: true
-    redirect_language: en
+dependencies: {  }
 id: ht
 label: 'Haitian Creole'
 direction: ltr
-weight: -5
+weight: -4
 locked: false
