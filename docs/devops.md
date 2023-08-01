@@ -58,11 +58,10 @@ These are general tools and requirements needed to interact with the various scr
 
     The Cloud.gov spaces should already be created. This project uses:
 
-      - dev
-      - dmz
-      - prod
-      - stage
-      - test
+      - vote-dev (includes dev and test)
+      - vote-dmz
+      - vote-prod
+      - vote-stage
 
     The naming convention is typically: `{project_name}-{environment_name}`.
 
@@ -81,9 +80,9 @@ These are general tools and requirements needed to interact with the various scr
 [[top]](#devops-documentation)
 
   - awscli
-  
+
     [Instructions](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
-  
+
     ```
     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
     unzip awscliv2.zip
@@ -91,9 +90,9 @@ These are general tools and requirements needed to interact with the various scr
     ```
 
   - CloudFoundry CLI v8
-    
+
     [Instructions](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html)
-    
+
     ```
     wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
     echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
@@ -115,9 +114,9 @@ These are general tools and requirements needed to interact with the various scr
     ```
 
   - Terraform
-    
+
     [Instructions](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
-    
+
     ```
     sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
     wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
@@ -131,40 +130,40 @@ These are general tools and requirements needed to interact with the various scr
   #### MacOS
 
   - Homebrew
-    
+
     [Instructions](https://brew.sh)
-    
+
     ```
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     ```
-  
+
     NOTE: `sudo` rights are need on the laptop to install `homebrew`, otherwise permissions will be incorrect.
-    
+
   - awscli
-  
+
     [Instructions](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
-  
+
     ```
     brew install awscli
     ```
-    
+
   - CloudFoundry CLI v8
-    
+
     [Instructions](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html)
-    
+
     ```
     brew install cloudfoundry/tap/cf-cli@8
     cf install-plugin https://github.com/cloud-gov/cf-service-connect/releases/download/1.1.0/cf-service-connect-darwin-amd64
     ```
-    
+
   - coreutils
-    
+
     ```
     brew install coreutils
     ```
-     
+
   - jq
-      
+
     ```
     brew install jq
     ```
@@ -176,9 +175,9 @@ These are general tools and requirements needed to interact with the various scr
     ```
 
   - Terraform
-    
+
     [Instructions](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
-  
+
     ```
     brew tap hashicorp/tap
     brew install hashicorp/tap/terraform
@@ -199,7 +198,7 @@ This file contains the CircleCI `jobs` and `workflows` that make up the CI/CD pi
 
 #### Deployment
 
-The following are the workflows for deployments.  
+The following are the workflows for deployments.
 
 `deploy-workflow` (`test` branch)
 
@@ -258,7 +257,7 @@ This directory has additional configuration settings for the [php buildpack](htt
 
 ##### [httpd/](#httpd)
 
-This directory has configuration settings for Apache. 
+This directory has configuration settings for Apache.
 
   - `http.conf`: located in the root directory, this configuration file can be used to override global web server configuration options.
   - `user-provided/`: this directory holds additional configurations.

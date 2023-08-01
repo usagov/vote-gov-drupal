@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Theme override for a main view:sitemap template.
+ */
+#}
+<div class="sitemap">
+  <h2>{{ 'Main Navigation' | t }}</h2>
+  {{ drupal_entity('block', 'htmlsitemap') }}
+  <h2>{{ 'Register to Vote - by State and Territory' | t }}</h2>
+  <ul class="register-nav usa-list">
+  {% if rows %}
+      {{ rows }}
+  {% elseif empty %}
+      {{ empty }}
+  {% endif %}
+  </ul>
+</div>
+
+{% include '@vote_gov/partial/homepage-link.html.twig' %}

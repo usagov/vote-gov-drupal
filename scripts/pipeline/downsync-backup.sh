@@ -14,11 +14,8 @@ wait_for_tunnel() {
     [ -n "$(grep 'Press Control-C to stop.' backup.txt)" ] && break
     echo "Waiting for tunnel..."
     sleep 1
-  done 
+  done
 }
-
-echo "Running 'drush cr' on '${BACKUP_ENV}' database..."
-source ./scripts/pipeline/cloud-gov-remote-command.sh "vote-drupal-${BACKUP_ENV}" "drush cr"
 
 ## Create a tunnel through the application to pull the database.
 echo "Creating tunnel to database..."
@@ -36,18 +33,60 @@ echo "Backing up '${BACKUP_ENV}' database..."
   dbname=$(cat backup.txt | grep -i '^name' | awk '{print $2}')
 
   mkdir ~/.mysql && chmod 0700 ~/.mysql
-  
+
   echo "[mysqldump]" > ~/.mysql/mysqldump.cnf
   echo "user=${username}" >> ~/.mysql/mysqldump.cnf
   echo "password=${password}" >> ~/.mysql/mysqldump.cnf
   chmod 400 ~/.mysql/mysqldump.cnf
-  
+
+  ## Exclude tables without data
+  declare -a excluded_tables=(
+    "cache_advagg_minify"
+    "cache_bootstrap"
+    "cache_config"
+    "cache_container"
+    "cache_data"
+    "cache_default"
+    "cache_discovery"
+    "cache_discovery_migration"
+    "cache_dynamic_page_cache"
+    "cache_entity"
+    "cache_menu"
+    "cache_migrate"
+    "cache_page"
+    "cache_render"
+    "cache_rest"
+    "cache_toolbar"
+    "sessions"
+    "watchdog"
+    "webprofiler"
+  )
+
+  ignored_tables_string=''
+  for table in "${excluded_tables[@]}"
+  do
+    ignored_tables_string+=" --ignore-table=${dbname}.${table}"
+  done
+
+  ## Dump structure
   mysqldump \
-  --defaults-extra-file=~/.mysql/mysqldump.cnf \
-  --host=${host} \
-  --port=${port} \
-  --protocol=TCP \
-  ${dbname} > backup_${BACKUP_ENV}.sql
+    --defaults-extra-file=~/.mysql/mysqldump.cnf \
+    --host=${host} \
+    --port=${port} \
+    --protocol=TCP \
+    --no-data \
+    ${dbname} > backup_${BACKUP_ENV}.sql
+
+  ## Dump content
+  mysqldump \
+    --defaults-extra-file=~/.mysql/mysqldump.cnf \
+    --host=${host} \
+    --port=${port} \
+    --protocol=TCP \
+    --no-create-info \
+    --skip-triggers \
+    ${ignored_tables_string} \
+    ${dbname} >> backup_${BACKUP_ENV}.sql
 
   ## Patch out any MySQL 'SET' commands that require admin.
   sed -i 's/^SET /-- &/' backup_${BACKUP_ENV}.sql
