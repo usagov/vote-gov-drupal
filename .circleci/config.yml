@@ -297,10 +297,10 @@ workflows:
           requires:
             - build-theme
       - cypress:
-          filters:
-            branches:
-              only:
-                - test
+          # filters:
+            # branches:
+              # only:
+                # - test
           requires:
             - deploy-test
       - deploy:
