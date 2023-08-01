@@ -297,10 +297,13 @@ workflows:
           requires:
             - build-theme
       - cypress:
-          # filters:
-            # branches:
-              # only:
-                # - test
+          filters:
+            branches:
+              only:
+                - dev
+                - stage
+                - test
+                - qa/**
           requires:
             - deploy-test
       - deploy:
