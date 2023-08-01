@@ -9,6 +9,15 @@
 {# NVRF selector fields #}
 <select class="usa-select  max-width-input" name="userselection" id="js-user-selection">
   {% for item in items %}
+      {% set langID = item.content['#url'].options.attributes.id %}
+      {% if langID is same as(language | replace({'-hans' : ''})) %}
     <option value="{{ item.content['#url_title'] }}"{{ option.selected ? ' selected="selected"' }}>{{ item.content['#title'] }}</option>
+      {% endif %}
+  {% endfor %}
+    {% for item in items %}
+      {% set langID = item.content['#url'].options.attributes.id %}
+      {% if langID is not same as(language | replace({'-hans' : ''})) %}
+    <option value="{{ item.content['#url_title'] }}"{{ option.selected ? ' selected="selected"' }}>{{ item.content['#title'] }}</option>
+      {% endif %}
   {% endfor %}
 </select>
