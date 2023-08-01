@@ -18,6 +18,7 @@ module:
   config_translation: 0
   content_moderation: 0
   datetime: 0
+  dblog: 0
   disable_language: 0
   double_field: 0
   dynamic_page_cache: 0
@@ -52,6 +53,8 @@ module:
   path_alias: 0
   redirect: 0
   remove_http_headers: 0
+  s3fs: 0
+  samlauth: 0
   simple_sitemap: 0
   system: 0
   text: 0
@@ -63,12 +66,14 @@ module:
   twig_field_value: 0
   twig_tweak: 0
   update: 0
+  usagov_login: 0
   user: 0
   views_ui: 0
   vote_utility: 0
   workflows: 0
   pathauto: 1
   content_translation: 10
+  externalauth: 10
   views: 10
   paragraphs: 11
   publication_date: 99

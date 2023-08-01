@@ -25,7 +25,6 @@ module:
   entity_reference_revisions: 0
   field: 0
   field_group: 0
-  field_ui: 0
   file: 0
   file_delete: 0
   filter: 0
@@ -35,6 +34,7 @@ module:
   link: 0
   link_attributes: 0
   locale: 0
+  log_stdout: 0
   media: 0
   media_library: 0
   menu_link_content: 0
@@ -52,6 +52,8 @@ module:
   path_alias: 0
   redirect: 0
   remove_http_headers: 0
+  s3fs: 0
+  samlauth: 0
   simple_sitemap: 0
   system: 0
   text: 0
@@ -63,12 +65,13 @@ module:
   twig_field_value: 0
   twig_tweak: 0
   update: 0
+  usagov_login: 0
   user: 0
-  views_ui: 0
   vote_utility: 0
   workflows: 0
   pathauto: 1
   content_translation: 10
+  externalauth: 10
   views: 10
   paragraphs: 11
   publication_date: 99

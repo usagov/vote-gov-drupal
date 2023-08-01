@@ -1,0 +1,15 @@
+uuid: 81729a39-785f-46c2-be73-3835df2cf273
+langcode: en
+status: true
+dependencies: {  }
+id: local
+label: local
+description: 'Configuration for local environments.'
+weight: 2
+stackable: false
+storage: folder
+folder: ../config/local
+module: {  }
+theme: {  }
+complete_list: {  }
+partial_list: {  }
