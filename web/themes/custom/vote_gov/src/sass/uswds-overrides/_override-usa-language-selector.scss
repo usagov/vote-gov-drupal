@@ -13,23 +13,23 @@
 }
 
 .usa-language__submenu {
-  @media (max-width: 30em) {
+  padding: 20px;
+  width: auto;
+  border-radius: 3px;
+  white-space: nowrap;
+
+  @media (max-width: 768px) {
     overflow: scroll;
     height: 80vh;
   }
 
-  @media (min-width: 30em) {
-    width: 483px;
-  }
-  border-radius: 3px;
-
-  @media (min-width: 30em) {
+  @media (min-width: 768px) {
     columns: 2 auto;
   }
 }
 
 .usa-language__submenu-item {
-  padding: 10px;
+  padding: 8px;
   border: unset;
 }
 
