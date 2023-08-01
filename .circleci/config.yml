@@ -64,7 +64,7 @@ jobs:
       - image: cypress/included:cypress-12.3.0-node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
     environment:
       cypress_pipeline: 1
-      cypress_cloudgov_application_name: "vote-drupal-test"
+#      cypress_cloudgov_application_name: "vote-drupal-test"
     steps:
       - checkout
       - attach_workspace:
@@ -79,7 +79,7 @@ jobs:
           command: |
             cd testing
             cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov
-            npm install 
+            npm install
             npm run cy:pipeline
       - store_artifacts:
           path: testing/cypress/screenshots
@@ -158,7 +158,7 @@ jobs:
           name: "Run downsync"
           command: |
             source ./scripts/pipeline/exports.sh "${BACKUP_ENV}"
-            source ./scripts/pipeline/cloud-gov-login.sh 
+            source ./scripts/pipeline/cloud-gov-login.sh
             source ./scripts/pipeline/downsync-backup.sh
             cf logout
 
@@ -228,7 +228,7 @@ jobs:
           command: |
             export BACKUP_ENV=${CIRCLE_BRANCH}
             source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
-            source ./scripts/pipeline/cloud-gov-login.sh 
+            source ./scripts/pipeline/cloud-gov-login.sh
             source ./scripts/pipeline/downsync-backup.sh
             ./scripts/pipeline/scheduled_backup.sh "${prod_cf_space}"
   snyk:
@@ -303,7 +303,6 @@ workflows:
                 - dev
                 - stage
                 - test
-                - qa/**
           requires:
             - deploy-test
       - deploy:
