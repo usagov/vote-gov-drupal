@@ -78,8 +78,7 @@ jobs:
           name: "Cypress"
           command: |
             cd testing
-            # cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
-            cypress_baseurl="ssg-dev.vote.gov"
+            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov
             npm install 
             npm run cy:pipeline
       - store_artifacts:
