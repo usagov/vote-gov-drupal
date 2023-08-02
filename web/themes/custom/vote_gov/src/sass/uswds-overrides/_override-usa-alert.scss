@@ -24,9 +24,6 @@
   .grid-container {
     background-position: calc(100% - 1rem) 1rem;
 
-    @include at-media('tablet') {
-      background-position: calc(100% - 1rem) 0.3rem;
-    }
   }
 }
 

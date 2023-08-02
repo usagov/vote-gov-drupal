@@ -25,3 +25,10 @@ function vote_gov_theme_suggestions_block_alter(&$suggestions, array $vars): voi
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function vote_gov_preprocess_block(&$variables) {
+  $variables['content']['#attributes']['block'] = $variables['attributes']['id'];
+}
