@@ -65,7 +65,7 @@ function vote_gov_preprocess_links__language_block(&$variables) {
         $variables['links'][$i]['link']['#title'] .= " <{$getName}>";
       }
       else {
-        $variables['links'][$i]['link']['#english'] = " ({$languages[$i]->getName()})";
+        $variables['links'][$i]['link']['#english'] = "({$languages[$i]->getName()})";
       }
     }
   }
