@@ -33,11 +33,10 @@
 {% endif %}
 
 
-
-  {# NVRF Selector and download button #}
-  {% if content.field_accepts_nvrf.0["#markup"] == 1 %}
-    {{ drupal_entity('block_content', 3) }}
-  {% endif %}
+{# NVRF Selector and download button #}
+{% if content.field_accepts_nvrf['#items'].value == '1' %}
+  {{ drupal_entity('block_content', 3) }}
+{% endif %}
 
 <p>{{'Last updated:' | t }} {{ node.revision_timestamp.value | date('U') | format_date('revision_date') }}</p>
 
