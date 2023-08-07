@@ -1,7 +1,7 @@
 _core:
   default_config_hash: kwGGKvKSU7cPTEgTMWrbW0o9Jwe6FSDmpgdUWmIXCdg
 enabled: true
-timeout: 1800
+timeout: 5400
 max_timeout: 172800
 padding: 20
 logout_regardless_of_activity: false
