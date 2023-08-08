@@ -3,7 +3,7 @@
 .usa-language-container {
   display: flex;
   justify-content: flex-end;
-  padding: 0.5rem 1rem 0.5rem 0;
+  padding: 0.5rem 1rem;
 
   .usa-button {
     a {
@@ -19,7 +19,7 @@
   white-space: nowrap;
 
   @media (max-width: 768px) {
-    overflow: scroll;
+    overflow: auto;
     height: 80vh;
   }
 
@@ -42,5 +42,12 @@
 .switcher-mobile {
   @media (min-width: 800px) {
     display: none;
+  }
+}
+
+.usa-language__primary-item:last-of-type .usa-language__submenu {
+  [dir="rtl"] & {
+    right: unset;
+    left: 0;
   }
 }
