@@ -44,3 +44,11 @@
     display: none;
   }
 }
+
+.usa-language__primary-item:last-of-type .usa-language__submenu {
+  [dir="rtl"] & {
+    position: absolute;
+    right: unset;
+    left: 0;
+  }
+}
