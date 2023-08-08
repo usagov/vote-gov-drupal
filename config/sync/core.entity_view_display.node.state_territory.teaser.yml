@@ -26,6 +26,7 @@ dependencies:
     - field.field.node.state_territory.field_registration_link
     - field.field.node.state_territory.field_registration_type
     - field.field.node.state_territory.field_state_abbreviation
+    - field.field.node.state_territory.field_title_override
     - node.type.state_territory
   module:
     - user
@@ -67,5 +68,6 @@ hidden:
   field_registration_link: true
   field_registration_type: true
   field_state_abbreviation: true
+  field_title_override: true
   langcode: true
   published_at: true

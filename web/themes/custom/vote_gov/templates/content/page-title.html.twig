@@ -21,7 +21,8 @@
     {% set title = title ~ " " ~ korean_state_char %}
   {% endif %}
 
-  {% set title = 'Register to vote in @state_name' | t ({"@state_name": title}) %}
+  {% set title_pattern = currentnode.field_title_override.value | default('Register to vote in @state_name') %}
+  {% set title = title_pattern | t ({"@state_name": title}) %}
 {% endif %}
 
 

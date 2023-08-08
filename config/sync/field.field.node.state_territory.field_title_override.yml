@@ -1,0 +1,19 @@
+uuid: 69a24a33-9fa3-4a9c-b97b-c041eb757f16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_override
+    - node.type.state_territory
+id: node.state_territory.field_title_override
+field_name: field_title_override
+entity_type: node
+bundle: state_territory
+label: 'Page title override'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

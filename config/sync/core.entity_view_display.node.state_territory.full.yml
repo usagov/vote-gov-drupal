@@ -26,6 +26,7 @@ dependencies:
     - field.field.node.state_territory.field_registration_link
     - field.field.node.state_territory.field_registration_type
     - field.field.node.state_territory.field_state_abbreviation
+    - field.field.node.state_territory.field_title_override
     - node.type.state_territory
   module:
     - datetime
@@ -271,6 +272,7 @@ content:
 hidden:
   body: true
   field_metatags: true
+  field_title_override: true
   langcode: true
   links: true
   published_at: true
