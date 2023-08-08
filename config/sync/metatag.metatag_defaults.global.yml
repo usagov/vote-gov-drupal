@@ -7,23 +7,23 @@ _core:
 id: global
 label: Global
 tags:
-  apple_touch_icon_114x114: '[site:url]/themes/custom/vote_gov/img/favicon/favicon-114.png'
-  apple_touch_icon_144x144: '[site:url]/themes/custom/vote_gov/img/favicon/favicon-144.png'
-  apple_touch_icon_72x72: '[site:url]/themes/custom/vote_gov/img/favicon/favicon-72.png'
+  apple_touch_icon_114x114: /themes/custom/vote_gov/img/favicon/favicon-114.png
+  apple_touch_icon_144x144: /themes/custom/vote_gov/img/favicon/favicon-144.png
+  apple_touch_icon_72x72: /themes/custom/vote_gov/img/favicon/favicon-72.png
   canonical_url: '[current-page:url]'
   description: 'Find voter registration options in your state.'
-  icon_192x192: '[site:url]/themes/custom/vote_gov/img/favicon/favicon-192.png'
+  icon_192x192: /themes/custom/vote_gov/img/favicon/favicon-192.png
   og_description: '[current-page:metatag:description]'
-  og_image: '[site:url]/themes/custom/vote_gov/img/ballot-box-OG.png'
+  og_image: /themes/custom/vote_gov/img/ballot-box-OG.png
   og_site_name: '[site:name]'
   og_title: '[current-page:metatag:title]'
   og_type: website
   og_url: '[site:url]'
-  shortcut_icon: '[site:url]/themes/custom/vote_gov/img/favicon/favicon-vote.ico'
+  shortcut_icon: /themes/custom/vote_gov/img/favicon/favicon-vote.ico
   title: 'Register to vote | [site:name]'
   twitter_cards_description: '[current-page:metatag:description]'
   twitter_cards_donottrack: 'on'
-  twitter_cards_image: '[site:url]/themes/custom/vote_gov/img/ballot-box-OG.png'
+  twitter_cards_image: /themes/custom/vote_gov/img/ballot-box-OG.png
   twitter_cards_site: '@votegov'
   twitter_cards_title: '[current-page:metatag:title]'
   twitter_cards_type: summary_large_image
