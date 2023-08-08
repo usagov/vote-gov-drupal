@@ -9,7 +9,7 @@ label: Global
 tags:
   apple_touch_icon_114x114: /themes/custom/vote_gov/img/favicon/favicon-114.png
   apple_touch_icon_144x144: /themes/custom/vote_gov/img/favicon/favicon-144.png
-  apple_touch_icon_72x72: '[site:url]/themes/custom/vote_gov/img/favicon/favicon-72.png'
+  apple_touch_icon_72x72: /themes/custom/vote_gov/img/favicon/favicon-72.png
   canonical_url: '[current-page:url]'
   description: 'Find voter registration options in your state.'
   icon_192x192: /themes/custom/vote_gov/img/favicon/favicon-192.png
