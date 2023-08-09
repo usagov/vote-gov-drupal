@@ -42,9 +42,9 @@
         "drupal/block_content_template": "^1.5",
         "drupal/config_ignore": "^2.4",
         "drupal/config_split": "^2.0@RC",
-        "drupal/core-composer-scaffold": "^10.0",
-        "drupal/core-project-message": "^10.0",
-        "drupal/core-recommended": "^10.0",
+        "drupal/core-composer-scaffold": "^10.1",
+        "drupal/core-project-message": "^10.1",
+        "drupal/core-recommended": "^10.1",
         "drupal/devel": "^5.1",
         "drupal/disable_language": "^1.0@beta",
         "drupal/double_field": "^4.1",
@@ -75,7 +75,7 @@
         "drush/drush": "^11.3"
     },
     "require-dev": {
-        "drupal/core-dev": "^10.0"
+        "drupal/core-dev": "^10.1"
     },
     "conflict": {
         "drupal/drupal": "*"
