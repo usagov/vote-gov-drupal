@@ -1,30 +1,46 @@
-**_Delete all details that do not apply to this PR!_**
+<!-- Delete any detail that does not apply to this PR! -->
 
-## Jira ticket (required)
-Insert Jira ticket link
+## Jira ticket
 
-## Description (optional)
+Insert a link to the Jira ticket (e.g VOTE-XXX).
+
+## Description
+
 Insert a brief summary of the changes included in this PR and any additional information or context which may help the reviewer.
 
-## Deployment and testing (required, if applicable)
-### Pre-deploy steps
-1. Insert step one
+## Deployment and testing
 
-### Post-deploy steps
-1. Insert step one
+### Pre-deploy
 
-### Testing steps
-1. Insert step one
+1. Insert any required steps to take before merging and running post-deploy.
 
-<!-- Pull Request Checklist (Reference only)
+### Post-deploy
 
-Please ensure you have addressed all concerns below before marking this PR "ready for review".
+1. Insert any required steps to take before beginning test.
 
-- No merge conflicts exist with the target branch.
-- branch name follows the branch naming conventions **feature/VOTE-###-add-short-description** matching the Jira ticket number.
-- Primary commit message is of the format **VOTE-### Add short description of the task** matching the Jira ticket number.
-- PR title either matches primary commit message or is of the format **VOTE-### Add short description of the task** matching the Jira ticket number (i.e. "VOTE-123 Implement feature X").
-- Automated pipeline tests have passed.
-- At least one “Reviewer has been specified.
+### QA/Test
 
--->
+1. Insert steps to test and confirm the result meets the "definition of done".
+
+## Checklist for the Developer
+
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+<!--- If you're unsure about any of these, don't hesitate to ask for help! -->
+- [ ] A link to the JIRA ticket has been included above.
+- [ ] No merge conflicts exist with the target branch.
+- [ ] Automated tests have passed on this PR.
+- [ ] A reviewer has been designated.
+- [ ] Deployment and testing steps have been documented above, if applicable.
+- [ ] The result of these changes meet the JIRA ticket "definition of done".
+- [ ] This work meets the project [standards](/usagov/vote-gov-drupal/blob/dev/docs/standards.md).
+
+## Checklist for the Peer Reviewers
+
+- [ ] The code has been reviewed.
+- [ ] The file changes are relevant to the task.
+- [ ] The author of the commits match the assignee.
+- [ ] Code standards and best practices are followed.
+- [ ] QA/Test steps have been successfully completed and the results match "definition of done".
+- [ ] Drupal database log and browser console log are free of errors.
+- [ ] There are no known side-effects outside the expected behavior.
+- [ ] Code is readable and includes appropriate commenting.

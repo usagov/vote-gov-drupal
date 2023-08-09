@@ -33,13 +33,13 @@ msgid "An official website of the @link."
 msgstr "@link官方網站"
 
 msgid "General Services Administration"
-msgstr "總管理局"
+msgstr "總管理局 (英語)"
 
 msgid "Looking for U.S. government information and services? @link."
-msgstr "尋找美國政府資訊與服務？ @link"
+msgstr "尋找美國政府資訊與服務？@link"
 
 msgid "Visit USA.gov"
-msgstr "访问 USA.gov"
+msgstr "访问 USA.gov (英語)"
 
 msgid "Agency identifier"
 msgstr "機構標誌"
@@ -61,7 +61,7 @@ msgid "U.S. Election Assistance Commission logo which indicates a partnership wi
 msgstr "與 U.S. Election Assistance Commission合作 "
 
 msgid "Follow Vote.gov on Twitter"
-msgstr "在 Twitter 上追蹤 Vote.gov"
+msgstr "在 Twitter 上追蹤 Vote.gov (英語)"
 
 #search
 msgid "Search Vote.gov"

@@ -1,0 +1,15 @@
+uuid: c0ec0bd6-6615-436e-b294-9434002b887b
+langcode: en
+status: false
+dependencies: {  }
+id: production
+label: production
+description: 'Configuration for production environment.'
+weight: 0
+stackable: false
+storage: folder
+folder: ../config/production
+module: {  }
+theme: {  }
+complete_list: {  }
+partial_list: {  }

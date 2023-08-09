@@ -34,13 +34,13 @@ msgid "An official website of the @link."
 msgstr "Isang opisyal na website ng @link"
 
 msgid "General Services Administration"
-msgstr "Administrasyon ng Pangkalahatang Serbisyo"
+msgstr "Administrasyon ng Pangkalahatang Serbisyo (sa Ingles)"
 
 msgid "Looking for U.S. government information and services? @link."
 msgstr "Naghahanap ng impormasyon at mga serbisyo ng gobyerno ng U.S.? @link"
 
 msgid "Visit USA.gov"
-msgstr "Bisitahin ang USA.gov"
+msgstr "Bisitahin ang USA.gov (sa Ingles)"
 
 msgid "Agency identifier"
 msgstr "Tagatukoy ng Ahensya"
@@ -62,7 +62,7 @@ msgid "U.S. Election Assistance Commission logo which indicates a partnership wi
 msgstr "sa pakikipagtulungan sa Election Assistance Commission"
 
 msgid "Follow Vote.gov on Twitter"
-msgstr "I-follow ang Vote.gov sa Twitter"
+msgstr "I-follow ang Vote.gov sa Twitter (sa Ingles)"
 
 #search
 msgid "Search Vote.gov"

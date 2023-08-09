@@ -14,6 +14,7 @@ module:
   config: 0
   config_filter: 0
   config_ignore: 0
+  config_split: 0
   config_translation: 0
   content_moderation: 0
   datetime: 0
@@ -33,8 +34,8 @@ module:
   language: 0
   language_switcher_extended: 0
   link: 0
+  link_attributes: 0
   locale: 0
-  log_stdout: 0
   media: 0
   media_library: 0
   menu_link_content: 0
