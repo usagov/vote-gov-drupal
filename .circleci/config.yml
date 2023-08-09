@@ -301,6 +301,9 @@ workflows:
             branches:
               only:
                 - test
+                - dev
+                - stage
+                - main
           requires:
             - deploy-test
       - deploy:
