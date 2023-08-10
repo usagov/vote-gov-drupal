@@ -36,7 +36,7 @@
         "cweagans/composer-patches": "^1.7",
         "drupal-tome/tome_drush": "dev-master",
         "drupal/admin_toolbar": "^3.3",
-        "drupal/allowed_formats": "^2.0",
+        "drupal/allowed_formats": "^3.0@alpha",
         "drupal/autologout": "^1.4",
         "drupal/block_content_permissions": "^1.11",
         "drupal/block_content_template": "^1.5",
