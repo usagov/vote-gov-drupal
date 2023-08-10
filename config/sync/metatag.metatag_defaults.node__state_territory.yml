@@ -11,6 +11,5 @@ tags:
   og_url: '[current-page:url]'
   title: 'Voter Registration in [current-page:title] | [site:name]'
   twitter_cards_description: '[current-page:metatag:description]'
-  twitter_cards_page_url: '[current-page:url]'
   twitter_cards_title: '[current-page:metatag:title]'
   twitter_cards_type: summary_large_image
