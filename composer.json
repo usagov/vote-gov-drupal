@@ -54,7 +54,7 @@
         "drupal/language_switcher_extended": "^1.1",
         "drupal/link_attributes": "^2.1",
         "drupal/log_stdout": "dev-3339853-drupal-10-compatibility",
-        "drupal/metatag": "^1.22",
+        "drupal/metatag": "^2.0",
         "drupal/migrate_plus": "^6.0",
         "drupal/migrate_tools": "^6.0",
         "drupal/new_relic_rpm": "^2.1",
