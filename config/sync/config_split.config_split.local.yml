@@ -11,5 +11,13 @@ storage: folder
 folder: ../config/local
 module: {  }
 theme: {  }
-complete_list: {  }
-partial_list: {  }
+complete_list:
+  - dblog.settings
+  - devel.settings
+  - devel.toolbar.settings
+  - field_ui.settings
+  - system.menu.devel
+  - views.view.watchdog
+partial_list:
+  - autologout.settings
+  - core.extension

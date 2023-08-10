@@ -11,5 +11,14 @@ storage: folder
 folder: ../config/non_production
 module: {  }
 theme: {  }
-complete_list: {  }
-partial_list: {  }
+complete_list:
+  - dblog.settings
+  - field_ui.settings
+  - new_relic_rpm.settings
+  - s3fs.settings
+  - samlauth.authentication
+  - usagov_login.settings
+  - views.view.samlauth_map
+  - views.view.watchdog
+partial_list:
+  - core.extension
