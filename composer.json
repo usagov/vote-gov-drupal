@@ -58,7 +58,7 @@
         "drupal/migrate_plus": "^6.0",
         "drupal/migrate_tools": "^6.0",
         "drupal/new_relic_rpm": "^2.1",
-        "drupal/node_revision_delete": "^1.0@RC",
+        "drupal/node_revision_delete": "^2.0@alpha",
         "drupal/paragraphs": "^1.15",
         "drupal/pathauto": "dev-3328670-php-8.2-compatibility",
         "drupal/publication_date": "dev-3328575-fix-php-8.2",
