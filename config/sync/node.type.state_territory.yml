@@ -10,9 +10,10 @@ third_party_settings:
     available_menus: {  }
     parent: ''
   node_revision_delete:
-    minimum_revisions_to_keep: 50
-    minimum_age_to_delete: 0
-    when_to_delete: 0
+    amount:
+      status: true
+      settings:
+        amount: 50
 name: 'State/Territory Page'
 type: state_territory
 description: ''
