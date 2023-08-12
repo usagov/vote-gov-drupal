@@ -4,14 +4,10 @@ status: true
 dependencies:
   config:
     - field.storage.node.body
+    - filter.format.simple_html
     - node.type.landing
   module:
-    - allowed_formats
     - text
-third_party_settings:
-  allowed_formats:
-    allowed_formats:
-      - simple_html
 id: node.landing.body
 field_name: body
 entity_type: node
@@ -25,4 +21,6 @@ default_value_callback: ''
 settings:
   display_summary: true
   required_summary: false
+  allowed_formats:
+    - simple_html
 field_type: text_with_summary
