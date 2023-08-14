@@ -287,25 +287,6 @@ workflows:
                 - dev
                 - stage
                 - test
-      - deploy-test:
-          filters:
-            branches:
-              only:
-                - dev
-                - stage
-                - test
-          requires:
-            - build-theme
-      - cypress:
-          filters:
-            branches:
-              only:
-                - test
-                - dev
-                - stage
-                - main
-          requires:
-            - deploy-test
       - deploy:
           filters:
             branches:
@@ -315,6 +296,26 @@ workflows:
                 - prod
           requires:
             - build-theme
+      - build-static:
+          filters:
+            branches:
+              only:
+                - dev
+                - stage
+                - test
+                - prod
+          requires:
+            - build-theme
+      - cypress:
+          filters:
+            branches:
+              only:
+                - test
+                - dev
+                - stage
+                - prod
+          requires:
+            - build-static
   build-static-workflow:
     when:
       and:
