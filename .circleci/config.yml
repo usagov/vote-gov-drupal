@@ -181,7 +181,7 @@ jobs:
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
 
-            cf run-task ${project}-drupal-${CIRCLE_BRANCH} --command "drush cron" --name "${project}-${CIRCLE_BRANCH}-cron"  -k "2G" -m 128M
+            cf run-task ${project}-drupal-${CIRCLE_BRANCH} --command "drush --uri=${cms_uri} cron" --name "${project}-${CIRCLE_BRANCH}-cron"  -k "2G" -m 512M
   php-lint:
     docker:
       - image: php:8.2-alpine
