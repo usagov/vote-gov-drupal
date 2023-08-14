@@ -11,5 +11,12 @@ storage: folder
 folder: ../config/production
 module: {  }
 theme: {  }
-complete_list: {  }
-partial_list: {  }
+complete_list:
+  - log_stdout.settings
+  - new_relic_rpm.settings
+  - s3fs.settings
+  - samlauth.authentication
+  - usagov_login.settings
+  - views.view.samlauth_map
+partial_list:
+  - core.extension

@@ -5,13 +5,9 @@ dependencies:
   config:
     - block_content.type.inline_alert
     - field.storage.block_content.field_alert_content
+    - filter.format.basic_html
   module:
-    - allowed_formats
     - text
-third_party_settings:
-  allowed_formats:
-    allowed_formats:
-      - basic_html
 id: block_content.inline_alert.field_alert_content
 field_name: field_alert_content
 entity_type: block_content
@@ -22,5 +18,7 @@ required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings: {  }
+settings:
+  allowed_formats:
+    - basic_html
 field_type: text_long
