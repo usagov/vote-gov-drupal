@@ -1,0 +1,24 @@
+uuid: dd8e924b-ad1e-4f60-ae71-58e59f0a0bec
+langcode: en
+status: false
+dependencies: {  }
+id: non_production
+label: non-production
+description: 'Configuration for non-production environments.'
+weight: 0
+stackable: false
+storage: folder
+folder: ../config/non_production
+module: {  }
+theme: {  }
+complete_list:
+  - dblog.settings
+  - field_ui.settings
+  - new_relic_rpm.settings
+  - s3fs.settings
+  - samlauth.authentication
+  - usagov_login.settings
+  - views.view.samlauth_map
+  - views.view.watchdog
+partial_list:
+  - core.extension

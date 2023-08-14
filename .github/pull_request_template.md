@@ -32,7 +32,7 @@ Insert a brief summary of the changes included in this PR and any additional inf
 - [ ] A reviewer has been designated.
 - [ ] Deployment and testing steps have been documented above, if applicable.
 - [ ] The result of these changes meet the JIRA ticket "definition of done".
-- [ ] This work meets the project [standards](/docs/standards.md).
+- [ ] This work meets the project [standards](/usagov/vote-gov-drupal/blob/dev/docs/standards.md).
 
 ## Checklist for the Peer Reviewers
 

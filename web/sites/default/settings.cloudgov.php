@@ -16,7 +16,7 @@ $applicaiton_fqdn_regex = "^.+\.(app\.cloud\.gov|apps\.internal|vote\.gov)$";
 $s3_proxy_path_cms = getenv('S3_PROXY_PATH_CMS') ?: '/s3/files';
 
 $settings['tome_static_directory'] = dirname(DRUPAL_ROOT) . '/html';
-$settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config';
+$settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config/sync';
 $settings['file_private_path'] = dirname(DRUPAL_ROOT) . '/private';
 $settings['install_profile'] = 'minimal';
 
@@ -34,22 +34,22 @@ if (!empty($cf_application_data['space_name']) &&
   switch ($application_environment) {
     case "dev":
       $is_cloudgov = TRUE;
-      $server_http_host = 'ssg-dev.vote.gov';
+      $server_http_host = 'cms-dev.vote.gov';
       break;
 
     case "prod":
       $is_cloudgov = TRUE;
-      $server_http_host = 'ssg.vote.gov';
+      $server_http_host = 'cms.vote.gov';
       break;
 
     case "stage":
       $is_cloudgov = TRUE;
-      $server_http_host = 'ssg-stage.vote.gov';
+      $server_http_host = 'cms-stage.vote.gov';
       break;
 
     case "test":
       $is_cloudgov = TRUE;
-      $server_http_host = 'ssg-test.vote.gov';
+      $server_http_host = 'cms-test.vote.gov';
       break;
   }
 }
@@ -119,21 +119,25 @@ $config['samlauth.authentication']['idp_certs'][] = getenv('sso_x509_cert');
 // @todo DC - Move the following to config split for respective environments.
 switch ($application_environment) {
   case "dev":
+    $config['config_split.config_split.non_production']['status'] = TRUE;
     $config['samlauth.authentication']['sp_entity_id'] = 'dev.vote.gov';
     $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://secureauth.dev.gsa.gov/SecureAuth592';
     break;
 
   case "prod":
+    $config['config_split.config_split.production']['status'] = TRUE;
     $config['samlauth.authentication']['sp_entity_id'] = 'prod.vote.gov';
     $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://secureauth.gsa.gov/SecureAuth404';
     break;
 
   case "stage":
+    $config['config_split.config_split.non_production']['status'] = TRUE;
     $config['samlauth.authentication']['sp_entity_id'] = 'cms-stage.vote.gov';
     $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://secureauth.dev.gsa.gov/SecureAuth616';
     break;
 
   case "test":
+    $config['config_split.config_split.non_production']['status'] = TRUE;
     $config['samlauth.authentication']['sp_entity_id'] = 'cms-test.vote.gov';
     $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://secureauth.dev.gsa.gov/SecureAuth615';
     break;

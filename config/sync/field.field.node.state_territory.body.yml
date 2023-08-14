@@ -1,0 +1,26 @@
+uuid: a28b507a-e677-407c-bd43-151f7a278d17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - filter.format.simple_html
+    - node.type.state_territory
+  module:
+    - text
+id: node.state_territory.body
+field_name: body
+entity_type: node
+bundle: state_territory
+label: 'Page description'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats:
+    - simple_html
+field_type: text_with_summary

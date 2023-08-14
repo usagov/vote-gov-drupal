@@ -64,7 +64,7 @@ jobs:
       - image: cypress/included:cypress-12.3.0-node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
     environment:
       cypress_pipeline: 1
-      cypress_cloudgov_application_name: "vote-drupal-test"
+      cypress_cloudgov_application_name: "${project}-drupal-${CIRCLE_BRANCH}"
     steps:
       - checkout
       - attach_workspace:
@@ -77,18 +77,8 @@ jobs:
       - run:
           name: "Cypress"
           command: |
-            export CIRCLE_BRANCH="test"
-            source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
-            source ./scripts/pipeline/cloud-gov-login.sh
-
             cd testing
             cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
-
-            sed -i "s/^    baseUrl: .*/    baseUrl: 'https:\/\/${cypress_baseurl}',/" pipeline.config.js
-            sed -i "s/^      \"test_pass\": .*/      \"test_pass\": \"${cypress_random_pass}\",/" pipeline.config.js
-            sed -i "s/^      \"pipeline\": .*/      \"pipeline\": 1,/" pipeline.config.js
-            sed -i "s/^      \"cloudgov_application_name\": .*/      \"cloudgov_application_name\": \"${cypress_cloudgov_application_name}\",/" pipeline.config.js
-
             npm install
             npm run cy:pipeline
       - store_artifacts:
@@ -168,7 +158,7 @@ jobs:
           name: "Run downsync"
           command: |
             source ./scripts/pipeline/exports.sh "${BACKUP_ENV}"
-            source ./scripts/pipeline/cloud-gov-login.sh 
+            source ./scripts/pipeline/cloud-gov-login.sh
             source ./scripts/pipeline/downsync-backup.sh
             cf logout
 
@@ -191,7 +181,7 @@ jobs:
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
 
-            cf run-task ${project}-drupal-${CIRCLE_BRANCH} --command "drush cron" --name "${project}-${CIRCLE_BRANCH}-cron"  -k "2G" -m 128M
+            cf run-task ${project}-drupal-${CIRCLE_BRANCH} --command "drush --uri=${cms_uri} cron" --name "${project}-${CIRCLE_BRANCH}-cron"  -k "2G" -m 512M
   php-lint:
     docker:
       - image: php:8.2-alpine
@@ -238,7 +228,7 @@ jobs:
           command: |
             export BACKUP_ENV=${CIRCLE_BRANCH}
             source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
-            source ./scripts/pipeline/cloud-gov-login.sh 
+            source ./scripts/pipeline/cloud-gov-login.sh
             source ./scripts/pipeline/downsync-backup.sh
             ./scripts/pipeline/scheduled_backup.sh "${prod_cf_space}"
   snyk:
@@ -310,6 +300,8 @@ workflows:
           filters:
             branches:
               only:
+                - dev
+                - stage
                 - test
           requires:
             - deploy-test
@@ -358,4 +350,3 @@ workflows:
           - equal: [ test, << pipeline.parameters.restore >> ]
     jobs:
       - downsync
-

@@ -1,0 +1,23 @@
+uuid: 81729a39-785f-46c2-be73-3835df2cf273
+langcode: en
+status: false
+dependencies: {  }
+id: local
+label: local
+description: 'Configuration for local environments.'
+weight: 2
+stackable: false
+storage: folder
+folder: ../config/local
+module: {  }
+theme: {  }
+complete_list:
+  - dblog.settings
+  - devel.settings
+  - devel.toolbar.settings
+  - field_ui.settings
+  - system.menu.devel
+  - views.view.watchdog
+partial_list:
+  - autologout.settings
+  - core.extension
