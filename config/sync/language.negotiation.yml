@@ -22,6 +22,7 @@ url:
     ht: ht
     pt: pt
     ar: ar
+    fr: fr
   domains:
     en: ''
     es: ''
@@ -39,4 +40,5 @@ url:
     ht: ''
     pt: ''
     ar: ''
+    fr: ''
 selected_langcode: site_default

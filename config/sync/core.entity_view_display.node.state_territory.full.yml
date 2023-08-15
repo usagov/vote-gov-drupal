@@ -13,11 +13,13 @@ dependencies:
     - field.field.node.state_territory.field_g_mail_received_deadline
     - field.field.node.state_territory.field_g_online_deadline
     - field.field.node.state_territory.field_in_person_deadline
+    - field.field.node.state_territory.field_in_state_name
     - field.field.node.state_territory.field_is_state
     - field.field.node.state_territory.field_mail_postmarked_deadline
     - field.field.node.state_territory.field_mail_received_deadline
     - field.field.node.state_territory.field_metatags
     - field.field.node.state_territory.field_more_info_link
+    - field.field.node.state_territory.field_of_state_name
     - field.field.node.state_territory.field_online_deadline
     - field.field.node.state_territory.field_override_confirm_reg_link
     - field.field.node.state_territory.field_override_election_hp_link
@@ -131,6 +133,14 @@ content:
     third_party_settings: {  }
     weight: 12
     region: content
+  field_in_state_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 21
+    region: content
   field_is_state:
     type: boolean
     label: hidden
@@ -170,6 +180,14 @@ content:
       target: '0'
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_of_state_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 22
     region: content
   field_online_deadline:
     type: double_field_unformatted_list
