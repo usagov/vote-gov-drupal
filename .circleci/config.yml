@@ -198,8 +198,11 @@ workflows:
   deploy-workflow: 
     when:
       and:
-        - not:
-            equal: [ prod, << pipeline.git.branch >> ]
+        - equal: [webhook, << pipeline.trigger_source >>]
+        - or:
+          - equal: [ dev, << pipeline.git.branch >> ]
+          - equal: [ test, << pipeline.git.branch >> ]
+          - equal: [ stage, << pipeline.git.branch >> ] 
     jobs:
       - php-lint
       - snyk
@@ -216,6 +219,7 @@ workflows:
   deploy-prod-workflow: 
     when:
       and:
+        - equal: [webhook, << pipeline.trigger_source >>]
         - equal: [ prod, << pipeline.git.branch >> ]
     jobs:
       - approval-prod:
