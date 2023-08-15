@@ -1,0 +1,24 @@
+uuid: 65567285-37b1-4f98-9370-f0ef3dcef8bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - node_revision_delete
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  node_revision_delete:
+    amount:
+      status: true
+      settings:
+        amount: 50
+name: 'Basic Page'
+type: page
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false
