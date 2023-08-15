@@ -274,7 +274,7 @@ workflows:
               only:
                 - dev
                 - stage
-                - prod
+                - test
           requires:
             - build-theme
       - build-static:
@@ -284,9 +284,8 @@ workflows:
                 - dev
                 - stage
                 - test
-                - prod
           requires:
-            - build-theme
+            - deploy
       - cypress:
           filters:
             branches:
@@ -294,7 +293,6 @@ workflows:
                 - test
                 - dev
                 - stage
-                - prod
           requires:
             - build-static
   build-static-workflow:
