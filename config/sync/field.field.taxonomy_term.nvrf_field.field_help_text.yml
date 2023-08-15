@@ -1,0 +1,19 @@
+uuid: 106ef698-4643-4b7b-bab7-2a4d7a0b53a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_help_text
+    - taxonomy.vocabulary.nvrf_field
+id: taxonomy_term.nvrf_field.field_help_text
+field_name: field_help_text
+entity_type: taxonomy_term
+bundle: nvrf_field
+label: 'Help text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
