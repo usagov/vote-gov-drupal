@@ -46,19 +46,6 @@ jobs:
           root: ~/
           paths:
             - project/web/themes/custom/vote_gov/dist
-  build-theme-prod:
-    docker:
-      - image: node:18-slim
-    steps:
-      - checkout
-      - run:
-          name: "Build theme"
-          command: |
-            source ./scripts/pipeline/build-theme.sh
-      - persist_to_workspace:
-          root: ~/
-          paths:
-            - project/web/themes/custom/vote_gov/dist
   cypress:
     docker:
       - image: cypress/included:cypress-12.3.0-node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
@@ -98,43 +85,6 @@ jobs:
       - run:
           name: "Deploy"
           command: |
-            source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
-            source ./scripts/pipeline/cloud-gov-login.sh
-            source ./scripts/pipeline/cloud-gov-deploy.sh
-  deploy-prod:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/
-      - run:
-          name: "Install cloudfoundry dependencies"
-          command: |
-            source ./scripts/pipeline/deb-basic-deps.sh
-            source ./scripts/pipeline/deb-cf-install.sh
-      - run:
-          name: "Deploy production"
-          command: |
-            source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
-            source ./scripts/pipeline/cloud-gov-login.sh
-            source ./scripts/pipeline/cloud-gov-deploy.sh
-  deploy-test:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/
-      - run:
-          name: "Install cloudfoundry dependencies"
-          command: |
-            source ./scripts/pipeline/deb-basic-deps.sh
-            source ./scripts/pipeline/deb-cf-install.sh
-      - run:
-          name: "Deploy"
-          command: |
-            export CIRCLE_BRANCH="test"
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
             source ./scripts/pipeline/cloud-gov-deploy.sh
@@ -245,75 +195,66 @@ jobs:
           command: |
             snyk test --org=${SNYK_ORG} --severity-threshold=$THRESHOLD
 workflows:
-  deploy-workflow:
+  deploy-workflow: 
     when:
       and:
         - equal: [webhook, << pipeline.trigger_source >>]
+        - not:
+            equal: [ prod, << pipeline.git.branch >> ]
     jobs:
-      - approval-prod:
-          type: approval
-          filters:
-            branches:
-              only:
-                - prod
-      - build-theme-prod:
-          filters:
-            branches:
-              only:
-                - prod
-          requires:
-            - approval-prod
-      - deploy-prod:
-          filters:
-            branches:
-              only:
-                - prod
-          requires:
-            - build-theme-prod
-      - php-lint:
-          filters:
-            branches:
-              ignore:
-                - prod
-      - snyk:
-          filters:
-            branches:
-              ignore:
-                - prod
+      - php-lint
+      - snyk
       - build-theme:
           filters:
             branches:
               only:
+                - test
                 - dev
                 - stage
-                - test
-      - deploy-test:
-          filters:
-            branches:
-              only:
-                - dev
-                - stage
-                - test
-          requires:
-            - build-theme
-      - cypress:
-          filters:
-            branches:
-              only:
-                - dev
-                - stage
-                - test
-          requires:
-            - deploy-test
       - deploy:
           filters:
             branches:
               only:
+                - test
                 - dev
                 - stage
-                - prod
           requires:
             - build-theme
+      - build-static:
+          filters:
+            branches:
+              only:
+                - test
+                - dev
+                - stage
+          requires:
+            - deploy
+      - cypress:
+          filters:
+            branches:
+              only:
+                - test
+                - dev
+                - stage
+          requires:
+            - build-static
+  deploy-prod-workflow: 
+    when:
+      and:
+        - equal: [webhook, << pipeline.trigger_source >>]
+        - equal: [ prod, << pipeline.git.branch >> ]
+    jobs:
+      - approval-prod:
+          type: approval
+      - build-theme:
+          requires:
+            - approval-prod
+      - deploy:
+          requires:
+            - build-theme
+      - build-static:
+          requires:
+            - deploy
   build-static-workflow:
     when:
       and:
