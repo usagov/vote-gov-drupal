@@ -195,54 +195,54 @@ jobs:
           command: |
             snyk test --org=${SNYK_ORG} --severity-threshold=$THRESHOLD
 workflows:
-  # deploy-workflow: 
-  #   when:
-  #     and:
-  #       - equal: [webhook, << pipeline.trigger_source >>]
-  #       - not:
-  #           equal: [ prod, << pipeline.git.branch >> ]
-  #   jobs:
-  #     - php-lint
-  #     - snyk
-  #     - build-theme:
-  #         filters:
-  #           branches:
-  #             only:
-  #               - test
-  #               - dev
-  #               - stage
-  #     - deploy:
-  #         filters:
-  #           branches:
-  #             only:
-  #               - test
-  #               - dev
-  #               - stage
-  #         requires:
-  #           - build-theme
-  #     - build-static:
-  #         filters:
-  #           branches:
-  #             only:
-  #               - test
-  #               - dev
-  #               - stage
-  #         requires:
-  #           - deploy
-  #     - cypress:
-  #         filters:
-  #           branches:
-  #             only:
-  #               - test
-  #               - dev
-  #               - stage
-  #         requires:
-  #           - build-static
+  deploy-workflow: 
+    when:
+      and:
+        - equal: [webhook, << pipeline.trigger_source >>]
+        - not:
+            equal: [ prod, << pipeline.git.branch >> ]
+    jobs:
+      - php-lint
+      - snyk
+      - build-theme:
+          filters:
+            branches:
+              only:
+                - test
+                - dev
+                - stage
+      - deploy:
+          filters:
+            branches:
+              only:
+                - test
+                - dev
+                - stage
+          requires:
+            - build-theme
+      - build-static:
+          filters:
+            branches:
+              only:
+                - test
+                - dev
+                - stage
+          requires:
+            - deploy
+      - cypress:
+          filters:
+            branches:
+              only:
+                - test
+                - dev
+                - stage
+          requires:
+            - build-static
   deploy-prod-workflow: 
     when:
       and:
         - equal: [webhook, << pipeline.trigger_source >>]
-        - equal: [ test, << pipeline.git.branch >> ]
+        - equal: [ prod, << pipeline.git.branch >> ]
     jobs:
       - approval-prod:
           type: approval
