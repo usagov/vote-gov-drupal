@@ -8,8 +8,10 @@ dependencies:
     - media.type.image
     - media.type.remote_video
     - node.type.landing
+    - node.type.nvrf_page
     - node.type.page
     - node.type.state_territory
+    - taxonomy.vocabulary.nvrf_field
     - workflows.workflow.publishing_content
   module:
     - block_content
@@ -19,7 +21,9 @@ dependencies:
     - media
     - menu_link_content
     - node
+    - paragraphs
     - system
+    - taxonomy
     - toolbar
 id: content_editor
 label: 'Content Editor'
@@ -40,15 +44,20 @@ permissions:
   - 'create page content'
   - 'create remote_video media'
   - 'create state_territory content'
+  - 'create terms in nvrf_field'
+  - 'delete terms in nvrf_field'
   - 'edit any landing content'
+  - 'edit any nvrf_page content'
   - 'edit any page content'
   - 'edit any state_territory content'
   - 'edit own document media'
   - 'edit own image media'
   - 'edit own landing content'
+  - 'edit own nvrf_page content'
   - 'edit own page content'
   - 'edit own remote_video media'
   - 'edit own state_territory content'
+  - 'edit terms in nvrf_field'
   - 'translate any entity'
   - 'translate audio media'
   - 'translate block_content'
@@ -56,7 +65,10 @@ permissions:
   - 'translate image media'
   - 'translate landing node'
   - 'translate menu_link_content'
+  - 'translate nvrf_field taxonomy_term'
+  - 'translate nvrf_page node'
   - 'translate page node'
+  - 'translate paragraph'
   - 'translate remote_video media'
   - 'translate state_territory node'
   - 'update content translations'
@@ -69,6 +81,7 @@ permissions:
   - 'view landing revisions'
   - 'view latest version'
   - 'view media'
+  - 'view nvrf_page revisions'
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view page revisions'

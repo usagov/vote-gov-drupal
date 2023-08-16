@@ -1,0 +1,19 @@
+uuid: 3cfa4832-17ff-4e1a-bc9c-2c403a2955fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_nvrf_machine_name
+    - taxonomy.vocabulary.nvrf_field
+id: taxonomy_term.nvrf_field.field_nvrf_machine_name
+field_name: field_nvrf_machine_name
+entity_type: taxonomy_term
+bundle: nvrf_field
+label: 'NVRF machine name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
