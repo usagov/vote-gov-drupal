@@ -39,7 +39,7 @@ content:
     weight: 3
     region: content
   field_instructions:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }

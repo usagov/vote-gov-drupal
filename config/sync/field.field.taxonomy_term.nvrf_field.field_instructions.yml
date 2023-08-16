@@ -1,10 +1,13 @@
-uuid: 577f477e-be92-4eb5-a82a-19ae14f22eec
+uuid: 5213e9ef-5874-447d-8130-2c3922fefa12
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.taxonomy_term.field_instructions
+    - filter.format.simple_html
     - taxonomy.vocabulary.nvrf_field
+  module:
+    - text
 id: taxonomy_term.nvrf_field.field_instructions
 field_name: field_instructions
 entity_type: taxonomy_term
@@ -15,5 +18,7 @@ required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: string_long
+settings:
+  allowed_formats:
+    - simple_html
+field_type: text_long

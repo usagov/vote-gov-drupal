@@ -7,9 +7,8 @@ dependencies:
     - node_revision_delete
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
+    available_menus: {  }
+    parent: ''
   node_revision_delete:
     amount:
       status: true
@@ -25,7 +24,7 @@ third_party_settings:
         age: 1
 name: 'NVRF Page'
 type: nvrf_page
-description: ''
+description: 'NVRF app page content'
 help: ''
 new_revision: true
 preview_mode: 0

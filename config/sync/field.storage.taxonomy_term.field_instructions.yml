@@ -1,16 +1,16 @@
-uuid: e7e19df4-77ce-4ecd-bdbc-a1436b62dfa2
+uuid: e95d4d0e-1009-4268-b0f7-867563dc5e18
 langcode: en
 status: true
 dependencies:
   module:
     - taxonomy
+    - text
 id: taxonomy_term.field_instructions
 field_name: field_instructions
 entity_type: taxonomy_term
-type: string_long
-settings:
-  case_sensitive: false
-module: core
+type: text_long
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true

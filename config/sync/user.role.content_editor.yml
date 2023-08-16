@@ -21,6 +21,7 @@ dependencies:
     - media
     - menu_link_content
     - node
+    - paragraphs
     - system
     - taxonomy
     - toolbar
@@ -40,7 +41,6 @@ permissions:
   - 'create image media'
   - 'create landing content'
   - 'create media'
-  - 'create nvrf_page content'
   - 'create page content'
   - 'create remote_video media'
   - 'create state_territory content'
@@ -68,6 +68,7 @@ permissions:
   - 'translate nvrf_field taxonomy_term'
   - 'translate nvrf_page node'
   - 'translate page node'
+  - 'translate paragraph'
   - 'translate remote_video media'
   - 'translate state_territory node'
   - 'update content translations'

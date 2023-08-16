@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: 'NVRF Field'
 vid: nvrf_field
-description: description
+description: 'NVRF app form field requirement data'
 weight: 0
