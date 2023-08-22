@@ -1,0 +1,19 @@
+uuid: c8b11053-b6b8-4e83-bacb-5484950378a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_display_label
+    - taxonomy.vocabulary.nvrf_field
+id: taxonomy_term.nvrf_field.field_display_label
+field_name: field_display_label
+entity_type: taxonomy_term
+bundle: nvrf_field
+label: 'Display Label'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

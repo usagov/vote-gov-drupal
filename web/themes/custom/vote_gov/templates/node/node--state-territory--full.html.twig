@@ -37,7 +37,7 @@
 
 
   {# NVRF Selector and download button #}
-  {% if content.field_accepts_nvrf.0["#markup"] == 1 %}
+  {% if node.field_accepts_nvrf.value == 1 %}
     {{ drupal_entity('block_content', 3) }}
   {% endif %}
 

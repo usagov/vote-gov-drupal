@@ -1,0 +1,31 @@
+uuid: 697acb59-408c-4f08-9a82-17a2a7374b92
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - node_revision_delete
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  node_revision_delete:
+    amount:
+      status: true
+      settings:
+        amount: 50
+    created:
+      status: false
+      settings:
+        age: 1
+    drafts:
+      status: false
+      settings:
+        age: 1
+name: 'NVRF Page'
+type: nvrf_page
+description: 'NVRF app page content'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false
