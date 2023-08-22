@@ -213,7 +213,13 @@ msgctxt "day name"
 msgid "Monday"
 msgstr "星期一"
 
+msgid "Monday"
+msgstr "星期一"
+
 msgctxt "day name"
+msgid "Tuesday"
+msgstr "星期二"
+
 msgid "Tuesday"
 msgstr "星期二"
 
@@ -221,7 +227,13 @@ msgctxt "day name"
 msgid "Wednesday"
 msgstr "星期三"
 
+msgid "Wednesday"
+msgstr "星期三"
+
 msgctxt "day name"
+msgid "Thursday"
+msgstr "星期四"
+
 msgid "Thursday"
 msgstr "星期四"
 
@@ -229,10 +241,19 @@ msgctxt "day name"
 msgid "Friday"
 msgstr "星期五"
 
+msgid "Friday"
+msgstr "星期五"
+
 msgctxt "day name"
 msgid "Saturday"
 msgstr "sábado"
 
+msgid "Saturday"
+msgstr "sábado"
+
 msgctxt "day name"
+msgid "Sunday"
+msgstr "星期日"
+
 msgid "Sunday"
 msgstr "星期日"

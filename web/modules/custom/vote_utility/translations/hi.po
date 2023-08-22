@@ -213,7 +213,13 @@ msgctxt "day name"
 msgid "Monday"
 msgstr "सोमवार"
 
+msgid "Monday"
+msgstr "सोमवार"
+
 msgctxt "day name"
+msgid "Tuesday"
+msgstr "मंगलवार"
+
 msgid "Tuesday"
 msgstr "मंगलवार"
 
@@ -221,11 +227,20 @@ msgctxt "day name"
 msgid "Wednesday"
 msgstr "बुधवार"
 
-msgctxt "day name"
-msgid "गुरूवार"
-msgstr "jueves"
+msgid "Wednesday"
+msgstr "बुधवार"
 
 msgctxt "day name"
+msgid "Thursday"
+msgstr "गुरूवार"
+
+msgid "Thursday"
+msgstr "गुरूवार"
+
+msgctxt "day name"
+msgid "Friday"
+msgstr "शुक्रवार"
+
 msgid "Friday"
 msgstr "शुक्रवार"
 
@@ -233,6 +248,12 @@ msgctxt "day name"
 msgid "Saturday"
 msgstr "शनिवार"
 
+msgid "Saturday"
+msgstr "शनिवार"
+
 msgctxt "day name"
+msgid "Sunday"
+msgstr "रविवार"
+
 msgid "Sunday"
 msgstr "रविवार"

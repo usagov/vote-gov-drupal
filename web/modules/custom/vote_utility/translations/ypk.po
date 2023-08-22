@@ -210,7 +210,13 @@ msgctxt "day name"
 msgid "Monday"
 msgstr "Manti"
 
+msgid "Monday"
+msgstr "Manti"
+
 msgctxt "day name"
+msgid "Tuesday"
+msgstr "Tuwesti"
+
 msgid "Tuesday"
 msgstr "Tuwesti"
 
@@ -218,7 +224,13 @@ msgctxt "day name"
 msgid "Wednesday"
 msgstr "Winesti"
 
+msgid "Wednesday"
+msgstr "Winesti"
+
 msgctxt "day name"
+msgid "Thursday"
+msgstr "Thursday-a"
+
 msgid "Thursday"
 msgstr "Thursday-a"
 
@@ -226,10 +238,19 @@ msgctxt "day name"
 msgid "Friday"
 msgstr "Friday-a"
 
+msgid "Friday"
+msgstr "Friday-a"
+
 msgctxt "day name"
 msgid "Saturday"
 msgstr "Sareri"
 
+msgid "Saturday"
+msgstr "Sareri"
+
 msgctxt "day name"
+msgid "Sunday"
+msgstr "Santi"
+
 msgid "Sunday"
 msgstr "Santi"

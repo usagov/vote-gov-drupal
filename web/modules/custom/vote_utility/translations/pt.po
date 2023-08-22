@@ -261,8 +261,14 @@ msgctxt "day name"
 msgid "Sunday"
 msgstr "domingo"
 
+msgid "Sunday"
+msgstr "domingo"
+
 # data.translations.days.monday
 msgctxt "day name"
+msgid "Monday"
+msgstr "segunda-feira"
+
 msgid "Monday"
 msgstr "segunda-feira"
 
@@ -271,8 +277,14 @@ msgctxt "day name"
 msgid "Tuesday"
 msgstr "terça-feira"
 
+msgid "Tuesday"
+msgstr "terça-feira"
+
 # data.translations.days.wednesday
 msgctxt "day name"
+msgid "Wednesday"
+msgstr "quarta-feira"
+
 msgid "Wednesday"
 msgstr "quarta-feira"
 
@@ -281,12 +293,21 @@ msgctxt "day name"
 msgid "Thursday"
 msgstr "quinta-feira"
 
+msgid "Thursday"
+msgstr "quinta-feira"
+
 # data.translations.days.friday
 msgctxt "day name"
 msgid "Friday"
 msgstr "sexta-feira"
 
+msgid "Friday"
+msgstr "sexta-feira"
+
 # data.translations.days.saturday
 msgctxt "day name"
+msgid "Saturday"
+msgstr "sábado"
+
 msgid "Saturday"
 msgstr "sábado"

@@ -261,8 +261,14 @@ msgctxt "day name"
 msgid "Monday"
 msgstr "Lendi"
 
+msgid "Monday"
+msgstr "Lendi"
+
 # data.translations.days.tuesday
 msgctxt "day name"
+msgid "Tuesday"
+msgstr "Madi"
+
 msgid "Tuesday"
 msgstr "Madi"
 
@@ -271,8 +277,14 @@ msgctxt "day name"
 msgid "Wednesday"
 msgstr "Mèkredi"
 
+msgid "Wednesday"
+msgstr "Mèkredi"
+
 # data.translations.days.thursday
 msgctxt "day name"
+msgid "Thursday"
+msgstr "Jedi"
+
 msgid "Thursday"
 msgstr "Jedi"
 
@@ -281,12 +293,21 @@ msgctxt "day name"
 msgid "Friday"
 msgstr "Vandredi"
 
+msgid "Friday"
+msgstr "Vandredi"
+
 # data.translations.days.saturday
 msgctxt "day name"
 msgid "Saturday"
 msgstr "Samdi"
 
+msgid "Saturday"
+msgstr "Samdi"
+
 # data.translations.days.sunday
 msgctxt "day name"
+msgid "Sunday"
+msgstr "Dimanch"
+
 msgid "Sunday"
 msgstr "Dimanch"
