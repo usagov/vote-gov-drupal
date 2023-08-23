@@ -1,0 +1,24 @@
+uuid: ed15f649-a0ce-4a74-9539-405d43f93bb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mailing_address_inst
+    - filter.format.simple_html
+    - node.type.state_territory
+  module:
+    - text
+id: node.state_territory.field_mailing_address_inst
+field_name: field_mailing_address_inst
+entity_type: node
+bundle: state_territory
+label: 'State Election Mailing Address'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - simple_html
+field_type: text_long

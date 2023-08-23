@@ -5,25 +5,32 @@ dependencies:
   config:
     - field.field.node.state_territory.body
     - field.field.node.state_territory.field_accepts_nvrf
+    - field.field.node.state_territory.field_address_location_inst
     - field.field.node.state_territory.field_confirm_registration_link
     - field.field.node.state_territory.field_election_homepage_link
     - field.field.node.state_territory.field_g_in_person_deadline
     - field.field.node.state_territory.field_g_mail_postmarked_deadline
     - field.field.node.state_territory.field_g_mail_received_deadline
     - field.field.node.state_territory.field_g_online_deadline
+    - field.field.node.state_territory.field_identification_inst
     - field.field.node.state_territory.field_in_person_deadline
     - field.field.node.state_territory.field_in_state_name
     - field.field.node.state_territory.field_is_state
     - field.field.node.state_territory.field_mail_postmarked_deadline
     - field.field.node.state_territory.field_mail_received_deadline
+    - field.field.node.state_territory.field_mailing_address_inst
     - field.field.node.state_territory.field_metatags
     - field.field.node.state_territory.field_more_info_link
+    - field.field.node.state_territory.field_nvrf_last_updated_date
     - field.field.node.state_territory.field_of_state_name
     - field.field.node.state_territory.field_online_deadline
     - field.field.node.state_territory.field_override_confirm_reg_link
     - field.field.node.state_territory.field_override_election_hp_link
     - field.field.node.state_territory.field_override_more_info_link
     - field.field.node.state_territory.field_override_registration_link
+    - field.field.node.state_territory.field_personal_information_inst
+    - field.field.node.state_territory.field_political_party_inst
+    - field.field.node.state_territory.field_reg_eligibility_desc
     - field.field.node.state_territory.field_registration_link
     - field.field.node.state_territory.field_registration_type
     - field.field.node.state_territory.field_state_abbreviation
@@ -33,6 +40,7 @@ dependencies:
     - double_field
     - link
     - metatag
+    - text
     - user
 id: node.state_territory.default
 targetEntityType: node
@@ -53,6 +61,13 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     weight: 20
+    region: content
+  field_address_location_inst:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 24
     region: content
   field_confirm_registration_link:
     type: link
@@ -110,6 +125,13 @@ content:
     third_party_settings: {  }
     weight: 9
     region: content
+  field_identification_inst:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 25
+    region: content
   field_in_person_deadline:
     type: double_field_unformatted_list
     label: hidden
@@ -158,6 +180,13 @@ content:
     third_party_settings: {  }
     weight: 12
     region: content
+  field_mailing_address_inst:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 27
+    region: content
   field_metatags:
     type: metatag_empty_formatter
     label: hidden
@@ -176,6 +205,15 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 7
+    region: content
+  field_nvrf_last_updated_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 28
     region: content
   field_of_state_name:
     type: string
@@ -254,6 +292,27 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_personal_information_inst:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_political_party_inst:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_reg_eligibility_desc:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 30
     region: content
   field_registration_link:
     type: link

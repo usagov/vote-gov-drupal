@@ -1,0 +1,21 @@
+uuid: f140ebe9-c195-440b-a7fc-f547ee7c5d5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nvrf_last_updated_date
+    - node.type.state_territory
+  module:
+    - datetime
+id: node.state_territory.field_nvrf_last_updated_date
+field_name: field_nvrf_last_updated_date
+entity_type: node
+bundle: state_territory
+label: 'NVRF last updated date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
