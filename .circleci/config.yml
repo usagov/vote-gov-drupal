@@ -291,32 +291,11 @@ workflows:
       - schedule:
           cron: '0 13 * * 1,4'  
     jobs:
-      - build-theme:
-          filters:
-                branches:
-                  only:
-                    - dev
-      - deploy:
-          filters:
-                branches:
-                  only:
-                    - dev
-          requires:
-            - build-theme
-      - build-static:
-          filters:
-                branches:
-                  only:
-                    - dev
-          requires:
-            - deploy
       - link-validation:
           filters:
                 branches:
                   only:
-                    - dev
-          requires:
-            - build-static
+                    - stage
   drush-cron-workflow:
     when:
       and:
