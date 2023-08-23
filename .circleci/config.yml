@@ -195,6 +195,29 @@ jobs:
           name: "Snyk"
           command: |
             snyk test --org=${SNYK_ORG} --severity-threshold=$THRESHOLD
+  link-validation:
+    docker:
+      - image: cypress/included:cypress-12.3.0-node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
+    environment:
+      cypress_pipeline: 1
+      cypress_cloudgov_application_name: "${project}-drupal-${CIRCLE_BRANCH}"
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: "Install cloudfoundry dependencies"
+          command: |
+            source ./scripts/pipeline/deb-basic-deps.sh
+            source ./scripts/pipeline/deb-cf-install.sh
+      - run:
+          name: "Cypress-link-validation"
+          command: |
+            cd testing
+            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
+            npm install
+            npm run cy:pipeline:links
+            npm run cy:pipeline:proofer
 workflows:
   deploy-workflow: 
     when:
@@ -263,6 +286,37 @@ workflows:
         - equal: [ true, << pipeline.parameters.build_static >> ]
     jobs:
       - build-static
+  link-validation-cron-workflow: 
+    triggers:
+      - schedule:
+          cron: '0 13 * * 1,4'  
+    jobs:
+      - build-theme:
+          filters:
+                branches:
+                  only:
+                    - dev
+      - deploy:
+          filters:
+                branches:
+                  only:
+                    - dev
+          requires:
+            - build-theme
+      - build-static:
+          filters:
+                branches:
+                  only:
+                    - dev
+          requires:
+            - deploy
+      - link-validation:
+          filters:
+                branches:
+                  only:
+                    - dev
+          requires:
+            - build-static
   drush-cron-workflow:
     when:
       and:
