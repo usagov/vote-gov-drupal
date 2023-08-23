@@ -99,7 +99,7 @@ msgid "You can confirm your voter registration status by contacting your local r
 msgstr "Ipapighqesaghngaaghpegu nakmikillgheghpek ilatellghan natetulnga tuqluquvgu negpek ilatfigan qepghaghviga. @link."
 
 msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr "Click here to view Wyoming's county clerk contact information (PDF)"
+msgstr "Click here to view Wyoming's county clerk contact information (PDF) (Laluramkestun)"
 
 msgid "Find out ways to register"
 msgstr "Naalkigu naten alla ilatelleghqan"
