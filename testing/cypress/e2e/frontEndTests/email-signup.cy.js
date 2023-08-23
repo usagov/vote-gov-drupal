@@ -6,7 +6,7 @@ describe('check email sign up function', () => {
   
     cy.get('[data-test="email-signup"]').type('test@test.com')
   
-    cy.get('[data-test="email-signup"]').should('have.value', 'test@test')
+    cy.get('[data-test="email-signup"]').should('have.value', 'test@test.com')
   
   })
 })
