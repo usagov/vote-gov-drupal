@@ -75,6 +75,7 @@ jobs:
             cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
             npm install
             npm run cy:pipeline:axe
+          when: always
       - store_artifacts:
           path: testing/cypress/screenshots
   deploy:
