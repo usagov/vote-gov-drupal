@@ -1,0 +1,16 @@
+uuid: 7e5f0ba3-e93d-4faf-8243-dab3c34fef3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.nvrf_card
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.nvrf_card
+target_entity_type_id: block_content
+target_bundle: nvrf_card
+default_langcode: site_default
+language_alterable: false
