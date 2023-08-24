@@ -296,13 +296,13 @@ workflows:
   link-validation-cron-workflow: 
     triggers:
       - schedule:
-         cron: '0 13 * * 1,4'  
-    jobs:
-      - link-validation:
+          cron: '0 13 * * 1,4'  
           filters:
             branches:
               only:
                 - stage
+    jobs:
+      - link-validation
   drush-cron-workflow:
     when:
       and:
