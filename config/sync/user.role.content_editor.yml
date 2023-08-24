@@ -17,6 +17,7 @@ dependencies:
     - block_content
     - content_moderation
     - content_translation
+    - editoria11y
     - file
     - media
     - menu_link_content
@@ -58,6 +59,7 @@ permissions:
   - 'edit own remote_video media'
   - 'edit own state_territory content'
   - 'edit terms in nvrf_field'
+  - 'mark as hidden in editoria11y'
   - 'translate any entity'
   - 'translate audio media'
   - 'translate block_content'
@@ -78,6 +80,7 @@ permissions:
   - 'view all media revisions'
   - 'view all revisions'
   - 'view any unpublished content'
+  - 'view editoria11y checker'
   - 'view landing revisions'
   - 'view latest version'
   - 'view media'
