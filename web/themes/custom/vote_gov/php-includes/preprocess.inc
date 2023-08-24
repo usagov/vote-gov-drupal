@@ -70,3 +70,11 @@ function vote_gov_preprocess_links__language_block(&$variables) {
     }
   }
 }
+
+/**
+ * Implements theme_suggestions_time().
+ hook_theme_suggestions_HOOK_alter
+ */
+function vote_gov_theme_suggestions_time_alter(array &$suggestions, array $variables) {
+    $suggestions[] = 'time__field';
+}
