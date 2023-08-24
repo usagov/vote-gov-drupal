@@ -296,7 +296,7 @@ workflows:
   link-validation-cron-workflow: 
     triggers:
       - schedule:
-          cron: '0 13 * * 1,4'  
+         cron: '0 13 * * 1,4'  
     jobs:
       - link-validation:
           filters:
