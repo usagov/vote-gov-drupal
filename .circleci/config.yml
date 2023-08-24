@@ -211,13 +211,21 @@ jobs:
             source ./scripts/pipeline/deb-basic-deps.sh
             source ./scripts/pipeline/deb-cf-install.sh
       - run:
-          name: "Cypress-link-validation"
+          name: "Cypress Internal Links"
+          command: |
+            cd testing
+            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
+            npm install
+            npm run cy:pipeline:links
+      - run:
+          name: "Cypress External Links"
           command: |
             cd testing
             cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
             npm install
             npm run cy:pipeline:links
             npm run cy:pipeline:proofer
+          when: always
 workflows:
   deploy-workflow: 
     when:
