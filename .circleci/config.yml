@@ -62,20 +62,13 @@ jobs:
             source ./scripts/pipeline/deb-basic-deps.sh
             source ./scripts/pipeline/deb-cf-install.sh
       - run:
-          name: "Cypress - frontend tests"
+          name: "Cypress"
           command: |
             cd testing
             cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
             npm install
             npm run cy:pipeline:frontEnd
-      - run:
-          name: "Cypress - axe tests"
-          command: |
-            cd testing
-            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
-            npm install
             npm run cy:pipeline:axe
-          when: always
       - store_artifacts:
           path: testing/cypress/screenshots
   deploy:
@@ -202,6 +195,36 @@ jobs:
           name: "Snyk"
           command: |
             snyk test --org=${SNYK_ORG} --severity-threshold=$THRESHOLD
+  link-validation:
+    docker:
+      - image: cypress/included:cypress-12.3.0-node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
+    environment:
+      cypress_pipeline: 1
+      cypress_cloudgov_application_name: "${project}-drupal-${CIRCLE_BRANCH}"
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: "Install cloudfoundry dependencies"
+          command: |
+            source ./scripts/pipeline/deb-basic-deps.sh
+            source ./scripts/pipeline/deb-cf-install.sh
+      - run:
+          name: "Cypress Internal Links"
+          command: |
+            cd testing
+            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
+            npm install
+            npm run cy:pipeline:links
+      - run:
+          name: "Cypress External Links"
+          command: |
+            cd testing
+            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
+            npm install
+            npm run cy:pipeline:proofer
+          when: always
 workflows:
   deploy-workflow: 
     when:
@@ -270,6 +293,18 @@ workflows:
         - equal: [ true, << pipeline.parameters.build_static >> ]
     jobs:
       - build-static
+  link-validation-cron-workflow: 
+    triggers:
+      - schedule:
+          # cron: '0 13 * * 1,4'  
+          cron: '05 18 * * 4'  
+          filters:
+            branches:
+              only:
+                # - stage
+                - test
+    jobs:
+      - link-validation
   drush-cron-workflow:
     when:
       and:
