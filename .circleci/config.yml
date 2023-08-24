@@ -300,9 +300,9 @@ workflows:
     jobs:
       - link-validation:
           filters:
-                branches:
-                  only:
-                    - stage
+            branches:
+              only:
+                - stage
   drush-cron-workflow:
     when:
       and:
