@@ -45,7 +45,6 @@ dependencies:
     - metatag
     - path
     - publication_date
-    - text
 third_party_settings:
   field_group:
     group_links:
@@ -205,16 +204,6 @@ targetEntityType: node
 bundle: state_territory
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 17
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 7
@@ -550,5 +539,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  body: true
   promote: true
   sticky: true
