@@ -62,14 +62,20 @@ jobs:
             source ./scripts/pipeline/deb-basic-deps.sh
             source ./scripts/pipeline/deb-cf-install.sh
       - run:
-          name: "Cypress"
+          name: "Cypress - frontend tests"
           command: |
             cd testing
             cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
             npm install
             npm run cy:pipeline:frontEnd
-            npm run cy:pipeline:links
+      - run:
+          name: "Cypress - axe tests"
+          command: |
+            cd testing
+            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
+            npm install
             npm run cy:pipeline:axe
+          when: always
       - store_artifacts:
           path: testing/cypress/screenshots
   deploy:

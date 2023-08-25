@@ -146,7 +146,7 @@ msgstr "Вы можете подтвердить свой статус реги�
 
 # @link: data.translations.register.confirm_registration__link_WY
 msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr "Нажмите здесь, чтобы просмотреть контактную информацию клерка округа Вайоминг (PDF)"
+msgstr "Нажмите здесь, чтобы просмотреть контактную информацию клерка округа Вайоминг (PDF) (по-английски)"
 
 # data.translations.register.confirm_registration__intro (see accessibility updates)
 msgid "You can @link on @state_name’s election website."

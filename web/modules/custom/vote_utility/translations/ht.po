@@ -146,7 +146,7 @@ msgstr "Ou ka konfime nan ki pwen enskripsyon votè w te fè a rive, lè w antre
 
 # @link: data.translations.register.confirm_registration__link_WY
 msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr "Klike la a pou w wè enfòmasyon pou kontakte grefye Konte Wyoming la (PDF)"
+msgstr "Klike la a pou w wè enfòmasyon pou kontakte grefye Konte Wyoming la (PDF) (ann Anglè)"
 
 # data.translations.register.confirm_registration__intro (see accessibility updates)
 msgid "You can @link on @state_name’s election website."

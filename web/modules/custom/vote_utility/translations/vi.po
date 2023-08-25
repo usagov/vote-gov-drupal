@@ -99,7 +99,7 @@ msgid "You can confirm your voter registration status by contacting your local r
 msgstr "Ban có thể xác nhận tình trạng đăng ký bầu cử của mình bằng cách liên lạc với văn phòng đăng ký địa phương. @link."
 
 msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr "Nhấp vào đây để xem thông tin liên lạc của thư ký quận Wyoming (PDF)"
+msgstr "Nhấp vào đây để xem thông tin liên lạc của thư ký quận Wyoming (PDF) (bằng Tiếng Anh)"
 
 msgid "Find out ways to register"
 msgstr "Tìm hiểu cách đăng ký"

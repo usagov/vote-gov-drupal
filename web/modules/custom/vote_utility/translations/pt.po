@@ -146,7 +146,7 @@ msgstr "Você pode confirmar seu status de registro de eleitor entrando em conta
 
 # @link: data.translations.register.confirm_registration__link_WY
 msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr "Clique aqui para ver as informações de contato do secretário do condado de Wyoming (PDF)"
+msgstr "Clique aqui para ver as informações de contato do secretário do condado de Wyoming (PDF) (em inglês)"
 
 # data.translations.register.confirm_registration__intro (see accessibility updates)
 msgid "You can @link on @state_name’s election website."
