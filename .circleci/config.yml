@@ -69,6 +69,15 @@ jobs:
             npm install
             npm run cy:pipeline:frontEnd
       - run:
+          name: "Cypress - frontend tests - rerun"
+          command: |
+            echo "I am the result of frontend tests failed job"
+            cd testing
+            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
+            npm install
+            npm run cy:pipeline:frontEnd
+          when: on_fail
+      - run:
           name: "Cypress - axe tests"
           command: |
             cd testing
@@ -76,6 +85,15 @@ jobs:
             npm install
             npm run cy:pipeline:axe
           when: always
+      - run:
+          name: "Cypress - axe tests - rerun"
+          command: |
+            echo "I am the result of axe tests failed job"
+            cd testing
+            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
+            npm install
+            npm run cy:pipeline:axe
+          when: on_fail
       - store_artifacts:
           path: testing/cypress/screenshots
   deploy:
@@ -189,6 +207,16 @@ jobs:
             source ./scripts/pipeline/cloud-gov-login.sh
             source ./scripts/pipeline/downsync-backup.sh
             ./scripts/pipeline/scheduled_backup.sh "${prod_cf_space}"
+      - run:
+          name: "Run backup"
+          command: |
+            echo "I am the result of Run Backup failed job"
+            export BACKUP_ENV=${CIRCLE_BRANCH}
+            source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
+            source ./scripts/pipeline/cloud-gov-login.sh
+            source ./scripts/pipeline/downsync-backup.sh
+            ./scripts/pipeline/scheduled_backup.sh "${prod_cf_space}"
+          when: on_fail
   snyk:
     docker:
       - image: snyk/snyk:php
@@ -202,8 +230,56 @@ jobs:
           name: "Snyk"
           command: |
             snyk test --org=${SNYK_ORG} --severity-threshold=$THRESHOLD
+  link-validation:
+    docker:
+      - image: cypress/included:cypress-12.3.0-node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
+    environment:
+      cypress_pipeline: 1
+      cypress_cloudgov_application_name: "${project}-drupal-${CIRCLE_BRANCH}"
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: "Install cloudfoundry dependencies"
+          command: |
+            source ./scripts/pipeline/deb-basic-deps.sh
+            source ./scripts/pipeline/deb-cf-install.sh
+      - run:
+          name: "Cypress Internal Links"
+          command: |
+            cd testing
+            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
+            npm install
+            npm run cy:pipeline:links
+      - run:
+          name: "Cypress Internal Links - rerun"
+          command: |
+            echo "I am the result of Internal Links failed job"
+            cd testing
+            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
+            npm install
+            npm run cy:pipeline:links
+          when: on_fail
+      - run:
+          name: "Cypress External Links"
+          command: |
+            cd testing
+            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
+            npm install
+            npm run cy:pipeline:proofer
+          when: always
+      - run:
+          name: "Cypress External Links - rerun"
+          command: |
+            echo "I am the result of External Links failed job"
+            cd testing
+            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
+            npm install
+            npm run cy:pipeline:proofer
+          when: on_fail
 workflows:
-  deploy-workflow: 
+  deploy-workflow:
     when:
       and:
         - equal: [webhook, << pipeline.trigger_source >>]
@@ -246,7 +322,7 @@ workflows:
                 - stage
           requires:
             - build-static
-  deploy-prod-workflow: 
+  deploy-prod-workflow:
     when:
       and:
         - equal: [webhook, << pipeline.trigger_source >>]
@@ -270,6 +346,16 @@ workflows:
         - equal: [ true, << pipeline.parameters.build_static >> ]
     jobs:
       - build-static
+  link-validation-workflow:
+    triggers:
+      - schedule:
+          cron: '0 10 * * 1,4'
+          filters:
+            branches:
+              only:
+                - stage
+    jobs:
+      - link-validation
   drush-cron-workflow:
     when:
       and:

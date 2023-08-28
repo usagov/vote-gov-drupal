@@ -22,8 +22,9 @@
     "testSuite": "npm run cy:frontEnd && npm run cy:backEnd && npm run cy:links && npm run cy:proofer && npm run cy:axe",
     "cypress": "cypress",
     "cy:pipeline:frontEnd": "cypress run --spec 'cypress/e2e/frontEndTests/**/*' --config-file pipeline.config.js",
+    "cy:pipeline:axe": "cypress run --spec 'cypress/e2e/accessibility/**/*' --config-file pipeline.config.js",
     "cy:pipeline:links": "cypress run --spec 'cypress/e2e/internalLinks/**/*' --config-file pipeline.config.js",
-    "cy:pipeline:axe": "cypress run --spec 'cypress/e2e/accessibility/**/*' --config-file pipeline.config.js"
+    "cy:pipeline:proofer": "cypress run --spec 'cypress/e2e/externalLinks/**/*' --config-file pipeline.config.js"
   },
   "repository": {
     "type": "git",
