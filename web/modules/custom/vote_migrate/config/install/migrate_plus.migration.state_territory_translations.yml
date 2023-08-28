@@ -9,6 +9,7 @@ source:
   urls:
     - /vote_migrate/import_nodes_state_territory/translation/ar/json
     - /vote_migrate/import_nodes_state_territory/translation/bn/json
+    - /vote_migrate/import_nodes_state_territory/translation/fr/json
     - /vote_migrate/import_nodes_state_territory/translation/es/json
     - /vote_migrate/import_nodes_state_territory/translation/km/json
     - /vote_migrate/import_nodes_state_territory/translation/ko/json

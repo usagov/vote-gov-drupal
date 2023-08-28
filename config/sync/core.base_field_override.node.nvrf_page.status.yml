@@ -1,0 +1,22 @@
+uuid: 5856da2f-8e9f-4fcf-bfe4-9221085007d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.nvrf_page
+id: node.nvrf_page.status
+field_name: status
+entity_type: node
+bundle: nvrf_page
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

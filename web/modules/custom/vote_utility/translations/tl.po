@@ -100,7 +100,7 @@ msgid "You can confirm your voter registration status by contacting your local r
 msgstr "Maaari ninyong kumpirmahin ang estado ng inyong rehistrasyon ng botante sa pamamagitan ng pakikipag-ugnayan sa inyong lokal na opisina ng rehistrasyon. @link"
 
 msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr "I-click ito upang makita ang impormasyon sa pakikipag-ugnayan sa clerk ng county (PDF) ng Wyoming."
+msgstr "I-click ito upang makita ang impormasyon sa pakikipag-ugnayan sa clerk ng county (PDF) ng Wyoming (sa Ingles)."
 
 msgid "Find out ways to register"
 msgstr "Alamin ang mga paraan para magparehistro"

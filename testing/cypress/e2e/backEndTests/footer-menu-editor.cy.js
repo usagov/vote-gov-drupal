@@ -39,7 +39,7 @@ describe('Footer Menu Function', () => {
       })
     })
 
-    cy.get('[data-drupal-selector="edit-submit"]').click()
+    cy.get('[data-drupal-selector="edit-submit"]').click({force: true})
 
     cy.logout()
   })

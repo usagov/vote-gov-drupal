@@ -22,7 +22,9 @@
 <div class="bg-lightblue search-container" role="search" aria-label="{{ content.field_search_placeholder | field_value }}">
   <div class="grid-container">
     <form class="usa-search usa-search--small search-bar" role="search" id="search_form" action="https://search.vote.gov/search" accept-charset="UTF-8" method="get">
-      <input type="hidden" name="affiliate" id="affiliate" value="vote_{{ affiliated_search == '1' ? language : 'en' }}" autocomplete="off">
+      {# if current language is chinese simplified, change the search to use Chinese tradional 'zh' #}
+      {% set searchLanguage = language == 'zh-hans' ? 'zh' : language %}
+      <input type="hidden" name="affiliate" id="affiliate" value="vote_{{ affiliated_search == '1' ? searchLanguage : 'en' }}" autocomplete="off">
 
       <label class="usa-sr-only" for="search-field-en-small">{{ content.field_search_placeholder | field_value }}</label>
 

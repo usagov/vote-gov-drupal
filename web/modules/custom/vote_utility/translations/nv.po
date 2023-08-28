@@ -146,7 +146,7 @@ msgstr "I'ii'n77[ biniiy4 ha'dinilaago k44hon7t'98gi i'ii'n77[ bi[ na'anishgi b7
 
 # @link: data.translations.register.confirm_registration__link_WY
 msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr "Kwe'4 bi[ ad7lch77d Wyoming hahoodzohj7 county clerk woly4ego bi[ da'7n77shj7 hane' &lt;PDF&gt; d7n77['88[go"
+msgstr "Kwe'4 bi[ ad7lch77d Wyoming hahoodzohj7 county clerk woly4ego bi[ da'7n77shj7 hane' &lt;PDF&gt; d7n77['88[go &lt;Bilag1ana k'ehj7&gt;"
 
 # data.translations.register.confirm_registration__intro 
 msgid "You can @link on @state_name’s election website."

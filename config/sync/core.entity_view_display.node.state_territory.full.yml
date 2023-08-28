@@ -6,23 +6,33 @@ dependencies:
     - core.entity_view_mode.node.full
     - field.field.node.state_territory.body
     - field.field.node.state_territory.field_accepts_nvrf
+    - field.field.node.state_territory.field_address_location_inst
     - field.field.node.state_territory.field_confirm_registration_link
     - field.field.node.state_territory.field_election_homepage_link
     - field.field.node.state_territory.field_g_in_person_deadline
     - field.field.node.state_territory.field_g_mail_postmarked_deadline
     - field.field.node.state_territory.field_g_mail_received_deadline
     - field.field.node.state_territory.field_g_online_deadline
+    - field.field.node.state_territory.field_identification_inst
     - field.field.node.state_territory.field_in_person_deadline
+    - field.field.node.state_territory.field_in_state_name
     - field.field.node.state_territory.field_is_state
     - field.field.node.state_territory.field_mail_postmarked_deadline
     - field.field.node.state_territory.field_mail_received_deadline
+    - field.field.node.state_territory.field_mailing_address_inst
     - field.field.node.state_territory.field_metatags
     - field.field.node.state_territory.field_more_info_link
+    - field.field.node.state_territory.field_nvrf_last_updated_date
+    - field.field.node.state_territory.field_of_state_name
     - field.field.node.state_territory.field_online_deadline
+    - field.field.node.state_territory.field_online_voter_reg_desc
     - field.field.node.state_territory.field_override_confirm_reg_link
     - field.field.node.state_territory.field_override_election_hp_link
     - field.field.node.state_territory.field_override_more_info_link
     - field.field.node.state_territory.field_override_registration_link
+    - field.field.node.state_territory.field_personal_information_inst
+    - field.field.node.state_territory.field_political_party_inst
+    - field.field.node.state_territory.field_reg_eligibility_desc
     - field.field.node.state_territory.field_registration_link
     - field.field.node.state_territory.field_registration_type
     - field.field.node.state_territory.field_state_abbreviation
@@ -131,6 +141,14 @@ content:
     third_party_settings: {  }
     weight: 12
     region: content
+  field_in_state_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 21
+    region: content
   field_is_state:
     type: boolean
     label: hidden
@@ -170,6 +188,14 @@ content:
       target: '0'
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_of_state_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 22
     region: content
   field_online_deadline:
     type: double_field_unformatted_list
@@ -270,7 +296,15 @@ content:
     region: content
 hidden:
   body: true
+  field_address_location_inst: true
+  field_identification_inst: true
+  field_mailing_address_inst: true
   field_metatags: true
+  field_nvrf_last_updated_date: true
+  field_online_voter_reg_desc: true
+  field_personal_information_inst: true
+  field_political_party_inst: true
+  field_reg_eligibility_desc: true
   langcode: true
   links: true
   published_at: true

@@ -21,7 +21,11 @@
     {% set title = title ~ " " ~ korean_state_char %}
   {% endif %}
 
-  {% set title = 'Register to vote in @state_name' | t ({"@state_name": title}) %}
+  {% set in_state_name = currentnode.field_in_state_name.value | default("@state_name") | t({ "@state_name": title }) %}
+  {% set title = 'Register to vote in @state_name' | t ({
+    "@state_name": title,
+    "@in_state_name": in_state_name
+  }) %}
 {% endif %}
 
 

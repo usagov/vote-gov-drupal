@@ -1,0 +1,16 @@
+uuid: c4f1d2eb-7829-4628-9540-146abd52c572
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.nvrf_field
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.nvrf_field
+target_entity_type_id: taxonomy_term
+target_bundle: nvrf_field
+default_langcode: site_default
+language_alterable: true

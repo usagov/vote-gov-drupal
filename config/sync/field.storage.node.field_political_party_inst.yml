@@ -1,0 +1,19 @@
+uuid: b3fc5b0e-b661-471a-b1a6-4123091d6fb3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_political_party_inst
+field_name: field_political_party_inst
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
