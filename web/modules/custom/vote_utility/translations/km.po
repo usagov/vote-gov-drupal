@@ -99,7 +99,7 @@ msgid "You can confirm your voter registration status by contacting your local r
 msgstr "អ្នកអាចបញ្ជាក់ស្ថានភាពការចុះឈ្មោះបោះឆ្នោតរបស់អ្នកដោយទំនាក់ទំនងទៅការិយាល័យផ្នែកចុឈ្មោះក្នុងមូលដ្ឋានរបស់អ្នក។ @link។"
 
 msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr " ចុចទីនេះដើម្បីមើលព័ត៌មានទំនាក់ទំនងទៅស្មៀនប្រចាំខោនធីរបស់រដ្ឋ Wyoming (PDF)"
+msgstr " ចុចទីនេះដើម្បីមើលព័ត៌មានទំនាក់ទំនងទៅស្មៀនប្រចាំខោនធីរបស់រដ្ឋ Wyoming (PDF) (ជាភាសាអង់គ្លេស)"
 
 msgid "Find out ways to register"
 msgstr "ស្វែងរកវិធីនានាដើម្បីចុះឈ្មោះ"

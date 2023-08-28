@@ -102,7 +102,7 @@ msgid "You can confirm your voter registration status by contacting your local r
 msgstr "귀하의 유권자 등록 상태는 지역 등록 사무소에 연락하여 확인할 수 있습니다. @link."
 
 msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr "와이오밍 카운티 기록 보관 사무소 연락처는 여기를 클릭하십시오 (PDF파일)"
+msgstr "와이오밍 카운티 기록 보관 사무소 연락처는 여기를 클릭하십시오 (PDF파일) (영어로 제공)"
 
 msgid "Find out ways to register"
 msgstr "등록 방법 검색하기"
