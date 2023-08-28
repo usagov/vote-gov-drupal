@@ -1,0 +1,24 @@
+uuid: c6fdf258-608a-44ab-a6a8-7326dc9d5a33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address_location_inst
+    - filter.format.simple_html
+    - node.type.state_territory
+  module:
+    - text
+id: node.state_territory.field_address_location_inst
+field_name: field_address_location_inst
+entity_type: node
+bundle: state_territory
+label: 'Address & Location instructions'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - simple_html
+field_type: text_long
