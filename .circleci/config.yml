@@ -69,6 +69,9 @@ jobs:
             npm install
             npm run cy:pipeline:frontEnd
             npm run cy:pipeline:axe
+            retry:
+            attempts: 3
+            retry-on-failure: true 
       - store_artifacts:
           path: testing/cypress/screenshots
   deploy:
@@ -216,7 +219,7 @@ jobs:
             cd testing
             cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
             npm install
-            npm run cy:pipeline:links
+            npm run cy:pipeline:links 
       - run:
           name: "Cypress External Links"
           command: |
@@ -293,16 +296,14 @@ workflows:
         - equal: [ true, << pipeline.parameters.build_static >> ]
     jobs:
       - build-static
-  link-validation-cron-workflow: 
+  link-validation-workflow: 
     triggers:
       - schedule:
-          # cron: '0 13 * * 1,4'  
-          cron: '0 16 * * 5'  
+          cron: '0 10 * * 1,4'  
           filters:
             branches:
               only:
-                # - stage
-                - test
+                - stage
     jobs:
       - link-validation
   drush-cron-workflow:
