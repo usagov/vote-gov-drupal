@@ -69,11 +69,18 @@ jobs:
             npm install
             npm run cy:pipeline:frontEnd
             npm run cy:pipeline:axe
+      - run:
+          name: "Cypress - on fail"
+          command: |
+            echo "I am result of above failed job"
+            cd testing
+            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
+            npm install
+            npm run cy:pipeline:frontEnd
+            npm run cy:pipeline:axe
+          when: on_fail
       - store_artifacts:
           path: testing/cypress/screenshots
-    retry:
-      attempts: 2
-      retry-on-failure: true 
   deploy:
     docker:
       - image: cimg/base:stable
