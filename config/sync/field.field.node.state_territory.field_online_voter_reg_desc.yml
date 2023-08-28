@@ -1,18 +1,18 @@
-uuid: 4226625a-f4ae-4e97-b303-9fe7cb2d4b66
+uuid: 09f6aa44-c309-43b1-8a46-9db47d079db4
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_reg_eligibility_desc
+    - field.storage.node.field_online_voter_reg_desc
     - filter.format.simple_html
     - node.type.state_territory
   module:
     - text
-id: node.state_territory.field_reg_eligibility_desc
-field_name: field_reg_eligibility_desc
+id: node.state_territory.field_online_voter_reg_desc
+field_name: field_online_voter_reg_desc
 entity_type: node
 bundle: state_territory
-label: 'Registration eligibility requirements description'
+label: 'Online voter registration description'
 description: ''
 required: false
 translatable: true
