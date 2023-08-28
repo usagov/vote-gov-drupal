@@ -69,11 +69,11 @@ jobs:
             npm install
             npm run cy:pipeline:frontEnd
             npm run cy:pipeline:axe
-            retry:
-            attempts: 3
-            retry-on-failure: true 
       - store_artifacts:
           path: testing/cypress/screenshots
+    retry:
+      attempts: 2
+      retry-on-failure: true 
   deploy:
     docker:
       - image: cimg/base:stable
