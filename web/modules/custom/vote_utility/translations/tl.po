@@ -214,13 +214,7 @@ msgctxt "day name"
 msgid "Monday"
 msgstr "Lunes"
 
-msgid "Monday"
-msgstr "Lunes"
-
 msgctxt "day name"
-msgid "Tuesday"
-msgstr "Martes"
-
 msgid "Tuesday"
 msgstr "Martes"
 
@@ -228,13 +222,7 @@ msgctxt "day name"
 msgid "Wednesday"
 msgstr "Miyerkoles"
 
-msgid "Wednesday"
-msgstr "Miyerkoles"
-
 msgctxt "day name"
-msgid "Thursday"
-msgstr "Huwebes"
-
 msgid "Thursday"
 msgstr "Huwebes"
 
@@ -242,19 +230,10 @@ msgctxt "day name"
 msgid "Friday"
 msgstr "Biyernes"
 
-msgid "Friday"
-msgstr "Biyernes"
-
 msgctxt "day name"
 msgid "Saturday"
 msgstr "Sabado"
 
-msgid "Saturday"
-msgstr "Sabado"
-
 msgctxt "day name"
-msgid "Sunday"
-msgstr "Linggo"
-
 msgid "Sunday"
 msgstr "Linggo"

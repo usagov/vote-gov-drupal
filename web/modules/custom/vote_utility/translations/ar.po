@@ -261,14 +261,8 @@ msgctxt "day name"
 msgid "Sunday"
 msgstr "الأحد"
 
-msgid "Sunday"
-msgstr "الأحد"
-
 # data.translations.days.monday
 msgctxt "day name"
-msgid "Monday"
-msgstr "الاثنين"
-
 msgid "Monday"
 msgstr "الاثنين"
 
@@ -277,14 +271,8 @@ msgctxt "day name"
 msgid "Tuesday"
 msgstr "الثلاثاء"
 
-msgid "Tuesday"
-msgstr "الثلاثاء"
-
 # data.translations.days.wednesday
 msgctxt "day name"
-msgid "Wednesday"
-msgstr "الأربعاء"
-
 msgid "Wednesday"
 msgstr "الأربعاء"
 
@@ -293,21 +281,12 @@ msgctxt "day name"
 msgid "Thursday"
 msgstr "الخميس"
 
-msgid "Thursday"
-msgstr "الخميس"
-
 # data.translations.days.friday
 msgctxt "day name"
 msgid "Friday"
 msgstr "الجمعة"
 
-msgid "Friday"
-msgstr "الجمعة"
-
 # data.translations.days.saturday
 msgctxt "day name"
-msgid "Saturday"
-msgstr "السبت"
-
 msgid "Saturday"
 msgstr "السبت"

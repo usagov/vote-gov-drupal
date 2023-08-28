@@ -112,11 +112,11 @@ msgstr "Official government website"
 msgid "Register to vote in @state_name"
 msgstr "Ha'did77l77[ i'ii'n77[ biniiy4 @state_name"
 
-# data.translations.register.heading2
+# data.translations.register.heading2 
 msgid "How to register to vote"
 msgstr "Hait'1o i'ii'n77[ biniiy4 ha'dil'88h @state_name"
 
-# data.translations.register.other_language_selection__heading
+# data.translations.register.other_language_selection__heading 
 msgid "Other ways to register to vote"
 msgstr "A['22 1daat'1o hazh'dii['88h i'ii'n77[ biniiy4 @state_name"
 
@@ -148,15 +148,15 @@ msgstr "I'ii'n77[ biniiy4 ha'dinilaago k44hon7t'98gi i'ii'n77[ bi[ na'anishgi b7
 msgid "Click here to view Wyoming's county clerk contact information (PDF)"
 msgstr "Kwe'4 bi[ ad7lch77d Wyoming hahoodzohj7 county clerk woly4ego bi[ da'7n77shj7 hane' &lt;PDF&gt; d7n77['88[go &lt;Bilag1ana k'ehj7&gt;"
 
-# data.translations.register.confirm_registration__intro
+# data.translations.register.confirm_registration__intro 
 msgid "You can @link on @state_name’s election website."
 msgstr "I'ii'n77[ biniiy4 ha'dinila1g77 b7na'7d7[kidgo koj8' hod77lnih @link"
 
-# @link: data.translations.register.confirm_registration__intro
+# @link: data.translations.register.confirm_registration__intro 
 msgid "confirm your voter registration status"
 msgstr "hahoodzoh bee w0j7h7g77 i'ii'n77[ biwebsitegi"
 
-# data.translations.register.by_mail__intro
+# data.translations.register.by_mail__intro 
 msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
 msgstr "B44sh [ich7'ii biyi' ha'dilne'7g77 1den k'ad. Hait'1o i'ii'n77[ biniiy4 hazh'dii['88h7g77 han7t1h @link"
 
@@ -261,14 +261,8 @@ msgctxt "day name"
 msgid "Monday"
 msgstr "Dam0o biisk3n7"
 
-msgid "Monday"
-msgstr "Dam0o biisk3n7"
-
 # data.translations.days.tuesday
 msgctxt "day name"
-msgid "Tuesday"
-msgstr "Dam0o naakiij9"
-
 msgid "Tuesday"
 msgstr "Dam0o naakiij9"
 
@@ -277,14 +271,8 @@ msgctxt "day name"
 msgid "Wednesday"
 msgstr "Dam0o t1g7j9"
 
-msgid "Wednesday"
-msgstr "Dam0o t1g7j9"
-
 # data.translations.days.thursday
 msgctxt "day name"
-msgid "Thursday"
-msgstr "Dam0o d9'7j9"
-
 msgid "Thursday"
 msgstr "Dam0o d9'7j9"
 
@@ -293,21 +281,12 @@ msgctxt "day name"
 msgid "Friday"
 msgstr "Nida'iin77sh"
 
-msgid "Friday"
-msgstr "Nida'iin77sh"
-
 # data.translations.days.saturday
 msgctxt "day name"
 msgid "Saturday"
 msgstr "Dam0o y1zh7"
 
-msgid "Saturday"
-msgstr "Dam0o y1zh7"
-
 # data.translations.days.sunday
 msgctxt "day name"
-msgid "Sunday"
-msgstr "Dam0o"
-
 msgid "Sunday"
 msgstr "Dam0o"

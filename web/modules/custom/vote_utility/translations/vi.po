@@ -213,13 +213,7 @@ msgctxt "day name"
 msgid "Monday"
 msgstr "Thứ Hai"
 
-msgid "Monday"
-msgstr "Thứ Hai"
-
 msgctxt "day name"
-msgid "Tuesday"
-msgstr "Thứ Ba"
-
 msgid "Tuesday"
 msgstr "Thứ Ba"
 
@@ -227,13 +221,7 @@ msgctxt "day name"
 msgid "Wednesday"
 msgstr "Thứ Tư"
 
-msgid "Wednesday"
-msgstr "Thứ Tư"
-
 msgctxt "day name"
-msgid "Thursday"
-msgstr "Thứ Năm"
-
 msgid "Thursday"
 msgstr "Thứ Năm"
 
@@ -241,19 +229,10 @@ msgctxt "day name"
 msgid "Friday"
 msgstr "Thứ Sáu"
 
-msgid "Friday"
-msgstr "Thứ Sáu"
-
 msgctxt "day name"
 msgid "Saturday"
 msgstr "Thứ Bảy"
 
-msgid "Saturday"
-msgstr "Thứ Bảy"
-
 msgctxt "day name"
-msgid "Sunday"
-msgstr "Chủ Nhật"
-
 msgid "Sunday"
 msgstr "Chủ Nhật"

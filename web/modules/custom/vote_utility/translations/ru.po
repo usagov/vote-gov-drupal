@@ -261,14 +261,8 @@ msgctxt "day name"
 msgid "Monday"
 msgstr "понедельник"
 
-msgid "Monday"
-msgstr "понедельник"
-
 # data.translations.days.tuesday
 msgctxt "day name"
-msgid "Tuesday"
-msgstr "вторник"
-
 msgid "Tuesday"
 msgstr "вторник"
 
@@ -277,14 +271,8 @@ msgctxt "day name"
 msgid "Wednesday"
 msgstr "среда"
 
-msgid "Wednesday"
-msgstr "среда"
-
 # data.translations.days.thursday
 msgctxt "day name"
-msgid "Thursday"
-msgstr "четверг"
-
 msgid "Thursday"
 msgstr "четверг"
 
@@ -293,21 +281,12 @@ msgctxt "day name"
 msgid "Friday"
 msgstr "пятница"
 
-msgid "Friday"
-msgstr "пятница"
-
 # data.translations.days.saturday
 msgctxt "day name"
 msgid "Saturday"
 msgstr "суббота"
 
-msgid "Saturday"
-msgstr "суббота"
-
 # data.translations.days.sunday
 msgctxt "day name"
-msgid "Sunday"
-msgstr "воскресенье"
-
 msgid "Sunday"
 msgstr "воскресенье"

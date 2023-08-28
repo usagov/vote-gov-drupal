@@ -213,13 +213,7 @@ msgctxt "day name"
 msgid "Monday"
 msgstr "lunes"
 
-msgid "Monday"
-msgstr "lunes"
-
 msgctxt "day name"
-msgid "Tuesday"
-msgstr "martes"
-
 msgid "Tuesday"
 msgstr "martes"
 
@@ -227,13 +221,7 @@ msgctxt "day name"
 msgid "Wednesday"
 msgstr "miércoles"
 
-msgid "Wednesday"
-msgstr "miércoles"
-
 msgctxt "day name"
-msgid "Thursday"
-msgstr "jueves"
-
 msgid "Thursday"
 msgstr "jueves"
 
@@ -241,19 +229,10 @@ msgctxt "day name"
 msgid "Friday"
 msgstr "viernes"
 
-msgid "Friday"
-msgstr "viernes"
-
 msgctxt "day name"
 msgid "Saturday"
 msgstr "sábado"
 
-msgid "Saturday"
-msgstr "sábado"
-
 msgctxt "day name"
-msgid "Sunday"
-msgstr "domingo"
-
 msgid "Sunday"
 msgstr "domingo"
