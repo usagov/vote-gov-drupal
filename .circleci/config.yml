@@ -62,16 +62,38 @@ jobs:
             source ./scripts/pipeline/deb-basic-deps.sh
             source ./scripts/pipeline/deb-cf-install.sh
       - run:
-          name: "Cypress"
+          name: "Cypress - frontend tests"
           command: |
             cd testing
             cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
             npm install
             npm run cy:pipeline:frontEnd
+      - run:
+          name: "Cypress - axe tests"
+          command: |
+            cd testing
+            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
+            npm install
             npm run cy:pipeline:axe
-            retry:
-            attempts: 3
-            retry-on-failure: true 
+          when: always
+      - run:
+          name: "Cypress - frontend tests - rerun"
+          command: |
+            echo "I am result of frontend tests failed job"
+            cd testing
+            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
+            npm install
+            npm run cy:pipeline:frontEnd
+          when: on_fail  
+      - run:
+          name: "Cypress - axe tests - rerun"
+          command: |
+            echo "I am result of axe tests failed job"
+            cd testing
+            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
+            npm install
+            npm run cy:pipeline:axe
+          when: on_fail
       - store_artifacts:
           path: testing/cypress/screenshots
   deploy:
@@ -185,6 +207,16 @@ jobs:
             source ./scripts/pipeline/cloud-gov-login.sh
             source ./scripts/pipeline/downsync-backup.sh
             ./scripts/pipeline/scheduled_backup.sh "${prod_cf_space}"
+      - run:
+          name: "Run backup"
+          command: |
+            echo "I am result of Run Backup failed job"
+            export BACKUP_ENV=${CIRCLE_BRANCH}
+            source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
+            source ./scripts/pipeline/cloud-gov-login.sh
+            source ./scripts/pipeline/downsync-backup.sh
+            ./scripts/pipeline/scheduled_backup.sh "${prod_cf_space}"
+          when: on_fail  
   snyk:
     docker:
       - image: snyk/snyk:php
@@ -228,6 +260,24 @@ jobs:
             npm install
             npm run cy:pipeline:proofer
           when: always
+      - run:
+          name: "Cypress Internal Links - rerun"
+          command: |
+            echo "I am result of Internal Links failed job"
+            cd testing
+            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
+            npm install
+            npm run cy:pipeline:links 
+          when: on_fail
+      - run:
+          name: "Cypress External Links - rerun"
+          command: |
+            echo "I am result of External Links failed job"
+            cd testing
+            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
+            npm install
+            npm run cy:pipeline:proofer
+          when: on_fail  
 workflows:
   deploy-workflow: 
     when:
