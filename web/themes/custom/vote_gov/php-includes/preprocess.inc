@@ -43,20 +43,8 @@ function vote_gov_preprocess(&$variables) {
   $variables['is_frontpage'] = \Drupal::service('path.matcher')->isFrontPage();
 
   //Load bengali numbers array
-  $variables['bengali_numbers'] = [
-    "0" =>  "০",
-    "1" => "১",
-    "2" => "২",
-    "3" => "৩",
-    "4" => "৪",
-    "5" => "৫",
-    "6" => "৬",
-    "7" => "৭",
-    "8" => "৮",
-    "9" => "৯"
-  ];
-  //json_decode(file_get_contents(base_path() . "/bengali-numbers.json"), true);
-  //dpm($variables);
+  $path_to_file = __DIR__ . "/../json/bengali-numbers.json";
+  $variables['bengali_numbers'] = json_decode(file_get_contents($path_to_file), true);
 }
 
 /**
