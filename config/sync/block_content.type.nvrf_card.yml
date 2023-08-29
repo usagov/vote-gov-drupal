@@ -1,0 +1,8 @@
+uuid: bcd7649f-3074-41c7-ab0c-b4045f1813a5
+langcode: en
+status: true
+dependencies: {  }
+id: nvrf_card
+label: 'NVRF Card'
+revision: 1
+description: ''

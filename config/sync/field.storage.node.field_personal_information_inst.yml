@@ -1,0 +1,19 @@
+uuid: 54090e7e-8309-4625-83ed-505c271e3040
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_personal_information_inst
+field_name: field_personal_information_inst
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

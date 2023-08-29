@@ -1,0 +1,24 @@
+uuid: 62ddd3d1-e2b5-4343-8c1d-6caee940ef82
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_identification_inst
+    - filter.format.simple_html
+    - node.type.state_territory
+  module:
+    - text
+id: node.state_territory.field_identification_inst
+field_name: field_identification_inst
+entity_type: node
+bundle: state_territory
+label: 'Identification instructions'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - simple_html
+field_type: text_long

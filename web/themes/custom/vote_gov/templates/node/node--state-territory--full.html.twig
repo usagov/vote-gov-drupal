@@ -41,7 +41,10 @@
     {{ drupal_entity('block_content', 3) }}
   {% endif %}
 
-<p>{{'Last updated:' | t }} {{ node.revision_timestamp.value | date('U') | format_date('revision_date') }}</p>
+
+  <p>
+    {{'Last updated:' | t }} {{ node.revision_timestamp.value | date('U') | format_date('revision_date') | replace(t_numbers[language].numbers | default([])) }}
+  </p>
 
 {% endblock %}
 
