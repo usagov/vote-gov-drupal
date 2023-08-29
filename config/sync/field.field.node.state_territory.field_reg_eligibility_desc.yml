@@ -1,0 +1,24 @@
+uuid: 4226625a-f4ae-4e97-b303-9fe7cb2d4b66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reg_eligibility_desc
+    - filter.format.simple_html
+    - node.type.state_territory
+  module:
+    - text
+id: node.state_territory.field_reg_eligibility_desc
+field_name: field_reg_eligibility_desc
+entity_type: node
+bundle: state_territory
+label: 'Registration eligibility requirements description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - simple_html
+field_type: text_long

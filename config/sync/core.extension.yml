@@ -20,6 +20,7 @@ module:
   double_field: 0
   dynamic_page_cache: 0
   editor: 0
+  editoria11y: 0
   entity_reference_revisions: 0
   field: 0
   field_group: 0

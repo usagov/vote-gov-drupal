@@ -1,0 +1,24 @@
+uuid: f50adbf8-e174-4732-b2c7-29a26406e937
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_personal_information_inst
+    - filter.format.simple_html
+    - node.type.state_territory
+  module:
+    - text
+id: node.state_territory.field_personal_information_inst
+field_name: field_personal_information_inst
+entity_type: node
+bundle: state_territory
+label: 'Personal information instructions'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - simple_html
+field_type: text_long

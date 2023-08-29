@@ -18,6 +18,7 @@ dependencies:
     - block_content_permissions
     - content_moderation
     - content_translation
+    - editoria11y
     - file
     - media
     - menu_link_content
@@ -44,6 +45,7 @@ permissions:
   - 'create inline_alert block content'
   - 'create landing content'
   - 'create media'
+  - 'create nvrf_card block content'
   - 'create nvrf_page content'
   - 'create page content'
   - 'create remote_video media'
@@ -58,6 +60,7 @@ permissions:
   - 'delete any inline_alert block content'
   - 'delete any landing content'
   - 'delete any media'
+  - 'delete any nvrf_card block content'
   - 'delete any page content'
   - 'delete any remote_video media'
   - 'delete any sitewide_alert block content'
@@ -93,6 +96,7 @@ permissions:
   - 'edit own remote_video media'
   - 'edit own state_territory content'
   - 'edit terms in nvrf_field'
+  - 'mark as hidden in editoria11y'
   - 'revert all revisions'
   - 'revert landing revisions'
   - 'revert nvrf_page revisions'
@@ -117,6 +121,7 @@ permissions:
   - 'update any government_banner block content'
   - 'update any inline_alert block content'
   - 'update any media'
+  - 'update any nvrf_card block content'
   - 'update any registration_form_selector block content'
   - 'update any search block content'
   - 'update any sitewide_alert block content'
@@ -130,6 +135,7 @@ permissions:
   - 'view all media revisions'
   - 'view all revisions'
   - 'view any unpublished content'
+  - 'view editoria11y checker'
   - 'view landing revisions'
   - 'view latest version'
   - 'view nvrf_page revisions'

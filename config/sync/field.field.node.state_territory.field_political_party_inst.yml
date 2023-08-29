@@ -1,0 +1,24 @@
+uuid: c858890c-41df-4066-bb8e-17d411786404
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_political_party_inst
+    - filter.format.simple_html
+    - node.type.state_territory
+  module:
+    - text
+id: node.state_territory.field_political_party_inst
+field_name: field_political_party_inst
+entity_type: node
+bundle: state_territory
+label: 'Political Party instructions'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - simple_html
+field_type: text_long
