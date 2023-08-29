@@ -1,5 +1,1 @@
-{% if language == 'bn' %}
-    <time{{ attributes }}>{{ text | replace (bengali_numbers) }}</time>
-{% else %}
-    <time{{ attributes }}>{{ text }}</time>
-{% endif %}
+<time{{ attributes }}>{{ text | replace(t_numbers[language].numbers | default([])) }}</time>

@@ -41,15 +41,10 @@
     {{ drupal_entity('block_content', 3) }}
   {% endif %}
 
-{% if language == 'bn' %}
+
   <p>
-    {{'Last updated:' | t }} {{ node.revision_timestamp.value | date('U') | format_date('revision_date') | replace(bengali_numbers) }}
+    {{'Last updated:' | t }} {{ node.revision_timestamp.value | date('U') | format_date('revision_date') | replace(t_numbers[language].numbers | default([])) }}
   </p>
-{% else %}
-  <p>
-    {{'Last updated:' | t }} {{ node.revision_timestamp.value | date('U') | format_date('revision_date') }}
-  </p>
-{% endif %}
 
 {% endblock %}
 
