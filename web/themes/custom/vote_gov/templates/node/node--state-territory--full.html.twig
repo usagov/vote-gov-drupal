@@ -43,7 +43,7 @@
 
 {% if language == 'bn' %}
   <p>
-    {{'Last updated:' | t }} {{ node.revision_timestamp.value | date('U') | format_date('revision_date') | replace({'0': '০', '1':'১', '1':'১', '2':'২', '3':'৩', '4':'৪', '5':'৫', '6':'৬', '7':'৭', '8':'৮', '9':'৯' }) }}
+    {{'Last updated:' | t }} {{ node.revision_timestamp.value | date('U') | format_date('revision_date') | replace(bengali_numbers) }}
   </p>
 {% else %}
   <p>

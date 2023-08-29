@@ -41,6 +41,22 @@ function vote_gov_preprocess(&$variables) {
 
   // Set variable for frontpage.
   $variables['is_frontpage'] = \Drupal::service('path.matcher')->isFrontPage();
+
+  //Load bengali numbers array
+  $variables['bengali_numbers'] = [
+    "0" =>  "০",
+    "1" => "১",
+    "2" => "২",
+    "3" => "৩",
+    "4" => "৪",
+    "5" => "৫",
+    "6" => "৬",
+    "7" => "৭",
+    "8" => "৮",
+    "9" => "৯"
+  ];
+  //json_decode(file_get_contents(base_path() . "/bengali-numbers.json"), true);
+  //dpm($variables);
 }
 
 /**
@@ -69,11 +85,4 @@ function vote_gov_preprocess_links__language_block(&$variables) {
       }
     }
   }
-}
-
-/**
- * Implements hook_theme_suggestions_HOOK_alter().
- */
-function vote_gov_theme_suggestions_time_alter(array &$suggestions, array $variables) {
-  $suggestions[] = 'time__field';
 }
