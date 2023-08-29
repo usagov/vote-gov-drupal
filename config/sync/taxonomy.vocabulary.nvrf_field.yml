@@ -1,0 +1,8 @@
+uuid: 92421d99-2081-4a83-879a-626921c48f44
+langcode: en
+status: true
+dependencies: {  }
+name: 'NVRF Field'
+vid: nvrf_field
+description: 'NVRF app form field requirement data'
+weight: 0

@@ -1,0 +1,24 @@
+uuid: c2c6246c-9998-4c2b-be7f-e50b62dbccbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_general_instructions
+    - filter.format.simple_html
+    - node.type.nvrf_page
+  module:
+    - text
+id: node.nvrf_page.field_general_instructions
+field_name: field_general_instructions
+entity_type: node
+bundle: nvrf_page
+label: 'General Instructions'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - simple_html
+field_type: text_long

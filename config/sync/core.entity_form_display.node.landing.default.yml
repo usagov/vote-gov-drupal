@@ -13,22 +13,11 @@ dependencies:
     - paragraphs
     - path
     - publication_date
-    - text
 id: node.landing.default
 targetEntityType: node
 bundle: landing
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 10
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 2
@@ -37,7 +26,7 @@ content:
     third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
-    weight: 14
+    weight: 12
     region: content
     settings:
       sidebar: true
@@ -45,7 +34,7 @@ content:
     third_party_settings: {  }
   field_paragraph_components:
     type: paragraphs
-    weight: 12
+    weight: 10
     region: content
     settings:
       title: Component
@@ -64,7 +53,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 13
+    weight: 11
     region: content
     settings:
       include_locked: true
@@ -128,5 +117,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  body: true
   promote: true
   sticky: true

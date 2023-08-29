@@ -10,7 +10,9 @@
 
   <p>{{ 'Voter registration is not required in @state_name. @link on @state_name’s election website.' | t({
       '@link': { "#markup": "<a href=\"#{more_info_link}\">#{more_info_link_text}</a>"} | render,
-      '@state_name': state_name
+      '@state_name': state_name,
+      '@of_state_name': of_state_name,
+      '@in_state_name': in_state_name
     }) }}
   </p>
 {% endif %}

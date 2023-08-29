@@ -48,6 +48,7 @@
         "drupal/devel": "^5.1",
         "drupal/disable_language": "^1.0@beta",
         "drupal/double_field": "^4.1",
+        "drupal/editoria11y": "^2.0",
         "drupal/entity_reference_revisions": "^1.10",
         "drupal/field_group": "^3.4",
         "drupal/file_delete": "^2.0",

@@ -12,6 +12,10 @@ dependencies:
 libraries:
   - vote_gov/global
 
+libraries-override:
+  system/base: false
+  paragraphs/drupal.paragraphs.unpublished: false
+
 regions:
   header: "Header"
   admin: "Admin local tasks"

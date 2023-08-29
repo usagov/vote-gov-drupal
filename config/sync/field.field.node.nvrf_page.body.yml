@@ -1,0 +1,26 @@
+uuid: fe8cfa9c-84c2-4b15-a862-cc7704ee6ba4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - filter.format.simple_html
+    - node.type.nvrf_page
+  module:
+    - text
+id: node.nvrf_page.body
+field_name: body
+entity_type: node
+bundle: nvrf_page
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - simple_html
+field_type: text_with_summary
