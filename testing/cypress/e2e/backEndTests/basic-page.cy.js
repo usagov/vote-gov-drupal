@@ -38,8 +38,6 @@ describe('test for basic page', () => {
 
       cy.get('[class="ck-blurred ck ck-content ck-editor__editable ck-rounded-corners ck-editor__editable_inline"]').then(field => {
         cy.get(field[0]).clear().realType('test page')
-        cy.get(field[1]).clear().realType('test page')
-
       })
       cy.get('[class="claro-details__summary claro-details__summary--accordion-item"]').then(dropdown => {
         cy.get(dropdown[3]).click()
