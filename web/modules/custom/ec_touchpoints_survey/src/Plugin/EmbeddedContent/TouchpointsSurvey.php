@@ -60,4 +60,5 @@ class TouchpointsSurvey extends EmbeddedContentPluginBase implements EmbeddedCon
     ];
     return $form;
   }
+
 }
