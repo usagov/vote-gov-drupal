@@ -16,6 +16,6 @@ function ec_touchpoints_survey_theme($existing, $type, $theme, $path) {
         'file_name' => NULL,
       ],
       'template' => 'embedded-content/touchpoints-survey',
-    ]
+    ],
   ];
 }

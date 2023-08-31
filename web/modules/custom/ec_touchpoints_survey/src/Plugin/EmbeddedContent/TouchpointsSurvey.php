@@ -50,7 +50,7 @@ class TouchpointsSurvey extends EmbeddedContentPluginBase implements EmbeddedCon
       '#title' => $this->t('Touchpoints js file name'),
       '#default_value' => $this->configuration['file_name'],
       '#required' => TRUE,
-      '#description' => 'example: x1678367.js'
+      '#description' => 'example: x1678367.js',
     ];
     $form['id'] = [
       '#type' => 'textfield',
@@ -60,7 +60,4 @@ class TouchpointsSurvey extends EmbeddedContentPluginBase implements EmbeddedCon
     ];
     return $form;
   }
-
 }
-// 77e87d97.js
-// votegov-accessibility-survey
