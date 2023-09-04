@@ -5,7 +5,7 @@
   "main": "index.js",
   "devDependencies": {
     "axe-core": "^4.7.2",
-    "cypress": "^12.17.4",
+    "cypress": "^13.1.0",
     "cypress-axe": "^1.4.0",
     "cypress-mochawesome-reporter": "^3.5.1"
   },
