@@ -263,36 +263,29 @@ msgid "December"
 msgstr "N7[ch'ihtsoh"
 
 # data.translations.days.monday
-msgctxt "day name"
 msgid "Monday"
 msgstr "Dam0o biisk3n7"
 
 # data.translations.days.tuesday
-msgctxt "day name"
 msgid "Tuesday"
 msgstr "Dam0o naakiij9"
 
 # data.translations.days.wednesday
-msgctxt "day name"
 msgid "Wednesday"
 msgstr "Dam0o t1g7j9"
 
 # data.translations.days.thursday
-msgctxt "day name"
 msgid "Thursday"
 msgstr "Dam0o d9'7j9"
 
 # data.translations.days.friday
-msgctxt "day name"
 msgid "Friday"
 msgstr "Nida'iin77sh"
 
 # data.translations.days.saturday
-msgctxt "day name"
 msgid "Saturday"
 msgstr "Dam0o y1zh7"
 
 # data.translations.days.sunday
-msgctxt "day name"
 msgid "Sunday"
 msgstr "Dam0o"

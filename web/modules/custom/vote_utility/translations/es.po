@@ -215,30 +215,23 @@ msgctxt "Long month name"
 msgid "December"
 msgstr "diciembre"
 
-msgctxt "day name"
 msgid "Monday"
 msgstr "lunes"
 
-msgctxt "day name"
 msgid "Tuesday"
 msgstr "martes"
 
-msgctxt "day name"
 msgid "Wednesday"
 msgstr "miércoles"
 
-msgctxt "day name"
 msgid "Thursday"
 msgstr "jueves"
 
-msgctxt "day name"
 msgid "Friday"
 msgstr "viernes"
 
-msgctxt "day name"
 msgid "Saturday"
 msgstr "sábado"
 
-msgctxt "day name"
 msgid "Sunday"
 msgstr "domingo"
