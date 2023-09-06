@@ -124,6 +124,12 @@ msgstr "Lòt fason pou enskri pou vote"
 msgid "Register by mail deadline:"
 msgstr "Dat limit enskripsyon pa korespondans:"
 
+msgid "Must be postmarked by @date"
+msgstr "Dwe gen so lapòs pou pita nan dat k ap @date"
+
+msgid "Must be received by @date"
+msgstr "Dwe rive pou pita @date"
+
 # data.translations.register.dates__byonline_deadline
 msgid "Online registration deadline:"
 msgstr "Dat limit enskripsyon anliy:"

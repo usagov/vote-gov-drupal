@@ -80,6 +80,12 @@ msgstr "Otras formas de registrarse para votar"
 msgid "Register by mail deadline:"
 msgstr "Registrarse por correo postal:"
 
+msgid "Must be postmarked by @date"
+msgstr "Debe tener el sello postal a más tardar el @date"
+
+msgid "Must be received by @date"
+msgstr "Debe ser recibido a más tardar el @date"
+
 msgid "Online registration deadline:"
 msgstr "Inscripción por internet:"
 

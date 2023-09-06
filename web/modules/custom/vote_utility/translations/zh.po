@@ -80,6 +80,12 @@ msgstr "登記投票的其他方式"
 msgid "Register by mail deadline:"
 msgstr "郵寄報名截止日期："
 
+msgid "Must be postmarked by @date"
+msgstr "郵戳為憑 @date"
+
+msgid "Must be received by @date"
+msgstr "必須在 @date 之前寄達"
+
 msgid "Online registration deadline:"
 msgstr "網路報名截止日期："
 

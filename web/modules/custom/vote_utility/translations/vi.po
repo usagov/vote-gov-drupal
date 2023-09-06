@@ -80,6 +80,12 @@ msgstr "Các cách khác để đăng ký bỏ phiếu"
 msgid "Register by mail deadline:"
 msgstr "Thời hạn đăng ký qua đường bưu điện: "
 
+msgid "Must be postmarked by @date"
+msgstr "Cần được đánh dấu bưu điện trước @date"
+
+msgid "Must be received by @date"
+msgstr "Phải được nhận trước @date"
+
 msgid "Online registration deadline:"
 msgstr "Thời hạn đăng ký trực tuyến: "
 

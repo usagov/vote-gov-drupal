@@ -124,6 +124,12 @@ msgstr "طرق أخرى للتسجيل للتصويت"
 msgid "Register by mail deadline:"
 msgstr "التسجيل عن طريق البريد الموعد النهائي:"
 
+msgid "Must be postmarked by @date"
+msgstr "يجب ختمه بالبريد بحلول @date"
+
+msgid "Must be received by @date"
+msgstr "يجب أن يتم استلامه بحلول @date"
+
 # data.translations.register.dates__byonline_deadline
 msgid "Online registration deadline:"
 msgstr "الموعد النهائي للتسجيل عبر الإنترنت:"

@@ -81,6 +81,12 @@ msgstr "Iba pang mga paraan para magrehistro para bumoto"
 msgid "Register by mail deadline:"
 msgstr "Deadline ng pagpaparehistro sa pamamagitan ng koreo"
 
+msgid "Must be postmarked by @date"
+msgstr "Dapat na naka-postmark ng @date"
+
+msgid "Must be received by @date"
+msgstr "Dapat matanggap ng @date"
+
 msgid "Online registration deadline:"
 msgstr "Deadline ng pagpaparehistro sa online"
 

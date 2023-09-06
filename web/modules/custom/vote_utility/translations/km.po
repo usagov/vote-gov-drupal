@@ -80,6 +80,12 @@ msgstr "វិធីផ្សេងៗទៀតដើម្បីចុះឈ្
 msgid "Register by mail deadline:"
 msgstr "ថ្ងៃផុតកំណត់ចុះឈ្មោះតាមសំបុត្រ៖"
 
+msgid "Must be postmarked by @date"
+msgstr "ត្រូវតែបានបិទតែមប្រៃសណីយ៍ត្រឹមថ្ @date"
+
+msgid "Must be received by @date"
+msgstr "ត្រូវតែបានទទួលត្រឹមថ្ @date"
+
 msgid "Online registration deadline:"
 msgstr "ថ្ងៃផុតកំណត់ការចុះឈ្មោះអនឡាញ៖"
 

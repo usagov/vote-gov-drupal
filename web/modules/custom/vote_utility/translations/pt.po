@@ -124,6 +124,12 @@ msgstr "Outras maneiras de registrar-se para votar"
 msgid "Register by mail deadline:"
 msgstr "Prazo final para registrar-se por correspondência:"
 
+msgid "Must be postmarked by @date"
+msgstr "Deve estar carimbado até o @date"
+
+msgid "Must be received by @date"
+msgstr "Deve ser recebido até o @date"
+
 # data.translations.register.dates__byonline_deadline
 msgid "Online registration deadline:"
 msgstr "Prazo final para registrar-se on-line:"

@@ -124,6 +124,12 @@ msgstr "Другие способы зарегистрироваться для 
 msgid "Register by mail deadline:"
 msgstr "Крайний срок регистрации по почте:"
 
+msgid "Must be postmarked by @date"
+msgstr "Должен иметь почтовый штемпель до @date"
+
+msgid "Must be received by @date"
+msgstr "Должен быть получен до @date"
+
 # data.translations.register.dates__byonline_deadline
 msgid "Online registration deadline:"
 msgstr "Крайний срок регистрации он-лайн:"

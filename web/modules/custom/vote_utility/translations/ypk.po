@@ -80,6 +80,12 @@ msgstr "Ilangi nakmikilleghmun ilatellghet @state_name-emi "
 msgid "Register by mail deadline:"
 msgstr "Ilatelleq tuyuqayugkun tuuniviga:"
 
+msgid "Must be postmarked by @date"
+msgstr "Tuyumayaghqaguq @date"
+
+msgid "Must be received by @date"
+msgstr "Kaasimayaghqaguq @date"
+
 msgid "Online registration deadline:"
 msgstr "Online-ekun ilatellghem tuuniviga:"
 

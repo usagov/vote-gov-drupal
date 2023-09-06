@@ -80,6 +80,12 @@ msgstr "登记投票的其他方式"
 msgid "Register by mail deadline:"
 msgstr "邮寄报名截止日期："
 
+msgid "Must be postmarked by @date"
+msgstr "必须在 @date 星期六之前加盖邮戳"
+
+msgid "Must be received by @date"
+msgstr "必须在 @date 之前收到"
+
 msgid "Online registration deadline:"
 msgstr "网上报名截止日期："
 
