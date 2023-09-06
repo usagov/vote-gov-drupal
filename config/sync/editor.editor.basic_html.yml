@@ -48,6 +48,7 @@ settings:
     ckeditor5_sourceEditing:
       allowed_tags:
         - '<div id class>'
+        - '<h2 id>'
     ckeditor5_style:
       styles:
         -
