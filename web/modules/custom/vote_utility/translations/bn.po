@@ -128,6 +128,12 @@ msgstr "রাজ্য নির্বাচনের ওয়েবসাই�
 msgid "register to vote by mail or in person"
 msgstr "মেইলে বা ব্যক্তিগতভাবে ভোট দিতে নিবন্ধন করতে পারেন"
 
+msgid "Must be postmarked by @date"
+msgstr "পোস্ট চিহ্ন করা আবশ্যক @date"
+
+msgid "Must be received by @date"
+msgstr "@date এর মধ্যে অবশ্যই গ্রহণ করতে হবে"
+
 msgid "You can also @link on @state_name’s election website."
 msgstr "আপনি রাজ্য নির্বাচনের ওয়েবসাইটেও @link"
 
@@ -209,30 +215,23 @@ msgctxt "Long month name"
 msgid "December"
 msgstr "ডিসেম্বর"
 
-msgctxt "day name"
 msgid "Monday"
 msgstr "সোমবার"
 
-msgctxt "day name"
 msgid "Tuesday"
 msgstr "মঙ্গলবার"
 
-msgctxt "day name"
 msgid "Wednesday"
 msgstr "বুধবার"
 
-msgctxt "day name"
 msgid "Thursday"
 msgstr "বৃহস্পতিবার"
 
-msgctxt "day name"
 msgid "Friday"
 msgstr "শুক্রবার"
 
-msgctxt "day name"
 msgid "Saturday"
 msgstr "শনিবার"
 
-msgctxt "day name"
 msgid "Sunday"
 msgstr "রবিবার"
