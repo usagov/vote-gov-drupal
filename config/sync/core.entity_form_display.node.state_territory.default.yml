@@ -21,6 +21,7 @@ dependencies:
     - field.field.node.state_territory.field_mailing_address_inst
     - field.field.node.state_territory.field_metatags
     - field.field.node.state_territory.field_more_info_link
+    - field.field.node.state_territory.field_nvrf_fields
     - field.field.node.state_territory.field_nvrf_last_updated_date
     - field.field.node.state_territory.field_of_state_name
     - field.field.node.state_territory.field_online_deadline
@@ -47,6 +48,7 @@ dependencies:
     - path
     - publication_date
     - text
+    - vote_nvrf
 third_party_settings:
   field_group:
     group_generic_registration_deadl:
@@ -345,6 +347,12 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_nvrf_fields:
+    type: field_nvrf_fields
+    weight: 26
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_nvrf_last_updated_date:
     type: datetime_default

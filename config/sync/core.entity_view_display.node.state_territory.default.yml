@@ -21,6 +21,7 @@ dependencies:
     - field.field.node.state_territory.field_mailing_address_inst
     - field.field.node.state_territory.field_metatags
     - field.field.node.state_territory.field_more_info_link
+    - field.field.node.state_territory.field_nvrf_fields
     - field.field.node.state_territory.field_nvrf_last_updated_date
     - field.field.node.state_territory.field_of_state_name
     - field.field.node.state_territory.field_online_deadline
@@ -43,6 +44,7 @@ dependencies:
     - metatag
     - text
     - user
+    - vote_nvrf
 id: node.state_territory.default
 targetEntityType: node
 bundle: state_territory
@@ -206,6 +208,13 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 7
+    region: content
+  field_nvrf_fields:
+    type: field_nvrf_fields_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 33
     region: content
   field_nvrf_last_updated_date:
     type: datetime_default
