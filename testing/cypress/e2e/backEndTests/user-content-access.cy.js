@@ -11,8 +11,6 @@ describe('Test User Role Access to Content Moderation', () => {
 
     cy.get('[class="ck-blurred ck ck-content ck-editor__editable ck-rounded-corners ck-editor__editable_inline"]').then(field => {
       cy.get(field[0]).clear().realType('test page')
-      cy.get(field[1]).clear().realType('test page')
-
     })
     cy.get('[class="claro-details__summary claro-details__summary--accordion-item"]').then(dropdown => {
       cy.get(dropdown[3]).click()
@@ -83,8 +81,6 @@ describe('Test User Role Access to Content Moderation', () => {
 
     cy.get('[class="ck-blurred ck ck-content ck-editor__editable ck-rounded-corners ck-editor__editable_inline"]').then(field => {
       cy.get(field[0]).clear().realType('test page')
-      cy.get(field[1]).clear().realType('test page')
-
     })
     cy.get('[class="claro-details__summary claro-details__summary--accordion-item"]').then(dropdown => {
       cy.get(dropdown[0]).click()
@@ -160,8 +156,6 @@ describe('Test User Role Access to Content Moderation', () => {
 
     cy.get('[class="ck-blurred ck ck-content ck-editor__editable ck-rounded-corners ck-editor__editable_inline"]').then(field => {
       cy.get(field[0]).clear().realType('test page')
-      cy.get(field[1]).clear().realType('test page')
-
     })
     cy.get('[data-drupal-selector="edit-submit"]').click()
     cy.url().should('contain', 'test')

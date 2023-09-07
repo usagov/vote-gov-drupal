@@ -5,23 +5,33 @@ dependencies:
   config:
     - field.field.node.state_territory.body
     - field.field.node.state_territory.field_accepts_nvrf
+    - field.field.node.state_territory.field_address_location_inst
     - field.field.node.state_territory.field_confirm_registration_link
     - field.field.node.state_territory.field_election_homepage_link
     - field.field.node.state_territory.field_g_in_person_deadline
     - field.field.node.state_territory.field_g_mail_postmarked_deadline
     - field.field.node.state_territory.field_g_mail_received_deadline
     - field.field.node.state_territory.field_g_online_deadline
+    - field.field.node.state_territory.field_identification_inst
     - field.field.node.state_territory.field_in_person_deadline
+    - field.field.node.state_territory.field_in_state_name
     - field.field.node.state_territory.field_is_state
     - field.field.node.state_territory.field_mail_postmarked_deadline
     - field.field.node.state_territory.field_mail_received_deadline
+    - field.field.node.state_territory.field_mailing_address_inst
     - field.field.node.state_territory.field_metatags
     - field.field.node.state_territory.field_more_info_link
+    - field.field.node.state_territory.field_nvrf_last_updated_date
+    - field.field.node.state_territory.field_of_state_name
     - field.field.node.state_territory.field_online_deadline
+    - field.field.node.state_territory.field_online_voter_reg_desc
     - field.field.node.state_territory.field_override_confirm_reg_link
     - field.field.node.state_territory.field_override_election_hp_link
     - field.field.node.state_territory.field_override_more_info_link
     - field.field.node.state_territory.field_override_registration_link
+    - field.field.node.state_territory.field_personal_information_inst
+    - field.field.node.state_territory.field_political_party_inst
+    - field.field.node.state_territory.field_reg_eligibility_desc
     - field.field.node.state_territory.field_registration_link
     - field.field.node.state_territory.field_registration_type
     - field.field.node.state_territory.field_state_abbreviation
@@ -39,42 +49,6 @@ dependencies:
     - text
 third_party_settings:
   field_group:
-    group_links:
-      children:
-        - field_registration_link
-        - field_election_homepage_link
-        - field_more_info_link
-        - field_confirm_registration_link
-      label: 'Default Links'
-      region: content
-      parent_name: group_tabs
-      weight: 21
-      format_type: tab
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-    group_precise_registration_deadl:
-      children:
-        - field_in_person_deadline
-        - field_online_deadline
-        - field_mail_postmarked_deadline
-        - field_mail_received_deadline
-      label: 'Registration deadlines'
-      region: content
-      parent_name: group_tabs_2
-      weight: 17
-      format_type: details
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        open: false
-        description: 'When a registration deadline is left empty the equivalent generic deadline will be displayed.'
-        required_fields: true
     group_generic_registration_deadl:
       children:
         - field_g_in_person_deadline
@@ -83,31 +57,22 @@ third_party_settings:
         - field_g_mail_received_deadline
       label: 'Generic registration deadlines'
       region: content
-      parent_name: group_tabs_2
-      weight: 18
-      format_type: details
+      parent_name: group_deadlines
+      weight: 21
+      format_type: fieldset
       format_settings:
         classes: ''
         show_empty_fields: true
         id: ''
-        open: false
         description: ''
         required_fields: true
-    group_tabs:
-      children:
-        - group_links
-        - group_link_overrides
-      label: Links
-      region: content
-      parent_name: ''
-      weight: 14
-      format_type: tabs
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        direction: horizontal
-        width_breakpoint: 800
+        element: div
+        show_label: true
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
     group_link_overrides:
       children:
         - field_override_registration_link
@@ -116,8 +81,82 @@ third_party_settings:
         - field_override_confirm_reg_link
       label: 'Link overrides (for translations)'
       region: content
-      parent_name: group_tabs
-      weight: 22
+      parent_name: group_form_links
+      weight: 11
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_form_tabs:
+      children:
+        - group_overview
+        - group_deadlines
+        - group_form_links
+        - group_nvrf
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_overview:
+      children:
+        - field_state_abbreviation
+        - field_is_state
+        - field_accepts_nvrf
+        - field_registration_type
+        - field_in_state_name
+        - field_of_state_name
+      label: Overview
+      region: content
+      parent_name: group_form_tabs
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: true
+    group_deadlines:
+      children:
+        - field_in_person_deadline
+        - field_online_deadline
+        - field_mail_postmarked_deadline
+        - field_mail_received_deadline
+        - group_generic_registration_deadl
+      label: Deadlines
+      region: content
+      parent_name: group_form_tabs
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: 'When a registration deadline is left empty the equivalent generic deadline will be displayed.'
+        required_fields: true
+    group_form_links:
+      children:
+        - field_registration_link
+        - field_election_homepage_link
+        - field_more_info_link
+        - field_confirm_registration_link
+        - group_link_overrides
+      label: Links
+      region: content
+      parent_name: group_form_tabs
+      weight: 23
       format_type: tab
       format_settings:
         classes: ''
@@ -126,52 +165,60 @@ third_party_settings:
         formatter: closed
         description: 'When an override link is left empty the equivalent default link will be displayed.'
         required_fields: true
-    group_tabs_2:
+    group_nvrf:
       children:
-        - group_precise_registration_deadl
-        - group_generic_registration_deadl
-      label: Deadlines
+        - field_reg_eligibility_desc
+        - field_online_voter_reg_desc
+        - field_personal_information_inst
+        - field_address_location_inst
+        - field_identification_inst
+        - field_political_party_inst
+        - field_mailing_address_inst
+        - field_nvrf_last_updated_date
+      label: NVRF
       region: content
-      parent_name: ''
-      weight: 13
-      format_type: tabs
+      parent_name: group_form_tabs
+      weight: 24
+      format_type: tab
       format_settings:
         classes: ''
         show_empty_fields: false
         id: ''
-        direction: horizontal
-        width_breakpoint: 800
+        formatter: closed
+        description: ''
+        required_fields: true
 id: node.state_territory.default
 targetEntityType: node
 bundle: state_territory
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 15
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   field_accepts_nvrf:
     type: boolean_checkbox
-    weight: 3
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
+  field_address_location_inst:
+    type: text_textarea
+    weight: 19
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '0'
+        hide_guidelines: '0'
   field_confirm_registration_link:
     type: link_default
-    weight: 12
+    weight: 9
     region: content
     settings:
       placeholder_url: ''
@@ -179,7 +226,7 @@ content:
     third_party_settings: {  }
   field_election_homepage_link:
     type: link_default
-    weight: 8
+    weight: 7
     region: content
     settings:
       placeholder_url: ''
@@ -217,6 +264,14 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_identification_inst:
+    type: text_textarea
+    weight: 20
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_in_person_deadline:
     type: double_field
     weight: 16
@@ -240,9 +295,17 @@ content:
         rows: 5
       inline: true
     third_party_settings: {  }
+  field_in_state_name:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_is_state:
     type: boolean_checkbox
-    weight: 2
+    weight: 5
     region: content
     settings:
       display_label: true
@@ -259,9 +322,17 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_mailing_address_inst:
+    type: text_textarea
+    weight: 22
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
-    weight: 18
+    weight: 21
     region: content
     settings:
       sidebar: true
@@ -269,11 +340,25 @@ content:
     third_party_settings: {  }
   field_more_info_link:
     type: link_default
-    weight: 10
+    weight: 8
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_nvrf_last_updated_date:
+    type: datetime_default
+    weight: 23
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_of_state_name:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_online_deadline:
     type: double_field
@@ -298,9 +383,17 @@ content:
         rows: 5
       inline: true
     third_party_settings: {  }
+  field_online_voter_reg_desc:
+    type: text_textarea
+    weight: 17
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_override_confirm_reg_link:
     type: link_default
-    weight: 10
+    weight: 11
     region: content
     settings:
       placeholder_url: ''
@@ -308,7 +401,7 @@ content:
     third_party_settings: {  }
   field_override_election_hp_link:
     type: link_default
-    weight: 8
+    weight: 9
     region: content
     settings:
       placeholder_url: ''
@@ -316,7 +409,7 @@ content:
     third_party_settings: {  }
   field_override_more_info_link:
     type: link_default
-    weight: 9
+    weight: 10
     region: content
     settings:
       placeholder_url: ''
@@ -330,6 +423,30 @@ content:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
+  field_personal_information_inst:
+    type: text_textarea
+    weight: 18
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_political_party_inst:
+    type: text_textarea
+    weight: 21
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_reg_eligibility_desc:
+    type: text_textarea
+    weight: 16
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_registration_link:
     type: link_default
     weight: 6
@@ -340,13 +457,13 @@ content:
     third_party_settings: {  }
   field_registration_type:
     type: options_buttons
-    weight: 12
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   field_state_abbreviation:
     type: string_textfield
-    weight: 1
+    weight: 4
     region: content
     settings:
       size: 2
@@ -354,37 +471,37 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 17
+    weight: 20
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 9
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   published_at:
     type: publication_date_timestamp
-    weight: 10
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   simple_sitemap:
-    weight: 6
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 11
+    weight: 14
     region: content
     settings:
       display_label: true
@@ -398,13 +515,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 16
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 7
     region: content
     settings:
       match_operator: CONTAINS
@@ -413,10 +530,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 8
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  body: true
   promote: true
   sticky: true

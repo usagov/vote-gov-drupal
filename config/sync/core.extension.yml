@@ -6,7 +6,6 @@ module:
   autologout: 0
   block: 0
   block_content: 0
-  block_content_permissions: 0
   block_content_template: 0
   breakpoint: 0
   ckeditor5: 0
@@ -20,6 +19,7 @@ module:
   double_field: 0
   dynamic_page_cache: 0
   editor: 0
+  editoria11y: 0
   entity_reference_revisions: 0
   field: 0
   field_group: 0
@@ -52,6 +52,7 @@ module:
   remove_http_headers: 0
   simple_sitemap: 0
   system: 0
+  taxonomy: 0
   text: 0
   token: 0
   tome_base: 0

@@ -99,7 +99,7 @@ msgid "You can confirm your voter registration status by contacting your local r
 msgstr "您可以聯繫當地的登記處確認您的選民登記狀態。@link。"
 
 msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr "點擊此處查看懷俄明州縣書記聯繫資訊 (PDF）"
+msgstr "點擊此處查看懷俄明州縣書記聯繫資訊 (PDF）(英语)"
 
 msgid "Find out ways to register"
 msgstr "了解如何注册"

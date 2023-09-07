@@ -1,0 +1,19 @@
+uuid: 68492ca2-419f-4787-91c0-04848538c538
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_of_state_name
+    - node.type.state_territory
+id: node.state_territory.field_of_state_name
+field_name: field_of_state_name
+entity_type: node
+bundle: state_territory
+label: 'Of state name'
+description: 'Alternative state-specific translation of "of @state_name".'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

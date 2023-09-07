@@ -14,6 +14,8 @@
 {% block content %}
 {% set reg_type = content.field_registration_type | field_value | column('#markup') %}
 {% set state_name = label | field_value | render %}
+{% set in_state_name = node.field_in_state_name.value | default("@state_name") | t({ "@state_name": state_name}) %}
+{% set of_state_name = node.field_of_state_name.value | default("@state_name") | t({ "@state_name": state_name}) %}
 {% set in_english = "(in English)" | t %}
 
 {# Korean 'state' character logic #}
@@ -35,11 +37,14 @@
 
 
   {# NVRF Selector and download button #}
-  {% if content.field_accepts_nvrf.0["#markup"] == 1 %}
+  {% if node.field_accepts_nvrf.value == 1 %}
     {{ drupal_entity('block_content', 3) }}
   {% endif %}
 
-<p>{{'Last updated:' | t }} {{ node.revision_timestamp.value | date('U') | format_date('revision_date') }}</p>
+
+  <p>
+    {{'Last updated:' | t }} {{ node.revision_timestamp.value | date('U') | format_date('revision_date') | replace(t_numbers[language].numbers | default([])) }}
+  </p>
 
 {% endblock %}
 

@@ -19,7 +19,13 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
-  body:
+  created:
+    type: datetime_timestamp
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_body:
     type: text_textarea_with_summary
     weight: 10
     region: content
@@ -29,25 +35,9 @@ content:
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-  created:
-    type: datetime_timestamp
-    weight: 5
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_body:
-    type: text_textarea_with_summary
-    weight: 11
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
-    weight: 13
+    weight: 12
     region: content
     settings:
       sidebar: true
@@ -55,7 +45,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 12
+    weight: 11
     region: content
     settings:
       include_locked: true
@@ -119,5 +109,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  body: true
   promote: true
   sticky: true

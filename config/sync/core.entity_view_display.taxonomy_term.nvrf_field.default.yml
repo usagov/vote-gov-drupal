@@ -1,0 +1,57 @@
+uuid: 540e7d9a-765c-4045-b269-e87e6f0ced2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.nvrf_field.field_display_label
+    - field.field.taxonomy_term.nvrf_field.field_help_text
+    - field.field.taxonomy_term.nvrf_field.field_instructions
+    - field.field.taxonomy_term.nvrf_field.field_nvrf_machine_name
+    - taxonomy.vocabulary.nvrf_field
+  module:
+    - text
+id: taxonomy_term.nvrf_field.default
+targetEntityType: taxonomy_term
+bundle: nvrf_field
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_display_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_help_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_instructions:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_nvrf_machine_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true
