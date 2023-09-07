@@ -1,0 +1,4 @@
+field_nvrf_fields:
+  css:
+    component:
+      css/field-nvrf-fields-widget.css: {}

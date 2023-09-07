@@ -1,0 +1,8 @@
+name: 'Vote NVRF'
+type: module
+description: 'Provides custom functionality supporting NVRF. (includes NVRF compound field)'
+core_version_requirement: ^9 || ^10
+package: Custom
+dependencies:
+  - drupal:taxonomy
+project: 'Vote'
