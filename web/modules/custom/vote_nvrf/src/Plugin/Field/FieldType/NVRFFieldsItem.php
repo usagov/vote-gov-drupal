@@ -94,7 +94,7 @@ class NVRFFieldsItem extends FieldItemBase {
 
     $min = $field_definition->getSetting('min') ?: 0;
     $max = $field_definition->getSetting('max') ?: 999;
-    $values['nvrf_field'] = mt_rand($min, $max);;
+    $values['nvrf_field'] = mt_rand($min, $max);
 
     $values['required'] = (bool) mt_rand(0, 1);
 

@@ -22,7 +22,7 @@ class NVRFFieldsWidget extends WidgetBase {
    * {@inheritdoc}
    */
   public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
-    
+
     $element['nvrf_field'] = [
       '#type' => 'entity_autocomplete',
       '#title' => $this->t('NVRF Field'),
@@ -31,14 +31,14 @@ class NVRFFieldsWidget extends WidgetBase {
       '#step' => 0.01,
       '#selection_settings' => [
         'include_anonymous' => FALSE,
-        'target_bundles' => array('nvrf_field'),
-    ],
+        'target_bundles' => ['nvrf_field'],
+      ],
     ];
 
     $element['required'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Required'),
-      '#default_value' => isset($items[$delta]->required) ? $items[$delta]->required : NULL,
+      '#default_value' => $items[$delta]->required ?? NULL,
     ];
 
     $element['#theme_wrappers'] = ['container', 'form_element'];
