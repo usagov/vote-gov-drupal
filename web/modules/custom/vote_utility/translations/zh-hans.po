@@ -80,6 +80,12 @@ msgstr "登记投票的其他方式"
 msgid "Register by mail deadline:"
 msgstr "邮寄报名截止日期："
 
+msgid "Must be postmarked by @date"
+msgstr "必须在 @date 星期六之前加盖邮戳"
+
+msgid "Must be received by @date"
+msgstr "必须在 @date 之前收到"
+
 msgid "Online registration deadline:"
 msgstr "网上报名截止日期："
 
@@ -209,30 +215,23 @@ msgctxt "Long month name"
 msgid "December"
 msgstr "12月"
 
-msgctxt "day name"
 msgid "Monday"
 msgstr "星期一"
 
-msgctxt "day name"
 msgid "Tuesday"
 msgstr "星期二"
 
-msgctxt "day name"
 msgid "Wednesday"
 msgstr "星期三"
 
-msgctxt "day name"
 msgid "Thursday"
 msgstr "星期四"
 
-msgctxt "day name"
 msgid "Friday"
 msgstr "星期五"
 
-msgctxt "day name"
 msgid "Saturday"
 msgstr "sábado"
 
-msgctxt "day name"
 msgid "Sunday"
 msgstr "星期日"

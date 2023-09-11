@@ -124,6 +124,12 @@ msgstr "Другие способы зарегистрироваться для 
 msgid "Register by mail deadline:"
 msgstr "Крайний срок регистрации по почте:"
 
+msgid "Must be postmarked by @date"
+msgstr "Должен иметь почтовый штемпель до @date"
+
+msgid "Must be received by @date"
+msgstr "Должен быть получен до @date"
+
 # data.translations.register.dates__byonline_deadline
 msgid "Online registration deadline:"
 msgstr "Крайний срок регистрации он-лайн:"
@@ -257,36 +263,29 @@ msgid "December"
 msgstr "декабрь"
 
 # data.translations.days.monday
-msgctxt "day name"
 msgid "Monday"
 msgstr "понедельник"
 
 # data.translations.days.tuesday
-msgctxt "day name"
 msgid "Tuesday"
 msgstr "вторник"
 
 # data.translations.days.wednesday
-msgctxt "day name"
 msgid "Wednesday"
 msgstr "среда"
 
 # data.translations.days.thursday
-msgctxt "day name"
 msgid "Thursday"
 msgstr "четверг"
 
 # data.translations.days.friday
-msgctxt "day name"
 msgid "Friday"
 msgstr "пятница"
 
 # data.translations.days.saturday
-msgctxt "day name"
 msgid "Saturday"
 msgstr "суббота"
 
 # data.translations.days.sunday
-msgctxt "day name"
 msgid "Sunday"
 msgstr "воскресенье"

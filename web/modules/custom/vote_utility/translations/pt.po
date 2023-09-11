@@ -124,6 +124,12 @@ msgstr "Outras maneiras de registrar-se para votar"
 msgid "Register by mail deadline:"
 msgstr "Prazo final para registrar-se por correspondência:"
 
+msgid "Must be postmarked by @date"
+msgstr "Deve estar carimbado até o @date"
+
+msgid "Must be received by @date"
+msgstr "Deve ser recebido até o @date"
+
 # data.translations.register.dates__byonline_deadline
 msgid "Online registration deadline:"
 msgstr "Prazo final para registrar-se on-line:"
@@ -257,36 +263,29 @@ msgid "December"
 msgstr "dezembro"
 
 # data.translations.days.sunday
-msgctxt "day name"
 msgid "Sunday"
 msgstr "domingo"
 
 # data.translations.days.monday
-msgctxt "day name"
 msgid "Monday"
 msgstr "segunda-feira"
 
 # data.translations.days.tuesday
-msgctxt "day name"
 msgid "Tuesday"
 msgstr "terça-feira"
 
 # data.translations.days.wednesday
-msgctxt "day name"
 msgid "Wednesday"
 msgstr "quarta-feira"
 
 # data.translations.days.thursday
-msgctxt "day name"
 msgid "Thursday"
 msgstr "quinta-feira"
 
 # data.translations.days.friday
-msgctxt "day name"
 msgid "Friday"
 msgstr "sexta-feira"
 
 # data.translations.days.saturday
-msgctxt "day name"
 msgid "Saturday"
 msgstr "sábado"

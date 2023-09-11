@@ -26,6 +26,7 @@ settings:
       - '|'
       - link
       - drupalMedia
+      - embeddedContent
       - '|'
       - sourceEditing
   plugins:
@@ -45,7 +46,9 @@ settings:
       reversed: true
       startIndex: true
     ckeditor5_sourceEditing:
-      allowed_tags: {  }
+      allowed_tags:
+        - '<div id class>'
+        - '<h2 id>'
     ckeditor5_style:
       styles:
         -
