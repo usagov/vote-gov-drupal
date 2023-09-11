@@ -1,0 +1,21 @@
+uuid: a1adb9e1-934c-4dc6-b081-43a851657c65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nvrf_fields
+    - node.type.state_territory
+  module:
+    - vote_nvrf
+id: node.state_territory.field_nvrf_fields
+field_name: field_nvrf_fields
+entity_type: node
+bundle: state_territory
+label: 'NVRF Fields'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_nvrf_fields

@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.media_library
   module:
+    - ckeditor5_embedded_content
     - media
 name: 'Basic HTML'
 format: basic_html
@@ -22,7 +23,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p class="text-align-left text-align-center text-align-right"> <h2 class="text-align-left text-align-center text-align-right"> <h3 class="text-align-left text-align-center text-align-right"> <h4 class="text-align-left text-align-center text-align-right"> <h5 class="text-align-left text-align-center text-align-right"> <h6 class="text-align-left text-align-center text-align-right"> <a class="usa-button" href> <strong> <em> <u> <ul> <ol reversed start> <li> <drupal-media data-entity-type data-entity-uuid alt data-align>'
+      allowed_html: '<br> <p class="text-align-left text-align-center text-align-right"> <h2 id class="text-align-left text-align-center text-align-right"> <h3 class="text-align-left text-align-center text-align-right"> <h4 class="text-align-left text-align-center text-align-right"> <h5 class="text-align-left text-align-center text-align-right"> <h6 class="text-align-left text-align-center text-align-right"> <a class="usa-button" href> <div id class> <strong> <em> <u> <ul> <ol reversed start> <li> <drupal-media data-entity-type data-entity-uuid alt data-align> <embedded-content data-plugin-config data-plugin-id>'
       filter_html_help: true
       filter_html_nofollow: false
   media_embed:
@@ -36,3 +37,9 @@ filters:
         default: default
         media_library: media_library
       allowed_media_types: {  }
+  ckeditor5_embedded_content:
+    id: ckeditor5_embedded_content
+    provider: ckeditor5_embedded_content
+    status: true
+    weight: 100
+    settings: {  }
