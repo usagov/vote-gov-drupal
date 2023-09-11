@@ -42,8 +42,6 @@ class NVRFFieldsWidget extends WidgetBase {
     ];
 
     $element['#theme_wrappers'] = ['container', 'form_element'];
-    $element['#attributes']['class'][] = 'field-nvrf-fields-elements';
-    $element['#attached']['library'][] = 'vote_nvrf/field_nvrf_fields';
 
     return $element;
   }
