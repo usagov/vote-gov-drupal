@@ -12,7 +12,7 @@
     {% endif %}
 
       <p>{{ 'Online registration is currently not available. @link to vote at @state_name’s election website.' | t({
-          '@link': { "#markup": "<a href=\"#{more_info_link}\">#{more_info_link_text}</a>" } | render,
+          '@link': { "#markup": "<a href=\"#{more_info_link}\" data-state-ext=\"mail-inperson-registration\">#{more_info_link_text}</a>" } | render,
           '@state_name': state_name,
           '@of_state_name': of_state_name,
           '@in_state_name': in_state_name
@@ -39,7 +39,7 @@
   <h2>{{ 'How to check your voter registration' | t({ '@state_name': state_name }) }}</h2>
     {% if state_abrev != 'wy' %}
       <p>{{ 'You can @link on @state_name’s election website.' | t({
-          '@link': { "#markup": "<a href=\"#{confirm_reg_link}\">#{confirm_reg_link_text}</a>" } | render,
+          '@link': { "#markup": "<a href=\"#{confirm_reg_link}\" data-state-ext=\"confirm-registration\">#{confirm_reg_link_text}</a>" } | render,
           '@state_name': state_name,
           '@of_state_name': of_state_name,
           '@in_state_name': in_state_name
