@@ -22,6 +22,7 @@ dependencies:
     - field.field.node.state_territory.field_mailing_address_inst
     - field.field.node.state_territory.field_metatags
     - field.field.node.state_territory.field_more_info_link
+    - field.field.node.state_territory.field_nvrf_fields
     - field.field.node.state_territory.field_nvrf_last_updated_date
     - field.field.node.state_territory.field_of_state_name
     - field.field.node.state_territory.field_online_deadline
@@ -73,6 +74,7 @@ hidden:
   field_mailing_address_inst: true
   field_metatags: true
   field_more_info_link: true
+  field_nvrf_fields: true
   field_nvrf_last_updated_date: true
   field_of_state_name: true
   field_online_deadline: true
