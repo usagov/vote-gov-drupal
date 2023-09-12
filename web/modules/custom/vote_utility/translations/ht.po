@@ -124,6 +124,12 @@ msgstr "Lòt fason pou enskri pou vote"
 msgid "Register by mail deadline:"
 msgstr "Dat limit enskripsyon pa korespondans:"
 
+msgid "Must be postmarked by @date"
+msgstr "Dwe gen so lapòs pou pita nan dat k ap @date"
+
+msgid "Must be received by @date"
+msgstr "Dwe rive pou pita @date"
+
 # data.translations.register.dates__byonline_deadline
 msgid "Online registration deadline:"
 msgstr "Dat limit enskripsyon anliy:"
@@ -257,36 +263,29 @@ msgid "December"
 msgstr "Desanm"
 
 # data.translations.days.monday
-msgctxt "day name"
 msgid "Monday"
 msgstr "Lendi"
 
 # data.translations.days.tuesday
-msgctxt "day name"
 msgid "Tuesday"
 msgstr "Madi"
 
 # data.translations.days.wednesday
-msgctxt "day name"
 msgid "Wednesday"
 msgstr "Mèkredi"
 
 # data.translations.days.thursday
-msgctxt "day name"
 msgid "Thursday"
 msgstr "Jedi"
 
 # data.translations.days.friday
-msgctxt "day name"
 msgid "Friday"
 msgstr "Vandredi"
 
 # data.translations.days.saturday
-msgctxt "day name"
 msgid "Saturday"
 msgstr "Samdi"
 
 # data.translations.days.sunday
-msgctxt "day name"
 msgid "Sunday"
 msgstr "Dimanch"

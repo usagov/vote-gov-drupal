@@ -83,6 +83,12 @@ msgstr "기타 유권자 등록 방법"
 msgid "Register by mail deadline:"
 msgstr "우편 투표자 등록 마감일:"
 
+msgid "Must be postmarked by @date"
+msgstr "반드시 @date 까지 소인이 찍혀야 합니다."
+
+msgid "Must be received by @date"
+msgstr "반드시 @date 까지 접수되어야 합니다."
+
 msgid "Online registration deadline:"
 msgstr "온라인 등록 마감일:"
 
@@ -212,30 +218,23 @@ msgctxt "Long month name"
 msgid "December"
 msgstr "12월"
 
-msgctxt "day name"
 msgid "Monday"
 msgstr "월요일"
 
-msgctxt "day name"
 msgid "Tuesday"
 msgstr "화요일"
 
-msgctxt "day name"
 msgid "Wednesday"
 msgstr "수요일"
 
-msgctxt "day name"
 msgid "Thursday"
 msgstr "목요일"
 
-msgctxt "day name"
 msgid "Friday"
 msgstr "금요일"
 
-msgctxt "day name"
 msgid "Saturday"
 msgstr "토요일"
 
-msgctxt "day name"
 msgid "Sunday"
 msgstr "일요일"
