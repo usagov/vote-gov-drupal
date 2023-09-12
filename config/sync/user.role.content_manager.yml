@@ -3,6 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block_content.type.basic
+    - block_content.type.email_signup
+    - block_content.type.government_banner
+    - block_content.type.inline_alert
+    - block_content.type.nvrf_card
+    - block_content.type.registration_form_selector
+    - block_content.type.search
+    - block_content.type.sitewide_alert
     - media.type.audio
     - media.type.document
     - media.type.image
@@ -15,7 +23,6 @@ dependencies:
     - workflows.workflow.publishing_content
   module:
     - block_content
-    - block_content_permissions
     - content_moderation
     - content_translation
     - editoria11y
@@ -32,6 +39,7 @@ label: 'Content Manager'
 weight: 3
 is_admin: null
 permissions:
+  - 'access block library'
   - 'access content overview'
   - 'access files overview'
   - 'access media overview'
@@ -45,7 +53,6 @@ permissions:
   - 'create inline_alert block content'
   - 'create landing content'
   - 'create media'
-  - 'create nvrf_card block content'
   - 'create nvrf_page content'
   - 'create page content'
   - 'create remote_video media'
@@ -60,7 +67,6 @@ permissions:
   - 'delete any inline_alert block content'
   - 'delete any landing content'
   - 'delete any media'
-  - 'delete any nvrf_card block content'
   - 'delete any page content'
   - 'delete any remote_video media'
   - 'delete any sitewide_alert block content'
@@ -80,12 +86,20 @@ permissions:
   - 'delete state_territory revisions'
   - 'delete terms in nvrf_field'
   - 'edit any audio media'
+  - 'edit any basic block content'
   - 'edit any document media'
+  - 'edit any email_signup block content'
+  - 'edit any government_banner block content'
   - 'edit any image media'
+  - 'edit any inline_alert block content'
   - 'edit any landing content'
+  - 'edit any nvrf_card block content'
   - 'edit any nvrf_page content'
   - 'edit any page content'
+  - 'edit any registration_form_selector block content'
   - 'edit any remote_video media'
+  - 'edit any search block content'
+  - 'edit any sitewide_alert block content'
   - 'edit any state_territory content'
   - 'edit own audio media'
   - 'edit own document media'
@@ -98,6 +112,14 @@ permissions:
   - 'edit terms in nvrf_field'
   - 'mark as hidden in editoria11y'
   - 'revert all revisions'
+  - 'revert any basic block content revisions'
+  - 'revert any email_signup block content revisions'
+  - 'revert any government_banner block content revisions'
+  - 'revert any inline_alert block content revisions'
+  - 'revert any nvrf_card block content revisions'
+  - 'revert any registration_form_selector block content revisions'
+  - 'revert any search block content revisions'
+  - 'revert any sitewide_alert block content revisions'
   - 'revert landing revisions'
   - 'revert nvrf_page revisions'
   - 'revert page revisions'
@@ -116,15 +138,7 @@ permissions:
   - 'translate paragraph'
   - 'translate remote_video media'
   - 'translate state_territory node'
-  - 'update any basic block content'
-  - 'update any email_signup block content'
-  - 'update any government_banner block content'
-  - 'update any inline_alert block content'
   - 'update any media'
-  - 'update any nvrf_card block content'
-  - 'update any registration_form_selector block content'
-  - 'update any search block content'
-  - 'update any sitewide_alert block content'
   - 'update content translations'
   - 'update media'
   - 'use publishing_content transition archive'
@@ -134,6 +148,14 @@ permissions:
   - 'use publishing_content transition restore_to_draft'
   - 'view all media revisions'
   - 'view all revisions'
+  - 'view any basic block content history'
+  - 'view any email_signup block content history'
+  - 'view any government_banner block content history'
+  - 'view any inline_alert block content history'
+  - 'view any nvrf_card block content history'
+  - 'view any registration_form_selector block content history'
+  - 'view any search block content history'
+  - 'view any sitewide_alert block content history'
   - 'view any unpublished content'
   - 'view editoria11y checker'
   - 'view landing revisions'
@@ -142,7 +164,6 @@ permissions:
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view page revisions'
-  - 'view restricted block content'
   - 'view state_territory revisions'
   - 'view the administration theme'
   - 'view unpublished paragraphs'

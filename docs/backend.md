@@ -67,6 +67,9 @@ Adds the ability to override a menu link per translation.
 ### Custom
 Below is a list of custom modules created for use on Vote.gov. These modules can be found in the codebase at `/web/modules/custom`. These modules are maintained by project developers and need to be re-evaulated for each Drupal upgrade.
 
+#### Embedded Content - Touchpoints survey
+A CKEditor5 Embedded Content plugin that provides a means for embedding a Touchpoints survey in the wysiwyg.
+
 #### USAgov login
 Adds the ability to disable the default Drupal login form and replace with a button to log in via SSO.
 

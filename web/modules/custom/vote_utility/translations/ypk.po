@@ -80,6 +80,12 @@ msgstr "Ilangi nakmikilleghmun ilatellghet @state_name-emi "
 msgid "Register by mail deadline:"
 msgstr "Ilatelleq tuyuqayugkun tuuniviga:"
 
+msgid "Must be postmarked by @date"
+msgstr "Tuyumayaghqaguq @date"
+
+msgid "Must be received by @date"
+msgstr "Kaasimayaghqaguq @date"
+
 msgid "Online registration deadline:"
 msgstr "Online-ekun ilatellghem tuuniviga:"
 
@@ -206,30 +212,23 @@ msgctxt "Long month name"
 msgid "December"
 msgstr "Kaneghyengesi"
 
-msgctxt "day name"
 msgid "Monday"
 msgstr "Manti"
 
-msgctxt "day name"
 msgid "Tuesday"
 msgstr "Tuwesti"
 
-msgctxt "day name"
 msgid "Wednesday"
 msgstr "Winesti"
 
-msgctxt "day name"
 msgid "Thursday"
 msgstr "Thursday-a"
 
-msgctxt "day name"
 msgid "Friday"
 msgstr "Friday-a"
 
-msgctxt "day name"
 msgid "Saturday"
 msgstr "Sareri"
 
-msgctxt "day name"
 msgid "Sunday"
 msgstr "Santi"
