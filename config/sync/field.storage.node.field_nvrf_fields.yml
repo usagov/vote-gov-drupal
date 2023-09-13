@@ -1,0 +1,19 @@
+uuid: 8a845a69-2fbb-4d57-b56b-c202f15d09dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - vote_nvrf
+id: node.field_nvrf_fields
+field_name: field_nvrf_fields
+entity_type: node
+type: field_nvrf_fields
+settings: {  }
+module: vote_nvrf
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

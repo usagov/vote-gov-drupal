@@ -1,0 +1,12 @@
+
+# Default value.
+field.value.field_nvrf_fields:
+  type: mapping
+  label: Default value
+  mapping:
+    nvrf_field:
+      type: integer
+      label: NVRF Field
+    required:
+      type: boolean
+      label: Required
