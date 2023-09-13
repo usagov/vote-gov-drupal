@@ -20,13 +20,17 @@ export bucket_name=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings
 export bucket=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.bucket')
 export bucket_endpoint=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.endpoint')
 
-export external_endpoint="https://ssg-${environment}.vote.gov"
-[ "${environment}" = "prod" ] && export external_endpoint="https://ssg.vote.gov"
+export ssg_endpoint="https://ssg-${environment}.vote.gov"
+[ "${environment}" = "prod" ] && export ssg_endpoint="https://ssg.vote.gov"
+export cms_endpoint="https://cms-${environment}.vote.gov"
+[ "${environment}" = "prod" ] && export cms_endpoint="https://cms.vote.gov"
 
 cd ${app_path}
 echo "Running 'drush tome:static' in '${environment}'..."
-drush tome:static --uri=${external_endpoint} --process-count=2 --retry-count=0 -y
-drush tome:static-export-path '/sitemap.xml,/sitemap_generator/default/sitemap.xsl' --uri=${external_endpoint} --process-count=2 --retry-count=0 -y
+drush simple-sitemap:generate --uri=${ssg_endpoint}
+drush tome:static --uri=${ssg_endpoint} --process-count=2 --retry-count=0 -y
+drush tome:static-export-path '/sitemap.xml,/sitemap_generator/default/sitemap.xsl' --uri=${ssg_endpoint} --process-count=2 --retry-count=0 -y
+drush simple-sitemap:generate --uri=${cms_endpoint}
 echo "'drush tome:static' task completed!"
 
 echo "Adding missing Core assets vendor directory"
