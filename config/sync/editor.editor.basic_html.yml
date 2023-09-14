@@ -47,8 +47,11 @@ settings:
       startIndex: true
     ckeditor5_sourceEditing:
       allowed_tags:
-        - '<div id class>'
+        - '<div id class data-allow-multiple>'
         - '<h2 id>'
+        - '<h3 class>'
+        - '<button type class aria-expanded aria-controls>'
+        - '<ul class>'
     ckeditor5_style:
       styles:
         -
