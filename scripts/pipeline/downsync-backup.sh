@@ -19,6 +19,10 @@ wait_for_tunnel() {
 
 ## Create a tunnel through the application to pull the database.
 echo "Creating tunnel to database..."
+if [ ${BACKUP_ENV} = "prod" ] || [ ${BACKUP_ENV} = "test" ]; then
+  cf enable-ssh vote-drupal-${BACKUP_ENV}
+  cf restart --strategy rolling vote-drupal-${BACKUP_ENV}
+fi
 cf connect-to-service --no-client vote-drupal-${BACKUP_ENV} vote-mysql-${BACKUP_ENV} > backup.txt &
 
 wait_for_tunnel
@@ -100,4 +104,7 @@ echo "Cleaning up old connections..."
 } >/dev/null 2>&1
 
 ## Clean up.
+if [ ${BACKUP_ENV} = "prod" ] || [ ${BACKUP_ENV} = "test" ]; then
+  cf disable-ssh vote-drupal-${BACKUP_ENV}
+fi
 rm -rf backup.txt ~/.mysql
