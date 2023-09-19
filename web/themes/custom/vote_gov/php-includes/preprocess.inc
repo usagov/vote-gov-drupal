@@ -63,8 +63,8 @@ function vote_gov_preprocess_links__language_block(&$variables) {
     // Append the english language name after the translated one
     // if they are unique.
     if (isset($languages[$i])
-        && $variables['links'][$i]['link']['#title'] != $languages[$i]->getName()) {
-        $variables['links'][$i]['link']['#english'] = "({$languages[$i]->getName()})";
+      && $variables['links'][$i]['link']['#title'] != $languages[$i]->getName()) {
+      $variables['links'][$i]['link']['#english'] = "({$languages[$i]->getName()})";
     }
   }
 }
