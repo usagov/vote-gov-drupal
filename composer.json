@@ -52,6 +52,7 @@
         "drupal/entity_reference_revisions": "^1.10",
         "drupal/field_group": "^3.4",
         "drupal/file_delete": "^2.0",
+        "drupal/image_style_warmer": "^1.2",
         "drupal/language_switcher_extended": "^1.1",
         "drupal/link_attributes": "^2.1",
         "drupal/log_stdout": "dev-3339853-drupal-10-compatibility",
