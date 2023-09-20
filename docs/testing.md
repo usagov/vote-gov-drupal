@@ -1,6 +1,6 @@
 # QA & Testing
 
-Vote.gov uses Cypress as its automated testing tool. To learn more about Cypress click [here](https://docs.cypress.io/guides/overview/why-cypress#What-you-ll-learn) to better understand the tool and why we use it. 
+Vote.gov uses Cypress as its automated testing tool. To learn more about Cypress click [here](https://docs.cypress.io/guides/overview/why-cypress#What-you-ll-learn) to better understand the tool and why we use it.
 
 We are also using CircleCi for continuous coverage of testing. There are several testing pipeline (see below for more information) that helps provide confidence and ensure we are catching any bugs are errors before we hit production.
 
@@ -16,19 +16,19 @@ _This is a two part test_
 - External link validation will check each state page and verify that all link links leading to an external source are valid.
 
 
-__Functional Testing:__ To check the functionality of the site we have written a series of tests to check both frontend and backend (content management and content editing).
+__Functional Testing:__ To check the functionality of the site we have written a series of tests to check both frontend and backend (content management and content editing) functions.
 
-## Testing with Drupal 
-With a Drupal CMS there are several aspects of testing that need to be covered. 
+## Testing with Drupal
+With a Drupal CMS there are several aspects of testing that need to be covered.
 
-There are multiple custom commands that will both create a user and also delete them. 
+There are multiple custom commands that will both create a user and also delete them.
 
-Here are the following users/role 
+Here are the following users/role
 - site admin
-- content manager 
-- content editor  
+- content manager
+- content editor
 
-Each of these roles has access to different level of of the site and we need to check to ensure that they have not changed.
+Each of these roles has different access levels on the site and we need to check to ensure that they still function as expected.
 
 
 ## Get started testing
@@ -38,7 +38,7 @@ All testing commands must be run while in the `testing` folder.
 
 - Open the cypress runner: `npm run cy:open`
 
-From here any test can be ran via the runner for full UI and debugging. 
+From here, any test can be ran via the GUI for full UI and debugging.
 
 ### Following commands will be run headless in the terminal:
 
@@ -53,4 +53,4 @@ From here any test can be ran via the runner for full UI and debugging.
 - Full testing suite of Frontend, Backend, Accessibility, External and Internal link validation: `npm run testSuite`
 
 ### Testing in CircleCi
-Within the CircleCi pipeline we are using a different set of scripts within the config file.  All needed scripts are ran by adding `:pipeline` at the end.  By doing this the `pipeline.config.js` file is using the static site url and not a local. 
+Within the CircleCi pipeline we are using a different set of scripts within the config file.  All needed scripts are ran by adding `:pipeline` at the end.  By doing this the `pipeline.config.js` file is using the static site url and not a local.
