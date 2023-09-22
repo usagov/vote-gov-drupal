@@ -31,16 +31,11 @@ Insert a brief summary of the changes included in this PR and any additional inf
 - [ ] Automated tests have passed on this PR.
 - [ ] A reviewer has been designated.
 - [ ] Deployment and testing steps have been documented above, if applicable.
-- [ ] The result of these changes meet the JIRA ticket "definition of done".
-- [ ] This work meets the project [standards](/usagov/vote-gov-drupal/blob/dev/docs/standards.md).
 
 ## Checklist for the Peer Reviewers
 
-- [ ] The code has been reviewed.
-- [ ] The file changes are relevant to the task.
-- [ ] The author of the commits match the assignee.
-- [ ] Code standards and best practices are followed.
-- [ ] QA/Test steps have been successfully completed and the results match "definition of done".
-- [ ] Drupal database log and browser console log are free of errors.
-- [ ] There are no known side-effects outside the expected behavior.
+- [ ] The file changes are relevant to the task objective.
 - [ ] Code is readable and includes appropriate commenting.
+- [ ] Code standards and best practices are followed.
+- [ ] QA/Test steps were successfully completed, if applicable.
+- [ ] Applicable logs are free of errors.
