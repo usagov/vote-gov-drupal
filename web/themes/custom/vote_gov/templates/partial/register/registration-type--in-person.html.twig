@@ -13,7 +13,7 @@
     {% endif %}
 
         <p>{{ 'Register in person at your local election office. @link on @state_name’s election website.' | t({
-            '@link': { "#markup": "<a href=\"#{more_info_link}\">#{more_info_link_text}</a>" } | render,
+            '@link': { "#markup": "<a href=\"#{more_info_link}\" data-state-ext=\"offline-registration\">#{more_info_link_text}</a>" } | render,
             '@state_name': state_name,
             '@of_state_name': of_state_name,
             '@in_state_name': in_state_name
@@ -39,16 +39,18 @@
   <h2>{{ 'How to check your voter registration' | t({ '@state_name': state_name }) }}</h2>
     {% if state_abrev != 'wy' %}
       <p>{{ 'You can @link on @state_name’s election website.' | t({
-          '@link': { "#markup": "<a href=\"#{confirm_reg_link}\">#{confirm_reg_link_text}</a>" } | render,
+          '@link': { "#markup": "<a href=\"#{confirm_reg_link}\"
+          data-state-ext=\"confirm-registration\">#{confirm_reg_link_text}</a>" } | render,
           '@state_name': state_name,
           '@of_state_name': of_state_name,
           '@in_state_name': in_state_name
-        }) }}
+        })
+      }}
       </p>
     {% else %} {# Wyoming alt text #}
       {% set alt_confirm_reg_link_text = "Click here to view Wyoming's county clerk contact information (PDF)" | t %}
       <p>{{ 'You can confirm your voter registration status by contacting your local registration office. @link.' | t({
-          '@link': { "#markup": "<a href=\"#{confirm_reg_link}\">#{alt_confirm_reg_link_text}</a>" } | render
+          '@link': { "#markup": "<a href=\"#{confirm_reg_link}\" data-state-ext=\"confirm-registration\">#{alt_confirm_reg_link_text}</a>" } | render
         }) }}
       </p>
     {% endif %}

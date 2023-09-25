@@ -158,7 +158,7 @@ third_party_settings:
       label: Links
       region: content
       parent_name: group_form_tabs
-      weight: 23
+      weight: 22
       format_type: tab
       format_settings:
         classes: ''
@@ -176,11 +176,12 @@ third_party_settings:
         - field_identification_inst
         - field_political_party_inst
         - field_mailing_address_inst
+        - field_nvrf_fields
         - field_nvrf_last_updated_date
       label: NVRF
       region: content
       parent_name: group_form_tabs
-      weight: 24
+      weight: 23
       format_type: tab
       format_settings:
         classes: ''
@@ -196,7 +197,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 8
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -334,7 +335,7 @@ content:
     third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
-    weight: 21
+    weight: 13
     region: content
     settings:
       sidebar: true
@@ -350,13 +351,13 @@ content:
     third_party_settings: {  }
   field_nvrf_fields:
     type: field_nvrf_fields
-    weight: 26
+    weight: 23
     region: content
     settings: {  }
     third_party_settings: {  }
   field_nvrf_last_updated_date:
     type: datetime_default
-    weight: 23
+    weight: 24
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -479,37 +480,37 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 20
+    weight: 12
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 12
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 10
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   published_at:
     type: publication_date_timestamp
-    weight: 13
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   simple_sitemap:
-    weight: 9
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 14
+    weight: 10
     region: content
     settings:
       display_label: true
@@ -523,13 +524,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 19
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 7
+    weight: 2
     region: content
     settings:
       match_operator: CONTAINS
@@ -538,7 +539,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 11
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
