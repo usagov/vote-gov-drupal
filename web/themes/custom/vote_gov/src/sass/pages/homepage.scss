@@ -153,8 +153,10 @@
   border-top-left-radius: 0px;
   color: white;
   columns: 3;
+  column-fill: auto;
   min-width: 600px;
   min-height: 860px;
+  max-height: 860px;
   position: absolute;
   z-index: 400;
 

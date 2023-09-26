@@ -7,8 +7,6 @@
  */
 #}
 
-{{ attach_library('vote_gov/registration_tool') }}
-
 {% block paragraph %}
   <div class="bg-blue css-arrow page-vote">
     <div class="grid-container">
@@ -30,6 +28,7 @@
                   <div class="input-control-container">
                     <button class="reset-btn" type="reset" alt="Clear the search form"></button>
                     <button 
+                      id="dropdown-btn"
                       class="dropdown-btn" type="button"
                       onclick="stateListVisible()" onblur="stateListVisible()"></button>
                     <span class="btn-divider"></span>
