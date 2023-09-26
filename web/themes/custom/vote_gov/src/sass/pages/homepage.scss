@@ -77,6 +77,16 @@
   z-index: 200;
 }
 
+.usa-language__submenu {
+  columns: 3 auto;
+}
+
+.usa-language__submenu__list {
+  list-style: none;
+  white-space: normal;
+  margin-top: 0;
+}
+
 .input-buttons-group {
   width: 400px;
   max-width: 100%;
@@ -98,6 +108,7 @@
   button {
     background-color: transparent;
     height: 80%;
+    aspect-ratio: 1;
     right: 0;
     bottom: 0;
     position: absolute;
