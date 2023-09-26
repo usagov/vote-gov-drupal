@@ -48,7 +48,34 @@
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-TDRBDKS');</script>
+          })(window,document,'script','dataLayer','GTM-TDRBDKS');
+          
+          function filterStateList() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("state-input");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("results-list");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+          }
+
+          function stateListVisible() {
+            var x = document.getElementById("results-container");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+        </script>
         <!-- End Google Tag Manager -->
         {% endif %}
 </head>
