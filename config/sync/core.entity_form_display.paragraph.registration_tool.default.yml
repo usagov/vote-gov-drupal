@@ -4,9 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.registration_tool.field_dropdown_label
-    - field.field.paragraph.registration_tool.field_form_heading
     - field.field.paragraph.registration_tool.field_heading
-    - field.field.paragraph.registration_tool.field_submit_button_label
     - paragraphs.paragraphs_type.registration_tool
 id: paragraph.registration_tool.default
 targetEntityType: paragraph
@@ -21,25 +19,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_form_heading:
-    type: string_textfield
-    weight: 1
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_heading:
     type: string_textfield
     weight: 0
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_submit_button_label:
-    type: string_textfield
-    weight: 3
     region: content
     settings:
       size: 60

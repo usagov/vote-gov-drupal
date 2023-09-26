@@ -27,11 +27,6 @@ touchpoints:
   js:
     https://touchpoints.app.cloud.gov/touchpoints/5941f5a3.js: { type: external, attributes: { async: true } }
 
-registration_tool:
-  version: VERSION
-  js:
-    dist/js/registration-tool.js: { minified: true }
-
 nvrf_pdf_download:
   version: VERSION
   js:
