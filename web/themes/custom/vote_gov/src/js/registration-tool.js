@@ -5,7 +5,7 @@
           var input, filter, ul, li, a, i, txtValue;
           input = document.getElementById("state-input");
           filter = input.value.toUpperCase();
-          ul = document.getElementById("state-list-results");
+          ul = document.getElementById("results-list");
           li = ul.getElementsByTagName("li");
           for (i = 0; i < li.length; i++) {
               a = li[i].getElementsByTagName("a")[0];
@@ -19,7 +19,7 @@
         }
         
         function stateListVisible() {
-          var x = document.getElementById("filtered-states-list");
+          var x = document.getElementById("results-container");
           if (x.style.display === "none") {
             x.style.display = "block";
           } else {
