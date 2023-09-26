@@ -154,11 +154,19 @@
   color: white;
   columns: 3;
   column-fill: auto;
-  min-width: 600px;
-  min-height: 860px;
-  max-height: 860px;
+  height: 940px;
   position: absolute;
   z-index: 400;
+
+  @media only screen and (max-width: 600px) {
+    columns: auto;
+    overflow: auto;
+    min-height: unset;
+    max-height: 230px;
+    min-width: unset;
+    width: 400px;
+    border-top-right-radius: 0px;
+  }
 
   #results-list {
     list-style: none;
