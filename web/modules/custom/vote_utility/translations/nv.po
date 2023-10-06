@@ -144,7 +144,7 @@ msgstr "E'et'11d b1 ha'diln4h7g77 bee e'e'aah g0ne'"
 
 # data.translations.register.confirm_registration__heading
 msgid "How to check your voter registration"
-msgstr "Hait'1o i'ii'n77[ biniiy4 hazh'dii['88h7g77 han7t1h @state_name"
+msgstr "Hait'1o i'ii'n77[ biniiy4 hazh'dii['88h7g77 han7t1h"
 
 # data.translations.register.confirm_registration__intro_WY
 msgid "You can confirm your voter registration status by contacting your local registration office. @link."
