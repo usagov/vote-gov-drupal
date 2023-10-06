@@ -30,7 +30,7 @@ msgstr "Ak44'di n1zk'33z:"
 
 # config.languages.params.ext_link_title
 msgid "External link opens in new window"
-msgstr "External link opens in new window"
+msgstr "T['00'd66' link-7g77 ts4ts-' 1niid7g77 22'1n11yiil'88h"
 
 # config.languages.params.skip_text
 msgid "Skip to main content"
@@ -42,7 +42,7 @@ msgstr "&lt;Bilag1ana k'ehj7&gt;"
 
 # data.translations.footer.vote_logo_alt_text
 msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgstr "&'ii'n77[ b1 sits'aa y1zh7 si'1n7g77 biyi' asdzoh naashch'22'7g77 47 n7l47 o'oot'ah n7igo yaa y1[ti'go si'32go 1lyaa "
+msgstr "Sitsaa y1zh7 biyi' asdzogo naashch'22'go e'et'11d biih yilts0osgo bik11'"
 
 # data.translations.footer.identifier_gsa_txt
 msgid "An official website of the @link."
@@ -82,7 +82,7 @@ msgstr "yi[ nidaalnish"
 
 # data.translations.footer.eac_logo_alt_text
 msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
-msgstr "U.S. Election Assistance Commission bee bik'7'diidlid7g77 47 biniy4h7g77 Vote.gov yi[ ah77'1azhgo yaa halne'"
+msgstr "US Election Assistance Commission bi-logo bik1'7g77 Vote.gov yi[ naazhnish biniy4"
 
 # data.translations.footer.twitter_text
 msgid "Follow Vote.gov on Twitter"
@@ -90,7 +90,7 @@ msgstr "Vote.gov bik44' nanin1 Twitter biyi' &lt;Bilag1ana k'ehj7&gt"
 
 # data.translations.footer.section_sign_up
 msgid "Email sign-up"
-msgstr "Email sign-up"
+msgstr "Email b7k1 hash'dil4h7g77"
 
 # data.translations.footer.section_contact
 msgid "Contact"
@@ -98,7 +98,7 @@ msgstr "Contact"
 
 # data.translations.footer.gsa_logo_alt
 msgid "GSA logo"
-msgstr "GSA logo"
+msgstr "GSA bi-logo"
 
 # data.translations.homepage.search_placeholder
 msgid "Search Vote.gov"
@@ -106,7 +106,7 @@ msgstr "vote.gov hanit1h"
 
 # data.translations.homepage.section_banner
 msgid "Official government website"
-msgstr "Official government website"
+msgstr "Naat'1anii al1adi7g77 bi-website"
 
 # data.translations.register.heading
 msgid "Register to vote in @state_name"
@@ -114,11 +114,11 @@ msgstr "Ha'did77l77[ i'ii'n77[ biniiy4 @state_name"
 
 # data.translations.register.heading2
 msgid "How to register to vote"
-msgstr "Hait'1o i'ii'n77[ biniiy4 ha'dil'88h @state_name"
+msgstr "E'et'11d haayit'4ego b1 hazh'dii['88h"
 
 # data.translations.register.other_language_selection__heading
 msgid "Other ways to register to vote"
-msgstr "A['22 1daat'1o hazh'dii['88h i'ii'n77[ biniiy4 @state_name"
+msgstr "N11n1 [ah 1t'4ego e'et'11d b1 hazh'didool7[7g77"
 
 # data.translations.register.dates__bymail_deadline
 msgid "Register by mail deadline:"
@@ -140,11 +140,11 @@ msgstr "I'ii'n77[ biniiy4 yah ajigh11hgo ha'dilne' bee nihoolzh77sh"
 
 # data.translations.register.dates__heading
 msgid "Voter registration deadlines"
-msgstr "I'ii'n77[ biniiy4 ha'dilne' bee nihoolzh77sh @state_name"
+msgstr "E'et'11d b1 ha'diln4h7g77 bee e'e'aah g0ne'"
 
 # data.translations.register.confirm_registration__heading
 msgid "How to check your voter registration"
-msgstr "Hait'1o i'ii'n77[ biniiy4 hazh'dii['88h7g77 han7t1h @state_name"
+msgstr "Hait'1o i'ii'n77[ biniiy4 hazh'dii['88h7g77 han7t1h"
 
 # data.translations.register.confirm_registration__intro_WY
 msgid "You can confirm your voter registration status by contacting your local registration office. @link."
@@ -156,51 +156,51 @@ msgstr "Kwe'4 bi[ ad7lch77d Wyoming hahoodzohj7 county clerk woly4ego bi[ da'7n7
 
 # data.translations.register.confirm_registration__intro
 msgid "You can @link on @state_name’s election website."
-msgstr "I'ii'n77[ biniiy4 ha'dinila1g77 b7na'7d7[kidgo koj8' hod77lnih @link"
+msgstr "@link i'ii'n77[ bi[ haz'32gi bi-website-gi @state_name d7n77['88[."
 
 # @link: data.translations.register.confirm_registration__intro
 msgid "confirm your voter registration status"
-msgstr "hahoodzoh bee w0j7h7g77 i'ii'n77[ biwebsitegi"
+msgstr "E'et'11d biniy4 b1 ha'dinil1ago baa nid7n4eshtaa[ n7n7zingo"
 
 # data.translations.register.by_mail__intro
 msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
-msgstr "B44sh [ich7'ii biyi' ha'dilne'7g77 1den k'ad. Hait'1o i'ii'n77[ biniiy4 hazh'dii['88h7g77 han7t1h @link"
+msgstr "B44sh [ich7'ii nits7kees7 biyi'j8' e'doot'a[ biniy4 hazh'didool7[7g77 47 k'ad 1din. @link e'doot'a[ biniy4 h0tsaago hahoodzo bi-website-gi @state_name"
 
 # @link: data.translations.register.by_mail__intro
 msgid "Find out ways to register"
-msgstr "@state_name hahoodzoh bee w0j7h7g77 biwebsite biyi'"
+msgstr "Haadayit'4ego hazh'di'dool7[7g77 han7t1"
 
 # data.translations.register.in_person__intro
 msgid "Register in person at your local election office. @link on @state_name’s election website."
-msgstr "T'11 ni yah anin11hgo ha'did77l77[ k44hon7t'8n7gi i'ii'n77[ bi[ haz'32gi. N11s baa 77n7[ta' doogo i'iin77[ biniiy4 ha'diln44h7g77 @link"
+msgstr "T'11 ni[ haz'1n7gi yah ad77n1a[go ha'di'd77l77[. @link h0tsaago hahoodzo bi-website-gi @state_name."
 
 # @link: data.translations.register.in_person__intro
 msgid "Learn more about how to register"
-msgstr "@state_name's hahoodzoh bee w0j7h7g77 b44sh [ich7'ii biyi' hane'gi website"
+msgstr "E'et'11d biniy4 ha'diln4h7g77 hazh0'0 b7hoo['aah"
 
 # data.translations.register.not_needed__intro
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
-msgstr "Doo ha'd7l44hg00 bee haz'3 @state_name biyi'.  N11s baa 77n7[ta' doogo i'iin77[ biniiy4 ha'diln44h7g77 @link"
+msgstr "@state_name biyi' e'et'11d b1 hada'dilne'7g77 doo bee haz'32 da. @link h0tsaago hahoodzo bi-website-gi @state_name."
 
 # @link: data.translations.register.not_needed__intro
 msgid "Learn more about voting"
-msgstr "@state_name's hahoodzoh bee w0j7h7g77 b44sh [ich7'ii biyi' hane'gi website"
+msgstr "I'ii'n77[  hazh0'0 b7hoo['aah"
 
 # data.translations.register.online__answer1
 msgid "@link on @state_name’s election website."
-msgstr "B44sh [ich7'ii bee ha'd7l44h7g77 baatiihnin11h @link"
+msgstr "@link h0tsaago hahoodzo i'ii'n77[ bi[ haz'32gi bi-website-gi @state_name."
 
 # @link: data.translations.register.online__answer1
 msgid "Start your online registration"
-msgstr "@state_name's hahoodzoh bee w0j7h7g77 b44sh [ich7'ii biyi' hane'gi website"
+msgstr "B44sh [ich7'ii nits7kees7 biyi'j8' hada'diln4h7g77 bee ha'd7l44h"
 
 # data.translations.register.online__answer2
 msgid "You can also @link on @state_name’s election website."
-msgstr "Ha'd7l44h7g77 a[d0' naaltsoos nin1h1jeehd00 47 doodago t'11 ni yah anin11hgo bee ah00t'i' @link"
+msgstr "N11na a[d0' @link h0tsaago hahoodzo i'ii'n77[ bi[ haz'32gi bi-website-gi @state_name."
 
 # @link: data.translations.register.online__answer2
 msgid "register to vote by mail or in person"
-msgstr "@state_name's hahoodzoh bee w0j7h7g77 b44sh [ich7'ii biyi' hane'gi website"
+msgstr "naaltsoos naanin1h1jeehgi 47 doodago t'11 ni yah anin1ahgo e'et'11d biniy4 ha'd7l44h"
 
 # data.translations.months.january
 msgctxt "Long month name"
