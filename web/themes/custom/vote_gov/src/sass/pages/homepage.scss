@@ -148,15 +148,14 @@
 
 #results-container {
   background-color: #1C2D4E;
-  padding: 30px 30px 24px 30px;
   border-radius: 5px;
   border-top-left-radius: 0px;
   color: white;
   columns: 3;
-  column-fill: auto;
-  height: 940px;
+  column-gap: 48px;
   position: absolute;
   z-index: 400;
+  padding: 30px 30px 24px 30px;
 
   @media only screen and (max-width: 600px) {
     columns: auto;
@@ -177,6 +176,7 @@
       font-weight: 600;
       font-size: 16px;
       color:#FFF;  
+      overflow: auto;
       padding-bottom: 24px;
       
       a {

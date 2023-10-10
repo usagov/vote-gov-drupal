@@ -49,32 +49,6 @@
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-TDRBDKS');
-          
-          function filterStateList() {
-            var input, filter, ul, li, a, i, txtValue;
-            input = document.getElementById("state-input");
-            filter = input.value.toUpperCase();
-            ul = document.getElementById("results-list");
-            li = ul.getElementsByTagName("li");
-            for (i = 0; i < li.length; i++) {
-                a = li[i].getElementsByTagName("a")[0];
-                txtValue = a.textContent || a.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "";
-                } else {
-                    li[i].style.display = "none";
-                }
-            }
-          }
-
-          function stateListVisible() {
-            var x = document.getElementById("results-container");
-            if (x.style.display === "none") {
-              x.style.display = "block";
-            } else {
-              x.style.display = "none";
-            }
-          }
         </script>
         <!-- End Google Tag Manager -->
         {% endif %}
@@ -99,30 +73,39 @@ page.html.twig.
 {{ page_bottom }}
 <js-bottom-placeholder token="{{ placeholder_token }}">
 <script>
-  document.getElementById("state-input").addEventListener("focus", stateListVisible());
-  document.getElementById("state-input").addEventListener("blur", stateListVisible());
-  document.getElementById("state-input").addEventListener("keyup", filterStateList());
-
-  document.getElementById("dropdown-btn").addEventListener("click", stateListVisible());
-  document.getElementById("dropdown-btn").addEventListener("blur", stateListVisible());
-
-    function filterStateList() {
+    function filterStateList(reset) {
       var input, filter, ul, li, a, i, txtValue;
       input = document.getElementById("state-input");
       filter = input.value.toUpperCase();
       ul = document.getElementById("results-list");
       li = ul.getElementsByTagName("li");
+      let no_results = [];
+      
       for (i = 0; i < li.length; i++) {
           a = li[i].getElementsByTagName("a")[0];
           txtValue = a.textContent || a.innerText;
           if (txtValue.toUpperCase().indexOf(filter) > -1) {
               li[i].style.display = "";
+              no_results.push(1);
           } else {
               li[i].style.display = "none";
+              no_results.push(0);
           }
       }
+      if (reset === 'reset') {
+        for (i = 0; i < li.length; i++) {
+              li[i].style.display = "";
+      }
+      }
+
+      var x = document.getElementById("results-container");
+      if (!no_results.includes(1)) {
+        x.style.display = "none" 
+      } else {
+          x.style.display = "block";
+      }
     }
-    
+
     function stateListVisible() {
       var x = document.getElementById("results-container");
       if (x.style.display === "none") {
