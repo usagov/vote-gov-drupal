@@ -1,1 +1,1 @@
-{{ item.first }} {{ item.second | replace(t_numbers[language].time | default([]))}}
+{{ item.first }} <span class="time">{{ item.second | replace(t_numbers[language].time | default([]))}}</span>
