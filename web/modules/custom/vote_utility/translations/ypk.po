@@ -72,10 +72,10 @@ msgid "Register to vote in @state_name"
 msgstr "Ilaten nakmikinaluten @state_name-mi"
 
 msgid "How to register to vote"
-msgstr "Naten ilannayaghsin nakmikimun @state_name-mi"
+msgstr "Naten ilatelleghqaq nakmikimun"
 
 msgid "Other ways to register to vote"
-msgstr "Ilangi nakmikilleghmun ilatellghet @state_name-emi "
+msgstr "Ilaneng ilatelleghqneng"
 
 msgid "Register by mail deadline:"
 msgstr "Ilatelleq tuyuqayugkun tuuniviga:"
@@ -90,7 +90,7 @@ msgid "Online registration deadline:"
 msgstr "Online-ekun ilatellghem tuuniviga:"
 
 msgid "Voter registration deadlines"
-msgstr "Nakmikilleghmun ilatellghan tuunivigi @state_name-emi"
+msgstr "Nakmikimun ilatelleghqanun tuunvigi"
 
 msgid "In person registration deadline:"
 msgstr "Gginasaghlluku ilatellghem tuuniviga: "
@@ -149,19 +149,22 @@ msgstr "Naghughaghten pighpigaghmun"
 msgid "(in English)"
 msgstr "(Laluramkestun)"
 
+msgid "External link opens in new window"
+msgstr "Allanun pit allaneng qelpeghutillequt"
+
 #banner
 msgid "Official government website"
-msgstr "Official government website"
+msgstr "Kavemem website-eghpigaa"
 
 #footer
 msgid "Email sign-up"
-msgstr "Email sign-up"
+msgstr "Email-kun ilatusiq"
 
 msgid "Contact"
-msgstr "Contact"
+msgstr "Aleghqughqut"
 
 msgid "GSA logo"
-msgstr "GSA logo"
+msgstr "GSA-m igaa"
 
 #month and day names
 msgctxt "Long month name"
