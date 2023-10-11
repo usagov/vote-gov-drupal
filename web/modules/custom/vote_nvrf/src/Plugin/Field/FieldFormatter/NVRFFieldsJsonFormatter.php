@@ -21,28 +21,33 @@ class NVRFFieldsJsonFormatter extends FormatterBase {
    * {@inheritdoc}
    */
   public function viewElements(FieldItemListInterface $items, $langcode): array {
-    $element = [];
+    $elements = [];
     foreach ($items as $delta => $item) {
         
         $nvrf_field_tid = $item->get('nvrf_field')->getValue();
         $required = $item->get('required')->getValue();
         $term = Term::load($nvrf_field_tid);
-        //kint($term);
 
-        $tid = 11;
-        $data = ['req' => '1', 'title'=>'name', 'ext'=>'art'];
-        $element[$delta] = [
+        $help_text = !empty($term->get('field_help_text')->getValue()) ? $term->get('field_help_text')->get(0)->getValue()['value'] : '';
+        $instructions = !empty($term->get('field_instructions')->getValue()) ? $term->get('field_instructions')->get(0)->getValue()['value'] : '';
+        $display_label = !empty($term->get('field_display_label')->getValue()) ? $term->get('field_display_label')->get(0)->getValue()['value'] : '';
+
+        $term_data_array = [
+          'name' => $term->getName(),
+          'display_label' => $display_label,
+          'help_text' => $help_text,
+          'instructions' => $instructions,
+          'required' => $required,
+        ];
+
+        $elements[$delta] = [
             '#type' => 'data',
-            '#data' => SerializedData::create($term),
+            '#data' => SerializedData::create($term_data_array),
           ];
-        unset($element[$delta]['#plain_text']);
           
-        
-        // Render each element as markup.
-        //$element[$delta] = ['#markup' => '"links":"test", "ter":0'];
-    }
-    //kint($element);
-    return $element;
+        //Unset just in case  
+        unset($elements[$delta]['#plain_text']);
+    } 
+    return $elements;
   }
-
 }
