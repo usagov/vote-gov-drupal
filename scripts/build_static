@@ -39,6 +39,13 @@ mkdir -p ${html_path}/modules/contrib/simple_sitemap/xsl
 cp -rfp ${app_path}/web/modules/contrib/simple_sitemap/xsl/* ${html_path}/modules/contrib/simple_sitemap/xsl/
 echo "Missing module files for Sitemap completed!"
 
+echo "Adding Vote.gov custom theme assets"
+mkdir -p ${html_path}/themes/custom/vote_gov
+cp -rfp ${app_path}/web/themes/custom/vote_gov/dist ${html_path}/themes/custom/vote_gov/
+cp -rfp ${app_path}/web/themes/custom/vote_gov/img ${html_path}/themes/custom/vote_gov/
+cp -rfp ${app_path}/web/themes/custom/vote_gov/json ${html_path}/themes/custom/vote_gov/
+echo "Adding Vote.gov custom theme assets - completed!"
+
 cd ${html_path}
 echo "Copying static files to '${bucket_name}'..."
 aws s3 sync . s3://${bucket} --delete --no-verify-ssl 2>/dev/null
