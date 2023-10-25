@@ -17,5 +17,6 @@ List of development environments and their equivalent git branches.
 - [DevOps](devops.md)
 - [Backend](backend.md)
 - [Frontend](frontend.md)
+- [Husky](husky.md)
 - [QA & Testing](testing.md)
 - [Translations](translations.md)
