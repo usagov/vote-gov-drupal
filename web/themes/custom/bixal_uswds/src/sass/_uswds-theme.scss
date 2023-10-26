@@ -1,0 +1,255 @@
+/*
+ ***** Do not write any custom CSS on this file, this is for USWDS 3 settings only.
+ ***** For all possible overrides, see https://designsystem.digital.gov/documentation/settings/
+----------------------------------------
+USWDS theme settings overrides
+----------------------------------------
+// Grid settings reference
+----------------------------------------
+Grid container max-width
+----------------------------------------
+mobile
+mobile-lg
+tablet
+tablet-lg
+desktop
+desktop-lg
+widescreen
+----------------------------------------
+// Units available for usage.
+example with USWDS units:
+.element {
+  padding-bottom: units('first value in the key pairs below')
+}
+
+Or a USWDS mixin...
+
+.element {
+  @include u-padding-bottom('3');
+}
+
+"1px": 1px,
+"2px": 2px,
+"05": 0.25rem,
+1: 0.5rem,
+"105": 0.75rem,
+2: 1rem,
+"205": 1.25rem,
+3: 1.5rem,
+"neg-1px": -1px,
+"neg-2px": -2px,
+"neg-05": -0.25rem,
+"neg-1": -0.5rem,
+"neg-105": -0.75rem,
+"neg-2": -1rem,
+"neg-205": -1.25rem,
+"neg-3": -1.5rem,
+4: 2rem,
+5: 2.5rem,
+6: 3rem,
+7: 3.5rem,
+8: 4rem,
+9: 4.5rem,
+10: 5rem,
+15: 7.5rem,
+"neg-4": -2rem,
+"neg-5": -2.5rem,
+"neg-6": -3rem,
+"neg-7": -3.5rem,
+"neg-8": -4rem,
+"neg-9": -4.5rem,
+"neg-10": -5rem,
+"neg-15": -7.5rem,
+"card": 10rem,
+"card-lg": 15rem,
+"mobile": 20rem,
+"mobile-lg": 30rem,
+"tablet": 40rem,
+"tablet-lg": 55rem,
+"desktop": 64rem,
+"desktop-lg": 75rem,
+"widescreen": 87.5rem,
+0: 0,
+"auto": auto
+*/
+
+// ****** Do not write any custom CSS on this file ****** //
+
+@use "uswds-core" with (
+  // General settings.
+  $theme-image-path: "../assets/img",
+  $theme-font-path: "../assets/fonts",
+  $theme-show-notifications: false,
+
+  // Color settings
+  // For color info see:
+  // * https://designsystem.digital.gov/design-tokens/color/theme-tokens/
+  // * https://designsystem.digital.gov/design-tokens/color/overview/
+  // Debug output for system colors.
+  $test-system-color-tokens: false,
+
+  // Primary
+  $theme-color-primary-family: "cyan",
+  $theme-color-primary-lightest: 'cyan-5v',
+  $theme-color-primary-lighter: 'cyan-10v',
+  $theme-color-primary-light: 'cyan-20v',
+  $theme-color-primary:  "cyan-50v",
+  $theme-color-primary-dark: "cyan-60v",
+  $theme-color-primary-darker: "cyan-70v",
+  $theme-color-primary-darkest: "cyan-80v",
+
+  // Secondary
+  $theme-color-secondary-family: "magenta",
+  $theme-color-secondary-lightest: 'magenta-5v',
+  $theme-color-secondary-lighter: 'magenta-10v',
+  $theme-color-secondary-light: 'magenta-20v',
+  $theme-color-secondary: "magenta-50v",
+  $theme-color-secondary-dark: "magenta-60v",
+  $theme-color-secondary-darker: "magenta-70v",
+  $theme-color-secondary-darkest: "magenta-80v",
+
+  // Accent cool
+  $theme-color-accent-cool-family: "violet",
+  $theme-color-accent-cool-lightest: 'violet-5v',
+  $theme-color-accent-cool-lighter: 'violet-10v',
+  $theme-color-accent-cool-light: 'violet-20v',
+  $theme-color-accent-cool: "violet-50v",
+  $theme-color-accent-cool-dark: "violet-60v",
+  $theme-color-accent-cool-darker: "violet-70v",
+  $theme-color-accent-cool-darkest: "violet-80v",
+
+  // Accent warm
+  $theme-color-accent-warm-family: "gold",
+  $theme-color-accent-warm-lightest: 'gold-5v',
+  $theme-color-accent-warm-lighter: 'gold-10v',
+  $theme-color-accent-warm-light: 'gold-20v',
+  $theme-color-accent-warm: "gold-50v",
+  $theme-color-accent-warm-dark: "gold-60v",
+  $theme-color-accent-warm-darker: "gold-70v",
+  $theme-color-accent-warm-darkest: "gold-80v",
+
+  // Info
+  $theme-color-info-family:"cyan",
+  $theme-color-info-lighter: "cyan-5v",
+  $theme-color-info-light: "cyan-10v",
+  $theme-color-info: "cyan-30v",
+  $theme-color-info-dark: "cyan-50v",
+  $theme-color-info-darker: "cyan-70v",
+
+  $theme-link-visited-color: "primary-darker",
+  $theme-link-hover-color: "primary-darkest",
+
+  $theme-color-emergency: 'red-70v',
+
+  $theme-link-reverse-color: 'accent-warm-light',
+  $theme-link-reverse-hover-color: 'accent-warm-lighter',
+  $theme-link-reverse-active-color: 'accent-warm-lightest',
+
+  // **** Component settings below **** //
+  // -- Accordion
+  // -- Alert
+  $theme-alert-link-color: 'base-darker',
+
+  // -- Banner
+  $theme-banner-background-color: "base-darkest",
+  $theme-banner-max-width: "widescreen",
+
+  // -- Breadcrumb
+  $theme-breadcrumb-link-color: "primary",
+
+  // -- Button
+  // -- Card
+  $theme-card-header-typeset: ('sans', 'lg', 3),
+  //$theme-card-flag-image-width: 'flag',
+  //$theme-card-flag-min-width: 'desktop',
+
+  // -- Checkbox
+  // -- Collection
+  // -- Footer
+  $theme-footer-max-width: "widescreen",
+
+  // -- Header
+  $theme-header-max-width: "widescreen",
+
+  // -- Hero
+  // -- Form
+  // -- Icon list
+  // -- Identifier
+  // -- Input
+  $theme-input-max-width: 'desktop',
+  // -- Modal
+  // -- Navigation
+  // -- Modal
+  // -- Pagination
+  // -- Process list
+  // -- Process list
+  // -- Radio buttons
+  // -- Search
+  // -- Sidenav
+  // -- Site Alert
+  // -- Step indicator
+  // -- Summary box
+  $theme-summary-box-background-color: "secondary-darker",
+  $theme-summary-box-link-color: "accent-warm-light",
+
+  // -- Tables
+  // **** End Components ****
+
+  // Spacing settings
+  $theme-column-gap-sm: 3,
+  $theme-column-gap-md: 4,
+  $theme-column-gap-lg: 6,
+  $theme-column-gap-mobile: 5,
+ // $theme-column-gap-desktop: 7,
+
+  // Typography settings
+  // https://designsystem.digital.gov/documentation/settings/#typography-settings
+  // https://designsystem.digital.gov/design-tokens/typesetting/overview/
+  // https://designsystem.digital.gov/utilities/font-size-and-family/
+  // https://designsystem.digital.gov/design-tokens/typesetting/font-family/
+  // Set some reasonable typography defaults.
+  $theme-font-type-sans: 'source-sans-pro',
+  // Default paragraph width - none = 100%
+  $theme-text-measure: none,
+  // Default font sizes.
+  $theme-type-scale-sm: 7,
+  $theme-type-scale-md: 8,
+  $theme-type-scale-lg: 9,
+  $theme-type-scale-xl: 10,
+
+  // Utilities settings //
+  $utilities-use-important: true,
+
+  // Example of a custom utility class
+  // compiles as .bottom-100 { bottom:100px!important }
+  $bottom-manual-values: ("80": 80px),
+  $top-manual-values: ("6": 6px),
+  //$margin-horizontal-manual-values: ('flag': 150px),
+  //$width-manual-values: ('flag': 150px),
+
+  // Turn on or off breakpoints
+  $theme-utility-breakpoints: (
+  'card':              false,   // 160px
+  'card-lg':           false,   // 240px
+  'mobile':            false,   // 320px
+  'mobile-lg':         true,    // 480px
+  'tablet':            true,    // 640px
+  'tablet-lg':         true,   // 880px
+  'desktop':           true,    // 1024px
+  'desktop-lg':        false,   // 1200px
+  'widescreen':        false,   // 1400px
+  ),
+
+// Max width settings, set responsive to true.
+  $max-width-settings: (
+  output: true,
+  responsive: true,
+  ),
+
+  $flex-direction-settings: (
+  output: true,
+  responsive: true,
+),
+
+);
+// ****** Do not write any custom CSS on this file ****** //

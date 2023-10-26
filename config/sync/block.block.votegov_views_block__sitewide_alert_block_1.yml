@@ -1,0 +1,24 @@
+uuid: c741fbcf-5fd7-4878-a795-779b106b5215
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sitewide_alert
+  module:
+    - views
+  theme:
+    - votegov
+id: votegov_views_block__sitewide_alert_block_1
+theme: votegov
+region: header
+weight: -4
+provider: null
+plugin: 'views_block:sitewide_alert-block_1'
+settings:
+  id: 'views_block:sitewide_alert-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

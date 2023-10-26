@@ -1,0 +1,25 @@
+uuid: 547fc53f-4ecd-4984-9dad-e627505cbd49
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:email_signup:28e87cc9-80c5-4a95-a29e-1a2a46a040b4'
+  module:
+    - block_content
+  theme:
+    - votegov
+id: votegov_usa.govemailsignupblock
+theme: votegov
+region: footer
+weight: -4
+provider: null
+plugin: 'block_content:28e87cc9-80c5-4a95-a29e-1a2a46a040b4'
+settings:
+  id: 'block_content:28e87cc9-80c5-4a95-a29e-1a2a46a040b4'
+  label: 'USA.gov email signup block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

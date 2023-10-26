@@ -1,0 +1,30 @@
+// Include core in order to use USWDS mixins etc...
+@use "uswds-core" as *;
+
+.usa-form {
+  @include at-media("mobile-lg") {
+    @include u-maxw('tablet')
+  }
+}
+
+legend,
+legend > span,
+label,
+.usa-label {
+  @include u-text('primary-dark');
+  font-weight: font-weight("bold");
+}
+
+.usa-fieldset {
+  @include u-margin-top('105');
+}
+
+.fieldset__description,
+.form-item__description {
+  @include u-margin-top(1);
+  @include u-margin-bottom(3);
+}
+
+.is-time {
+  @include u-padding-top(2);
+}

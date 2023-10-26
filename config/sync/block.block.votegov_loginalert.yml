@@ -1,0 +1,38 @@
+uuid: a2d690f2-8f57-4a2c-8f08-062eb18f8a83
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4d4c751d-1752-4f3e-95d8-25e981ed573b'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - votegov
+id: votegov_loginalert
+theme: votegov
+region: content
+weight: -6
+provider: null
+plugin: 'block_content:4d4c751d-1752-4f3e-95d8-25e981ed573b'
+settings:
+  id: 'block_content:4d4c751d-1752-4f3e-95d8-25e981ed573b'
+  label: 'Login Alert'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /user/login
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous

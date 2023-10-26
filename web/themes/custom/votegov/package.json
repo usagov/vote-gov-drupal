@@ -1,0 +1,21 @@
+{
+  "name": "votegov",
+  "version": "3.3.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "gulp": "gulp watch",
+    "dev": "gulp",
+    "build": "gulp build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@uswds/compile": "^1.0.0",
+    "@uswds/uswds": "^3.6.1",
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "uglify-es": "^3.3.9"
+  }
+}

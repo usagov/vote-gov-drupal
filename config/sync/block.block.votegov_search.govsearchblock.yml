@@ -1,0 +1,25 @@
+uuid: 36cf2b6c-1ac1-42a1-8939-be46b7ca267d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:search:21a0e011-9d20-4893-95a5-72c21087da8d'
+  module:
+    - block_content
+  theme:
+    - votegov
+id: votegov_search.govsearchblock
+theme: votegov
+region: header
+weight: -3
+provider: null
+plugin: 'block_content:21a0e011-9d20-4893-95a5-72c21087da8d'
+settings:
+  id: 'block_content:21a0e011-9d20-4893-95a5-72c21087da8d'
+  label: 'Search.gov search block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

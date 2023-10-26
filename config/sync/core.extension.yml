@@ -76,7 +76,9 @@ module:
   publication_date: 99
   minimal: 1000
 theme:
+  bixal_uswds: 0
   claro: 0
   stable: 0
+  votegov: 0
   vote_gov: 0
 profile: minimal

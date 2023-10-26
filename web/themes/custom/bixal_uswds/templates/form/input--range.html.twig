@@ -1,0 +1,18 @@
+{% extends "input.html.twig" %}
+
+{% block library %}
+  {{ attach_library('bixal_uswds/form_range') }}
+{% endblock library %}
+
+{% set aria_max = element["#max"] %}
+{% set aria_min = element["#min"] %}
+{% set aria_value = element["#value"] %}
+
+{# Overrides to adhere to USWDS code.#}
+{% set attributes = attributes.addClass(classes)
+  .setAttribute('value', value)
+  .setAttribute('aria-valuemin', aria_min)
+  .setAttribute('aria-valuemax', aria_max)
+  .setAttribute('aria-valuenow', aria_min)
+  .setAttribute('role', 'slider') %}
+

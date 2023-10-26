@@ -1,0 +1,22 @@
+uuid: d6d08f9f-32ef-4549-8815-c8dbb868c1a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - votegov
+_core:
+  default_config_hash: vGaqZ52JipOWXIT-icQHPoHXhQgCiiUnrGTbLG3isyc
+id: votegov_messages
+theme: votegov
+region: admin
+weight: -2
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

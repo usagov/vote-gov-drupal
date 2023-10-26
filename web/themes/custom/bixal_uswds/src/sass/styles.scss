@@ -1,0 +1,13 @@
+// ****** Do not write any custom CSS on this file ****** //
+
+// Theme settings overrides.
+@forward "uswds-theme";
+
+// USWDS individual components
+// to include everything, just code it as @forward "uswds";
+@forward "uswds";
+
+// Custom styles
+@forward "uswds-theme-custom-styles";
+
+// ****** Do not write any custom CSS on this file ****** //
