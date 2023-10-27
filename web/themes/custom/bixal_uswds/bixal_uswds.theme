@@ -4,6 +4,7 @@
  * @file
  * Functions to support theming in the USWDS USDA Intranet theme.
  */
+
 require_once dirname(__FILE__) . '/php-includes/block.inc';
 require_once dirname(__FILE__) . '/php-includes/form.inc';
 require_once dirname(__FILE__) . '/php-includes/media.inc';

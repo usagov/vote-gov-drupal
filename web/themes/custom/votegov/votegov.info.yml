@@ -3,7 +3,6 @@ type: theme
 description: "Custom Drupal theme based on USWDS 3."
 core_version_requirement: ">=9.2"
 base theme: bixal_uswds
-version: '3.6.0'
 
 libraries:
   - votegov/global
