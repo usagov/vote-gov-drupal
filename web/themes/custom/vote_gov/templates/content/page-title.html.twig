@@ -12,10 +12,10 @@
  *   displayed after the main title tag that appears in the template.
  */
 #}
-{% set title = title | render | striptags | trim %}
 {% set node_type = currentnode.bundle() %}
 
 {% if node_type == "state_territory" %}
+  {% set title = title | render | striptags | trim %}
   {% if language == 'ko' and currentnode.field_is_state.value %}
     {% set korean_state_char = "state" | t %}
     {% set title = title ~ " " ~ korean_state_char %}
