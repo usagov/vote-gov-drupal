@@ -258,7 +258,7 @@ jobs:
             npm run cy:pipeline:proofer
           when: on_fail
 workflows:
-  deploy-workflow:
+  deploy-workflow: 
     when:
       and:
         - equal: [webhook, << pipeline.trigger_source >>]

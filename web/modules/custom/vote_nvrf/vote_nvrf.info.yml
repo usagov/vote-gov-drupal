@@ -5,3 +5,4 @@ core_version_requirement: ^9 || ^10
 package: Custom
 dependencies:
   - drupal:taxonomy
+  - drupal:rest_views

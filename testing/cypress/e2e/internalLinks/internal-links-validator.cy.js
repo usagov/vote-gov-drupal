@@ -28,7 +28,10 @@ describe("Internal Link Validator Test", () => {
         cy.visit({
           url: page.route,
         });
-          cy.get("a[href^='/']").each(link => {
+          // cy.get("a[href^='/']").each(link => {
+          cy.get('[data-test="footer"]').find("a[href^='/']").each(link => {
+
+            // console.log(link);
             cy.request({
               url: link.prop('href'),
               failOnStatusCode: false

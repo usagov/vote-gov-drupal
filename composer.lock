@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "00bafd322700681724ac98839279a61a",
+    "content-hash": "8da90d08bf22290d0823e30dbd464872",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3751,6 +3751,66 @@
             ],
             "support": {
                 "source": "https://git.drupalcode.org/project/remove_http_headers"
+            }
+        },
+        {
+            "name": "drupal/rest_views",
+            "version": "3.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/rest_views.git",
+                "reference": "3.0.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/rest_views-3.0.0-alpha1.zip",
+                "reference": "3.0.0-alpha1",
+                "shasum": "b2204306cafe4ee0d876209c7418425e07eb1846"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10",
+                "php": "^8"
+            },
+            "require-dev": {
+                "drupal/entity_reference_revisions": "*",
+                "drupal/geolocation": "*",
+                "drupal/search_api": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0-alpha1",
+                    "datestamp": "1696524627",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Christoph Burschka",
+                    "homepage": "https://drupal.org/u/cburschka",
+                    "email": "christoph@burschka.de",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "nicxvan",
+                    "homepage": "https://www.drupal.org/user/531480"
+                }
+            ],
+            "description": "Expose fields and entity references in REST view displays.",
+            "homepage": "https://www.drupal.org/project/rest_views",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/rest_views",
+                "issues": "https://www.drupal.org/project/issues/rest_views"
             }
         },
         {
@@ -13491,11 +13551,12 @@
         "drupal/node_revision_delete": 15,
         "drupal/pathauto": 20,
         "drupal/publication_date": 20,
+        "drupal/rest_views": 15,
         "drupal/translatable_menu_link_uri": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
