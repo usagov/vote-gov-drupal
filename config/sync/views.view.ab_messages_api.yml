@@ -502,7 +502,7 @@ display:
         arguments: false
       display_description: ''
       display_extenders: {  }
-      path: api/nvrf/ab_message/%
+      path: api/nvrf/ab_message/%/data.json
     cache_metadata:
       max-age: -1
       contexts:
@@ -788,7 +788,7 @@ display:
         fields: false
       display_description: ''
       display_extenders: {  }
-      path: api/nvrf/ab_messages
+      path: api/nvrf/ab_messages/data.json
     cache_metadata:
       max-age: -1
       contexts:

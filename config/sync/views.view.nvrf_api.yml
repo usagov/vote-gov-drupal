@@ -836,7 +836,7 @@ display:
         filter_groups: false
       display_description: ''
       display_extenders: {  }
-      path: api/nvrf/pages
+      path: api/nvrf/pages/data.json
     cache_metadata:
       max-age: -1
       contexts:
@@ -1412,7 +1412,7 @@ display:
         filter_groups: false
       display_description: ''
       display_extenders: {  }
-      path: api/nvrf/page/%
+      path: api/nvrf/page/%/data.json
     cache_metadata:
       max-age: -1
       contexts:
@@ -3227,7 +3227,7 @@ display:
         filter_groups: false
       display_description: ''
       display_extenders: {  }
-      path: api/nvrf/state/%
+      path: api/nvrf/state/%/data.json
     cache_metadata:
       max-age: -1
       contexts:
@@ -5031,7 +5031,7 @@ display:
         filter_groups: false
       display_description: ''
       display_extenders: {  }
-      path: api/nvrf/states
+      path: api/nvrf/states/data.json
     cache_metadata:
       max-age: -1
       contexts:

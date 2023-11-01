@@ -739,7 +739,7 @@ display:
         arguments: false
       display_description: ''
       display_extenders: {  }
-      path: api/nvrf/card/%
+      path: api/nvrf/card/%/data.json
     cache_metadata:
       max-age: -1
       contexts:
@@ -1295,7 +1295,7 @@ display:
         fields: false
       display_description: ''
       display_extenders: {  }
-      path: api/nvrf/cards
+      path: api/nvrf/cards/data.json
     cache_metadata:
       max-age: -1
       contexts:
