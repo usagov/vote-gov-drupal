@@ -33,7 +33,7 @@ echo "'drush tome:static' task completed!"
 #Translated Languages (this will need to be updated as we support additional languages)
 languages=('ar' 'bn' 'fr' 'es' 'km' 'ko' 'hi' 'ht' 'nv' 'pt' 'tl' 'vi' 'ru' 'ypk' 'zh' 'zh-hans')
 #API URLS
-apiPaths=('api/nvrf/states' 'api/nvrf/cards' 'api/nvrf/pages' 'api/nvrf/ab_messages')
+apiPaths=('api/nvrf/states' 'api/nvrf/cards' 'api/nvrf/pages' 'api/nvrf/ab-messages' 'api/nvrf/nvrf-fields')
 #Defatult api endpoint filename
 jsonFileName='data.json'
 echo "***************************************************************"
