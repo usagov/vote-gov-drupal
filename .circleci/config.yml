@@ -9,14 +9,11 @@ parameters:
   scheduled_backup:
     type: boolean
     default: false
-  build_static:
-    type: boolean
-    default: false
-  drush_cron:
+  upkeep:
     type: boolean
     default: false
 jobs:
-  build-static:
+  upkeep:
     docker:
       - image: cimg/base:stable
     steps:
@@ -27,12 +24,11 @@ jobs:
             source ./scripts/pipeline/deb-basic-deps.sh
             source ./scripts/pipeline/deb-cf-install.sh
       - run:
-          name: "Generate Static Site"
+          name: "Run Drush Cron and Generate Static Site"
           command: |
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
-
-            cf run-task ${project}-drupal-${CIRCLE_BRANCH} --command "ENV=${CIRCLE_BRANCH} scripts/build_static" --name "${project}-${CIRCLE_BRANCH}-tome"  -k "2G" -m 256M
+            cf run-task ${project}-drupal-${CIRCLE_BRANCH} --command "ENV=${CIRCLE_BRANCH} scripts/upkeep" --name "${project}-${CIRCLE_BRANCH}-upkeep"  -k "2G" -m 512M
   build-theme:
     docker:
       - image: node:18-slim
@@ -141,23 +137,6 @@ jobs:
             source ./scripts/pipeline/exports.sh "${RESTORE_ENV}"
             source ./scripts/pipeline/cloud-gov-login.sh
             source ./scripts/pipeline/downsync-restore.sh
-  drush-cron:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - checkout
-      - run:
-          name: "Install cloudfoundry & dependencies"
-          command: |
-            source ./scripts/pipeline/deb-basic-deps.sh
-            source ./scripts/pipeline/deb-cf-install.sh
-      - run:
-          name: "Drush Cron"
-          command: |
-            source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
-            source ./scripts/pipeline/cloud-gov-login.sh
-
-            cf run-task ${project}-drupal-${CIRCLE_BRANCH} --command "drush --uri=${ssg_uri} cron" --name "${project}-${CIRCLE_BRANCH}-cron"  -k "2G" -m 512M
   php-lint:
     docker:
       - image: php:8.2-alpine
@@ -304,7 +283,7 @@ workflows:
                 - stage
           requires:
             - build-theme
-      - build-static:
+      - upkeep:
           filters:
             branches:
               only:
@@ -321,7 +300,7 @@ workflows:
                 - dev
                 - stage
           requires:
-            - build-static
+            - upkeep
   deploy-prod-workflow:
     when:
       and:
@@ -336,16 +315,16 @@ workflows:
       - deploy:
           requires:
             - build-theme
-      - build-static:
+      - upkeep:
           requires:
             - deploy
-  build-static-workflow:
+  upkeep-workflow:
     when:
       and:
         - equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]
-        - equal: [ true, << pipeline.parameters.build_static >> ]
+        - equal: [ true, << pipeline.parameters.upkeep >> ]
     jobs:
-      - build-static
+      - upkeep
   link-validation-workflow:
     triggers:
       - schedule:
@@ -356,13 +335,6 @@ workflows:
                 - stage
     jobs:
       - link-validation
-  drush-cron-workflow:
-    when:
-      and:
-        - equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]
-        - equal: [ true, << pipeline.parameters.drush_cron >> ]
-    jobs:
-      - drush-cron
   scheduled-backup-workflow:
     when:
       and:

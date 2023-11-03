@@ -24,6 +24,10 @@ export ssg_endpoint="https://ssg-${environment}.vote.gov"
 [ "${environment}" = "prod" ] && export ssg_endpoint="https://ssg.vote.gov"
 
 cd ${app_path}
+echo "Running 'drush cron' in '${environment}'..."
+drush --uri=${ssg_endpoint} cron
+echo "'drush cron' task completed!"
+
 echo "Running 'drush tome:static' in '${environment}'..."
 drush tome:static --uri=${ssg_endpoint} --process-count=2 --retry-count=0 -y
 drush tome:static-export-path '/sitemap.xml,/sitemap_generator/default/sitemap.xsl' --uri=${ssg_endpoint} --process-count=2 --retry-count=0 -y
