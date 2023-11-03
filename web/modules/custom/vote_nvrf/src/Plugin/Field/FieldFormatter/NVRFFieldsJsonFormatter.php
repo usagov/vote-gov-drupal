@@ -30,15 +30,9 @@ class NVRFFieldsJsonFormatter extends FormatterBase {
       $term = Term::load($nvrf_field_tid)->hasTranslation($langcode) ? Term::load($nvrf_field_tid)->getTranslation($langcode) : Term::load($nvrf_field_tid);
 
       $uuid = !empty($term->get('uuid')->getValue()) ? $term->get('uuid')->get(0)->getValue()['value'] : '';
-      #$help_text = !empty($term->get('field_help_text')->getValue()) ? $term->get('field_help_text')->get(0)->getValue()['value'] : '';
-      #$instructions = !empty($term->get('field_instructions')->getValue()) ? $term->get('field_instructions')->get(0)->getValue()['value'] : '';
-      #$display_label = !empty($term->get('field_display_label')->getValue()) ? $term->get('field_display_label')->get(0)->getValue()['value'] : '';
 
       $term_data_array = [
         'uuid' => $uuid,
-        #'display_label' => $display_label,
-        #'help_text' => $help_text,
-        #'instructions' => $instructions,
         'required' => $required,
       ];
 
