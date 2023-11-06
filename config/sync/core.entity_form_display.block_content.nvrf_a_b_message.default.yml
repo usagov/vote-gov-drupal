@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.nvrf_a_b_message
     - field.field.block_content.nvrf_a_b_message.body
+    - field.field.block_content.nvrf_a_b_message.field_messager_identifier
   module:
     - text
 id: block_content.nvrf_a_b_message.default
@@ -21,6 +22,14 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
+    third_party_settings: {  }
+  field_messager_identifier:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   info:
     type: string_textfield

@@ -33,47 +33,6 @@ drush tome:static --uri=${ssg_endpoint} --process-count=2 --retry-count=0 -y
 drush tome:static-export-path '/sitemap.xml,/sitemap_generator/default/sitemap.xsl' --uri=${ssg_endpoint} --process-count=2 --retry-count=0 -y
 echo "'drush tome:static' task completed!"
 
-#Process NVRF API Endpoints
-#Translated Languages (this will need to be updated as we support additional languages)
-languages=('ar' 'bn' 'fr' 'es' 'km' 'ko' 'hi' 'ht' 'nv' 'pt' 'tl' 'vi' 'ru' 'ypk' 'zh' 'zh-hans')
-#API URLS
-apiPaths=('api/nvrf/states' 'api/nvrf/cards' 'api/nvrf/pages' 'api/nvrf/ab-messages' 'api/nvrf/nvrf-fields')
-#Defatult api endpoint filename
-jsonFileName='data.json'
-echo "***************************************************************"
-echo "************** Generating NVRF API Json files. ****************"
-echo "***************************************************************"
-for apiPath in ${apiPaths[@]}; do
-    apiEndpoint="/${apiPath}/${jsonFileName}"
-
-    for language in ${languages[@]}; do
-        translatedApiEndpoint="${apiEndpoint}?langcode=${language}"
-        newTranslatedApiEndpoint="/${language}/${apiPath}/${jsonFileName}"
-        defaultFilePath="${html_path}/${apiPath}/${jsonFileName}"
-        newFilePath="${html_path}${newTranslatedApiEndpoint}"
-        newDirectory="${html_path}/${language}/${apiPath}/"
-        echo "** Tome export in progress..."
-        echo "** API Endpoint: ${translatedApiEndpoint}"
-        drush tome:static-export-path "${translatedApiEndpoint}" --return-json --uri=${ssg_endpoint} --process-count=2 --retry-count=0 -y
-
-        until [ -f ${defaultFilePath} ]
-        do
-            echo "** Waiting for Tome to finish exporting the file, ${defaultFilePath} ..."
-            sleep 1
-        done
-
-        echo "** New API Endpoint: ${newTranslatedApiEndpoint}"
-        mkdir -p ${newDirectory}
-        mv ${defaultFilePath} ${newDirectory}
-        echo "***************************************************************"
-    done
-
-    echo "** Tome export in progress..."
-    echo "** API Endpoint: ${apiEndpoint}"
-    drush tome:static-export-path "${apiEndpoint}" --return-json --uri=${ssg_endpoint} --process-count=2 --retry-count=0 -y
-    echo "***************************************************************"
-done
-
 echo "Adding missing Core assets vendor directory"
 mkdir -p ${html_path}/core/assets
 cp -rfp ${app_path}/web/core/assets/vendor ${html_path}/core/assets/

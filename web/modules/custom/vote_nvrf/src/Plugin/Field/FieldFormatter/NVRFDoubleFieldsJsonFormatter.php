@@ -2,6 +2,7 @@
 
 namespace Drupal\vote_nvrf\Plugin\Field\FieldFormatter;
 
+use Drupal\Core\Datetime\DateFormatterInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\FormatterBase;
 use Drupal\rest_views\SerializedData;
@@ -22,8 +23,7 @@ class NVRFDoubleFieldsJsonFormatter extends FormatterBase {
    */
   public function viewElements(FieldItemListInterface $items, $langcode): array {
     $elements = [];
-    $settings = $this->getSettings();
-    $field_name = $items->getName();
+    $date_formatter = static::getDateFormatter();
 
     foreach ($items as $delta => $item) {
 
@@ -31,8 +31,8 @@ class NVRFDoubleFieldsJsonFormatter extends FormatterBase {
       $second = !empty($item->get('second')->getValue()) ? $item->get('second')->getValue() : '';
 
       $data_array = [
-        'first' => $first,
-        'second' => $second,
+        'date' => $date_formatter->format(strtotime($first), 'long_date'),
+        'time' => $second,
       ];
 
       $elements[$delta] = [
@@ -44,6 +44,13 @@ class NVRFDoubleFieldsJsonFormatter extends FormatterBase {
       unset($elements[$delta]['#plain_text']);
     }
     return $elements;
+  }
+
+  /**
+   * Returns date formatter.
+   */
+  protected static function getDateFormatter(): DateFormatterInterface {
+    return \Drupal::service('date.formatter');
   }
 
 }
