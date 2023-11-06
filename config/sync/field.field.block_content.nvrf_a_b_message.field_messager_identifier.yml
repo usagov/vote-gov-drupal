@@ -1,0 +1,19 @@
+uuid: 310f7443-782e-4564-bb58-2f75d82b671f
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.nvrf_a_b_message
+    - field.storage.block_content.field_messager_identifier
+id: block_content.nvrf_a_b_message.field_messager_identifier
+field_name: field_messager_identifier
+entity_type: block_content
+bundle: nvrf_a_b_message
+label: 'Messager Identifier'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
