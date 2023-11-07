@@ -24,7 +24,6 @@ dependencies:
     - field.storage.node.field_nvrf_last_updated_date
     - field.storage.node.field_omb_number
     - field.storage.node.field_online_deadline
-    - field.storage.node.field_online_voter_reg_desc
     - field.storage.node.field_override_confirm_reg_link
     - field.storage.node.field_override_election_hp_link
     - field.storage.node.field_override_more_info_link
@@ -1272,68 +1271,6 @@ display:
           id: field_mailing_address_inst
           table: node__field_mailing_address_inst
           field: field_mailing_address_inst
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: text_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_online_voter_reg_desc:
-          id: field_online_voter_reg_desc
-          table: node__field_online_voter_reg_desc
-          field: field_online_voter_reg_desc
           relationship: none
           group_type: group
           admin_label: ''
@@ -3091,7 +3028,6 @@ display:
         - 'config:field.storage.node.field_nvrf_fields'
         - 'config:field.storage.node.field_nvrf_last_updated_date'
         - 'config:field.storage.node.field_online_deadline'
-        - 'config:field.storage.node.field_online_voter_reg_desc'
         - 'config:field.storage.node.field_override_confirm_reg_link'
         - 'config:field.storage.node.field_override_election_hp_link'
         - 'config:field.storage.node.field_override_more_info_link'

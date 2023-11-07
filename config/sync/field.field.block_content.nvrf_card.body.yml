@@ -5,7 +5,7 @@ dependencies:
   config:
     - block_content.type.nvrf_card
     - field.storage.block_content.body
-    - filter.format.simple_html
+    - filter.format.basic_html
   module:
     - text
 id: block_content.nvrf_card.body
@@ -22,5 +22,5 @@ settings:
   display_summary: false
   required_summary: false
   allowed_formats:
-    - simple_html
+    - basic_html
 field_type: text_with_summary
