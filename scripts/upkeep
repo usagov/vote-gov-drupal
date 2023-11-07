@@ -24,6 +24,10 @@ export ssg_endpoint="https://ssg-${environment}.vote.gov"
 [ "${environment}" = "prod" ] && export ssg_endpoint="https://ssg.vote.gov"
 
 cd ${app_path}
+echo "Running 'drush cron' in '${environment}'..."
+drush --uri=${ssg_endpoint} cron
+echo "'drush cron' task completed!"
+
 echo "Running 'drush tome:static' in '${environment}'..."
 drush tome:static --uri=${ssg_endpoint} --process-count=2 --retry-count=0 -y
 drush tome:static-export-path '/sitemap.xml,/sitemap_generator/default/sitemap.xsl' --uri=${ssg_endpoint} --process-count=2 --retry-count=0 -y
@@ -38,6 +42,14 @@ echo "Adding missing module files for Sitemap"
 mkdir -p ${html_path}/modules/contrib/simple_sitemap/xsl
 cp -rfp ${app_path}/web/modules/contrib/simple_sitemap/xsl/* ${html_path}/modules/contrib/simple_sitemap/xsl/
 echo "Missing module files for Sitemap completed!"
+
+echo "Adding Vote.gov custom theme assets"
+mkdir -p ${html_path}/themes/custom/vote_gov
+cp -rfp ${app_path}/web/themes/custom/vote_gov/dist ${html_path}/themes/custom/vote_gov/
+cp -rfp ${app_path}/web/themes/custom/vote_gov/fonts ${html_path}/themes/custom/vote_gov/
+cp -rfp ${app_path}/web/themes/custom/vote_gov/img ${html_path}/themes/custom/vote_gov/
+cp -rfp ${app_path}/web/themes/custom/vote_gov/json ${html_path}/themes/custom/vote_gov/
+echo "Adding Vote.gov custom theme assets - completed!"
 
 cd ${html_path}
 echo "Copying static files to '${bucket_name}'..."

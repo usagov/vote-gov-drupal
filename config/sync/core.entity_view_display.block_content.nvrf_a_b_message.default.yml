@@ -1,0 +1,32 @@
+uuid: ea708886-0ca3-4274-b9e5-8d8eaf1df5d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.nvrf_a_b_message
+    - field.field.block_content.nvrf_a_b_message.body
+    - field.field.block_content.nvrf_a_b_message.field_messager_identifier
+  module:
+    - text
+id: block_content.nvrf_a_b_message.default
+targetEntityType: block_content
+bundle: nvrf_a_b_message
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_messager_identifier:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

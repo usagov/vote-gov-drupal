@@ -1,5 +1,5 @@
 {% set logo_sitename = language != 'en' ? '@sitename in language' | t({ '@sitename': sitename }) | render : sitename %}
 <a class="site-logo" href="{{ '/' ~ (language != 'en' ? language) }}" aria-label="{{ logo_sitename | t }}">
-<div class="logo-text" data-test="vote-logo">{{ logo_sitename }}</div>
+<div class="logo-text" data-test="vote-logo" id="logo-sitename">{{ logo_sitename }}</div>
 <div id="SiteLogo">{{ source( directory ~ '/img/ballot_box-blue.svg' ) }}</div>
 </a>
