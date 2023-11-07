@@ -44,7 +44,8 @@
 <div class="layout-container">
   {# Header partial. #}
   <!-- Start header.-->
-  {% include '@bixal_uswds/partials/p-header.html.twig' %}
+      {{ page.header }}
+      {% include '@votegov/partials/header-nav.html.twig' %}
   <!-- End header.-->
 
   <main role="main" class="main-content clearfix">
