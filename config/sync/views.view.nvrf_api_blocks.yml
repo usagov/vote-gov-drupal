@@ -1080,7 +1080,7 @@ display:
       display_description: ''
       rendering_language: '***LANGUAGE_language_interface***'
       display_extenders: {  }
-      path: api/nvrf/ab-messages/data.json
+      path: api/nvrf/messages.json
     cache_metadata:
       max-age: -1
       contexts:
@@ -1517,7 +1517,7 @@ display:
       display_description: ''
       rendering_language: '***LANGUAGE_language_interface***'
       display_extenders: {  }
-      path: api/nvrf/cards/data.json
+      path: api/nvrf/cards.json
     cache_metadata:
       max-age: -1
       contexts:

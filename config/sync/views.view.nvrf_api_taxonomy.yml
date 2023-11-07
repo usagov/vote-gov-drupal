@@ -741,7 +741,7 @@ display:
       display_description: ''
       rendering_language: '***LANGUAGE_language_interface***'
       display_extenders: {  }
-      path: api/nvrf/nvrf-fields/data.json
+      path: api/nvrf/fields.json
     cache_metadata:
       max-age: -1
       contexts:
