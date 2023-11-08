@@ -1,18 +1,18 @@
-uuid: 1ecfa6a1-926d-4f0e-a66c-76231c8587c0
+uuid: b192a4ee-44cf-4d45-a710-47f85166c9d7
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.nvrf_card
+    - block_content.type.nvrf_a_b_message
     - field.storage.block_content.body
     - filter.format.basic_html
   module:
     - text
-id: block_content.nvrf_card.body
+id: block_content.nvrf_a_b_message.body
 field_name: body
 entity_type: block_content
-bundle: nvrf_card
-label: Text
+bundle: nvrf_a_b_message
+label: Message
 description: ''
 required: false
 translatable: true

@@ -7,6 +7,7 @@ dependencies:
     - block_content.type.email_signup
     - block_content.type.government_banner
     - block_content.type.inline_alert
+    - block_content.type.nvrf_a_b_message
     - block_content.type.nvrf_card
     - block_content.type.registration_form_selector
     - block_content.type.search
@@ -53,6 +54,7 @@ permissions:
   - 'create inline_alert block content'
   - 'create landing content'
   - 'create media'
+  - 'create nvrf_a_b_message block content'
   - 'create nvrf_page content'
   - 'create page content'
   - 'create remote_video media'
@@ -67,6 +69,8 @@ permissions:
   - 'delete any inline_alert block content'
   - 'delete any landing content'
   - 'delete any media'
+  - 'delete any nvrf_a_b_message block content'
+  - 'delete any nvrf_a_b_message block content revisions'
   - 'delete any page content'
   - 'delete any remote_video media'
   - 'delete any sitewide_alert block content'
@@ -93,6 +97,7 @@ permissions:
   - 'edit any image media'
   - 'edit any inline_alert block content'
   - 'edit any landing content'
+  - 'edit any nvrf_a_b_message block content'
   - 'edit any nvrf_card block content'
   - 'edit any nvrf_page content'
   - 'edit any page content'
@@ -116,6 +121,7 @@ permissions:
   - 'revert any email_signup block content revisions'
   - 'revert any government_banner block content revisions'
   - 'revert any inline_alert block content revisions'
+  - 'revert any nvrf_a_b_message block content revisions'
   - 'revert any nvrf_card block content revisions'
   - 'revert any registration_form_selector block content revisions'
   - 'revert any search block content revisions'
@@ -152,6 +158,7 @@ permissions:
   - 'view any email_signup block content history'
   - 'view any government_banner block content history'
   - 'view any inline_alert block content history'
+  - 'view any nvrf_a_b_message block content history'
   - 'view any nvrf_card block content history'
   - 'view any registration_form_selector block content history'
   - 'view any search block content history'

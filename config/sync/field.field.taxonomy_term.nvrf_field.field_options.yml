@@ -1,0 +1,39 @@
+uuid: 936ee22b-deec-46c0-9085-4dea3c0c7b86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_options
+    - taxonomy.vocabulary.nvrf_field
+  module:
+    - double_field
+id: taxonomy_term.nvrf_field.field_options
+field_name: field_options
+entity_type: taxonomy_term
+bundle: nvrf_field
+label: Options
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  first:
+    label: Key
+    list: false
+    allowed_values: {  }
+    max: null
+    min: null
+    required: true
+    on_label: 'On'
+    off_label: 'Off'
+  second:
+    label: Value
+    list: false
+    allowed_values: {  }
+    max: null
+    min: null
+    required: true
+    on_label: 'On'
+    off_label: 'Off'
+field_type: double_field

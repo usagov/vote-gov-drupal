@@ -1,0 +1,8 @@
+uuid: e02c593b-7412-4bb9-b829-28652940d4c9
+langcode: en
+status: true
+dependencies: {  }
+id: nvrf_a_b_message
+label: 'NVRF A/B Message'
+revision: 0
+description: ''
