@@ -25,7 +25,6 @@ dependencies:
     - field.field.node.state_territory.field_nvrf_last_updated_date
     - field.field.node.state_territory.field_of_state_name
     - field.field.node.state_territory.field_online_deadline
-    - field.field.node.state_territory.field_online_voter_reg_desc
     - field.field.node.state_territory.field_override_confirm_reg_link
     - field.field.node.state_territory.field_override_election_hp_link
     - field.field.node.state_territory.field_override_more_info_link
@@ -254,13 +253,6 @@ content:
       inline: true
     third_party_settings: {  }
     weight: 8
-    region: content
-  field_online_voter_reg_desc:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 31
     region: content
   field_override_confirm_reg_link:
     type: link
