@@ -26,26 +26,24 @@
  */
 #}
 {% if status_code != 'error' %}
-<div class="switcher-mobile">
-    {% block content %}
-  <div class="usa-language-container usa-language--big">
-    {% if content['#links']|length == 2 %}
-      {{ content }}
-    {% elseif content['#links']|length > 2 %}
-    <div class="usa-language__primary usa-accordion">
-      <div class="usa-language__primary-item">
-        <button class="usa-button usa-language__link" data-test="language-button" aria-expanded="false" aria-controls="language-options">
-          {{ "Select language" | t }}
-        </button>
-        {# Language menu items:
+  {% block content %}
+    <div class="usa-language-container usa-language--big">
+      {% if content['#links']|length == 2 %}
+        {{ content }}
+      {% elseif content['#links']|length > 2 %}
+        <div class="usa-language__primary usa-accordion">
+          <div class="usa-language__primary-item">
+            <button class="usa-button usa-language__link" data-test="language-button" aria-expanded="false" aria-controls="language-options">
+              {{ "Select language" | t }}
+            </button>
+            {# Language menu items:
            links--language-block.html.twig #}
-          <ul id="language-options" class="usa-language__submenu" data-test="language-switcher" name="language-switcher" hidden="true"{{ attributes }}>
+            <ul id="language-options" class="usa-language__submenu" data-test="language-switcher" name="language-switcher" hidden="true"{{ attributes }}>
               {{ content }}
-          </ul>
-      </div>
+            </ul>
+          </div>
+        </div>
+      {% endif %}
     </div>
-    {% endif %}
-  </div>
-    {% endblock %}
-</div>
+  {% endblock %}
 {% endif %}

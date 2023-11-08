@@ -1,4 +1,4 @@
-uuid: 3f1729dc-116c-4c1e-8aef-86cd970c9c82
+uuid: 7e756bf0-5ba7-43bd-871a-87a0418ac75e
 langcode: en
 status: true
 dependencies:
@@ -8,10 +8,10 @@ dependencies:
     - system
   theme:
     - votegov
-id: votegov_htmlsitemap
+id: votegov_mainnavigation
 theme: votegov
-region: no_region
-weight: -6
+region: header
+weight: 0
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -20,6 +20,6 @@ settings:
   label_display: '0'
   provider: system
   level: 1
-  depth: 1
-  expand_all_items: false
+  depth: 2
+  expand_all_items: true
 visibility: {  }

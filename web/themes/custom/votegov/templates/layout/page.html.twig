@@ -38,15 +38,29 @@
 */
 #}
 
-{# Set the path to usa icons. #}
-{% set path_image =  '/dist/assets/img' %}
-
 <div class="layout-container">
-  {# Header partial. #}
-  <!-- Start header.-->
-      {{ page.header }}
-      {% include '@votegov/partials/header-nav.html.twig' %}
-  <!-- End header.-->
+  {# Sitewide alert component #}
+  {{ drupal_view('sitewide_alert', 'block_1') }}
+
+  {# Government banner component #}
+  {{ drupal_entity('block_content', '1') }}
+
+  <div class="usa-overlay"></div>
+  <header class="usa-header usa-header--basic usa-header--megamenu">
+    <div class="usa-nav-container">
+      <div class="usa-navbar">
+
+        {# Site branding component #}
+        {{ drupal_entity('block', 'votegov_sitebranding') }}
+
+        <button type="button" class="usa-menu-btn">{{ 'Menu' | t }}</button>
+      </div>
+
+      {# Main navigation component #}
+      {{ drupal_entity('block', 'votegov_mainnavigation') }}
+
+    </div>
+  </header>
 
   <main role="main" class="main-content clearfix">
     {# link is in html.html.twig #}

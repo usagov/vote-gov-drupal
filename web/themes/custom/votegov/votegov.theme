@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Vote.gov USWDS theme.
+ */
+
+require_once dirname(__FILE__) . '/php-includes/block.inc';
+require_once dirname(__FILE__) . '/php-includes/navigation.inc';
+require_once dirname(__FILE__) . '/php-includes/preprocess.inc';

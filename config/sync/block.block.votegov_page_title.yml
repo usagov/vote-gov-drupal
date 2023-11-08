@@ -8,7 +8,7 @@ _core:
   default_config_hash: J3MtGne879ZegCX2RuZn139w-FbITebjlH7TOjuU7K8
 id: votegov_page_title
 theme: votegov
-region: header
+region: no_region
 weight: -5
 provider: null
 plugin: page_title_block
