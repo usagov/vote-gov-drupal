@@ -4,11 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.nvrf_field.field_display_label
+    - field.field.taxonomy_term.nvrf_field.field_error_message
     - field.field.taxonomy_term.nvrf_field.field_help_text
     - field.field.taxonomy_term.nvrf_field.field_instructions
     - field.field.taxonomy_term.nvrf_field.field_nvrf_machine_name
+    - field.field.taxonomy_term.nvrf_field.field_options
     - taxonomy.vocabulary.nvrf_field
   module:
+    - double_field
     - text
 id: taxonomy_term.nvrf_field.default
 targetEntityType: taxonomy_term
@@ -29,6 +32,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_error_message:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_help_text:
     type: string
@@ -52,6 +63,30 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_options:
+    type: double_field_unformatted_list
+    label: above
+    settings:
+      first:
+        format_type: medium
+        link: false
+        hidden: false
+        key: false
+        decimal_separator: .
+        thousand_separator: ''
+        scale: 2
+      second:
+        format_type: medium
+        link: false
+        hidden: false
+        key: false
+        decimal_separator: .
+        thousand_separator: ''
+        scale: 2
+      inline: true
+    third_party_settings: {  }
+    weight: 6
     region: content
 hidden:
   langcode: true
