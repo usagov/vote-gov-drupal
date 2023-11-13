@@ -1,7 +1,6 @@
 const uswds = require("@uswds/compile");
 const {parallel, watch, series, src} = require('gulp');
 const gulp = require("gulp");
-const gulpStylelint = require('gulp-stylelint');
 const uglifyjs = require('uglify-js');
 const composer = require('gulp-uglify/composer');
 const uglify = composer(uglifyjs, console);
@@ -66,16 +65,6 @@ function buildCompStyles() {
   return src(settings.sass.src);
 }
 
-// Stylelint scss.
-function lintScss(done) {
-  return gulp.src(settings.sass.src)
-    .pipe(gulpStylelint({
-      configFile: './.stylelintrc',
-      failAfterError: false,
-      reporters: [{formatter: "string", console: true}]
-    }));
-}
-
 // Watch changes on sass files and trigger functions at the end.
 function watchCompFiles() {
   watch(settings.sass.src, {
@@ -83,7 +72,6 @@ function watchCompFiles() {
       ignoreInitial: false
     },
     series(
-      lintScss,
       buildCompStyles
     ));
 }
