@@ -61,7 +61,7 @@ describe('Test Site Admin Role access', () => {
         })
     
     // admin cole should be able to delete 
-    cy.request('/media/5/delete?').then((response) => {
+    cy.request('/media/6/delete?').then((response) => {
       expect(response.status).to.eq(200)
         })
   })
