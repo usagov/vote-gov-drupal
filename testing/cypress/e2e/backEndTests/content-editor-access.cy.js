@@ -78,7 +78,7 @@ describe('Test Content Editor Role Access', () => {
         })
 
     cy.request({
-      url: '/media/5/delete?',
+      url: '/media/6/delete?',
       failOnStatusCode:false,
       }).then((resp) => {
           expect(resp.status).to.eq(403)
