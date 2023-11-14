@@ -8,13 +8,16 @@ dependencies:
     - field.storage.taxonomy_term.field_help_text
     - field.storage.taxonomy_term.field_instructions
     - field.storage.taxonomy_term.field_nvrf_machine_name
+    - field.storage.taxonomy_term.field_options
     - taxonomy.vocabulary.nvrf_field
   module:
     - rest
+    - rest_views
     - serialization
     - taxonomy
     - text
     - user
+    - vote_nvrf
 id: nvrf_api_taxonomy
 label: 'NVRF API Taxonomy'
 module: views
@@ -541,6 +544,66 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_options_export:
+          id: field_options_export
+          table: taxonomy_term__field_options
+          field: field_options_export
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field_export
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: first
+          type: field_nvrf_double_fields_json_key_value
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          field_api_classes: false
       pager:
         type: mini
         options:
@@ -692,6 +755,7 @@ display:
         - 'config:field.storage.taxonomy_term.field_help_text'
         - 'config:field.storage.taxonomy_term.field_instructions'
         - 'config:field.storage.taxonomy_term.field_nvrf_machine_name'
+        - 'config:field.storage.taxonomy_term.field_options'
   api_nvrf_nvrf_fields:
     id: api_nvrf_nvrf_fields
     display_title: 'NVRF Fields API'
@@ -712,9 +776,6 @@ display:
         options:
           field_options:
             uuid:
-              alias: ''
-              raw_output: false
-            tid:
               alias: ''
               raw_output: false
             langcode:
@@ -738,6 +799,9 @@ display:
             field_instructions:
               alias: instructions
               raw_output: false
+            field_options_export:
+              alias: options
+              raw_output: false
       display_description: ''
       rendering_language: '***LANGUAGE_language_interface***'
       display_extenders: {  }
@@ -754,3 +818,4 @@ display:
         - 'config:field.storage.taxonomy_term.field_help_text'
         - 'config:field.storage.taxonomy_term.field_instructions'
         - 'config:field.storage.taxonomy_term.field_nvrf_machine_name'
+        - 'config:field.storage.taxonomy_term.field_options'
