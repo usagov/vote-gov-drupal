@@ -7,7 +7,7 @@ use Drupal\Core\Field\FormatterBase;
 use Drupal\rest_views\SerializedData;
 
 /**
- * Plugin implementation of the 'field_nvrf_double_fields_json_key_value' formatter.
+ * Plugin implementation 'field_nvrf_double_fields_json_key_value' formatter.
  *
  * @FieldFormatter(
  *   id = "field_nvrf_double_fields_json_key_value",
