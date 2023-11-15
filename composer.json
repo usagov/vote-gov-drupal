@@ -74,6 +74,7 @@
         "drupal/translatable_menu_link_uri": "^2.0@dev",
         "drupal/twig_field_value": "^2.0",
         "drupal/twig_tweak": "^3.2",
+        "drupal/uswds_templates": "^3.0@dev",
         "drush/drush": "^11.3"
     },
     "require-dev": {

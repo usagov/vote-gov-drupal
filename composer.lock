@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8da90d08bf22290d0823e30dbd464872",
+    "content-hash": "10b83ce690c9b1547694a7bfbf08c228",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4461,6 +4461,47 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/twig_tweak",
                 "issues": "https://www.drupal.org/project/issues/twig_tweak"
+            }
+        },
+        {
+            "name": "drupal/uswds_templates",
+            "version": "dev-3.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/uswds_templates.git",
+                "reference": "2af1b4794cbb4b46b046686b6bd313442f85f2ff"
+            },
+            "require": {
+                "drupal/core": "^9.4 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.0.x": "3.0.x-dev"
+                },
+                "drupal": {
+                    "version": "3.0.x-dev",
+                    "datestamp": "1698622207",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "vector_ray",
+                    "homepage": "https://www.drupal.org/user/1819168"
+                }
+            ],
+            "description": "Provides USWDS component templates for leveraging in other modules or themes",
+            "homepage": "https://www.drupal.org/project/uswds_templates",
+            "support": {
+                "source": "https://git.drupalcode.org/project/uswds_templates"
             }
         },
         {

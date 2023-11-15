@@ -9,17 +9,7 @@
  */
 #}
 
-{% set classes = [
-  'usa-alert',
-  content.field_alert_type | render ? 'usa-alert--' ~ content.field_alert_type | field_value | render
-] %}
-
-<div{{ attributes.addClass(classes)}}>
-  <div class="grid-container">
-    <div class="usa-alert__body">
-      <div class="usa-alert__text">
-        {{ content.field_alert_content | field_value }}
-      </div>
-    </div>
-  </div>
-</div>
+{% include '@uswds_templates/usa-site-alert.html.twig' with {
+   'alert_type': content.field_alert_type | field_value | render,
+   'text': content.field_alert_content | field_value
+} %}

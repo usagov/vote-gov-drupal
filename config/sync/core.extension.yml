@@ -68,6 +68,7 @@ module:
   twig_tweak: 0
   update: 0
   user: 0
+  uswds_templates: 0
   views_ui: 0
   vote_nvrf: 0
   vote_utility: 0
