@@ -90,11 +90,20 @@
     </div>{# /.layout-content #}
   </main>
 
-  {# Footer partial. #}
-  <footer role="contentinfo" class="usa-footer clearfix margin-top-4">
-    {% include '@bixal_uswds/partials/p-footer.html.twig' %}
+  <footer class="usa-footer usa-footer--big">
+    {# Email sign-up component. #}
+    {{ drupal_entity('block_content', 4) }}
 
-    {% include '@bixal_uswds/partials/p-identifier.html.twig' %}
+    {% include '@votegov/component/contact-identifier.html.twig' %}
+
+    <div class="usa-footer__primary-section">
+      <div class="grid-container">
+        {# Footer menu. #}
+        {{ drupal_entity('block', 'votegov_footernavigation') }}
+      </div>
+    </div>
+
+    {% include '@votegov/component/footer--secondary-section.html.twig' %}
   </footer>
 
 </div>{# /.layout-container #}
