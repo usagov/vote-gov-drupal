@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8da90d08bf22290d0823e30dbd464872",
+    "content-hash": "f9687a65bb13cca9d3b33d6d2748b478",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3154,6 +3154,58 @@
                 "irc": "irc://irc.freenode.org/drupal-support"
             },
             "time": "2020-09-03T01:06:58+00:00"
+        },
+        {
+            "name": "drupal/menu_multilingual",
+            "version": "1.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/menu_multilingual.git",
+                "reference": "8.x-1.0-alpha3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_multilingual-8.x-1.0-alpha3.zip",
+                "reference": "8.x-1.0-alpha3",
+                "shasum": "009b1216bdf8efc84b2e8741b46acb974b2ebe96"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "require-dev": {
+                "drupal/menu_block": "^1.5"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-alpha3",
+                    "datestamp": "1659408772",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "vlad.dancer",
+                    "homepage": "https://www.drupal.org/u/vladdancer"
+                },
+                {
+                    "name": "matsbla",
+                    "homepage": "https://www.drupal.org/u/matsbla"
+                }
+            ],
+            "description": "Filter menu links by current language.",
+            "homepage": "https://www.drupal.org/project/menu_multilingual",
+            "support": {
+                "source": "http://git.drupal.org/project/menu_multilingual.git",
+                "issues": "https://www.drupal.org/project/issues/menu_multilingual"
+            }
         },
         {
             "name": "drupal/metatag",
