@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.nvrf_page.body
+    - field.field.node.nvrf_page.field_display_title
     - field.field.node.nvrf_page.field_general_instructions
     - field.field.node.nvrf_page.field_omb_number
     - node.type.nvrf_page
@@ -21,6 +22,19 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_display_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
     region: content
   field_general_instructions:
     type: text_default
