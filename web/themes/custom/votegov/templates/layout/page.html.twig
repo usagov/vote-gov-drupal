@@ -62,9 +62,12 @@
     </div>
   </header>
 
-  <main role="main" class="main-content clearfix">
+  <main role="main" class="main-content clearfix grid-container">
     {# link is in html.html.twig #}
     <a id="main-content" tabindex="-1"></a>
+
+    {# Page title #}
+    {{ drupal_entity('block', 'votegov_page_title') }}
 
     <div class="layout-content grid-container-widescreen">
       {# admin region. #}
