@@ -2,4 +2,5 @@ adding:
   module:
     dblog: 0
     devel: 0
+    easy_breadcrumb: 0
 removing: {  }
