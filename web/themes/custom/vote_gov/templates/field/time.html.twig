@@ -1,1 +1,6 @@
-<time{{ attributes }}>{{ text | replace(t_numbers[language].numbers | default([])) }}</time>
+{% if language == 'nv' %}
+    <time{{ attributes }}>{{ text | date('l, F') | replace(t_numbers[language].numbers | default([])) }}</time>
+{% else %}
+    <time{{ attributes }}>{{ text | replace(t_numbers[language].numbers | default([])) }}</time>
+{% endif %}
+
