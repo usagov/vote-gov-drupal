@@ -1,5 +1,5 @@
 {% if language == 'nv' %}
-    {{ item.first["#text"] | date('I, F') }} <span class="navajo_font_override">{{ item.first["#text"] | date('d, Y') }} {{ item.second | replace(t_numbers[language].time | default([]))}}</span>
+    {{ item.first["#text"] | date('l, F') }} <span class="navajo_font_override">{{ item.first["#text"] | date('d, Y') }} {{ item.second | replace(t_numbers[language].time | default([]))}}</span>
 {% else %}
     {{ item.first }} <span class="time">{{ item.second | replace(t_numbers[language].time | default([]))}}</span>
 {% endif %}
