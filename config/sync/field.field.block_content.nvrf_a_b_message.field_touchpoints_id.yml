@@ -1,0 +1,19 @@
+uuid: eb561755-d0e0-4be0-83a4-52e712f47e05
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.nvrf_a_b_message
+    - field.storage.block_content.field_touchpoints_id
+id: block_content.nvrf_a_b_message.field_touchpoints_id
+field_name: field_touchpoints_id
+entity_type: block_content
+bundle: nvrf_a_b_message
+label: 'Touchpoints id'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

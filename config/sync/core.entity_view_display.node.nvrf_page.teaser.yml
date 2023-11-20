@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.nvrf_page.body
+    - field.field.node.nvrf_page.field_display_title
     - field.field.node.nvrf_page.field_general_instructions
     - field.field.node.nvrf_page.field_omb_number
     - node.type.nvrf_page
@@ -15,6 +16,11 @@ targetEntityType: node
 bundle: nvrf_page
 mode: teaser
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -22,6 +28,7 @@ content:
     region: content
 hidden:
   body: true
+  field_display_title: true
   field_general_instructions: true
   field_omb_number: true
   langcode: true
