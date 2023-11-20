@@ -8,14 +8,14 @@
 
 {# Set postmarked deadline with fallback #}
 {% if content.field_mail_postmarked_deadline | render %}
-  {% set postmarked_deadline = 'Must be postmarked by @date' | t({'@date': content.field_mail_postmarked_deadline | render | striptags}) %}
+  {% set postmarked_deadline = 'Must be postmarked by @date' | t({'@date': content.field_mail_postmarked_deadline.0 | render}) %}
 {% else %}
   {% set postmarked_deadline = content.field_g_mail_postmarked_deadline | field_value %}
 {% endif %}
 
 {# Set received deadline with fallback #}
 {% if content.field_mail_received_deadline | render %}
-  {% set received_deadline = 'Must be received by @date' | t({'@date': content.field_mail_received_deadline | render | striptags}) %}
+  {% set received_deadline = 'Must be received by @date' | t({'@date': content.field_mail_received_deadline.0 | render}) %}
 {% else %}
   {% set received_deadline = content.field_g_mail_received_deadline | field_value %}
 {% endif %}

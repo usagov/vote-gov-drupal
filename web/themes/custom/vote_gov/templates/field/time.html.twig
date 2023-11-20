@@ -1,6 +1,2 @@
-{% if language == 'nv' %}
-    <time{{ attributes }}>{{ text | date('l, F') | replace(t_numbers[language].numbers | default([])) }}</time>
-{% else %}
-    <time{{ attributes }}>{{ text | replace(t_numbers[language].numbers | default([])) }}</time>
-{% endif %}
-
+{# Striptags and raw filters were added to accomodate Navajo date formats. #}
+<time{{ attributes }}>{{ text | replace(t_numbers[language].numbers | default([])) | striptags('<span>') | raw  }}</time>
