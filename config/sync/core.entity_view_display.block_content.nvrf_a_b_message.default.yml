@@ -6,6 +6,7 @@ dependencies:
     - block_content.type.nvrf_a_b_message
     - field.field.block_content.nvrf_a_b_message.body
     - field.field.block_content.nvrf_a_b_message.field_messager_identifier
+    - field.field.block_content.nvrf_a_b_message.field_touchpoints_id
   module:
     - text
 id: block_content.nvrf_a_b_message.default
@@ -27,6 +28,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_touchpoints_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   langcode: true
