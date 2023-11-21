@@ -1,1 +1,2 @@
-<time{{ attributes }}>{{ text | replace(t_numbers[language].numbers | default([])) }}</time>
+{# Striptags and raw filters were added to accomodate Navajo date formats. #}
+<time{{ attributes }}>{{ text | replace(t_numbers[language].numbers | default([])) | striptags('<span>') | raw  }}</time>
