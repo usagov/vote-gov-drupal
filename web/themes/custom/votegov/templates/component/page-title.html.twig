@@ -12,6 +12,7 @@
  *   displayed after the main title tag that appears in the template.
  */
 #}
+{% set title = drupal_title() %}
 {% set node_type = currentnode.bundle() %}
 
 {% if node_type == "state_territory" %}
