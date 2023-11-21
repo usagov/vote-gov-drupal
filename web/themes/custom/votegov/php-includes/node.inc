@@ -17,6 +17,6 @@ function votegov_theme_suggestions_node_alter(&$suggestions, array $vars, $hook)
   $reg_type = strval(end($reg_type_array)['value']);
   $reg_type = str_replace('-', '', $reg_type);
 
-  $suggestions[] = 'node__state_territory__'  . $reg_type;
+  $suggestions[] = 'node__state_territory__' . $reg_type;
 
 }
