@@ -5,7 +5,7 @@
  * Preprocess function for page.
  */
 
-/*
+/**
  * Implements hook_theme_suggestion_HOOK_alter().
  */
 function votegov_theme_suggestions_page_alter(array &$suggestions, array $variables) {
