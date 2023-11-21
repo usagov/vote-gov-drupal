@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block content.
+ *
+ * @see template_preprocess_block_content_template()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'block-content',
+    'block-content--type-' ~ bundle|clean_class,
+    'block-content--' ~ id,
+    'block-content--view-mode-' ~ view_mode|clean_class
+  ]
+%}
+
+{{ attach_library('vote_gov/nvrf_pdf_download') }}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  <div class="block-content__content">
+    <form method="get" data-test="nvrf-form">
+      <h2>{{ content.field_heading | field_value | render | replace({"@state_name": currentnode.getTitle()}) | raw }}</h2>
+      <p>{{ content.field_description }}</p>
+      <label class="usa-sr-only" for="js-user-selection">{{ content.field_default_option_label }}</label>
+      {# NVRF language selector #}
+      {{ content.field_registration_form_link }}
+      {# Download button #}
+      <button class="usa-button" id="js-user-submit" type="submit">{{ content.field_submit_button_label }}</button>
+    </form>
+  </div>
+</div>
