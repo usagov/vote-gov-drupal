@@ -80,6 +80,16 @@
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ] %}
 
+{% set in_state_name = node.field_in_state_name.value | default("@state_name") | t({ "@state_name": state_name}) %}
+{% set of_state_name = node.field_of_state_name.value | default("@state_name") | t({ "@state_name": state_name}) %}
+{% set in_english = "(in English)" | t %}
+
+{# Korean 'state' character logic #}
+{% if language == 'ko' and node.field_is_state.value %}
+  {% set korean_state_char = "state" | t %}
+  {% set state_name = state_name ~ " " ~ korean_state_char %}
+{% endif %}
+
 <article{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label and not page %}
@@ -100,7 +110,15 @@
   {% endif %}
 
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
+    {% if reg_type is same as("notneeded") %}
+        {% include '@votegov/node/registration_types/node--state-territory--notneeded.html.twig' %}
+    {% elseif reg_type is same as("online") %}
+        {% include '@votegov/node/registration_types/node--state-territory--online.html.twig' %}
+    {% elseif reg_type is same as("bymail") %}
+        {% include '@votegov/node/registration_types/node--state-territory--bymail.html.twig' %}
+    {% elseif reg_type is same as("inperson") %}
+        {% include '@votegov/node/registration_types/node--state-territory--inperson.html.twig' %}
+    {% endif %}
   </div>
 
   {% if node.field_accepts_nvrf.value == 1 %}  

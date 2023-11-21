@@ -1,1 +1,77 @@
-<div>Online</div>
+{% extends 'node--state-territory.html.twig' %}
+
+{% block content %}
+{% set state_abrev = content.field_state_abbreviation | field_value | render %}
+
+  {# How to register to vote #}
+  <h2>{{ 'How to register to vote' | t({ '@state_name': state_name }) }}</h2>
+    {# registration link, more info link #}
+    {% if content.field_registration_link | render %}
+      {% set registration_link = content.field_override_registration_link | field_value | render | default( content.field_registration_link | field_value | render ) %}
+      {% set registration_link_text = "Start your online registration" | t({'@state_name': state_name}) %}
+
+      {% if language != "en" and not content.field_override_registration_link | render %}
+          {% set registration_link_text = registration_link_text ~ ' ' ~ in_english %}
+      {% endif %}
+
+      <p>{{ '@link on @state_name’s election website.' | t({
+          '@link': { "#markup": "<a href=\"#{registration_link}\" data-state-ext=\"online-registration\">#{registration_link_text}</a>" } | render,
+          '@state_name': state_name,
+          '@of_state_name': of_state_name,
+          '@in_state_name': in_state_name
+        }) }}
+      </p>
+    {% endif %}
+    {% if content.field_more_info_link | render %}
+      {% set more_info_link = content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ) %}
+      {% set more_info_link_text = "register to vote by mail or in person" | t({'@state_name': state_name}) %}
+
+      {% if language != "en" and not content.field_override_more_info_link | render %}
+          {% set more_info_link_text = more_info_link_text ~ ' ' ~ in_english %}
+      {% endif %}
+
+      <p>{{ 'You can also @link on @state_name’s election website.' | t({
+          '@link': { "#markup": "<a href=\"#{more_info_link}\" data-state-ext=\"offline-registration\">#{more_info_link_text}</a>" } | render,
+          '@state_name': state_name,
+          '@of_state_name': of_state_name,
+          '@in_state_name': in_state_name
+        }) }}
+      </p>
+    {% endif %}
+
+    {# Registration deadlines #}
+<h2>{{ 'Voter registration deadlines' | t({ '@state_name': state_name }) }}</h2>
+    <ul class="registered-resources" data-test="registration-info">
+    {% include '@vote_gov/partial/register/registration-date-online.html.twig' %}
+    {% include '@vote_gov/partial/register/registration-date-mail.html.twig' %}
+    {% include '@vote_gov/partial/register/registration-date-in-person.html.twig' %}
+    </ul>
+
+    {# Check voter registration #}
+{% if content.field_confirm_registration_link | render %}
+  {% set confirm_reg_link = content.field_override_confirm_reg_link | field_value | render | default( content.field_confirm_registration_link | field_value | render ) %}
+  {% set confirm_reg_link_text = "confirm your voter registration status" | t %}
+
+    {% if language != "en" and not content.field_override_confirm_reg_link  | render %}
+          {% set confirm_reg_link_text = confirm_reg_link_text ~ ' ' ~ in_english %}
+    {% endif %}
+
+  <h2>{{ 'How to check your voter registration' | t({ '@state_name': state_name }) }}</h2>
+    {% if state_abrev != 'wy' %}
+      <p>{{ 'You can @link on @state_name’s election website.' | t({
+          '@link': { "#markup": "<a href=\"#{confirm_reg_link}\" data-state-ext=\"confirm-registration\">#{confirm_reg_link_text}</a>" } | render,
+          '@state_name': state_name,
+          '@of_state_name': of_state_name,
+          '@in_state_name': in_state_name
+        }) }}
+      </p>
+    {% else %} {# Wyoming alt text #}
+      {% set alt_confirm_reg_link_text = "Click here to view Wyoming's county clerk contact information (PDF)" | t %}
+      <p>{{ 'You can confirm your voter registration status by contacting your local registration office. @link.' | t({
+          '@link': { "#markup": "<a href=\"#{confirm_reg_link}\">#{alt_confirm_reg_link_text}</a>" } | render
+        }) }}
+      </p>
+    {% endif %}
+{% endif %}
+
+{% endblock %}

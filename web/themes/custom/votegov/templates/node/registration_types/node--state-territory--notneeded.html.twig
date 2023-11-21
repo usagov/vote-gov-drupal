@@ -1,1 +1,40 @@
-<div>Not needed</div>
+{% extends 'node--state-territory.html.twig' %}
+
+{% block content %}
+{# More info #}
+{% if content.field_more_info_link | render %}
+<h2>{{ 'How to register to vote' | t({ '@state_name': state_name }) }}</h2>
+  {% set more_info_link = content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ) %}
+  {% set more_info_link_text = "Learn more about voting" | t({'@state_name': state_name}) %}
+
+  {% if language != "en" and not content.field_override_more_info_link | render %}
+          {% set more_info_link_text = more_info_link_text ~ ' ' ~ in_english %}
+  {% endif %}
+
+  <p>{{ 'Voter registration is not required in @state_name. @link on @state_name’s election website.' | t({
+      '@link': { "#markup": "<a href=\"#{more_info_link}\">#{more_info_link_text}</a>"} | render,
+      '@state_name': state_name,
+      '@of_state_name': of_state_name,
+      '@in_state_name': in_state_name
+    }) }}
+  </p>
+{% endif %}
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "{{ 'How to register to vote' | t({ '@state_name': state_name }) }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ 'Voter registration is not required in @state_name. Learn more about voting on @link.' | t({
+      '@link': { "#markup": "<a href=\"#{more_info_link}\">#{more_info_link_text}</a>"} | render,
+      '@state_name': state_name
+    }) }}"
+    }
+    }{{ end }}]
+  }
+</script>
+{% endblock %}
