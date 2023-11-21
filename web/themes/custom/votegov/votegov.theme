@@ -8,3 +8,4 @@
 require_once dirname(__FILE__) . '/php-includes/block.inc';
 require_once dirname(__FILE__) . '/php-includes/navigation.inc';
 require_once dirname(__FILE__) . '/php-includes/preprocess.inc';
+require_once dirname(__FILE__) . '/php-includes/page.inc';
