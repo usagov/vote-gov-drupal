@@ -5,20 +5,19 @@
  * Preprocess function for nodes.
  */
 
-use Drupal\node\NodeInterface;
-use Drupal\paragraphs\Entity\Paragraph;
-
 /**
- * Implements hook_theme_suggestions_HOOK_alter() for node().
+ * Implements hook_theme_suggestions_HOOK_alter().
  */
-function votegov_theme_suggestions_node_alter(&$suggestions, array $vars, $hook) {
+function votegov_theme_suggestions_node_alter(&$suggestions, array $vars) {
   $node = $vars['elements']['#node'];
-  $node_type = \Drupal::routeMatch()->getParameter('node')->bundle();
-  if ($node_type === "state-territory") {
-    $reg_type_array = $node->get('field_registration_type')->getValue();
-    $reg_type = strval(end($reg_type_array)['value']);
-    $reg_type = str_replace('-', '', $reg_type);
 
+  // Node type: State/Territory.
+  if ($node->bundle() === "state_territory") {
+    $reg_type_array = $node->get('field_registration_type')->getValue();
+    $reg_type = end($reg_type_array);
+    $reg_type = str_replace(['-', ''], '_', $reg_type['value']);
+
+    // Set node template suggestion for registration type.
     $suggestions[] = 'node__state_territory__' . $reg_type;
   }
 }

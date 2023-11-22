@@ -67,17 +67,19 @@
     <a id="main-content" tabindex="-1"></a>
 
     {% block main %}
-    <div class="layout-content grid-container-widescreen">
-      {# admin region. #}
-      {{ page.admin }}
-    </div>
+      <div class="layout-content grid-container-widescreen">
+        {# admin region. #}
+        {{ page.admin }}
+      </div>
 
-    <div class="layout-content grid-container-widescreen">
+      <div class="layout-content grid-container-widescreen">
 
       {# Main content region. #}
       <div class="grid-row grid-gap-lg">
         <div class="desktop:grid-col-9 order-last">
-        {% include '@votegov/component/page-title.html.twig' %}
+          {# Page title component #}
+          {% include '@votegov/component/page-title.html.twig' %}
+
           {{ page.content }}
         </div>
 
@@ -90,7 +92,7 @@
           </div>
         {% endif %}
       </div>
-    </div>{# /.layout-content #}
+      </div>{# /.layout-content #}
     {% endblock %}
   </main>
 

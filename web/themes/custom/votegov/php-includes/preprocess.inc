@@ -69,16 +69,3 @@ function votegov_preprocess_links__language_block(&$variables) {
     }
   }
 }
-
-/**
- * Implements hook_preprocess_HOOK().
- */
-function votegov_preprocess_node__state_territory(&$variables) {
-  $node = $variables['elements']['#node'];
-  $reg_type_array = $node->get('field_registration_type')->getValue();
-  $reg_type = strval(end($reg_type_array)['value']);
-  $reg_type = str_replace('-', '', $reg_type);
-
-  $variables['state_name'] = $node->get('title')->getValue()[0]['value'];
-  $variables['reg_type'] = $reg_type;
-}

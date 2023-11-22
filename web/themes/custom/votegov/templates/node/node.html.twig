@@ -67,48 +67,17 @@
  *
  */
 #}
-{% set node_type = node.bundle() %}
 
 {% set classes = [
-  'node',
-  'node--type-' ~ node.bundle|clean_class,
+  'node--' ~ node.bundle|clean_class,
   node.isPromoted() ? 'node--promoted',
   node.isSticky() ? 'node--sticky',
   not node.isPublished() ? 'node--unpublished',
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  node_type == 'state_territory' ? 'voter-info'
 ] %}
 
 <article{{ attributes.addClass(classes) }}>
-  <div{{ content_attributes.addClass('node__content') }}>
-    {% block alert %}
-    {% endblock %}
-
-    {% block content %}
-
-      {{ title_prefix }}
-      {% if label and not page %}
-        <h2{{ title_attributes }}>
-          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-        </h2>
-      {% endif %}
-      {{ title_suffix }}
-
-      {% if display_submitted %}
-        <footer class="node__meta">
-          {{ author_picture }}
-          <div{{ author_attributes.addClass('node__submitted') }}>
-            {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-            {{ metadata }}
-          </div>
-        </footer>
-      {% endif %}
-
-      {{ content }}
-
-    {% endblock %}
-  </div>
+  {% block content %}
+    {{ content }}
+  {% endblock %}
 </article>
-{% block goback %}
-
-{% endblock %}
