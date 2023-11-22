@@ -292,15 +292,15 @@ workflows:
                 - stage
           requires:
             - deploy
-      - cypress:
-          filters:
-            branches:
-              only:
-                - test
-                - dev
-                - stage
-          requires:
-            - upkeep
+      # - cypress:
+      #     filters:
+      #       branches:
+      #         only:
+      #           - test
+      #           - dev
+      #           - stage
+      #     requires:
+      #       - upkeep
   deploy-prod-workflow:
     when:
       and:
@@ -325,16 +325,16 @@ workflows:
         - equal: [ true, << pipeline.parameters.upkeep >> ]
     jobs:
       - upkeep
-  link-validation-workflow:
-    triggers:
-      - schedule:
-          cron: '0 10 * * 1,4'
-          filters:
-            branches:
-              only:
-                - stage
-    jobs:
-      - link-validation
+  # link-validation-workflow:
+  #   triggers:
+  #     - schedule:
+  #         cron: '0 10 * * 1,4'
+  #         filters:
+  #           branches:
+  #             only:
+  #               - stage
+  #   jobs:
+  #     - link-validation
   scheduled-backup-workflow:
     when:
       and:
