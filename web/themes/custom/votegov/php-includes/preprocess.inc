@@ -16,7 +16,7 @@ function votegov_preprocess(&$variables) {
   $variables['uswds_img_path'] = '/themes/custom/votegov/dist/assets/img';
 
   // Set global variable for theme directory.
-  $theme_path = \Drupal::request()->getBasePath() . '/' . \Drupal::service('extension.list.theme')->getPath('vote_gov');
+  $theme_path = \Drupal::request()->getBasePath() . '/' . \Drupal::service('extension.list.theme')->getPath('votegov');
   $variables['theme_path'] = $theme_path;
 
   // Set global variable for site name.
