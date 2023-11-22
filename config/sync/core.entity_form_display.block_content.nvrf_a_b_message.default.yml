@@ -6,6 +6,7 @@ dependencies:
     - block_content.type.nvrf_a_b_message
     - field.field.block_content.nvrf_a_b_message.body
     - field.field.block_content.nvrf_a_b_message.field_messager_identifier
+    - field.field.block_content.nvrf_a_b_message.field_touchpoints_id
   module:
     - text
 id: block_content.nvrf_a_b_message.default
@@ -26,6 +27,14 @@ content:
   field_messager_identifier:
     type: string_textfield
     weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_touchpoints_id:
+    type: string_textfield
+    weight: 28
     region: content
     settings:
       size: 60

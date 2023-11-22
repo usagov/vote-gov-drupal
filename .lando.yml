@@ -6,7 +6,7 @@ recipe: drupal10
 # https://docs.lando.dev/config/services.html#supported-services
 config:
   php: '8.2'
-  composer_version: '2.5.5'
+  composer_version: '2.6.5'
   database: mysql:8.0
   # Adjust this to point to directory where index.php exist.
   webroot: web
