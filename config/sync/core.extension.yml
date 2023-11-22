@@ -19,6 +19,7 @@ module:
   disable_language: 0
   double_field: 0
   dynamic_page_cache: 0
+  ec_placeholder: 0
   ec_touchpoints_survey: 0
   editor: 0
   editoria11y: 0
@@ -38,6 +39,7 @@ module:
   media: 0
   media_library: 0
   menu_link_content: 0
+  menu_multilingual: 0
   menu_ui: 0
   metatag: 0
   metatag_favicons: 0

@@ -65,7 +65,7 @@ describe('Test Content Manager Role Access', () => {
       expect(response.status).to.eq(200)
         })
 
-    cy.request('/media/5/delete?').then((response) => {
+    cy.request('/media/6/delete?').then((response) => {
       expect(response.status).to.eq(200)
         })
   })

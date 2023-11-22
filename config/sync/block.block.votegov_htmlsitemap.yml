@@ -16,10 +16,12 @@ provider: null
 plugin: 'system_menu_block:main'
 settings:
   id: 'system_menu_block:main'
-  label: 'Main navigation'
+  label: 'Sitemap Menu'
   label_display: '0'
   provider: system
   level: 1
   depth: 1
   expand_all_items: false
+  only_translated_labels: 0
+  only_translated_content: 0
 visibility: {  }

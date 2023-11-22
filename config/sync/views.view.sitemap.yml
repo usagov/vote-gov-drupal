@@ -264,19 +264,13 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  page_1:
-    id: page_1
-    display_title: Page
-    display_plugin: page
-    position: 1
+  embed_1:
+    id: embed_1
+    display_title: Embed
+    display_plugin: embed
+    position: 2
     display_options:
       display_extenders: {  }
-      path: sitemap
-      menu:
-        type: normal
-        title: Sitemap
-        menu_name: footer
-        parent: ''
     cache_metadata:
       max-age: -1
       contexts:

@@ -22,4 +22,6 @@ settings:
   level: 1
   depth: 0
   expand_all_items: false
+  only_translated_labels: 0
+  only_translated_content: 0
 visibility: {  }
