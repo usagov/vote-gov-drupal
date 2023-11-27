@@ -1,0 +1,22 @@
+uuid: 926a66ca-0ea4-42af-b46c-49817f98146f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - votegov
+_core:
+  default_config_hash: zi0BPmuyVpUHAQAYYi8qC8jfAO1MkRPw1_STBhdmc_Y
+id: votegov_content
+theme: votegov
+region: content
+weight: -6
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

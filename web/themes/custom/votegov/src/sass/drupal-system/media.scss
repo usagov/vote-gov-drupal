@@ -1,0 +1,43 @@
+// Include core in order to use USWDS mixins etc...
+@use "uswds-core" as *;
+
+figure {
+  @include u-margin(0);
+  @include u-padding(0);
+}
+
+.is-wysiwyg {
+
+  img {
+    line-height: units(0);
+    width: 100%;
+    height: auto;
+
+    @include at-media-max("tablet-lg") {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .align-left {
+    @include at-media("tablet-lg") {
+      @include u-margin-right(3);
+      width: 50%;
+    }
+
+    @include at-media-max("tablet-lg") {
+      float: none;
+    }
+  }
+
+  .align-right {
+    @include at-media("tablet-lg") {
+      @include u-margin-left(3);
+      width: 50%;
+    }
+
+    @include at-media-max("tablet-lg") {
+      float: none;
+    }
+  }
+}

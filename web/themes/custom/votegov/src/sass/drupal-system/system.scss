@@ -1,0 +1,19 @@
+// Include core in order to use USWDS mixins etc...
+@use "uswds-core" as *;
+
+// Removes any transition when the user has set their OS settings to prefer
+// reduced motion.
+@media screen and (prefers-reduced-motion: reduce), (update: slow) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+// Override local task tabs for mobile.
+.tabs--primary .tabs__tab {
+  @media (max-width: 43.75rem) {
+    display: block;
+  }
+}

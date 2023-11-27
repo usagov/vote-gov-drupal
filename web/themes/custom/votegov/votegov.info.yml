@@ -1,0 +1,16 @@
+name: Vote.gov 2.0 USWDS Theme
+type: theme
+description: "Custom Drupal theme based on USWDS 3."
+core_version_requirement: ">=9.2"
+base theme: bixal_uswds
+
+libraries:
+  - votegov/global
+
+regions:
+  admin: "Admin local tasks"
+  header: "Header"
+  content: "Content"
+  sidebar: "Sidebar"
+  footer: "Footer"
+  no_region: "Blocks for Twig Tweak, hidden, or other purposes"

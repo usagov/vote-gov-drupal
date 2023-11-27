@@ -1,0 +1,47 @@
+{#
+/**
+ * @file
+ * Theme override to display a media item.
+ *
+ * Available variables:
+ * - media: The media item, with limited access to object properties and
+ *   methods.
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+{# Remote video library. #}
+{{ attach_library('bixal_uswds/remote_video') }}
+
+{# Set the media url. #}
+{% set media_url = media.field_media_oembed_video.getString() %}
+
+{# Note there did not seem to be a programtic way to get the video provider from Xdebug. #}
+{# Set the video provider if youtube. #}
+{% if 'youtube' in media_url %}
+  {% set video_provider = 'YouTube' %}
+{% endif %}
+
+{# Set the video provider if vimeo. #}
+{% if 'vimeo' in media_url %}
+  {% set video_provider = 'Vimeo' %}
+{% endif %}
+
+{% set classes = [
+  'video-wrap',
+  'media',
+  'media--type-' ~ media.bundle()|clean_class,
+  not media.isPublished() ? 'media--unpublished',
+  view_mode ? 'media--view-mode-' ~ view_mode|clean_class,
+] %}
+
+<div{{ attributes.addClass(classes).setAttribute('data-video-provider', video_provider) }}>
+  {{ title_suffix.contextual_links }}
+  {% if content %}
+    {{ content.field_media_oembed_video | field_value }}
+  {% endif %}
+</div>

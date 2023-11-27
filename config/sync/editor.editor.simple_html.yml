@@ -14,5 +14,9 @@ settings:
       - bold
       - italic
       - link
-  plugins: {  }
+      - bulletedList
+  plugins:
+    ckeditor5_list:
+      reversed: false
+      startIndex: false
 image_upload: {  }

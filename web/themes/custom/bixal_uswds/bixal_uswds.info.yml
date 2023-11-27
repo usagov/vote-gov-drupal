@@ -1,0 +1,30 @@
+name: Bixal USWDS Theme (version 3.2.0)
+type: theme
+description: "Custom Drupal theme based on USWDS 3."
+package: Core
+core_version_requirement: "^9.4 || ^10"
+base theme: stable
+dependencies:
+  - drupal:twig_tweak
+  - drupal:twig_field_value
+  - drupal:admin_toolbar
+
+regions:
+  preface: "Preface"
+  highlighted: "Highlighted"
+  breadcrumb: "breadcrumb"
+  help: "Help"
+  content: "Content"
+  sidebar: "Sidebar"
+  postscript: "Postscript"
+  footer: "Footer"
+  no_region: "Blocks for Twig Tweak, hidden, or other purposes"
+
+## unset any unwanted CSS or JS.
+libraries-override:
+  system/base: false
+  core/drupal.announce: false
+  paragraphs/drupal.paragraphs.unpublished: false
+  olivero/tabs:
+    js:
+      js/tabs.js: false

@@ -1,0 +1,27 @@
+uuid: 4f599460-035e-4bc1-8d16-030d33766b97
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - votegov
+id: votegov_footernavigation
+theme: votegov
+region: footer
+weight: -3
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Footer menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+  only_translated_labels: 0
+  only_translated_content: 0
+visibility: {  }

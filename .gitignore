@@ -72,6 +72,7 @@ node_modules
 
 # Ignore Theme dist files
 /web/themes/custom/vote_gov/dist/
+/web/themes/custom/votegov/dist/
 
 # Allow cloud.gov settings file.
 !web/sites/default/settings.cloudgov.php

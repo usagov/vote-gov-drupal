@@ -20,7 +20,7 @@ updates:
       - "npm"
       - "dependencies"
   - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/web/themes/custom/vote_gov/" # Location of package manifests
+    directory: "/web/themes/custom/votegov/" # Location of package manifests
     schedule:
       interval: "weekly"
     labels:

@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block content.
+ *
+ * @see template_preprocess_block_content_template()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% include '@uswds_templates/usa-site-alert.html.twig' with {
+   'alert_type': content.field_alert_type | field_value | render,
+   'text': content.field_alert_content | field_value
+} %}
