@@ -27,7 +27,10 @@ $settings['tome_static_path_exclude'] = [
   '/es/jsonapi', '/es/jsonapi/deleted-nodes',
 ];
 
-$site_languages = ['ar','bn','es','fr','hi','ht','km','ko','nv','pt','ru','tl','vi','ypk','zh-hans','zh'];
+$site_languages = [
+  'ar', 'bn', 'es', 'fr', 'hi', 'ht', 'km', 'ko',
+  'nv', 'pt', 'ru', 'tl', 'vi', 'ypk', 'zh-hans', 'zh',
+];
 
 $excluded_api_paths = [
   '/api/nvrf/fields.json',
