@@ -1,0 +1,22 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+
+/*
+ * Implements hook_ENTITY_TYPE_presave().
+ */
+function vote_state_nvrf_fields_node_presave(EntityInterface $entity) {
+  if ($entity->bundle() === 'state_territory' && $entity->language()->getId() == 'en') {
+    $values_array = [];
+    // Exclude these terms. They are not relevant to states.
+    $excluded_terms = [1, 7, 21, 22, 23, 33, 41, 42];
+
+    for ($i = 1; $i <= 42; $i++) {
+      if (!in_array($i, $excluded_terms)) {
+        $values_array[] = ['nvrf_field' => $i, 'required' => 1];
+      }
+    }
+
+    $entity->set('field_nvrf_fields', $values_array);
+  }
+}

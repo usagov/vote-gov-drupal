@@ -1,0 +1,5 @@
+name: 'Vote state nvrf fields'
+type: module
+description: 'presave action'
+core_version_requirement: ^9 || ^10
+package: Custom
