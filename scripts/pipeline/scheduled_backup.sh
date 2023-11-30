@@ -11,7 +11,7 @@ backup_media="cms/public/media"
 
 rm -rf scheduled_backup/
 
-mkdir -p scheduled_backup 
+mkdir -p scheduled_backup
 cd scheduled_backup
 
 echo "Downloading media files..."
@@ -24,7 +24,7 @@ echo "Downloading media files..."
   cf create-service-key "${service}" "${service_key}"
   sleep 2
   s3_credentials=$(cf service-key "${service}" "${service_key}" | tail -n +2)
-  
+
   export AWS_ACCESS_KEY_ID=$(echo "${s3_credentials}" | jq -r '.credentials.access_key_id')
   export bucket=$(echo "${s3_credentials}" | jq -r '.credentials.bucket')
   export AWS_DEFAULT_REGION=$(echo "${s3_credentials}" | jq -r '.credentials.region')
@@ -39,10 +39,35 @@ echo "Downloading media files..."
   cf delete-service-key "${service}" "${service_key}" -f
 } >/dev/null 2>&1
 
+echo "Downloading static files..."
+{
+  cf target -s "${cf_space}"
+
+  service="${project}-static-${BACKUP_ENV}"
+  service_key="${service}-key"
+  cf delete-service-key "${service}" "${service_key}" -f
+  cf create-service-key "${service}" "${service_key}"
+  sleep 2
+  s3_credentials=$(cf service-key "${service}" "${service_key}" | tail -n +2)
+
+  export AWS_ACCESS_KEY_ID=$(echo "${s3_credentials}" | jq -r '.credentials.access_key_id')
+  export bucket=$(echo "${s3_credentials}" | jq -r '.credentials.bucket')
+  export AWS_DEFAULT_REGION=$(echo "${s3_credentials}" | jq -r '.credentials.region')
+  export AWS_SECRET_ACCESS_KEY=$(echo "${s3_credentials}" | jq -r '.credentials.secret_access_key')
+
+  rm -rf ${BACKUP_ENV}
+
+  aws s3 sync --no-verify-ssl s3://${bucket}/${backup_static} ${backup_static}/ 2>/dev/null
+  tar czvf static_${now}.tar.gz ${backup_static}
+
+
+  cf delete-service-key "${service}" "${service_key}" -f
+} >/dev/null 2>&1
+
 echo "Downloading terraform state..."
 {
-  cf target -s "${backup_space}"  
-  
+  cf target -s "${backup_space}"
+
   service="${project}-terraform-backend"
   service_key="${service}-key"
   cf delete-service-key "${service}" "${service_key}" -f
@@ -50,7 +75,7 @@ echo "Downloading terraform state..."
 
   sleep 2
   s3_credentials=$(cf service-key "${service}" "${service_key}" | tail -n +2)
-  
+
   export AWS_ACCESS_KEY_ID=$(echo "${s3_credentials}" | jq -r '.credentials.access_key_id')
   export bucket=$(echo "${s3_credentials}" | jq -r '.credentials.bucket')
   export AWS_DEFAULT_REGION=$(echo "${s3_credentials}" | jq -r '.credentials.region')
@@ -58,7 +83,7 @@ echo "Downloading terraform state..."
 
   rm -rf "env:"
   aws s3 cp --recursive  --no-verify-ssl s3://${bucket}/ . 2>/dev/null
-  
+
   tar czf terraform_state_${now}.tar.gz "env:"
 
   cf delete-service-key "${service}" "${service_key}" -f
@@ -66,16 +91,16 @@ echo "Downloading terraform state..."
 
 echo "Saving to backup bucket..."
 {
-  cf target -s "${backup_space}"  
-  
+  cf target -s "${backup_space}"
+
   export service="${project}-backup"
   export service_key="${service}-key"
   cf delete-service-key "${service}" "${service_key}" -f
   cf create-service-key "${service}" "${service_key}"
   sleep 2
-  
+
   export s3_credentials=$(cf service-key "${service}" "${service_key}" | tail -n +2)
-  
+
   export AWS_ACCESS_KEY_ID=$(echo "${s3_credentials}" | jq -r '.credentials.access_key_id')
   export bucket=$(echo "${s3_credentials}" | jq -r '.credentials.bucket')
   export AWS_DEFAULT_REGION=$(echo "${s3_credentials}" | jq -r '.credentials.region')
@@ -84,7 +109,7 @@ echo "Saving to backup bucket..."
   rm -f backup_${now}.sql
   cp ../backup_${BACKUP_ENV}.sql backup_${now}.sql
   gzip backup_${now}.sql
-  
+
   aws s3 cp ./ s3://${bucket}/${BACKUP_ENV}/${backup_folder} --exclude "*" --include "*.sql.gz" --include "*.tar.gz" --recursive --no-verify-ssl 2>/dev/null
 
   tar czf latest.tar.gz *.gz
