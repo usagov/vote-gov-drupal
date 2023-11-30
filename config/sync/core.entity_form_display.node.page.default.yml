@@ -5,11 +5,13 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_body
+    - field.field.node.page.field_media
     - field.field.node.page.field_metatags
     - node.type.page
     - workflows.workflow.publishing_content
   module:
     - content_moderation
+    - media_library
     - metatag
     - path
     - publication_date
@@ -34,6 +36,13 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
+    third_party_settings: {  }
+  field_media:
+    type: media_library_widget
+    weight: 26
+    region: content
+    settings:
+      media_types: {  }
     third_party_settings: {  }
   field_metatags:
     type: metatag_firehose

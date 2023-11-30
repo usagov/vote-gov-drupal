@@ -1,0 +1,25 @@
+uuid: 23955dae-c45c-4741-8f56-bedda068bad9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sidebar:b191c996-ec27-47dd-a2fc-cd6853e61334'
+  module:
+    - block_content
+  theme:
+    - votegov
+id: votegov_sidebar
+theme: votegov
+region: sidebar
+weight: 0
+provider: null
+plugin: 'block_content:b191c996-ec27-47dd-a2fc-cd6853e61334'
+settings:
+  id: 'block_content:b191c996-ec27-47dd-a2fc-cd6853e61334'
+  label: Sidebar
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

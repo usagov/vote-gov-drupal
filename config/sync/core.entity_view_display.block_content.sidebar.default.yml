@@ -1,0 +1,23 @@
+uuid: 5a37b248-9db7-46bb-9662-e9e14199d4f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sidebar
+    - field.field.block_content.sidebar.body
+  module:
+    - text
+id: block_content.sidebar.default
+targetEntityType: block_content
+bundle: sidebar
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
