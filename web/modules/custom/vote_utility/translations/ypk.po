@@ -75,7 +75,7 @@ msgid "How to register to vote"
 msgstr "Naten ilatelleghqaq nakmikimun"
 
 msgid "Other ways to register to vote"
-msgstr "Ilaneng ilatelleghqneng"
+msgstr "Ilaneng ilatelleghqaneng"
 
 msgid "Register by mail deadline:"
 msgstr "Ilatelleq tuyuqayugkun tuuniviga:"
