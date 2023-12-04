@@ -11,7 +11,7 @@ dependencies:
 id: votegov_htmlsitemap
 theme: votegov
 region: no_region
-weight: -6
+weight: -5
 provider: null
 plugin: 'system_menu_block:main'
 settings:

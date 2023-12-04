@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
     - field.field.node.page.field_body
+    - field.field.node.page.field_media
     - field.field.node.page.field_metatags
     - node.type.page
   module:
@@ -28,6 +29,7 @@ content:
 hidden:
   body: true
   field_body: true
+  field_media: true
   field_metatags: true
   langcode: true
   published_at: true

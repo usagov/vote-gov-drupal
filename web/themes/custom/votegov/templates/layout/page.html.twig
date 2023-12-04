@@ -73,13 +73,14 @@
       </div>
 
       <div class="layout-content grid-container-widescreen">
+      {# Breadcrumbs component. #}
+      {{ drupal_entity('block', 'votegov_breadcrumbs') }}
 
       {# Main content region. #}
       <div class="grid-row grid-gap-lg">
         <div class="desktop:grid-col-9 order-last">
           {# Page title component #}
           {% include '@votegov/component/page-title.html.twig' %}
-
           {{ page.content }}
         </div>
 
