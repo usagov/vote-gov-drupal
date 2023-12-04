@@ -39,14 +39,14 @@ content:
     third_party_settings: {  }
   field_media:
     type: media_library_widget
-    weight: 26
+    weight: 11
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
-    weight: 12
+    weight: 13
     region: content
     settings:
       sidebar: true
@@ -54,7 +54,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 11
+    weight: 12
     region: content
     settings:
       include_locked: true
