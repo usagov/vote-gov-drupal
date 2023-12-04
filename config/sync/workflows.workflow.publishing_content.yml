@@ -6,6 +6,7 @@ dependencies:
     - node.type.nvrf_page
     - node.type.page
     - node.type.state_territory
+    - node.type.voter_guide
   module:
     - content_moderation
 id: publishing_content
@@ -66,4 +67,5 @@ type_settings:
       - nvrf_page
       - page
       - state_territory
+      - voter_guide
   default_moderation_state: draft

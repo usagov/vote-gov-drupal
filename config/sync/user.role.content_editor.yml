@@ -11,6 +11,7 @@ dependencies:
     - node.type.nvrf_page
     - node.type.page
     - node.type.state_territory
+    - node.type.voter_guide
     - taxonomy.vocabulary.nvrf_field
     - workflows.workflow.publishing_content
   module:
@@ -46,11 +47,13 @@ permissions:
   - 'create remote_video media'
   - 'create state_territory content'
   - 'create terms in nvrf_field'
+  - 'create voter_guide content'
   - 'delete terms in nvrf_field'
   - 'edit any landing content'
   - 'edit any nvrf_page content'
   - 'edit any page content'
   - 'edit any state_territory content'
+  - 'edit any voter_guide content'
   - 'edit own document media'
   - 'edit own image media'
   - 'edit own landing content'
@@ -58,6 +61,7 @@ permissions:
   - 'edit own page content'
   - 'edit own remote_video media'
   - 'edit own state_territory content'
+  - 'edit own voter_guide content'
   - 'edit terms in nvrf_field'
   - 'mark as hidden in editoria11y'
   - 'translate any entity'
@@ -73,6 +77,7 @@ permissions:
   - 'translate paragraph'
   - 'translate remote_video media'
   - 'translate state_territory node'
+  - 'translate voter_guide node'
   - 'update content translations'
   - 'update media'
   - 'use publishing_content transition create_new_draft'
@@ -90,3 +95,4 @@ permissions:
   - 'view page revisions'
   - 'view state_territory revisions'
   - 'view the administration theme'
+  - 'view voter_guide revisions'
