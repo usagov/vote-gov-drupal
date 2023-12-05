@@ -24,6 +24,7 @@ settings:
       - outdent
       - alignment
       - '|'
+      - horizontalLine
       - link
       - drupalMedia
       - embeddedContent
@@ -52,11 +53,15 @@ settings:
         - '<h3 class>'
         - '<button type class aria-expanded aria-controls>'
         - '<ul class>'
+        - '<a href target noreferrer>'
     ckeditor5_style:
       styles:
         -
           label: 'Button styled link'
           element: '<a class="usa-button">'
+        -
+          label: 'Intro paragraph'
+          element: '<p class="usa-intro">'
     media_media:
       allow_view_mode_override: false
 image_upload:

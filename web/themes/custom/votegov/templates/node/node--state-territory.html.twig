@@ -1,0 +1,81 @@
+{#
+/**
+ * @file
+ *  Bixal USWDS Theme override to display a node: State/Territory.
+ */
+#}
+
+{% set classes = [
+  'node--' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+] %}
+
+<article{{ attributes.addClass(classes) }}>
+  {{ drupal_view('inline_alert', 'embed_1') }}
+
+  {% set in_state_name = node.field_in_state_name.value | default("@state_name") | t({ "@state_name": state_name}) %}
+  {% set of_state_name = node.field_of_state_name.value | default("@state_name") | t({ "@state_name": state_name}) %}
+  {% set state_abrev = content.field_state_abbreviation | field_value | render %}
+  {% set in_english = "(in English)" | t %}
+
+  {# Korean 'state' character logic #}
+  {% if language == 'ko' and node.field_is_state.value %}
+    {% set korean_state_char = "state" | t %}
+    {% set state_name = state_name ~ " " ~ korean_state_char %}
+  {% endif %}
+
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+
+  {% block deadlines %}
+    {# Registration deadlines #}
+    <h2>{{ 'Voter registration deadlines' | t({ '@state_name': state_name }) }}</h2>
+    <ul class="registered-resources" data-test="registration-info">
+      {% include '@votegov/component/registration-date/registration-date--online.html.twig' %}
+      {% include '@votegov/component/registration-date/registration-date--by-mail.html.twig' %}
+      {% include '@votegov/component/registration-date/registration-date--in-person.html.twig' %}
+    </ul>
+  {% endblock %}
+
+  {% block confirm %}
+    {# Check voter registration #}
+    {% if content.field_confirm_registration_link | render %}
+      {% set confirm_reg_link = content.field_override_confirm_reg_link | field_value | render | default( content.field_confirm_registration_link | field_value | render ) %}
+      {% set confirm_reg_link_text = "confirm your voter registration status" | t %}
+
+      {% if language != "en" and not content.field_override_confirm_reg_link  | render %}
+        {% set confirm_reg_link_text = confirm_reg_link_text ~ ' ' ~ in_english %}
+      {% endif %}
+
+      <h2>{{ 'How to check your voter registration' | t({ '@state_name': state_name }) }}</h2>
+      {% if state_abrev != 'wy' %}
+        <p>{{ 'You can @link on @state_name’s election website.' | t({
+            '@link': { "#markup": "<a href=\"#{confirm_reg_link}\" data-state-ext=\"confirm-registration\">#{confirm_reg_link_text}</a>" } | render,
+            '@state_name': state_name,
+            '@of_state_name': of_state_name,
+            '@in_state_name': in_state_name
+          }) }}
+        </p>
+      {% else %} {# Wyoming alt text #}
+        {% set alt_confirm_reg_link_text = "Click here to view Wyoming's county clerk contact information (PDF)" | t %}
+        <p>{{ 'You can confirm your voter registration status by contacting your local registration office. @link.' | t({
+            '@link': { "#markup": "<a href=\"#{confirm_reg_link}\">#{alt_confirm_reg_link_text}</a>" } | render
+          }) }}
+        </p>
+      {% endif %}
+    {% endif %}
+  {% endblock %}
+
+  {% if node.field_accepts_nvrf.value == 1 %}
+    {{ drupal_entity('block_content', '3') }}
+  {% endif %}
+
+  <p>
+    {# Striptags and raw filters were added to accomodate Navajo date formats. #}
+    {{'Last updated:' | t }} {{ node.revision_timestamp.value | date('U') | format_date('revision_date') | replace(t_numbers[language].numbers | default([])) | striptags('<span>') | raw }}
+  </p>
+</article>

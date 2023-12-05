@@ -12,10 +12,11 @@ field_name: field_caption
 entity_type: media
 bundle: image
 label: Caption
-description: ''
+description: 'This is a global caption field and will be displayed in any place this image is used.'
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings: {  }
+settings:
+  allowed_formats: {  }
 field_type: text

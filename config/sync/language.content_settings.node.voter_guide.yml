@@ -1,0 +1,16 @@
+uuid: cf33a03b-0f96-4020-89a5-b5e77d06c0a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.voter_guide
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.voter_guide
+target_entity_type_id: node
+target_bundle: voter_guide
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,26 @@
+uuid: 82e222d5-ed52-43fd-a235-57fd1b97b7c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - filter.format.basic_html
+    - node.type.voter_guide
+  module:
+    - text
+id: node.voter_guide.body
+field_name: body
+entity_type: node
+bundle: voter_guide
+label: Content
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats:
+    - basic_html
+field_type: text_with_summary

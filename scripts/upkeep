@@ -44,11 +44,11 @@ cp -rfp ${app_path}/web/modules/contrib/simple_sitemap/xsl/* ${html_path}/module
 echo "Missing module files for Sitemap completed!"
 
 echo "Adding Vote.gov custom theme assets"
-mkdir -p ${html_path}/themes/custom/vote_gov
-cp -rfp ${app_path}/web/themes/custom/vote_gov/dist ${html_path}/themes/custom/vote_gov/
-cp -rfp ${app_path}/web/themes/custom/vote_gov/fonts ${html_path}/themes/custom/vote_gov/
-cp -rfp ${app_path}/web/themes/custom/vote_gov/img ${html_path}/themes/custom/vote_gov/
-cp -rfp ${app_path}/web/themes/custom/vote_gov/json ${html_path}/themes/custom/vote_gov/
+mkdir -p ${html_path}/themes/custom/votegov
+cp -rfp ${app_path}/web/themes/custom/votegov/dist ${html_path}/themes/custom/votegov/
+cp -rfp ${app_path}/web/themes/custom/votegov/fonts ${html_path}/themes/custom/votegov/
+cp -rfp ${app_path}/web/themes/custom/votegov/img ${html_path}/themes/custom/votegov/
+cp -rfp ${app_path}/web/themes/custom/votegov/json ${html_path}/themes/custom/votegov/
 echo "Adding Vote.gov custom theme assets - completed!"
 
 cd ${html_path}

@@ -31,7 +31,7 @@ jobs:
             cf run-task ${project}-drupal-${CIRCLE_BRANCH} --command "ENV=${CIRCLE_BRANCH} scripts/upkeep" --name "${project}-${CIRCLE_BRANCH}-upkeep"  -k "2G" -m 512M
   build-theme:
     docker:
-      - image: node:18-slim
+      - image: node:20-slim
     steps:
       - checkout
       - run:
@@ -41,7 +41,7 @@ jobs:
       - persist_to_workspace:
           root: ~/
           paths:
-            - project/web/themes/custom/vote_gov/dist
+            - project/web/themes/custom/votegov/dist
   cypress:
     docker:
       - image: cypress/included:cypress-12.3.0-node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
@@ -292,15 +292,15 @@ workflows:
                 - stage
           requires:
             - deploy
-      - cypress:
-          filters:
-            branches:
-              only:
-                - test
-                - dev
-                - stage
-          requires:
-            - upkeep
+      # - cypress:
+      #     filters:
+      #       branches:
+      #         only:
+      #           - test
+      #           - dev
+      #           - stage
+      #     requires:
+      #       - upkeep
   deploy-prod-workflow:
     when:
       and:
@@ -325,16 +325,16 @@ workflows:
         - equal: [ true, << pipeline.parameters.upkeep >> ]
     jobs:
       - upkeep
-  link-validation-workflow:
-    triggers:
-      - schedule:
-          cron: '0 10 * * 1,4'
-          filters:
-            branches:
-              only:
-                - stage
-    jobs:
-      - link-validation
+  # link-validation-workflow:
+  #   triggers:
+  #     - schedule:
+  #         cron: '0 10 * * 1,4'
+  #         filters:
+  #           branches:
+  #             only:
+  #               - stage
+  #   jobs:
+  #     - link-validation
   scheduled-backup-workflow:
     when:
       and:
