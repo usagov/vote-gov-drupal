@@ -27,27 +27,6 @@ $settings['tome_static_path_exclude'] = [
   '/es/jsonapi', '/es/jsonapi/deleted-nodes',
 ];
 
-$site_languages = [
-  'ar', 'bn', 'es', 'fr', 'hi', 'ht', 'km', 'ko',
-  'nv', 'pt', 'ru', 'tl', 'vi', 'ypk', 'zh-hans', 'zh',
-];
-
-$excluded_api_paths = [
-  '/api/nvrf/fields.json',
-  '/api/nvrf/messages.json',
-  '/api/nvrf/cards.json',
-  '/api/nvrf/states.json',
-  '/api/nvrf/pages.json',
-];
-
-$settings['tome_static_path_exclude'] = array_merge($settings['tome_static_path_exclude'], $excluded_api_paths);
-
-foreach ($site_languages as $langcode) {
-  foreach ($excluded_api_paths as $excluded_api_path) {
-    $settings['tome_static_path_exclude'][] = '/' . $langcode . $excluded_api_path;
-  }
-}
-
 $is_cloudgov = FALSE;
 
 if (!empty($cf_application_data['space_name']) &&
