@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_body
+    - field.field.node.page.field_media
     - field.field.node.page.field_metatags
     - node.type.page
   module:
@@ -21,26 +22,35 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   content_moderation_control:
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_body:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 7
+    region: content
+  field_media:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
+    weight: 0
     region: content
   field_metatags:
     type: metatag_empty_formatter
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   langcode:
     type: language
@@ -49,12 +59,12 @@ content:
       link_to_entity: false
       native_language: false
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   published_at:
     type: timestamp
@@ -73,6 +83,6 @@ content:
         granularity: 2
         refresh: 60
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
 hidden: {  }

@@ -1,0 +1,22 @@
+uuid: b1205140-82ba-4f6a-afff-3840dede2192
+langcode: en
+status: true
+dependencies:
+  theme:
+    - votegov
+_core:
+  default_config_hash: umNtIMUoh_wuWhK5Dv8-cX7febvOoYCebJ8lOg1NDk0
+id: votegov_local_tasks
+theme: votegov
+region: admin
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

@@ -68,15 +68,15 @@ tooling:
   npm-theme:
     service: node
     description: Runs npm commands
-    cmd: npm --prefix  /app/web/themes/custom/vote_gov
+    cmd: npm --prefix  /app/web/themes/custom/votegov
   gulp:
     service: node
-    dir: "/app/web/themes/custom/vote_gov"
-    cmd: npm run gulp --prefix  /app/web/themes/custom/vote_gov
+    dir: "/app/web/themes/custom/votegov"
+    cmd: npm run gulp --prefix  /app/web/themes/custom/votegov
   gulp-compile:
     service: node
-    dir: "/app/web/themes/custom/vote_gov"
-    cmd: npm run build --prefix  /app/web/themes/custom/vote_gov
+    dir: "/app/web/themes/custom/votegov"
+    cmd: npm run build --prefix  /app/web/themes/custom/votegov
   # Custom lando command, to sync Drupal db with updates, config changes in codebase.
   'cy:axe':
     service: node

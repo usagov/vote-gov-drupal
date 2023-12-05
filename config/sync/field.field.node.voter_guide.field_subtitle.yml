@@ -1,0 +1,24 @@
+uuid: 26b3aa0f-5d7b-4a96-ad73-f5d09ef62725
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+    - filter.format.basic_html
+    - node.type.voter_guide
+  module:
+    - text
+id: node.voter_guide.field_subtitle
+field_name: field_subtitle
+entity_type: node
+bundle: voter_guide
+label: Subtitle
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

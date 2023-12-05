@@ -20,6 +20,7 @@ dependencies:
     - node.type.nvrf_page
     - node.type.page
     - node.type.state_territory
+    - node.type.voter_guide
     - taxonomy.vocabulary.nvrf_field
     - workflows.workflow.publishing_content
   module:
@@ -61,6 +62,7 @@ permissions:
   - 'create sitewide_alert block content'
   - 'create state_territory content'
   - 'create terms in nvrf_field'
+  - 'create voter_guide content'
   - 'delete all revisions'
   - 'delete any audio media'
   - 'delete any basic block content'
@@ -75,6 +77,7 @@ permissions:
   - 'delete any remote_video media'
   - 'delete any sitewide_alert block content'
   - 'delete any state_territory content'
+  - 'delete any voter_guide content'
   - 'delete content translations'
   - 'delete landing revisions'
   - 'delete media'
@@ -86,9 +89,11 @@ permissions:
   - 'delete own page content'
   - 'delete own remote_video media'
   - 'delete own state_territory content'
+  - 'delete own voter_guide content'
   - 'delete page revisions'
   - 'delete state_territory revisions'
   - 'delete terms in nvrf_field'
+  - 'delete voter_guide revisions'
   - 'edit any audio media'
   - 'edit any basic block content'
   - 'edit any document media'
@@ -106,6 +111,7 @@ permissions:
   - 'edit any search block content'
   - 'edit any sitewide_alert block content'
   - 'edit any state_territory content'
+  - 'edit any voter_guide content'
   - 'edit own audio media'
   - 'edit own document media'
   - 'edit own image media'
@@ -114,6 +120,7 @@ permissions:
   - 'edit own page content'
   - 'edit own remote_video media'
   - 'edit own state_territory content'
+  - 'edit own voter_guide content'
   - 'edit terms in nvrf_field'
   - 'mark as hidden in editoria11y'
   - 'revert all revisions'
@@ -130,6 +137,7 @@ permissions:
   - 'revert nvrf_page revisions'
   - 'revert page revisions'
   - 'revert state_territory revisions'
+  - 'revert voter_guide revisions'
   - 'translate any entity'
   - 'translate audio media'
   - 'translate block_content'
@@ -144,6 +152,7 @@ permissions:
   - 'translate paragraph'
   - 'translate remote_video media'
   - 'translate state_territory node'
+  - 'translate voter_guide node'
   - 'update any media'
   - 'update content translations'
   - 'update media'
@@ -174,3 +183,4 @@ permissions:
   - 'view state_territory revisions'
   - 'view the administration theme'
   - 'view unpublished paragraphs'
+  - 'view voter_guide revisions'

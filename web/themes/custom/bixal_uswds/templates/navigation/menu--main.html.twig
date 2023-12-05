@@ -1,0 +1,119 @@
+{#
+/**
+ * @file
+ * Bixal USWDS implementation for main navigation
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ *
+ * @ingroup themeable
+ */
+#}
+{% import _self as menus %}
+
+{#
+We call a macro which calls itself to render the full tree.
+@see https://twig.symfony.com/doc/1.x/tags/macro.html
+#}
+{% set attributes = attributes.addClass('menu') %}
+{{ menus.menu_links(items, attributes, 0, 'primary-menu-item-') }}
+
+{% macro menu_links(items, attributes, menu_level, aria_id) %}
+  {% set primary_nav_level = 'usa-nav__menu--level-' ~ (menu_level + 1) %}
+  {% set drupal_selector_primary_nav_level = menu_level <= 1 ? 'usa-nav-menu--level-' ~ (menu_level + 1) : false %}
+  {% set is_top_level_menu = menu_level == 0 %}
+
+  {% import _self as menus %}
+  {% if items %}
+
+    <ul {{ attributes.addClass(primary_nav_level, menu_level == 0 ? 'usa-nav__primary usa-accordion')
+      .setAttribute('data-drupal-selector', drupal_selector_primary_nav_level) }}>
+
+      {% set attributes = attributes.removeClass(primary_nav_level) %}
+      {% for item in items %}
+
+        {% if item.url.isRouted and item.url.routeName == '<nolink>' %}
+          {% set menu_item_type = 'nolink' %}
+        {% else %}
+          {% set menu_item_type = 'link' %}
+        {% endif %}
+
+        {% set item_classes = [
+          'usa-nav__primary-item',
+          'usa-nav__primary-item--' ~ menu_item_type,
+          'usa-nav__primary-item--level-' ~ (menu_level + 1),
+          item.in_active_trail ? 'usa-nav__primary-item--active-trail',
+          item.below ? 'usa-nav__primary-item--has-children',
+          menu_level >= 1 ? 'usa-nav__submenu-item',
+        ] %}
+
+        {% set link_classes = [
+          'usa-nav__menu-link',
+          'usa-nav__menu-link--' ~ menu_item_type,
+          'usa-nav__menu-link--level-' ~ (menu_level + 1),
+          item.in_active_trail ? 'usa-nav__menu-link--active-trail',
+          item.below ? 'usa-nav__menu-link--has-children',
+        ] %}
+
+        <li{{ item.attributes.addClass(item_classes)
+          .setAttribute('data-drupal-selector', is_top_level_menu and item.below ? 'usa-nav-menu-item-has-children': false) }}>
+          {#
+          A unique HTML ID should be used, but that isn't available through
+          Twig yet, so the |clean_id filter is used for now.
+          @see https://www.drupal.org/project/drupal/issues/3115445
+          #}
+          {% set aria_id = (aria_id ~ loop.index )|clean_id %}
+          {% set link_title %}
+            <span
+              class="usa-nav__menu-link-inner usa-nav__menu-link-inner--level-{{ menu_level + 1 }}">
+              {{ item.title }}
+            </span>
+          {% endset %}
+
+          {% if menu_item_type == 'link' or menu_item_type == 'nolink' %}
+
+            {% if not item.below %}
+              {{ link(menu_item_type == 'link' ? link_title : item.title, item.url, {
+                'class': link_classes,
+                'data-drupal-selector': is_top_level_menu ? 'usa-nav-menu-link-has-children' : false,
+              }) }}
+            {% endif %}
+
+            {% if item.below %}
+              {% if is_top_level_menu %}
+                {% set toggle_button_attributes = create_attribute({
+                  'class': 'usa-accordion__button usa-nav__link',
+                  'data-drupal-selector': 'usa-nav-submenu-toggle-button',
+                  'aria-controls': aria_id,
+                  'aria-expanded': 'false',
+                  'aria-hidden': 'true',
+                  'tabindex': '-1',
+                }) %}
+
+                <button{{ toggle_button_attributes }}>
+                  <span class="visually-hidden">{{ '@title sub-navigation'|t({'@title': item.title}) }}</span>
+                  <span class="icon--menu-toggle">{{ item.title }}</span>
+                </button>
+              {% endif %}
+
+              {% set attributes = attributes.setAttribute('id', aria_id).setAttribute('class', 'usa-nav__submenu') %}
+              {{ menus.menu_links(item.below, attributes, menu_level + 1, aria_id) }}
+
+            {% endif %}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

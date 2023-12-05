@@ -1,0 +1,27 @@
+global:
+  version: VERSION
+  css:
+    theme:
+      dist/css/styles.css: { minified: true }
+  dependencies:
+    - core/once
+    - core/drupal.active-link
+    - votegov/uswdsjs
+    - votegov/external_links
+
+uswdsjs:
+  version: VERSION
+  js:
+    dist/js/uswds-init.min.js: { minified: true }
+    dist/js/uswds.min.js: { minified: true }
+
+navajo-font:
+  version: VERSION
+  css:
+    theme:
+      fonts/navajo-font/stylesheet.css: { minified: true }
+
+external_links:
+  version: VERSION
+  js:
+    dist/js/external-links.js: { minified: true }
