@@ -10,6 +10,7 @@ dependencies:
     - field.storage.taxonomy_term.field_nvrf_machine_name
     - field.storage.taxonomy_term.field_options
     - taxonomy.vocabulary.nvrf_field
+    - user.role.authenticated
   module:
     - rest
     - rest_views
@@ -633,9 +634,10 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: perm
+        type: role
         options:
-          perm: 'access content'
+          role:
+            authenticated: authenticated
       cache:
         type: tag
         options: {  }
@@ -748,7 +750,7 @@ display:
         - 'languages:language_interface'
         - request_format
         - url.query_args
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.taxonomy_term.field_display_label'
         - 'config:field.storage.taxonomy_term.field_error_message'
@@ -811,7 +813,7 @@ display:
       contexts:
         - 'languages:language_interface'
         - request_format
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.taxonomy_term.field_display_label'
         - 'config:field.storage.taxonomy_term.field_error_message'
