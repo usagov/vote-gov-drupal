@@ -11,7 +11,7 @@ describe('Test language selector', () => {
       url: page.route,
     })
       cy.get('[data-test="language-dropdown"]').click().get('[data-test="language-selection"]').should('be.visible').then(selection => {
-        cy.get(selection).get('[class="usa-language__submenu-item is-active"]').each(li => {
+        cy.get(selection).get('[class="usa-language__submenu-item nonvfont is-active"]').each(li => {
             cy.get(li).find('a').each(link => {
               cy.request({
                 url: link.prop('href'),
