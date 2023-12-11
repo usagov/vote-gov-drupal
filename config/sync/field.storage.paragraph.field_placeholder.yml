@@ -1,11 +1,11 @@
-uuid: 95c1bafc-87b1-453b-a65b-845186b30004
+uuid: e6b21b32-160e-4cd9-b228-6bf2352a4d85
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_dropdown_label
-field_name: field_dropdown_label
+id: paragraph.field_placeholder
+field_name: field_placeholder
 entity_type: paragraph
 type: string
 settings:
