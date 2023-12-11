@@ -13,7 +13,6 @@
   "devDependencies": {
     "@uswds/compile": "^1.1.0",
     "@uswds/uswds": "^3.7.0",
-    "browser-sync": "^2.27.5",
     "gulp": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "uglify-es": "^3.3.9"
