@@ -1,7 +1,6 @@
 const uswds = require("@uswds/compile");
 const {parallel, watch, series, src} = require('gulp');
 const gulp = require("gulp");
-const browsersync = require('browser-sync').create();
 const uglifyes = require('uglify-es');
 const composer = require('gulp-uglify/composer');
 const uglify = composer(uglifyes, console);
@@ -53,24 +52,14 @@ function watchJSTwigFiles() {
     },
     series(
       vendorJS,
-      buildJS,
-      browserSyncReload
+      buildJS
     )
   );
 }
 
-// BrowserSync Reload
-function browserSyncReload(done) {
-  browsersync.reload();
-  done();
-}
-
 // Compile CSS from scss.
 function buildCompStyles() {
-  return src(settings.sass.src)
-    .pipe(browsersync.reload({
-      stream: true
-    }));
+  return src(settings.sass.src);
 }
 
 // Watch changes on sass files and trigger functions at the end.
@@ -87,24 +76,6 @@ function watchCompFiles() {
       buildCompStyles
     )
   );
-}
-
-// Init BrowserSync.
-function browserSync(done) {
-  browsersync.init({
-    injectChanges: true,
-    logPrefix: 'Drupal USWDS theme',
-    baseDir: './',
-    open: false,
-    notify: true,
-    proxy: 'vote-gov.lndo.site',
-    host: 'vote-gov.lndo.site',
-    openBrowserAtStart: false,
-    reloadOnRestart: true,
-    port: 32677,
-    ui: false,
-  });
-  done();
 }
 
 /**
@@ -137,6 +108,6 @@ uswds.paths.src.projectSass = './src/sass';
 // Various compile functions.
 exports.build = series(uswds.copyAssets, vendorJS, buildJS, uswds.compile);
 exports.compile = uswds.compile;
-exports.default = exports.watch = parallel(watchCompFiles, uswds.watch, browserSync, watchJSTwigFiles);
+exports.default = exports.watch = parallel(watchCompFiles, uswds.watch, watchJSTwigFiles);
 exports.update = uswds.updateUswds;
 exports.copyAssets = uswds.copyAssets;
