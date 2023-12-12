@@ -9,6 +9,7 @@ dependencies:
     - field.field.taxonomy_term.nvrf_field.field_instructions
     - field.field.taxonomy_term.nvrf_field.field_nvrf_machine_name
     - field.field.taxonomy_term.nvrf_field.field_options
+    - field.field.taxonomy_term.nvrf_field.field_section_description
     - taxonomy.vocabulary.nvrf_field
   module:
     - double_field
@@ -87,6 +88,13 @@ content:
       inline: true
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_section_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
     region: content
 hidden:
   langcode: true
