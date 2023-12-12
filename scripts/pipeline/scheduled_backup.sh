@@ -57,8 +57,8 @@ echo "Downloading static files..."
 
   rm -rf ${BACKUP_ENV}
 
-  aws s3 sync --no-verify-ssl s3://${bucket}/${backup_static} ${backup_static}/ 2>/dev/null
-  tar czvf static_${now}.tar.gz ${backup_static}
+  aws s3 sync --no-verify-ssl s3://${bucket}/ static_files/ 2>/dev/null
+  tar czvf static_${now}.tar.gz static_files/
 
 
   cf delete-service-key "${service}" "${service_key}" -f
