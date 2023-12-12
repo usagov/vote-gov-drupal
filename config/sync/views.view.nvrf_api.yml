@@ -25,6 +25,7 @@ dependencies:
     - field.storage.node.field_override_election_hp_link
     - field.storage.node.field_override_more_info_link
     - field.storage.node.field_override_registration_link
+    - field.storage.node.field_pdf_pages
     - field.storage.node.field_personal_information_inst
     - field.storage.node.field_political_party_inst
     - field.storage.node.field_reg_eligibility_desc
@@ -1196,9 +1197,9 @@ display:
           group_column: value
           group_columns: {  }
           group_rows: true
-          delta_limit: 0
+          delta_limit: 1
           delta_offset: 0
-          delta_reversed: false
+          delta_reversed: true
           delta_first_last: false
           multi_type: separator
           separator: ', '
@@ -2185,7 +2186,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -2248,7 +2249,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -2347,7 +2348,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: false
-          empty: ''
+          empty: '{{ field_g_mail_postmarked_deadline }}'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -2411,7 +2412,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: false
-          empty: ''
+          empty: '{{ field_g_mail_received_deadline }}'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -2552,6 +2553,69 @@ display:
           delta_reversed: false
           delta_first_last: false
           field_api_classes: false
+        field_pdf_pages:
+          id: field_pdf_pages
+          table: node__field_pdf_pages
+          field: field_pdf_pages
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
       pager:
         type: none
         options:
@@ -2668,11 +2732,11 @@ display:
             uuid:
               alias: ''
               raw_output: false
-            title:
-              alias: name
-              raw_output: false
             langcode:
               alias: lang
+              raw_output: false
+            title:
+              alias: name
               raw_output: false
             field_state_abbreviation:
               alias: abbrev
@@ -2688,9 +2752,6 @@ display:
               raw_output: false
             field_mailing_address_inst:
               alias: mailing_address_inst
-              raw_output: false
-            field_online_voter_reg_desc:
-              alias: online_voter_reg_desc
               raw_output: false
             field_reg_eligibility_desc:
               alias: reg_eligibility_desc
@@ -2719,17 +2780,11 @@ display:
             field_confirm_registration_link:
               alias: confirm_reg_url
               raw_output: false
-            field_g_in_person_deadline:
-              alias: inperson_deadline_info
-              raw_output: false
             field_g_mail_postmarked_deadline:
               alias: postmarked_mail_deadline_info
               raw_output: false
             field_g_mail_received_deadline:
               alias: received_mail_deadline_info
-              raw_output: false
-            field_g_online_deadline:
-              alias: online_deadline_info
               raw_output: false
             field_mail_postmarked_deadline:
               alias: postmarked_mail_deadline
@@ -2737,17 +2792,14 @@ display:
             field_mail_received_deadline:
               alias: received_mail_deadline
               raw_output: false
-            field_in_person_deadline_export:
-              alias: inperson_deadline
-              raw_output: false
-            field_online_deadline_export:
-              alias: online_deadline
-              raw_output: false
             field_nvrf_fields_export:
               alias: nvrf_fields
               raw_output: false
             field_nvrf_last_updated_date_export:
               alias: nvrf_last_updated_date
+              raw_output: false
+            field_pdf_pages:
+              alias: nvrf_pages_list
               raw_output: false
       defaults:
         fields: false
@@ -2784,6 +2836,7 @@ display:
         - 'config:field.storage.node.field_override_election_hp_link'
         - 'config:field.storage.node.field_override_more_info_link'
         - 'config:field.storage.node.field_override_registration_link'
+        - 'config:field.storage.node.field_pdf_pages'
         - 'config:field.storage.node.field_personal_information_inst'
         - 'config:field.storage.node.field_political_party_inst'
         - 'config:field.storage.node.field_reg_eligibility_desc'

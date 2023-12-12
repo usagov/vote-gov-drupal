@@ -29,6 +29,7 @@ dependencies:
     - field.field.node.state_territory.field_override_election_hp_link
     - field.field.node.state_territory.field_override_more_info_link
     - field.field.node.state_territory.field_override_registration_link
+    - field.field.node.state_territory.field_pdf_pages
     - field.field.node.state_territory.field_personal_information_inst
     - field.field.node.state_territory.field_political_party_inst
     - field.field.node.state_territory.field_reg_eligibility_desc
@@ -169,7 +170,6 @@ third_party_settings:
     group_nvrf:
       children:
         - field_reg_eligibility_desc
-        - field_online_voter_reg_desc
         - field_personal_information_inst
         - field_address_location_inst
         - field_identification_inst
@@ -177,6 +177,7 @@ third_party_settings:
         - field_mailing_address_inst
         - field_nvrf_fields
         - field_nvrf_last_updated_date
+        - field_pdf_pages
       label: NVRF
       region: content
       parent_name: group_form_tabs
@@ -209,7 +210,7 @@ content:
     third_party_settings: {  }
   field_address_location_inst:
     type: text_textarea
-    weight: 19
+    weight: 18
     region: content
     settings:
       rows: 5
@@ -268,7 +269,7 @@ content:
     third_party_settings: {  }
   field_identification_inst:
     type: text_textarea
-    weight: 20
+    weight: 19
     region: content
     settings:
       rows: 5
@@ -326,7 +327,7 @@ content:
     third_party_settings: {  }
   field_mailing_address_inst:
     type: text_textarea
-    weight: 22
+    weight: 21
     region: content
     settings:
       rows: 5
@@ -350,13 +351,13 @@ content:
     third_party_settings: {  }
   field_nvrf_fields:
     type: field_nvrf_fields
-    weight: 23
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }
   field_nvrf_last_updated_date:
     type: datetime_default
-    weight: 24
+    weight: 23
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -423,9 +424,17 @@ content:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
+  field_pdf_pages:
+    type: string_textfield
+    weight: 24
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_personal_information_inst:
     type: text_textarea
-    weight: 18
+    weight: 17
     region: content
     settings:
       rows: 5
@@ -433,7 +442,7 @@ content:
     third_party_settings: {  }
   field_political_party_inst:
     type: text_textarea
-    weight: 21
+    weight: 20
     region: content
     settings:
       rows: 5
