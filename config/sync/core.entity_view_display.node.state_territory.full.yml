@@ -30,6 +30,7 @@ dependencies:
     - field.field.node.state_territory.field_override_election_hp_link
     - field.field.node.state_territory.field_override_more_info_link
     - field.field.node.state_territory.field_override_registration_link
+    - field.field.node.state_territory.field_pdf_pages
     - field.field.node.state_territory.field_personal_information_inst
     - field.field.node.state_territory.field_political_party_inst
     - field.field.node.state_territory.field_reg_eligibility_desc
@@ -302,6 +303,7 @@ hidden:
   field_metatags: true
   field_nvrf_fields: true
   field_nvrf_last_updated_date: true
+  field_pdf_pages: true
   field_personal_information_inst: true
   field_political_party_inst: true
   field_reg_eligibility_desc: true
