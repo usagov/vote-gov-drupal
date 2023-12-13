@@ -45,6 +45,7 @@ permissions:
   - 'access content overview'
   - 'access files overview'
   - 'access media overview'
+  - 'access taxonomy overview'
   - 'access toolbar'
   - 'administer menu'
   - 'create audio media'

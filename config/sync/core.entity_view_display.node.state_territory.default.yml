@@ -29,6 +29,7 @@ dependencies:
     - field.field.node.state_territory.field_override_election_hp_link
     - field.field.node.state_territory.field_override_more_info_link
     - field.field.node.state_territory.field_override_registration_link
+    - field.field.node.state_territory.field_pdf_pages
     - field.field.node.state_territory.field_personal_information_inst
     - field.field.node.state_territory.field_political_party_inst
     - field.field.node.state_territory.field_reg_eligibility_desc
@@ -301,6 +302,14 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_pdf_pages:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 34
     region: content
   field_personal_information_inst:
     type: text_default

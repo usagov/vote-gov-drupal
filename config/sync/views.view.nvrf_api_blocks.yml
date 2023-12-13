@@ -11,6 +11,7 @@ dependencies:
     - field.storage.block_content.field_messager_identifier
     - field.storage.block_content.field_touchpoints_id
     - field.storage.media.field_media_image
+    - user.role.authenticated
   module:
     - block_content
     - image
@@ -509,9 +510,10 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: perm
+        type: role
         options:
-          perm: 'access content'
+          role:
+            authenticated: authenticated
       cache:
         type: tag
         options: {  }
@@ -676,7 +678,7 @@ display:
         - request_format
         - url
         - url.query_args
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.block_content.body'
         - 'config:field.storage.block_content.field_button_label'
@@ -1153,7 +1155,7 @@ display:
       contexts:
         - 'languages:language_interface'
         - request_format
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.block_content.body'
         - 'config:field.storage.block_content.field_messager_identifier'
@@ -1591,7 +1593,7 @@ display:
       contexts:
         - 'languages:language_interface'
         - request_format
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.block_content.body'
         - 'config:field.storage.block_content.field_button_label'
