@@ -1,0 +1,19 @@
+uuid: c65bd6f2-397d-4752-88f4-77a4b71ed37c
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - text
+id: taxonomy_term.field_section_alert
+field_name: field_section_alert
+entity_type: taxonomy_term
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
