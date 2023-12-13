@@ -1,19 +1,19 @@
-uuid: 673967de-7a75-47dc-98f7-32c5d1edac50
+uuid: bd1034fb-989a-4877-a074-39396ebba1b7
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.taxonomy_term.field_section_description
+    - field.storage.taxonomy_term.field_section_alert
     - filter.format.simple_html
     - taxonomy.vocabulary.nvrf_field
   module:
     - text
-id: taxonomy_term.nvrf_field.field_section_description
-field_name: field_section_description
+id: taxonomy_term.nvrf_field.field_section_alert
+field_name: field_section_alert
 entity_type: taxonomy_term
 bundle: nvrf_field
-label: 'Section Description'
-description: 'Description will display below the section heading.'
+label: 'Section Alert'
+description: 'Alert will display above the section heading.'
 required: false
 translatable: true
 default_value: {  }

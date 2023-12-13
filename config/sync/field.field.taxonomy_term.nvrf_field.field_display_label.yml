@@ -10,7 +10,7 @@ field_name: field_display_label
 entity_type: taxonomy_term
 bundle: nvrf_field
 label: 'Display Label'
-description: ''
+description: 'Use as a field label or a section heading.'
 required: true
 translatable: true
 default_value: {  }

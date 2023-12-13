@@ -10,7 +10,7 @@ field_name: field_nvrf_machine_name
 entity_type: taxonomy_term
 bundle: nvrf_field
 label: 'NVRF machine name'
-description: ''
+description: 'Enter "null" if this is a section.'
 required: true
 translatable: false
 default_value: {  }
