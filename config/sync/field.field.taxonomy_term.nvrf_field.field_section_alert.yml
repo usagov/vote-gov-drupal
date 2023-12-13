@@ -1,0 +1,24 @@
+uuid: bd1034fb-989a-4877-a074-39396ebba1b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_section_alert
+    - filter.format.simple_html
+    - taxonomy.vocabulary.nvrf_field
+  module:
+    - text
+id: taxonomy_term.nvrf_field.field_section_alert
+field_name: field_section_alert
+entity_type: taxonomy_term
+bundle: nvrf_field
+label: 'Section Alert'
+description: 'Alert will display above the section heading.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - simple_html
+field_type: text_long

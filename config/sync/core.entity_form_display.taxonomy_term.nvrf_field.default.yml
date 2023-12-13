@@ -9,11 +9,64 @@ dependencies:
     - field.field.taxonomy_term.nvrf_field.field_instructions
     - field.field.taxonomy_term.nvrf_field.field_nvrf_machine_name
     - field.field.taxonomy_term.nvrf_field.field_options
+    - field.field.taxonomy_term.nvrf_field.field_section_alert
+    - field.field.taxonomy_term.nvrf_field.field_section_description
     - taxonomy.vocabulary.nvrf_field
   module:
     - double_field
-    - path
+    - field_group
     - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_field_data
+        - group_section_data
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_field_data:
+      children:
+        - field_help_text
+        - field_instructions
+        - field_options
+        - field_error_message
+      label: 'Field data'
+      region: content
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_section_data:
+      children:
+        - field_section_description
+        - field_section_alert
+      label: 'Section data'
+      region: content
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
 id: taxonomy_term.nvrf_field.default
 targetEntityType: taxonomy_term
 bundle: nvrf_field
@@ -29,7 +82,7 @@ content:
     third_party_settings: {  }
   field_error_message:
     type: string_textfield
-    weight: 6
+    weight: 7
     region: content
     settings:
       size: 60
@@ -37,7 +90,7 @@ content:
     third_party_settings: {  }
   field_help_text:
     type: string_textfield
-    weight: 3
+    weight: 4
     region: content
     settings:
       size: 60
@@ -45,7 +98,7 @@ content:
     third_party_settings: {  }
   field_instructions:
     type: text_textarea
-    weight: 4
+    weight: 5
     region: content
     settings:
       rows: 5
@@ -61,7 +114,7 @@ content:
     third_party_settings: {  }
   field_options:
     type: double_field
-    weight: 5
+    weight: 6
     region: content
     settings:
       first:
@@ -82,9 +135,25 @@ content:
         rows: 5
       inline: true
     third_party_settings: {  }
+  field_section_alert:
+    type: text_textarea
+    weight: 7
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_section_description:
+    type: text_textarea
+    weight: 6
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 7
+    weight: 4
     region: content
     settings:
       include_locked: true
@@ -97,24 +166,19 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  path:
-    type: path
-    weight: 9
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 10
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   translation:
-    weight: 8
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   description: true
+  path: true
   simple_sitemap: true
