@@ -13,4 +13,4 @@ echo "Installing CloudFoundry repository..."
     apt-get update
     apt-get install -y cf8-cli
   fi
-} >/dev/null 2>&1
+}
