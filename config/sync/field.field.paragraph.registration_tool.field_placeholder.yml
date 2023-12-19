@@ -1,15 +1,15 @@
-uuid: 5e35facf-9d13-428e-b66e-94ae072633a5
+uuid: bf81dc6a-e290-4bda-9c22-4790a0b0055a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_dropdown_label
+    - field.storage.paragraph.field_placeholder
     - paragraphs.paragraphs_type.registration_tool
-id: paragraph.registration_tool.field_dropdown_label
-field_name: field_dropdown_label
+id: paragraph.registration_tool.field_placeholder
+field_name: field_placeholder
 entity_type: paragraph
 bundle: registration_tool
-label: 'Dropdown label'
+label: Placeholder
 description: ''
 required: true
 translatable: true

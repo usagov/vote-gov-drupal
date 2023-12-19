@@ -3,24 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.registration_tool.field_dropdown_label
     - field.field.paragraph.registration_tool.field_form_heading
     - field.field.paragraph.registration_tool.field_heading
-    - field.field.paragraph.registration_tool.field_submit_button_label
+    - field.field.paragraph.registration_tool.field_placeholder
     - paragraphs.paragraphs_type.registration_tool
 id: paragraph.registration_tool.default
 targetEntityType: paragraph
 bundle: registration_tool
 mode: default
 content:
-  field_dropdown_label:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 2
-    region: content
   field_form_heading:
     type: string
     label: hidden
@@ -37,12 +28,12 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_submit_button_label:
+  field_placeholder:
     type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
 hidden: {  }

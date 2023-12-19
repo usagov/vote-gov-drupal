@@ -9,7 +9,7 @@ id: paragraph.registration_tool.field_form_heading
 field_name: field_form_heading
 entity_type: paragraph
 bundle: registration_tool
-label: 'Form heading'
+label: 'Field Label'
 description: ''
 required: true
 translatable: true
