@@ -1048,10 +1048,37 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            state_territory: state_territory
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       defaults:
         title: false
         pager: false
         fields: false
+        filters: false
+        filter_groups: false
       display_extenders: {  }
       path: admin/nvrf-state-report/fields
     cache_metadata:
@@ -1059,7 +1086,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.roles
