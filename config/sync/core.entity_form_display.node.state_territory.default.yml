@@ -18,6 +18,8 @@ dependencies:
     - field.field.node.state_territory.field_is_state
     - field.field.node.state_territory.field_mail_postmarked_deadline
     - field.field.node.state_territory.field_mail_received_deadline
+    - field.field.node.state_territory.field_mail_registration_link
+    - field.field.node.state_territory.field_mail_registration_link_ove
     - field.field.node.state_territory.field_mailing_address_inst
     - field.field.node.state_territory.field_metatags
     - field.field.node.state_territory.field_more_info_link
@@ -80,6 +82,7 @@ third_party_settings:
         - field_override_registration_link
         - field_override_election_hp_link
         - field_override_more_info_link
+        - field_mail_registration_link_ove
         - field_override_confirm_reg_link
       label: 'Link overrides (for translations)'
       region: content
@@ -153,6 +156,7 @@ third_party_settings:
         - field_registration_link
         - field_election_homepage_link
         - field_more_info_link
+        - field_mail_registration_link
         - field_confirm_registration_link
         - group_link_overrides
       label: Links
@@ -210,7 +214,7 @@ content:
     third_party_settings: {  }
   field_address_location_inst:
     type: text_textarea
-    weight: 18
+    weight: 19
     region: content
     settings:
       rows: 5
@@ -221,7 +225,7 @@ content:
         hide_guidelines: '0'
   field_confirm_registration_link:
     type: link_default
-    weight: 9
+    weight: 10
     region: content
     settings:
       placeholder_url: ''
@@ -269,7 +273,7 @@ content:
     third_party_settings: {  }
   field_identification_inst:
     type: text_textarea
-    weight: 19
+    weight: 20
     region: content
     settings:
       rows: 5
@@ -325,9 +329,25 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_mail_registration_link:
+    type: link_default
+    weight: 9
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_mail_registration_link_ove:
+    type: link_default
+    weight: 10
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
   field_mailing_address_inst:
     type: text_textarea
-    weight: 21
+    weight: 22
     region: content
     settings:
       rows: 5
@@ -351,13 +371,13 @@ content:
     third_party_settings: {  }
   field_nvrf_fields:
     type: field_nvrf_fields
-    weight: 22
+    weight: 23
     region: content
     settings: {  }
     third_party_settings: {  }
   field_nvrf_last_updated_date:
     type: datetime_default
-    weight: 23
+    weight: 24
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -402,7 +422,7 @@ content:
     third_party_settings: {  }
   field_override_election_hp_link:
     type: link_default
-    weight: 9
+    weight: 8
     region: content
     settings:
       placeholder_url: ''
@@ -410,7 +430,7 @@ content:
     third_party_settings: {  }
   field_override_more_info_link:
     type: link_default
-    weight: 10
+    weight: 9
     region: content
     settings:
       placeholder_url: ''
@@ -426,7 +446,7 @@ content:
     third_party_settings: {  }
   field_pdf_pages:
     type: string_textfield
-    weight: 24
+    weight: 25
     region: content
     settings:
       size: 60
@@ -434,7 +454,7 @@ content:
     third_party_settings: {  }
   field_personal_information_inst:
     type: text_textarea
-    weight: 17
+    weight: 18
     region: content
     settings:
       rows: 5
@@ -442,7 +462,7 @@ content:
     third_party_settings: {  }
   field_political_party_inst:
     type: text_textarea
-    weight: 20
+    weight: 21
     region: content
     settings:
       rows: 5
@@ -504,7 +524,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   simple_sitemap:
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -1,0 +1,23 @@
+uuid: b213620d-3acb-4c4a-a3a1-5579800ce07a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mail_registration_link
+    - node.type.state_territory
+  module:
+    - link
+id: node.state_territory.field_mail_registration_link
+field_name: field_mail_registration_link
+entity_type: node
+bundle: state_territory
+label: 'Mail registration link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link

@@ -1,0 +1,23 @@
+uuid: 548f399b-cdc5-4170-b309-d4dddd409099
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mail_registration_link_ove
+    - node.type.state_territory
+  module:
+    - link
+id: node.state_territory.field_mail_registration_link_ove
+field_name: field_mail_registration_link_ove
+entity_type: node
+bundle: state_territory
+label: 'Mail registration link (override)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link

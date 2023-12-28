@@ -19,6 +19,8 @@ dependencies:
     - field.field.node.state_territory.field_is_state
     - field.field.node.state_territory.field_mail_postmarked_deadline
     - field.field.node.state_territory.field_mail_received_deadline
+    - field.field.node.state_territory.field_mail_registration_link
+    - field.field.node.state_territory.field_mail_registration_link_ove
     - field.field.node.state_territory.field_mailing_address_inst
     - field.field.node.state_territory.field_metatags
     - field.field.node.state_territory.field_more_info_link
@@ -299,6 +301,8 @@ hidden:
   body: true
   field_address_location_inst: true
   field_identification_inst: true
+  field_mail_registration_link: true
+  field_mail_registration_link_ove: true
   field_mailing_address_inst: true
   field_metatags: true
   field_nvrf_fields: true
