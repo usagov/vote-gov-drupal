@@ -20,7 +20,6 @@ dependencies:
     - field.field.node.state_territory.field_mail_postmarked_deadline
     - field.field.node.state_territory.field_mail_received_deadline
     - field.field.node.state_territory.field_mail_registration_link
-    - field.field.node.state_territory.field_mail_registration_link_ove
     - field.field.node.state_territory.field_mailing_address_inst
     - field.field.node.state_territory.field_metatags
     - field.field.node.state_territory.field_more_info_link
@@ -30,6 +29,7 @@ dependencies:
     - field.field.node.state_territory.field_online_deadline
     - field.field.node.state_territory.field_override_confirm_reg_link
     - field.field.node.state_territory.field_override_election_hp_link
+    - field.field.node.state_territory.field_override_mail_reg_link
     - field.field.node.state_territory.field_override_more_info_link
     - field.field.node.state_territory.field_override_registration_link
     - field.field.node.state_territory.field_pdf_pages
@@ -302,11 +302,11 @@ hidden:
   field_address_location_inst: true
   field_identification_inst: true
   field_mail_registration_link: true
-  field_mail_registration_link_ove: true
   field_mailing_address_inst: true
   field_metatags: true
   field_nvrf_fields: true
   field_nvrf_last_updated_date: true
+  field_override_mail_reg_link: true
   field_pdf_pages: true
   field_personal_information_inst: true
   field_political_party_inst: true

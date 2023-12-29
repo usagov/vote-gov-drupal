@@ -19,7 +19,6 @@ dependencies:
     - field.field.node.state_territory.field_mail_postmarked_deadline
     - field.field.node.state_territory.field_mail_received_deadline
     - field.field.node.state_territory.field_mail_registration_link
-    - field.field.node.state_territory.field_mail_registration_link_ove
     - field.field.node.state_territory.field_mailing_address_inst
     - field.field.node.state_territory.field_metatags
     - field.field.node.state_territory.field_more_info_link
@@ -29,6 +28,7 @@ dependencies:
     - field.field.node.state_territory.field_online_deadline
     - field.field.node.state_territory.field_override_confirm_reg_link
     - field.field.node.state_territory.field_override_election_hp_link
+    - field.field.node.state_territory.field_override_mail_reg_link
     - field.field.node.state_territory.field_override_more_info_link
     - field.field.node.state_territory.field_override_registration_link
     - field.field.node.state_territory.field_pdf_pages
@@ -82,8 +82,9 @@ third_party_settings:
         - field_override_registration_link
         - field_override_election_hp_link
         - field_override_more_info_link
-        - field_mail_registration_link_ove
         - field_override_confirm_reg_link
+        - field_mail_registration_link_ove
+        - field_override_mail_reg_link
       label: 'Link overrides (for translations)'
       region: content
       parent_name: group_form_links
@@ -156,8 +157,8 @@ third_party_settings:
         - field_registration_link
         - field_election_homepage_link
         - field_more_info_link
-        - field_mail_registration_link
         - field_confirm_registration_link
+        - field_mail_registration_link
         - group_link_overrides
       label: Links
       region: content
@@ -214,7 +215,7 @@ content:
     third_party_settings: {  }
   field_address_location_inst:
     type: text_textarea
-    weight: 19
+    weight: 18
     region: content
     settings:
       rows: 5
@@ -225,7 +226,7 @@ content:
         hide_guidelines: '0'
   field_confirm_registration_link:
     type: link_default
-    weight: 10
+    weight: 9
     region: content
     settings:
       placeholder_url: ''
@@ -273,7 +274,7 @@ content:
     third_party_settings: {  }
   field_identification_inst:
     type: text_textarea
-    weight: 20
+    weight: 19
     region: content
     settings:
       rows: 5
@@ -330,14 +331,6 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_mail_registration_link:
-    type: link_default
-    weight: 9
-    region: content
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-  field_mail_registration_link_ove:
     type: link_default
     weight: 10
     region: content
@@ -414,7 +407,7 @@ content:
     third_party_settings: {  }
   field_override_confirm_reg_link:
     type: link_default
-    weight: 11
+    weight: 10
     region: content
     settings:
       placeholder_url: ''
@@ -423,6 +416,14 @@ content:
   field_override_election_hp_link:
     type: link_default
     weight: 8
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_override_mail_reg_link:
+    type: link_default
+    weight: 12
     region: content
     settings:
       placeholder_url: ''
@@ -454,7 +455,7 @@ content:
     third_party_settings: {  }
   field_personal_information_inst:
     type: text_textarea
-    weight: 18
+    weight: 17
     region: content
     settings:
       rows: 5
@@ -462,7 +463,7 @@ content:
     third_party_settings: {  }
   field_political_party_inst:
     type: text_textarea
-    weight: 21
+    weight: 20
     region: content
     settings:
       rows: 5
@@ -507,13 +508,13 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 8
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -524,7 +525,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   simple_sitemap:
-    weight: 5
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -559,7 +560,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 7
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }

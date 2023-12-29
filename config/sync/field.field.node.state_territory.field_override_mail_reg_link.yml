@@ -1,20 +1,20 @@
-uuid: b213620d-3acb-4c4a-a3a1-5579800ce07a
+uuid: ffc9acc8-878a-4795-ae52-a4db868622bb
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_mail_registration_link
+    - field.storage.node.field_override_mail_reg_link
     - node.type.state_territory
   module:
     - link
-id: node.state_territory.field_mail_registration_link
-field_name: field_mail_registration_link
+id: node.state_territory.field_override_mail_reg_link
+field_name: field_override_mail_reg_link
 entity_type: node
 bundle: state_territory
-label: 'State mail-in registration PDF link'
+label: 'State mail-in registration PDF link (override)'
 description: 'Displays as a state mail-in registration link on the NVRF app'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

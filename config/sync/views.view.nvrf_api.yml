@@ -17,7 +17,6 @@ dependencies:
     - field.storage.node.field_mail_postmarked_deadline
     - field.storage.node.field_mail_received_deadline
     - field.storage.node.field_mail_registration_link
-    - field.storage.node.field_mail_registration_link_ove
     - field.storage.node.field_mailing_address_inst
     - field.storage.node.field_more_info_link
     - field.storage.node.field_nvrf_fields
@@ -25,6 +24,7 @@ dependencies:
     - field.storage.node.field_omb_number
     - field.storage.node.field_override_confirm_reg_link
     - field.storage.node.field_override_election_hp_link
+    - field.storage.node.field_override_mail_reg_link
     - field.storage.node.field_override_more_info_link
     - field.storage.node.field_override_registration_link
     - field.storage.node.field_pdf_pages
@@ -1844,10 +1844,10 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_mail_registration_link_ove:
-          id: field_mail_registration_link_ove
-          table: node__field_mail_registration_link_ove
-          field: field_mail_registration_link_ove
+        field_override_mail_reg_link:
+          id: field_override_mail_reg_link
+          table: node__field_override_mail_reg_link
+          field: field_override_mail_reg_link
           relationship: none
           group_type: group
           admin_label: ''
@@ -1855,8 +1855,8 @@ display:
           label: ''
           exclude: true
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ field_override_mail_reg_link__uri }}'
             make_link: false
             path: ''
             absolute: false
@@ -2190,8 +2190,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ field_override_mail_reg_link | default(field_mail_registration_link__uri) }}'
             make_link: false
             path: ''
             absolute: false
@@ -2913,14 +2913,11 @@ display:
             field_more_info_link:
               alias: more_info_url
               raw_output: false
+            field_mail_registration_link:
+              alias: mail_reg_url
+              raw_output: false
             field_confirm_registration_link:
               alias: confirm_reg_url
-              raw_output: false
-            field_g_mail_postmarked_deadline:
-              alias: postmarked_mail_deadline_info
-              raw_output: false
-            field_g_mail_received_deadline:
-              alias: received_mail_deadline_info
               raw_output: false
             field_mail_postmarked_deadline:
               alias: postmarked_mail_deadline
@@ -2965,13 +2962,13 @@ display:
         - 'config:field.storage.node.field_mail_postmarked_deadline'
         - 'config:field.storage.node.field_mail_received_deadline'
         - 'config:field.storage.node.field_mail_registration_link'
-        - 'config:field.storage.node.field_mail_registration_link_ove'
         - 'config:field.storage.node.field_mailing_address_inst'
         - 'config:field.storage.node.field_more_info_link'
         - 'config:field.storage.node.field_nvrf_fields'
         - 'config:field.storage.node.field_nvrf_last_updated_date'
         - 'config:field.storage.node.field_override_confirm_reg_link'
         - 'config:field.storage.node.field_override_election_hp_link'
+        - 'config:field.storage.node.field_override_mail_reg_link'
         - 'config:field.storage.node.field_override_more_info_link'
         - 'config:field.storage.node.field_override_registration_link'
         - 'config:field.storage.node.field_pdf_pages'
