@@ -1,9 +1,10 @@
 <?php
+
 namespace Drupal\translation_import_export\Plugin;
 
-use Drupal\Core\Plugin\DefaultPluginManager;
 use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
+use Drupal\Core\Plugin\DefaultPluginManager;
 
 /**
  * Provides the TranslationPackage plugin manager.
@@ -23,13 +24,13 @@ class TranslationPackagePluginManager extends DefaultPluginManager {
    */
   public function __construct(\Traversable $namespaces, CacheBackendInterface $cache_backend, ModuleHandlerInterface $module_handler) {
     parent::__construct(
-      'Plugin/TranslationPackage',
-      $namespaces,
-      $module_handler,
-      'Drupal\translation_import_export\Plugin\TranslationPackagePluginInterface',
-      'Drupal\translation_import_export\Annotation\TranslationPackage'
-    );
-    // Defines the hook_translation_package_info() function
+          'Plugin/TranslationPackage',
+          $namespaces,
+          $module_handler,
+          'Drupal\translation_import_export\Plugin\TranslationPackagePluginInterface',
+          'Drupal\translation_import_export\Annotation\TranslationPackage'
+      );
+    // Defines the hook_translation_package_info() function.
     $this->alterInfo('translation_package_info');
     $this->setCacheBackend($cache_backend, 'translation_package_plugins');
   }

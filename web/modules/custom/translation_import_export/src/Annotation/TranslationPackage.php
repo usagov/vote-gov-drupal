@@ -1,4 +1,5 @@
 <?php
+
 namespace Drupal\translation_import_export\Annotation;
 
 use Drupal\Component\Annotation\Plugin;
@@ -10,10 +11,10 @@ use Drupal\Component\Annotation\Plugin;
  */
 class TranslationPackage extends Plugin {
   /**
-   * 
+   *
    */
   public $id;
-  
+
   /**
    * The human-readable name of the TranslationPackage type.
    *
@@ -30,5 +31,5 @@ class TranslationPackage extends Plugin {
    *
    * @ingroup plugin_translatable
    */
-  #public $description;
+  // Public $description;.
 }

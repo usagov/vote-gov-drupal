@@ -47,13 +47,7 @@ class TranslationPackageRequestListBuilder extends EntityListBuilder {
   }
 
   /**
-   * Builds the operations links for an entity.
-   *
-   * @param \Drupal\Core\Entity\EntityInterface $entity
-   *   The entity for which to build the operations.
-   *
-   * @return array
-   *   A renderable array of operations links.
+   * {@inheritdoc}
    */
   public function buildOperations(EntityInterface $entity) {
     $operations = [];

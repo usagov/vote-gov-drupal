@@ -4,7 +4,7 @@ namespace Drupal\translation_import_export\Plugin;
 
 use Drupal\Component\Plugin\PluginInspectionInterface;
 
-#use Drupal\Component\Plugin\PluginBase;
+// Use Drupal\Component\Plugin\PluginBase;.
 
 /**
  * Provides a interface class for your plugin type.
@@ -16,7 +16,6 @@ interface TranslationPackagePluginInterface extends PluginInspectionInterface {
    * @return string
    *   The label of the translation package.
    */
-  
-  #public function getLabel();
-  
+
+  // Public function getLabel();
 }
