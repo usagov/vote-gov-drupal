@@ -1,0 +1,13 @@
+services:
+  plugin.manager.translation_package:
+    class: Drupal\translation_import_export\Plugin\TranslationPackagePluginManager
+    arguments:
+      - '@container.namespaces'
+      - '@cache.default'
+      - '@module_handler'
+  translation_import_export.exporter.configuration:
+    class: Drupal\translation_import_export\Plugin\TranslationPackage\Configuration\TranslationPackageConfigurationExporter
+  translation_import_export.exporter.po_file:
+    class: Drupal\translation_import_export\Plugin\TranslationPackage\PoFile\TranslationPackagePoFileExporter
+  translation_import_export.exporter.view:
+    class: Drupal\translation_import_export\Plugin\TranslationPackage\View\TranslationPackageViewExporter
