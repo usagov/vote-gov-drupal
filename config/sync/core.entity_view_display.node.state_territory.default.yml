@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.state_territory.field_is_state
     - field.field.node.state_territory.field_mail_postmarked_deadline
     - field.field.node.state_territory.field_mail_received_deadline
+    - field.field.node.state_territory.field_mail_registration_link
     - field.field.node.state_territory.field_mailing_address_inst
     - field.field.node.state_territory.field_metatags
     - field.field.node.state_territory.field_more_info_link
@@ -27,6 +28,7 @@ dependencies:
     - field.field.node.state_territory.field_online_deadline
     - field.field.node.state_territory.field_override_confirm_reg_link
     - field.field.node.state_territory.field_override_election_hp_link
+    - field.field.node.state_territory.field_override_mail_reg_link
     - field.field.node.state_territory.field_override_more_info_link
     - field.field.node.state_territory.field_override_registration_link
     - field.field.node.state_territory.field_pdf_pages
@@ -183,6 +185,18 @@ content:
     third_party_settings: {  }
     weight: 12
     region: content
+  field_mail_registration_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 35
+    region: content
   field_mailing_address_inst:
     type: text_default
     label: above
@@ -278,6 +292,18 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 4
+    region: content
+  field_override_mail_reg_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 37
     region: content
   field_override_more_info_link:
     type: link

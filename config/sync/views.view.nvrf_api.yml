@@ -16,6 +16,7 @@ dependencies:
     - field.storage.node.field_is_state
     - field.storage.node.field_mail_postmarked_deadline
     - field.storage.node.field_mail_received_deadline
+    - field.storage.node.field_mail_registration_link
     - field.storage.node.field_mailing_address_inst
     - field.storage.node.field_more_info_link
     - field.storage.node.field_nvrf_fields
@@ -23,6 +24,7 @@ dependencies:
     - field.storage.node.field_omb_number
     - field.storage.node.field_override_confirm_reg_link
     - field.storage.node.field_override_election_hp_link
+    - field.storage.node.field_override_mail_reg_link
     - field.storage.node.field_override_more_info_link
     - field.storage.node.field_override_registration_link
     - field.storage.node.field_pdf_pages
@@ -1842,6 +1844,73 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_override_mail_reg_link:
+          id: field_override_mail_reg_link
+          table: node__field_override_mail_reg_link
+          field: field_override_mail_reg_link
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: '{{ field_override_mail_reg_link__uri }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: uri
+          type: link
+          settings:
+            trim_length: 80
+            url_only: false
+            url_plain: false
+            rel: '0'
+            target: '0'
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         field_override_confirm_reg_link:
           id: field_override_confirm_reg_link
           table: node__field_override_confirm_reg_link
@@ -2056,6 +2125,73 @@ display:
           alter:
             alter_text: true
             text: '{{ field_override_more_info_link | default(field_more_info_link__uri) }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: uri
+          type: link
+          settings:
+            trim_length: 80
+            url_only: false
+            url_plain: false
+            rel: '0'
+            target: '0'
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_mail_registration_link:
+          id: field_mail_registration_link
+          table: node__field_mail_registration_link
+          field: field_mail_registration_link
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '{{ field_override_mail_reg_link | default(field_mail_registration_link__uri) }}'
             make_link: false
             path: ''
             absolute: false
@@ -2777,14 +2913,11 @@ display:
             field_more_info_link:
               alias: more_info_url
               raw_output: false
+            field_mail_registration_link:
+              alias: mail_reg_url
+              raw_output: false
             field_confirm_registration_link:
               alias: confirm_reg_url
-              raw_output: false
-            field_g_mail_postmarked_deadline:
-              alias: postmarked_mail_deadline_info
-              raw_output: false
-            field_g_mail_received_deadline:
-              alias: received_mail_deadline_info
               raw_output: false
             field_mail_postmarked_deadline:
               alias: postmarked_mail_deadline
@@ -2828,12 +2961,14 @@ display:
         - 'config:field.storage.node.field_is_state'
         - 'config:field.storage.node.field_mail_postmarked_deadline'
         - 'config:field.storage.node.field_mail_received_deadline'
+        - 'config:field.storage.node.field_mail_registration_link'
         - 'config:field.storage.node.field_mailing_address_inst'
         - 'config:field.storage.node.field_more_info_link'
         - 'config:field.storage.node.field_nvrf_fields'
         - 'config:field.storage.node.field_nvrf_last_updated_date'
         - 'config:field.storage.node.field_override_confirm_reg_link'
         - 'config:field.storage.node.field_override_election_hp_link'
+        - 'config:field.storage.node.field_override_mail_reg_link'
         - 'config:field.storage.node.field_override_more_info_link'
         - 'config:field.storage.node.field_override_registration_link'
         - 'config:field.storage.node.field_pdf_pages'
