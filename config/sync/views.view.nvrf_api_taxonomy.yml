@@ -916,16 +916,16 @@ display:
               raw_output: false
             name:
               alias: ''
-              raw_output: false
+              raw_output: true
             field_display_label:
               alias: label
-              raw_output: false
+              raw_output: true
             field_help_text:
               alias: help_text
-              raw_output: false
+              raw_output: true
             field_error_message:
               alias: error_msg
-              raw_output: false
+              raw_output: true
             field_instructions:
               alias: instructions
               raw_output: false

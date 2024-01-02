@@ -1,0 +1,19 @@
+uuid: 76fbf97d-52e9-4646-acd1-004268a65796
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_mail_registration_link
+field_name: field_mail_registration_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
