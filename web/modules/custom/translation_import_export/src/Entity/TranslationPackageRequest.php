@@ -24,8 +24,17 @@ use Drupal\Core\Field\BaseFieldDefinition;
  *       "default" = "Drupal\translation_import_export\Form\TranslationPackageRequestForm",
  *       "add" = "Drupal\translation_import_export\Form\TranslationPackageRequestForm",
  *       "edit" = "Drupal\translation_import_export\Form\TranslationPackageRequestForm",
+ *       "preview" = "Drupal\translation_import_export\Form\TranslationPackageRequestPreviewForm",
  *       "delete" = "Drupal\translation_import_export\Form\TranslationPackageRequestDeleteForm",
  *     },
+ *   },
+ *   links  = {
+ *     "add-form" = "/admin/config/translation-import-export/add/{plugin_type}",
+ *     "canonical" = "/admin/config/translation-import-export",
+ *     "collection" = "/admin/config/translation-import-export",
+ *     "delete-form" = "/admin/config/translation-import-export/delete/{translation_package_request}",
+ *     "edit-form" = "/admin/config/translation-import-export/edit/{translation_package_request}",
+ *     "preview" = "/admin/config/translation-import-export/preview/{translation_package_request}",
  *   },
  *   translatable = FALSE,
  * )

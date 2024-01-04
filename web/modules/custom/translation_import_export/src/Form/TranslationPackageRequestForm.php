@@ -52,12 +52,12 @@ class TranslationPackageRequestForm extends ContentEntityForm {
     ];
 
     $form['description'] = [
-      '#type' => 'textarea',
+      '#type' => 'textfield',
       '#title' => $this->t('Description'),
       '#default_value' => $entity->getDescription(),
     ];
 
-    $package->getFormFields($form, $form_state, $entity);
+    $package->getFormFields($form, $form_state);
 
     return $form;
   }

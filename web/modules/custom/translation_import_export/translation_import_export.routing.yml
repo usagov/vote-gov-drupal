@@ -1,4 +1,20 @@
-translation_package_request.list:
+entity.translation_package_request.canonical:
+  path: '/admin/config/translation-import-export/edit/{translation_package_request}'
+  defaults:
+    _entity_form: 'translation_package_request.edit'
+    _title: 'Edit Translation Import/Export Record'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.translation_package_request.preview:
+  path: '/admin/config/translation-import-export/preview/{translation_package_request}'
+  defaults:
+    _entity_form: 'translation_package_request.preview'
+    _title: 'Translation Import/Export View JSON Export'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.translation_package_request.collection:
   path: '/admin/config/translation-import-export'
   defaults:
     _entity_list: 'translation_package_request'
@@ -13,7 +29,7 @@ entity.translation_package_request.add:
     _title: 'Add Translation Import/Export Record'
   requirements:
     _permission: 'administer site configuration'
-    
+
 entity.translation_package_request.edit_form:
   path: '/admin/config/translation-import-export/edit/{translation_package_request}'
   defaults:
@@ -21,7 +37,7 @@ entity.translation_package_request.edit_form:
     _title: 'Edit Translation Import/Export Record'
   requirements:
     _permission: 'administer site configuration'
-  
+
 entity.translation_package_request.delete_form:
   path: '/admin/config/translation-import-export/delete/{translation_package_request}'
   defaults:
@@ -37,7 +53,7 @@ translation_import_export.example:
     _controller: '\Drupal\translation_import_export\Controller\TranslationImportExportController::build'
   requirements:
     _permission: 'access content'
-    
+
 translation_import_export.settings_form:
   path: '/admin/config/system/translation-import-export'
   defaults:

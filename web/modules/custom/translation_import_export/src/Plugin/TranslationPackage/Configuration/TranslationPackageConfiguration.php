@@ -71,18 +71,20 @@ class TranslationPackageConfiguration extends TranslationPackagePluginBase imple
   /**
    *
    */
-  public function getFormFields(&$form, $form_state) {
+  public function getFormFields(&$form, $form_state, $disabled = FALSE) {
 
     $form['configuration_id'] = [
       '#type' => 'textfield',
       '#title' => t('Configuration Name (YAML File Name)'),
       '#required' => FALSE,
+      '#disabled' => $disabled,
       '#default_value' => $this->getConfigurationId(),
     ];
     $form['configuration'] = [
       '#type' => 'textarea',
       '#title' => t('Configuration'),
       '#required' => FALSE,
+      '#disabled' => $disabled,
       '#default_value' => $this->getConfiguration(),
     ];
     return $form;

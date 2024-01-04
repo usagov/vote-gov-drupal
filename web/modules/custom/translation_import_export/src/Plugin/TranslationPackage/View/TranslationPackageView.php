@@ -71,18 +71,20 @@ class TranslationPackageView extends TranslationPackagePluginBase implements Tra
   /**
    *
    */
-  public function getFormFields(&$form, $form_state, $entity) {
+  public function getFormFields(&$form, $form_state, $disabled = FALSE) {
 
     $form['view_name'] = [
       '#type' => 'textfield',
       '#title' => t('View'),
       '#required' => TRUE,
+      '#disabled' => $disabled,
       '#default_value' => $this->getViewName(),
     ];
     $form['view_display_id'] = [
       '#type' => 'textfield',
       '#title' => t('View Display Id'),
       '#required' => TRUE,
+      '#disabled' => $disabled,
       '#default_value' => $this->getViewDisplayId(),
     ];
     return $form;

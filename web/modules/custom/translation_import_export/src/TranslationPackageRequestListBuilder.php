@@ -17,7 +17,7 @@ class TranslationPackageRequestListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['label'] = $this->t('Requst');
+    $header['label'] = $this->t('Package Request');
     $header['description'] = $this->t('Description');
     return $header + parent::buildHeader();
   }
@@ -54,6 +54,10 @@ class TranslationPackageRequestListBuilder extends EntityListBuilder {
     $operations['edit'] = [
       'title' => $this->t('Edit'),
       'url' => Url::fromRoute('entity.translation_package_request.edit_form', ['translation_package_request' => $entity->id()]),
+    ];
+    $operations['preview'] = [
+      'title' => $this->t('Preview Export'),
+      'url' => Url::fromRoute('entity.translation_package_request.preview', ['translation_package_request' => $entity->id()]),
     ];
     $operations['delete'] = [
       'title' => $this->t('Delete'),

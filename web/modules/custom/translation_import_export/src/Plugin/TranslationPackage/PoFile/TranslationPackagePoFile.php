@@ -48,12 +48,13 @@ class TranslationPackagePoFile extends TranslationPackagePluginBase implements T
   /**
    *
    */
-  public function getFormFields(&$form, $form_state) {
+  public function getFormFields(&$form, $form_state, $disabled = FALSE) {
 
     $form['po_file_uri'] = [
       '#type' => 'textfield',
       '#title' => t('PO File URI'),
       '#required' => FALSE,
+      '#disabled' => $disabled,
       '#default_value' => $this->getSource(),
     ];
     return $form;
