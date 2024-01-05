@@ -1,0 +1,31 @@
+@use "uswds-core" as *;
+
+$masthead-background-color: #11385B;
+
+.page-masthead {
+  background-color: $masthead-background-color;
+  position: relative;
+  @include u-padding-top(4);
+  @include u-padding-bottom(6);
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background-color: $masthead-background-color;
+  }
+
+  > * {
+    position: relative;
+  }
+
+  &.page-masthead--image-offset {
+    padding-bottom: 120px;
+  }
+}

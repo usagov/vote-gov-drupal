@@ -1,0 +1,6 @@
+@use "uswds-core" as *;
+
+.usa-legend {
+  @include u-text('bold');
+  @include u-font-size('sans', 6);
+}

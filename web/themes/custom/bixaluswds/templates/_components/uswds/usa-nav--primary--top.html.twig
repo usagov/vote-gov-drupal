@@ -1,0 +1,56 @@
+{#
+/**
+ * @file
+ * Default theme implementation to USWDS primary components.
+ *
+ * USWDS template variables:
+ * - items: array of link objects
+ * - classes: classes array (inherits base template classes as default)
+ *
+ * Usage example:
+ * {% include '@uswds_templates/uswds/usa-nav--primary--top.html.twig' with {
+ *   'items': var_nav_items,
+ *   'classes': var_classes
+ * } %}
+ *
+#}
+
+{% set usa_attributes = create_attribute() %}
+{% set usa_classes = [
+  'usa-nav__primary',
+  'usa-accordion'
+] %}
+
+{% if items|length %}
+  <ul{{ usa_attributes.addClass(usa_classes | merge(classes | default([]))) }}>
+    {% for item in items %}
+      <li class="usa-nav__primary-item">
+        {% set link_classes = [
+          'usa-nav-link',
+          item.in_active_trail ? 'usa-current'
+        ] %}
+
+        {% if item.below %}
+          {% set button_classes = [
+            'usa-accordion__button',
+            'usa-nav__link',
+            item.in_active_trail ? 'usa-current'
+          ] %}
+
+          {% set aria_id = ('primary-menu-item-' ~ loop.index )|clean_id %}
+          <button type="button" aria-expanded="false" aria-controls="{{ aria_id }}" {{ create_attribute({'class': button_classes}) }}>
+            <span>{{ item.title }}</span>
+          </button>
+
+          {% include "@bixaluswds/_components/uswds/usa-nav--primary--below.html.twig" with {
+            items: item.below,
+            mega: 1,
+            aria_id: aria_id
+          } %}
+        {% else %}
+          {{ link(item.title, item.url, create_attribute({'class': link_classes})) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}

@@ -1,0 +1,23 @@
+uuid: ca5a0d78-7dbd-4c85-abf3-2b6fbd4f4e0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bixaluswds
+id: bixaluswds_sitebranding
+theme: bixaluswds
+region: header
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

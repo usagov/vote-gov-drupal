@@ -1,0 +1,22 @@
+uuid: 63398650-ac85-40ab-bbc5-624cbf7d28c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bixaluswds
+_core:
+  default_config_hash: zi0BPmuyVpUHAQAYYi8qC8jfAO1MkRPw1_STBhdmc_Y
+id: bixaluswds_content
+theme: bixaluswds
+region: content
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }
