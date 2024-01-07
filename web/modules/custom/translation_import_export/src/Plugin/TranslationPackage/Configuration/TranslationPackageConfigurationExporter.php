@@ -2,6 +2,8 @@
 
 namespace Drupal\translation_import_export\Plugin\TranslationPackage\Configuration;
 
+use Drupal\Component\Serialization\Yaml;
+
 /**
  *
  */
@@ -35,7 +37,9 @@ class TranslationPackageConfigurationExporter {
    */
   public function getDataFromSource() {
     // The source is the data in this case.
-    return $this->package->getSource();
+    $source = $this->package->getSource();
+    $source['configuration'] = $decoded_config = Yaml::decode($source['configuration']);
+    return $source;
   }
 
   /**
@@ -93,7 +97,7 @@ class TranslationPackageConfigurationExporter {
     // Use this to prepare the contents of the finalized
     // package for delivery.
     $data = [
-      'Export Type' => 'Configuration',
+      'package_type' => 'configuration',
       'Export Date' => date("m-d-Y h:i:s A"),
       'data_to_translate' => $this->getExportedData(),
     ];

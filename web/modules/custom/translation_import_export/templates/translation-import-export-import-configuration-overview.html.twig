@@ -1,0 +1,16 @@
+<p>Use the following button below to dowload the translated Configuration Package as a YAML file.</p>
+<p>Review the downloaded configuration file and compare it with the configuration file that you may already have
+in your configuration's sync directory. You may need to manually merge both files as the download does not
+compare the two to produce a merged version.</p>
+
+<a class="button" href="{{ path('translation_import_export.import_packages') }}">{{ 'Back to Imports'|t }}</a>
+<a class="button" href="{{ path('translation_import_export.process_import_package', {'langcode':langcode, 'filename':url_filename}) }}">{{ 'Download Translated Configuration File'|t }}</a>
+
+<h3>Translated Configuration Preview</h3>
+<pre style="width: 100%; height: 300px; overflow: scroll; border: solid 1px #666666;">{{ import_preview }}</pre>
+
+<h3>Translated Configuration Package Preview</h3>
+<textarea disabled="disabled" style="width:100%; height:500px;">
+	{{ received_package|json_encode(constant('JSON_PRETTY_PRINT'))|raw }}
+</textarea>
+

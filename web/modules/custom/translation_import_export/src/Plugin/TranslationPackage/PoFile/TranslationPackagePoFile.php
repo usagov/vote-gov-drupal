@@ -22,14 +22,6 @@ class TranslationPackagePoFile extends TranslationPackagePluginBase implements T
   /**
    *
    */
-  /**
-   * The file extension will be set later.
-   */
-  private $default_export_filename = 'po';
-
-  /**
-   *
-   */
   public function __construct($po_file, $plugin_id, $plugin_definition) {
     parent::__construct($po_file, $plugin_id, $plugin_definition);
   }
@@ -40,9 +32,39 @@ class TranslationPackagePoFile extends TranslationPackagePluginBase implements T
   public function process() {
     if ('export' == $this->getRequestType()) {
       $exporter = \Drupal::service('translation_import_export.exporter.po_file');
-      $exporter->export($this);
+      $exporter->setPackage($this);
+      $exporter->export();
       return $exporter->getPackage();
     }
+    elseif ('import' == $this->getRequestType()) {
+      // Add any import processing here.
+    }
+  }
+
+  /**
+   *
+   */
+  public function getImporterPreview() {
+    $importer = \Drupal::service('translation_import_export.importer.po_file');
+
+    $importer->setPackage($this);
+    $importer->setReceivedPackage($this->getReceivedPackage());
+    $importer->setup();
+
+    return $importer->getImporterPreview();
+  }
+
+  /**
+   *
+   */
+  public function getImporterResponse() {
+    $importer = \Drupal::service('translation_import_export.importer.po_file');
+
+    $importer->setPackage($this);
+    $importer->setReceivedPackage($this->getReceivedPackage());
+    $importer->setup();
+
+    return $importer->getImporterResponse();
   }
 
   /**

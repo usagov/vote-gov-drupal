@@ -71,6 +71,32 @@ class TranslationPackageView extends TranslationPackagePluginBase implements Tra
   /**
    *
    */
+  public function getImporterPreview() {
+    $importer = \Drupal::service('translation_import_export.importer.view');
+
+    $importer->setPackage($this);
+    $importer->setReceivedPackage($this->getReceivedPackage());
+    $importer->setup();
+
+    return $importer->getImporterPreview();
+  }
+
+  /**
+   *
+   */
+  public function getImporterResponse() {
+    $importer = \Drupal::service('translation_import_export.importer.view');
+
+    $importer->setPackage($this);
+    $importer->setReceivedPackage($this->getReceivedPackage());
+    $importer->setup();
+
+    return $importer->getImporterResponse();
+  }
+
+  /**
+   *
+   */
   public function getFormFields(&$form, $form_state, $disabled = FALSE) {
 
     $form['view_name'] = [

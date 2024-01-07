@@ -9,8 +9,8 @@ use Drupal\translation_import_export\Plugin\TranslationPackagePluginInterface;
  * Provides a translation package plugin.
  *
  * @TranslationPackage(
- *   id = "configurations",
- *   label = @Translation("Configurations Translation Package")
+ *   id = "configuration",
+ *   label = @Translation("Configuration Translation Package")
  * )
  */
 class TranslationPackageConfiguration extends TranslationPackagePluginBase implements TranslationPackagePluginInterface {
@@ -66,6 +66,32 @@ class TranslationPackageConfiguration extends TranslationPackagePluginBase imple
       $exporter->export($this);
       return $exporter->getPackage();
     }
+  }
+
+  /**
+   *
+   */
+  public function getImporterPreview() {
+    $importer = \Drupal::service('translation_import_export.importer.configuration');
+
+    $importer->setPackage($this);
+    $importer->setReceivedPackage($this->getReceivedPackage());
+    $importer->setup();
+
+    return $importer->getImporterPreview();
+  }
+
+  /**
+   *
+   */
+  public function getImporterResponse() {
+    $importer = \Drupal::service('translation_import_export.importer.configuration');
+
+    $importer->setPackage($this);
+    $importer->setReceivedPackage($this->getReceivedPackage());
+    $importer->setup();
+
+    return $importer->getImporterResponse();
   }
 
   /**

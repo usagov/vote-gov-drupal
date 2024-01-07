@@ -46,6 +46,30 @@ entity.translation_package_request.delete_form:
   requirements:
     _permission: 'administer site configuration'
 
+translation_import_export.import_packages:
+  path: '/admin/config/translation-import-export/import-packages'
+  defaults:
+    _title: 'Import Packages'
+    _controller: '\Drupal\translation_import_export\Controller\TranslationImportExportController::browseBuild'
+  requirements:
+    _permission: 'access content'
+
+translation_import_export.process_import_package:
+  path: '/admin/config/translation-import-export/import-package/{langcode}/{filename}'
+  defaults:
+    _title: 'Process Import Package'
+    _controller: '\Drupal\translation_import_export\Controller\TranslationImportExportController::processImportBuild'
+  requirements:
+    _permission: 'access content'
+
+translation_package_request.import_overview:
+  path: '/admin/config/translation-import-export/import-package/{langcode}/{filename}/overview'
+  defaults:
+    _title: 'Import Package Overview'
+    _controller: '\Drupal\translation_import_export\Controller\TranslationImportExportController::importOverview'
+  requirements:
+    _permission: 'access content'
+
 translation_import_export.example:
   path: '/translation-import-export/example'
   defaults:

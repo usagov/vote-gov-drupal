@@ -4,3 +4,38 @@
  * @file
  * Primary module hooks for Translation Import Export module.
  */
+
+/**
+ * Implements hook_theme().
+ */
+function translation_import_export_theme($existing, $type, $theme, $path) {
+  return [
+    'translation_import_export_imports_overview' => [
+      'variables' => ['import_files' => NULL],
+    ],
+    'translation_import_export_import_pofile_overview' => [
+      'variables' => [
+        'import_preview' => NULL,
+        'received_package' => NULL,
+        'langcode' => NULL,
+        'url_filename' => NULL,
+      ],
+    ],
+    'translation_import_export_import_configuration_overview' => [
+      'variables' => [
+        'import_preview' => NULL,
+        'received_package' => NULL,
+        'langcode' => NULL,
+        'url_filename' => NULL,
+      ],
+    ],
+    'translation_import_export_import_view_overview' => [
+      'variables' => [
+        'import_preview' => NULL,
+        'received_package' => NULL,
+        'langcode' => NULL,
+        'url_filename' => NULL,
+      ],
+    ],
+  ];
+}

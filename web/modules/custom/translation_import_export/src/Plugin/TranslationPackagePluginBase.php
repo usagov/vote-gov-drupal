@@ -18,6 +18,8 @@ abstract class TranslationPackagePluginBase extends PluginBase {
 
   private $requestType;
 
+  private $receivedPackage;
+
   /**
    *
    */
@@ -30,6 +32,11 @@ abstract class TranslationPackagePluginBase extends PluginBase {
     if (!empty($plugin_data['request']['source'])) {
       // Add validation for the input.
       $this->setSource($plugin_data['request']['source']);
+    }
+
+    if (!empty($plugin_data['received_package'])) {
+      // Add validation for the input.
+      $this->setReceivedPackage($plugin_data['received_package']);
     }
   }
 
@@ -50,7 +57,14 @@ abstract class TranslationPackagePluginBase extends PluginBase {
   /**
    *
    */
-  public function getLangCode() {
+  public function setLangcode($langcode) {
+    $this->langcode = $langcode;
+  }
+
+  /**
+   *
+   */
+  public function getLangcode() {
     return $this->langcode;
   }
 
@@ -66,6 +80,20 @@ abstract class TranslationPackagePluginBase extends PluginBase {
    */
   public function setSource($source) {
     $this->source = $source;
+  }
+
+  /**
+   *
+   */
+  public function setReceivedPackage($package) {
+    $this->receivedPackage = $package;
+  }
+
+  /**
+   *
+   */
+  public function getReceivedPackage() {
+    return $this->receivedPackage;
   }
 
 }

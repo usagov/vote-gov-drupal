@@ -27,8 +27,7 @@ class TranslationPackagePoFileExporter {
   /**
    *
    */
-  public function export($package) {
-    $this->package = $package;
+  public function export() {
     $data = $this->getDataFromSource();
     $this->setExportedData($data);
   }
@@ -38,7 +37,7 @@ class TranslationPackagePoFileExporter {
    */
   public function getDataFromSource() {
     $file_uri = $this->package->getSource();
-    $langcode = $this->package->getLangCode();
+    $langcode = $this->package->getLangcode();
 
     $writer = new PoMemoryWriter();
     $writer->setLangcode($langcode);
@@ -57,6 +56,13 @@ class TranslationPackagePoFileExporter {
    */
   public function getExportedData() {
     return $this->exportedData;
+  }
+
+  /**
+   *
+   */
+  public function setPackage($package) {
+    $this->package = $package;
   }
 
   /**
@@ -107,7 +113,7 @@ class TranslationPackagePoFileExporter {
     // Use this to prepare the contents of the finalized
     // package for delivery.
     $data = [
-      'Export Type' => 'PoFile',
+      'package_type' => 'pofile',
       'Export Date' => date("m-d-Y h:i:s A"),
       'data_to_translate' => $this->getExportedData(),
     ];

@@ -38,7 +38,7 @@ class TranslationPackageViewExporter {
    */
   public function getDataFromSource() {
 
-    $langcode = $this->package->getLangCode();
+    $langcode = $this->package->getLangcode();
     $view_name = $this->package->getViewName();
     $display_id = $this->package->getViewDisplayId();
 
@@ -113,7 +113,7 @@ class TranslationPackageViewExporter {
     // Use this to prepare the contents of the finalized
     // package for delivery.
     $data = [
-      'Export Type' => 'View',
+      'package_type' => 'view',
       'Export Date' => date("m-d-Y h:i:s A"),
       'data_to_translate' => $this->getExportedData(),
     ];
