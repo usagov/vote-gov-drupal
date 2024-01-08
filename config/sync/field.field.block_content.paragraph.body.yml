@@ -1,0 +1,24 @@
+uuid: cc32ea18-ed28-4396-8d8f-78940f4472bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.paragraph
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.paragraph.body
+field_name: body
+entity_type: block_content
+bundle: paragraph
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary
