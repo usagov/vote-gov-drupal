@@ -5,7 +5,6 @@ dependencies:
   config:
     - block_content.type.paragraph
     - field.storage.block_content.field_basics_module
-    - taxonomy.vocabulary.voter_guide_field
 id: block_content.paragraph.field_basics_module
 field_name: field_basics_module
 entity_type: block_content
@@ -19,8 +18,7 @@ default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
-    target_bundles:
-      voter_guide_field: voter_guide_field
+    target_bundles: {  }
     sort:
       field: name
       direction: asc

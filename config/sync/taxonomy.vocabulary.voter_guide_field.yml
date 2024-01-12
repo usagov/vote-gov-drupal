@@ -1,8 +1,0 @@
-uuid: 69678cf6-ed46-481e-b24e-89d3cd1d2027
-langcode: en
-status: true
-dependencies: {  }
-name: 'Voter guide field'
-vid: voter_guide_field
-description: ''
-weight: 0

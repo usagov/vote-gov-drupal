@@ -1,16 +1,16 @@
-uuid: fbd04294-091f-4e2e-81e6-29f427d5ddf0
+uuid: 6241ce81-c74b-48d0-bc7c-c7f533782235
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.voter_guide_field
+    - taxonomy.vocabulary.basics_modules
   module:
     - content_translation
 third_party_settings:
   content_translation:
     enabled: true
-id: taxonomy_term.voter_guide_field
+id: taxonomy_term.basics_modules
 target_entity_type_id: taxonomy_term
-target_bundle: voter_guide_field
+target_bundle: basics_modules
 default_langcode: site_default
 language_alterable: false
