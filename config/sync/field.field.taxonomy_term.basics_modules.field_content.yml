@@ -1,0 +1,24 @@
+uuid: efaeab00-1766-40a4-ae3a-20e8af39efa3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_content
+    - filter.format.basic_html
+    - taxonomy.vocabulary.basics_modules
+  module:
+    - text
+id: taxonomy_term.basics_modules.field_content
+field_name: field_content
+entity_type: taxonomy_term
+bundle: basics_modules
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

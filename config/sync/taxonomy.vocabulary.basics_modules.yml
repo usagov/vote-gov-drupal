@@ -1,0 +1,8 @@
+uuid: 2af33be1-33c4-4945-a86e-4e6bd0ac8377
+langcode: en
+status: true
+dependencies: {  }
+name: 'Basics modules'
+vid: basics_modules
+description: ''
+weight: 0

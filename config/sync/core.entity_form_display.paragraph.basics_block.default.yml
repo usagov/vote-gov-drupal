@@ -1,0 +1,45 @@
+uuid: 8a88e52c-f1fd-4d79-b476-33d2dea19ec9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.basics_block.field_basics_modules
+    - field.field.paragraph.basics_block.field_body
+    - field.field.paragraph.basics_block.field_heading
+    - paragraphs.paragraphs_type.basics_block
+  module:
+    - text
+id: paragraph.basics_block.default
+targetEntityType: paragraph
+bundle: basics_block
+mode: default
+content:
+  field_basics_modules:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_body:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_heading:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

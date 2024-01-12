@@ -1,0 +1,29 @@
+uuid: a918b8ca-4ed1-4ed2-ae37-2b492588bedb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_basics_modules
+    - paragraphs.paragraphs_type.basics_block
+    - taxonomy.vocabulary.basics_modules
+id: paragraph.basics_block.field_basics_modules
+field_name: field_basics_modules
+entity_type: paragraph
+bundle: basics_block
+label: 'Basics modules'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      basics_modules: basics_modules
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
