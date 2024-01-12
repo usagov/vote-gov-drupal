@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_basics_block
     - node.type.voter_guide
-    - paragraphs.paragraphs_type.basic
+    - paragraphs.paragraphs_type.basics_block
   module:
     - entity_reference_revisions
 id: node.voter_guide.field_basics_block
@@ -15,14 +15,14 @@ bundle: voter_guide
 label: 'Basics Block'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      basic: basic
+      basics_block: basics_block
     negate: 0
     target_bundles_drag_drop:
       accordion_group:
@@ -30,6 +30,9 @@ settings:
         enabled: false
       basic:
         weight: 5
+        enabled: false
+      basics_block:
+        weight: 7
         enabled: true
       registration_tool:
         weight: 6

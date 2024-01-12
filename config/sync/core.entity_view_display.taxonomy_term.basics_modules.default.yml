@@ -13,27 +13,21 @@ targetEntityType: taxonomy_term
 bundle: basics_modules
 mode: default
 content:
-  description:
+  field_content:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
-    region: content
-  field_content:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_heading:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
 hidden:
+  description: true
   langcode: true

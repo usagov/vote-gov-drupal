@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.voter_guide.field_subtitle
     - node.type.voter_guide
   module:
+    - entity_reference_revisions
     - text
     - user
 id: node.voter_guide.full
@@ -21,22 +22,30 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   content_moderation_control:
     settings: {  }
     third_party_settings: {  }
-    weight: -20
+    weight: 0
+    region: content
+  field_basics_block:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
     region: content
   field_subtitle:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
 hidden:
-  field_basics_block: true
   langcode: true
   links: true
   published_at: true

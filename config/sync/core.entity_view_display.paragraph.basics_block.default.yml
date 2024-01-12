@@ -15,9 +15,10 @@ bundle: basics_block
 mode: default
 content:
   field_basics_modules:
-    type: entity_reference_label
-    label: above
+    type: entity_reference_entity_view
+    label: hidden
     settings:
+      view_mode: default
       link: true
     third_party_settings: {  }
     weight: 2
