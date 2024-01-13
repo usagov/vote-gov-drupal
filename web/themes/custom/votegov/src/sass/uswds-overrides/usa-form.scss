@@ -1,0 +1,5 @@
+@use "uswds-core" as *;
+
+.usa-form {
+  @include u-maxw('tablet');
+}

@@ -1,0 +1,15 @@
+uuid: ced1d8ab-832c-43e7-a943-e3c275058041
+langcode: en
+status: true
+dependencies: {  }
+name: scaled_lg
+label: 'Scaled large (960)'
+effects:
+  33dc71fc-d4be-46a6-be98-9a92e242e778:
+    uuid: 33dc71fc-d4be-46a6-be98-9a92e242e778
+    id: image_scale
+    weight: 1
+    data:
+      width: 960
+      height: null
+      upscale: false

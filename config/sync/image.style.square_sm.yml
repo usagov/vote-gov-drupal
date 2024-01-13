@@ -1,0 +1,17 @@
+uuid: 9f1a8256-83b1-449c-9710-3931428b19ab
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: square_sm
+label: 'Square small (640)'
+effects:
+  49859b1e-a402-4c55-819f-30ff5d7cd592:
+    uuid: 49859b1e-a402-4c55-819f-30ff5d7cd592
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 640
+      crop_type: focal_point

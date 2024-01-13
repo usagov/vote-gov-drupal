@@ -54,7 +54,7 @@ settings:
         - '<button type class aria-expanded aria-controls>'
         - '<ul class>'
         - '<li class>'
-        - '<a href target noreferrer>'
+        - '<a href target noreferrer class>'
     ckeditor5_style:
       styles:
         -

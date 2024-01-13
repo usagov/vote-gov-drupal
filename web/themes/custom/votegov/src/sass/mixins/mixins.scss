@@ -8,3 +8,20 @@
   right: 50%;
   overflow: hidden;
 }
+
+@mixin narrow-container() {
+  @include at-media('tablet') {
+    @include grid-col(10);
+    @include grid-offset(1);
+  }
+
+  @include at-media('tablet-lg') {
+    @include grid-col(8);
+    @include grid-offset(2);
+  }
+
+  @include at-media('desktop-lg') {
+    @include grid-col(7);
+    @include grid-offset(3);
+  }
+}
