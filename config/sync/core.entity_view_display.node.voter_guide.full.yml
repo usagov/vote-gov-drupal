@@ -24,11 +24,6 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-  content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
   field_basics_block:
     type: entity_reference_revisions_entity_view
     label: hidden
