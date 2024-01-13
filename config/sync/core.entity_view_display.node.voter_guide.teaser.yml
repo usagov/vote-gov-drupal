@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.voter_guide.body
+    - field.field.node.voter_guide.field_basics_block
     - field.field.node.voter_guide.field_subtitle
     - node.type.voter_guide
   module:
@@ -34,6 +35,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_basics_block: true
   field_subtitle: true
   langcode: true
   published_at: true
