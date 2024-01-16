@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Default theme implementation to USWDS secondary link components.
+ *
+ * USWDS template variables:
+ * - items: array of link objects
+ * - classes: classes array (inherits base template classes as default)
+ *
+ * Usage example:
+ * {% include '@uswds_templates/uswds/usa-nav--secondary-links.html.twig' with {
+ *   'items': var_nav_items,
+ *   'classes': var_classes
+ * } %}
+ *
+#}
+
+{% set usa_attributes = create_attribute() %}
+{% set usa_classes = [
+  'usa-identifier__required-links-list',
+] %}
+
+{% if items|length %}
+  <ul{{ usa_attributes.addClass(usa_classes | merge(classes | default([]))) }}>
+    {% for item in items %}
+      <li class="usa-identifier__required-links-item">
+        {% set link_classes = [
+          'usa-identifier__required-link',
+          'usa-link',
+          item.in_active_trail ? 'usa-current'
+        ] %}
+        {{ link(item.title, item.url, create_attribute({'class': link_classes})) }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}

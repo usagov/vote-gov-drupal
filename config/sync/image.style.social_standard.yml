@@ -1,0 +1,17 @@
+uuid: 8395c625-2f52-4514-9f35-0aa2fded56ce
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: social_standard
+label: 'Social Standard 2:1 (1200x600)'
+effects:
+  f09d6660-aff8-4af4-9805-dece9eb904b9:
+    uuid: f09d6660-aff8-4af4-9805-dece9eb904b9
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 600
+      crop_type: focal_point

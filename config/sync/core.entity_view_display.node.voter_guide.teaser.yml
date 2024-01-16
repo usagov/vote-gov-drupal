@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.voter_guide.body
+    - field.field.node.voter_guide.field_basics_block
     - field.field.node.voter_guide.field_subtitle
     - node.type.voter_guide
   module:
@@ -23,12 +24,18 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 100
     region: content
 hidden:
+  field_basics_block: true
   field_subtitle: true
   langcode: true
   published_at: true

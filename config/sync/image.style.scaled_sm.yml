@@ -1,0 +1,15 @@
+uuid: cfacf4b7-5b19-4681-8c4c-758709a7b7e8
+langcode: en
+status: true
+dependencies: {  }
+name: scaled_sm
+label: 'Scaled small (640)'
+effects:
+  e2e0e490-9f29-4407-b4f0-8f1bf3886133:
+    uuid: e2e0e490-9f29-4407-b4f0-8f1bf3886133
+    id: image_scale
+    weight: 1
+    data:
+      width: 640
+      height: null
+      upscale: false

@@ -1,0 +1,15 @@
+uuid: 415decad-3fec-46ad-949e-d8cbc1edfb5e
+langcode: en
+status: true
+dependencies: {  }
+name: scaled_xl
+label: 'Scaled x-large (1280)'
+effects:
+  34ddd3f2-545d-4fea-b129-48fce5027cf1:
+    uuid: 34ddd3f2-545d-4fea-b129-48fce5027cf1
+    id: image_scale
+    weight: 1
+    data:
+      width: 1280
+      height: null
+      upscale: false

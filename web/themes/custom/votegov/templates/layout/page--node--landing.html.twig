@@ -1,9 +1,9 @@
 {% extends "page.html.twig" %}
 
 {% block main %}
-  {# admin region. #}
-  {{ page.admin }}
-
-  {# Main content region. #}
-  {{ page.content }}
+  <main role="main" id="main">
+    {# link is in html.html.twig #}
+    <a id="main-content" tabindex="-1"></a>
+    {{ page.content }}
+  </main>
 {% endblock %}

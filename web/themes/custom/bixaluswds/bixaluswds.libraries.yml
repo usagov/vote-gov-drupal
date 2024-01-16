@@ -1,0 +1,7 @@
+# Required for admin utilities displaying on the site.
+logged-in:
+  version: VERSION
+  css:
+    theme:
+      /core/modules/system/css/components/hidden.module.css: {}
+      /core/modules/system/css/components/js.module.css: {}

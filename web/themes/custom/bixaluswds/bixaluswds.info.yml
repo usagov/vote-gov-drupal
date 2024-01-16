@@ -1,0 +1,22 @@
+name: Bixal USWDS Base Theme
+type: theme
+description: "Drupal base theme for use with USWDS."
+core_version_requirement: "^9.4 || ^10"
+base theme: false
+dependencies:
+  - drupal:twig_tweak
+  - drupal:twig_field_value
+  - drupal:uswds_templates
+  - drupal:block_content_template
+
+regions:
+  admin: "Admin"
+  header: "Header"
+  content: "Content"
+  sidebar: "Sidebar"
+  footer: "Footer"
+  no_region: "Blocks for Twig Tweak, hidden, or other purposes"
+
+## unset any unwanted CSS or JS.
+libraries-override:
+  system/base: false

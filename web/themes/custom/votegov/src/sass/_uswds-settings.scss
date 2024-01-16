@@ -1,0 +1,217 @@
+/*
+ ***** Do not write any custom CSS on this file, this is for USWDS 3 settings only.
+ ***** For all possible overrides, see https://designsystem.digital.gov/documentation/settings/
+----------------------------------------
+USWDS theme settings overrides
+----------------------------------------
+// Grid settings reference
+----------------------------------------
+Grid container max-width
+----------------------------------------
+mobile
+mobile-lg
+tablet
+tablet-lg
+desktop
+desktop-lg
+widescreen
+----------------------------------------
+// Units available for usage.
+example with USWDS units:
+.element {
+  padding-bottom: units('first value in the key pairs below')
+}
+
+Or a USWDS mixin...
+
+.element {
+  @include u-padding-bottom('3');
+}
+
+"1px": 1px,
+"2px": 2px,
+"05": 0.25rem,
+1: 0.5rem,
+"105": 0.75rem,
+2: 1rem,
+"205": 1.25rem,
+3: 1.5rem,
+"neg-1px": -1px,
+"neg-2px": -2px,
+"neg-05": -0.25rem,
+"neg-1": -0.5rem,
+"neg-105": -0.75rem,
+"neg-2": -1rem,
+"neg-205": -1.25rem,
+"neg-3": -1.5rem,
+4: 2rem,
+5: 2.5rem,
+6: 3rem,
+7: 3.5rem,
+8: 4rem,
+9: 4.5rem,
+10: 5rem,
+15: 7.5rem,
+"neg-4": -2rem,
+"neg-5": -2.5rem,
+"neg-6": -3rem,
+"neg-7": -3.5rem,
+"neg-8": -4rem,
+"neg-9": -4.5rem,
+"neg-10": -5rem,
+"neg-15": -7.5rem,
+"card": 10rem,
+"card-lg": 15rem,
+"mobile": 20rem,
+"mobile-lg": 30rem,
+"tablet": 40rem,
+"tablet-lg": 55rem,
+"desktop": 64rem,
+"desktop-lg": 75rem,
+"widescreen": 87.5rem,
+0: 0,
+"auto": auto
+*/
+
+// ****** Do not write any custom CSS on this file ****** //
+/* Theme setting documentation ---------------------------------------------------------------
+https://designsystem.digital.gov/documentation/settings/
+ */
+@use "uswds-core" with (
+  // General settings.
+  $theme-image-path: "../assets/img",
+  $theme-font-path: "../assets/fonts",
+  $theme-show-notifications: false,
+  $theme-global-content-styles: true,
+
+  // Component container max-widths.
+  $theme-grid-container-max-width: "widescreen",
+  $theme-banner-max-width: "widescreen",
+  $theme-header-max-width: "widescreen",
+  $theme-identifier-max-width: "widescreen",
+  $theme-footer-max-width: "widescreen",
+  $max-width-settings: (
+  output: true,
+  responsive: true, // Max width settings, set responsive to true.
+  ),
+
+  /* Color token documentation:
+  https://designsystem.digital.gov/design-tokens/color/theme-tokens/
+  https://designsystem.digital.gov/design-tokens/color/overview/
+   */
+  // Color settings ---------------------------------------------------------------
+  $test-system-color-tokens: false, // Debug output for system colors.
+
+  // -- Primary
+  // -- Secondary
+  // -- Accent cool
+  // -- Accent warm
+  // -- Info
+
+  // Component settings ---------------------------------------------------------------
+  // -- Accordion
+  // -- Alert
+  // -- Banner
+  // -- Breadcrumb
+  $theme-breadcrumb-background-color: "black",
+  $theme-breadcrumb-font-family: "sans",
+  $theme-breadcrumb-font-size: "sm",
+  $theme-breadcrumb-link-color: "base-lighter",
+  $theme-breadcrumb-separator-color: "white",
+  $theme-breadcrumb-padding-top: 0,
+  $theme-breadcrumb-padding-bottom: 0,
+  // -- Button
+  // -- Card
+  // -- Checkbox
+  // -- Collection
+  // -- Footer
+  // -- Form
+  // -- Header
+  // -- Hero
+  // -- Icon list
+  // -- Identifier
+  // -- In-page navigation
+  // -- Input
+  // -- Link
+  // -- Modal
+  // -- Navigation
+  // -- Pagination
+  // -- Process list
+  // -- Radio buttons
+  // -- Search
+  // -- Sidenav
+  // -- Site Alert
+  // -- Step indicator
+  // -- Summary box
+  // -- Tables
+  // -- Tooltip
+  // **** End Components ****
+
+  // Spacing settings ---------------------------------------------------------------
+  $theme-column-gap-sm: 3,
+  $theme-column-gap-md: 4,
+  $theme-column-gap-lg: 6,
+  $theme-column-gap-mobile: 5,
+  //$theme-column-gap-desktop: 7,
+
+  // Typography settings ---------------------------------------------------------------
+  /* Typography settings and token documentation:
+   https://designsystem.digital.gov/documentation/settings/#typography-settings
+   https://designsystem.digital.gov/design-tokens/typesetting/overview/
+   https://designsystem.digital.gov/utilities/font-size-and-family/
+   https://designsystem.digital.gov/design-tokens/typesetting/font-family/
+   */
+  // Set some reasonable typography defaults.
+  $theme-font-type-sans: "roboto",
+  $theme-font-type-serif: "merriweather",
+  $theme-font-role-ui: "sans",
+  $theme-font-role-heading: "sans",
+  $theme-font-role-body: "serif",
+  $theme-font-role-alt: "sans",
+  $theme-text-measure: none, // Set standard line-length to 100%
+  $theme-lead-measure: none,
+  $theme-lead-line-height: 5,
+  $theme-lead-font-size: 8,
+  $theme-font-weight-medium: 500,
+  $theme-font-weight-bold: 500,
+
+  // https://designsystem.digital.gov/design-tokens/typesetting/font-size/
+  $theme-h1-font-size: 15,
+  $theme-h2-font-size: 11,
+  $theme-h3-font-size: 10,
+  $theme-h4-font-size: 9,
+  $theme-h5-font-size: 8,
+  $theme-h6-font-size: 7,
+
+  $theme-typeface-tokens: (
+   "roboto": (
+     "display-name": "Roboto",  // or other font
+     "cap-height": 364px,         // the default, leave it for now
+     "stack": "Helvetica, Arial, sans-serif", // or whatever stack you want
+   ),
+ ),
+
+  // Utilities settings ---------------------------------------------------------------
+  // Example of a custom utility class
+  // compiles as .bottom-100 { bottom:100px!important }
+  $bottom-manual-values: ("80": 80px),
+  $top-manual-values: ("6": 6px),
+
+  // Turn on or off breakpoints
+  $theme-utility-breakpoints: (
+  'card': false, // 160px
+  'card-lg': false, // 240px
+  'mobile': false, // 320px
+  'mobile-lg': false, // 480px
+  'tablet': true, // 640px
+  'tablet-lg': false, // 880px
+  'desktop': true, // 1024px
+  'desktop-lg': false, // 1200px
+  'widescreen': false, // 1400px
+  ),
+  $flex-direction-settings: (
+  output: true,
+  responsive: true,
+  ),
+);
+// ****** Do not write any custom CSS on this file ****** //

@@ -1,0 +1,17 @@
+uuid: 9284b395-df70-4cad-9b36-8a1a751933b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: wide_standard_banner
+label: 'Wide Standard 16:9 banner (1440x810)'
+effects:
+  b27eb82e-5d90-417f-a0a4-37dcfffc1c69:
+    uuid: b27eb82e-5d90-417f-a0a4-37dcfffc1c69
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1440
+      height: 810
+      crop_type: focal_point

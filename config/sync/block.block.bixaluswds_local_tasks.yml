@@ -1,0 +1,22 @@
+uuid: 5fe64a38-aa28-4837-b539-1ab2ca0b223a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bixaluswds
+_core:
+  default_config_hash: umNtIMUoh_wuWhK5Dv8-cX7febvOoYCebJ8lOg1NDk0
+id: bixaluswds_local_tasks
+theme: bixaluswds
+region: admin
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

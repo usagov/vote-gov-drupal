@@ -1,0 +1,17 @@
+uuid: 087ee54f-344a-4523-9818-a4c13605a697
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: wide_standard_xl
+label: 'Wide Standard 16:9 x-large (1280x720)'
+effects:
+  ce187064-9110-4e13-ba8b-e5b9cc46bed7:
+    uuid: ce187064-9110-4e13-ba8b-e5b9cc46bed7
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1280
+      height: 720
+      crop_type: focal_point

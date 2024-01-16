@@ -1,0 +1,20 @@
+uuid: d78e52bb-3ff3-428e-9537-9c240251fc34
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - bixaluswds
+id: bixaluswds_languageswitcher
+theme: bixaluswds
+region: header
+weight: -6
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Select Language'
+  label_display: '0'
+  provider: language
+visibility: {  }
