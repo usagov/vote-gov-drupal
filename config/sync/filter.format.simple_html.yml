@@ -12,6 +12,6 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p> <strong> <em> <a href> <ul> <ol reversed start> <li>'
+      allowed_html: '<br> <p> <strong> <em> <a href aria-label title class target="_blank"> <ul> <ol> <li>'
       filter_html_help: true
       filter_html_nofollow: false
