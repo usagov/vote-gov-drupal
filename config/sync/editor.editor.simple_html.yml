@@ -19,4 +19,10 @@ settings:
     ckeditor5_list:
       reversed: false
       startIndex: false
+    editor_advanced_link_link:
+      enabled_attributes:
+        - aria-label
+        - class
+        - target
+        - title
 image_upload: {  }
