@@ -1,0 +1,10 @@
+@use "uswds-core" as *;
+@use "mixins" as *;
+
+.usa-breadcrumb {
+  background-color: transparent;
+
+  .page-masthead & {
+    @include narrow-container;
+  }
+}

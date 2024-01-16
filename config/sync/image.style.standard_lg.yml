@@ -1,0 +1,17 @@
+uuid: a90170e5-801d-4736-bfb4-294ec7b272d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: standard_lg
+label: 'Standard large 4:3 (960x720)'
+effects:
+  f526f7cd-da37-4b43-a724-b1eb4858925f:
+    uuid: f526f7cd-da37-4b43-a724-b1eb4858925f
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 960
+      height: 720
+      crop_type: focal_point

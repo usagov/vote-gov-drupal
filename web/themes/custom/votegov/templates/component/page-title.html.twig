@@ -18,6 +18,8 @@
 
 {{ title_prefix }}
 {% if title %}
-  <h1{{ title_attributes.addClass('main-heading').setAttribute('data-test', 'main-header') }}>{{ title }}</h1>
+  <div class="page-title">
+    <h1{{ title_attributes.addClass('main-heading').setAttribute('data-test', 'main-header') }}>{{ title }}</h1>
+  </div>
 {% endif %}
 {{ title_suffix }}

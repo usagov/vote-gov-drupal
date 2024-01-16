@@ -36,8 +36,19 @@
     {% for key, item in links %}
       {%- if item.link -%}
         {% if language != key %}
-          <div class='usa-button'>
-            {{ item.link|merge({'#attributes': {'lang': key, 'xml:lang': key} }) }}
+          <div class='language-selector'>
+            {{ item.link|merge({
+              '#attributes': {
+                'lang': key,
+                'xml:lang': key
+              },
+              '#options': {
+                'language': item.link['#options'].language,
+                'attributes': {
+                  'class': ['usa-button', 'usa-language__link']
+                }
+              }
+            }) }}
           </div>
         {% endif %}
       {%- endif -%}
@@ -49,15 +60,20 @@
         {%- if item.link -%}
           {# Create a custom override for the frontpage links. #}
           {%- if is_frontpage -%}
-            <a href="/{{ key != 'en' ? key }}" class="language-link" lang="{{ key }}" xml:lang="{{ key }}"
-               hreflang="{{ key }}" data-drupal-link-system-path="{{ path('<current>') }}"><strong>{{ item.link['#title'] }}</strong> {{ item.link['#english'] }}</a>
+            <a href="/{{ key != 'en' ? key }}" class="usa-language__link" lang="{{ key }}" xml:lang="{{ key }}"
+               hreflang="{{ key }}" data-drupal-link-system-path="{{ path('<current>') }}">
+              <strong>{{ item.link['#title'] }}</strong> {{ item.link['#english'] }}
+            </a>
           {%- else -%}
-                {{ item.link|merge({
-                '#attributes': {'lang': key, 'xml:lang': key},
-                '#title': {
-                  '#markup': "<strong>#{item.link['#title']}</strong> #{item.link['#english']}"
-                }
-                }) }}
+            {{ item.link|merge({
+              '#title': {
+                '#markup': "<strong>#{item.link['#title']}</strong> #{item.link['#english']}"
+              },
+              '#attributes': {
+                'lang': key,
+                'xml:lang': key
+              }
+            }) }}
           {%- endif -%}
         {%- endif -%}
       </li>

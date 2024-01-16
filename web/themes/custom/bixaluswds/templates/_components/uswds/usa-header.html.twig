@@ -1,0 +1,66 @@
+{#
+/**
+ * @file
+ * Default theme implementation to USWDS header component.
+ *
+ * USWDS template variables:
+ * - sitename: string
+ * - footer_menu: renderable array of menu items
+ * - user_menu: renderable array of menu items
+ * - search_form: renderable array of search block
+ *
+ * Usage example:
+ * {% include '@uswds_templates/uswds/usa-header.html.twig' with {
+ *   'sitename': var_sitename,
+ *   'main_menu': drupal_entity('block', 'main_navigation'),
+ *   'user_menu': drupal_entity('block', 'user_account_menu'),
+ *   'search_form': drupal_entity('block', 'search_form'),
+ * } %}
+ *
+#}
+
+<div class="usa-overlay"></div>
+<header class="usa-header usa-header--extended">
+  <div class="usa-navbar">
+    {# Use utility classes when possible. #}
+    <div class="usa-logo margin-bottom-105 margin-top-105" id="site-logo">
+      <div class="usa-logo__text">
+        <a href="/" title="{{ sitename }} {{ 'Home'|t }}">
+          <img
+            src="/{{ directory }}/logo.svg"
+            alt="{{ 'Logo for'|t }} {{ sitename }}"
+            width="90"
+            height="90"/>
+        </a>
+      </div>
+    </div>
+
+    {# Mobile menu button. #}
+    <button type="button" class="usa-menu-btn">{{ 'Menu'|t }}</button>
+  </div>
+
+  <nav aria-label="Primary navigation" class="usa-nav">
+    <div class="usa-nav__inner">
+
+      <button type="button" class="usa-nav__close">
+        <img src="/{{ directory }}{{ path_image }}/usa-icons/close.svg" role="img" alt="Close"/>
+      </button>
+
+      {# Main menu block. #}
+      {{ main_menu }}
+
+      {% if user_menu or search_form %}
+        <div class="usa-nav__secondary usa-header--extended bottom-80">
+          {{ user_menu }}
+
+          {% if search_form %}
+            <section aria-label="Search component">
+              {{ search_form }}
+            </section>
+          {% endif %}
+        </div>
+      {% endif %}
+
+    </div>
+  </nav>
+</header>

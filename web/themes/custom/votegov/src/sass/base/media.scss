@@ -1,0 +1,31 @@
+@use "uswds-core" as *;
+
+// Figure
+figure {
+  @include u-margin-x('auto');
+  @include u-margin-y('auto');
+}
+
+figcaption {
+  @include u-font-size('sans', 4);
+  @include u-display('block');
+  color: gray;
+
+  * + & {
+    @include u-margin-top(2);
+  }
+}
+
+// Video
+Video,
+.video-container iframe {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+}
+
+// Image
+img {
+  max-width: 100%;
+  height: auto;
+}

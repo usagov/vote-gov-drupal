@@ -1,0 +1,44 @@
+{#
+/**
+ * @file
+ * Default theme implementation to USWDS primary components.
+ *
+ * USWDS template variables:
+ * - items: array of link objects
+ * - classes: classes array (inherits base template classes as default)
+ *
+ * Usage example:
+ * {% include '@uswds_templates/uswds/usa-nav--primary--top.html.twig' with {
+ *   'items': var_nav_items,
+ *   'classes': var_classes
+ * } %}
+ *
+#}
+
+{% set usa_attributes = create_attribute() %}
+{% set usa_classes = [
+  'usa-footer__nav-list',
+  'grid-row',
+  'grid-gap'
+] %}
+
+{% if items|length %}
+  <ul{{ usa_attributes.addClass(usa_classes | merge(classes | default([]))) }}>
+
+    {% for item in items %}
+      {% set item_classes = [
+        'usa-footer__primary-content',
+        'mobile-lg:grid-col-4',
+        'desktop:grid-col-auto'
+      ] %}
+      <li{{ create_attribute({'class': item_classes}) }}>
+
+        {% set link_classes = [
+          'usa-footer__primary-link',
+          item.in_active_trail ? 'usa-current',
+        ] %}
+        {{ link(item.title, item.url, create_attribute({'class': link_classes})) }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}

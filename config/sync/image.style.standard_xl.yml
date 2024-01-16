@@ -1,0 +1,17 @@
+uuid: cff0b913-31c0-4ffe-b95d-f588f2f9ae68
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: standard_xl
+label: 'Standard x-large 4:3 (1280x960)'
+effects:
+  29e705d9-5ed0-47c9-9481-fa72f5179de1:
+    uuid: 29e705d9-5ed0-47c9-9481-fa72f5179de1
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1280
+      height: 960
+      crop_type: focal_point

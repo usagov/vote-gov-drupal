@@ -1,0 +1,22 @@
+uuid: 10713e59-1ef9-4035-a583-9b18b24e8f49
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bixaluswds
+_core:
+  default_config_hash: vGaqZ52JipOWXIT-icQHPoHXhQgCiiUnrGTbLG3isyc
+id: bixaluswds_messages
+theme: bixaluswds
+region: admin
+weight: -2
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

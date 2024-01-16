@@ -1,0 +1,10 @@
+uuid: abbf1f45-57c8-4f76-bc4b-c5579de33a32
+langcode: en
+status: true
+dependencies: {  }
+id: basics_block
+label: 'Basics Block'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

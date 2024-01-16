@@ -1,0 +1,27 @@
+uuid: 2be65a12-ba69-43af-bb19-478c2b20a8ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - bixaluswds
+id: bixaluswds_footernavigation
+theme: bixaluswds
+region: footer
+weight: -3
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Footer menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+  only_translated_labels: 0
+  only_translated_content: 0
+visibility: {  }
