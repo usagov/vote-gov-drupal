@@ -2,13 +2,13 @@ name: Vote.gov 2.0 USWDS Theme
 type: theme
 description: "Custom Drupal theme based on USWDS 3."
 core_version_requirement: ">=9.2"
-base theme: bixal_uswds
+base theme: bixaluswds
 
 libraries:
   - votegov/global
 
 regions:
-  admin: "Admin local tasks"
+  admin: "Admin"
   header: "Header"
   content: "Content"
   sidebar: "Sidebar"

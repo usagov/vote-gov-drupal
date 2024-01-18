@@ -1,0 +1,27 @@
+uuid: 32e46e38-91a4-4bc0-932f-da834278fb4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - bixaluswds
+id: bixaluswds_htmlsitemap
+theme: bixaluswds
+region: no_region
+weight: -5
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Sitemap Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+  only_translated_labels: 0
+  only_translated_content: 0
+visibility: {  }

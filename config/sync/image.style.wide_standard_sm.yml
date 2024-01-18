@@ -1,0 +1,17 @@
+uuid: d25a2bbc-655f-4608-a690-d82118e5a64a
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: wide_standard_sm
+label: 'Wide Standard 16:9 small (640x360)'
+effects:
+  3747bc05-f5e0-4e3e-8548-27d5167a0634:
+    uuid: 3747bc05-f5e0-4e3e-8548-27d5167a0634
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 360
+      crop_type: focal_point

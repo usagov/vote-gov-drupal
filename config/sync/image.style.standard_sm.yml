@@ -1,0 +1,17 @@
+uuid: 7d6f117a-6ca6-41c2-b136-fd3510d8df2b
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: standard_sm
+label: 'Standard small 4:3 (640x480)'
+effects:
+  a9b755e0-6e63-45aa-a650-3c3ac4d1084f:
+    uuid: a9b755e0-6e63-45aa-a650-3c3ac4d1084f
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 480
+      crop_type: focal_point

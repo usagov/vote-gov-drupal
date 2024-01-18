@@ -1,0 +1,63 @@
+{#
+/**
+ * @file
+ * Default theme implementation to USWDS step indicator component.
+ *
+ * USWDS template variables:
+ * - items: renderable array of menu items
+ * - current_title: string
+ * - current_step: numeric string
+ *
+ * Usage example:
+ * {% include '@uswds_templates/uswds/usa-step-indicator.html.twig' with {
+ *   'items': var_items,
+ *   'current_title': var_current_title,
+ *   'current_step': var_current_step,
+ * } %}
+ *
+#}
+
+{% if items %}
+  <div class="usa-step-indicator" aria-label="{{ 'progress' | t }}">
+    <ol class="usa-step-indicator__segments">
+      {% for item in items %}
+        <li
+          {% if item.complete %}
+            class="usa-step-indicator__segment usa-step-indicator__segment--complete"
+          {% elseif item.current %}
+            class="usa-step-indicator__segment usa-step-indicator__segment--current"
+            aria-current="true"
+          {% else %}
+            class="usa-step-indicator__segment"
+          {% endif %}
+        >
+          <span class="usa-step-indicator__segment-label">{{ item.title }}</span>
+          {% if not item.current %}
+            <span class="usa-sr-only">
+        {{ item.complete ? 'completed' | t : 'not completed' | t }}
+        </span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+    <div class="usa-step-indicator__header">
+      <h4 class="usa-step-indicator__heading">
+      <span class="usa-step-indicator__heading-counter">
+        {% set step = 'step' | t %}
+        {{ '@step @current of @total' | t(
+          '@step': {
+            '#markup': "<span class="usa-sr-only">#{step}</span>"
+          },
+          '@current': {
+            '#markup': "<span class="usa-step-indicator__current-step">#{current_step}</span>"
+          },
+          '@total': {
+            '#markup': "<span class="usa-step-indicator__total-steps">#{items.length}</span>"
+          },
+        ) }}
+      </span>
+        <span class="usa-step-indicator__heading-text">{{ current_title }}</span>
+      </h4>
+    </div>
+  </div>
+{% endif %}

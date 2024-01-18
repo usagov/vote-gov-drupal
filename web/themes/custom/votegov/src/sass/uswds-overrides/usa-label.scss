@@ -1,0 +1,5 @@
+@use "uswds-core" as *;
+
+.usa-label {
+  @include u-text('bold');
+}
