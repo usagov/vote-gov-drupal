@@ -20,7 +20,7 @@ if [ "$(uname -s)" = "Darwin" ]; then
     exit 1
   fi
 fi
-  
+
 if ! hash cf 2>/dev/null ; then
   echo "Please install cf version 8:
     Linux: https://docs.cloudfoundry.org/cf-cli/install-go-cli.html
@@ -39,11 +39,20 @@ elif [[ "$(cf --version)" != *"cf version 8."* ]]; then
 fi
 
 if ! hash jq 2>/dev/null ; then
-  echo "Please install jq: 
+  echo "Please install jq:
     Linux: https://jqlang.github.io/jq/download/
     Homebrew:
       brew install jq"
   exit 1
+fi
+
+# change which date command is used based on host OS
+$date_command = ''
+
+if [ "$(uname -s)" == "Darwin" ]; then
+  $date_command = 'gdate'
+else
+  $date_command = 'date'
 fi
 
 help(){
@@ -52,13 +61,17 @@ help(){
   echo "   -b           The name of the S3 bucket with the backup."
   echo "   -e           Environment of backup to download."
   echo "   -s           Name of the space the backup bucket is in."
+  echo "   -d           Date to retrieve backup from. Must be 'latest' or in '${date_command} +%F' format and no more than 15 days ago."
 }
 
-while getopts 'b:e:s:' flag; do
+while getopts 'b:e:s:d:' flag; do
   case "${flag}" in
-    b) backup_bucket="${OPTARG}" ;;
-    e) env="${OPTARG}" ;;
-    s) space=(${OPTARG}) ;;
+    b) backup_bucket=${OPTARG} ;;
+    e) env=${OPTARG} ;;
+    s) space=${OPTARG} ;;
+    d) retrieve_date=${OPTARG}
+      ((retrieve_date == 'latest' || $(${date_command} --date "$retrieve_date" +%s) -ge $(${date_command} --date "15 days ago" +%s) )) || help
+      ;;
     *) help && exit 1 ;;
   esac
 done
@@ -66,18 +79,19 @@ done
 [[ -z "${backup_bucket}" ]] && help && echo "Missing -b flag." && exit 1
 [[ -z "${env}" ]] && help && echo "Missing -e flag." && exit 1
 [[ -z "${space}" ]] && help && echo "Missing -s flag." && exit 1
+[[ -z "${retrieve_date}" ]] && help && echo "Missing -d flag." && exit 1
 
 echo "Getting backup bucket credentials..."
 {
   cf target -s "${space}"
-  
+
   export service="${backup_bucket}"
   export service_key="${service}-key"
   cf delete-service-key "${service}" "${service_key}" -f
   cf create-service-key "${service}" "${service_key}"
   sleep 2
   export s3_credentials=$(cf service-key "${service}" "${service_key}" | tail -n +2)
-  
+
   export AWS_ACCESS_KEY_ID=$(echo "${s3_credentials}" | jq -r '.credentials.access_key_id')
   export bucket=$(echo "${s3_credentials}" | jq -r '.credentials.bucket')
   export AWS_DEFAULT_REGION=$(echo "${s3_credentials}" | jq -r '.credentials.region')
@@ -88,20 +102,9 @@ echo "Getting backup bucket credentials..."
 echo "Downloading backup..."
 {
 
-  rm -f latest_*.tar.gz
-
-  aws s3 cp s3://${bucket}/${env}/latest.tar.gz . --no-verify-ssl #2>/dev/null
-
-  if [ "$(uname -s)" == "Darwin" ]; then
-    timestamp=$(gdate -d "$(gstat -c '%w' latest.tar.gz)" +'%Y.%m.%d')
-  else
-    timestamp=$(date -d "$(stat -c '%w' latest.tar.gz)" +'%Y.%m.%d')
-  fi
-
-  mv latest.tar.gz latest_${timestamp}.tar.gz 
-
+  aws s3 cp s3://${bucket}/${env}/${retrieve_date}.tar.gz . --no-verify-ssl 2>/dev/null
   cf delete-service-key "${service}" "${service_key}" -f
 
 } >/dev/null 2>&1
 
-echo "File saved: latest_${timestamp}.tar.gz"
+echo "File saved: ${retrieve_date}.tar.gz"
