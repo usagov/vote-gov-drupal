@@ -42,9 +42,9 @@
         "drupal/ckeditor5_embedded_content": "^1.0",
         "drupal/config_ignore": "^3.0@beta",
         "drupal/config_split": "^2.0@RC",
-        "drupal/core-composer-scaffold": "^10.1",
-        "drupal/core-project-message": "^10.1",
-        "drupal/core-recommended": "^10.1",
+        "drupal/core-composer-scaffold": "^10.2.2",
+        "drupal/core-project-message": "^10.2.2",
+        "drupal/core-recommended": "^10.2.2",
         "drupal/devel": "^5.1",
         "drupal/disable_language": "^1.0@beta",
         "drupal/double_field": "^4.1",
@@ -57,7 +57,7 @@
         "drupal/focal_point": "^2.0",
         "drupal/language_switcher_extended": "^1.1",
         "drupal/link_attributes": "^2.1",
-        "drupal/log_stdout": "dev-3339853-drupal-10-compatibility",
+        "drupal/log_stdout": "dev-8.x-1.x",
         "drupal/menu_multilingual": "^1.0@alpha",
         "drupal/metatag": "^2.0",
         "drupal/migrate_plus": "^6.0",
@@ -79,10 +79,10 @@
         "drupal/twig_field_value": "^2.0",
         "drupal/twig_tweak": "^3.2",
         "drupal/uswds_templates": "^3.0@dev",
-        "drush/drush": "^11.3"
+        "drush/drush": "^12.4"
     },
     "require-dev": {
-        "drupal/core-dev": "^10.1"
+        "drupal/core-dev": "^10.2.2"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -96,7 +96,8 @@
             "drupal/core-project-message": true,
             "phpstan/extension-installer": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "cweagans/composer-patches": true
+            "cweagans/composer-patches": true,
+            "php-http/discovery": true
         },
         "sort-packages": true
     },
@@ -105,9 +106,6 @@
         "patches": {
             "drupal/double_field": {
                 "Support input filters on text formats (original issue: https://www.drupal.org/node/2091587)": "patches/double_field/2091587-text_long-60_2.patch"
-            },
-            "drupal/log_stdout": {
-                "Update D8 contrib module to work in D10 without error (original issue: https://www.drupal.org/project/log_stdout/issues/3339853)": "patches/log_stdout/3339853-3.patch"
             }
         },
         "drupal-scaffold": {
