@@ -9,6 +9,12 @@ name: 'Basic HTML'
 format: basic_html
 weight: 0
 filters:
+  ckeditor5_embedded_content:
+    id: ckeditor5_embedded_content
+    provider: ckeditor5_embedded_content
+    status: true
+    weight: 100
+    settings: {  }
   filter_align:
     id: filter_align
     provider: filter
@@ -34,9 +40,3 @@ filters:
       allowed_view_modes:
         default: default
       allowed_media_types: {  }
-  ckeditor5_embedded_content:
-    id: ckeditor5_embedded_content
-    provider: ckeditor5_embedded_content
-    status: true
-    weight: 100
-    settings: {  }
