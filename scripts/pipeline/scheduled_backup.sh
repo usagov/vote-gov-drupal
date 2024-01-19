@@ -124,13 +124,13 @@ echo "Saving to backup bucket..."
     create_date=$(date --date "$create_date" +%s)
     older_than=$(date --date "16 days ago" +%s)
     if [[ $create_date -lt $older_than ]]
-        then
-          filename=$(echo $line | awk {'print $4'})
+    then
+      filename=$(echo $line | awk {'print $4'})
 
-         if [[ $filename != "" ]]
-         then
-           aws s3 rm s3://${bucket}/${BACKUP_ENV}/$filename --no-verify-ssl 2>/dev/null
-         fi
+      if [[ $filename != "" ]]
+      then
+        aws s3 rm s3://${bucket}/${BACKUP_ENV}/$filename --no-verify-ssl 2>/dev/null
+      fi
     fi
     done;
 
