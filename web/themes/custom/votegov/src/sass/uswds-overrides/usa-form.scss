@@ -3,3 +3,9 @@
 .usa-form {
   @include u-maxw('tablet');
 }
+
+.registered-resources li {
+  font-size: 1.06rem;
+  line-height: 1.55;
+  font-weight: 400;
+}
