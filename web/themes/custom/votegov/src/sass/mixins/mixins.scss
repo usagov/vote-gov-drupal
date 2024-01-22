@@ -25,3 +25,10 @@
     @include grid-offset(3);
   }
 }
+
+@mixin max-width-input() {
+  display: inline-block;
+  max-width: 25rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}

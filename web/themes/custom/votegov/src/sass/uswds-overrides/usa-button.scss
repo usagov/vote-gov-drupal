@@ -1,0 +1,7 @@
+@use "uswds-core" as *;
+@use "../mixins/mixins.scss";
+
+// Custom usa-button overrides using USWDS mixins and other settings.
+.usa-button {
+  @include mixins.max-width-input();
+}
