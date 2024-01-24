@@ -44,12 +44,11 @@
 
 {# set a variable if the node has a featured image #}
 {% set node_image = node.field_media.value %}
+{# Government banner component #}
+  {{ drupal_entity('block_content', '1') }}
 
 {# Sitewide alert component #}
   {{ drupal_view('sitewide_alert', 'block_1') }}
-
-  {# Government banner component #}
-  {{ drupal_entity('block_content', '1') }}
 
 <div class="usa-overlay"></div>
 <header class="usa-header usa-header--basic usa-header--megamenu">
