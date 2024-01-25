@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a menu link entity entity.
+ *
+ * Available variables:
+ * - menu_link_content: Menu link entity.
+ * - show_item_link: Indicator for menu item link.
+ *
+ * @see template_preprocess_menu_link_content()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set menu_dropdown_classes = [
+  'grid-row',
+  'grid-gap'
+] %}
+
+<div{{ attributes.addClass(menu_dropdown_classes) }}>
+  <div class="grid-col">
+    {{ content.field_content }}
+  </div>
+  <div class="grid-col">
+    {{ content.children }}
+  </div>
+</div>
+
+

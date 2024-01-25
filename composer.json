@@ -58,6 +58,7 @@
         "drupal/language_switcher_extended": "^1.1",
         "drupal/link_attributes": "^2.1",
         "drupal/log_stdout": "dev-3339853-drupal-10-compatibility",
+        "drupal/menu_item_extras": "^3.0",
         "drupal/menu_multilingual": "^1.0@alpha",
         "drupal/metatag": "^2.0",
         "drupal/migrate_plus": "^6.0",
