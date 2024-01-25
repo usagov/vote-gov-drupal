@@ -135,7 +135,7 @@ msgid "register to vote by mail or in person"
 msgstr "sau npe pov npav los ntawm kev xa ntawv lossis ntawm tus kheej"
 
 msgid "You can also @link on @state_name’s election website."
-msgstr "Koj muaj cai yuav @link sau npe pov ntawv xaiv tsa raws kev xa ntawv lossis ntawm tus kheej lossis ntawm lub xeev @state_name%’s qhov chaw xaiv tsa website."
+msgstr "Koj muaj cai yuav @link sau npe pov ntawv xaiv tsa raws kev xa ntawv lossis ntawm tus kheej lossis ntawm lub xeev @state_name’s qhov chaw xaiv tsa website."
 
 msgid "confirm your voter registration status"
 msgstr "paub meej tias koj daim ntawv teev npe pov npav"
