@@ -1,0 +1,43 @@
+body {
+    background-color: #F7F9FA;
+}
+
+.page-content {
+    color: #31425F;
+}
+
+.modular-content {
+    margin-top: 25px;
+    
+    .red-line {
+        width: 96px;
+        height: 4px;
+        background: #CB5154;
+        display: block;
+    }    
+
+    .overlay-container {
+        position: relative;
+
+        img {
+          display: block;
+          object-fit: cover;
+          width: 100%;
+          height: auto;
+        }
+        
+        .overlay-txt {
+          font-size: 36px;
+          color: #fff;
+          position: absolute;
+          left: 36%;
+          top: 40%;
+        }
+
+    }
+}
+
+.basics-module-taxonomy {
+    background-color: #fff;
+    padding: 32px;
+}

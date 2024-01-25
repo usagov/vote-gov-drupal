@@ -1,5 +1,7 @@
 @use "uswds-core" as *;
 
+@forward "voter-guide";
+
 .node--view-mode-full {
   > .field + .field {
     @include u-margin-top(5);
