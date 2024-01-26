@@ -18,10 +18,8 @@
     <em class="usa-logo__text">
       {% if site_name %}
         <a href="{{ path('<front>') }}" rel="home">
-          {% if site_logo %}
-            <span><img src="{{ site_logo }}" alt="{{ 'Home'|t }}" width="65" height="80" /></span>
-          {% endif %}
-          {{ site_name }}</a>
+          <div id="site-logo">{{ source( directory ~ '/img/logo.svg' ) }}</div>
+        </a>
       {% endif %}
     </em>
   </div>
