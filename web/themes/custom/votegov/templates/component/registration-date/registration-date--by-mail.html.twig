@@ -24,7 +24,7 @@
 {% set deadline = postmarked_deadline | default(received_deadline) %}
 
 {% if deadline %}
-  <li><span class="bold-text">{{ 'Register by mail deadline:' | t }}</span> {{ deadline }}</li>
+  <li><strong>{{ 'Register by mail deadline:' | t }}</strong> {{ deadline }}</li>
 {% endif %}
 
 {# JSON Schema #}

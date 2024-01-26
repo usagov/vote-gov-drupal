@@ -1,7 +1,7 @@
 @use "uswds-core" as *;
-@use "../mixins/mixins.scss";
 
 // Custom usa-button overrides using USWDS mixins and other settings.
-.usa-select {
-  @include mixins.max-width-input();
+.usa-select--maxw,
+.usa-form .usa-select--maxw {
+  @include u-maxw('mobile');
 }
