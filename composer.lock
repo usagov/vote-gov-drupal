@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c2d8091ac4e9d6e9c8be4acdef15371",
+    "content-hash": "c81438f236b8043396f6b6644399b203",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4338,35 +4338,35 @@
         },
         {
             "name": "drupal/rest_views",
-            "version": "3.0.0-rc1",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rest_views.git",
-                "reference": "3.0.0-rc1"
+                "reference": "3.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rest_views-3.0.0-rc1.zip",
-                "reference": "3.0.0-rc1",
-                "shasum": "99f3eb2c59843e82132789878a5f2efb673bed14"
+                "url": "https://ftp.drupal.org/files/projects/rest_views-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "6fe24379f504950c39d8fa9d23307731c0aceda9"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10",
                 "php": "^8"
             },
             "require-dev": {
-                "drupal/entity_reference_revisions": "*",
+                "drupal/entity_reference_revisions": "^1.11.0",
                 "drupal/geolocation": "*",
-                "drupal/search_api": "*"
+                "drupal/search_api": "^1.31"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.0-rc1",
-                    "datestamp": "1704390763",
+                    "version": "3.0.0",
+                    "datestamp": "1706040033",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -15135,7 +15135,6 @@
         "drupal/menu_multilingual": 15,
         "drupal/node_revision_delete": 15,
         "drupal/publication_date": 10,
-        "drupal/rest_views": 15,
         "drupal/translatable_menu_link_uri": 20,
         "drupal/uswds_templates": 20
     },
