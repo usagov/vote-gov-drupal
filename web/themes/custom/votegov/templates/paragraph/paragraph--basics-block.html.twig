@@ -52,9 +52,7 @@
     {% block content %}
       <div class="overlay-container">
         {# <img class="overlay-img" src="{{ theme_path }}/img/NEED-IMAGE.svg" alt="" /> #}
-        <div class="overlay-txt">
-          {{content.field_heading | field_value}}
-        </div>
+        <div class="overlay-txt">{{content.field_heading | field_value}}</div>
       </div>
       <div class="basics-module-description">{{content.field_body | field_value}}</div>
       <div class="basics-module-taxonomy">{{content.field_basics_modules | field_value}}</div>

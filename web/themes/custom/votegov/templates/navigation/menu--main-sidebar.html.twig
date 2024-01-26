@@ -22,15 +22,14 @@
 #}
 {% import _self as menus %}
 
-<nav aria-label="{{ 'Primary navigation' | t }}" class="usa-nav">
-  <button type="button" class="usa-nav__close">
-    <img src="{{ uswds_img_path }}/usa-icons/close.svg" role="img" alt="{{ 'Close' | t }}"/>
-  </button>
-  {{ menus.menu_links(items, attributes, 0) }}
-</nav>
 
-{% macro menu_links(items, attributes, menu_level) %}
-  {% include "@bixaluswds/_components/uswds/usa-nav--primary--top.html.twig" with {
-    'items': items
-  } %}
-{% endmacro %}
+<nav aria-label="{{ 'Side navigation' | t }}">
+<div class="sidebar-header">Explore voter guides for different audiences </br>↓</div>
+  <ul class="usa-sidenav">
+    {% for item in items %}
+    <li class="usa-sidenav__item">
+      <a href={{item.url}} class="{{ item.in_active_trail ? "usa-current" }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
