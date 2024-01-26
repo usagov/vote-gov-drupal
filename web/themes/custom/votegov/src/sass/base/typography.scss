@@ -83,3 +83,7 @@ hr {
   @include u-margin-y(3);
   border-bottom: 1px solid #D3D3D3;
 }
+
+main {
+  @include u-font-family('serif');
+}
