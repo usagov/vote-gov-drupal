@@ -25,7 +25,7 @@ tags:
   og_title: '[current-page:metatag:title]'
   og_type: website
   og_url: '[site:url]'
-  shortcut_icon: /themes/custom/votegov/img/favicon/favicon-vote.ico
+  shortcut_icon: /themes/custom/votegov/img/favicon/favicon.ico
   title: 'Register to vote | [site:name]'
   twitter_cards_description: '[current-page:metatag:description]'
   twitter_cards_image: /themes/custom/vote_gov/img/ballot-box-OG.png
