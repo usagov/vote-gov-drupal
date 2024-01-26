@@ -1,0 +1,41 @@
+uuid: b2191264-b3fb-47a1-a1b8-4edbe051fbbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - menu_block
+    - node
+  theme:
+    - votegov
+id: votegov_mainnavigation_2
+theme: votegov
+region: sidebar
+weight: 0
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: menu_block
+  follow: true
+  follow_parent: active
+  label_link: false
+  label_type: block
+  level: 2
+  depth: 1
+  expand_all_items: false
+  parent: 'main:'
+  suggestion: main_sidebar
+  only_translated_labels: 1
+  only_translated_content: 1
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      voter_guide: voter_guide
