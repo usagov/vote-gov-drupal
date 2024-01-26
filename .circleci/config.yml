@@ -123,7 +123,7 @@ jobs:
             source ./scripts/pipeline/deb-basic-deps.sh
             source ./scripts/pipeline/deb-cf-install.sh
       - run:
-          name: "Deploy"
+          name: "Post Deploy"
           command: |
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
@@ -141,7 +141,7 @@ jobs:
             source ./scripts/pipeline/deb-basic-deps.sh
             source ./scripts/pipeline/deb-cf-install.sh
       - run:
-          name: "Deploy"
+          name: "Post Deploy Upkeep"
           command: |
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
