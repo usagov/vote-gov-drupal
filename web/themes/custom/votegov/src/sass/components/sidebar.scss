@@ -1,26 +1,29 @@
 @use "uswds-core" as *;
-@use "mixins" as *;
 
 #sidebar {
   @include u-margin-top(6);
   @include u-margin-bottom(10);
+  @include u-position('relative');
+
   @include at-media('desktop-lg') {
     @include grid-col(2);
+    // Adjusting width by .25
+    width: calc((2.25 / 12) * 100%);
   }
 
   @include at-media-max('desktop-lg') {
     display: none;
   }
+}
 
-  .sidebar-header {
-    background-color: #2D7497;
-    color: #fff;
-    padding: 24px;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 700;
-    position: relative;
-    margin-bottom: 15px;
-    margin-top: -50%;
-  }
+.sidebar--heading,
+.sidebar--heading:first-child {
+  @include u-padding(3);
+  @include u-text-align('center');
+  @include u-font-size('sans', 5);
+  @include u-text('bold');
+  @include u-margin-bottom(2);
+  margin-top: -6rem;
+  background-color: #2D7497;
+  color: #fff;
 }
