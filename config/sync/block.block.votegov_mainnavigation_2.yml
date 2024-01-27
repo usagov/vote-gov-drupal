@@ -17,8 +17,8 @@ provider: null
 plugin: 'menu_block:main'
 settings:
   id: 'menu_block:main'
-  label: 'Main navigation'
-  label_display: '0'
+  label: 'Explore voter guides for different audiences'
+  label_display: visible
   provider: menu_block
   follow: true
   follow_parent: active

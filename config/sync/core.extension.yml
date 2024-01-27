@@ -42,6 +42,7 @@ module:
   locale: 0
   media: 0
   media_library: 0
+  menu_block: 0
   menu_link_content: 0
   menu_multilingual: 0
   menu_ui: 0
