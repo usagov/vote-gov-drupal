@@ -25,6 +25,7 @@ module:
   ec_touchpoints_survey: 0
   editor: 0
   editoria11y: 0
+  editor_advanced_link: 0
   entity_reference_revisions: 0
   field: 0
   field_group: 0
@@ -41,6 +42,7 @@ module:
   locale: 0
   media: 0
   media_library: 0
+  menu_item_extras: 0
   menu_link_content: 0
   menu_multilingual: 0
   menu_ui: 0
