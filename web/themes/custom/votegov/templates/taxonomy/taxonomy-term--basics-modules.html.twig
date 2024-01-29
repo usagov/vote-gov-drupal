@@ -1,0 +1,13 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a taxonomy term: Basics Modules.
+ */
+#}
+
+{% extends '@bixaluswds/taxonomy/taxonomy-term.html.twig' %}
+
+{% block content %}
+  <h3 class="heading--red-underline">{{ content.field_heading | field_value }}</h3>
+  {{ content.field_content | field_value }}
+{% endblock %}
