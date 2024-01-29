@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph: Basics Block.
+ */
+#}
+
+{%
+  set classes = [
+    'basics-block',
+    'type--secondary',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+  ]
+%}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <h2 class="basics-block--heading">
+        {# <img class="basics-block--heading-image" src="{{ theme_path }}/img/NEED-IMAGE.svg" alt="" /> #}
+        <span>{{content.field_heading | field_value}}</span>
+      </h2>
+      <div class="basics-block--content">
+        {{content.field_body | field_value}}
+        {{content.field_basics_modules | field_value}}
+      </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}
