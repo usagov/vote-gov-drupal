@@ -11,24 +11,7 @@
     "repositories": {
         "drupal": {
             "type": "composer",
-            "url": "https://packages.drupal.org/8",
-            "exclude": [
-                "drupal/log_stdout",
-                "drupal/pathauto",
-                "drupal/publication_date"
-            ]
-        },
-        "drupal/log_stdout": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/issue/log_stdout-3339853.git"
-        },
-        "drupal/pathauto": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/issue/pathauto-3328670.git"
-        },
-        "drupal/publication_date": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/issue/publication_date-3328575.git"
+            "url": "https://packages.drupal.org/8"
         }
     },
     "require": {
@@ -42,9 +25,9 @@
         "drupal/ckeditor5_embedded_content": "^1.0",
         "drupal/config_ignore": "^3.0@beta",
         "drupal/config_split": "^2.0@RC",
-        "drupal/core-composer-scaffold": "^10.1",
-        "drupal/core-project-message": "^10.1",
-        "drupal/core-recommended": "^10.1",
+        "drupal/core-composer-scaffold": "^10.2.2",
+        "drupal/core-project-message": "^10.2.2",
+        "drupal/core-recommended": "^10.2.2",
         "drupal/devel": "^5.1",
         "drupal/disable_language": "^1.0@beta",
         "drupal/double_field": "^4.1",
@@ -57,7 +40,8 @@
         "drupal/focal_point": "^2.0",
         "drupal/language_switcher_extended": "^1.1",
         "drupal/link_attributes": "^2.1",
-        "drupal/log_stdout": "dev-3339853-drupal-10-compatibility",
+        "drupal/log_stdout": "^1.5",
+        "drupal/menu_block": "^1.10",
         "drupal/menu_item_extras": "^3.0",
         "drupal/menu_multilingual": "^1.0@alpha",
         "drupal/metatag": "^2.0",
@@ -66,11 +50,11 @@
         "drupal/new_relic_rpm": "^2.1",
         "drupal/node_revision_delete": "^2.0@alpha",
         "drupal/paragraphs": "^1.15",
-        "drupal/pathauto": "dev-3328670-php-8.2-compatibility",
-        "drupal/publication_date": "dev-3328575-fix-php-8.2",
+        "drupal/pathauto": "^1.12",
+        "drupal/publication_date": "^2.0@beta",
         "drupal/redirect": "^1.8",
         "drupal/remove_http_headers": "^2.0",
-        "drupal/rest_views": "^3.0@alpha",
+        "drupal/rest_views": "^3.0",
         "drupal/s3fs": "^3.1",
         "drupal/samlauth": "^3.8",
         "drupal/simple_sitemap": "^4.1",
@@ -80,10 +64,10 @@
         "drupal/twig_field_value": "^2.0",
         "drupal/twig_tweak": "^3.2",
         "drupal/uswds_templates": "^3.0@dev",
-        "drush/drush": "^11.3"
+        "drush/drush": "^12.4"
     },
     "require-dev": {
-        "drupal/core-dev": "^10.1"
+        "drupal/core-dev": "^10.2.2"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -97,7 +81,8 @@
             "drupal/core-project-message": true,
             "phpstan/extension-installer": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "cweagans/composer-patches": true
+            "cweagans/composer-patches": true,
+            "php-http/discovery": true
         },
         "sort-packages": true
     },
@@ -106,9 +91,6 @@
         "patches": {
             "drupal/double_field": {
                 "Support input filters on text formats (original issue: https://www.drupal.org/node/2091587)": "patches/double_field/2091587-text_long-60_2.patch"
-            },
-            "drupal/log_stdout": {
-                "Update D8 contrib module to work in D10 without error (original issue: https://www.drupal.org/project/log_stdout/issues/3339853)": "patches/log_stdout/3339853-3.patch"
             }
         },
         "drupal-scaffold": {
