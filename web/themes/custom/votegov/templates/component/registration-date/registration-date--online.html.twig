@@ -8,7 +8,7 @@
 {% set deadline = content.field_online_deadline | field_value | default(content.field_g_online_deadline | field_value) %}
 
 {% if deadline %}
-  <li><span class="bold-text">{{ 'Online registration deadline:' | t }}</span> {{ deadline }}</li>
+  <li><strong>{{ 'Online registration deadline:' | t }}</strong> {{ deadline }}</li>
 {% endif %}
 
 <script type="application/ld+json">

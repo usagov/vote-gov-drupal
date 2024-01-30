@@ -380,6 +380,6 @@ Launched by a `triggered pipeline` in CircleCI, this scripts gathers all S3 buck
 
 ### Miscellaneous Scripts
 
-#### download_latest_backup.sh
+#### download_backup.sh
 
-Allows for easy downloading of the various backups available on the system. This includes the database backup, the Drupal user uploaded file content, and backups of the Terraform state.
+Allows for easy downloading of the various backups available on the system. This includes the database backup, the Drupal user uploaded file content, and backups of the Terraform state. Help with usage is available when running the script without arguments.
