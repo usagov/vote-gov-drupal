@@ -4,6 +4,10 @@
   display: flex;
   justify-content: flex-end;
   padding: 0.5rem 1rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
 
   .usa-button {
     a {
@@ -33,21 +37,13 @@
   border: unset;
 }
 
-.switcher-desktop {
-  @media (max-width: 800px) {
-    display: none;
-  }
-}
-
-.switcher-mobile {
-  @media (min-width: 800px) {
-    display: none;
-  }
-}
-
 .usa-language__primary-item:last-of-type .usa-language__submenu {
   [dir="rtl"] & {
     right: unset;
     left: 0;
   }
+}
+
+.language-switcher {
+  position: absolute;
 }

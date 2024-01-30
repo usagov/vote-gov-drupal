@@ -31,8 +31,6 @@
             <span class="usa-banner__button-text">{{ content.field_accordion_link_label | field_value }}</span>
           </button>
         </div>
-        {# Language selector component #}
-        {{ drupal_entity('block', 'votegov_languageswitcher') }}
       </div>
     </div>
 
@@ -72,4 +70,6 @@
       </div>
     </div>
   </div>
+  {# Language selector component #}
+  {{ drupal_entity('block', 'votegov_languageswitcher') }}
 </section>
