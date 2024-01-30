@@ -1,0 +1,12 @@
+@use "uswds-core" as *;
+@use "mixins" as *;
+
+.page-subtitle {
+  @include u-margin-top(3);
+  @include u-maxw('tablet');
+  @include narrow-container;
+
+  .page-masthead & {
+    color: #FFF;
+  }
+}

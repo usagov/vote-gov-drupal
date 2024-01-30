@@ -1,0 +1,6 @@
+@use "uswds-core" as *;
+
+// Custom usa-button overrides using USWDS mixins and other settings.
+.usa-button {
+  padding: 0.9rem 1.4rem;
+}

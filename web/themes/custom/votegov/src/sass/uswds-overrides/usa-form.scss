@@ -2,4 +2,8 @@
 
 .usa-form {
   @include u-maxw('tablet');
+
+  main & {
+    @include u-font-family('serif');
+  }
 }

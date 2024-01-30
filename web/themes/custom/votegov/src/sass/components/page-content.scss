@@ -4,16 +4,18 @@
 .page-content {
   @include u-margin-top(6);
   @include u-margin-bottom(10);
+  @include u-position('relative');
   @include narrow-container;
 
   &.page-content--sidebar {
     @include at-media('desktop-lg') {
       @include grid-offset(1);
+      // Adjusting offset by .25
+      margin-left: calc((0.75 / 12) * 100%);
     }
   }
 
   &.page-content--image-offset {
-    position: relative;
-    margin-top: -80px;
+    @include u-margin-top('neg-10');
   }
 }

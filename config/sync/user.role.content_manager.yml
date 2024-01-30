@@ -21,6 +21,7 @@ dependencies:
     - node.type.page
     - node.type.state_territory
     - node.type.voter_guide
+    - taxonomy.vocabulary.basics_modules
     - taxonomy.vocabulary.nvrf_field
     - workflows.workflow.publishing_content
   module:
@@ -41,6 +42,7 @@ label: 'Content Manager'
 weight: 3
 is_admin: null
 permissions:
+  - 'access administration pages'
   - 'access block library'
   - 'access content overview'
   - 'access files overview'
@@ -62,6 +64,7 @@ permissions:
   - 'create remote_video media'
   - 'create sitewide_alert block content'
   - 'create state_territory content'
+  - 'create terms in basics_modules'
   - 'create terms in nvrf_field'
   - 'create voter_guide content'
   - 'delete all revisions'
@@ -93,6 +96,7 @@ permissions:
   - 'delete own voter_guide content'
   - 'delete page revisions'
   - 'delete state_territory revisions'
+  - 'delete terms in basics_modules'
   - 'delete terms in nvrf_field'
   - 'delete voter_guide revisions'
   - 'edit any audio media'
@@ -122,6 +126,7 @@ permissions:
   - 'edit own remote_video media'
   - 'edit own state_territory content'
   - 'edit own voter_guide content'
+  - 'edit terms in basics_modules'
   - 'edit terms in nvrf_field'
   - 'mark as hidden in editoria11y'
   - 'revert all revisions'

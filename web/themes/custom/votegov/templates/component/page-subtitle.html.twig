@@ -1,0 +1,5 @@
+{% if node and node.field_subtitle.value %}
+  <div class="page-subtitle usa-intro">
+    {{ node.field_subtitle.value  | check_markup(node.field_subtitle.format) }}
+  </div>
+{% endif %}
