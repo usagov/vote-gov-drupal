@@ -173,7 +173,11 @@ https://designsystem.digital.gov/documentation/settings/
   $theme-lead-line-height: 5,
   $theme-lead-font-size: 8,
   $theme-font-weight-medium: 500,
-  $theme-font-weight-bold: 500,
+  //$theme-font-weight-bold: 500,
+  $theme-body-font-family: "sans",
+  $theme-body-line-height: 5,
+  $theme-body-font-size: 5,
+  $theme-style-body-element: "true",
 
   // https://designsystem.digital.gov/design-tokens/typesetting/font-size/
   $theme-h1-font-size: 15,

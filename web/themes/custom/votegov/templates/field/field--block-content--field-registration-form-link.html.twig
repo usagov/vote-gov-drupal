@@ -7,7 +7,7 @@
 #}
 
 {# NVRF selector fields #}
-<select class="usa-select" name="userselection" id="js-user-selection">
+<select class="usa-select usa-select--maxw" name="userselection" id="js-user-selection">
   {% for item in items %}
       {% set langID = item.content['#url'].options.attributes.id %}
       {% if langID is same as(language | replace({'-hans' : ''})) %}

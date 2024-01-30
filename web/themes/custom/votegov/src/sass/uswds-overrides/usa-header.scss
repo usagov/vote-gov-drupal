@@ -1,0 +1,14 @@
+@use "uswds-core" as *;
+
+.usa-navbar {
+  @include u-justify-content('justify');
+  @include u-height('auto');
+}
+
+.usa-logo {
+  width: 9rem;
+
+  @include at-media-max('desktop') {
+    @include u-margin-y(2);
+  }
+}
