@@ -1,1 +1,1 @@
-pattern: 'n \H\l\i\s \n\t\u\j, \h\n\u\b \t\i\m j, Y'
+pattern: 'd F, Y'

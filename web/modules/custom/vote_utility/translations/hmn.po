@@ -36,10 +36,10 @@ msgid "General Services Administration"
 msgstr "General Services Administration"
 
 msgid "Looking for U.S. government information and services? @link."
-msgstr "Nrhiav ntaub ntawv thiab kev haujlwm hauv nomtswv Asmeska los?"
+msgstr "Nrhiav ntaub ntawv thiab kev haujlwm hauv nomtswv Asmeska los? @link."
 
 msgid "Visit USA.gov"
-msgstr "Mus saib USA.gov"
+msgstr "Mus saib USA.gov (in English)"
 
 msgid "Agency identifier"
 msgstr "Kev paub txog lub koom haum"
@@ -61,7 +61,7 @@ msgid "U.S. Election Assistance Commission logo which indicates a partnership wi
 msgstr "US Election Assistance Commission (Nomtswv Asmeska Kev Xaiv Tsa tes dej haujlwm pab) lub cim qhia tias muaj kev sib koomtes nrog Vote.gov"
 
 msgid "Follow Vote.gov on Twitter"
-msgstr "Caum Vote.gov saum Twitter"
+msgstr "Caum Vote.gov saum Twitter (in English)"
 
 #search
 msgid "Search Vote.gov"
@@ -158,7 +158,7 @@ msgstr "Nomtswv lub website"
 
 #footer
 msgid "Email sign-up"
-msgstr "Sau npe raw Email"
+msgstr "Sau npe raw Email (in English)"
 
 msgid "Contact"
 msgstr "Nug rau"
