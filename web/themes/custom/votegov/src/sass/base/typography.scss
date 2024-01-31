@@ -15,7 +15,7 @@ h1 {
   }
 
   .page-masthead & {
-    color: white;
+    color: #FFF;
   }
 }
 
@@ -26,12 +26,17 @@ h5,
 h6 {
   @include u-font-family('sans');
   @include u-text('no-uppercase');
-  @include u-text('medium');
+  @include u-font-weight('medium');
   @include u-margin-top(5);
   @include u-text('ls-auto');
 
   &:first-child {
     @include u-margin-top(0);
+  }
+
+  .type--secondary & {
+    @include u-font-family('serif');
+    @include u-font-weight('bold');
   }
 }
 
@@ -39,7 +44,7 @@ h6 {
 ul, ol {
   main & {
     &:last-child {
-      margin-bottom: 0;
+      @include u-margin-bottom(0);
     }
 
     > li + li {
@@ -82,4 +87,12 @@ hr {
   @include u-border(0);
   @include u-margin-y(3);
   border-bottom: 1px solid #D3D3D3;
+}
+
+main {
+  @include u-font-family('serif');
+}
+
+.type--secondary {
+  @include u-font-family('sans');
 }
