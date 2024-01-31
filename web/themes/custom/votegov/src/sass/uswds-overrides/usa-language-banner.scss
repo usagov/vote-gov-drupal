@@ -3,3 +3,16 @@
 .usa-banner__inner {
   @include u-height(8);
 }
+
+.banner__text-container {
+  @include u-height(6);
+  align-items: center;
+}
+
+.usa-banner__button {
+  @include u-height(6);
+}
+
+.usa-banner__button[aria-expanded=true]{
+  @include u-height(6);
+}

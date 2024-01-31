@@ -2,12 +2,21 @@
 
 .usa-language-container {
   display: flex;
-  justify-content: flex-end;
   padding: 0.5rem 1rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
+
+  @media (min-width: 768px) {
+    justify-content: flex-end;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    margin-top: 25px;
+  }
+
+  @media (max-width: 768px) {
+    position: relative;
+    justify-content:center;
+  }
 
   .usa-button {
     a {
