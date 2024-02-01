@@ -2,22 +2,23 @@
 
 .usa-language-container {
   display: flex;
-  padding: 0.5rem 1rem;
+  @include u-padding-x(2);
+  @include u-padding-y(1);
 
   @include at-media('tablet') {
-    justify-content: flex-end;
+    @include u-margin-top(3);
     position: absolute;
+    justify-content: flex-end;
     left: 0;
     top: 0;
     right: 0;
-    margin-top: 25px;
   }
 
   @include at-media-max('tablet') {
+    @include u-height(8);
     position: relative;
     justify-content:center;
     background-color: #fff;
-    @include u-height(8);
   }
 
   .usa-button {
@@ -25,15 +26,15 @@
       color: #fff;
     }
     @include at-media-max('tablet') {
-      width: 320px;
+      @include u-width('mobile');
     }
   }
 }
 
 .usa-language__submenu {
-  padding: 20px;
-  width: auto;
-  border-radius: 3px;
+  @include u-padding(2.5);
+  @include u-width('auto');
+  @include u-radius('sm');
   white-space: nowrap;
 
   @include at-media-max('tablet') {
@@ -47,7 +48,8 @@
 }
 
 .usa-language__submenu-item {
-  padding: 4px 8px;
+  @include u-padding-x(1);
+  @include u-padding-y(05);
   border: unset;
 }
 
