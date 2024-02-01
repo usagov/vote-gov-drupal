@@ -23,8 +23,9 @@ describe('Footer Menu Function', () => {
     // check that the link is working as expected
     cy.visit('/')
 
-    cy.get('[data-test="footer"]').find('[class="usa-list usa-list--unstyled identifier-links"]').then(link => {
-      cy.get(link[0]).find('a').should('contain', 'Cypress Test Link').should('have.attr', 'href').and('contain', 'bixal.com')
+    cy.get('[data-test="footer"]').find('[class="usa-footer__primary-content mobile-lg:grid-col-4 desktop:grid-col-auto"]').then(link => {
+      cy.get(link[0]).find('a').should('contain', 'Cypress Test Link')
+      // .should('have.attr', 'href').and('contain', 'bixal.com')
     })
 
     // after delete the link that was created

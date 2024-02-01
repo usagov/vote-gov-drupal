@@ -53,7 +53,7 @@ describe('Test Content Manager Role Access', () => {
 
      // content manager should not have access to url to delete banner
      cy.request({
-        url: '/admin/structure/block/manage/views_block__sitewide_alert_block_1/delete',
+        url: '/admin/structure/block-content/manage/sitewide_alert',
         failOnStatusCode:false,
         }).then((resp) => {
             expect(resp.status).to.eq(403)
