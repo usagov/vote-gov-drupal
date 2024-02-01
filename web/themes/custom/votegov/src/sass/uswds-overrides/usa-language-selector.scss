@@ -4,7 +4,7 @@
   display: flex;
   padding: 0.5rem 1rem;
 
-  @media (min-width: 768px) {
+  @include at-media('tablet') {
     justify-content: flex-end;
     position: absolute;
     left: 0;
@@ -13,14 +13,19 @@
     margin-top: 25px;
   }
 
-  @media (max-width: 768px) {
+  @include at-media-max('tablet') {
     position: relative;
     justify-content:center;
+    background-color: #fff;
+    @include u-height(8);
   }
 
   .usa-button {
     a {
       color: #fff;
+    }
+    @include at-media-max('tablet') {
+      width: 320px;
     }
   }
 }
@@ -31,12 +36,12 @@
   border-radius: 3px;
   white-space: nowrap;
 
-  @media (max-width: 768px) {
+  @include at-media-max('tablet') {
     overflow: auto;
     height: 80vh;
   }
 
-  @media (min-width: 768px) {
+  @include at-media('tablet') {
     columns: 2 auto;
   }
 }
