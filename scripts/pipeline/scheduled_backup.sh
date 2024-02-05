@@ -117,7 +117,7 @@ echo "Saving to backup bucket..."
   cp latest.tar.gz ${today}.tar.gz
 
   # delete latest and backups older than 15 days in the env's top level directory
-  aws s3 rm s3://${bucket}/${BACKUP_ENV}/latest.tar.gz --no-verify-ssl 2>/dev/null
+  aws s3 rm s3://${bucket}/${BACKUP_ENV}/latest.tar.gz --no-verify-ssl 2>/dev/null && echo "Deleted past latest.tar.gz from S3..."
   aws s3 ls s3://${bucket}/${BACKUP_ENV}/ | while read -r line;
     do
     create_date=$(echo $line | awk {'print $1" "$2'})
@@ -129,13 +129,13 @@ echo "Saving to backup bucket..."
 
       if [[ $filename != "" ]]
       then
-        aws s3 rm s3://${bucket}/${BACKUP_ENV}/$filename --no-verify-ssl 2>/dev/null
+        aws s3 rm s3://${bucket}/${BACKUP_ENV}/$filename --no-verify-ssl 2>/dev/null && echo "Deleted $filename from S3..."
       fi
     fi
     done;
 
-  aws s3 cp ./latest.tar.gz s3://${bucket}/${BACKUP_ENV}/  --no-verify-ssl 2>/dev/null
-  aws s3 cp ./${today}.tar.gz s3://${bucket}/${BACKUP_ENV}/  --no-verify-ssl 2>/dev/null
+  aws s3 cp ./latest.tar.gz s3://${bucket}/${BACKUP_ENV}/  --no-verify-ssl 2>/dev/null && echo "Copied latest.tar.gz to S3 successfully!"
+  aws s3 cp ./${today}.tar.gz s3://${bucket}/${BACKUP_ENV}/  --no-verify-ssl 2>/dev/null && echo "Copied ${today}.tar.gz to S3 successfully!"
 
   cf delete-service-key "${service}" "${service_key}" -f
 } >/dev/null 2>&1
