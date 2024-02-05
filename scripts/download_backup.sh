@@ -47,12 +47,12 @@ if ! hash jq 2>/dev/null ; then
 fi
 
 # change which date command is used based on host OS
-$date_command = ''
+date_command=''
 
 if [ "$(uname -s)" == "Darwin" ]; then
-  $date_command = 'gdate'
+  date_command=gdate
 else
-  $date_command = 'date'
+  date_command=date
 fi
 
 help(){
@@ -61,8 +61,13 @@ help(){
   echo "   -b           The name of the S3 bucket with the backup."
   echo "   -e           Environment of backup to download."
   echo "   -s           Name of the space the backup bucket is in."
-  echo "   -d           Date to retrieve backup from. Must be 'latest' or in '${date_command} +%F' format and no more than 15 days ago."
+  echo "   -d           Date to retrieve backup from. Acceptable values
+                are 'latest' or in 'YYYY-MM-DD' format and no
+                more than 15 days ago."
 }
+
+RED='\033[0;31m'
+NC='\033[0m'
 
 while getopts 'b:e:s:d:' flag; do
   case "${flag}" in
@@ -70,16 +75,16 @@ while getopts 'b:e:s:d:' flag; do
     e) env=${OPTARG} ;;
     s) space=${OPTARG} ;;
     d) retrieve_date=${OPTARG}
-      ((retrieve_date == 'latest' || $(${date_command} --date "$retrieve_date" +%s) -ge $(${date_command} --date "15 days ago" +%s) )) || help
+      [[ $retrieve_date = "latest" || $(${date_command} --date "$retrieve_date" +%s) -ge $(${date_command} --date "15 days ago" +%s) ]] || help && echo -e "\n${RED}Error: Not acceptable -d option.${NC}" && exit 1
       ;;
     *) help && exit 1 ;;
   esac
 done
 
-[[ -z "${backup_bucket}" ]] && help && echo "Missing -b flag." && exit 1
-[[ -z "${env}" ]] && help && echo "Missing -e flag." && exit 1
-[[ -z "${space}" ]] && help && echo "Missing -s flag." && exit 1
-[[ -z "${retrieve_date}" ]] && help && echo "Missing -d flag." && exit 1
+[[ -z "${backup_bucket}" ]] && help && echo -e "\n${RED}Error: Missing -b flag.${NC}" && exit 1
+[[ -z "${env}" ]] && help && echo -e "\n${RED}Error: Missing -e flag.${NC}" && exit 1
+[[ -z "${space}" ]] && help && echo -e "\n${RED}Error: Missing -s flag.${NC}" && exit 1
+[[ -z "${retrieve_date}" ]] && help && echo -e "\n${RED}Error: Missing -d flag.${NC}" && exit 1
 
 echo "Getting backup bucket credentials..."
 {

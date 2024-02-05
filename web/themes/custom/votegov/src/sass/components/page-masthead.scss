@@ -4,16 +4,16 @@ $masthead-background-color: #11385B;
 
 .page-masthead {
   background-color: $masthead-background-color;
-  position: relative;
+  @include u-position('relative');
   @include u-padding-top(4);
   @include u-padding-bottom(6);
 
   &:before {
     content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
+    @include u-display('block');
+    @include u-position('absolute');
+    @include u-top(0);
+    @include u-bottom(0);
     left: 50%;
     right: 50%;
     margin-left: -50vw;
@@ -22,10 +22,10 @@ $masthead-background-color: #11385B;
   }
 
   > * {
-    position: relative;
+    @include u-position('relative');
   }
 
   &.page-masthead--image-offset {
-    padding-bottom: 120px;
+    @include u-padding-bottom(15);
   }
 }

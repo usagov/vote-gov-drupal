@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "12222353e7847876a7e675a92f0d20a5",
+    "content-hash": "01f2d757efe494c2993a00ccab901187",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3540,27 +3540,199 @@
         },
         {
             "name": "drupal/log_stdout",
-            "version": "dev-8.x-1.x",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/issue/log_stdout-3339853.git",
-                "reference": "0f7cba05a7154b893a84d94b2a1bd5e9fb5b11df"
+                "url": "https://git.drupalcode.org/project/log_stdout.git",
+                "reference": "8.x-1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/log_stdout-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "2adb5d992618ee0a26bb8ca2cf80137654d9e0eb"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9 || ^10"
             },
             "default-branch": true,
             "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.5",
+                    "datestamp": "1696840633",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
                 "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Bladedu",
+                    "homepage": "https://www.drupal.org/user/436000"
+                },
+                {
+                    "name": "Bohun Tak",
+                    "homepage": "https://www.drupal.org/user/1205098"
+                },
+                {
+                    "name": "mrhanlon",
+                    "homepage": "https://www.drupal.org/user/764624"
+                },
+                {
+                    "name": "singularo",
+                    "homepage": "https://www.drupal.org/user/143"
+                }
             ],
             "description": "This module provides an hook for Drupal Watchdog that directs log messages to php://stdout or php://stderr for better log handling with Docker.",
             "homepage": "https://www.drupal.org/project/log_stdout",
             "support": {
+                "source": "https://git.drupalcode.org/project/log_stdout",
                 "issues": "https://www.drupal.org/project/issues/log_stdout",
                 "irc": "irc://irc.freenode.org/drupal-support"
+            }
+        },
+        {
+            "name": "drupal/menu_block",
+            "version": "1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/menu_block.git",
+                "reference": "8.x-1.10"
             },
-            "time": "2023-09-13T11:19:29+00:00"
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_block-8.x-1.10.zip",
+                "reference": "8.x-1.10",
+                "shasum": "97de632d77448ae0a974e20c2ffbe42c7ddd4633"
+            },
+            "require": {
+                "drupal/core": "^9.1 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.10",
+                    "datestamp": "1667434255",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "joelpittet",
+                    "homepage": "https://www.drupal.org/user/160302"
+                },
+                {
+                    "name": "JohnAlbin",
+                    "homepage": "https://www.drupal.org/user/32095"
+                },
+                {
+                    "name": "kim.pepper",
+                    "homepage": "https://www.drupal.org/user/370574"
+                },
+                {
+                    "name": "RenatoG",
+                    "homepage": "https://www.drupal.org/user/3326031"
+                },
+                {
+                    "name": "rrrob",
+                    "homepage": "https://www.drupal.org/user/273533"
+                }
+            ],
+            "description": "Provides configurable blocks of menu links.",
+            "homepage": "https://www.drupal.org/project/menu_block",
+            "support": {
+                "source": "https://git.drupalcode.org/project/menu_block"
+            }
+        },
+        {
+            "name": "drupal/menu_item_extras",
+            "version": "3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/menu_item_extras.git",
+                "reference": "3.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_item_extras-3.0.2.zip",
+                "reference": "3.0.2",
+                "shasum": "e9a86d3e703f480f93992237c5cc6e5a88671106"
+            },
+            "require": {
+                "drupal/core": "^9.4 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.2",
+                    "datestamp": "1685006505",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10 || ^11"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Andriy Khomych",
+                    "homepage": "https://www.drupal.org/u/andriy-khomych",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Bogdan Hepting",
+                    "homepage": "https://www.drupal.org/u/bogdan-hepting",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Oleh Vehera",
+                    "homepage": "https://www.drupal.org/u/voleger",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Mykhailo Gurei",
+                    "homepage": "https://www.drupal.org/u/ozin",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provide an additional custom fields which can be used on Menu link",
+            "homepage": "https://www.drupal.org/project/menu_item_extras",
+            "keywords": [
+                "Drupal",
+                "Mega Menu"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/menu_item_extras",
+                "issues": "https://www.drupal.org/project/issues/menu_item_extras"
+            }
         },
         {
             "name": "drupal/menu_multilingual",
@@ -4053,13 +4225,20 @@
         },
         {
             "name": "drupal/pathauto",
-            "version": "dev-3328670-php-8.2-compatibility",
+            "version": "1.12.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/issue/pathauto-3328670.git",
-                "reference": "97e46eed5a96f8bff82ed622764168c60f89a54f"
+                "url": "https://git.drupalcode.org/project/pathauto.git",
+                "reference": "8.x-1.12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/pathauto-8.x-1.12.zip",
+                "reference": "8.x-1.12",
+                "shasum": "b7b6432e315e38e59a7c6cc117134326c580de4c"
             },
             "require": {
+                "drupal/core": "^9.3 || ^10",
                 "drupal/ctools": "*",
                 "drupal/token": "*"
             },
@@ -4068,38 +4247,113 @@
             },
             "type": "drupal-module",
             "extra": {
+                "drupal": {
+                    "version": "8.x-1.12",
+                    "datestamp": "1696776683",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
                 "drush": {
                     "services": {
                         "drush.services.yml": "^9 || ^10"
                     }
                 }
             },
+            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
                 "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "Freso",
+                    "homepage": "https://www.drupal.org/user/27504"
+                },
+                {
+                    "name": "greggles",
+                    "homepage": "https://www.drupal.org/user/36762"
+                }
             ],
             "description": "Provides a mechanism for modules to automatically generate aliases for the content they manage.",
             "homepage": "https://www.drupal.org/project/pathauto",
             "support": {
+                "source": "https://cgit.drupalcode.org/pathauto",
                 "issues": "https://www.drupal.org/project/issues/pathauto",
-                "documentation": "https://www.drupal.org/docs/8/modules/pathauto",
-                "source": "https://cgit.drupalcode.org/pathauto"
-            },
-            "time": "2023-06-28T21:37:41+00:00"
+                "documentation": "https://www.drupal.org/docs/8/modules/pathauto"
+            }
         },
         {
             "name": "drupal/publication_date",
-            "version": "dev-3328575-fix-php-8.2",
+            "version": "2.0.0-beta7",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/issue/publication_date-3328575.git",
-                "reference": "c610c2b5a74c282b09fd7eff9b31c94a64c93e9b"
+                "url": "https://git.drupalcode.org/project/publication_date.git",
+                "reference": "8.x-2.0-beta7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/publication_date-8.x-2.0-beta7.zip",
+                "reference": "8.x-2.0-beta7",
+                "shasum": "699232945890528f97b83f49a31ea7c7831c3ca8"
+            },
+            "require": {
+                "drupal/core": "^9.1 || ^10"
             },
             "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.0-beta7",
+                    "datestamp": "1669679282",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
                 "GPL-2.0+"
             ],
+            "authors": [
+                {
+                    "name": "Clever Age",
+                    "homepage": "https://www.drupal.org/user/547746"
+                },
+                {
+                    "name": "dgtlmoon",
+                    "homepage": "https://www.drupal.org/user/25027"
+                },
+                {
+                    "name": "jstoller",
+                    "homepage": "https://www.drupal.org/user/99012"
+                },
+                {
+                    "name": "Sheldon Rampton",
+                    "homepage": "https://www.drupal.org/user/13085"
+                },
+                {
+                    "name": "tmarly",
+                    "homepage": "https://www.drupal.org/user/159040"
+                },
+                {
+                    "name": "webflo",
+                    "homepage": "https://www.drupal.org/user/254778"
+                }
+            ],
             "description": "Add a field containing the publication date.",
-            "time": "2022-12-21T11:44:37+00:00"
+            "homepage": "https://www.drupal.org/project/publication_date",
+            "support": {
+                "source": "https://git.drupalcode.org/project/publication_date"
+            }
         },
         {
             "name": "drupal/redirect",
@@ -4222,35 +4476,35 @@
         },
         {
             "name": "drupal/rest_views",
-            "version": "3.0.0-rc1",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rest_views.git",
-                "reference": "3.0.0-rc1"
+                "reference": "3.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rest_views-3.0.0-rc1.zip",
-                "reference": "3.0.0-rc1",
-                "shasum": "99f3eb2c59843e82132789878a5f2efb673bed14"
+                "url": "https://ftp.drupal.org/files/projects/rest_views-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "6fe24379f504950c39d8fa9d23307731c0aceda9"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10",
                 "php": "^8"
             },
             "require-dev": {
-                "drupal/entity_reference_revisions": "*",
+                "drupal/entity_reference_revisions": "^1.11.0",
                 "drupal/geolocation": "*",
-                "drupal/search_api": "*"
+                "drupal/search_api": "^1.31"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.0-rc1",
-                    "datestamp": "1704390763",
+                    "version": "3.0.0",
+                    "datestamp": "1706040033",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -15016,12 +15270,9 @@
         "drupal/config_ignore": 10,
         "drupal/config_split": 5,
         "drupal/disable_language": 10,
-        "drupal/log_stdout": 20,
         "drupal/menu_multilingual": 15,
         "drupal/node_revision_delete": 15,
-        "drupal/pathauto": 20,
-        "drupal/publication_date": 20,
-        "drupal/rest_views": 15,
+        "drupal/publication_date": 10,
         "drupal/translatable_menu_link_uri": 20,
         "drupal/uswds_templates": 20
     },

@@ -43,7 +43,7 @@
 {% endif %}
 
 {# set a variable if the node has a featured image #}
-{% set node_image = node.field_media.value %}
+{% set node_image = node.field_media.value | length %}
 
 {# Sitewide alert component #}
   {{ drupal_view('sitewide_alert', 'block_1') }}
@@ -80,6 +80,7 @@
         {{ drupal_entity('block', 'votegov_breadcrumbs') }}
         {# Page title component #}
         {% include '@votegov/component/page-title.html.twig' %}
+        {% include '@votegov/component/page-subtitle.html.twig' %}
       </div>
       <div class="grid-row">
         <aside id="sidebar" role="complementary">
@@ -99,6 +100,7 @@
         {{ drupal_entity('block', 'votegov_breadcrumbs') }}
         {# Page title component #}
         {% include '@votegov/component/page-title.html.twig' %}
+        {% include '@votegov/component/page-subtitle.html.twig' %}
       </div>
       <div class="page-content {{ node_image ? "page-content--image-offset" }}">
         {{ page.content }}
@@ -114,7 +116,7 @@
 
   {% include '@votegov/component/contact-identifier.html.twig' %}
 
-  <div class="usa-footer__primary-section">
+  <div class="usa-footer__primary-section" data-test="footer">
     <div class="grid-container">
       {# Footer menu. #}
       {{ drupal_entity('block', 'votegov_footernavigation') }}

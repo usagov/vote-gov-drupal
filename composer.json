@@ -11,24 +11,7 @@
     "repositories": {
         "drupal": {
             "type": "composer",
-            "url": "https://packages.drupal.org/8",
-            "exclude": [
-                "drupal/log_stdout",
-                "drupal/pathauto",
-                "drupal/publication_date"
-            ]
-        },
-        "drupal/log_stdout": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/issue/log_stdout-3339853.git"
-        },
-        "drupal/pathauto": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/issue/pathauto-3328670.git"
-        },
-        "drupal/publication_date": {
-            "type": "git",
-            "url": "https://git.drupalcode.org/issue/publication_date-3328575.git"
+            "url": "https://packages.drupal.org/8"
         }
     },
     "require": {
@@ -57,7 +40,9 @@
         "drupal/focal_point": "^2.0",
         "drupal/language_switcher_extended": "^1.1",
         "drupal/link_attributes": "^2.1",
-        "drupal/log_stdout": "dev-8.x-1.x",
+        "drupal/log_stdout": "^1.5",
+        "drupal/menu_block": "^1.10",
+        "drupal/menu_item_extras": "^3.0",
         "drupal/menu_multilingual": "^1.0@alpha",
         "drupal/metatag": "^2.0",
         "drupal/migrate_plus": "^6.0",
@@ -65,11 +50,11 @@
         "drupal/new_relic_rpm": "^2.1",
         "drupal/node_revision_delete": "^2.0@alpha",
         "drupal/paragraphs": "^1.15",
-        "drupal/pathauto": "dev-3328670-php-8.2-compatibility",
-        "drupal/publication_date": "dev-3328575-fix-php-8.2",
+        "drupal/pathauto": "^1.12",
+        "drupal/publication_date": "^2.0@beta",
         "drupal/redirect": "^1.8",
         "drupal/remove_http_headers": "^2.0",
-        "drupal/rest_views": "^3.0@alpha",
+        "drupal/rest_views": "^3.0",
         "drupal/s3fs": "^3.1",
         "drupal/samlauth": "^3.8",
         "drupal/simple_sitemap": "^4.1",
