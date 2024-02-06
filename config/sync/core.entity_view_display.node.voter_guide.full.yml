@@ -22,12 +22,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
-    region: content
-  content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
-    weight: -20
+    weight: 0
     region: content
   field_basics_block:
     type: entity_reference_revisions_entity_view
@@ -36,16 +31,11 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 3
-    region: content
-  field_subtitle:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
     weight: 1
     region: content
 hidden:
+  content_moderation_control: true
+  field_subtitle: true
   langcode: true
   links: true
   published_at: true
