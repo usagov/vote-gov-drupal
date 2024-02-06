@@ -5,5 +5,5 @@ dependencies: {  }
 id: bn
 label: Bengali
 direction: ltr
-weight: -7
+weight: -9
 locked: false
