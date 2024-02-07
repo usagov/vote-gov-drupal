@@ -16,6 +16,7 @@
 <article{{ attributes.addClass(classes) }}>
   {{ drupal_view('inline_alert', 'embed_1') }}
 
+  {% set state_name = label | field_value | render %}
   {% set in_state_name = node.field_in_state_name.value | default("@state_name") | t({ "@state_name": state_name}) %}
   {% set of_state_name = node.field_of_state_name.value | default("@state_name") | t({ "@state_name": state_name}) %}
   {% set state_abrev = content.field_state_abbreviation | field_value | render %}
@@ -34,7 +35,7 @@
   {% block deadlines %}
     {# Registration deadlines #}
     <h2>{{ 'Voter registration deadlines' | t({ '@state_name': state_name }) }}</h2>
-    <ul class="registered-resources" data-test="registration-info">
+    <ul data-test="registration-info">
       {% include '@votegov/component/registration-date/registration-date--online.html.twig' %}
       {% include '@votegov/component/registration-date/registration-date--by-mail.html.twig' %}
       {% include '@votegov/component/registration-date/registration-date--in-person.html.twig' %}
@@ -74,7 +75,7 @@
     {{ drupal_entity('block_content', '3') }}
   {% endif %}
 
-  <p>
+  <p class="date--updated">
     {# Striptags and raw filters were added to accomodate Navajo date formats. #}
     {{'Last updated:' | t }} {{ node.revision_timestamp.value | date('U') | format_date('revision_date') | replace(t_numbers[language].numbers | default([])) | striptags('<span>') | raw }}
   </p>

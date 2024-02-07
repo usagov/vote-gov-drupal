@@ -15,12 +15,10 @@
 #}
 {% block content %}
   <div class="usa-logo">
-    <em class="usa-logo__text">
-      {% if site_name %}
-        <a href="{{ path('<front>') }}" rel="home">
-          <div id="site-logo">{{ source( directory ~ '/img/logo.svg' ) }}</div>
-        </a>
-      {% endif %}
-    </em>
+    {% if site_name %}
+      <a href="{{ path('<front>') }}" rel="home" title="{{ site_name }}">
+        <span>{{ source( directory ~ '/img/logo.svg' ) }}</span>
+      </a>
+    {% endif %}
   </div>
 {% endblock %}

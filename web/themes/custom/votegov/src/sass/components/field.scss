@@ -1,0 +1,13 @@
+@use "uswds-core" as *;
+
+.field {
+  * + & {
+    @include u-margin-top(5);
+  }
+
+  &:not(.field--name-field-media) {
+    .node--view-mode-full & {
+      @include u-maxw('tablet');
+    }
+  }
+}
