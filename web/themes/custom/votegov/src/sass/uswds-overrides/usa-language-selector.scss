@@ -29,6 +29,13 @@
       @include u-width('mobile');
     }
   }
+
+  .usa-button:hover {
+    color: #fff;
+    background-color: #4b4b4d;
+    border-bottom: 0;
+    text-decoration: none;
+  }
 }
 
 .usa-language__submenu {
@@ -48,8 +55,7 @@
 }
 
 .usa-language__submenu-item {
-  @include u-padding-x(1);
-  @include u-padding-y(05);
+  @include u-padding(1);
   border: unset;
 }
 
