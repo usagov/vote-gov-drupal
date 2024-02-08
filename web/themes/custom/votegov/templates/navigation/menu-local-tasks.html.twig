@@ -14,18 +14,20 @@
  */
 #}
 
-<div class="margin-top-105">
-  {% if primary %}
-    <h2 id="primary-tabs-title" class="usa-sr-only">{{ 'Primary tabs'|t }}</h2>
+{% if primary %}
+  <div class="grid-container">
+    <div id="primary-tabs-title" class="usa-sr-only">{{ 'Primary tabs'|t }}</div>
     <nav role="navigation" class="tabs-wrapper" aria-labelledby="primary-tabs-title" data-drupal-nav-primary-tabs>
-      <ul class="usa-button-group usa-button-group--segmented">{{ primary }}</ul>
+      <ul class="usa-button-group usa-button-group--segmented usa-button-group--segmented--flat">{{ primary }}</ul>
     </nav>
-  {% endif %}
+  </div>
+{% endif %}
 
-  {% if secondary %}
-    <h2 id="secondary-tabs-title" class="usa-sr-only">{{ 'Secondary tabs'|t }}</h2>
+{% if secondary %}
+  <div class="grid-container">
+    <div id="secondary-tabs-title" class="usa-sr-only">{{ 'Secondary tabs'|t }}</div>
     <nav role="navigation" class="tabs-wrapper" aria-labelledby="secondary-tabs-title">
-      <ul class="usa-button-group usa-button-group--segmented">{{ secondary }}</ul>
+      <ul class="usa-button-group usa-button-group--segmented usa-button-group--segmented--flat">{{ secondary }}</ul>
     </nav>
-  {% endif %}
-</div>
+  </div>
+{% endif %}

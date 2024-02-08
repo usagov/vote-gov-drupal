@@ -1,4 +1,5 @@
 @use "uswds-core" as *;
+@use "variables" as *;
 
 // Figure
 figure {
@@ -28,4 +29,9 @@ Video,
 img {
   max-width: 100%;
   height: auto;
+
+  figure.media--type--image & {
+    display: block;
+    background-color: $bg-light-cool;
+  }
 }
