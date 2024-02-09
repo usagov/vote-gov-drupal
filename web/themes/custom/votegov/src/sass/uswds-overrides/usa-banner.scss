@@ -13,7 +13,7 @@
 
 .banner__text-container {
   @include u-height(6);
-  align-items: center;
+  @include u-flex('align-center');
 }
 
 .usa-banner__button {
