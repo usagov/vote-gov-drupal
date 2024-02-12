@@ -1,0 +1,22 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+
+.usa-header--basic .usa-nav {
+  @include at-media('tablet') {
+    @include u-flex('justify');
+  }
+}
+
+.usa-nav__primary .usa-nav__primary-item {
+  @include at-media('tablet') {
+    a, button {
+      @include u-text('primary-darker');
+      @include u-text('normal');
+    }
+
+    &:hover{
+      background-color: $bg-light-cool;
+      @include u-border(0);
+    }
+  }
+}
