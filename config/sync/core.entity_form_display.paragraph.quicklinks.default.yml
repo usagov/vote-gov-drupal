@@ -5,8 +5,10 @@ dependencies:
   config:
     - field.field.paragraph.quicklinks.field_body
     - field.field.paragraph.quicklinks.field_heading
+    - field.field.paragraph.quicklinks.field_link
     - paragraphs.paragraphs_type.quicklinks
   module:
+    - link
     - text
 id: paragraph.quicklinks.default
 targetEntityType: paragraph
@@ -28,6 +30,14 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
 hidden:
   created: true
