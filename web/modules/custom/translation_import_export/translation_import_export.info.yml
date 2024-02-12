@@ -1,0 +1,7 @@
+name: Translation Import Export
+type: module
+description: Provides an API for packaging, exporting, and importing of translatable project components.
+package: Custom
+core_version_requirement: ^9 || ^10
+dependencies:
+  - language

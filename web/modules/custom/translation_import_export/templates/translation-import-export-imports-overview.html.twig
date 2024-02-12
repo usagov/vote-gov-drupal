@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td>Language</td>
+    <td>Language Code</td>
+    <td>Import Packages Found</td>
+    <td>Action</td>
+  </tr>
+
+  {% for langcode,import in import_files %}
+  <tr>
+    <td>{{ import.name }}</td>
+    <td>{{ langcode }}</td>
+    <td>{{ import.files|length }}</td>
+    <td>
+    {% for fileinfo in import.files %}
+      <a href="{{fileinfo.url}}">Import {{ fileinfo.file.filename }}</a></br/>
+    {% endfor %}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
