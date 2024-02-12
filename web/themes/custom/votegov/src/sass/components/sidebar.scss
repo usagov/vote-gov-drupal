@@ -1,4 +1,5 @@
 @use "uswds-core" as *;
+@use "variables" as *;
 
 #sidebar {
   @include u-margin-top(6);
@@ -24,6 +25,6 @@
   @include u-text('bold');
   @include u-margin-bottom(2);
   margin-top: -6rem;
-  background-color: #2D7497;
-  color: #fff;
+  background-color: $ac-cool;
+  color: $base-white;
 }
