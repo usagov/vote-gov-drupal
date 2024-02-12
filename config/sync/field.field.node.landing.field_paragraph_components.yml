@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.basic
     - paragraphs.paragraphs_type.hero
     - paragraphs.paragraphs_type.image_text_cta
+    - paragraphs.paragraphs_type.quicklinks
     - paragraphs.paragraphs_type.registration_tool
   module:
     - entity_reference_revisions
@@ -31,6 +32,7 @@ settings:
       image_text_cta: image_text_cta
       registration_tool: registration_tool
       hero: hero
+      quicklinks: quicklinks
     negate: 0
     target_bundles_drag_drop:
       accordion_group:
@@ -47,6 +49,9 @@ settings:
         enabled: true
       image_text_cta:
         weight: 6
+        enabled: true
+      quicklinks:
+        weight: 13
         enabled: true
       registration_tool:
         weight: 6
