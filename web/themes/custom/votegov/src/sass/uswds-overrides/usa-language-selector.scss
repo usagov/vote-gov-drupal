@@ -2,16 +2,13 @@
 
 .usa-language-container {
   @include u-display('flex');
-  @include u-padding-x(2);
-  @include u-padding-y(1);
 
   @include at-media('tablet') {
-    @include u-margin-top(3);
     @include u-position('absolute');
     @include u-flex('justify-end');
     @include u-left(0);
     @include u-right(0);
-    @include u-top(0);
+    top: 2rem;//custom units
   }
 
   @include at-media-max('tablet') {
