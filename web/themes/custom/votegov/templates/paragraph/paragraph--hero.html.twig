@@ -1,0 +1,16 @@
+<section class="vote-hero" aria-label="Introduction">
+      <div class="grid-container">
+        <div class="vote-hero__callout">
+          <h1 class="vote-hero__heading">
+            {{ content.field_heading | field_value }}
+          </h1>
+          <p>
+            {{ content.field_body | field_value }}
+          </p>
+          <a class="usa-button" href="">{{ content.field_link | field_value}}</a>
+        </div>
+          <div class="vote-hero_image">
+          {{ content.field_image | field_value}} 
+          </div>
+      </div>
+</section>
