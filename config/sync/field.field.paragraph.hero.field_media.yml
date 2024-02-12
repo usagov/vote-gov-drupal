@@ -1,18 +1,18 @@
-uuid: 077ba07f-850d-453d-858b-084040cd52b0
+uuid: 1fba7d0f-ca04-4095-8bf6-c88c1a283332
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_image
+    - field.storage.paragraph.field_media
     - media.type.image
     - paragraphs.paragraphs_type.hero
-id: paragraph.hero.field_image
-field_name: field_image
+id: paragraph.hero.field_media
+field_name: field_media
 entity_type: paragraph
 bundle: hero
-label: Image
+label: Media
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -25,5 +25,5 @@ settings:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: image
 field_type: entity_reference

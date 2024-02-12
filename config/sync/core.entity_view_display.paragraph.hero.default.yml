@@ -6,11 +6,13 @@ dependencies:
     - field.field.paragraph.hero.field_background_color
     - field.field.paragraph.hero.field_body
     - field.field.paragraph.hero.field_heading
-    - field.field.paragraph.hero.field_image
     - field.field.paragraph.hero.field_link
+    - field.field.paragraph.hero.field_media
+    - image.style.standard_xl
     - paragraphs.paragraphs_type.hero
   module:
     - link
+    - media
     - options
     - text
 id: paragraph.hero.default
@@ -19,8 +21,8 @@ bundle: hero
 mode: default
 content:
   field_background_color:
-    type: list_default
-    label: above
+    type: list_key
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 4
@@ -40,15 +42,6 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_image:
-    type: entity_reference_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    weight: 3
-    region: content
   field_link:
     type: link
     label: hidden
@@ -60,5 +53,16 @@ content:
       target: '0'
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_media:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: standard_xl
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
     region: content
 hidden: {  }
