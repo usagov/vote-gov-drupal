@@ -5,5 +5,5 @@ dependencies: {  }
 id: nv
 label: Navajo
 direction: ltr
-weight: 1
+weight: 2
 locked: false

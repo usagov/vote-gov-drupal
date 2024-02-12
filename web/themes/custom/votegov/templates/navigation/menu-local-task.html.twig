@@ -16,5 +16,5 @@
  */
 #}
 <li{{ attributes.addClass('usa-button-group__item') }}>
-  <a href="{{ link['#url'] }}" class="usa-button {{ not is_active ? 'usa-button--outline' }}">{{ link['#title'] }}</a>
+  <a href="{{ link['#url'] }}" class="usa-button {{ is_active ? 'usa-button--active' }}">{{ link['#title'] }}</a>
 </li>

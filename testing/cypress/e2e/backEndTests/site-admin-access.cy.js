@@ -49,7 +49,7 @@ describe('Test Site Admin Role access', () => {
         })
 
     // site admin should be able to delete banner
-    cy.request('/admin/structure/block/manage/views_block__sitewide_alert_block_1/delete').then((response) => {
+    cy.request('/admin/structure/block-content/manage/sitewide_alert').then((response) => {
       expect(response.status).to.eq(200)
         })
   })

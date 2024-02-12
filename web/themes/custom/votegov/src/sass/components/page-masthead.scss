@@ -1,6 +1,7 @@
 @use "uswds-core" as *;
+@use "variables" as *;
 
-$masthead-background-color: #11385B;
+$masthead-background-color: $base-dark;
 
 .page-masthead {
   background-color: $masthead-background-color;

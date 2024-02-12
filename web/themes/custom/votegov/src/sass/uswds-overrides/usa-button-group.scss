@@ -1,0 +1,32 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+
+.usa-button-group__item {
+  @include at-media('tablet') {
+    @include u-margin(0);
+  }
+
+  .usa-button-group--segmented--flat & {
+    &:last-child,
+    &:first-child {
+      > .usa-button {
+        @include u-radius(0);
+      }
+    }
+
+    &:where(:not(:last-child)) .usa-button:before {
+      border-right-color: $base-primary-hover;
+
+      @include at-media-max('tablet') {
+        @include u-border(0);
+      }
+    }
+  }
+}
+
+.usa-button-group--segmented--flat {
+  @include at-media-max('tablet') {
+    @include u-padding-y(1);
+    @include u-flex('column');
+  }
+}
