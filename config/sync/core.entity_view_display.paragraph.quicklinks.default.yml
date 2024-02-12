@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.paragraph.quicklinks.field_body
     - field.field.paragraph.quicklinks.field_heading
-    - field.field.paragraph.quicklinks.field_link
     - paragraphs.paragraphs_type.quicklinks
   module:
     - text
@@ -28,12 +27,5 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 0
-    region: content
-  field_link:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
     region: content
 hidden: {  }
