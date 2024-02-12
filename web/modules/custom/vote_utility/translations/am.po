@@ -81,10 +81,10 @@ msgid "Register by mail deadline:"
 msgstr "በፖስታ ምዝገባ የመጨረሻ ቀን ይመዝገቡ፦"
 
 msgid "Must be postmarked by @date"
-msgstr "በ (@date) የፓስታ ማህተም ያረፈበት መሆን አለበት"
+msgstr "በ @date የፓስታ ማህተም ያረፈበት መሆን አለበት"
 
 msgid "Must be received by @date"
-msgstr "በ (@date) መድረስ አለበት"
+msgstr "በ @date መድረስ አለበት"
 
 msgid "Online registration deadline:"
 msgstr "የድህረ ገጽ ላይ ምዝገባ የመጨረሻ ቀን፦"
@@ -111,37 +111,37 @@ msgid "Find out ways to register"
 msgstr "እንዴት መመዝገብ እንደሚችሉ ይወቁ "
 
 msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
-msgstr "በድህረ ገጽ ምዝገባ በአሁኑ ጊዜ የለም። ለመምረጥ  @link @state_name's ስቴት የምርጫ ድህረ ገጽ።"
+msgstr "በድህረ ገጽ ምዝገባ በአሁኑ ጊዜ የለም። ለመምረጥ  @link @state_name ስቴት የምርጫ ድህረ ገጽ።"
 
 msgid "Learn more about how to register"
 msgstr "እንዴት መመዝገብ እንደሚችሉ ይወቁ"
 
 msgid "Register in person at your local election office. @link on @state_name’s election website."
-msgstr "አካባቢዎ በሚገኘው የምርጫ ቢሮ በአካል በመገኘት ይመዝገቡ። @link በ@state_name's ስቴት የምርጫ ድህረ ገጽ።"
+msgstr "አካባቢዎ በሚገኘው የምርጫ ቢሮ በአካል በመገኘት ይመዝገቡ። @link በ@state_name ስቴት የምርጫ ድህረ ገጽ።"
 
 msgid "Learn more about voting"
-msgstr "ስለ Vote.gov"
+msgstr "እንዴት መመዝገብ እንዳለብዎ የበለጠ ይወቁ"
 
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
-msgstr "የመራጮች ምዝገባ አያስፈልግም በ@state_name. @link በ@state_name's ስቴት የምርጫ ድህረ ገጽ።"
+msgstr "የመራጮች ምዝገባ አያስፈልግም በ@state_name. @link በ@state_name ስቴት የምርጫ ድህረ ገጽ።"
 
 msgid "Start your online registration"
 msgstr "በድህረ ገጽ ላይ ምዝገባዎን ይጀምሩ"
 
 msgid "@link on @state_name’s election website."
-msgstr "@link በ@state_name's ስቴት የምርጫ ድህረ ገጽ።"
+msgstr "@link በ@state_name ስቴት የምርጫ ድህረ ገጽ።"
 
 msgid "register to vote by mail or in person"
 msgstr "በፖስታ ወይም በአካል ለመምረጥ ይመዝገቡ"
 
 msgid "You can also @link on @state_name’s election website."
-msgstr "እርስዎ በተጨማሪ @link ይችላሉ በ@state_name's ስቴት የምርጫ ድህረ ገጽ።"
+msgstr "እርስዎ በተጨማሪ @link ይችላሉ በ@state_name ስቴት የምርጫ ድህረ ገጽ።"
 
 msgid "confirm your voter registration status"
 msgstr "የመራጮች ምዝገባ ሁኔታዎን ያረጋግጡ"
 
 msgid "You can @link on @state_name’s election website."
-msgstr "እርስዎ @link በ@state_name's ስቴት የምርጫ ድህረ ገጽ"
+msgstr "እርስዎ @link በ@state_name ስቴት የምርጫ ድህረ ገጽ"
 
 msgid "External link opens in new window"
 msgstr "የውጭ አገናኙ አዲስ ድህረ ገጽ ይከፍታል"
@@ -158,7 +158,7 @@ msgstr "ኦፊሴላዊ የመንግስት ድህረ ገጽ"
 
 #footer
 msgid "Email sign-up"
-msgstr "የኢሜል ምዝገባ"
+msgstr "የኢሜል ምዝገባ (በእንግሊዘኛ)"
 
 msgid "Contact"
 msgstr "ተገናኝ"

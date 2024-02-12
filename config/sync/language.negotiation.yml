@@ -24,6 +24,7 @@ url:
     ar: ar
     fr: fr
     hmn: hmn
+    am: am
   domains:
     en: ''
     es: ''
@@ -43,4 +44,5 @@ url:
     ar: ''
     fr: ''
     hmn: ''
+    am: ''
 selected_langcode: site_default
