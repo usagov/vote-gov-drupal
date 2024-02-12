@@ -1,8 +1,15 @@
 @use "uswds-core" as *;
+@use "variables" as *;
 
 .basics-block {
   @include at-media-max('tablet') {
     @include u-margin-x('neg-205');
+  }
+
+  + .basics-block {
+    @include at-media('tablet') {
+      @include u-margin-top(3);
+    }
   }
 }
 
@@ -10,8 +17,8 @@
   @include u-padding(8);
   @include u-font-size('serif', 11);
   @include u-text-align('center');
-  background-color: #2d7497;
-  color: #fff;
+  background-color: $ac-cool;
+  color: $base-white;
 
   @include at-media('tablet') {
     @include u-radius-top('md');
@@ -25,7 +32,7 @@
 .basics-block--content {
   @include u-padding(2.5);
   @include u-margin-top(0);
-  background-color: #FFF;
+  background-color: $base-white;
 
   > * + * {
     @include u-margin-top(5);

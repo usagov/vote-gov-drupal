@@ -1,0 +1,37 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+
+.usa-accordion {
+  * + & {
+    @include u-margin-top(3);
+  }
+}
+
+.usa-accordion__heading {
+  @include u-font-size('sans', 7);
+
+  .usa-accordion__content + & {
+    @include u-margin-top(3);
+  }
+}
+
+.usa-accordion__button,
+.usa-accordion__content {
+  color: $base-dark;
+}
+
+// New subtle variant
+.usa-accordion--subtle {
+  .usa-accordion__button {
+    background-color: $base-white;
+
+    &:hover,
+    &:focus {
+      background-color: $bg-light-cool;
+    }
+  }
+
+  .usa-accordion__content {
+    background-color: $base-white;
+  }
+}

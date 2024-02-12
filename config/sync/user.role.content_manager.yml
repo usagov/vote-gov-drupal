@@ -146,6 +146,7 @@ permissions:
   - 'revert voter_guide revisions'
   - 'translate any entity'
   - 'translate audio media'
+  - 'translate basics_modules taxonomy_term'
   - 'translate block_content'
   - 'translate document media'
   - 'translate editable entities'

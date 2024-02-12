@@ -7,6 +7,8 @@ dependencies:
     - node.type.landing
     - paragraphs.paragraphs_type.accordion_group
     - paragraphs.paragraphs_type.basic
+    - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.image_text_cta
     - paragraphs.paragraphs_type.registration_tool
   module:
     - entity_reference_revisions
@@ -26,7 +28,9 @@ settings:
     target_bundles:
       accordion_group: accordion_group
       basic: basic
+      image_text_cta: image_text_cta
       registration_tool: registration_tool
+      hero: hero
     negate: 0
     target_bundles_drag_drop:
       accordion_group:
@@ -34,6 +38,15 @@ settings:
         enabled: true
       basic:
         weight: 5
+        enabled: true
+      basics_block:
+        weight: 9
+        enabled: false
+      hero:
+        weight: 10
+        enabled: true
+      image_text_cta:
+        weight: 6
         enabled: true
       registration_tool:
         weight: 6

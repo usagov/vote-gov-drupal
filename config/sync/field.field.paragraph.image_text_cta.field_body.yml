@@ -1,0 +1,24 @@
+uuid: e09158e2-3ad3-450c-9dfc-2d1539d5127e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.image_text_cta
+  module:
+    - text
+id: paragraph.image_text_cta.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: image_text_cta
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long
