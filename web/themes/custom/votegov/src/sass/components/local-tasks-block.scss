@@ -1,0 +1,8 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+
+.local-tasks-block {
+  @include at-media('tablet') {
+    background-color: $base-primary;
+  }
+}
