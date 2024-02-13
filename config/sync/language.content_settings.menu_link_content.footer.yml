@@ -1,0 +1,18 @@
+uuid: 5c14500c-99bb-40a8-a933-1088f31fed61
+langcode: hmn
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: menu_link_content.footer
+target_entity_type_id: menu_link_content
+target_bundle: footer
+default_langcode: site_default
+language_alterable: true

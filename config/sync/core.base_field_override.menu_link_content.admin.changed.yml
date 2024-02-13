@@ -1,0 +1,18 @@
+uuid: ae999c99-0c4c-4147-aa67-8accf66a23c3
+langcode: hmn
+status: true
+dependencies:
+  config:
+    - system.menu.admin
+id: menu_link_content.admin.changed
+field_name: changed
+entity_type: menu_link_content
+bundle: admin
+label: Changed
+description: 'The time that the menu link was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,18 @@
+uuid: eba2c271-373e-4fb3-b0c2-f673bfe482cf
+langcode: hmn
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+id: menu_link_content.tools.view_mode
+field_name: view_mode
+entity_type: menu_link_content
+bundle: tools
+label: 'View mode'
+description: 'Per item view mode selector.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
