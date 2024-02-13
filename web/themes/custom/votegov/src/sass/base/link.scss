@@ -1,0 +1,19 @@
+@use "variables" as *;
+
+a {
+  main & {
+    color: $base-primary;
+
+    &:visited,
+    &:active {
+      color: $base-primary;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $base-primary-hover;
+      color: $base-white;
+      text-decoration: none;
+    }
+  }
+}

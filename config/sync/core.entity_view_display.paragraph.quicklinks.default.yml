@@ -1,0 +1,45 @@
+uuid: 2a9f20b1-b9f4-473f-a145-7bb06020383e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quicklinks.field_body
+    - field.field.paragraph.quicklinks.field_heading
+    - field.field.paragraph.quicklinks.field_link
+    - paragraphs.paragraphs_type.quicklinks
+  module:
+    - link
+    - text
+id: paragraph.quicklinks.default
+targetEntityType: paragraph
+bundle: quicklinks
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

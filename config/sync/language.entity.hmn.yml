@@ -11,5 +11,5 @@ third_party_settings:
 id: hmn
 label: Hmong
 direction: ltr
-weight: -1
+weight: 0
 locked: false
