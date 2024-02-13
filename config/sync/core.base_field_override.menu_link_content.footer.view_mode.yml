@@ -1,0 +1,18 @@
+uuid: 9ac7515c-82c9-471d-875f-14e3744b6777
+langcode: hmn
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+id: menu_link_content.footer.view_mode
+field_name: view_mode
+entity_type: menu_link_content
+bundle: footer
+label: 'View mode'
+description: 'Per item view mode selector.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: 56e2435d-ceff-4cdc-948a-d3bec5d86564
+langcode: hmn
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.basics_block
+id: paragraph.basics_block.status
+field_name: status
+entity_type: paragraph
+bundle: basics_block
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
