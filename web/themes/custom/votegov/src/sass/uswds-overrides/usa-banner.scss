@@ -1,7 +1,10 @@
 @use "uswds-core" as *;
 
-.usa-banner__inner {
+.usa-banner {
+  @include u-position('relative');
+}
 
+.usa-banner__inner {
   @include at-media-max('tablet') {
     @include u-height(6);
   }
