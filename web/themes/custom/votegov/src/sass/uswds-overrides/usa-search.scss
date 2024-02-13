@@ -2,6 +2,10 @@
 @use "mixins" as *;
 @use "variables" as *;
 
+//mobile width not working
+//search icon with ::before not working
+
+
 #search {
   line-height: 2.6;
 // .search-icon svg {
@@ -33,8 +37,6 @@
   .usa-input {
     overflow: visible;
     background-color: #F7F9FA;
-    @include u-width('mobile-lg');
-
       
       @include u-radius('lg');
       @include u-border('transparent');
@@ -45,10 +47,10 @@
 
       &:focus {
         background-color: #F7F9FA;
-        -webkit-transition: width 1s ease-in-out;
-        -moz-transition: width 1s ease-in-out;
-        -o-transition: width 1s ease-in-out;
-        transition: width 1s ease-in-out;
+        -webkit-transition: width .3s ease-in-out;
+        -moz-transition: width .3s ease-in-out;
+        -o-transition: width .3s ease-in-out;
+        transition: width .3s ease-in-out;
         border-color: #3E79BB;
         @include u-width('mobile-lg');
         @include u-border(2px)
@@ -87,10 +89,10 @@
     display: none;
     margin-left: -48px;
     background-color: #F7F9FA;
-    -webkit-transition: width 1s ease-in-out;
-    -moz-transition: width 1s ease-in-out;
-    -o-transition: width 1s ease-in-out;
-    transition: width 1s ease-in-out;
+    -webkit-transition: width .3s ease-in-out;
+    -moz-transition: width .3s ease-in-out;
+    -o-transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
     border-color: #3E79BB;
     @include u-radius-left(0);
     @include u-radius-right('lg');
