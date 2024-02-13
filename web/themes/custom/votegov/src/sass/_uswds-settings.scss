@@ -90,6 +90,7 @@ https://designsystem.digital.gov/documentation/settings/
   $theme-header-max-width: "widescreen",
   $theme-identifier-max-width: "widescreen",
   $theme-footer-max-width: "widescreen",
+  $theme-site-alert-max-width: "widescreen",
   $max-width-settings: (
   output: true,
   responsive: true, // Max width settings, set responsive to true.
@@ -110,6 +111,7 @@ https://designsystem.digital.gov/documentation/settings/
 
   // Component settings ---------------------------------------------------------------
   // -- Accordion
+  $theme-accordion-font-family: "sans",
   // -- Alert
   // -- Banner
   // -- Breadcrumb

@@ -1,0 +1,15 @@
+uuid: e2b1707a-dfa8-41af-b86c-c2d0a2116449
+langcode: am
+status: true
+dependencies:
+  module:
+    - disable_language
+third_party_settings:
+  disable_language:
+    disable: true
+    redirect_language: en
+id: am
+label: Amharic
+direction: ltr
+weight: -8
+locked: false

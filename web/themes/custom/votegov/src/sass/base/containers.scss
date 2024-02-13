@@ -1,3 +1,6 @@
+@use "variables" as *;
+
 body {
-  background-color: #F7F9FA;
+  background-color: $bg-light;
+  color: $base-dark;
 }

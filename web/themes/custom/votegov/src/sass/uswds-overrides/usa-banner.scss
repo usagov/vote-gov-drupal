@@ -1,0 +1,28 @@
+@use "uswds-core" as *;
+
+.usa-banner {
+  @include u-position('relative');
+}
+
+.usa-banner__inner {
+  @include at-media-max('tablet') {
+    @include u-height(6);
+  }
+
+  @include at-media('tablet') {
+    @include u-height(8);
+  }
+}
+
+.banner__text-container {
+  @include u-height(6);
+  @include u-flex('align-center');
+}
+
+.usa-banner__button {
+  @include u-height(6);
+}
+
+.usa-banner__button[aria-expanded=true]{
+  @include u-height(6);
+}

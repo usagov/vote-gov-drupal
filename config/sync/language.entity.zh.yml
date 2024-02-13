@@ -5,5 +5,5 @@ dependencies: {  }
 id: zh
 label: 'Chinese - traditional'
 direction: ltr
-weight: -5
+weight: -4
 locked: false

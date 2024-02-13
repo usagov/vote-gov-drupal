@@ -1,17 +1,17 @@
-uuid: fece8c75-1e7b-4def-aff4-f2fd47de3ac8
+uuid: e09158e2-3ad3-450c-9dfc-2d1539d5127e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.menu_link_content.field_content
+    - field.storage.paragraph.field_body
     - filter.format.basic_html
-    - system.menu.main
+    - paragraphs.paragraphs_type.image_text_cta
   module:
     - text
-id: menu_link_content.main.field_content
-field_name: field_content
-entity_type: menu_link_content
-bundle: main
+id: paragraph.image_text_cta.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: image_text_cta
 label: Content
 description: ''
 required: false
