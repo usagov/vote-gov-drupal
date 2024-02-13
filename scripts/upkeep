@@ -58,7 +58,7 @@ aws s3 website s3://${bucket} --index-document index.html --error-document /404/
 echo "Copy to '${bucket_name}' completed!"
 
 echo "Deleting the taxonomy directory..."
-aws s3 rm --recursive s3://{$AWS_BUCKET}/taxonomy/ 2>/dev/null && echo "Successfully deleted taxonomy directory!" || echo "Failed to delete the taxonomy directory!"
+aws s3 rm --recursive s3://${bucket}/taxonomy/ 2>/dev/null && echo "Successfully deleted taxonomy directory!" || echo "Failed to delete the taxonomy directory!"
 
 # export objects=($(aws s3 ls s3://${bucket} --recursive --no-verify-ssl 2>/dev/null | awk '{print $(NF)}' | sed -z -e 's/\n/ /g'))
 
