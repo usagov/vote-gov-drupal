@@ -1,0 +1,237 @@
+# Amharic translation of Vote.gov
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Vote.gov Utility\\n"
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=utf-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\\n"
+
+#language selector
+msgid "Amharic"
+msgstr "አማርኛ"
+
+msgid "Select language"
+msgstr "ቋንቋ ይምረጡ"
+
+#main
+msgid "@sitename in language"
+msgstr "@sitename በአማርኛ"
+
+msgid "Go back"
+msgstr "ተመለስ"
+
+msgid "Last updated:"
+msgstr "መጨረሻ የተሻሻለው፦"
+
+msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
+msgstr "የድምጽ አሰጣጥ እንዴት እንደሚተገበር ለማመልከት ምልክት የተደረገበት ድምጽ መስጫ ወረቀት በምሳሌነት የገባበት የመራጮች ሳጥን "
+
+#identifier
+msgid "An official website of the @link."
+msgstr "ኦፊሲያል ድህረ ገጽ @link"
+
+msgid "General Services Administration"
+msgstr "አጠቃላይ አገልግሎቶች አስተዳደር (በእንግሊዝኛ)"
+
+msgid "Looking for U.S. government information and services? @link."
+msgstr "የU.S. መንግስት መረጃ እና አገልግሎቶችን ይፈልጋሉ? @link."
+
+msgid "Visit USA.gov"
+msgstr "USA.govን ይጎብኙ (በእንግሊዘኛ)"
+
+msgid "Agency identifier"
+msgstr "የኤጀንሲ መለያ"
+
+msgid "Agency description"
+msgstr "የኤጄንሲ መግለጫ"
+
+msgid "Important links"
+msgstr "ጠቃሚ አገናኞች"
+
+msgid "Government information and services"
+msgstr "የመንግስት መረጃ እና አገልግሎቶች"
+
+#contact
+msgid "in partnership with"
+msgstr "ጋር በመተባበር"
+
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
+msgstr "ከVote.gov ጋር አጋርነትን የሚያመለክት የU.S. ምርጫ እርዳታ ሰጪ ኮሚሽን አርማ"
+
+msgid "Follow Vote.gov on Twitter"
+msgstr "Vote.govን በትዊተር ላይ ይከተሉ (በእንግሊዘኛ)"
+
+#search
+msgid "Search Vote.gov"
+msgstr "Vote.gov ን ይፈልጉ"
+
+#state
+msgid "Register to vote in @state_name"
+msgstr "ለመምረጥ ይመዝገቡ @state_name"
+
+msgid "How to register to vote"
+msgstr "ለመምረጥ እንዴት ነው የሚመዘገቡት"
+
+msgid "Other ways to register to vote"
+msgstr "ለመምረጥ መመዝገቢያ ሌላ መንገዶች"
+
+msgid "Register by mail deadline:"
+msgstr "በፖስታ ምዝገባ የመጨረሻ ቀን ይመዝገቡ፦"
+
+msgid "Must be postmarked by @date"
+msgstr "በ @date የፓስታ ማህተም ያረፈበት መሆን አለበት"
+
+msgid "Must be received by @date"
+msgstr "በ @date መድረስ አለበት"
+
+msgid "Online registration deadline:"
+msgstr "የድህረ ገጽ ላይ ምዝገባ የመጨረሻ ቀን፦"
+
+msgid "Voter registration deadlines"
+msgstr "የመራጮች ምዝገባ የመጨረሻ ቀናት"
+
+msgid "In person registration deadline:"
+msgstr "በአካል ምዝገባ የመጨረሻ ቀን፦"
+
+msgid "How to check your voter registration"
+msgstr "ለመምረጥ መመዝገብዎን እንዴት ማረጋገጥ ይችላሉ"
+
+msgid "You can confirm your voter registration status on @link."
+msgstr "የመራጮች ምዝገባ ሁኔታዎን @link ላይ ማረጋገጥ ይችላሉ።"
+
+msgid "You can confirm your voter registration status by contacting your local registration office. @link."
+msgstr "ድምጽ ለመስጠት መመዝገብዎን  ለማረጋገጥ የአካባቢዎን የምዝገባ ቢሮ መገናኘት ይችላሉ። @link."
+
+msgid "Click here to view Wyoming's county clerk contact information (PDF)"
+msgstr "የዋዮሚንግ ካውንቲ ፀሐፊን ማግኘት የሚችሉበት መረጃ (PDF) ለማየት እዚህ ጠቅ ያድርጉ"
+
+msgid "Find out ways to register"
+msgstr "እንዴት መመዝገብ እንደሚችሉ ይወቁ "
+
+msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
+msgstr "በድህረ ገጽ ምዝገባ በአሁኑ ጊዜ የለም። ለመምረጥ  @link @state_name ስቴት የምርጫ ድህረ ገጽ።"
+
+msgid "Learn more about how to register"
+msgstr "እንዴት መመዝገብ እንደሚችሉ ይወቁ"
+
+msgid "Register in person at your local election office. @link on @state_name’s election website."
+msgstr "አካባቢዎ በሚገኘው የምርጫ ቢሮ በአካል በመገኘት ይመዝገቡ። @link በ@state_name ስቴት የምርጫ ድህረ ገጽ።"
+
+msgid "Learn more about voting"
+msgstr "እንዴት መመዝገብ እንዳለብዎ የበለጠ ይወቁ"
+
+msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
+msgstr "የመራጮች ምዝገባ አያስፈልግም በ@state_name. @link በ@state_name ስቴት የምርጫ ድህረ ገጽ።"
+
+msgid "Start your online registration"
+msgstr "በድህረ ገጽ ላይ ምዝገባዎን ይጀምሩ"
+
+msgid "@link on @state_name’s election website."
+msgstr "@link በ@state_name ስቴት የምርጫ ድህረ ገጽ።"
+
+msgid "register to vote by mail or in person"
+msgstr "በፖስታ ወይም በአካል ለመምረጥ ይመዝገቡ"
+
+msgid "You can also @link on @state_name’s election website."
+msgstr "እርስዎ በተጨማሪ @link ይችላሉ በ@state_name ስቴት የምርጫ ድህረ ገጽ።"
+
+msgid "confirm your voter registration status"
+msgstr "የመራጮች ምዝገባ ሁኔታዎን ያረጋግጡ"
+
+msgid "You can @link on @state_name’s election website."
+msgstr "እርስዎ @link በ@state_name ስቴት የምርጫ ድህረ ገጽ"
+
+msgid "External link opens in new window"
+msgstr "የውጭ አገናኙ አዲስ ድህረ ገጽ ይከፍታል"
+
+msgid "Skip to main content"
+msgstr "ወደ ዋናው ይዘት ይለፉ"
+
+msgid "(in English)"
+msgstr "(በእንግሊዘኛ)"
+
+#banner
+msgid "Official government website"
+msgstr "ኦፊሴላዊ የመንግስት ድህረ ገጽ"
+
+#footer
+msgid "Email sign-up"
+msgstr "የኢሜል ምዝገባ (በእንግሊዘኛ)"
+
+msgid "Contact"
+msgstr "ተገናኝ"
+
+msgid "GSA logo"
+msgstr "GSA አርማ"
+
+#month and day names
+msgctxt "Long month name"
+msgid "January"
+msgstr "ጃንዋሪ"
+
+msgctxt "Long month name"
+msgid "February"
+msgstr "ፌብሩዋሪ"
+
+msgctxt "Long month name"
+msgid "March"
+msgstr "ማርች"
+
+msgctxt "Long month name"
+msgid "April"
+msgstr "ኤፕሪል"
+
+msgctxt "Long month name"
+msgid "May"
+msgstr "ሜይ"
+
+msgctxt "Long month name"
+msgid "June"
+msgstr "ጁን"
+
+msgctxt "Long month name"
+msgid "July"
+msgstr "ጁላይ"
+
+msgctxt "Long month name"
+msgid "August"
+msgstr "ኦገስት"
+
+msgctxt "Long month name"
+msgid "September"
+msgstr "ሴፕቴምበር"
+
+msgctxt "Long month name"
+msgid "October"
+msgstr "ኦክቶበር"
+
+msgctxt "Long month name"
+msgid "November"
+msgstr "ኖቨምበር"
+
+msgctxt "Long month name"
+msgid "December"
+msgstr "ዲሴምበር"
+
+msgid "Monday"
+msgstr "ሰኞ"
+
+msgid "Tuesday"
+msgstr "ማክሰኞ"
+
+msgid "Wednesday"
+msgstr "ረቡዕ"
+
+msgid "Thursday"
+msgstr "ሐሙስ"
+
+msgid "Friday"
+msgstr "አርብ"
+
+msgid "Saturday"
+msgstr "ቅዳሜ"
+
+msgid "Sunday"
+msgstr "እሁድ"
