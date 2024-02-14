@@ -2852,6 +2852,10 @@
                     "role": "Maintainer"
                 },
                 {
+                    "name": "Greg Boggs",
+                    "homepage": "https://www.drupal.org/user/153069"
+                },
+                {
                     "name": "hmartens",
                     "homepage": "https://www.drupal.org/user/622826"
                 },
@@ -3551,6 +3555,10 @@
             "require": {
                 "drupal/core": "^8.8 || ^9 || ^10"
             },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10"
+            },
+            "default-branch": true,
             "type": "drupal-module",
             "extra": {
                 "drupal": {
