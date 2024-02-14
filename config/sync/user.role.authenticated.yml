@@ -6,6 +6,7 @@ dependencies:
     - filter.format.basic_html
     - filter.format.simple_html
   module:
+    - disable_language
     - filter
     - media
     - system
@@ -17,6 +18,8 @@ weight: 1
 is_admin: false
 permissions:
   - 'access content'
+  - 'create content in disabled language'
   - 'use text format basic_html'
   - 'use text format simple_html'
+  - 'view disabled languages'
   - 'view media'
