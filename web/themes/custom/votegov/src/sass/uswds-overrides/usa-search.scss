@@ -17,7 +17,7 @@
 // }
 
   &:hover .usa-input, &:hover .search-icon {
-    background-color: #E2EDF2;
+    background-color: #3E79BB;
   }
 
   // label {
@@ -36,17 +36,18 @@
 
   .usa-input {
     overflow: visible;
-    background-color: #F7F9FA;
+    background-color: #E2EDF2;
+    text-indent: 40px;
       
       @include u-radius('lg');
       @include u-border('transparent');
       @include u-height(5);
-      @include u-width(9);
+      @include u-width('card');
       @include u-font('mono', 'md');
       // @include u-padding(0);
 
       &:focus {
-        background-color: #F7F9FA;
+        background-color: #E2EDF2;
         -webkit-transition: width .3s ease-in-out;
         -moz-transition: width .3s ease-in-out;
         -o-transition: width .3s ease-in-out;
@@ -66,29 +67,40 @@
       opacity: 1;
     }
 
-  // .search-icon {
-  //   background-color: #F7F9FA;
+  .search-icon {
+    background-color: #E2EDF2;
+    border-color: #3E79BB;
+    margin-right: -42px;
 
-  //     @include u-radius-right(0);
-  //     @include u-radius-left('lg');
-  //     @include u-height(5);
+    @include u-radius-right(0);
+    @include u-radius-left('lg');
+    @include u-height(5);
+    @include u-border(2px);
+    @include u-border-right(0);
 
-  //     svg {
-  //       fill: #11385B;
-  //       top: 50%;
-  //       -ms-transform: translateY(-50%);
-  //       transform: translateY(-50%);
+      // @include u-radius-right(0);
+      // @include u-radius-left('lg');
+      // @include u-height(5);
 
-  //       @include u-height(5);
-  //       @include u-width(5);
-  //       @include u-padding(1)
-  //     }
-  // }
+      svg {
+        fill: #11385B;
+        top: 50%;
+        -ms-transform: translateY(-4%);
+        transform: translateY(-4%);
+
+        @include u-height(5);
+        @include u-width(5);
+        @include u-padding(1)
+        // @include u-height(4);
+        // @include u-width(4);
+        // @include u-padding(1);
+      }
+  }
 
   .arrow-icon {
     display: none;
     margin-left: -48px;
-    background-color: #F7F9FA;
+    background-color: #E2EDF2;
     -webkit-transition: width .3s ease-in-out;
     -moz-transition: width .3s ease-in-out;
     -o-transition: width .3s ease-in-out;

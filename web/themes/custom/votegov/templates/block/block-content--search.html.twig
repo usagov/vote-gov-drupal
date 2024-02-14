@@ -13,11 +13,11 @@
 
 <section aria-label="Search Vote.gov">
 <form id="search" class="usa-search usa-search--small" role="search">
-  {# <div class="search-icon">
-    <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <div class="search-icon">
+    <svg width="24" height="23" viewBox="0 0 24 23" fill="#11385B" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9144 6.74185C15.7748 8.60222 15.7748 11.6185 13.9144 13.4789C12.054 15.3392 9.03777 15.3392 7.1774 13.4789C5.31703 11.6185 5.31703 8.60222 7.1774 6.74185C9.03777 4.88148 12.054 4.88148 13.9144 6.74185ZM15.9095 14.2323C17.9533 11.5798 17.7596 7.75866 15.3286 5.32764C12.6872 2.68622 8.4046 2.68622 5.76318 5.32764C3.12176 7.96906 3.12176 12.2516 5.76318 14.8931C8.04161 17.1715 11.5411 17.4846 14.1552 15.8324L16.8395 18.5167C17.0348 18.712 17.3514 18.712 17.5466 18.5167L18.5167 17.5466C18.712 17.3514 18.712 17.0348 18.5167 16.8395L15.9095 14.2323Z" fill="#11385B"/>
     </svg>
-  </div> #}
+  </div>
   {# if current language is chinese simplified, change the search to use Chinese tradional 'zh' #}
   {% set searchLanguage = language == 'zh-hans' ? 'zh' : language %}
   <input type="hidden" name="affiliate" id="affiliate"
