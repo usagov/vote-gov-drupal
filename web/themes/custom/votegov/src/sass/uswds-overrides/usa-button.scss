@@ -32,4 +32,10 @@
       background-color: $ac-warm-hover;
     }
   }
+
+  .usa-language-container & {
+    @include at-media-max('tablet') {
+      @include u-width('full');
+    }
+  }
 }

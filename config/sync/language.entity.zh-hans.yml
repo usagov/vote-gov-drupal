@@ -5,5 +5,5 @@ dependencies: {  }
 id: zh-hans
 label: 'Chinese - simplified'
 direction: ltr
-weight: -6
+weight: -5
 locked: false
