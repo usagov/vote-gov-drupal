@@ -70,13 +70,11 @@ RED='\033[0;31m'
 NC='\033[0m'
 
 while getopts 'b:e:s:d:' flag; do
-  case "${flag}" in
+  case ${flag} in
     b) backup_bucket=${OPTARG} ;;
     e) env=${OPTARG} ;;
     s) space=${OPTARG} ;;
-    d) retrieve_date=${OPTARG}
-      [[ $retrieve_date = "latest" || $(${date_command} --date "$retrieve_date" +%s) -ge $(${date_command} --date "15 days ago" +%s) ]] || help && echo -e "\n${RED}Error: Not acceptable -d option.${NC}" && exit 1
-      ;;
+    d) retrieve_date=${OPTARG} ;;
     *) help && exit 1 ;;
   esac
 done
