@@ -7,8 +7,32 @@
 
 .usa-logo {
   width: 9rem;
+  @include u-margin-y(0);
 
   @include at-media-max('desktop') {
     @include u-margin-y(2);
+  }
+}
+
+.usa-header {
+  border-bottom: 1px solid #D3D3D3;
+
+  &--basic {
+    .usa-nav-container {
+      align-items: center;
+    }
+
+    .usa-nav {
+      padding: 0;
+
+      &__link:hover::after {
+        background-color: #C74345;
+        bottom: 0;
+      }
+    }
+
+    .usa-navbar {
+      @include u-width('card');
+    }
   }
 }

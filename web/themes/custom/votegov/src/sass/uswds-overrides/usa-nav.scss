@@ -2,4 +2,63 @@
 
 .usa-nav {
   width: 100%;
+
+  &__primary {
+    margin: auto;
+    left: 0%;
+
+    button[aria-expanded=true] span::after {
+      background-color: #11385B;
+    }
+  }
+
+  &__primary-item {
+    height: 4rem;
+
+    &:hover {
+      background-color: #E2EDF2;
+    }
+
+    button {
+      color: #11385B;
+
+      &[aria-expanded=true] {
+        color: #11385B;
+        background-color: #E2EDF2 !important;
+      }
+
+      &:hover {
+        color: #11385B;
+      }
+    }
+  }
+
+  &__submenu {
+    color: #11385B;
+    padding: 0;
+
+    .usa-nav__submenu-item a {
+      color: #11385b;
+      text-decoration: none;
+
+      &:hover {
+        color: #E2EDF2;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__submenu-item {
+    background-color: #E2EDF2;
+
+    &:hover {
+      background-color: #3E79BB;
+    }
+
+  }
+
+  .usa-search {
+    color: #11385B;
+    margin-left: 0;
+  }
 }
