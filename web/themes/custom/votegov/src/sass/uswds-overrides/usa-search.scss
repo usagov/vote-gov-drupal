@@ -2,63 +2,50 @@
 @use "mixins" as *;
 @use "variables" as *;
 
-//mobile width not working
-//search icon with ::before not working
-
-
 #search {
   line-height: 2.6;
-// .search-icon svg {
-//     position: absolute;
-//     left: 0px;
-//     padding: 10px 12px;
-//     pointer-events: none;
-//     top: 1rem;
-// }
 
   &:hover .usa-input, &:hover .search-icon {
-    background-color: #3E79BB;
+    background-color: #E2EDF2;
   }
 
-  // label {
-  //   position: relative;
-
-  //   &:before {
-  //     content: "";
-  //     position: absolute;
-  //     left: 10px;
-  //     top: 0;
-  //     bottom: 0;
-  //     width: 20px;
-  //     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#11385B' width='24' height='23' viewBox='0 0 24 23' fill-rule='none'%3E%3Cpath d='M13.9144 6.74185C15.7748 8.60222 15.7748 11.6185 13.9144 13.4789C12.054 15.3392 9.03777 15.3392 7.1774 13.4789C5.31703 11.6185 5.31703 8.60222 7.1774 6.74185C9.03777 4.88148 12.054 4.88148 13.9144 6.74185ZM15.9095 14.2323C17.9533 11.5798 17.7596 7.75866 15.3286 5.32764C12.6872 2.68622 8.4046 2.68622 5.76318 5.32764C3.12176 7.96906 3.12176 12.2516 5.76318 14.8931C8.04161 17.1715 11.5411 17.4846 14.1552 15.8324L16.8395 18.5167C17.0348 18.712 17.3514 18.712 17.5466 18.5167L18.5167 17.5466C18.712 17.3514 18.712 17.0348 18.5167 16.8395L15.9095 14.2323Z'%3E%3C/path%3E%3C/svg%3E") center / contain no-repeat;
-  //   }
-  // }
+  @include at-media-max('tablet') {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
 
   .usa-input {
     overflow: visible;
-    background-color: #E2EDF2;
+    background-color: #F7F9FA;
     text-indent: 40px;
       
-      @include u-radius('lg');
-      @include u-border('transparent');
-      @include u-height(5);
-      @include u-width('card');
-      @include u-font('mono', 'md');
-      // @include u-padding(0);
+    @include u-radius('lg');
+    @include u-border('transparent');
+    @include u-height(5);
+    @include u-width('card');
+    @include u-font('mono', 'md');
+    
+    @include at-media-max('tablet') {
+      @include u-width('tablet');
+      border-color: #D3D3D3;
+    }
 
       &:focus {
-        background-color: #E2EDF2;
+        background-color: #F7F9FA;
         -webkit-transition: width .3s ease-in-out;
         -moz-transition: width .3s ease-in-out;
         -o-transition: width .3s ease-in-out;
         transition: width .3s ease-in-out;
         border-color: #3E79BB;
-        @include u-width('mobile-lg');
+        @include u-width('tablet');
         @include u-border(2px)
       }
 
       &:focus ~ .arrow-icon {
         display: block;
+        border-color: #3E79BB;
+        @include u-border(2px);
+        @include u-border-left(0);
       }
     }
 
@@ -68,56 +55,54 @@
     }
 
   .search-icon {
-    background-color: #E2EDF2;
-    border-color: #3E79BB;
-    margin-right: -42px;
+    background-color: #F7F9FA;
+    border-color: #11385B;
+    margin-right: -48px;
 
     @include u-radius-right(0);
     @include u-radius-left('lg');
     @include u-height(5);
-    @include u-border(2px);
-    @include u-border-right(0);
-
-      // @include u-radius-right(0);
-      // @include u-radius-left('lg');
-      // @include u-height(5);
 
       svg {
-        fill: #11385B;
+        fill: #3E79BB;
         top: 50%;
         -ms-transform: translateY(-4%);
         transform: translateY(-4%);
+        padding: 0.4rem;
+        margin-left: 5px;
 
         @include u-height(5);
         @include u-width(5);
-        @include u-padding(1)
-        // @include u-height(4);
-        // @include u-width(4);
-        // @include u-padding(1);
       }
   }
 
   .arrow-icon {
     display: none;
     margin-left: -48px;
-    background-color: #E2EDF2;
+    background-color: #F7F9FA;
     -webkit-transition: width .3s ease-in-out;
     -moz-transition: width .3s ease-in-out;
     -o-transition: width .3s ease-in-out;
     transition: width .3s ease-in-out;
-    border-color: #3E79BB;
+    border-color: #D3D3D3;
     @include u-radius-left(0);
     @include u-radius-right('lg');
     @include u-height(5);
     @include u-border(2px);
     @include u-border-left(0);
 
+    @include at-media-max('tablet') {
+      display: block;
+      @include u-border(1px);
+      @include u-border-left(0);
+    }
+
     &:hover svg path {
       fill: #CB5154;
     }
 
       svg path {
-        fill: #11385B;
+        fill: #3E79BB;
         top: 50%;
 
         @include u-height(4);
