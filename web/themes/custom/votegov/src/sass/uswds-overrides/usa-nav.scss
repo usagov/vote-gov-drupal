@@ -10,12 +10,12 @@
 .usa-nav__primary .usa-nav__primary-item {
   @include at-media('tablet') {
     &:hover{
-      background-color: $bg-light-cool;
       @include u-border(0);
+      background-color: $bg-light-cool;
     }
 
     .is-active, .usa-current {
-      border-bottom: solid;
+      @include u-border-bottom('solid');
       border-color: $ac-warm-active;
     }
 
