@@ -92,12 +92,12 @@ echo "Downloading terraform state..."
 
 echo "Saving to backup bucket..."
 {
-  cf target -s "${backup_space}"
+  cf target -s "${backup_space}" >/dev/null 2>&1
 
   export service="${project}-backup"
   export service_key="${service}-key"
-  cf delete-service-key "${service}" "${service_key}" -f
-  cf create-service-key "${service}" "${service_key}"
+  cf delete-service-key "${service}" "${service_key}" -f >/dev/null 2>&1
+  cf create-service-key "${service}" "${service_key}" >/dev/null 2>&1
   sleep 2
 
   export s3_credentials=$(cf service-key "${service}" "${service_key}" | tail -n +2)
@@ -111,31 +111,26 @@ echo "Saving to backup bucket..."
   cp ../backup_${BACKUP_ENV}.sql backup_${now}.sql
   gzip backup_${now}.sql
 
-  aws s3 cp ./ s3://${bucket}/${BACKUP_ENV}/${backup_folder} --exclude "*" --include "*.sql.gz" --include "*.tar.gz" --recursive --no-verify-ssl 2>/dev/null
+  aws s3 cp ./ s3://${bucket}/${BACKUP_ENV}/${backup_folder} --exclude "*" --include "*.sql.gz" --include "*.tar.gz" --recursive --no-verify-ssl >/dev/null 2>&1
 
   tar czf latest.tar.gz *.gz
-  cp latest.tar.gz ${today}.tar.gz
 
   # delete latest and backups older than 15 days in the env's top level directory
-  aws s3 rm s3://${bucket}/${BACKUP_ENV}/latest.tar.gz --no-verify-ssl 2>/dev/null
-  aws s3 ls s3://${bucket}/${BACKUP_ENV}/ | while read -r line;
-    do
+  aws s3 rm s3://${bucket}/${BACKUP_ENV}/latest.tar.gz --no-verify-ssl >/dev/null 2>&1
+  aws s3 ls s3://${bucket}/${BACKUP_ENV}/ | while read -r line; do
     create_date=$(echo $line | awk {'print $1" "$2'})
-    create_date=$(date --date "$create_date" +%s)
-    older_than=$(date --date "16 days ago" +%s)
-    if [[ $create_date -lt $older_than ]]
-    then
+    create_date=$(date --date "$create_date" +%s 2>/dev/null)
+    older_than=$(date --date "15 days ago" +%s)
+    if [[ $create_date -le $older_than ]]; then
       filename=$(echo $line | awk {'print $4'})
-
-      if [[ $filename != "" ]]
-      then
-        aws s3 rm s3://${bucket}/${BACKUP_ENV}/$filename --no-verify-ssl 2>/dev/null
+      if [[ $filename != "" ]]; then
+        aws s3 rm s3://${bucket}/${BACKUP_ENV}/$filename --no-verify-ssl >/dev/null 2>&1 && echo "Successfully deleted $filename from S3!" || echo "Failed to delete $filename from S3!"
       fi
     fi
     done;
 
-  aws s3 cp ./latest.tar.gz s3://${bucket}/${BACKUP_ENV}/  --no-verify-ssl 2>/dev/null
-  aws s3 cp ./${today}.tar.gz s3://${bucket}/${BACKUP_ENV}/  --no-verify-ssl 2>/dev/null
+  aws s3 cp ./latest.tar.gz s3://${bucket}/${BACKUP_ENV}/  --no-verify-ssl >/dev/null 2>&1 && echo "Successfully copied latest.tar.gz to S3!" || echo "Failed to copy latest.tar.gz to S3!"
+  aws s3 cp ./latest.tar.gz s3://${bucket}/${BACKUP_ENV}/${today}.tar.gz  --no-verify-ssl >/dev/null 2>&1 && echo "Successfully copied ${today}.tar.gz to S3!" || echo "Failed to copy ${today}.tar.gz to S3!"
 
-  cf delete-service-key "${service}" "${service_key}" -f
-} >/dev/null 2>&1
+  cf delete-service-key "${service}" "${service_key}" -f >/dev/null 2>&1
+}
