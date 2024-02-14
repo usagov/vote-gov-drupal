@@ -9,14 +9,22 @@
 
 .usa-nav__primary .usa-nav__primary-item {
   @include at-media('tablet') {
+    &:hover{
+      background-color: $bg-light-cool;
+      @include u-border(0);
+    }
+
+    .is-active, .usa-current {
+      border-bottom: solid;
+      border-color: $ac-warm-active;
+    }
+
     a, button {
       @include u-text('primary-darker');
       @include u-text('normal');
     }
-
-    &:hover{
-      background-color: $bg-light-cool;
-      @include u-border(0);
+    .usa-nav__link:hover::after {
+      all: unset; //add-bar.scss
     }
   }
 }
