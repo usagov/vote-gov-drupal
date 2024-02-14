@@ -111,7 +111,7 @@ echo "Saving to backup bucket..."
   cp ../backup_${BACKUP_ENV}.sql backup_${now}.sql
   gzip backup_${now}.sql
 
-  aws s3 cp ./ s3://${bucket}/${BACKUP_ENV}/${backup_folder} --exclude "*" --include "*.sql.gz" --include "*.tar.gz" --recursive --no-verify-ssl 2>/dev/null 2>&1
+  aws s3 cp ./ s3://${bucket}/${BACKUP_ENV}/${backup_folder} --exclude "*" --include "*.sql.gz" --include "*.tar.gz" --recursive --no-verify-ssl >/dev/null 2>&1
 
   tar czf latest.tar.gz *.gz
 
