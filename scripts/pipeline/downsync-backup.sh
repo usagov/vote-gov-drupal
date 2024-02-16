@@ -19,7 +19,7 @@ wait_for_tunnel() {
 
 ## Create a tunnel through the application to pull the database.
 echo "Creating tunnel to database..."
-if [ ${BACKUP_ENV} = "prod" ]; then
+if [[ ${BACKUP_ENV} = "prod" ]]; then
   cf enable-ssh ${project}-drupal-${BACKUP_ENV}
   cf restart --strategy rolling ${project}-drupal-${BACKUP_ENV}
 fi
