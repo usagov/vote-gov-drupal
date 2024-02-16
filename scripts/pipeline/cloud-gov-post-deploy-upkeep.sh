@@ -6,6 +6,13 @@ set -e
 if [[ ${CIRCLE_BRANCH} = "test" ]]; then
   cf enable-ssh ${project}-drupal-${CIRCLE_BRANCH}
   cf restart --strategy rolling ${project}-drupal-${CIRCLE_BRANCH}
+
+  # Wait until drupal app is running
+  until cf app ${project}-drupal-${CIRCLE_BRANCH} | grep running
+  do
+    sleep 1
+  done
+
 fi
 
 echo "Running upkeep..."
