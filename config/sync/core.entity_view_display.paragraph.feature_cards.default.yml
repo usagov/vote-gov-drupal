@@ -12,10 +12,11 @@ bundle: feature_cards
 mode: default
 content:
   field_cards:
-    type: entity_reference_label
-    label: above
+    type: entity_reference_entity_view
+    label: hidden
     settings:
-      link: true
+      view_mode: teaser
+      link: false
     third_party_settings: {  }
     weight: 1
     region: content
