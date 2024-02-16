@@ -1,0 +1,31 @@
+uuid: fd4a2ad6-9e66-4fd4-8079-4c23d7311155
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.feature_cards.field_cards
+    - field.field.paragraph.feature_cards.field_heading
+    - paragraphs.paragraphs_type.feature_cards
+id: paragraph.feature_cards.default
+targetEntityType: paragraph
+bundle: feature_cards
+mode: default
+content:
+  field_cards:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
