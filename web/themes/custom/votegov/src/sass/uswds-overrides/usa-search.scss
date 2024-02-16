@@ -6,7 +6,7 @@
   line-height: 2.6;
 
   &:hover .usa-input, &:hover .search-icon {
-    background-color: #E2EDF2;
+    background-color: $bg-light-cool;
   }
 
   @include at-media-max('tablet') {
@@ -16,47 +16,46 @@
 
   .usa-input {
     overflow: visible;
-    background-color: #F7F9FA;
+    background-color: $bg-light;
     text-indent: 40px;
       
     @include u-radius('lg');
     @include u-border('transparent');
     @include u-height(5);
-    @include u-width('card');
-    @include u-font('mono', 'md');
+    @include u-width(15);
     
     @include at-media-max('tablet') {
       @include u-width('tablet');
-      border-color: #D3D3D3;
+      border-color: $bg-light-medium;
     }
 
       &:focus {
-        background-color: #F7F9FA;
+        background-color: $bg-light;
         -webkit-transition: width .3s ease-in-out;
         -moz-transition: width .3s ease-in-out;
         -o-transition: width .3s ease-in-out;
         transition: width .3s ease-in-out;
-        border-color: #3E79BB;
+        border-color: $base-primary;
         @include u-width('tablet');
         @include u-border(2px)
       }
 
       &:focus ~ .arrow-icon {
         display: block;
-        border-color: #3E79BB;
+        border-color: $base-primary;
         @include u-border(2px);
         @include u-border-left(0);
       }
     }
 
     .usa-input::placeholder {
-      color: #11385B;
+      color: $base-dark;
       opacity: 1;
     }
 
   .search-icon {
-    background-color: #F7F9FA;
-    border-color: #11385B;
+    background-color: $bg-light;
+    border-color: $base-dark;
     margin-right: -48px;
 
     @include u-radius-right(0);
@@ -64,7 +63,7 @@
     @include u-height(5);
 
       svg {
-        fill: #3E79BB;
+        fill: $base-primary;
         top: 50%;
         -ms-transform: translateY(-4%);
         transform: translateY(-4%);
@@ -79,12 +78,12 @@
   .arrow-icon {
     display: none;
     margin-left: -48px;
-    background-color: #F7F9FA;
+    background-color: $bg-light;
     -webkit-transition: width .3s ease-in-out;
     -moz-transition: width .3s ease-in-out;
     -o-transition: width .3s ease-in-out;
     transition: width .3s ease-in-out;
-    border-color: #D3D3D3;
+    border-color: $bg-light-medium;
     @include u-radius-left(0);
     @include u-radius-right('lg');
     @include u-height(5);
@@ -98,11 +97,11 @@
     }
 
     &:hover svg path {
-      fill: #CB5154;
+      fill: $ac-warm;
     }
 
       svg path {
-        fill: #3E79BB;
+        fill: $base-primary;
         top: 50%;
 
         @include u-height(4);
