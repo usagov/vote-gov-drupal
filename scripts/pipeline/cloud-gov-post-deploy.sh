@@ -11,7 +11,7 @@ done
 # Enable SSH if in prod
 if [[ ${CIRCLE_BRANCH} = "test" ]]; then
   cf enable-ssh ${project}-drupal-${CIRCLE_BRANCH}
-  #cf restart --strategy rolling ${project}-drupal-${CIRCLE_BRANCH}
+  cf restart --strategy rolling ${project}-drupal-${CIRCLE_BRANCH}
 fi
 
 echo "Running post deploy steps..."
