@@ -16,8 +16,8 @@
 }
 
 .usa-header {
-  background-color: #FFFFFF;
-  border-color: #D3D3D3;
+  background-color: $base-white;
+  border-color: $bg-light-medium;
   @include u-border-bottom(1px);
 
   &--basic {
