@@ -1,4 +1,5 @@
 @use "uswds-core" as *;
+@use "variables" as *;
 
 .usa-navbar {
   @include u-justify-content('justify');
@@ -26,8 +27,7 @@
       padding: 0;
 
       &__link:hover::after {
-        background-color: #C74345;
-        bottom: 0;
+        display: none; 
       }
     }
 

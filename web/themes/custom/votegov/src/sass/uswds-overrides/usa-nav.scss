@@ -1,4 +1,6 @@
 @use "uswds-core" as *;
+@use "mixins" as *;
+@use "variables" as *;
 
 .usa-nav {
   width: 100%;
@@ -8,7 +10,36 @@
     left: 0%;
 
     button[aria-expanded=true] span::after {
-      background-color: #11385B;
+      background-color: $base-dark;
+    }
+
+    .usa-nav__primary-item {
+      a {
+        color: $base-dark;
+        font-weight: 400;
+        
+        &:hover {
+          color: $base-dark;
+        }
+      }
+
+      &:has(.is-active)::after {
+        background-color: $ac-warm-active;
+        border-radius: 0;
+        content: "";
+        display: block;
+        position: relative;
+        height: 0.25rem;
+        margin-top: -4px;
+      }
+
+      &:has(.usa-current[aria-expanded=true])::after {
+        display: none;
+      }
+
+      >.usa-current::after {
+        display: none;
+      }
     }
   }
 
@@ -16,49 +47,48 @@
     height: 4rem;
 
     &:hover {
-      background-color: #E2EDF2;
+      color: $base-dark;
+      background-color: $bg-light-cool;
     }
 
     button {
-      color: #11385B;
+      color: $base-dark;
+      font-weight: 400;
 
       &[aria-expanded=true] {
-        color: #11385B;
-        background-color: #E2EDF2 !important;
+        color: $base-dark;
+        background-color: $bg-light-cool !important;
       }
 
       &:hover {
-        color: #11385B;
+        color: $base-dark;
       }
     }
   }
 
   &__submenu {
-    color: #11385B;
+    color: $base-dark;
+    background-color: $bg-light-cool;
     padding: 0;
 
     .usa-nav__submenu-item a {
-      color: #11385b;
+      color: $base-dark;
       text-decoration: none;
+      border-bottom: 0;
 
       &:hover {
-        color: #E2EDF2;
+        color: $bg-light-cool;
         text-decoration: none;
       }
     }
   }
 
   &__submenu-item {
-    background-color: #E2EDF2;
+    background-color: $bg-light-cool;
 
     &:hover {
-      background-color: #3E79BB;
+      background-color: $base-primary;
     }
 
-  }
-
-  .usa-search {
-    color: #11385B;
-    margin-left: 0;
   }
 }
