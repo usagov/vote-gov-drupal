@@ -3,11 +3,11 @@
 @use "variables" as *;
 
 .usa-nav {
-  width: 100%;
+  @include u-width('full');
 
   &__primary {
-    margin: auto;
     left: 0%;
+    @include u-margin-x(auto);
 
     button[aria-expanded=true] span::after {
       background-color: $base-dark;
@@ -16,21 +16,21 @@
     .usa-nav__primary-item {
       a {
         color: $base-dark;
-        font-weight: 400;
-        
+        @include u-text('normal');
+
         &:hover {
           color: $base-dark;
         }
       }
 
       &:has(.is-active)::after {
-        background-color: $ac-warm-active;
-        border-radius: 0;
         content: "";
+        background-color: $ac-warm-active;
         display: block;
         position: relative;
-        height: 0.25rem;
-        margin-top: -4px;
+        @include u-radius(0);
+        @include u-height(0.5);
+        @include u-margin-top(-0.5);
       }
 
       &:has(.usa-current[aria-expanded=true])::after {
@@ -53,11 +53,11 @@
 
     button {
       color: $base-dark;
-      font-weight: 400;
+      @include u-text('normal');
 
       &[aria-expanded=true] {
         color: $base-dark;
-        background-color: $bg-light-cool !important;
+        background-color: $bg-light-cool;
       }
 
       &:hover {
@@ -69,12 +69,12 @@
   &__submenu {
     color: $base-dark;
     background-color: $bg-light-cool;
-    padding: 0;
+    @include u-padding(0);
 
     .usa-nav__submenu-item a {
       color: $base-dark;
       text-decoration: none;
-      border-bottom: 0;
+      @include u-border(0);
 
       &:hover {
         color: $bg-light-cool;

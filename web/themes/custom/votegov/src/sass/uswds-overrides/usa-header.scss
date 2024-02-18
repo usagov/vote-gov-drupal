@@ -16,7 +16,8 @@
 }
 
 .usa-header {
-  border-bottom: 1px solid #D3D3D3;
+  border-color: #D3D3D3;
+  @include u-border-bottom(1px);
 
   &--basic {
     .usa-nav-container {
@@ -24,7 +25,7 @@
     }
 
     .usa-nav {
-      padding: 0;
+      @include u-padding(0);
 
       &__link:hover::after {
         display: none; 
