@@ -9,9 +9,9 @@
     background-color: $bg-light-cool;
   }
 
-  @include at-media-max('tablet') {
-    padding-right: 24px;
-    padding-left: 24px;
+  @include at-media-max('desktop') {
+    @include u-padding-x(3);
+    justify-content: center;
   }
 
   .usa-input {
@@ -24,20 +24,20 @@
     @include u-height(5);
     @include u-width(15);
     
-    @include at-media-max('tablet') {
-      @include u-width('tablet');
+    @include at-media-max('desktop') {
+      min-width: 100%;
       border-color: $bg-light-medium;
     }
 
       &:focus {
         background-color: $bg-light;
+        border-color: $base-primary;
         -webkit-transition: width .3s ease-in-out;
         -moz-transition: width .3s ease-in-out;
         -o-transition: width .3s ease-in-out;
         transition: width .3s ease-in-out;
-        border-color: $base-primary;
         @include u-width('tablet');
-        @include u-border(2px)
+        @include u-border(2px);
       }
 
       &:focus ~ .arrow-icon {
@@ -56,8 +56,7 @@
   .search-icon {
     background-color: $bg-light;
     border-color: $base-dark;
-    margin-right: -48px;
-
+    @include u-margin-right('neg-6');
     @include u-radius-right(0);
     @include u-radius-left('lg');
     @include u-height(5);
@@ -65,11 +64,10 @@
       svg {
         fill: $base-primary;
         top: 50%;
+        padding: 0.4rem;
         -ms-transform: translateY(-4%);
         transform: translateY(-4%);
-        padding: 0.4rem;
-        margin-left: 5px;
-
+        @include u-margin-left(0);
         @include u-height(5);
         @include u-width(5);
       }
@@ -77,20 +75,20 @@
 
   .arrow-icon {
     display: none;
-    margin-left: -48px;
+    border-color: $bg-light-medium;
     background-color: $bg-light;
     -webkit-transition: width .3s ease-in-out;
     -moz-transition: width .3s ease-in-out;
     -o-transition: width .3s ease-in-out;
     transition: width .3s ease-in-out;
-    border-color: $bg-light-medium;
+    @include u-margin-left('neg-6');
     @include u-radius-left(0);
     @include u-radius-right('lg');
     @include u-height(5);
     @include u-border(2px);
     @include u-border-left(0);
 
-    @include at-media-max('tablet') {
+    @include at-media-max('desktop') {
       display: block;
       @include u-border(1px);
       @include u-border-left(0);
@@ -103,7 +101,6 @@
       svg path {
         fill: $base-primary;
         top: 50%;
-
         @include u-height(4);
         @include u-width(4);
         @include u-padding(1);
