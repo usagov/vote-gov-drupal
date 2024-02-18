@@ -41,6 +41,10 @@
         display: none;
       }
     }
+
+    &.usa-accordion {
+      @include u-margin-top(0);
+    }
   }
 
   &__primary-item {
