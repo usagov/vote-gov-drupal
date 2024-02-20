@@ -1,0 +1,14 @@
+@forward 'usa-footer';
+@use "uswds-core" as *;
+
+.usa-footer__secondary-section {
+    background-color: #f0f0f0;
+}
+
+.partner-logo-menu {
+    display: flex;
+}
+
+.gsa-img-container {
+    padding-right: 16px;
+}

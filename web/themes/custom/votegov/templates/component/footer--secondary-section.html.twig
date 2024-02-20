@@ -1,10 +1,24 @@
+{% set GSAlink = link('General Services Administration' | t, 'https://www.gsa.gov/') %}
+
 <div class="usa-footer__secondary-section">
   <div class="grid-container">
     <div class="grid-row grid-gap">
       <div class="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
-        <div class="mobile-lg:grid-col-auto">
+        <div class="mobile-lg:grid-col-auto partner-logo-menu">
           {# Footer Secondary menu. #}
-          {{ 'Menu Placeholder' }}
+          {# GSA logo #}
+          <div class="gsa-img-container"><img src="{{ theme_path }}/img/gsa-logo.svg" alt="{{'GSA logo'|t}}" width="48" height="48"></div>
+          <div class="grid-col-3" aria-label="{{ 'Agency description' | t }}">
+            {{ 'Vote.gov is an official website of the @link.' | t({'@link': GSAlink | render}) }}
+          </div>
+          {# Vertical Line #}
+          <div style="width: 5%; height: 100%; transform: rotate(-90deg); border: 1px #D3D3D3 solid"></div>
+          {# EAC logo #}
+          <div class="grid-col-3">
+            <a href="{{ language == 'es' ? 'https://www.eac.gov/translations/spanish' : 'https://www.eac.gov/' }}" target="_blank">
+              <img class="eac-logo" width="146" height="48" src="{{ theme_path }}/img/eac-logo.webp" alt="{{ 'U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov' | t }}" />
+            </a>
+          </div>
         </div>
       </div>
       <div class="usa-footer__contact-links mobile-lg:grid-col-6">
