@@ -1,0 +1,109 @@
+@use "uswds-core" as *;
+@use "mixins" as *;
+@use "variables" as *;
+
+#search {
+  line-height: 2.6;
+
+  &:hover .usa-input, &:hover .search-icon {
+    background-color: $bg-light-cool;
+  }
+
+  @include at-media-max('desktop') {
+    @include u-padding-x(3);
+    justify-content: center;
+  }
+
+  .usa-input {
+    overflow: visible;
+    background-color: $bg-light;
+    text-indent: 40px;
+      
+    @include u-radius('lg');
+    @include u-border('transparent');
+    @include u-height(5);
+    @include u-width(15);
+    
+    @include at-media-max('desktop') {
+      min-width: 100%;
+      border-color: $bg-light-medium;
+    }
+
+      &:focus {
+        background-color: $bg-light;
+        border-color: $base-primary;
+        -webkit-transition: width .3s ease-in-out;
+        -moz-transition: width .3s ease-in-out;
+        -o-transition: width .3s ease-in-out;
+        transition: width .3s ease-in-out;
+        @include u-width('tablet');
+        @include u-border(2px);
+      }
+
+      &:focus ~ .arrow-icon {
+        display: block;
+        border-color: $base-primary;
+        @include u-border(2px);
+        @include u-border-left(0);
+      }
+    }
+
+    .usa-input::placeholder {
+      color: $base-dark;
+      opacity: 1;
+    }
+
+  .search-icon {
+    background-color: $bg-light;
+    border-color: $base-dark;
+    @include u-margin-right('neg-6');
+    @include u-radius-right(0);
+    @include u-radius-left('lg');
+    @include u-height(5);
+
+      svg {
+        fill: $base-primary;
+        top: 50%;
+        padding: 0.4rem;
+        -ms-transform: translateY(-4%);
+        transform: translateY(-4%);
+        @include u-margin-left(0);
+        @include u-height(5);
+        @include u-width(5);
+      }
+  }
+
+  .arrow-icon {
+    display: none;
+    border-color: $bg-light-medium;
+    background-color: $bg-light;
+    -webkit-transition: width .3s ease-in-out;
+    -moz-transition: width .3s ease-in-out;
+    -o-transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+    @include u-margin-left('neg-6');
+    @include u-radius-left(0);
+    @include u-radius-right('lg');
+    @include u-height(5);
+    @include u-border(2px);
+    @include u-border-left(0);
+
+    @include at-media-max('desktop') {
+      display: block;
+      @include u-border(1px);
+      @include u-border-left(0);
+    }
+
+    &:hover svg path {
+      fill: $ac-warm;
+    }
+
+      svg path {
+        fill: $base-primary;
+        top: 50%;
+        @include u-height(4);
+        @include u-width(4);
+        @include u-padding(1);
+      }
+  }
+}

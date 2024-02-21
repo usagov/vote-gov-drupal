@@ -1,4 +1,5 @@
 @use "uswds-core" as *;
+@use "variables" as *;
 
 .usa-navbar {
   @include u-justify-content('justify');
@@ -7,8 +8,33 @@
 
 .usa-logo {
   width: 9rem;
+  @include u-margin-y(0);
 
   @include at-media-max('desktop') {
     @include u-margin-y(2);
+  }
+}
+
+.usa-header {
+  background-color: #FFFFFF;
+  border-color: #D3D3D3;
+  @include u-border-bottom(1px);
+
+  &--basic {
+    .usa-nav-container {
+      align-items: center;
+    }
+
+    .usa-nav {
+      @include u-padding(0);
+
+      &__link:hover::after {
+        display: none; 
+      }
+    }
+
+    .usa-navbar {
+      @include u-width('card');
+    }
   }
 }

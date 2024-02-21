@@ -1,30 +1,98 @@
 @use "uswds-core" as *;
+@use "mixins" as *;
 @use "variables" as *;
 
-.usa-header--basic .usa-nav {
-  @include at-media('tablet') {
-    @include u-flex('justify');
-  }
-}
+.usa-nav {
+  @include u-width('full');
 
-.usa-nav__primary .usa-nav__primary-item {
-  @include at-media('tablet') {
-    &:hover{
-      @include u-border(0);
+  &__primary {
+    left: 0%;
+    @include u-margin-x(auto);
+
+    button[aria-expanded=true] span::after {
+      background-color: $base-dark;
+    }
+
+    .usa-nav__primary-item {
+      a {
+        color: $base-dark;
+        @include u-text('normal');
+
+        &:hover {
+          color: $base-dark;
+        }
+      }
+
+      &:has(.is-active)::after {
+        content: "";
+        background-color: $ac-warm-active;
+        display: block;
+        position: relative;
+        @include u-radius(0);
+        @include u-height(0.5);
+        @include u-margin-top(-0.5);
+      }
+
+      &:has(.usa-current[aria-expanded=true])::after {
+        display: none;
+      }
+
+      >.usa-current::after {
+        display: none;
+      }
+    }
+
+    &.usa-accordion {
+      @include u-margin-top(0);
+    }
+  }
+
+  &__primary-item {
+    height: 4rem;
+
+    &:hover {
+      color: $base-dark;
       background-color: $bg-light-cool;
     }
 
-    .is-active, .usa-current {
-      @include u-border-bottom('solid');
-      border-color: $ac-warm-active;
+    button {
+      color: $base-dark;
+      @include u-text('normal');
+
+      &[aria-expanded=true] {
+        color: $base-dark;
+        background-color: $bg-light-cool;
+      }
+
+      &:hover {
+        color: $base-dark;
+      }
+    }
+  }
+
+  &__submenu {
+    color: $base-dark;
+    background-color: $bg-light-cool;
+    @include u-padding(0);
+
+    .usa-nav__submenu-item a {
+      color: $base-dark;
+      text-decoration: none;
+      @include u-border(0);
+
+      &:hover {
+        color: $bg-light-cool;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__submenu-item {
+    background-color: $bg-light-cool;
+
+    &:hover {
+      background-color: $base-primary;
     }
 
-    a, button {
-      @include u-text('primary-darker');
-      @include u-text('normal');
-    }
-    .usa-nav__link:hover::after {
-      all: unset; //add-bar.scss
-    }
   }
 }
