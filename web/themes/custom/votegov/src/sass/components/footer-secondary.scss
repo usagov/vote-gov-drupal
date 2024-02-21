@@ -8,6 +8,18 @@
     @include u-border-top('solid');
     border-color: $bg-light-medium;
     background-color: #f0f0f0;
+
+    .logo-divider {
+        border: 1px #D3D3D3 solid;
+        @include at-media('tablet') {
+            transform: rotate(-90deg);
+            width: 5%;
+            height: 100%;
+        }
+        @include at-media-max('tablet') {
+            @include u-width(15);
+        }
+    }
 }
 
 .usa-footer__logo {
@@ -25,10 +37,8 @@
 }
 
 .usa-footer__social-links {
-    @include at-media('tablet') {
         @include u-display('flex');
         @include u-flex('align-center')
-    }
 }
 
 .usa-social-link {
