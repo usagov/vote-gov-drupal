@@ -4,7 +4,7 @@
   <div class="grid-container">
     <div class="grid-row grid-gap">
       <div class="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
-        <div class="mobile-lg:grid-col-auto partner-logo-menu">
+        <div class="partner-logo-menu mobile-lg:grid-col-auto">
           {# Footer Secondary menu. #}
           {# GSA logo #}
           <div class="gsa-img-container"><img src="{{ theme_path }}/img/gsa-logo.svg" alt="{{'GSA logo'|t}}" width="48" height="48"></div>
@@ -19,18 +19,12 @@
               <img class="eac-logo" width="146" height="48" src="{{ theme_path }}/img/eac-logo.webp" alt="{{ 'U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov' | t }}" />
             </a>
           </div>
-        </div>
-      </div>
-      <div class="usa-footer__contact-links mobile-lg:grid-col-6">
-        {# Social links menu. #}
-        <div class="usa-footer__social-links grid-row grid-gap-1">
-          <div class="grid-col-auto">
-            <a class="usa-social-link" href="javascript:void(0);"
-            ><img
-                class="usa-social-link__icon"
-                src="{{ uswds_img_path }}/usa-icons/twitter.svg"
-                alt="Twitter"
-              /></a>
+          {# Twitter #}
+          <div class="usa-footer__social-links grid-col-5">
+            <span>{{ 'Follow vote.gov on ' | t }}</span>
+            <a class="usa-social-link" href="javascript:void(0);">
+              <img class="usa-social-link__icon" src="{{ theme_path }}/img/x-logo.svg" alt="X"/>
+            </a>
           </div>
         </div>
       </div>

@@ -1,14 +1,46 @@
 @forward 'usa-footer';
 @use "uswds-core" as *;
+@use "variables" as *;
 
 .usa-footer__secondary-section {
+    @include u-padding-y(6);
+    @include u-border-top(1px);
+    @include u-border-top('solid');
+    border-color: $bg-light-medium;
     background-color: #f0f0f0;
 }
 
+.usa-footer__logo {
+    color: $base-dark;
+}
+
 .partner-logo-menu {
-    display: flex;
+    @include at-media('tablet') {
+        @include u-display('flex');
+    }
 }
 
 .gsa-img-container {
-    padding-right: 16px;
+    @include u-padding-right(2);
+}
+
+.usa-footer__social-links {
+    @include at-media('tablet') {
+        @include u-display('flex');
+        @include u-flex('align-center')
+    }
+}
+
+.usa-social-link {
+    @include u-radius-top('pill');
+    @include u-radius-bottom('pill');
+    @include u-width(4);
+    @include u-height(4);
+    @include u-margin(0.5);
+    background-color: $bg-light-cool;
+}
+
+.usa-social-link__icon {
+    @include u-width(2);
+    @include u-height(2);
 }
