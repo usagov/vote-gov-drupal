@@ -34,7 +34,7 @@ We call a macro which calls itself to render the full tree.
 
   {{ menus.menu_links(items, attributes, 0, 'basic-mega-nav-section-') }}
 
-  <section aria-label="{{ 'Search component' | t }}">
+  <section id="usa-search--expandable" aria-label="{{ 'Search component' | t }}">
     {{ drupal_entity('block_content', 2) }}
   </section>
 </nav>
@@ -71,6 +71,7 @@ We call a macro which calls itself to render the full tree.
               {% endif %}
             {% endif %}
           </li>
+          <span class="li-divider"></span>
         {% endfor %}
       </ul>
     {# Secondary level menu structure. #}

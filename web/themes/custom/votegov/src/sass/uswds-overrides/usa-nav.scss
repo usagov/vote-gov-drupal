@@ -2,90 +2,129 @@
 @use "mixins" as *;
 @use "variables" as *;
 
+
+
 .usa-nav {
   @include u-width('full');
 
-  &__primary {
-    left: 0%;
-    @include u-margin-x(auto);
+    &__primary {
+        // @include at-media-max('desktop') {
+        //   @include u-padding-x(3);
+        // }
 
-    button[aria-expanded=true] span::after {
-      background-color: $base-dark;
+        .li-divider {
+          height: 2px;
+          width: 83%;
+          display: block;
+          background-color: $bg-light-medium;
+          margin-right: auto;
+          margin-left: auto;
+        }
+
+      @include at-media('desktop') {
+        left: 0%;
+        @include u-margin-x(auto);
+
+        .li-divider {
+          display: none;
+        }
+
+        button[aria-expanded=true] span::after {
+          background-color: $base-dark;
+        }
+
+        .usa-nav__primary-item {
+          a {
+            color: $base-dark;
+            @include u-text('normal');
+
+            &:hover {
+              color: $base-dark;
+            }
+          }
+
+          &:has(.is-active)::after {
+            content: "";
+            background-color: $ac-warm-active;
+            display: block;
+            position: relative;
+            @include u-radius(0);
+            @include u-height(0.5);
+            @include u-margin-top(-0.5);
+          }
+
+          &:has(.usa-current[aria-expanded=true])::after {
+            display: none;
+          }
+
+          >.usa-current::after {
+            display: none;
+          }
+        }
+
+        &.usa-accordion {
+          @include u-margin-top(0);
+        }
+      }
     }
 
-    .usa-nav__primary-item {
-      a {
+    &__primary-item {
+      border: 0px solid $bg-light-medium;
+      
+      button {
         color: $base-dark;
         @include u-text('normal');
+
+        &[aria-expanded=true] {
+          color: $base-dark;
+          background-color: $bg-light-cool;
+        }
 
         &:hover {
           color: $base-dark;
         }
       }
 
-      &:has(.is-active)::after {
-        content: "";
-        background-color: $ac-warm-active;
-        display: block;
-        position: relative;
-        @include u-radius(0);
-        @include u-height(0.5);
-        @include u-margin-top(-0.5);
-      }
+      @include at-media('desktop') {
+        @include u-border-bottom(1px);
+        height: 4rem;
 
-      &:has(.usa-current[aria-expanded=true])::after {
-        display: none;
-      }
-
-      >.usa-current::after {
-        display: none;
+        &:hover {
+          color: $base-dark;
+          background-color: $bg-light-cool;
+        }
       }
     }
 
-    &.usa-accordion {
-      @include u-margin-top(0);
-    }
-  }
-
-  &__primary-item {
-    height: 4rem;
-
-    &:hover {
-      color: $base-dark;
-      background-color: $bg-light-cool;
-    }
-
-    button {
-      color: $base-dark;
-      @include u-text('normal');
-
-      &[aria-expanded=true] {
+    &__submenu {
+      @include at-media('desktop') {
         color: $base-dark;
         background-color: $bg-light-cool;
-      }
+        @include u-padding(0);
 
-      &:hover {
-        color: $base-dark;
-      }
-    }
-  }
+        .usa-nav__submenu-item a {
+          color: $base-dark;
+          text-decoration: none;
+          @include u-border(0);
 
-  &__submenu {
-    color: $base-dark;
-    background-color: $bg-light-cool;
-    @include u-padding(0);
-
-    .usa-nav__submenu-item a {
-      color: $base-dark;
-      text-decoration: none;
-      @include u-border(0);
-
-      &:hover {
-        color: $bg-light-cool;
-        text-decoration: none;
+          &:hover {
+            color: $bg-light-cool;
+            text-decoration: none;
+          }
+        }
       }
     }
-  }
+
+    // &__submenu-item {
+    //   @include at-media('desktop') {
+    //     background-color: $bg-light-cool;
+
+    //     &:hover {
+    //       background-color: $base-primary;
+    //     }
+    //   }
+    // }
+  // }
 
   &__submenu-item {
     background-color: $bg-light-cool;
