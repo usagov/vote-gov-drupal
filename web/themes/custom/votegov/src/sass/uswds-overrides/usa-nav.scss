@@ -1,0 +1,30 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+
+.usa-header--basic .usa-nav {
+  @include at-media('tablet') {
+    @include u-flex('justify');
+  }
+}
+
+.usa-nav__primary .usa-nav__primary-item {
+  @include at-media('tablet') {
+    &:hover{
+      @include u-border(0);
+      background-color: $bg-light-cool;
+    }
+
+    .is-active, .usa-current {
+      @include u-border-bottom('solid');
+      border-color: $ac-warm-active;
+    }
+
+    a, button {
+      @include u-text('primary-darker');
+      @include u-text('normal');
+    }
+    .usa-nav__link:hover::after {
+      all: unset; //add-bar.scss
+    }
+  }
+}
