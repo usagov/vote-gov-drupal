@@ -10,14 +10,14 @@
       background-color: $bg-light-cool;
     }
 
-    @include at-media-max('desktop') {
+    @include at-media-max('tablet-lg') {
       @include u-padding-x(3);
       justify-content: center;
     }
 
     .usa-input {
       background-image: url( '../../../votegov/img/svg/search.svg' );
-      background-position: left 15% center;
+      background-position: 15% 40%;
       background-repeat: no-repeat;
       overflow: visible;
       background-color: $bg-light;
@@ -28,13 +28,14 @@
       @include u-height(5);
       @include u-width(15);
       
-      @include at-media-max('desktop') {
+      @include at-media-max('tablet-lg') {
+        background-position: 2% 40%;
         min-width: 100%;
         border-color: $bg-light-medium;
       }
 
         &:focus {
-          background-position: left 5% center;
+          background-position: 2% 40%;
           background-color: $bg-light;
           border-color: $base-primary;
           -webkit-transition: width .3s ease-in-out;
@@ -51,9 +52,14 @@
           @include u-border(2px);
           @include u-border-left(0);
         }
+
+        &:focus ~ .usa-nav__primary {
+          visibility: hidden;
+        }
       }
 
       .usa-input::placeholder {
+        font-size: 17px;
         color: $base-dark;
         opacity: 1;
       }
@@ -73,7 +79,7 @@
       @include u-border(2px);
       @include u-border-left(0);
 
-      @include at-media-max('desktop') {
+      @include at-media-max('tablet-lg') {
         display: block;
         @include u-border(1px);
         @include u-border-left(0);

@@ -2,32 +2,18 @@
 @use "mixins" as *;
 @use "variables" as *;
 
-
-
 .usa-nav {
   @include u-width('full');
 
     &__primary {
-        // @include at-media-max('desktop') {
+        // @include at-media('desktop') {
         //   @include u-padding-x(3);
         // }
-
-        .li-divider {
-          height: 2px;
-          width: 83%;
-          display: block;
-          background-color: $bg-light-medium;
-          margin-right: auto;
-          margin-left: auto;
-        }
-
-      @include at-media('desktop') {
         left: 0%;
         @include u-margin-x(auto);
-
-        .li-divider {
-          display: none;
-        }
+        // .li-divider {
+        //   display: none;
+        // }
 
         button[aria-expanded=true] span::after {
           background-color: $base-dark;
@@ -51,6 +37,10 @@
             @include u-radius(0);
             @include u-height(0.5);
             @include u-margin-top(-0.5);
+
+            @include at-media-max('tablet-lg') {
+              display: none;
+            }
           }
 
           &:has(.usa-current[aria-expanded=true])::after {
@@ -65,13 +55,35 @@
         &.usa-accordion {
           @include u-margin-top(0);
         }
-      }
+
+        @include at-media-max('tablet-lg') {
+          .li-divider {
+            height: 2px;
+            width: 83%;
+            display: block;
+            background-color: $bg-light-medium;
+            margin-right: auto;
+            margin-left: auto;
+          }
+        }
     }
 
     &__primary-item {
-      border: 0px solid $bg-light-medium;
+      @include u-border-bottom(1px);
+      border: $bg-light-medium;
+      height: 4rem;
+
+      &:hover {
+        color: $base-dark;
+        background-color: $bg-light-cool;
+      }
+
+      a, button {
+        font-size: 19px;
+      }
       
       button {
+        padding: 23px 16px;
         color: $base-dark;
         @include u-text('normal');
 
@@ -85,34 +97,30 @@
         }
       }
 
-      @include at-media('desktop') {
-        @include u-border-bottom(1px);
-        height: 4rem;
-
-        &:hover {
-          color: $base-dark;
-          background-color: $bg-light-cool;
-        }
+      @include at-media-max('tablet-lg') {
+        border: 0px solid $bg-light-medium;
       }
     }
 
     &__submenu {
-      @include at-media('desktop') {
+      // @include at-media('desktop') {
         color: $base-dark;
         background-color: $bg-light-cool;
         @include u-padding(0);
 
         .usa-nav__submenu-item a {
+          font-size: 16px;
           color: $base-dark;
           text-decoration: none;
           @include u-border(0);
 
-          &:hover {
-            color: $bg-light-cool;
+          &:hover, &:focus {
+            background-color: $base-primary;
+            color: $base-white;
             text-decoration: none;
           }
         }
-      }
+      // }
     }
 
     // &__submenu-item {
@@ -125,13 +133,25 @@
     //   }
     // }
   // }
+  
 
-  &__submenu-item {
-    background-color: $bg-light-cool;
+  // &__submenu-item {
+  //   background-color: $bg-light-cool;
 
-    &:hover {
-      background-color: $base-primary;
-    }
+  //   &:hover {
+  //     background-color: $base-primary;
+  //   }
 
-  }
+  // }
+
+
+    // &__submenu-item {
+    //   @include at-media('desktop') {
+    //     background-color: $bg-light-cool;
+
+    //     &:hover {
+    //       background-color: $base-primary;
+    //     }
+    //   }
+    // }
 }
