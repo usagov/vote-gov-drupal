@@ -1,0 +1,42 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+
+.vote-hero{
+  @include at-media('tablet') {
+      @include grid-container;
+      @include u-position('relative');
+      @include u-top(0);
+      @include u-bottom(0);
+      left: 15%;
+      right: 50%;
+      @include u-width('auto');
+      @include u-padding-top(4);
+  }
+}
+.vote-hero__container{
+  @include grid-row;
+  }
+  
+  .vote-hero__image{
+    width: 100%;
+    height: 100%;
+    @include add-aspect('16x9');
+    @include at-media('tablet') {
+      object-fit: cover;
+      @include grid-col(4);
+      @include u-order(2);
+
+  }
+}
+
+
+.vote-hero__callout {
+    padding: 25px;
+  @include u-width('full');
+  @include at-media('tablet') {
+    @include u-order(1);
+    @include grid-col(8);
+    
+  }
+
+}
