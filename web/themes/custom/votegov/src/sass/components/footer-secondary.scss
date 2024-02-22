@@ -8,18 +8,6 @@
     @include u-border-top('solid');
     border-color: $bg-light-medium;
     background-color: #f0f0f0;
-
-    .logo-divider {
-        border: 1px #D3D3D3 solid;
-        @include at-media('tablet') {
-            transform: rotate(-90deg);
-            width: 5%;
-            height: 100%;
-        }
-        @include at-media-max('tablet') {
-            @include u-width(15);
-        }
-    }
 }
 
 .usa-footer__logo {
@@ -36,9 +24,43 @@
     @include u-padding-right(2);
 }
 
+.gsa-text-container {
+    @include at-media('tablet') {
+        @include grid-col(3);
+    }
+}
+
+.eac-logo-container {
+    @include u-position('relative');
+    @include at-media('tablet') {
+        @include grid-col(3);
+        @include u-padding-left(6);
+        &:before {
+            content: '';
+            background-color: $bg-light-medium;
+            @include u-display('block');
+            @include u-position('absolute');
+            @include u-width('2px');
+            @include u-height(6);
+            @include u-margin-y('auto');
+            @include u-left(0);
+            @include u-top(0);
+            @include u-bottom(0);
+
+        }
+    }
+
+    @include at-media-max('tablet'){
+        @include grid-col('auto');
+    }
+}
+
 .usa-footer__social-links {
-        @include u-display('flex');
-        @include u-flex('align-center')
+    @include u-display('flex');
+    @include u-flex('align-center');
+    @include at-media('tablet') {
+        @include grid-col(5);
+    }
 }
 
 .usa-social-link {
