@@ -13,9 +13,7 @@
     }
 
     @include at-media-max('tablet') {
-        .grid_container {
-            //padding: 0;
-        }
+        @include u-padding-bottom(0);
     }
 }
 
@@ -29,9 +27,10 @@
     }
 }
 .gsa-container {
-    display: flex;
-    align-items: center;
+    @include u-display('flex');
+    @include u-flex('align-center');
 }
+
 .gsa-img-container {
     @include u-padding-right(2);
     @include grid-col(auto);
@@ -68,11 +67,23 @@
         }
     }
 
-    @include at-media-max('tablet'){
+    @include at-media-max('tablet') {
         @include grid-col('auto');
-        justify-content: center;
-        margin-bottom: 15px;
-        margin-top: 15px
+        @include u-flex('justify-center');
+        @include u-margin-bottom(2);
+        @include u-margin-top(4);
+
+        &:before {
+            content: '';
+            background-color: $bg-light-medium;
+            @include u-display('block');
+            @include u-position('absolute');
+            @include u-width('2px');
+            @include u-height(10);
+            @include u-margin-y('auto');
+            bottom: 32px;
+            rotate: 90deg;
+        }
     }
 }
 
@@ -83,10 +94,12 @@
         @include grid-col(5);
     }
     @include at-media-max('tablet') {
-        justify-content: center;
-        border-top-width: 1px;
-        border-top-style: solid;
-        border-color: #d3d3d3;
+        @include u-flex('justify-center');
+        @include u-padding-bottom(0);
+        @include u-border-y(1px);
+        border-color: $bg-light-medium ;
+        @include u-padding-y('105');
+        @include u-margin-x(-2);
     }
 }
 
