@@ -25,6 +25,13 @@ function ec_placeholder_theme($existing, $type, $theme, $path) {
 function ec_placeholder_theme_suggestions_ec_placeholder(array $variables) {
   $suggestions = [];
   $sanitized_machine_name = str_replace([' ', '-'], '_', strtolower($variables['machine_name']));
+
+  // Check if we are creating a category suggestion using :
+  $array_machine_name = explode(':', $sanitized_machine_name);
+  if (count($array_machine_name) > 1) {
+    $sanitized_machine_name = $array_machine_name[0];
+  }
+
   $suggestions[] = 'ec_placeholder__' . $sanitized_machine_name;
 
   return $suggestions;

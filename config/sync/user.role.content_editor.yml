@@ -12,16 +12,17 @@ dependencies:
     - node.type.page
     - node.type.state_territory
     - node.type.voter_guide
+    - taxonomy.vocabulary.basics_modules
     - taxonomy.vocabulary.nvrf_field
     - workflows.workflow.publishing_content
   module:
     - block_content
+    - ckeditor5_embedded_content
     - content_moderation
     - content_translation
     - editoria11y
     - file
     - media
-    - menu_link_content
     - node
     - paragraphs
     - system
@@ -32,10 +33,12 @@ label: 'Content Editor'
 weight: 2
 is_admin: null
 permissions:
+  - 'access administration pages'
   - 'access content'
   - 'access content overview'
   - 'access files overview'
   - 'access media overview'
+  - 'access taxonomy overview'
   - 'access toolbar'
   - 'create audio media'
   - 'create content translations'
@@ -46,14 +49,15 @@ permissions:
   - 'create page content'
   - 'create remote_video media'
   - 'create state_territory content'
+  - 'create terms in basics_modules'
   - 'create terms in nvrf_field'
   - 'create voter_guide content'
-  - 'delete terms in nvrf_field'
   - 'edit any landing content'
   - 'edit any nvrf_page content'
   - 'edit any page content'
   - 'edit any state_territory content'
   - 'edit any voter_guide content'
+  - 'edit own audio media'
   - 'edit own document media'
   - 'edit own image media'
   - 'edit own landing content'
@@ -62,15 +66,16 @@ permissions:
   - 'edit own remote_video media'
   - 'edit own state_territory content'
   - 'edit own voter_guide content'
+  - 'edit terms in basics_modules'
   - 'edit terms in nvrf_field'
   - 'mark as hidden in editoria11y'
   - 'translate any entity'
   - 'translate audio media'
+  - 'translate basics_modules taxonomy_term'
   - 'translate block_content'
   - 'translate document media'
   - 'translate image media'
   - 'translate landing node'
-  - 'translate menu_link_content'
   - 'translate nvrf_field taxonomy_term'
   - 'translate nvrf_page node'
   - 'translate page node'
@@ -80,6 +85,7 @@ permissions:
   - 'translate voter_guide node'
   - 'update content translations'
   - 'update media'
+  - 'use ckeditor5 embedded content'
   - 'use publishing_content transition create_new_draft'
   - 'use publishing_content transition restore_to_draft'
   - 'view all media revisions'
@@ -95,4 +101,5 @@ permissions:
   - 'view page revisions'
   - 'view state_territory revisions'
   - 'view the administration theme'
+  - 'view unpublished paragraphs'
   - 'view voter_guide revisions'
