@@ -1,40 +1,39 @@
 @forward 'usa-footer';
 @use "uswds-core" as *;
+@use "variables" as *;
 
 .usa-footer__primary-section {
-    .grid-container {
-      @include at-media('tablet') {
-      display: flex;
-      padding: 32px;
+  .grid-container {
+    @include at-media('tablet') {
+      @include u-display('flex');
+      @include u-padding(4);
     }
   }
 }
 
 .identifier-links {
 
-  @include at-media-max('tablet') {
-    //display:flex;
-  }
-
   li {
     @include at-media-max('tablet') {
-      padding-top: 10px;
+      @include u-padding-top(1);//check
     }
 
     @include at-media('tablet') {
       +li {
-        padding-top: 20px;
+        @include u-padding-top('205');
       }
     }
 
     a {
-      text-decoration: none;
-      color: #3E79BB;
+      color: $base-primary;
       word-break: break-word;
+      @include u-text('underline');
 
       &:focus,
       &:hover {
-        text-decoration: underline;
+        background-color: $base-primary-hover;
+        color: $base-white;
+        @include u-text('no-underline');
       }
     }
   }
