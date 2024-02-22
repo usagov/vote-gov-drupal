@@ -5,11 +5,13 @@
     <div class="usa-footer__logo">
       <div class="partner-logo-menu">
         {# GSA logo #}
-        <div class="gsa-img-container">
-          <img src="{{ theme_path }}/img/gsa-logo.svg" alt="{{'GSA logo'|t}}" width="48" height="48">
-        </div>
-        <div class="gsa-text-container" aria-label="{{ 'Agency description' | t }}">
-            {{ 'Vote.gov is an official website of the @link.' | t({'@link': GSAlink | render}) }}
+        <div class="gsa-container">
+          <div class="gsa-img-container">
+            <img src="{{ theme_path }}/img/gsa-logo.svg" alt="{{'GSA logo'|t}}" width="48" height="48">
+          </div>
+          <div class="gsa-text-container" aria-label="{{ 'Agency description' | t }}">
+              {{ 'Vote.gov is an official website of the @link.' | t({'@link': GSAlink | render}) }}
+          </div>
         </div>
         {# EAC logo #}
         <div class="eac-logo-container">

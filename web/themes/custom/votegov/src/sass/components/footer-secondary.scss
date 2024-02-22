@@ -3,11 +3,20 @@
 @use "variables" as *;
 
 .usa-footer__secondary-section {
-    @include u-padding-y(6);
     @include u-border-top(1px);
     @include u-border-top('solid');
     border-color: $bg-light-medium;
     background-color: #f0f0f0;
+
+    @include at-media('tablet') {
+        @include u-padding-y(6);
+    }
+
+    @include at-media-max('tablet') {
+        .grid_container {
+            //padding: 0;
+        }
+    }
 }
 
 .usa-footer__logo {
@@ -19,19 +28,28 @@
         @include u-display('flex');
     }
 }
-
+.gsa-container {
+    display: flex;
+    align-items: center;
+}
 .gsa-img-container {
     @include u-padding-right(2);
+    @include grid-col(auto);
 }
 
 .gsa-text-container {
     @include at-media('tablet') {
-        @include grid-col(3);
+        @include grid-col(10);
+    }
+    @include at-media-max('tablet') {
+        @include grid-col(9);
     }
 }
 
 .eac-logo-container {
+    @include u-display('flex');
     @include u-position('relative');
+
     @include at-media('tablet') {
         @include grid-col(3);
         @include u-padding-left(6);
@@ -52,6 +70,9 @@
 
     @include at-media-max('tablet'){
         @include grid-col('auto');
+        justify-content: center;
+        margin-bottom: 15px;
+        margin-top: 15px
     }
 }
 
@@ -60,6 +81,12 @@
     @include u-flex('align-center');
     @include at-media('tablet') {
         @include grid-col(5);
+    }
+    @include at-media-max('tablet') {
+        justify-content: center;
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-color: #d3d3d3;
     }
 }
 
