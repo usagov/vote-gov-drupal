@@ -62,14 +62,14 @@ class ECUsaAlert extends EmbeddedContentPluginBase implements EmbeddedContentInt
       '#default_value' => $this->configuration['type'],
       '#required' => TRUE,
     ];
-    $form['text'] = array(
+    $form['text'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Alert text'),
       '#format' => $this->configuration['text']['format'] ?? 'simple_html',
       '#allowed_formats' => ['simple_html'],
       '#default_value' => $this->configuration['text']['value'] ?? '',
       '#required' => TRUE,
-    );
+    ];
     return $form;
   }
 
