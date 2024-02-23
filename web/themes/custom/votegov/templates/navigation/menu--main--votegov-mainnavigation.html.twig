@@ -28,9 +28,7 @@ We call a macro which calls itself to render the full tree.
 #}
 {% set attributes = attributes.addClass('menu') %}
 <nav aria-label="{{ 'Primary navigation' | t }}" class="usa-nav">
-  <button type="button" class="usa-nav__close">
-    <img src="{{ uswds_img_path }}/usa-icons/close.svg" role="img" alt="{{ 'Close' | t }}" />
-  </button>
+  <button type="button" class="usa-nav__close">{{ 'Close' | t }}</button>
 
   {{ menus.menu_links(items, attributes, 0, 'basic-mega-nav-section-') }}
 

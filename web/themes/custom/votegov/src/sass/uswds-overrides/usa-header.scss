@@ -4,6 +4,24 @@
 .usa-navbar {
   @include u-justify-content('justify');
   @include u-height('auto');
+
+  .usa-menu-btn {
+    background-image: url( '../../../votegov/img/svg/menu.svg' );
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    overflow: visible;
+    background-color: $bg-light;
+    height: unset;
+    text-transform: unset;
+    font-size: 17px;
+    font-weight: 500;
+    padding-right: 23px;
+    padding-left: 0px;
+    margin-top: 21px;
+    margin-bottom: 21px;
+    margin-right: 24px;
+    margin-left: 24px;
+  }
 }
 
 .usa-logo {
