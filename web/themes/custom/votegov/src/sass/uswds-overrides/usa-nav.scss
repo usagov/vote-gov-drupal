@@ -11,6 +11,10 @@
       display: none;
     }
 
+    .usa-search {
+      margin-left: unset;
+    }
+
     &__primary {
       height: 80px;
       left: 0%;
@@ -60,12 +64,9 @@
 
         .usa-nav__submenu {
           .usa-nav__submenu-list {
-            padding: 16px;
-
             .usa-nav__submenu-item {
               a {
-                padding: 0px;
-                padding-bottom: 8px;
+                padding: 8px 16px 8px;
               }
             }
           }
@@ -125,6 +126,7 @@
       @include u-padding(0);
 
       &-list {
+        padding-top: 16px;
         padding-bottom: 16px;
       }
 
