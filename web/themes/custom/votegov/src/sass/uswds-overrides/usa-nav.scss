@@ -6,6 +6,14 @@
   @include u-width('full');
 
   @include at-media('tablet-lg') {
+    #usa-search--expandable:has(input:focus)~.usa-nav__primary {
+      visibility: hidden;
+    }
+
+    // &:has(+ .usa-nav__primary) {
+    //   visibility: hidden;
+    // }
+
     &__primary {
       left: 0%;
       @include u-margin-x(auto);
@@ -18,6 +26,8 @@
         height: 80px;
 
         a {
+          padding-bottom: 8px;
+          padding-top: 8px;
           font-size: 19px;
           color: $base-dark;
           @include u-text('normal');
@@ -98,10 +108,16 @@
       background-color: $bg-light-cool;
       @include u-padding(0);
 
+      &-list {
+        padding-bottom: 16px;
+      }
+
       .usa-nav__submenu-item a {
         font-size: 16px;
         color: $base-dark;
         text-decoration: none;
+        padding-left: 16px;
+        padding-right: 16px;
         @include u-border(0);
 
         &:hover,
