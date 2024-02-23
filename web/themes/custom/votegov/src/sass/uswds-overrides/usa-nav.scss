@@ -2,19 +2,17 @@
 @use "mixins" as *;
 @use "variables" as *;
 
+.usa-nav:has(input:focus) .usa-nav__primary {
+  display: none;
+}
+
 .usa-nav {
   @include u-width('full');
 
   @include at-media('tablet-lg') {
-    #usa-search--expandable:has(input:focus)~.usa-nav__primary {
-      visibility: hidden;
-    }
-
-    // &:has(+ .usa-nav__primary) {
-    //   visibility: hidden;
-    // }
 
     &__primary {
+      height: 80px;
       left: 0%;
       @include u-margin-x(auto);
 
@@ -22,13 +20,14 @@
         background-color: $base-dark;
       }
 
-      .usa-nav__primary-item {
-        height: 80px;
+      a {
+        padding: 0px;
+      }
 
+      .usa-nav__primary-item {
         a {
-          padding-bottom: 8px;
-          padding-top: 8px;
           font-size: 19px;
+          line-height: 155%;
           color: $base-dark;
           @include u-text('normal');
 
@@ -58,6 +57,19 @@
         >.usa-current::after {
           display: none;
         }
+
+        .usa-nav__submenu {
+          .usa-nav__submenu-list {
+            padding: 16px;
+
+            .usa-nav__submenu-item {
+              a {
+                padding: 0px;
+                padding-bottom: 8px;
+              }
+            }
+          }
+        }
       }
 
       &.usa-accordion {
@@ -79,7 +91,6 @@
     &__primary-item {
       @include u-border-bottom(1px);
       border: $bg-light-medium;
-      height: 4rem;
 
       &:hover {
         color: $base-dark;
@@ -88,6 +99,7 @@
 
       button {
         font-size: 19px;
+        line-height: 155%;
         padding: 23px 16px;
         color: $base-dark;
         @include u-text('normal');
@@ -100,6 +112,10 @@
         &:hover {
           color: $base-dark;
         }
+      }
+
+      a {
+        padding: 23px 16px;
       }
     }
 
@@ -177,8 +193,8 @@
     .li-divider {
       height: 1px;
       width: -webkit-calc(100% - 48px);
-      width:    -moz-calc(100% - 48px);
-      width:         calc(100% - 48px);
+      width: -moz-calc(100% - 48px);
+      width: calc(100% - 48px);
       display: block;
       background-color: $bg-light-medium;
       margin-right: auto;

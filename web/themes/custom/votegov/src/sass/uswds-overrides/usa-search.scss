@@ -4,10 +4,9 @@
 
 #usa-search--expandable {
   order: 3;
+  padding: 16px 24px;
 
   form {
-    padding: 16px 24px;
-
     &:focus-within {
       .usa-input {
         background-position: 2% 40%;
@@ -53,7 +52,7 @@
         
       @include u-radius('lg');
       @include u-border('transparent');
-      @include u-height(5);
+      height: 48px;
       @include u-width(15);
       
       @include at-media-max('tablet-lg') {
@@ -80,7 +79,7 @@
       @include u-margin-left('neg-6');
       @include u-radius-left(0);
       @include u-radius-right('lg');
-      @include u-height(5);
+      height: 48px;
       @include u-border(2px);
       @include u-border-left(0);
 

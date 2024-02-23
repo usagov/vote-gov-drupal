@@ -8,7 +8,8 @@
 
 .usa-logo {
   width: 157px;
-  @include u-margin-y(0);
+  margin-top: 20px;
+  margin-bottom: 20px;
 
   @include at-media-max('desktop') {
     @include u-margin-y(2);
