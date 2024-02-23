@@ -9,25 +9,39 @@
       @include u-padding(4);
     }
   }
+  font-family: $theme-font-type-sans;
+}
+.identifier-links-container {
+  @include grid-col(12);
+
+  @include at-media-max('tablet') {
+    @include u-padding-y(4);
+  }
 }
 
 .identifier-links {
+  @include at-media('tablet') {
+    column-count: 4;
+  }
+
+  @include at-media-max('tablet') {
+    column-count: 2;
+  }
 
   li {
     @include at-media-max('tablet') {
-      @include u-padding-top(1);//check
+      @include u-padding-top(2);//check
     }
 
     @include at-media('tablet') {
-      +li {
-        @include u-padding-top('205');
-      }
+      @include u-padding-top('205');
     }
 
     a {
       color: $base-primary;
       word-break: break-word;
       @include u-text('underline');
+      font-size: 16px;
 
       &:focus,
       &:hover {

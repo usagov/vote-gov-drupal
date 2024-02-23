@@ -22,23 +22,23 @@
 #}
 {% import _self as menus %}
 
-{% set attributes = attributes.addClass('grid-row grid-gap') %}
-{{ menus.menu_links(items, attributes, 0) }}
+<div class="usa-footer__primary-section" data-test="footer">
+    <div class="grid-container">
+      {{ menus.menu_links(items, attributes, 0) }}
+    </div>
+</div>
 
 {% macro menu_links(items, attributes, menu_level) %}
   {% import _self as menus %}
 
   {% if items %}
-  {% set items_count = (items|length) / 4 %}
-  {% for item_group in items | batch(items_count) %}
-        <div class="tablet:grid-col-3">
-          <ul class="usa-list usa-list--unstyled identifier-links">
-        {% for item in item_group %}
-            <li>{{ link(item.title, item.url) }}</li>
-        {% endfor %}
-          </ul>
-        </div>
-  {% endfor %}
+    <div class="identifier-links-container">
+      <ul class="usa-list usa-list--unstyled identifier-links">
+    {% for item in items %}
+        <li>{{ link(item.title, item.url) }}</li>
+    {% endfor %}
+      </ul>
+    </div>
   {% endif %}
 
 {% endmacro %}
