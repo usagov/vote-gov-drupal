@@ -7,6 +7,7 @@
     @include u-border-top('solid');
     border-color: $bg-light-medium;
     background-color: #f0f0f0;
+    font-family: $theme-font-type-sans;
 
     @include at-media('tablet') {
         @include u-padding-y(6);
@@ -35,6 +36,7 @@
 }
 
 .gsa-text-container {
+    font-size: 14px;
     @include at-media('tablet') {
         @include grid-col(10);
     }
@@ -88,6 +90,9 @@
 .usa-footer__social-links {
     @include u-display('flex');
     @include u-flex('align-center');
+    font-size: 18px;
+    font-weight: 500;
+
     @include at-media('tablet') {
         @include grid-col(5);
     }
@@ -102,6 +107,8 @@
 }
 
 .usa-social-link {
+    @include u-display('flex');
+    @include u-flex('align-center');
     @include u-radius-top('pill');
     @include u-radius-bottom('pill');
     @include u-width(4);
@@ -111,6 +118,6 @@
 }
 
 .usa-social-link__icon {
-    @include u-width(2);
-    @include u-height(2);
+    @include u-width(4);
+    @include u-height(4);
 }
