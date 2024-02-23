@@ -3,29 +3,27 @@
 <div class="usa-footer__secondary-section">
   <div class="grid-container">
     <div class="usa-footer__logo">
-      <div class="partner-logo-menu">
-        {# GSA logo #}
-        <div class="gsa-container">
-          <div class="gsa-img-container">
-            <img src="{{ theme_path }}/img/gsa-logo.svg" alt="{{'GSA logo'|t}}" width="48" height="48">
-          </div>
-          <div class="gsa-text-container" aria-label="{{ 'Agency description' | t }}">
-              {{ 'Vote.gov is an official website of the @link.' | t({'@link': GSAlink | render}) }}
-          </div>
+      {# GSA logo #}
+      <div class="gsa-container">
+        <div class="gsa-img-container">
+          <img src="{{ theme_path }}/img/gsa-logo.svg" alt="{{'GSA logo'|t}}" width="48" height="48">
         </div>
-        {# EAC logo #}
-        <div class="eac-logo-container">
-          <a href="{{ language == 'es' ? 'https://www.eac.gov/translations/spanish' : 'https://www.eac.gov/' }}" target="_blank">
-            <img class="eac-logo" width="146" height="48" src="{{ theme_path }}/img/eac-logo.webp" alt="{{ 'U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov' | t }}" />
-          </a>
+        <div class="gsa-text-container" aria-label="{{ 'Agency description' | t }}">
+            {{ 'Vote.gov is an official website of the @link.' | t({'@link': GSAlink | render}) }}
         </div>
-        {# Twitter #}
-        <div class="usa-footer__social-links">
-          <span>{{ 'Follow vote.gov on ' | t }}</span>
-          <a class="usa-social-link" href="javascript:void(0);">
-            <img class="usa-social-link__icon" src="{{ theme_path }}/img/x-logo.svg" alt="X"/>
-          </a>
-        </div>
+      </div>
+      {# EAC logo #}
+      <div class="eac-logo-container">
+        <a href="{{ language == 'es' ? 'https://www.eac.gov/translations/spanish' : 'https://www.eac.gov/' }}" target="_blank">
+          <img class="eac-logo" width="146" height="48" src="{{ theme_path }}/img/eac-logo.webp" alt="{{ 'U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov' | t }}" />
+        </a>
+      </div>
+      {# Twitter #}
+      <div class="usa-footer__social-links">
+        <span>{{ 'Follow vote.gov on ' | t }}</span>
+        <a class="usa-social-link" href="https://twitter.com/votegov">
+          <img class="usa-social-link__icon" src="{{ theme_path }}/img/x-logo.svg" alt="X"/>
+        </a>
       </div>
     </div>
   </div>

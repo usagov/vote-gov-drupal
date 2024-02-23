@@ -19,13 +19,11 @@
 
 .usa-footer__logo {
     color: $base-dark;
-}
-
-.partner-logo-menu {
     @include at-media('tablet') {
         @include u-display('flex');
     }
 }
+
 .gsa-container {
     @include u-display('flex');
     @include u-flex('align-center');
