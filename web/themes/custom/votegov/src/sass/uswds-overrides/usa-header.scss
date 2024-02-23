@@ -34,7 +34,10 @@
     }
 
     .usa-navbar {
-      @include u-width('card');
+      .usa-menu-btn {
+        background-color: transparent;
+        color: #11385B;
+      }
     }
   }
 }

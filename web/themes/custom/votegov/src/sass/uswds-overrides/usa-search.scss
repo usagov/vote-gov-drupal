@@ -5,7 +5,35 @@
 #usa-search--expandable {
   order: 3;
 
-  form {    
+  form {
+    padding: 16px 24px;
+
+    &:focus-within {
+      .usa-input {
+        background-position: 2% 40%;
+        background-color: $bg-light;
+        border-color: $base-primary;
+        -webkit-transition: width .3s ease-in-out;
+        -moz-transition: width .3s ease-in-out;
+        -o-transition: width .3s ease-in-out;
+        transition: width .3s ease-in-out;
+        @include u-width('tablet');
+        @include u-border(2px);
+      }
+
+      .usa-button--search {
+        display: block;
+        background-color: $bg-light;
+        border-color: $base-primary;
+        @include u-border(2px);
+        @include u-border-left(0);
+      }
+
+      &:hover .usa-input, &:hover .search-icon {
+        background-color: $bg-light;
+      }
+    }
+
     &:hover .usa-input, &:hover .search-icon {
       background-color: $bg-light-cool;
     }
@@ -33,36 +61,13 @@
         min-width: 100%;
         border-color: $bg-light-medium;
       }
+    }
 
-        &:focus {
-          background-position: 2% 40%;
-          background-color: $bg-light;
-          border-color: $base-primary;
-          -webkit-transition: width .3s ease-in-out;
-          -moz-transition: width .3s ease-in-out;
-          -o-transition: width .3s ease-in-out;
-          transition: width .3s ease-in-out;
-          @include u-width('tablet');
-          @include u-border(2px);
-        }
-
-        &:focus ~ .usa-button--search {
-          display: block;
-          border-color: $base-primary;
-          @include u-border(2px);
-          @include u-border-left(0);
-        }
-
-        &:focus ~ .usa-nav__primary {
-          visibility: hidden;
-        }
-      }
-
-      .usa-input::placeholder {
-        font-size: 17px;
-        color: $base-dark;
-        opacity: 1;
-      }
+    .usa-input::placeholder {
+      font-size: 17px;
+      color: $base-dark;
+      opacity: 1;
+    }
 
     .usa-button--search {
       display: none;
