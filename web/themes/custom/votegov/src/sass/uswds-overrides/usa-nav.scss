@@ -16,7 +16,7 @@
     }
 
     &__primary {
-      height: 80px;
+      @include u-height(10);
       left: 0%;
       @include u-margin-x(auto);
 
@@ -25,7 +25,7 @@
       }
 
       a {
-        padding: 0px;
+        @include u-padding(0);
       }
 
       .usa-nav__primary-item {
@@ -79,12 +79,11 @@
 
       @include at-media-max('tablet-lg') {
         .li-divider {
-          height: 2px;
+          @include u-height('2px');
           width: 83%;
           display: block;
           background-color: $bg-light-medium;
-          margin-right: auto;
-          margin-left: auto;
+          @include u-margin-x('auto');
         }
       }
     }
@@ -126,16 +125,14 @@
       @include u-padding(0);
 
       &-list {
-        padding-top: 16px;
-        padding-bottom: 16px;
+        @include u-padding-y(2)
       }
 
       .usa-nav__submenu-item a {
         font-size: 16px;
         color: $base-dark;
         text-decoration: none;
-        padding-left: 16px;
-        padding-right: 16px;
+        @include u-padding-x(2);
         @include u-border(0);
 
         &:hover,
@@ -159,10 +156,11 @@
   @include at-media-max('tablet-lg') {
     &__close {
       color: $base-dark;
-      margin: 0;
+      @include u-margin-right(0);
       margin-left: calc(100% - 90px);
-      padding-top: 4px;
-      padding-bottom: 2px;
+      @include u-margin-y('205');
+      @include u-padding-bottom('2px');
+      @include u-padding-top('05');
       width: 67px;
       background-image: url( '../../../votegov/img/svg/close.svg' );
       background-position: 100% 50%;
@@ -174,19 +172,18 @@
       font-size: 17px;
       font-weight: 500;
       padding-right: 23px;
-      margin-top: 21px;
-      margin-bottom: 21px;
     }
 
     &__primary {
-      margin: 0;
-      border-top: 1px solid $bg-light-medium;
+      @include u-margin(0);
+      @include u-border-top('1px');
+      border-color: $bg-light-medium;
 
       .usa-nav__primary-item {
 
         a,
         button>span {
-          color: #31425F;
+          color: $base-dark-dusty;
           font-family: 'Merriweather';
           font-size: 18px;
           font-style: normal;
@@ -196,7 +193,7 @@
       }
 
       & a:not(.usa-button):not(.usa-current) {
-        color: #31425F;
+        color: $base-dark-dusty;
         padding: 16.5px 24px;
       }
 
@@ -215,23 +212,22 @@
     }
 
     .li-divider {
-      height: 1px;
+      @include u-height('1px');
       width: -webkit-calc(100% - 48px);
       width: -moz-calc(100% - 48px);
       width: calc(100% - 48px);
       display: block;
       background-color: $bg-light-medium;
-      margin-right: auto;
-      margin-left: auto;
+      @include u-margin-x('auto')
     }
 
 
     &__primary-item {
-      border: 0px;
+      @include u-border(0);
 
       button {
         padding: 16.5px 24px;
-        border: 0px;
+      @include u-border(0);
       }
     }
 
@@ -243,7 +239,7 @@
     &__submenu-item {
       & a:not(.usa-button):not(.usa-current) {
         font-family: 'Roboto';
-        color: #31425F;
+        color: $base-dark-dusty;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;

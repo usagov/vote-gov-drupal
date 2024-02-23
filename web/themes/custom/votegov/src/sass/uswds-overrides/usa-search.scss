@@ -7,9 +7,8 @@
   padding-top: 16px;
 
   @include at-media('tablet-lg') {
-    padding-bottom: 16px;
-    padding-left: 24px;
-    padding-right: 24px;
+    @include u-padding-bottom(2);
+    @include u-padding-x(3)
   }
 
   form {
