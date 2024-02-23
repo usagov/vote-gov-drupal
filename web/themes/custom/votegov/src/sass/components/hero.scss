@@ -2,15 +2,8 @@
 @use "variables" as *;
 
 .vote-hero{
-  @include at-media('tablet') {
-      @include grid-container;
-      @include u-position('relative');
-      @include u-top(0);
-      @include u-bottom(0);
-      left: 15%;
-      right: 50%;
-      @include u-width('auto');
-      @include u-padding-top(4);
+  @include at-media('tablet-lg') {
+    @include u-position('relative');
   }
 }
 .vote-hero__container{
@@ -19,24 +12,24 @@
   
   .vote-hero__image{
     width: 100%;
-    height: 100%;
     @include add-aspect('16x9');
-    @include at-media('tablet') {
+    @include at-media('tablet-lg') {
       object-fit: cover;
-      @include grid-col(4);
+      width: 40%;
       @include u-order(2);
-
   }
 }
 
-
 .vote-hero__callout {
     padding: 25px;
-  @include u-width('full');
-  @include at-media('tablet') {
+  @include at-media('tablet-lg') {
     @include u-order(1);
-    @include grid-col(8);
-    
+    padding: 150px 40px 150px 90px;
+    width: 60%;
   }
+}
 
+.vote-hero__heading{
+  @include u-padding-bottom(2);
+  font-size: 40px;
 }
