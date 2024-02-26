@@ -1,85 +1,109 @@
 <div class="usa-identifier">
-  <section
-    class="usa-identifier__section usa-identifier__section--masthead"
-    aria-label="Agency identifier,"
-  >
-    <div class="usa-identifier__container">
-      <div class="usa-identifier__logos">
-        <a href="" class="usa-identifier__logo"
-        ><img
-            class="usa-identifier__logo-img"
-            src="{{ uswds_img_path }}/circle-gray-20.svg"
-            alt="USA.gov logo"
-            role="img"
-          /></a>
+  <div class="grid-container">
+    <div class="grid-row">
+      {#Column 1 divider - USA Logo#}
+      <div>
+        <section
+          class="usa-identifier__section usa-identifier__section--masthead"
+          aria-label="Agency identifier,"
+        >
+          <div class="usa-identifier__container">
+            <div class="usa-identifier__logos">
+              <a href="" class="usa-identifier__logo"
+              ><img
+                  class="usa-identifier__logo-img"
+                  src="{{ uswds_img_path }}/circle-gray-20.svg"
+                  alt="USA.gov logo"
+                  role="img"
+                /></a>
+            </div>
+            <section
+              class="usa-identifier__identity"
+              aria-label="Agency description,"
+            >
+              <p class="usa-identifier__identity-domain">USA.gov</p>
+              <p class="usa-identifier__identity-disclaimer">
+                <span aria-hidden="true">An </span>official website of the
+                <a href="">&lt;Parent agency&gt;</a>
+              </p>
+            </section>
+          </div>
+        </section>
       </div>
-      <section
-        class="usa-identifier__identity"
-        aria-label="Agency description,"
-      >
-        <p class="usa-identifier__identity-domain">USA.gov</p>
-        <p class="usa-identifier__identity-disclaimer">
-          <span aria-hidden="true">An </span>official website of the
-          <a href="">&lt;Parent agency&gt;</a>
-        </p>
-      </section>
-    </div>
-  </section>
-  <nav
-    class="usa-identifier__section usa-identifier__section--required-links"
-    aria-label="Important links,"
-  >
-    <div class="usa-identifier__container">
-      <ul class="usa-identifier__required-links-list">
-        <li class="usa-identifier__required-links-item">
-          <a
-            href="javascript:void(0)"
-            class="usa-identifier__required-link usa-link"
-          >About &lt;Parent shortname&gt;</a
+
+      {#Column 2 Divider - USA Links and Email block #}
+      <div>
+        <section
+          class="usa-identifier__section usa-identifier__section--usagov"
+          aria-label="U.S. government information and services,"
+        >
+          <nav
+            class="usa-identifier__section"
+            aria-label="Important links,"
           >
-        </li>
-        <li class="usa-identifier__required-links-item">
-          <a href="" class="usa-identifier__required-link usa-link"
-          >Accessibility statement</a
-          >
-        </li>
-        <li class="usa-identifier__required-links-item">
-          <a href="" class="usa-identifier__required-link usa-link"
-          >FOIA requests</a
-          >
-        </li>
-        <li class="usa-identifier__required-links-item">
-          <a href="" class="usa-identifier__required-link usa-link"
-          >No FEAR Act data</a
-          >
-        </li>
-        <li class="usa-identifier__required-links-item">
-          <a href="" class="usa-identifier__required-link usa-link"
-          >Office of the Inspector General</a
-          >
-        </li>
-        <li class="usa-identifier__required-links-item">
-          <a href="" class="usa-identifier__required-link usa-link"
-          >Performance reports</a
-          >
-        </li>
-        <li class="usa-identifier__required-links-item">
-          <a href="" class="usa-identifier__required-link usa-link"
-          >Privacy policy</a
-          >
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <section
-    class="usa-identifier__section usa-identifier__section--usagov"
-    aria-label="U.S. government information and services,"
-  >
-    <div class="usa-identifier__container">
-      <div class="usa-identifier__usagov-description">
-        Looking for U.S. government information and services?
+            <div class="usa-identifier__container">
+              <ul class="usa-identifier__required-links-list">
+                <li class="usa-identifier__required-links-item">
+                  <a
+                    href=" https://www.usa.gov/state-local-elections"
+                    class="usa-identifier__required-link usa-link">
+                    {{"State and local elections" | t }}
+                  </a>
+                </li>
+                <span>{{"Learn about upcoming elections near you." | t }}</span>
+
+                <li class="usa-identifier__required-links-item">
+                  <a
+                    href="https://www.usa.gov/presidential-election-process"
+                    class="usa-identifier__required-link usa-link">
+                    {{"Presidential election process" | t }}
+                  </a>
+                </li>
+                <span>{{"Review the steps to choose candidates for president." | t }}</span>
+
+                <li class="usa-identifier__required-links-item">
+                  <a
+                    href=" https://www.usa.gov/electoral-college"
+                    class="usa-identifier__required-link usa-link">
+                    {{"Electoral college" | t }}
+                  </a>
+                </li>
+                <span>{{"Understand how the president and vice president are selected." | t }}</span>
+
+                <li class="usa-identifier__required-links-item">
+                  <a
+                    href="https://www.usa.gov/midterm-elections"
+                    class="usa-identifier__required-link usa-link">
+                    {{"Congressional and midterm elections" | t }}
+                  </a>
+                </li>
+                <span>{{"Learn about congressional and midterm elections." | t }}</span>
+
+                <li class="usa-identifier__required-links-item">
+                  <a
+                    href="https://www.usa.gov/primaries-caucuses"
+                    class="usa-identifier__required-link usa-link">
+                    {{"Primaries and caucuses" | t }}
+                  </a>
+                </li>
+                <span>{{"Learn about how primaries and caucuses work." | t }}</span>
+
+                <li class="usa-identifier__required-links-item">
+                  <a
+                    href="https://www.usa.gov/election-results"
+                    class="usa-identifier__required-link usa-link">
+                    {{"Find past election results" | t }}
+                  </a>
+                </li>
+                <span>{{"Learn where to find state and local election results." | t }}</span>
+
+              </ul>
+            </div>
+          </nav>
+        </section>
+        {# Email sign-up component. #}
+        {{ drupal_entity('block_content', 4) }}
       </div>
-      <a href="https://www.usa.gov/" class="usa-link">Visit USA.gov</a>
     </div>
-  </section>
+  </div>
 </div>

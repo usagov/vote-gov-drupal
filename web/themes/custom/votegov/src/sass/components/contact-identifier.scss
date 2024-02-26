@@ -1,0 +1,15 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+
+.usa-identifier {
+    background-color: unset;
+    color: $base-dark;
+    display:flex;
+    .grid-row{
+        flex-wrap: nowrap;
+    }
+}
+
+.usa-identifier__required-links-list {
+    columns: 2;
+}
