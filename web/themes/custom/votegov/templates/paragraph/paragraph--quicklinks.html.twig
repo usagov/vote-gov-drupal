@@ -4,26 +4,19 @@
  * Default theme implementation to display a paragraph: Quick Links.
  */
 #}
-    {# {{ dd() }} #}
 
-    {{ dd(content) }}
-
-    <section class="grid-container usa-section">
-      <div class="grid-row grid-gap">
-        <div class="tablet:grid-col-4">
-          <h2 class="font-heading-xl margin-top-0 tablet:margin-bottom-0">
-            {{ content.field_heading | field_value }}
-          </h2>
-          {{ content.field_body | field_value}}
-        </div>
-        {# <div class="tablet:grid-col-8 usa-prose">
-            {{ content.field_link | field_value}}
-        </div> #}
-        <ul>
-          {% for title in content.field_link %}
-              <li>{{ content.field_link | field_value }}</li>
-          {% endfor %}
-        </ul>
-
-      </div>
-    </section>
+<section class="vote-quicklinks">
+  <div class="vote-quicklinks__container">
+    <div class="vote-quicklinks__heading">
+      <h2>
+        {{ content.field_heading | field_value }}
+      </h2>
+    </div>
+    {# <div class="vote-quicklinks__red-line">test</div> #}
+    <hr class="vote-quicklinks__red-line">
+    <div class="vote-quicklinks__content">
+      {{ content.field_body | field_value }}
+      {{ content.field_link | field_value }}
+    </div>
+  </div>
+</section>
