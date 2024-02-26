@@ -28,13 +28,11 @@ We call a macro which calls itself to render the full tree.
 #}
 {% set attributes = attributes.addClass('menu') %}
 <nav aria-label="{{ 'Primary navigation' | t }}" class="usa-nav">
-  <button type="button" class="usa-nav__close">
-    <img src="{{ uswds_img_path }}/usa-icons/close.svg" role="img" alt="{{ 'Close' | t }}" />
-  </button>
+  <button type="button" class="usa-nav__close">{{ 'Close' | t }}</button>
 
   {{ menus.menu_links(items, attributes, 0, 'basic-mega-nav-section-') }}
 
-  <section aria-label="{{ 'Search component' | t }}">
+  <section id="usa-search--expandable" aria-label="{{ 'Search component' | t }}">
     {{ drupal_entity('block_content', 2) }}
   </section>
 </nav>
@@ -71,13 +69,14 @@ We call a macro which calls itself to render the full tree.
               {% endif %}
             {% endif %}
           </li>
+          <span class="li-divider"></span>
         {% endfor %}
       </ul>
     {# Secondary level menu structure. #}
     {% elseif menu_level == 1 %}
       <div
         id="{{ aria_id }}"
-        class="usa-nav__submenu usa-megamenu"
+        class="usa-nav__submenu"
         hidden
       >
         <ul class="usa-nav__submenu-list">
