@@ -42,12 +42,12 @@
 
         &:has(.is-active)::after {
           content: "";
-          background-color: $ac-warm-active;
+          background-color: $ac-warm;
           display: block;
           position: relative;
           @include u-radius(0);
           @include u-height(0.5);
-          @include u-margin-top(-0.5);
+          @include u-margin-top(-2px);
 
           @include at-media-max('tablet-lg') {
             display: none;
@@ -183,8 +183,7 @@
 
         a,
         button>span {
-          color: $base-dark-dusty;
-          font-family: 'Merriweather';
+          color: $base-dark;
           font-size: 18px;
           font-style: normal;
           font-weight: 700;
@@ -193,7 +192,7 @@
       }
 
       & a:not(.usa-button):not(.usa-current) {
-        color: $base-dark-dusty;
+        color: $base-dark;
         padding: 16.5px 24px;
       }
 
@@ -239,7 +238,7 @@
     &__submenu-item {
       & a:not(.usa-button):not(.usa-current) {
         font-family: 'Roboto';
-        color: $base-dark-dusty;
+        color: $base-dark;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
