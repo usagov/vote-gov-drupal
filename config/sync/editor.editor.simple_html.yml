@@ -25,6 +25,7 @@ settings:
       enabled_attributes:
         - aria-label
         - class
+        - rel
         - target
         - title
 image_upload: {  }
