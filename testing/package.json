@@ -7,7 +7,7 @@
     "axe-core": "^4.8.3",
     "cypress": "^13.6.4",
     "cypress-axe": "^1.5.0",
-    "cypress-mochawesome-reporter": "^3.8.1"
+    "cypress-mochawesome-reporter": "^3.8.2"
   },
   "scripts": {
     "cy:open": "cypress open",
