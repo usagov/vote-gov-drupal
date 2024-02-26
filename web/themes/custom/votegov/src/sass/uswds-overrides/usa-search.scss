@@ -1,5 +1,4 @@
 @use "uswds-core" as *;
-@use "mixins" as *;
 @use "variables" as *;
 
 #usa-search--expandable {
@@ -54,12 +53,12 @@
       overflow: visible;
       background-color: $bg-light;
       text-indent: 40px;
-        
+
       @include u-radius('lg');
       @include u-border('transparent');
       height: 48px;
       @include u-width(15);
-      
+
       @include at-media-max('tablet-lg') {
         background-position: 2% 40%;
         min-width: 100%;

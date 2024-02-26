@@ -18,9 +18,12 @@
     background-color: $base-primary-hover;
   }
 
-  &.usa-button--active,
   &.usa-button--secondary {
     background-color: $ac-warm;
+
+    &.usa-button--active {
+      background-color: $ac-warm-active;
+    }
 
     &:hover,
     &:focus,

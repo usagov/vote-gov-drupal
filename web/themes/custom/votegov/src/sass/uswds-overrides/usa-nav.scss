@@ -1,5 +1,4 @@
 @use "uswds-core" as *;
-@use "mixins" as *;
 @use "variables" as *;
 
 .usa-nav {
@@ -42,7 +41,7 @@
 
         &:has(.is-active)::after {
           content: "";
-          background-color: $ac-warm;
+          background-color: $ac-warm-active;
           display: block;
           position: relative;
           @include u-radius(0);
