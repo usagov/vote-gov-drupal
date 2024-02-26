@@ -12,6 +12,30 @@
         }
     }
 
+    .usa-identifier__logo{
+        height:36px;
+        width:172px;
+    }
+
+    .usa-identifier__identity-disclaimer{
+        margin-top:48px;
+        position: relative;
+        font-weight: 400;
+
+        &:before {
+            content: '';
+            background-color: $ac-warm;
+            @include u-display('block');
+            @include u-position('absolute');
+            @include u-width(0.5);
+            @include u-height(10);
+            @include u-margin-y('auto');
+            bottom: 32px;
+            left: 38px;
+            rotate: 90deg;
+        }
+    }
+
     .usa-identifier__required-links-list {
         @include at-media('tablet') {
             columns: 2;
