@@ -1,41 +1,17 @@
-@forward 'usa-footer';
 @use "uswds-core" as *;
 @use "variables" as *;
-
-.usa-footer__secondary-section {
-    @include u-border-top(1px);
-    @include u-border-top('solid');
-    border-color: $bg-light-medium;
-    background-color: #f0f0f0;
-    font-family: $theme-font-type-sans;
-
-    @include at-media('tablet') {
-        @include u-padding-y(6);
-    }
-
-    @include at-media-max('tablet') {
-        @include u-padding-bottom(0);
-    }
-}
-
-.usa-footer__logo {
-    color: $base-dark;
-    @include at-media('tablet') {
-        @include u-display('flex');
-    }
-}
 
 .gsa-container {
     @include u-display('flex');
     @include u-flex('align-center');
 }
 
-.gsa-img-container {
+.gsa-container__img {
     @include u-padding-right(2);
     @include grid-col(auto);
 }
 
-.gsa-text-container {
+.gsa-container__text {
     font-size: 14px;
     @include at-media('tablet') {
         @include grid-col(10);
@@ -50,7 +26,6 @@
     @include u-position('relative');
 
     @include at-media('tablet') {
-        @include grid-col(3);
         @include u-padding-left(6);
         &:before {
             content: '';
@@ -68,7 +43,6 @@
     }
 
     @include at-media-max('tablet') {
-        @include grid-col('auto');
         @include u-flex('justify-center');
         @include u-margin-bottom(2);
         @include u-margin-top(4);
@@ -87,26 +61,7 @@
     }
 }
 
-.usa-footer__social-links {
-    @include u-display('flex');
-    @include u-flex('align-center');
-    font-size: 18px;
-    font-weight: 500;
-
-    @include at-media('tablet') {
-        @include grid-col(5);
-    }
-    @include at-media-max('tablet') {
-        @include u-flex('justify-center');
-        @include u-padding-bottom(0);
-        @include u-border-y(1px);
-        border-color: $bg-light-medium ;
-        @include u-padding-y('105');
-        @include u-margin-x(-2);
-    }
-}
-
-.usa-social-link {
+.vote-social-link {
     @include u-display('flex');
     @include u-flex('align-center');
     @include u-radius-top('pill');
@@ -117,7 +72,7 @@
     background-color: $bg-light-cool;
 }
 
-.usa-social-link__icon {
+.vote-social-link__icon {
     @include u-width(4);
     @include u-height(4);
 }
