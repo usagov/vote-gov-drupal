@@ -26,12 +26,12 @@ dependencies:
     - workflows.workflow.publishing_content
   module:
     - block_content
+    - ckeditor5_embedded_content
     - content_moderation
     - content_translation
     - editoria11y
     - file
     - media
-    - menu_link_content
     - node
     - paragraphs
     - system
@@ -80,7 +80,6 @@ permissions:
   - 'delete any page content'
   - 'delete any remote_video media'
   - 'delete any sitewide_alert block content'
-  - 'delete any state_territory content'
   - 'delete any voter_guide content'
   - 'delete content translations'
   - 'delete landing revisions'
@@ -92,7 +91,6 @@ permissions:
   - 'delete own landing content'
   - 'delete own page content'
   - 'delete own remote_video media'
-  - 'delete own state_territory content'
   - 'delete own voter_guide content'
   - 'delete page revisions'
   - 'delete state_territory revisions'
@@ -152,7 +150,6 @@ permissions:
   - 'translate editable entities'
   - 'translate image media'
   - 'translate landing node'
-  - 'translate menu_link_content'
   - 'translate nvrf_field taxonomy_term'
   - 'translate nvrf_page node'
   - 'translate page node'
@@ -163,6 +160,7 @@ permissions:
   - 'update any media'
   - 'update content translations'
   - 'update media'
+  - 'use ckeditor5 embedded content'
   - 'use publishing_content transition archive'
   - 'use publishing_content transition create_new_draft'
   - 'use publishing_content transition publish'

@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * The module file with theming functions.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function ec_uswds_theme($existing, $type, $theme, $path) {
+  return [
+    'ec_usaalert' => [
+      'variables' => [
+        'heading' => NULL,
+        'type' => NULL,
+        'text' => NULL,
+      ],
+      'template' => 'embedded-content/ec-uswds--usaalert',
+    ],
+  ];
+}
