@@ -1,0 +1,34 @@
+uuid: f7bb94d4-245e-4573-b346-7fa8c2c9dec1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.feature_cards.field_cards
+    - field.field.paragraph.feature_cards.field_heading
+    - paragraphs.paragraphs_type.feature_cards
+id: paragraph.feature_cards.default
+targetEntityType: paragraph
+bundle: feature_cards
+mode: default
+content:
+  field_cards:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_heading:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

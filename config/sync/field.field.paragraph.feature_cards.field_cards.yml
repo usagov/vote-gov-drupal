@@ -1,0 +1,29 @@
+uuid: f71744cb-dee9-494f-9032-a469495420d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cards
+    - node.type.voter_guide
+    - paragraphs.paragraphs_type.feature_cards
+id: paragraph.feature_cards.field_cards
+field_name: field_cards
+entity_type: paragraph
+bundle: feature_cards
+label: Cards
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      voter_guide: voter_guide
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
