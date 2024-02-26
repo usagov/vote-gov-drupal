@@ -1,16 +1,6 @@
-@forward 'usa-footer';
 @use "uswds-core" as *;
 @use "variables" as *;
 
-.usa-footer__primary-section {
-  .grid-container {
-    @include at-media('tablet') {
-      @include u-display('flex');
-      @include u-padding(4);
-    }
-  }
-  font-family: $theme-font-type-sans;
-}
 .identifier-links-container {
   @include grid-col(12);
 
