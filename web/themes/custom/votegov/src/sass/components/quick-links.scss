@@ -1,0 +1,65 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+
+.vote-quicklinks {
+  @include u-bg('blue-warm-80v');
+  color: white;
+  @include u-padding-x(3);
+  @include u-padding-y(6);
+  
+}
+
+.vote-quicklinks__container {
+  @include grid-container;
+  @include grid-row;
+  @include u-flex('justify');
+
+  @include at-media('tablet-lg') {
+      @include u-padding-y(9);
+  }
+}
+
+
+.vote-quicklinks__heading {
+  
+  @include at-media('tablet-lg') {
+    @include grid-col(4);
+    @include u-order(1);
+    @include u-padding-y(2);
+    padding-left: 80px;
+  }
+
+    h2 {
+      color: white;
+    }
+}
+
+.vote-quicklinks__red-line {
+    border-bottom: 4px solid #C74345;
+    width: 50%;
+
+    @include at-media('tablet-lg') {
+      @include grid-col(2);
+      @include u-order(2);
+      transform: rotate(90deg);
+      margin: auto;
+  }
+}
+
+
+.vote-quicklinks__content{
+
+  @include at-media('tablet-lg') {
+    @include grid-col(6);
+    @include u-order(3);
+}
+
+    p {
+      padding-bottom: 20px;
+    }
+
+    a {
+      color: #0AAAE2
+    }
+
+}
