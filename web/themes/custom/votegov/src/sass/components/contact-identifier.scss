@@ -55,7 +55,10 @@
     }
 
     .usa-identifier__required-links-item{
-        margin-top: 24px;
-        margin-bottom: 0px;
+        margin-bottom: 24px;
+
+        .vote__list-item-text{
+            white-space: pre-wrap;
+        }
     }
 }
