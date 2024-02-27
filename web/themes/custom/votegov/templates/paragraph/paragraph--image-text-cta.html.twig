@@ -1,0 +1,33 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+<div class="grid-container">
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+    <div class="vote-cta vote-cta--media-{{ content.field_image_alignment is same as("order-first") ? 'left' : 'right' }} display-flex">
+        <div class="vote-cta__media-container">
+            {{ content.field_media | field_value }}
+        </div>
+        <div class="vote-cta__content-container">
+          <div class="vote-cta__header">
+            <h2>{{ content.field_heading | field_value }}</h2>
+          </div>
+          <span class="vote-cta__divider"></span>
+          <div class="vote-cta__body">
+            <p>{{ content.field_body | field_value }}</p>
+          </div>
+          <div class="vote-cta__footer">
+            <div class="vote-link">{{ content.field_link | field_value }}</div>
+          </div>
+        </div>
+    </div>
+    {% endblock %}
+  </div>
+</div>
+{% endblock paragraph %}
