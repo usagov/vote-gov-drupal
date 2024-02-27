@@ -1,0 +1,9 @@
+name: Embedded Content - USWDS components
+type: module
+description: Provides USWDS components for Ckeditor5 embedded content.
+package: Custom
+core_version_requirement: ^9 || ^10
+dependencies:
+  - ckeditor5_embedded_content
+  - uswds_templates
+  - twig_tweak

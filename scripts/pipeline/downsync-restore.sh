@@ -14,12 +14,12 @@ wait_for_tunnel() {
     [ -n "$(grep 'Press Control-C to stop.' restore.txt)" ] && break
     echo "Waiting for tunnel..."
     sleep 1
-  done 
+  done
 }
 
 ## Create a tunnel through the application to restore the database.
 echo "Creating tunnel to database..."
-cf connect-to-service --no-client vote-drupal-${RESTORE_ENV} vote-mysql-${RESTORE_ENV} > restore.txt &
+cf connect-to-service --no-client ${project}-drupal-${RESTORE_ENV} ${project}-mysql-${RESTORE_ENV} > restore.txt &
 
 wait_for_tunnel
 
@@ -33,12 +33,12 @@ echo "Restoring '${BACKUP_ENV}' database to '${RESTORE_ENV}'..."
   dbname=$(cat restore.txt | grep -i '^name' | awk '{print $2}')
 
   mkdir ~/.mysql && chmod 0700 ~/.mysql
-  
+
   echo "[client]" > ~/.mysql/mysql.cnf
   echo "user=${username}" >> ~/.mysql/mysql.cnf
   echo "password=${password}" >> ~/.mysql/mysql.cnf
   chmod 400 ~/.mysql/mysql.cnf
- 
+
   mysql \
   --defaults-extra-file=~/.mysql/mysql.cnf \
   --host=${host} \
@@ -58,4 +58,4 @@ echo "Cleaning up old connections..."
 rm -rf restore.txt ~/.mysql backup_${BACKUP_ENV}.sql
 
 echo "Running 'drush cr' on '${BACKUP_ENV}' database..."
-source $(pwd $(dirname $0))/scripts/pipeline/cloud-gov-remote-command.sh "vote-drupal-${RESTORE_ENV}" "drush cr"
+source $(pwd $(dirname $0))/scripts/pipeline/cloud-gov-remote-command.sh "${project}-drupal-${RESTORE_ENV}" "drush cr"
