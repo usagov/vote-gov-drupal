@@ -5,6 +5,12 @@
   background-color: transparent;
 
   .page-masthead & {
-    @include narrow-container;
+    @include vote-narrow-container;
+  }
+}
+
+.usa-breadcrumb__link {
+  .page-masthead & {
+    @include vote-link-dark;
   }
 }

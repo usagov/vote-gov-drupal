@@ -2,7 +2,7 @@
 @use "variables" as *;
 
 // Custom usa-button overrides using USWDS mixins and other settings.
-.usa-button {
+.usa-button:not(.usa-button--unstyled) {
   @include u-text('medium');
   padding: 0.9rem 1.4rem;
   background-color: $base-primary;
