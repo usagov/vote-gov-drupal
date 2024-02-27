@@ -1,20 +1,18 @@
 {% block content %}
 <section class="usa-sign-up" title="{{'Email sign-up'|t}}" aria-label="{{'Email sign-up'|t}}">
-  <div class="grid-container">
-    <form class="usa-form" action="{{ content.field_link | field_value }}" method="get">
-      <h2 class="usa-sign-up__heading">
-        {{ content.field_heading | field_value | render | replace({'%USAGov%': 'USAGov'}) | raw}}
-      </h2>
+  <form class="usa-form" action="{{ content.field_link | field_value }}" method="get">
+    <h2 class="usa-sign-up__heading">
+      {{ content.field_heading | field_value | render | replace({'%USAGov%': 'USAGov'}) | raw}}
+    </h2>
 
-      <label class="usa-label" for="email" id="emailsub">
-        {{ content.field_email_field_label | field_value }}
-      </label>
+    <label class="usa-label" for="email" id="emailsub">
+      {{ content.field_email_field_label | field_value }}
+    </label>
 
-      <input id="email" name="email" type="email" class="usa-input max-width-input" data-test="email-signup" />
-      <button class="usa-button max-width-input" id="user-submit" type="submit">
-        {{ content.field_signup_button_label | field_value }}
-      </button>
-    </form>
-  </div>
+    <input id="email" name="email" type="email" class="usa-input max-width-input" data-test="email-signup"/>
+    <button class="usa-button max-width-input" id="user-submit" type="submit">
+      {{ content.field_signup_button_label | field_value }}
+    </button>
+  </form>
 </section>
 {% endblock %}
