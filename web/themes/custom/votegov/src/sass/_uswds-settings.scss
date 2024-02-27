@@ -137,6 +137,7 @@ https://designsystem.digital.gov/documentation/settings/
   // -- Link
   // -- Modal
   // -- Navigation
+  $theme-header-min-width: 'tablet-lg',
   // -- Pagination
   // -- Process list
   // -- Radio buttons
@@ -210,7 +211,7 @@ https://designsystem.digital.gov/documentation/settings/
   'mobile': false, // 320px
   'mobile-lg': false, // 480px
   'tablet': true, // 640px
-  'tablet-lg': false, // 880px
+  'tablet-lg': true, // 880px
   'desktop': true, // 1024px
   'desktop-lg': false, // 1200px
   'widescreen': false, // 1400px

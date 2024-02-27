@@ -23,6 +23,7 @@ module:
   easy_breadcrumb: 0
   ec_placeholder: 0
   ec_touchpoints_survey: 0
+  ec_uswds: 0
   editor: 0
   editoria11y: 0
   editor_advanced_link: 0
@@ -84,7 +85,6 @@ module:
   content_translation: 10
   views: 10
   paragraphs: 11
-  publication_date: 99
   minimal: 1000
 theme:
   bixaluswds: 0

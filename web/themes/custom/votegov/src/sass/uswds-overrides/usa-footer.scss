@@ -1,0 +1,55 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+
+.usa-footer__primary-section {
+  .grid-container {
+    @include at-media('tablet') {
+      @include u-display('flex');
+      @include u-padding(4);
+    }
+  }
+  font-family: $theme-font-type-sans;
+}
+
+.usa-footer__secondary-section {
+  @include u-border-top(1px);
+  @include u-border-top('solid');
+  border-color: $bg-light-medium;
+  background-color: #f0f0f0;
+  font-family: $theme-font-type-sans;
+
+  @include at-media('tablet') {
+    @include u-padding-y(6);
+  }
+
+  @include at-media-max('tablet') {
+    @include u-padding-bottom(0);
+  }
+}
+
+.usa-footer__logo {
+  color: $base-dark;
+  @include at-media('tablet') {
+    @include u-display('flex');
+    @include grid-col(6);
+  }
+}
+
+.usa-footer__social-links {
+  @include u-display('flex');
+  @include u-flex('align-center');
+  font-size: 18px;
+  font-weight: 500;
+
+  @include at-media('tablet') {
+    @include grid-col(3);
+  }
+  @include at-media-max('tablet') {
+    @include u-flex('justify-center');
+    @include u-padding-bottom(0);
+    @include u-border-y(1px);
+    border-color: $bg-light-medium ;
+    @include u-padding-y('105');
+    @include u-margin-x(-2);
+  }
+}
