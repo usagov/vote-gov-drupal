@@ -64,7 +64,6 @@
         "drupal/node_revision_delete": "^2.0@alpha",
         "drupal/paragraphs": "^1.15",
         "drupal/pathauto": "^1.12",
-        "drupal/publication_date": "^2.0@beta",
         "drupal/redirect": "^1.8",
         "drupal/remove_http_headers": "^2.0",
         "drupal/rest_views": "^3.0",
