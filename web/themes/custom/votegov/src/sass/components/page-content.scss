@@ -5,7 +5,7 @@
   @include u-margin-top(6);
   @include u-margin-bottom(10);
   @include u-position('relative');
-  @include narrow-container;
+  @include vote-narrow-container;
 
   &.page-content--sidebar {
     @include at-media('desktop-lg') {
