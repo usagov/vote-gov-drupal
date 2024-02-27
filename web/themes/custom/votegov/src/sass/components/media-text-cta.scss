@@ -9,7 +9,7 @@
 
     @include at-media-max('tablet') {
         flex-wrap: wrap;
-        &--media-right, &--media-left {
+        &__media-order-last, &__media-order-first {
             .vote-cta__content-container {
                 order: 2;
             }
@@ -21,7 +21,7 @@
     }
 
     @include at-media('tablet') {
-    &--media-right {
+    &__media-order-last {
         .vote-cta__content-container {
             @include u-margin-right(10);
         }
@@ -30,7 +30,7 @@
         }
     }
 
-    &--media-left {
+    &__media-order-first {
         .vote-cta__content-container {
             order: 2;
             @include u-margin-left(10);
