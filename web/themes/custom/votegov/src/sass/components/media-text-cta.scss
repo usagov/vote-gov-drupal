@@ -2,9 +2,9 @@
 @use "variables" as *;
 
 .vote-cta {
-    display: flex;
-    margin-right: auto;
-    margin-left: auto;
+    @include u-display('flex');
+    @include u-margin-x('auto');
+    @include u-margin-y('205');
     max-width: 1180px;
 
     @include at-media-max('tablet') {
@@ -16,15 +16,14 @@
         }
 
         &__media-container, &__content-container {
-            margin-top: 24px;
-            margin-bottom: 24px;
+            @include u-margin-y(3);
         }
     }
 
     @include at-media('tablet') {
     &--media-right {
         .vote-cta__content-container {
-            margin-right: 5rem;
+            @include u-margin-right(10);
         }
         .vote-cta__media-container {
             order: 2;
@@ -34,19 +33,19 @@
     &--media-left {
         .vote-cta__content-container {
             order: 2;
-            margin-left: 5rem;
+            @include u-margin-left(10);
         }
     }
 
     &__media-container {
         width: 36.875rem;
-        margin-top: auto;
-        margin-bottom: auto;
+        @include u-margin-y('auto');
 
         img {
             flex-shrink: 0;
-            border-radius: 4px;
-            border: 0px solid #000;
+            border-color: #000;
+            @include u-radius('md');
+            @include u-border(0);
             opacity: 0.7;
             background: #E2EDF2;
             mix-blend-mode: multiply;
@@ -55,43 +54,40 @@
 
     &__content-container {
         max-width: 31.875rem;
-        margin-top: auto;
-        margin-bottom: auto;
+        @include u-margin-y('auto');
     }
     }
 
     &__content-container {
         .vote-cta {
             &__header {
-                color: #11385B;
+                color: $base-dark;
                 font-family: Roboto;
                 font-size: 28.83px;
-                font-style: normal;
-                font-weight: 500;
+                @include u-text('medium');
                 line-height: 118%;
                 
             }
             &__divider {
                 width: 96px;
-                height: 4px;
-                display: block;
-                background: #CB5154;
-                margin: 24px 0;
+                @include u-height('05');
+                @include u-display('block');
+                background: $ac-warm;
+                @include u-margin-y(3);
             }
             &__body {
-                color: #11385B;
+                color: $base-dark;
                 font-family: Merriweather;
                 font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
+                @include u-text('normal');
                 line-height: 155%;
 
                 p, ul, ul>li {
-                    margin: 0;
+                    @include u-margin(0);
                 }
 
                 p {
-                    margin-bottom: 16px;
+                    @include u-margin-bottom(2);
                 }
             }
             &__footer {
@@ -105,7 +101,6 @@
 
 @include at-media-max('tablet') {
     .grid-container {
-        padding-left: 24px;
-        padding-right: 24px;
+        @include u-padding-x(3);
     }
 }

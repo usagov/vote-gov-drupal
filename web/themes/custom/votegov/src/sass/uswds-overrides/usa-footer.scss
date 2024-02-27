@@ -1,6 +1,10 @@
 @use "uswds-core" as *;
 @use "variables" as *;
 
+.usa-footer {
+  margin-top: 60px;
+}
+
 .usa-footer__primary-section {
   .grid-container {
     @include at-media('tablet') {
