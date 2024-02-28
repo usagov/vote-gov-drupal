@@ -1,0 +1,48 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+
+.vote-hero {
+  background-color: $bg-light-warm;
+
+  @include at-media('tablet-lg') {
+    @include u-position('relative');
+  }
+}
+
+.vote-hero__container {
+  @include grid-container;
+  @include grid-row;
+  @include u-flex('justify');
+}
+
+.vote-hero__image {
+  @include at-media-max('tablet-lg') {
+    @include u-margin-x(-2);
+  }
+
+  @include at-media('tablet-lg') {
+    @include grid-col(4);
+    @include u-order(2);
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.vote-hero__callout {
+  padding: 25px;
+  @include at-media('tablet-lg') {
+    @include grid-col(7);
+    @include u-order(1);
+    padding: 150px 40px 150px 90px;
+    width: 60%;
+  }
+}
+
+.vote-hero__heading {
+  @include u-padding-bottom(2);
+  font-size: 40px;
+}

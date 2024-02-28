@@ -1,0 +1,2 @@
+{% set iconfile = machine_name|lower|replace({'icon:': ''}) ~ '.svg' %}
+{{ source(directory ~ '/img/icon/' ~ iconfile ) }}
