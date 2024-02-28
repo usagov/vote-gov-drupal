@@ -2,9 +2,9 @@
 @use "variables" as *;
 
 .vote-quicklinks {
-  background-color: #11385B;
-  color: #FFF;
-  @include u-padding-x(3);
+  background-color: $base-dark;
+  color: $base-white;
+  @include u-padding-x(1);
   @include u-padding-y(6); 
 }
 
@@ -12,6 +12,7 @@
   @include grid-container;
   @include grid-row;
   @include u-flex('justify');
+  position: relative;
 
   @include at-media('tablet-lg') {
       @include u-padding-y(9);
@@ -19,7 +20,7 @@
 }
 
 .vote-quicklinks__heading {
-  padding-bottom: 20px;
+  @include u-padding-bottom(6);
   
   @include at-media('tablet-lg') {
     @include grid-col(4);
@@ -29,24 +30,12 @@
   }
 
     h2 {
-      color: #FFF;
+      color: $base-white;
     }
 }
 
-.vote-quicklinks__red-line {
-    border-bottom: 4px solid #C74345;
-    width: 70%;
-
-    @include at-media('tablet-lg') {
-      @include grid-col(2);
-      @include u-order(2);
-      transform: rotate(90deg);
-      margin: auto;
-  }
-}
-
 .vote-quicklinks__content{
-    padding-top: 20px;
+  @include u-padding-top(6);
 
   @include at-media('tablet-lg') {
     @include grid-col(6);
@@ -58,6 +47,24 @@
     }
 
     a {
-      color: #0AAAE2
+      color: $ac-light-cool
     }
+}
+
+.vote-quicklinks__content::before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 4px;
+  background-color: $ac-warm;
+  margin-top: -50px;
+
+  @include at-media('tablet-lg') {
+    transform: translate(-50%, -10%);
+    width: 4px;
+    height: 70%;
+    margin-left: -100px;
+  }
 }
