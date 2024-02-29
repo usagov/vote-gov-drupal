@@ -3,10 +3,10 @@
 @use "mixins" as *;
 
 .vote-quicklinks {
-  background-color: $base-dark;
-  color: $base-white;
   @include u-padding-x(1);
   @include u-padding-y(6);
+  background-color: $base-dark;
+  color: $base-white;
 }
 
 .vote-quicklinks__container {
@@ -21,13 +21,8 @@
 }
 
 .vote-quicklinks__heading {
-  @include u-padding-bottom(6);
-
   @include at-media('tablet-lg') {
     @include grid-col(4);
-    @include u-order(1);
-    @include u-padding-y(2);
-    padding-left: 30px;
   }
 
     h2 {
@@ -36,16 +31,11 @@
 }
 
 .vote-quicklinks__content{
-  @include u-padding-top(6);
+  @include u-font-family('sans');
 
   @include at-media('tablet-lg') {
     @include grid-col(6);
-    @include u-order(3);
 }
-
-    p {
-      padding-bottom: 20px;
-    }
 
     a {
       @include vote-link-dark;
@@ -54,18 +44,19 @@
 
 .vote-quicklinks__content::before{
   content: '';
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  height: 4px;
+  display: block;
   background-color: $ac-warm;
-  margin-top: -50px;
+
+  @include at-media-max('tablet-lg') {
+    @include u-margin-y(4);
+    height: 4px;
+  }
 
   @include at-media('tablet-lg') {
-    transform: translate(-50%, -10%);
+    position: absolute;
+    top: 0;
     width: 4px;
-    height: 70%;
+    height: 100%;
     margin-left: -100px;
   }
 }
