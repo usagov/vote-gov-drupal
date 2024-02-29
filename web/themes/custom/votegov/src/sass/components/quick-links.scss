@@ -1,11 +1,12 @@
 @use "uswds-core" as *;
 @use "variables" as *;
+@use "mixins" as *;
 
 .vote-quicklinks {
   background-color: $base-dark;
   color: $base-white;
   @include u-padding-x(1);
-  @include u-padding-y(6); 
+  @include u-padding-y(6);
 }
 
 .vote-quicklinks__container {
@@ -21,7 +22,7 @@
 
 .vote-quicklinks__heading {
   @include u-padding-bottom(6);
-  
+
   @include at-media('tablet-lg') {
     @include grid-col(4);
     @include u-order(1);
@@ -47,7 +48,7 @@
     }
 
     a {
-      color: $ac-light-cool
+      @include vote-link-dark;
     }
 }
 

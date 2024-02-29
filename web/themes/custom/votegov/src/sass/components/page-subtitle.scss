@@ -5,7 +5,7 @@
 .page-subtitle {
   @include u-margin-top(3);
   @include u-maxw('tablet');
-  @include narrow-container;
+  @include vote-narrow-container;
 
   .page-masthead & {
     color: $bg-light-cool;
