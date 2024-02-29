@@ -48,7 +48,6 @@ dependencies:
     - link
     - metatag
     - path
-    - publication_date
     - text
     - vote_nvrf
 third_party_settings:
@@ -83,7 +82,6 @@ third_party_settings:
         - field_override_election_hp_link
         - field_override_more_info_link
         - field_override_confirm_reg_link
-        - field_mail_registration_link_ove
         - field_override_mail_reg_link
       label: 'Link overrides (for translations)'
       region: content
@@ -348,7 +346,7 @@ content:
     third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
-    weight: 13
+    weight: 11
     region: content
     settings:
       sidebar: true
@@ -501,7 +499,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 12
+    weight: 10
     region: content
     settings:
       include_locked: true
@@ -518,12 +516,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  published_at:
-    type: publication_date_timestamp
-    weight: 9
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   simple_sitemap:
     weight: 4
     region: content
@@ -531,7 +523,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 10
+    weight: 8
     region: content
     settings:
       display_label: true
@@ -545,7 +537,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 11
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -567,4 +559,5 @@ content:
 hidden:
   body: true
   promote: true
+  published_at: true
   sticky: true
