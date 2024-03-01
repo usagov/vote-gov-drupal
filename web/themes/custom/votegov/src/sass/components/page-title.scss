@@ -4,5 +4,5 @@
 .page-title {
   @include u-margin-top(6);
   @include u-maxw('tablet');
-  @include narrow-container;
+  @include vote-narrow-container;
 }

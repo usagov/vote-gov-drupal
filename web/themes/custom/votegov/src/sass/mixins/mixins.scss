@@ -1,6 +1,7 @@
 @use "uswds-core" as *;
+@use "variables" as *;
 
-@mixin narrow-container() {
+@mixin vote-narrow-container {
   @include at-media('tablet') {
     @include grid-col(10);
     @include grid-offset(1);
@@ -14,5 +15,60 @@
   @include at-media('desktop-lg') {
     @include grid-col(7);
     @include grid-offset(3);
+  }
+}
+
+@mixin vote-block-margin-y {
+  @include u-margin-y(6);
+
+  @include at-media('desktop') {
+    @include u-margin-y(10);
+  }
+}
+
+@mixin vote-block-padding-y {
+  @include u-padding-y(6);
+
+  @include at-media('desktop') {
+    @include u-padding-y(10);
+  }
+}
+
+@mixin hover {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin vote-link {
+  @include u-text('underline');
+  color: $base-primary;
+
+  &:visited,
+  &:active {
+    color: $base-primary;
+  }
+
+  @include hover {
+    @include u-text('no-underline');
+    background-color: $base-primary-hover;
+    color: $base-white;
+  }
+}
+
+@mixin vote-link-dark {
+  @include u-text('underline');
+  color: $base-white;
+
+  &:visited,
+  &:active {
+    color: $base-white;
+  }
+
+  @include hover {
+    @include u-text('underline');
+    background-color: transparent;
+    color: $ac-cool-light;
   }
 }
