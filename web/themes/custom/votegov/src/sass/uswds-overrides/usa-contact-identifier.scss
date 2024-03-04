@@ -6,7 +6,7 @@
     @include u-border-top(1px);
     @include u-border-top('solid');
     border-color: $bg-light-medium;
-    background-color: #f0f0f0;
+    background-color: $base-white;
     color: $base-dark;
 
     @include at-media('tablet') {
@@ -38,41 +38,55 @@
             @include u-width(0.5);
             @include u-height(10);
             @include u-margin-y('auto');
-            bottom: 32px;
+            bottom: 60px;
             left: 38px;
             rotate: 90deg;
         }
-    }
 
-    .usa-identifier__required-links-list {
-        @include at-media('tablet') {
-            columns: 2;
-        }
-        @include at-media-max('tablet') {
-            columns: 1;
+        p {
+            max-width: 75%;
         }
     }
 
-    .usa-identifier__required-link.usa-link{
-        color: $base-primary;
-        @include u-font-weight('bold');
-        @include u-text('underline');
-        :visited {
+    .usa-identifier__section--usagov {
+        ul {
+            list-style-type: none;
+            @include u-padding(0);
+            @include u-margin(0);
+
+            @include at-media('tablet') {
+                columns: 2;
+            }
+            @include at-media-max('tablet') {
+                columns: 1;
+            }
+
+            p {
+                @include u-margin-top(0);
+            }
+        }
+
+        li {
+            @include u-margin-bottom(3);
+
+            .vote__list-item-text{
+                @include u-text('pre-line');
+            }
+        }
+
+        a {
             color: $base-primary;
-        }
-        &:focus,
-        &:hover {
-        background-color: $base-primary-hover;
-        color: $base-white;
-        @include u-text('no-underline');
-      }
-    }
-
-    .usa-identifier__required-links-item{
-        @include u-margin-bottom(3);
-
-        .vote__list-item-text{
-            @include u-text('pre-line');
+            @include u-font-weight('bold');
+            @include u-text('underline');
+            :visited {
+                color: $base-primary;
+            }
+            &:focus,
+            &:hover {
+                background-color: $base-primary-hover;
+                color: $base-white;
+                @include u-text('no-underline');
+            }
         }
     }
 }

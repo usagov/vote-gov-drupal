@@ -72,3 +72,11 @@
     color: $ac-cool-light;
   }
 }
+
+@mixin vote-solid-border-top {
+  @include u-border-top(1px);//mixin
+  @include u-border-top('solid');
+  border-color: $bg-light-medium;
+  background-color: $base-white;
+  font-family: $theme-font-type-sans;
+}

@@ -2,97 +2,41 @@
   <div class="grid-container">
     <div class="grid-row">
       {#Column 1 divider - USA Logo#}
-      <div>
-        <section
-          class="usa-identifier__section usa-identifier__section--masthead"
-          aria-label="Agency identifier,"
-        >
-          <div class="usa-identifier__container">
-            <section
-              class="usa-identifier__identity usa-identifier__section"
-              aria-label="Agency description,"
-            >
-              <a href="https://www.usa.gov/" class="usa-identifier__logo">
-              <img
-                  class="usa-identifier__logo-img"
-                  src="{{ theme_path }}/img/USA_GOV_Logo.svg"
-                  alt="USA.gov logo"
-                  role="img"
-                /></a>
-              <div class="usa-identifier__identity-disclaimer">
-                {{"Visit our partner site to find more information about voting in the United States." | t }}
-              </div>
-            </section>
-          </div>
-        </section>
-      </div>
+      <section
+        class="usa-identifier__section usa-identifier__section--masthead"
+        aria-label={{"Agency identifier," | t }}
+      >
+        <div class="usa-identifier__container">
+          <section
+            class="usa-identifier__identity usa-identifier__section"
+            aria-label={{"Agency description," | t }}
+          >
+            <a href="https://www.usa.gov/" class="usa-identifier__logo">
+            <img
+                class="usa-identifier__logo-img"
+                src="{{ theme_path }}/img/USA_GOV_Logo.svg"
+                alt={{"USA.gov logo" | t }}
+                role="img"
+              /></a>
+            <div class="usa-identifier__identity-disclaimer">
+              <p>{{"Visit our partner site to find more information about voting in the United States." | t }}</p>
+            </div>
+          </section>
+        </div>
+      </section>
 
       {#Column 2 Divider - USA Links and Email block #}
       <div>
         <section
           class="usa-identifier__section usa-identifier__section--usagov"
-          aria-label="U.S. government information and services,"
+          aria-label={{"U.S. government information and services," | t }}
         >
           <nav
-            aria-label="Important links,"
+            aria-label={{"Important links," | t }}
           >
             <div class="usa-identifier__container">
-              <ul class="usa-identifier__required-links-list">
-                <li class="usa-identifier__required-links-item">
-                  <a
-                    href=" https://www.usa.gov/state-local-elections"
-                    class="usa-identifier__required-link usa-link">
-                    {{"State and local elections" | t }}
-                  </a>
-                <span class="vote__list-item-text">{{"\nLearn about upcoming elections near you." | t }}</span>
-                </li>
-
-                <li class="usa-identifier__required-links-item">
-                  <a
-                    href="https://www.usa.gov/presidential-election-process"
-                    class="usa-identifier__required-link usa-link">
-                    {{"Presidential election process" | t }}
-                  </a>
-                <span class="vote__list-item-text">{{"\nReview the steps to choose candidates for president." | t }}</span>
-                </li>
-
-                <li class="usa-identifier__required-links-item">
-                  <a
-                    href=" https://www.usa.gov/electoral-college"
-                    class="usa-identifier__required-link usa-link">
-                    {{"Electoral college" | t }}
-                  </a>
-                <span class="vote__list-item-text">{{"\nUnderstand how the president and vice president are selected." | t }}</span>
-                </li>
-
-                <li class="usa-identifier__required-links-item">
-                  <a
-                    href="https://www.usa.gov/midterm-elections"
-                    class="usa-identifier__required-link usa-link">
-                    {{"Congressional and midterm elections" | t }}
-                  </a>
-                <span class="vote__list-item-text">{{"\nLearn about congressional and midterm elections." | t }}</span>
-                </li>
-
-                <li class="usa-identifier__required-links-item">
-                  <a
-                    href="https://www.usa.gov/primaries-caucuses"
-                    class="usa-identifier__required-link usa-link">
-                    {{"Primaries and caucuses" | t }}
-                  </a>
-                <span class="vote__list-item-text">{{"\nLearn about how primaries and caucuses work." | t }}</span>
-                </li>
-
-                <li class="usa-identifier__required-links-item">
-                  <a
-                    href="https://www.usa.gov/election-results"
-                    class="usa-identifier__required-link usa-link">
-                    {{"Find past election results" | t }}
-                  </a>
-                <span class="vote__list-item-text">{{"\nLearn where to find state and local election results." | t }}</span>
-                </li>
-
-              </ul>
+              {# USA.gov election info links#}
+              {{ drupal_entity('block_content', '18') }}
             </div>
           </nav>
         </section>
