@@ -50,8 +50,6 @@
   }
 
   @include at-media('tablet') {
-    max-width: 1244px;
-
     .usa-card {
       width: 311px;
       height: 378px;

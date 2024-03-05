@@ -2,8 +2,6 @@
 
 {% block content %}
 <div class="grid-container">
-  <div{{ attributes.addClass(classes) }}>
-    {% block content %}
     <div class="vote-cta vote-cta__media-{{ content.field_image_alignment | field_value }} display-flex">
         <div class="vote-cta__media-container">
             {{ content.field_media | field_value }}
@@ -20,7 +18,5 @@
           </div>
         </div>
     </div>
-    {% endblock %}
-  </div>
 </div>
 {% endblock %}
