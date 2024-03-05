@@ -1,12 +1,6 @@
-{%
-  set classes = [
-    'paragraph',
-    'paragraph--type--' ~ paragraph.bundle|clean_class,
-    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished'
-  ]
-%}
-{% block paragraph %}
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
 <div class="grid-container">
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
@@ -18,9 +12,8 @@
           <div class="vote-cta__header">
             <h2>{{ content.field_heading | field_value }}</h2>
           </div>
-          <span class="vote-cta__divider"></span>
           <div class="vote-cta__body">
-            <p>{{ content.field_body | field_value }}</p>
+            {{ content.field_body | field_value }}
           </div>
           <div class="vote-cta__footer">
             <div class="vote-link">{{ content.field_link | field_value }}</div>
@@ -30,4 +23,4 @@
     {% endblock %}
   </div>
 </div>
-{% endblock paragraph %}
+{% endblock %}

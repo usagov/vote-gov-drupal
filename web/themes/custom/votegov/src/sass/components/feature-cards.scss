@@ -6,6 +6,7 @@
     background-color: #fff;
 
     .vote-feature-cards__header {
+        max-width: 581px;
 
         @include at-media('tablet') {
             @include u-margin-top(10);
@@ -25,7 +26,8 @@
         line-height: 118%;
         }  
 
-        .divider {
+        &::after {
+            content: "";
             width: 96px;
             @include u-height('05');
             @include u-display('block');

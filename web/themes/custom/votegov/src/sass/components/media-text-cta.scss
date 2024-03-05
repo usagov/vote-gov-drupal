@@ -46,7 +46,6 @@
             border-color: #000;
             @include u-radius('md');
             @include u-border(0);
-            opacity: 0.7;
             background: #E2EDF2;
             mix-blend-mode: multiply;
         }
@@ -66,18 +65,23 @@
                 font-size: 28.83px;
                 @include u-text('medium');
                 line-height: 118%;
-                
-            }
-            &__divider {
-                width: 96px;
-                @include u-height('05');
-                @include u-display('block');
-                background: $ac-warm;
-                @include u-margin-y(3);
+
+                h2 {
+                    font-size: 28.83px;
+                }
+
+                &::after {
+                    content: "";
+                    width: 96px;
+                    @include u-height('05');
+                    @include u-display('block');
+                    background: $ac-warm;
+                    @include u-margin-y(3);
+                }
             }
             &__body {
                 color: $base-dark;
-                font-family: Merriweather;
+                @include u-font-family('serif');
                 font-size: 16px;
                 @include u-text('normal');
                 line-height: 155%;

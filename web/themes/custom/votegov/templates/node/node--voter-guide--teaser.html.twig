@@ -1,34 +1,19 @@
-{% set classes = [
-  'node--' ~ node.bundle|clean_class,
-  node.isPromoted() ? 'node--promoted',
-  node.isSticky() ? 'node--sticky',
-  not node.isPublished() ? 'node--unpublished',
-  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-] %}
-
-<article{{ attributes.addClass(classes) }}>
-  {% block content %}
+{% extends 'node.html.twig' %}  {% block content %}
     <a href={{ url }}>
-    <li class="usa-card">
+    <div class="usa-card">
       <div class="usa-card__container">
         <div class="vote-feature-card__icon">
           {{ source( directory ~ '/img/feature-circle.svg' ) }}
         </div>
-        <span class="vote-feature-card__divider"></span>
-
         <div class="vote-feature-card__content">
         <div class="usa-card__header">
-            <h2 class="usa-card__heading">{{ label }}</h2>
+            <h3 class="usa-card__heading">{{ label }}</h3>
         </div>
         <div class="usa-card__body">
             {{ content.body | render | striptags }}
         </div>
         </div>
-      {# <div class="usa-card__footer">
-        {{content.links}}
-      </div> #}
       </div>
-    </li>
+    </div>
   </a>
   {% endblock %}
-</article>

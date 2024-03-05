@@ -19,9 +19,9 @@
     &__header {
       @include u-padding(0);
   
-      h2 {
+      h3 {
         color: $base-dark;
-        font-family: 'Merriweather';
+        @include u-font-family('serif');
         font-size: 20.25px;
         font-weight: 700;
         font-style: normal;
@@ -56,8 +56,9 @@
       width: 311px;
       height: 378px;
 
-      &:hover .usa-card__container {
+      &:hover .usa-card__container, :focus .usa-card__container {
         background-color: $bg-light-cool; 
+        outline: 0;
         border: 3px solid #3E79BB;
 
         & >.vote-feature-card__icon>svg>circle {
@@ -67,27 +68,28 @@
 
       &__container {
         @include u-padding(3);
-        @include u-border('1px');
-        border-color: $base-dark;
+        border: 3px solid transparent;
+        outline: 1px solid $base-dark;
       }
 
       .vote-feature-card {
-        &__icon {
-          @include u-margin-left('auto');
-          @include u-margin-right('auto');
-          @include u-margin-top(2);
-          @include u-margin-bottom(2);
+        &__content {
+          @include u-padding-x(1);
+          @include u-padding-top(3);
         }
-        &__divider {
-          @include u-width('full');
+
+        &__icon {
+          text-align: center;
+          border-color: $base-dark;
           @include u-border(1px, 'dashed');
-          @include u-margin-bottom(2);
+          @include u-border-top(0);
+          @include u-border-x(0);
           @include u-margin-top(2);
+          @include u-padding-bottom(4);
         }
       }
 
       &__header {
-        @include u-margin-top(1);
         @include u-margin-bottom(1);
 
         h2 {
@@ -149,7 +151,7 @@
        float: left;
        @include u-width('full');
    
-       h2 {
+       h3 {
          text-decoration-line: underline;
        }
      }
