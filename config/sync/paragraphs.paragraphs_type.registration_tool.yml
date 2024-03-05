@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: registration_tool
-label: 'Registration tool'
+label: 'State Registration Tool'
 icon_uuid: null
 icon_default: null
 description: ''
