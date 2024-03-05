@@ -43,17 +43,11 @@
       font-weight: 400;
       line-height: 155%;
       
-      &:last-child {
-         @include u-padding(0);
-      }
     }
   }
 
   @include at-media('tablet') {
     .usa-card {
-      width: 311px;
-      height: 378px;
-
       &:hover .usa-card__container, :focus .usa-card__container {
         background-color: $bg-light-cool; 
         outline: 0;
