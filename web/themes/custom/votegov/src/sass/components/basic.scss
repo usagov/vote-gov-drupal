@@ -1,0 +1,27 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+
+.vote-basic__container {
+  @include u-padding-top(4);
+  @include u-maxw('desktop-lg');
+  
+  @include at-media('tablet-lg') {
+    margin: auto;
+  }
+}
+
+.vote-basic__heading {
+  @include u-padding-x(3);
+
+  @include at-media('desktop') {
+    padding-right: 250px
+  }
+}
+
+.vote-basic__content {
+  @include u-padding-x(3);
+
+  @include at-media('desktop') {
+    padding-right: 500px
+  }
+}
