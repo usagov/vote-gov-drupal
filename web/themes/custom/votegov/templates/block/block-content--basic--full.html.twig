@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block content.
+ *
+ * @see template_preprocess_block_content_template()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+  'block-content',
+  'block-content--type-' ~ bundle|clean_class,
+  'block-content--view-mode-' ~ view_mode|clean_class
+]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  {% block content %}
+    <h2>{{ content.field_heading | field_value }}</h2>
+    {{ content.body }}
+  {% endblock %}
+
+</div>

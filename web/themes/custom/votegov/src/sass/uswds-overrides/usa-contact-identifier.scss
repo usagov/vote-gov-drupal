@@ -68,10 +68,7 @@
 
         li {
             @include u-margin-bottom(3);
-
-            .vote__list-item-text{
-                @include u-text('pre-line');
-            }
+            @include u-margin-right(3);
         }
 
         a {
