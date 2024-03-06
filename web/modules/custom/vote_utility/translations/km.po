@@ -77,6 +77,9 @@ msgstr "របៀបចុះឈ្មោះដើម្បីបោះឆ្ន
 msgid "Other ways to register to vote"
 msgstr "វិធីផ្សេងៗទៀតដើម្បីចុះឈ្មោះបោះឆ្នោត"
 
+msgid "Voter registration deadlines for the @election_date, election"
+msgstr "ថ្ងៃផុតកំណត់នៃការចុះឈ្មោះឣ្នកបោះឆ្នោតសម្រាប់ការបោះឆ្នោត @election_date"
+
 msgid "Register by mail deadline:"
 msgstr "ថ្ងៃផុតកំណត់ចុះឈ្មោះតាមសំបុត្រ៖"
 
