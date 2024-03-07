@@ -8,20 +8,20 @@ dependencies:
 id: state_territory_es
 label: 'State/Territory (es)'
 type: 'canonical_entities:node'
-pattern: '/registrar/[node:field_state_abbreviation]'
+pattern: '/registrar/[node:title]'
 selection_criteria:
-  32446fb3-fafa-414a-87ab-ff0bf58920df:
+  dfb94dfb-8d00-4993-a052-b353ce370611:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 32446fb3-fafa-414a-87ab-ff0bf58920df
+    uuid: dfb94dfb-8d00-4993-a052-b353ce370611
     context_mapping:
       node: node
     bundles:
       state_territory: state_territory
-  dfb6a7e7-734c-4952-bd90-554bae1e1000:
+  cd174d1f-8f79-4f0c-9a74-41abf358929a:
     id: language
     negate: false
-    uuid: dfb6a7e7-734c-4952-bd90-554bae1e1000
+    uuid: cd174d1f-8f79-4f0c-9a74-41abf358929a
     context_mapping:
       language: 'node:langcode:language'
     langcodes:
