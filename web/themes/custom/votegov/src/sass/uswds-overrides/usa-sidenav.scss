@@ -1,0 +1,42 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+@use "mixins" as *;
+
+nav:has(>.usa-sidenav) {
+  @include u-position('relative');
+  @include u-height('full');
+}
+
+.usa-sidenav {
+  @include at-media('desktop-lg') {
+    @include u-position('sticky');
+    top: 2rem;
+
+    .toolbar-horizontal & {
+      top: 8rem;
+    }
+  }
+}
+
+.usa-sidenav__item a {
+  &.usa-current,
+  &:not(.usa-button):not(.usa-current) {
+    @include u-font-weight('bold');
+    color: $base-primary;
+
+    &:after {
+      @include u-radius(0);
+      @include u-top(0);
+      @include u-bottom(0);
+      background-color: $base-primary;
+    }
+
+    @include hover {
+      color: $base-primary-hover;
+
+      &:after {
+        background-color: $base-primary-hover;
+      }
+    }
+  }
+}
