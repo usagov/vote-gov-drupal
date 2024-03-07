@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d53ed0a218a4ee16a71bb38b6f3ea5c7",
+    "content-hash": "32b83aafe1acda8e9bf74874d6d2bf6d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5021,7 +5021,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/uswds_templates.git",
-                "reference": "2af1b4794cbb4b46b046686b6bd313442f85f2ff"
+                "reference": "eab141248b679e7ba744dd91329fb802cb35a0aa"
             },
             "require": {
                 "drupal/core": "^9.4 || ^10"
@@ -5033,7 +5033,7 @@
                 },
                 "drupal": {
                     "version": "3.0.x-dev",
-                    "datestamp": "1708131917",
+                    "datestamp": "1709344451",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"

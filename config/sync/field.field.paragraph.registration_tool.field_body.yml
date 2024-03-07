@@ -1,0 +1,24 @@
+uuid: 0a5e39f5-9e5f-4920-a013-66efe18f9351
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.registration_tool
+  module:
+    - text
+id: paragraph.registration_tool.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: registration_tool
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long
