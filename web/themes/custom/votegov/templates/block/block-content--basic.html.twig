@@ -8,22 +8,23 @@
  * @ingroup themeable
  */
 #}
+{% set field_classes = content.field_classes | field_value | render %}
+
 {%
   set classes = [
   'block-content',
   'block-content--type-' ~ bundle|clean_class,
-  'block-content--view-mode-' ~ view_mode|clean_class
+  'block-content--view-mode-' ~ view_mode|clean_class,
+  field_classes
 ]
 %}
 
 <div{{ attributes.addClass(classes) }}>
-
-  {{ title_prefix }}
-  {{ title_suffix }}
-
   {% block content %}
-    <h2>{{ content.field_heading | field_value }}</h2>
-    {{ content.body }}
+    {% if content.field_heading | render %}
+      <h2>{{ content.field_heading | field_value }}</h2>
+    {% endif %}
+    {{ content.body | field_value }}
   {% endblock %}
 
 </div>
