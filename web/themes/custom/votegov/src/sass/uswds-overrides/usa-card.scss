@@ -1,10 +1,18 @@
 @use "uswds-core" as *;
 @use "variables" as *;
+@use "mixins" as *;
 
 .usa-card-group {
 
   a {
-    text-decoration: none;
+    @include u-display('block');
+    @include u-text-decoration('no-underline');
+    @include u-height('full');
+
+    @include hover {
+      background-color: transparent;
+      color: inherit;
+    }
   }
 
   .usa-card {
@@ -15,10 +23,10 @@
         }
       }
      }
-  
+
     &__header {
       @include u-padding(0);
-  
+
       h3 {
         color: $base-dark;
         @include u-font-family('serif');
@@ -28,28 +36,19 @@
         line-height: 155%;
       }
     }
-  
+
     &__body {
       @include u-padding(0);
       @include u-margin-top(1);
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 4;
-      overflow: hidden;
-      text-overflow: ellipsis;
       color: $base-dark;
       font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 155%;
-      
     }
   }
 
   @include at-media('tablet') {
     .usa-card {
       &:hover .usa-card__container, :focus .usa-card__container {
-        background-color: $bg-light-cool; 
+        background-color: $bg-light-cool;
         outline: 0;
         border: 3px solid #3E79BB;
 
@@ -99,20 +98,20 @@
   @include at-media-max('tablet') {
     @include u-margin-right('auto');
     @include u-margin-left('auto');
-   
+
     article {
      @include u-width('full');
      border-bottom: 1px solid $bg-light-medium;
-   
+
      &:first-of-type {
       @include u-border-top(1px);
       border-top: 1px solid $bg-light-medium;
       }
     }
-   
+
     .usa-card {
     @include u-margin(0);
-   
+
      &__container {
        display: inline-block;
        @include u-padding(3);
@@ -123,35 +122,35 @@
        @include u-margin-bottom(4);
        border-radius: unset;
      }
-   
+
      .vote-feature-card {
-       
+
        &__icon {
          @include u-height(9);
          @include u-width(9);
          float: left;
        }
-   
+
        &__content {
          width: calc(100% - 72px);
          float: right;
          @include u-padding-left(3);
        }
       }
-   
+
      &__header {
        float: left;
        @include u-width('full');
-   
+
        h3 {
          text-decoration-line: underline;
        }
      }
-   
+
      &__body {
        float: left;
        @include u-padding(2);
-   
+
        >div {
          color: $base-dark;
          font-size: 16px;
@@ -161,7 +160,7 @@
         @include u-margin(0);
        }
      }
-   
+
      &:last-child {
        @include u-padding(0);
       @include u-margin(0);
