@@ -1,27 +1,29 @@
 @use "uswds-core" as *;
 @use "variables" as *;
+@use "mixins" as *;
+
+.vote-basic {
+  @include vote-block-margin-y;
+}
 
 .vote-basic__container {
-  @include u-padding-top(4);
-  @include u-maxw('desktop-lg');
-  
-  @include at-media('tablet-lg') {
-    margin: auto;
-  }
+  @include grid-container();
 }
 
 .vote-basic__heading {
-  @include u-padding-x(3);
+  @include u-maxw('tablet-lg');
 
-  @include at-media('desktop') {
-    padding-right: 250px
+  @include at-media('tablet-lg') {
+    @include grid-col(7);
+    @include grid-offset(1);
   }
 }
 
 .vote-basic__content {
-  @include u-padding-x(3);
+  @include u-maxw('tablet');
 
-  @include at-media('desktop') {
-    padding-right: 500px
+  @include at-media('tablet-lg') {
+    @include grid-col(5);
+    @include grid-offset(1);
   }
 }
