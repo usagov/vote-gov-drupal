@@ -124,6 +124,15 @@ https://designsystem.digital.gov/documentation/settings/
   $theme-breadcrumb-padding-bottom: 0,
   // -- Button
   // -- Card
+  // $theme-card-border-color: "#3E79BB",
+  $theme-card-border-radius: "md",
+  // $theme-card-border-width: "3px",
+  $theme-card-gap: 4,
+  $theme-card-font-family: "sans",
+  $theme-card-header-typeset: "serif",
+  // $theme-card-margin-bottom: 4,
+  // $theme-card-padding-perimeter: 4,
+  // $theme-card-padding-y: 4,
   // -- Checkbox
   // -- Collection
   // -- Footer
@@ -213,7 +222,7 @@ https://designsystem.digital.gov/documentation/settings/
   'tablet': true, // 640px
   'tablet-lg': true, // 880px
   'desktop': true, // 1024px
-  'desktop-lg': false, // 1200px
+  'desktop-lg': true, // 1200px
   'widescreen': false, // 1400px
   ),
   $flex-direction-settings: (

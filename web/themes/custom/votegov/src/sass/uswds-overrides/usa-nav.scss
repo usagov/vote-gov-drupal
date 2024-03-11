@@ -41,7 +41,7 @@
 
         &:has(.is-active)::after {
           content: "";
-          background-color: $ac-warm-active;
+          background-color: $ac-warm;
           display: block;
           position: relative;
           @include u-radius(0);

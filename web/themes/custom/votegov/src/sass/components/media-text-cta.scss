@@ -1,0 +1,110 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+
+.vote-cta {
+    @include u-display('flex');
+    @include u-margin-x('auto');
+    @include u-margin-y('205');
+    max-width: 1180px;
+
+    @include at-media-max('tablet') {
+        flex-wrap: wrap;
+        &__media-order-last, &__media-order-first {
+            .vote-cta__content-container {
+                order: 2;
+            }
+        }
+
+        &__media-container, &__content-container {
+            @include u-margin-y(3);
+        }
+    }
+
+    @include at-media('tablet') {
+    &__media-order-last {
+        .vote-cta__content-container {
+            @include u-margin-right(10);
+        }
+        .vote-cta__media-container {
+            order: 2;
+        }
+    }
+
+    &__media-order-first {
+        .vote-cta__content-container {
+            order: 2;
+            @include u-margin-left(10);
+        }
+    }
+
+    &__media-container {
+        width: 36.875rem;
+        @include u-margin-y('auto');
+
+        img {
+            flex-shrink: 0;
+            border-color: #000;
+            @include u-radius('md');
+            @include u-border(0);
+            background: #E2EDF2;
+            mix-blend-mode: multiply;
+        }
+    }
+
+    &__content-container {
+        max-width: 31.875rem;
+        @include u-margin-y('auto');
+    }
+    }
+
+    &__content-container {
+        .vote-cta {
+            &__header {
+                color: $base-dark;
+                font-family: Roboto;
+                font-size: 28.83px;
+                @include u-text('medium');
+                line-height: 118%;
+
+                h2 {
+                    font-size: 28.83px;
+                }
+
+                &::after {
+                    content: "";
+                    width: 96px;
+                    @include u-height('05');
+                    @include u-display('block');
+                    background: $ac-warm;
+                    @include u-margin-y(3);
+                }
+            }
+            &__body {
+                color: $base-dark;
+                @include u-font-family('serif');
+                font-size: 16px;
+                @include u-text('normal');
+                line-height: 155%;
+
+                p, ul, ul>li {
+                    @include u-margin(0);
+                }
+
+                p {
+                    @include u-margin-bottom(2);
+                }
+            }
+            &__footer {
+                a {
+                    padding: 5px;
+                }
+            }
+        }
+    }
+}
+
+@include at-media-max('tablet') {
+    .grid-container {
+        @include u-padding-x(3);
+    }
+}

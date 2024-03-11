@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Default theme implementation to USWDS button component.
+ *
+ * USWDS template variables:
+ * - label: string
+ * - href: string or uri
+ * - secondary: boolean (true / false)
+ * - id: string
+ *
+ * Usage example:
+ * {% include '@votegov/component/button.html.twig' with {
+ *   'label': var_string,
+ *   'href': var_uri,
+ *   'secondary': false,
+ *   'id': var_id
+ * } %}
+ *
+#}
+
+{%
+  set classes = [
+    'usa-button',
+    secondary ? 'usa-button--secondary'
+  ]
+%}
+
+{% if label %}
+  {% if href %}
+    <p>{{ link(label, href, create_attribute({'class': classes})) }}</p>
+  {% else %}
+    <button{{ create_attribute().addClass(classes).setAttribute('type', 'button').setAttribute('id', (id | clean_id)) }}>{{ label }}</button>
+  {% endif %}
+{% endif %}
