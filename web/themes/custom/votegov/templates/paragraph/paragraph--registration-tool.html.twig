@@ -35,7 +35,7 @@
                     <a href="{{ node_path }}">{{ result.node_field_data_title }}</a>
                   </li>
                   <li id="no-results" hidden>
-                    <span>No matching results. Please check spelling.</span>
+                    <span>{{ "No matching results. Please check spelling." | t }}</span>
                   </li>
                 {% endfor %}
               </ul>
