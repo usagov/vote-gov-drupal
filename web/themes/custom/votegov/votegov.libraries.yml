@@ -37,3 +37,8 @@ registration_tool:
   version: VERSION
   js:
     dist/js/registration-tool.js: { minified: true }
+
+search_bar:
+  version: VERSION
+  js:
+    dist/js/search-bar.js: { minified: true }
