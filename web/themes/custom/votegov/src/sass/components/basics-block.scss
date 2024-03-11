@@ -1,14 +1,34 @@
 @use "uswds-core" as *;
 @use "variables" as *;
+@use "mixins" as *;
 
 .basics-block {
-  @include at-media-max('tablet') {
-    @include u-margin-x('neg-205');
+  .page-content & {
+    @include at-media-max('tablet') {
+      @include u-margin-x('neg-3');
+    }
+  }
+
+  .node--landing & {
+    @include vote-block-margin-y;
+
+    @include at-media('tablet') {
+      @include grid-container();
+    }
   }
 
   + .basics-block {
     @include at-media('tablet') {
       @include u-margin-top(3);
+    }
+  }
+}
+
+.basics-block--container {
+  .node--landing & {
+    @include at-media('tablet') {
+      @include grid-col(7);
+      @include grid-offset(1);
     }
   }
 }
