@@ -7,12 +7,12 @@ dependencies:
 id: state_territory
 label: State/Territory
 type: 'canonical_entities:node'
-pattern: '/register/[node:field_state_abbreviation]'
+pattern: '/register/[node:title]'
 selection_criteria:
-  649a724b-13d4-4582-bf23-134b582390d8:
+  f3f277f8-932c-44ff-940d-dc5f45c7ed7e:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 649a724b-13d4-4582-bf23-134b582390d8
+    uuid: f3f277f8-932c-44ff-940d-dc5f45c7ed7e
     context_mapping:
       node: node
     bundles:

@@ -7,6 +7,7 @@ dependencies:
     - node.type.landing
     - paragraphs.paragraphs_type.accordion_group
     - paragraphs.paragraphs_type.basic
+    - paragraphs.paragraphs_type.basics_block
     - paragraphs.paragraphs_type.feature_cards
     - paragraphs.paragraphs_type.hero
     - paragraphs.paragraphs_type.image_text_cta
@@ -32,6 +33,7 @@ settings:
       basic: basic
       image_text_cta: image_text_cta
       registration_tool: registration_tool
+      basics_block: basics_block
       feature_cards: feature_cards
       hero: hero
       quicklinks: quicklinks
@@ -45,7 +47,7 @@ settings:
         enabled: true
       basics_block:
         weight: 9
-        enabled: false
+        enabled: true
       feature_cards:
         weight: 9
         enabled: true

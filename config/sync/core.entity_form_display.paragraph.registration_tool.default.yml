@@ -3,15 +3,26 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.registration_tool.field_body
     - field.field.paragraph.registration_tool.field_form_heading
     - field.field.paragraph.registration_tool.field_heading
     - field.field.paragraph.registration_tool.field_placeholder
     - paragraphs.paragraphs_type.registration_tool
+  module:
+    - text
 id: paragraph.registration_tool.default
 targetEntityType: paragraph
 bundle: registration_tool
 mode: default
 content:
+  field_body:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_form_heading:
     type: string_textfield
     weight: 1

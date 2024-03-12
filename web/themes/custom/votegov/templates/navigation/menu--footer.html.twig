@@ -32,7 +32,7 @@
   {% import _self as menus %}
 
   {% if items %}
-    <div class="identifier-links-container">
+    <div class="identifier-links-container" data-test="footerLinks" >
       <ul class="usa-list usa-list--unstyled identifier-links">
     {% for item in items %}
         <li>{{ link(item.title, item.url) }}</li>

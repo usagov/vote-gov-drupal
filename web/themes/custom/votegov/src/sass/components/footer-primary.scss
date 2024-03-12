@@ -1,5 +1,6 @@
 @use "uswds-core" as *;
 @use "variables" as *;
+@use "mixins" as *;
 
 .identifier-links-container {
   @include grid-col(12);
@@ -28,17 +29,9 @@
     }
 
     a {
-      color: $base-primary;
+      @include vote-link;
       word-break: break-word;
-      @include u-text('underline');
       font-size: 16px;
-
-      &:focus,
-      &:hover {
-        background-color: $base-primary-hover;
-        color: $base-white;
-        @include u-text('no-underline');
-      }
     }
   }
 }

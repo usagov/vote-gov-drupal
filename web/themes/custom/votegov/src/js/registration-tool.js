@@ -3,43 +3,24 @@
  */
 
 (() => {
-  const stateComboBox = document.getElementById("state-combo-box");
-  const stateInput = document.getElementById("state-input");
-  const stateDropdownBtn = document.getElementById("state-dropdown-btn");
-  const stateResultsContainer = document.getElementById("state-results-container");
+  const stateComboBox = document.getElementById("vote-basic-tool__form");
+  const stateInput = document.getElementById("vote-basic-tool__input");
+  const stateResultsContainer = document.getElementById("vote-basic-tool__results");
   const stateFilteredOptions = stateComboBox ? stateResultsContainer.getElementsByTagName('a') : null;
+  const noResultsMsg = document.getElementById("no-results");
 
   // Store dynamic filtered results.
   let stateListResults = [];
 
-  // Show state dropdown.
-  function stateListShow() {
-    stateResultsContainer.removeAttribute('hidden');
-  }
-
-  // Hide state dropdown.
-  function stateListHide() {
-    stateResultsContainer.setAttribute('hidden', '');
-  }
-
-  // Toggle state dropdown.
-  function stateListToggle() {
-    if (!stateResultsContainer.getAttribute('data-empty')) {
-      stateResultsContainer.toggleAttribute('hidden');
-    }
-  }
-
-  // Toggle state dropdown if empty.
-  function stateListToggleEmpty(empty) {
+  // Show No Results Message
+  function toggleResultsMessage(empty) {
     if (empty) {
-      stateListHide();
-      stateResultsContainer.setAttribute('data-empty', true);
+      noResultsMsg.removeAttribute('hidden');
     } else {
-      stateListShow();
-      stateResultsContainer.removeAttribute('data-empty');
+      noResultsMsg.setAttribute('hidden', '');
     }
   }
-
+  
   // Filter dropdown results based on user input.
   function stateListFilter() {
     let filter, txtValue, wordTxtValues, keyValue;
@@ -66,7 +47,7 @@
     }
 
     toggleDataFiltered(filter);
-    stateListToggleEmpty(!stateListResults.length);
+    toggleResultsMessage(!stateListResults.length);
   }
 
   // Focus on previous option in dropdown.
@@ -119,12 +100,6 @@
 
   // Initialize event listeners if combobox loaded.
   if (stateComboBox) {
-    // Attach events for combobox component.
-    stateComboBox.addEventListener('focusout', (e) => {
-      if (!e.currentTarget.contains(e.relatedTarget)) {
-        stateListHide();
-      }
-    });
     stateComboBox.addEventListener('submit', (e) => {
       e.preventDefault();
       let value = stateInput.value.toUpperCase();
@@ -132,7 +107,7 @@
     })
 
     // Attach events for state input field.
-    stateInput.addEventListener('focus', stateListShow);
+    // stateInput.addEventListener('focus', stateListShow);
     stateInput.addEventListener('keydown', (e) => {
       if (e.key === "ArrowDown") {
         stateListResults[0].focus();
@@ -143,7 +118,7 @@
         stateListFilter();
       }
     });
-
+    
     // Attach events for state links in dropdown.
     for (let i = 0; i < stateFilteredOptions.length; i++) {
       stateListResults.push(stateFilteredOptions[i]);
@@ -164,12 +139,6 @@
         }
       });
     }
-
-    // Attach events for dropdown toggle button.
-    stateDropdownBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      stateListToggle();
-    });
   }
 
 })();

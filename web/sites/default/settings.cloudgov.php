@@ -18,7 +18,6 @@ $s3_proxy_path_cms = getenv('S3_PROXY_PATH_CMS') ?: '/s3/files';
 $settings['tome_static_directory'] = dirname(DRUPAL_ROOT) . '/html';
 $settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config/sync';
 $settings['file_private_path'] = dirname(DRUPAL_ROOT) . '/private';
-$settings['install_profile'] = 'minimal';
 
 $settings['tome_static_path_exclude'] = [
   '/saml', '/saml/acs', '/saml/login', '/saml/logout', '/saml/metadata', '/saml/sls',
