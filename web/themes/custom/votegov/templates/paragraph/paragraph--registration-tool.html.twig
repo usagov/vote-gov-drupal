@@ -1,43 +1,49 @@
 {#
 /**
  * @file
- * Default theme implementation to display a registration tool paragraph.
- *
- * @ingroup themeable
+ * Default theme implementation to display a paragraph: Basic
  */
 #}
-
 {{ attach_library('votegov/registration_tool') }}
 
-{% block paragraph %}
-  <section class="register align-bottom" role="region" aria-label="{{ content.field_heading | field_value }}">
-    <header>
-      <h1 class="main-heading" data-test="main-header">{{ content.field_heading | field_value }}</h1>
-    </header>
-
-    <form id="state-combo-box">
-      <label for="state-input">{{ content.field_form_heading | field_value }}</label>
-      <div class="input-buttons-group">
-        <input type="text" class="state-input" id="state-input" autocomplete="off"
-               placeholder="{{ content.field_placeholder | field_value }}">
-        <div class="input-control-container">
-          <button id="state-dropdown-btn" tabindex="-1" class="dropdown-btn" type="button"
-                  aria-hidden="true"></button>
+<div id="registration-tool" class="offset-container">
+<section class="vote-basic grid-container" role="region" aria-label="">
+{{ drupal_entity('block', 'votegov_breadcrumbs') }}
+  <div class="vote-basic-text__container">
+    <h2 class="vote-basic-text__heading heading--red-underline">
+      {{ content.field_heading | field_value }}
+    </h2>
+    <div class="vote-basic-text__content">
+      {{ content.field_body | field_value }}
+    </div>
+  </div>
+  <div class="vote-basic-tool__container">
+      <form id="vote-basic-tool__form" class="vote-basic-tool__form">
+        <label class="vote-basic-tool__label" for="vote-basic-tool__input">{{ content.field_form_heading | field_value }}</label>
+        <input type="text" class="vote-basic-tool__input"
+                id="vote-basic-tool__input" autocomplete="off"
+                placeholder="{{ content.field_placeholder | field_value }}">
+        <div class="vote-basic-tool__list-container">
+          <div class="vote-basic-tool__scrollable-results">
+            <nav id="vote-basic-tool__results" class="vote-basic-tool__nav">
+              <ul class="vote-basic-tool__list">
+                {% set results = drupal_view_result('state_territory', 'block') %}
+                {% for result in results %}
+                  {% set nodeID = result._entity.id() %}
+                  {% set node_path = path('entity.node.canonical', {'node': nodeID}) %}
+                  <li>
+                    <a href="{{ node_path }}">{{ result.node_field_data_title }}</a>
+                  </li>
+                  <li id="no-results" hidden>
+                    <span>{{ "No matching results. Please check spelling." | t }}</span>
+                  </li>
+                {% endfor %}
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
-      <nav id="state-results-container" hidden>
-        <ul id="results-list">
-          {% set results = drupal_view_result('state_territory', 'block') %}
-          {% for result in results %}
-            {% set nodeID = result._entity.id() %}
-            {% set node_path = path('entity.node.canonical', {'node': nodeID}) %}
-            <li>
-              <a href="{{ node_path }}">{{ result.node_field_data_title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </nav>
-    </form>
-
-  </section>
-{% endblock %}
+      </form>
+    </div>
+  </div>
+</section>
+</div>
