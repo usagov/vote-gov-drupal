@@ -1,0 +1,13 @@
+{#
+/**
+ * @file
+ * Theme override for a main view:sitemap template.
+ */
+#}
+<nav class="vote-sitemap vote-sitemap--register">
+  {% if rows %}
+      {{ rows }}
+  {% elseif empty %}
+      {{ empty }}
+  {% endif %}
+</nav>
