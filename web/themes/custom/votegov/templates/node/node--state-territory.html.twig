@@ -14,7 +14,9 @@
 ] %}
 
 <article{{ attributes.addClass(classes) }}>
-  {{ drupal_view('inline_alert', 'embed_1') }}
+  {% if drupal_view('inline_alert', 'embed_1') | render | striptags | trim %}
+    {{ drupal_view('inline_alert', 'embed_1') }}
+  {% endif %}
 
   {% set state_name = label | field_value | render %}
   {% set in_state_name = node.field_in_state_name.value | default("@state_name") | t({ "@state_name": state_name}) %}
