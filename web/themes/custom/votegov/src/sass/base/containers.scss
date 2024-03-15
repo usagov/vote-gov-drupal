@@ -11,3 +11,10 @@ body {
     column-gap: 2rem;
   }
 }
+
+.grid-container {
+  @include at-media('tablet') {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
