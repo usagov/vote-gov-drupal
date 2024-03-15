@@ -1,280 +1,294 @@
-@use "uswds-core" as *;
-@use "variables" as *;
-@use "mixins" as *;
+// @use "uswds-core" as *;
+// @use "variables" as *;
+// @use "mixins" as *;
 
-#registration-tool {
+// #registration-tool {
 
-    @include at-media('tablet-lg') {
-        &.offset-container {
-            background-image: url('../../../votegov/img/hero-map.jpg');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-color: #11385B;
-            margin-bottom: 12rem;
-        }
-    }
+//     @include at-media('tablet-lg') {
+//         &.offset-container {
+//             background-image: url('../../../votegov/img/hero-map.jpg');
+//             background-position: center;
+//             background-repeat: no-repeat;
+//             background-size: cover;
+//             background-color: $base-dark;
+//             margin-bottom: 12rem;
+//         }
+//     }
 
-    .vote-basic {
-        color: #FFF;
-        @include u-margin-top(0);
+//     .vote-basic {
+//         color: $base-white;
+//         @include u-margin-top(0);
 
-        #block-votegov-breadcrumbs {
-            @include u-width('full');
+//         #block-votegov-breadcrumbs {
+//             @include u-width('full');
 
-            a {
-                color: #fff;
-            }
-        }
+//             a {
+//                 color: $base-white;
+//             }
+//         }
 
-        .vote-basic {
+//         .vote-basic {
 
-            &-text {
-                &__container {
-                    background-color: #3E79BB;
-                }
+//             &-text {
+//                 &__container {
+//                     background-color: $base-primary;
+//                 }
 
-                &__heading {
-                    color: #FFF;
-                    @include u-font-family('serif');
-                    font-size: 47.78px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: 116%;
-                }
+//                 &__heading {
+//                     color: $base-white;
+//                     @include u-font-family('serif');
+//                     font-size: 47.78px;
+//                     font-style: normal;
+//                     font-weight: 700;
+//                     line-height: 116%;
+//                 }
 
-                &__content {
-                    font-family: Roboto;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 155%;
-                }
-            }
+//                 &__content {
+//                     font-family: Roboto;
+//                     font-size: 16px;
+//                     font-style: normal;
+//                     font-weight: 400;
+//                     line-height: 155%;
+//                 }
+//             }
 
-            &-tool {
-                &__container {
-                    background-color: #3E79BB;
-                }
+//             &-tool {
+//                 &__container {
+//                     background-color: $base-primary;
+//                 }
 
-                &__label {
-                    @include u-display('flex');
-                    font-family: Roboto;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 155%;
-                    @include u-margin-bottom(2);
-                }
+//                 &__label {
+//                     @include u-display('flex');
+//                     font-family: Roboto;
+//                     font-size: 16px;
+//                     font-style: normal;
+//                     font-weight: 400;
+//                     line-height: 155%;
+//                     @include u-margin-bottom(2);
+//                 }
 
-                &__input {
-                    @include u-display('flex');
-                    background-image: url('../../../votegov/img/svg/location.svg');
-                    background-repeat: no-repeat;
-                    background-position: 23px center;
-                    @include u-radius('md');
-                    @include u-border(1px);
-                    border-color: #D3D3D3;
-                    @include u-margin-bottom(1);
-                    padding-left: 54px;
-                    padding-top: 11.65px;
-                    padding-bottom: 11.65px;
-                    padding-right: 25px;
-                    color: #11385B;
-                    font-family: Roboto;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 155%;
-                    @include u-width('full');
+//                 &__input {
+//                     @include u-display('flex');
+//                     background-image: url('../../../votegov/img/svg/location.svg');
+//                     background-repeat: no-repeat;
+//                     background-position: 23px center;
+//                     @include u-radius('md');
+//                     @include u-border(1px);
+//                     border-color: $bg-light-medium;
+//                     @include u-margin-bottom(1);
+//                     padding-left: 54px;
+//                     padding-top: 11.65px;
+//                     padding-bottom: 11.65px;
+//                     padding-right: 25px;
+//                     color: $base-dark;
+//                     font-family: Roboto;
+//                     font-size: 16px;
+//                     font-style: normal;
+//                     font-weight: 400;
+//                     line-height: 155%;
+//                     @include u-width('full');
 
-                    ::placeholder {
-                        color: #11385B;
-                        font-family: Roboto;
-                        font-size: 16px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 155%;
-                    }
-                }
+//                     ::placeholder {
+//                         color: $base-dark;
+//                         font-family: Roboto;
+//                         font-size: 16px;
+//                         font-style: normal;
+//                         font-weight: 400;
+//                         line-height: 155%;
+//                     }
+//                 }
 
-                &__scrollable-results {
-                    overflow: auto;
-                    @include u-radius('md');
-                    @include u-border(1px);
-                    border-color: #D3D3D3;
-                }
+//                 &__scrollable-results {
+//                     background-color: $base-white;
+//                     overflow: auto;
+//                     @include u-radius('md');
+//                     @include u-border(1px);
+//                     border-color: $bg-light-medium;
+//                 }
 
-                &__nav {
-                    background: #FFF;
+//                 &__nav {
+//                     background: $base-white;
 
-                    ul {
-                        list-style: none;
-                        padding-left: 23px;
-                        @include u-margin-top(0);
+//                     ul {
+//                         list-style: none;
+//                         padding-left: 23px;
+//                         @include u-margin-top(0);
 
-                        li {
-                            @include u-margin(0);
-                        }
+//                         li {
+//                             @include u-margin(0);
+//                         }
 
-                        a, span {
-                            font-family: Roboto;
-                            color: #2E598A;
-                            font-size: 16px;
-                            font-style: normal;
-                            font-weight: 500;
-                            line-height: 155%;
-                        }
+//                         a {
+//                             @include vote-link();
+//                             font-family: Roboto;
+//                             color: $base-primary-hover;
+//                             font-size: 16px;
+//                             font-style: normal;
+//                             font-weight: 500;
+//                             line-height: 155%;
 
-                        a {
-                            text-decoration-line: underline;
-                        }
-                    }
-                }
-            }
-        }
+//                             &:visited {
+//                                 color: $base-primary-hover;
+//                             }
+//                         }
 
-        //desktop
-        @include at-media('tablet-lg') {
-            @include u-radius('lg');
-            position: relative;
-            top: 108.37px;
-            @include u-display('flex');
-            flex-wrap: wrap;
-            @include u-width('full');
+//                         a {
+//                             text-decoration-line: underline;
+//                         }
 
-            #block-votegov-breadcrumbs {
-                @include u-margin-bottom(3);
-            }
+//                         li#no-results>span {
+//                             font-family: Roboto;
+//                             color: $base-primary-hover;
+//                             font-size: 16px;
+//                             font-style: normal;
+//                             font-weight: 500;
+//                             line-height: 155%;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
 
-            .vote-basic {
+//         //desktop
+//         @include at-media('tablet-lg') {
+//             @include u-radius('lg');
+//             position: relative;
+//             top: 108.37px;
+//             @include u-display('flex');
+//             flex-wrap: wrap;
+//             @include u-width('full');
 
-                &-text {
-                    &__container {
-                        flex: 1;
-                        position: relative;
-                        @include u-padding(8);
-                        background-position: 64px 64px;
-                        ;
-                        border-radius: 8px 0px 0px 8px;
+//             #block-votegov-breadcrumbs {
+//                 @include u-margin-bottom(3);
+//             }
 
-                        &::before {
-                            content: url('../../../votegov/img/svg/map-transparent.svg');
-                        }
-                    }
+//             .vote-basic {
 
-                    &__heading {
-                        @include u-margin-top(4);
-                    }
-                }
+//                 &-text {
+//                     &__container {
+//                         flex: 1;
+//                         position: relative;
+//                         @include u-padding(8);
+//                         background-position: 64px 64px;
+//                         ;
+//                         border-radius: 8px 0px 0px 8px;
 
-                &-tool {
-                    &__container {
-                        flex: 1;
-                        position: relative;
-                        @include u-padding(8);
-                        border-radius: 0px 8px 8px 0px;
-                    }
+//                         &::before {
+//                             content: url('../../../votegov/img/svg/map-transparent.svg');
+//                         }
+//                     }
 
-                    &__form {
-                        @include u-display('flex');
-                        flex-direction: column;
-                        @include u-height('full');
-                    }
+//                     &__heading {
+//                         @include u-margin-top(4);
+//                     }
+//                 }
 
-                    &__list-container {
-                        position: relative;
-                        @include u-height('full');
-                    }
+//                 &-tool {
+//                     &__container {
+//                         flex: 1;
+//                         position: relative;
+//                         @include u-padding(8);
+//                         border-radius: 0px 8px 8px 0px;
+//                     }
 
-                    &__scrollable-results {
-                        background-color: #fff;
-                        position: absolute;
-                        bottom: 0;
-                        top: 0;
-                        @include u-width('full');
-                    }
+//                     &__form {
+//                         @include u-display('flex');
+//                         flex-direction: column;
+//                         @include u-height('full');
+//                     }
 
-                    &__nav {
-                        ul {
-                            overflow: auto;
-                            position: absolute;
-                            bottom: 0;
-                            top: 0;
-                            @include u-width('full');
+//                     &__list-container {
+//                         position: relative;
+//                         @include u-height('full');
+//                     }
 
-                            li {
-                                @include u-padding-top(1);
-                                @include u-padding-bottom(1);
-                            }
-                        }
-                    }
-                }
-            }
-        }
+//                     &__scrollable-results {
+//                         position: absolute;
+//                         bottom: 0;
+//                         top: 0;
+//                         @include u-width('full');
+//                     }
 
-        //mobile
-        @include at-media-max('tablet-lg') {
-            @include u-padding(0);
+//                     &__nav {
+//                         ul {
+//                             overflow: auto;
+//                             position: absolute;
+//                             bottom: 0;
+//                             top: 0;
+//                             @include u-width('full');
 
-            #block-votegov-breadcrumbs {
-                background-color: #11385B;
-                @include u-padding-x(3);
-                @include u-padding-y(5);
-            }
+//                             li {
+//                                 @include u-padding-top(1);
+//                                 @include u-padding-bottom(1);
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
 
-            .vote-basic {
+//         //mobile
+//         @include at-media-max('tablet-lg') {
+//             @include u-padding(0);
 
-                &-text {
-                    &__container {
-                        background-color: #11385B;
-                        @include u-padding-x(3);
-                        @include u-padding-bottom(10);
+//             #block-votegov-breadcrumbs {
+//                 background-color: $base-dark;
+//                 @include u-padding-x(3);
+//                 @include u-padding-y(5);
+//             }
 
-                        &::after {
-                            content: url('../../../votegov/img/svg/map-blue.svg');
-                            @include u-display('block');
-                            @include u-width('full');
-                            text-align: center;
-                            margin-bottom: -150px;
-                            @include u-padding-top(6);
-                            @include u-padding-bottom(4);
-                        }
+//             .vote-basic {
 
-                    }
+//                 &-text {
+//                     &__container {
+//                         background-color: $base-dark;
+//                         @include u-padding-x(3);
+//                         @include u-padding-bottom(10);
 
-                    &__heading {
-                        @include u-margin-bottom(2);
+//                         &::after {
+//                             content: url('../../../votegov/img/svg/map-blue.svg');
+//                             @include u-display('block');
+//                             @include u-width('full');
+//                             text-align: center;
+//                             margin-bottom: -150px;
+//                             @include u-padding-top(6);
+//                             @include u-padding-bottom(4);
+//                         }
 
-                        &.heading--red-underline:after {
-                            @include u-display('none');
-                        }
-                    }
+//                     }
 
-                    &__content {
-                        font-family: Roboto;
-                    }
-                }
+//                     &__heading {
+//                         @include u-margin-bottom(2);
 
-                &-tool {
-                    &__container {
-                        @include u-padding-top(8);
-                        @include u-padding-bottom(5);
-                        @include u-padding-x(3);
-                    }
+//                         &.heading--red-underline:after {
+//                             @include u-display('none');
+//                         }
+//                     }
 
-                    &__scrollable-results {
-                        height: 288px;
-                    }
+//                     &__content {
+//                         font-family: Roboto;
+//                     }
+//                 }
 
-                    &__nav {
-                        ul>li {
-                            padding-top: 11px;
-                            padding-bottom: 11px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+//                 &-tool {
+//                     &__container {
+//                         @include u-padding-top(8);
+//                         @include u-padding-bottom(5);
+//                         @include u-padding-x(3);
+//                     }
+
+//                     &__scrollable-results {
+//                         height: 288px;
+//                     }
+
+//                     &__nav {
+//                         ul>li {
+//                             padding-top: 11px;
+//                             padding-bottom: 11px;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
