@@ -14,7 +14,6 @@ body {
 
 .grid-container {
   @include at-media('tablet') {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    @include u-padding-x(10);
   }
 }
