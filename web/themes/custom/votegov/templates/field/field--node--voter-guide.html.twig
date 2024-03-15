@@ -1,0 +1,21 @@
+{% set classes = [
+  'field',
+  'field--name-' ~ field_name|clean_class,
+  'field--type-' ~ field_type|clean_class,
+  'field--label-' ~ label_display,
+  'tablet:grid-col-9'
+] %}
+
+{% set title_classes = [
+  'field__label',
+  label_display == 'visually_hidden' ? 'usa-sr-only',
+] %}
+
+<div{{ attributes.addClass(classes) }}>
+  {% if not label_hidden %}
+    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+  {% endif %}
+  {% for item in items %}
+    <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+  {% endfor %}
+</div>

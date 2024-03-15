@@ -61,4 +61,20 @@
   @include at-media('tablet') {
     @include u-padding(4);
   }
+
+  article {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include u-font-family('sans');
+    }
+  }
+}
+
+.field__item {
+  p+hr {
+    @include u-margin-y(3);
+  }
 }
