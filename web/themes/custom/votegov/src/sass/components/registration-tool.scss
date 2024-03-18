@@ -1,294 +1,298 @@
-// @use "uswds-core" as *;
-// @use "variables" as *;
-// @use "mixins" as *;
+@use "uswds-core" as *;
+@use "variables" as *;
+@use "mixins" as *;
 
-// #registration-tool {
+#registration-tool {
 
-//     @include at-media('tablet-lg') {
-//         &.offset-container {
-//             background-image: url('../../../votegov/img/hero-map.jpg');
-//             background-position: center;
-//             background-repeat: no-repeat;
-//             background-size: cover;
-//             background-color: $base-dark;
-//             margin-bottom: 12rem;
-//         }
-//     }
+    @include at-media('tablet-lg') {
+        &.offset-container {
+            background-image: url('../../../votegov/img/hero-map.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: $base-dark;
+            margin-bottom: 12rem;
+        }
+    }
 
-//     .vote-basic {
-//         color: $base-white;
-//         @include u-margin-top(0);
+    .vote-basic {
+        color: $base-white;
+        @include u-margin-top(0);
 
-//         #block-votegov-breadcrumbs {
-//             @include u-width('full');
+        #block-votegov-breadcrumbs {
+            @include u-width('full');
 
-//             a {
-//                 color: $base-white;
-//             }
-//         }
+            a {
+                color: $base-white;
+            }
+        }
 
-//         .vote-basic {
+        .vote-basic {
 
-//             &-text {
-//                 &__container {
-//                     background-color: $base-primary;
-//                 }
+            &-text {
+                &__container {
+                    background-color: $base-primary;
+                }
 
-//                 &__heading {
-//                     color: $base-white;
-//                     @include u-font-family('serif');
-//                     font-size: 47.78px;
-//                     font-style: normal;
-//                     font-weight: 700;
-//                     line-height: 116%;
-//                 }
+                &__heading {
+                    color: $base-white;
+                    @include u-font-family('serif');
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 116%;
+                }
 
-//                 &__content {
-//                     font-family: Roboto;
-//                     font-size: 16px;
-//                     font-style: normal;
-//                     font-weight: 400;
-//                     line-height: 155%;
-//                 }
-//             }
+                &__content {
+                    font-family: Roboto;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 155%;
+                }
+            }
 
-//             &-tool {
-//                 &__container {
-//                     background-color: $base-primary;
-//                 }
+            &-tool {
+                &__container {
+                    background-color: $base-primary;
+                }
 
-//                 &__label {
-//                     @include u-display('flex');
-//                     font-family: Roboto;
-//                     font-size: 16px;
-//                     font-style: normal;
-//                     font-weight: 400;
-//                     line-height: 155%;
-//                     @include u-margin-bottom(2);
-//                 }
+                &__label {
+                    @include u-display('flex');
+                    font-family: Roboto;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 155%;
+                    @include u-margin-bottom(2);
+                }
 
-//                 &__input {
-//                     @include u-display('flex');
-//                     background-image: url('../../../votegov/img/svg/location.svg');
-//                     background-repeat: no-repeat;
-//                     background-position: 23px center;
-//                     @include u-radius('md');
-//                     @include u-border(1px);
-//                     border-color: $bg-light-medium;
-//                     @include u-margin-bottom(1);
-//                     padding-left: 54px;
-//                     padding-top: 11.65px;
-//                     padding-bottom: 11.65px;
-//                     padding-right: 25px;
-//                     color: $base-dark;
-//                     font-family: Roboto;
-//                     font-size: 16px;
-//                     font-style: normal;
-//                     font-weight: 400;
-//                     line-height: 155%;
-//                     @include u-width('full');
+                &__input {
+                    @include u-display('flex');
+                    background-image: url('../../../votegov/img/svg/location.svg');
+                    background-repeat: no-repeat;
+                    background-position: 23px center;
+                    @include u-radius('md');
+                    @include u-border(1px);
+                    border-color: $bg-light-medium;
+                    @include u-margin-bottom(1);
+                    padding-left: 54px;
+                    padding-top: 11.65px;
+                    padding-bottom: 11.65px;
+                    padding-right: 25px;
+                    color: $base-dark;
+                    font-family: Roboto;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 155%;
+                    @include u-width('full');
 
-//                     ::placeholder {
-//                         color: $base-dark;
-//                         font-family: Roboto;
-//                         font-size: 16px;
-//                         font-style: normal;
-//                         font-weight: 400;
-//                         line-height: 155%;
-//                     }
-//                 }
+                    ::placeholder {
+                        color: $base-dark;
+                        font-family: Roboto;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 155%;
+                    }
+                }
 
-//                 &__scrollable-results {
-//                     background-color: $base-white;
-//                     overflow: auto;
-//                     @include u-radius('md');
-//                     @include u-border(1px);
-//                     border-color: $bg-light-medium;
-//                 }
+                &__scrollable-results {
+                    background-color: $base-white;
+                    overflow: auto;
+                    @include u-radius('md');
+                    @include u-border(1px);
+                    border-color: $bg-light-medium;
+                }
 
-//                 &__nav {
-//                     background: $base-white;
+                &__nav {
+                    background: $base-white;
 
-//                     ul {
-//                         list-style: none;
-//                         padding-left: 23px;
-//                         @include u-margin-top(0);
+                    ul {
+                        list-style: none;
+                        padding-left: 23px;
+                        @include u-margin-top(0);
 
-//                         li {
-//                             @include u-margin(0);
-//                         }
+                        li {
+                            @include u-margin(0);
+                        }
 
-//                         a {
-//                             @include vote-link();
-//                             font-family: Roboto;
-//                             color: $base-primary-hover;
-//                             font-size: 16px;
-//                             font-style: normal;
-//                             font-weight: 500;
-//                             line-height: 155%;
+                        a {
+                            @include vote-link();
+                            font-family: Roboto;
+                            color: $base-primary-hover;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 155%;
 
-//                             &:visited {
-//                                 color: $base-primary-hover;
-//                             }
-//                         }
+                            &:visited {
+                                color: $base-primary-hover;
+                            }
+                        }
 
-//                         a {
-//                             text-decoration-line: underline;
-//                         }
+                        a {
+                            text-decoration-line: underline;
+                        }
 
-//                         li#no-results>span {
-//                             font-family: Roboto;
-//                             color: $base-primary-hover;
-//                             font-size: 16px;
-//                             font-style: normal;
-//                             font-weight: 500;
-//                             line-height: 155%;
-//                         }
-//                     }
-//                 }
-//             }
-//         }
+                        li#no-results>span {
+                            font-family: Roboto;
+                            color: $base-primary-hover;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 155%;
+                        }
+                    }
+                }
+            }
+        }
 
-//         //desktop
-//         @include at-media('tablet-lg') {
-//             @include u-radius('lg');
-//             position: relative;
-//             top: 108.37px;
-//             @include u-display('flex');
-//             flex-wrap: wrap;
-//             @include u-width('full');
+        //desktop
+        @include at-media('tablet-lg') {
+            @include u-radius('lg');
+            position: relative;
+            top: 108.37px;
+            @include u-display('flex');
+            flex-wrap: wrap;
+            @include u-width('full');
 
-//             #block-votegov-breadcrumbs {
-//                 @include u-margin-bottom(3);
-//             }
+            #block-votegov-breadcrumbs {
+                @include u-margin-bottom(3);
+            }
 
-//             .vote-basic {
+            .vote-basic {
 
-//                 &-text {
-//                     &__container {
-//                         flex: 1;
-//                         position: relative;
-//                         @include u-padding(8);
-//                         background-position: 64px 64px;
-//                         ;
-//                         border-radius: 8px 0px 0px 8px;
+                &-text {
+                    &__container {
+                        flex: 1;
+                        position: relative;
+                        @include u-padding(8);
+                        background-position: 64px 64px;
+                        ;
+                        border-radius: 8px 0px 0px 8px;
 
-//                         &::before {
-//                             content: url('../../../votegov/img/svg/map-transparent.svg');
-//                         }
-//                     }
+                        &::before {
+                            content: url('../../../votegov/img/svg/map-transparent.svg');
+                        }
+                    }
 
-//                     &__heading {
-//                         @include u-margin-top(4);
-//                     }
-//                 }
+                    &__heading {
+                        @include u-margin-top(4);
+                    }
+                }
 
-//                 &-tool {
-//                     &__container {
-//                         flex: 1;
-//                         position: relative;
-//                         @include u-padding(8);
-//                         border-radius: 0px 8px 8px 0px;
-//                     }
+                &-tool {
+                    &__container {
+                        flex: 1;
+                        position: relative;
+                        @include u-padding(8);
+                        border-radius: 0px 8px 8px 0px;
+                    }
 
-//                     &__form {
-//                         @include u-display('flex');
-//                         flex-direction: column;
-//                         @include u-height('full');
-//                     }
+                    &__form {
+                        @include u-display('flex');
+                        flex-direction: column;
+                        @include u-height('full');
+                    }
 
-//                     &__list-container {
-//                         position: relative;
-//                         @include u-height('full');
-//                     }
+                    &__list-container {
+                        position: relative;
+                        @include u-height('full');
+                    }
 
-//                     &__scrollable-results {
-//                         position: absolute;
-//                         bottom: 0;
-//                         top: 0;
-//                         @include u-width('full');
-//                     }
+                    &__scrollable-results {
+                        position: absolute;
+                        bottom: 0;
+                        top: 0;
+                        @include u-width('full');
+                    }
 
-//                     &__nav {
-//                         ul {
-//                             overflow: auto;
-//                             position: absolute;
-//                             bottom: 0;
-//                             top: 0;
-//                             @include u-width('full');
+                    &__nav {
+                        ul {
+                            overflow: auto;
+                            position: absolute;
+                            bottom: 0;
+                            top: 0;
+                            @include u-width('full');
 
-//                             li {
-//                                 @include u-padding-top(1);
-//                                 @include u-padding-bottom(1);
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
+                            li {
+                                @include u-padding-top(1);
+                                @include u-padding-bottom(1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
-//         //mobile
-//         @include at-media-max('tablet-lg') {
-//             @include u-padding(0);
+        //mobile
+        @include at-media-max('tablet-lg') {
+            background-color: $base-dark;
+            @include u-padding(0);
 
-//             #block-votegov-breadcrumbs {
-//                 background-color: $base-dark;
-//                 @include u-padding-x(3);
-//                 @include u-padding-y(5);
-//             }
+            #block-votegov-breadcrumbs {
+                background-color: $base-dark;
+                @include u-padding-x(3);
+                @include u-padding-top(4);
+            }
 
-//             .vote-basic {
+            .vote-basic {
 
-//                 &-text {
-//                     &__container {
-//                         background-color: $base-dark;
-//                         @include u-padding-x(3);
-//                         @include u-padding-bottom(10);
+                &-text {
+                    &__container {
+                        background-color: $base-dark;
+                        @include u-padding-x(3);
+                        @include u-padding-bottom(10);
 
-//                         &::after {
-//                             content: url('../../../votegov/img/svg/map-blue.svg');
-//                             @include u-display('block');
-//                             @include u-width('full');
-//                             text-align: center;
-//                             margin-bottom: -150px;
-//                             @include u-padding-top(6);
-//                             @include u-padding-bottom(4);
-//                         }
+                        &::after {
+                            content: url('../../../votegov/img/svg/map-blue.svg');
+                            @include u-display('block');
+                            @include u-width('full');
+                            text-align: center;
+                            margin-bottom: -150px;
+                            @include u-padding-top(6);
+                            @include u-padding-bottom(4);
+                        }
 
-//                     }
+                    }
 
-//                     &__heading {
-//                         @include u-margin-bottom(2);
+                    &__heading {
+                        @include u-margin-bottom(2);
+                        margin-top: 3rem;
+                        max-width: 40rem;
 
-//                         &.heading--red-underline:after {
-//                             @include u-display('none');
-//                         }
-//                     }
+                        &.heading--red-underline:after {
+                            @include u-display('none');
+                        }
+                    }
 
-//                     &__content {
-//                         font-family: Roboto;
-//                     }
-//                 }
+                    &__content {
+                        font-family: Roboto;
+                        margin-top: 1.5rem;
+                        max-width: 40rem;
+                    }
+                }
 
-//                 &-tool {
-//                     &__container {
-//                         @include u-padding-top(8);
-//                         @include u-padding-bottom(5);
-//                         @include u-padding-x(3);
-//                     }
+                &-tool {
+                    &__container {
+                        @include u-padding-top(8);
+                        @include u-padding-bottom(5);
+                        @include u-padding-x(3);
+                    }
 
-//                     &__scrollable-results {
-//                         height: 288px;
-//                     }
+                    &__scrollable-results {
+                        height: 288px;
+                    }
 
-//                     &__nav {
-//                         ul>li {
-//                             padding-top: 11px;
-//                             padding-bottom: 11px;
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
+                    &__nav {
+                        ul>li {
+                            padding-top: 11px;
+                            padding-bottom: 11px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
