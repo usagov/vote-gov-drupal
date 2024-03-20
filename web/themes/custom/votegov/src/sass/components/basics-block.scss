@@ -33,19 +33,16 @@
   }
 }
 
-.basics-block--heading {
-  @include u-padding(8);
-  @include u-font-size('serif', 11);
-  @include u-text-align('center');
-  background-color: $ac-cool;
-  color: $base-white;
-
-  @include at-media('tablet') {
-    @include u-radius-top('md');
-  }
-
-  > span {
-    @include u-position('relative');
+.basics-block--heading-container {
+  h2 {
+    background: linear-gradient( #2d7497b0, #2d7497b0), url(../../../votegov/img/fpo_hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 4px 4px 0px 0px;
+    color: $base-white;
+    text-align: center;
+    @include u-padding(8);
+    @include u-font-size('serif', 11);
   }
 }
 
