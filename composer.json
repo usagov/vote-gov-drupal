@@ -75,6 +75,7 @@
         "drupal/twig_field_value": "^2.0",
         "drupal/twig_tweak": "^3.2",
         "drupal/uswds_templates": "^3.0@dev",
+        "drupal/views_data_export": "^1.4",
         "drush/drush": "^12.4"
     },
     "require-dev": {

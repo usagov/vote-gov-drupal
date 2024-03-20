@@ -16,6 +16,7 @@ module:
   config_translation: 0
   content_moderation: 0
   crop: 0
+  csv_serialization: 0
   datetime: 0
   double_field: 0
   dynamic_page_cache: 0
@@ -76,6 +77,7 @@ module:
   update: 0
   user: 0
   uswds_templates: 0
+  views_data_export: 0
   views_ui: 0
   vote_nvrf: 0
   vote_utility: 0
