@@ -9,16 +9,33 @@
     @include u-height('full');
 
     @include hover {
-      background-color: transparent;
+      background-color: $base-white;
       color: inherit;
+      
+      .vote-feature-card__icon-circle>svg {
+        fill: $bg-light-cool;
+      }
+  
+      .vote-feature-card__icon-circle {
+        background-color: $base-white;
+      }
     }
   }
 
   .usa-card {
     .vote-feature-card {
-      &__icon {
-        svg>circle {
-          fill: $bg-light-cool;
+      
+      &__icon-circle {
+        background-color: $bg-light-cool;
+        border-radius: 50%;
+        @include u-height(9);
+        @include u-width(9);
+        @include u-margin-x('auto');
+
+        svg {
+          fill: $base-white;
+          @include u-height(9);
+          @include u-width(9);
         }
       }
      }
@@ -122,8 +139,6 @@
        @include u-padding(0);
        @include u-margin(0);
        @include u-padding-y(4);
-      //  @include u-margin-top(4);
-      //  @include u-margin-bottom(4);
        border-radius: unset;
      }
 

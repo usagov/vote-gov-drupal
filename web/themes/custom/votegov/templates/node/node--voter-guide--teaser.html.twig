@@ -11,7 +11,9 @@
     <a href={{ url }}>
       <div class="usa-card__container">
         <div class="vote-feature-card__icon">
-          {{ source( directory ~ '/img/feature-circle.svg' ) }}
+          <div class="vote-feature-card__icon-circle">
+            {{ content.field_icon | field_value }}
+          </div>        
         </div>
         <div class="vote-feature-card__content">
         <div class="usa-card__header">
