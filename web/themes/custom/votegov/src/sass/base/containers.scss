@@ -11,9 +11,3 @@ body {
     column-gap: 2rem;
   }
 }
-
-.grid-container {
-  @include at-media('tablet') {
-    @include u-padding-x(10);
-  }
-}
