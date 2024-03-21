@@ -33,6 +33,10 @@ drush tome:static --uri=${ssg_endpoint} --process-count=2 --retry-count=0 -y
 drush tome:static-export-path '/sitemap.xml,/sitemap_generator/default/sitemap.xsl' --uri=${ssg_endpoint} --process-count=2 --retry-count=0 -y
 echo "'drush tome:static' task completed!"
 
+echo "Performing find and replace tasks..."
+echo "Replace s3-based file urls with relative urls"
+find ${html_path} -type f -exec grep -H -e 'http[s]*://[^/]\+/s3/files' {} \; -exec sed -i 's#http[s]*://[^/]\+/s3/files#/s3/files#g' {} +
+
 echo "Adding missing Core assets vendor directory"
 mkdir -p ${html_path}/core/assets
 cp -rfp ${app_path}/web/core/assets/vendor ${html_path}/core/assets/
@@ -51,14 +55,19 @@ cp -rfp ${app_path}/web/themes/custom/votegov/img ${html_path}/themes/custom/vot
 cp -rfp ${app_path}/web/themes/custom/votegov/json ${html_path}/themes/custom/votegov/
 echo "Adding Vote.gov custom theme assets - completed!"
 
+echo "Deleting all 'node' directories"
+find ${html_path} -type d -name "node" -print -exec rm -rf {} +
+echo "Successfully deleted node directories!"
+
+echo "Deleting taxonomy directories"
+rm -rf ${html_path}/taxonomy 2>/dev/null
+echo "Successfully deleted taxonomy directories!"
+
 cd ${html_path}
 echo "Copying static files to '${bucket_name}'..."
 aws s3 sync . s3://${bucket} --delete --no-verify-ssl 2>/dev/null
 aws s3 website s3://${bucket} --index-document index.html --error-document /404/index.html  --no-verify-ssl 2>/dev/null
 echo "Copy to '${bucket_name}' completed!"
-
-echo "Deleting the taxonomy directory..."
-aws s3 rm --recursive s3://${bucket}/taxonomy/ 2>/dev/null && echo "Successfully deleted taxonomy directory!" || echo "Failed to delete the taxonomy directory!"
 
 # export objects=($(aws s3 ls s3://${bucket} --recursive --no-verify-ssl 2>/dev/null | awk '{print $(NF)}' | sed -z -e 's/\n/ /g'))
 
