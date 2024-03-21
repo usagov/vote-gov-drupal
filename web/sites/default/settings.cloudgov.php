@@ -69,7 +69,7 @@ foreach ($cf_service_data as $service_list) {
         'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
         'init_commands' => [
           'isolation_level' => 'SET SESSION transaction_isolation=\'READ-COMMITTED\'',
-        ]
+        ],
       ];
     }
     elseif (stristr($service['name'], 'secrets')) {
