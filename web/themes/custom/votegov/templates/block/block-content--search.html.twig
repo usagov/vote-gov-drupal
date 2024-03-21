@@ -8,11 +8,11 @@
  * @ingroup themeable
  */
 #}
+{{ attach_library('votegov/search_bar') }}
 
 {% set affiliated_search = content.field_translated_affiliate | field_value | render %}
 
-<form class="usa-search usa-search--small" role="search">
-  <label class="usa-sr-only" for="search-field-en-small">{{ 'Search Vote.gov' | t }}</label>
+<form class="usa-search usa-search--small" role="search" action="https://search.vote.gov/search" accept-charset="UTF-8" method="get">
   {# if current language is chinese simplified, change the search to use Chinese tradional 'zh' #}
   {% set searchLanguage = language == 'zh-hans' ? 'zh' : language %}
   <input type="hidden" name="affiliate" id="affiliate"
@@ -20,15 +20,11 @@
 
   <label class="usa-sr-only" for="search-field-en-small">{{ content.field_search_placeholder | field_value }}</label>
 
-  <input class="usa-input" data-test="search-box" id="search-field-en-small" type="search" name="query"
+  <input id="usa-search-input" class="usa-input" data-test="search-box" id="search-field-en-small" type="search" name="query"
          autocomplete="off"
          placeholder="{{ content.field_search_placeholder | field_value }} {{ affiliated_search != '1' ? '(in English)' | t }}">
 
-  <button class="usa-button" type="submit">
-    <img
-      src="{{ uswds_img_path }}/usa-icons-bg/search--white.svg"
-      class="usa-search__submit-icon"
-      alt="{{ 'Search Vote.gov' | t }}"
-    />
+  <button class="usa-button usa-button--unstyled usa-button--search" data-test="search-btn" type="submit" name="commit" data-disable-with="Search">
+    {{ source( directory ~ '/img/svg/arrow.svg' ) }}
   </button>
 </form>

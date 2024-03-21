@@ -17,19 +17,15 @@ describe('Footer Menu Function', () => {
 
     cy.get('[data-drupal-selector="edit-submit"]').click()
 
-    cy.logout()
-
-
     // check that the link is working as expected
     cy.visit('/')
 
-    cy.get('[data-test="footer"]').find('[class="usa-footer__primary-content mobile-lg:grid-col-4 desktop:grid-col-auto"]').then(link => {
+    cy.get('[data-test="footer"]').find('[data-test="footerLinks"]').then(link => {
       cy.get(link[0]).find('a').should('contain', 'Cypress Test Link')
-      // .should('have.attr', 'href').and('contain', 'bixal.com')
+      .should('have.attr', 'href').and('contain', 'bixal.com')
     })
 
     // after delete the link that was created
-    cy.signin(Cypress.env('roles').site_admin.username, Cypress.env('test_pass'))
 
     cy.visit('/admin/structure/menu/manage/footer')
 

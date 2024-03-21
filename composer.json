@@ -8,14 +8,28 @@
         "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
         "chat": "https://www.drupal.org/node/314178"
     },
-    "repositories": {
-        "drupal": {
+    "repositories": [
+        {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "bixal/bixaluswds",
+                "version": "1.0",
+                "type":"drupal-theme",
+                "source": {
+                    "url": "https://github.com/Bixal/bixaluswds.git",
+                    "type": "git",
+                    "reference": "v0.0.2"
+                }
+            }
         }
-    },
+    ],
     "require": {
-        "composer/installers": "^2.0",
+        "bixal/bixaluswds": "^1.0",
+        "composer/installers": "^2.2",
         "cweagans/composer-patches": "^1.7",
         "drupal-tome/tome_drush": "dev-master",
         "drupal/admin_toolbar": "^3.3",
@@ -50,14 +64,12 @@
         "drupal/node_revision_delete": "^2.0@alpha",
         "drupal/paragraphs": "^1.15",
         "drupal/pathauto": "^1.12",
-        "drupal/publication_date": "^2.0@beta",
         "drupal/redirect": "^1.8",
         "drupal/remove_http_headers": "^2.0",
         "drupal/rest_views": "^3.0",
         "drupal/s3fs": "^3.1",
         "drupal/samlauth": "^3.8",
         "drupal/simple_sitemap": "^4.1",
-        "drupal/stable": "^2.0",
         "drupal/tome": "^1.8",
         "drupal/translatable_menu_link_uri": "^2.0@dev",
         "drupal/twig_field_value": "^2.0",
@@ -95,6 +107,9 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
+            },
+            "file-mapping": {
+                "[web-root]/robots.txt": false
             }
         },
         "installer-paths": {

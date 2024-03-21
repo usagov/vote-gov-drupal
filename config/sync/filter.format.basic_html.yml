@@ -27,7 +27,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p class="usa-intro text-align-left text-align-center text-align-right"> <h2 id class="text-align-left text-align-center text-align-right"> <h3 class> <h4 class="text-align-left text-align-center text-align-right"> <h5 class="text-align-left text-align-center text-align-right"> <h6 class="text-align-left text-align-center text-align-right"> <a class href target noreferrer aria-label title> <div id class data-allow-multiple> <button type class aria-expanded aria-controls> <ul class> <li class> <strong> <em> <u> <ol reversed start> <hr> <drupal-media data-entity-type data-entity-uuid alt data-align> <embedded-content data-plugin-config data-plugin-id>'
+      allowed_html: '<br> <p class="usa-intro text-align-left text-align-center text-align-right"> <h2 id class> <h3 class> <h4 class="text-align-left text-align-center text-align-right"> <h5 class="text-align-left text-align-center text-align-right"> <h6 class="text-align-left text-align-center text-align-right"> <a class href aria-label title target="_blank" rel> <div id class data-allow-multiple> <button type class aria-expanded aria-controls> <strong> <em> <u> <ul class> <ol> <li class> <hr> <img src alt height width> <drupal-media data-entity-type data-entity-uuid alt data-align> <embedded-content data-plugin-config data-plugin-id>'
       filter_html_help: true
       filter_html_nofollow: false
   media_embed:

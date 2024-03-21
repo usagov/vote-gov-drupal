@@ -169,51 +169,51 @@ msgstr "GSA (NomTswv GSA) lub cim"
 #month and day names
 msgctxt "Long month name"
 msgid "January"
-msgstr "January"
+msgstr "lub ib hlis ntuj"
 
 msgctxt "Long month name"
 msgid "February"
-msgstr "February"
+msgstr "lub ob hlis ntuj"
 
 msgctxt "Long month name"
 msgid "March"
-msgstr "March"
+msgstr "lub peb hlis ntuj"
 
 msgctxt "Long month name"
 msgid "April"
-msgstr "April"
+msgstr "lub plaub hlis ntuj"
 
 msgctxt "Long month name"
 msgid "May"
-msgstr "May"
+msgstr "lub tsib hlis ntuj"
 
 msgctxt "Long month name"
 msgid "June"
-msgstr "June"
+msgstr "lub rau hlis ntuj"
 
 msgctxt "Long month name"
 msgid "July"
-msgstr "July"
+msgstr "lub xya hlis ntuj"
 
 msgctxt "Long month name"
 msgid "August"
-msgstr "August"
+msgstr "lub yim hlis ntuj"
 
 msgctxt "Long month name"
 msgid "September"
-msgstr "September"
+msgstr "lub cuaj hlis ntuj"
 
 msgctxt "Long month name"
 msgid "October"
-msgstr "October"
+msgstr "lub kaum hlis ntuj"
 
 msgctxt "Long month name"
 msgid "November"
-msgstr "November"
+msgstr "lub kaum ib hlis ntuj"
 
 msgctxt "Long month name"
 msgid "December"
-msgstr "December"
+msgstr "lub kaum ob hlis ntuj"
 
 msgid "Monday"
 msgstr "Monday"

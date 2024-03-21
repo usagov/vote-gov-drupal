@@ -6,9 +6,9 @@ dependencies:
     - filter.format.basic_html
     - filter.format.simple_html
   module:
-    - disable_language
     - filter
     - media
+    - paragraphs
     - system
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
@@ -18,8 +18,7 @@ weight: 1
 is_admin: false
 permissions:
   - 'access content'
-  - 'create content in disabled language'
   - 'use text format basic_html'
   - 'use text format simple_html'
-  - 'view disabled languages'
   - 'view media'
+  - 'view unpublished paragraphs'

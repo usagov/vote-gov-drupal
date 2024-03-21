@@ -1,24 +1,30 @@
-<div class="usa-footer__secondary-section">
+{% set GSAlink = link('General Services Administration' | t, 'https://www.gsa.gov/') %}
+
+<div class="usa-footer__secondary-section" data-test="footer-contact">
   <div class="grid-container">
-    <div class="grid-row grid-gap">
-      <div class="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
-        <div class="mobile-lg:grid-col-auto">
-          {# Footer Secondary menu. #}
-          {{ 'Menu Placeholder' }}
-        </div>
-      </div>
-      <div class="usa-footer__contact-links mobile-lg:grid-col-6">
-        {# Social links menu. #}
-        <div class="usa-footer__social-links grid-row grid-gap-1">
-          <div class="grid-col-auto">
-            <a class="usa-social-link" href="javascript:void(0);"
-            ><img
-                class="usa-social-link__icon"
-                src="{{ uswds_img_path }}/usa-icons/twitter.svg"
-                alt="Twitter"
-              /></a>
+    <div class="grid-row">
+      <div class="usa-footer__logo">
+        {# GSA logo #}
+        <div class="gsa-container">
+          <div class="gsa-container__img">
+            <img src="{{ theme_path }}/img/gsa-logo.svg" alt="{{'GSA logo'|t}}" width="48" height="48">
+          </div>
+          <div class="gsa-container__text" aria-label="{{ 'Agency description' | t }}">
+            {{ 'Vote.gov is an official website of the @link.' | t({'@link': GSAlink | render}) }}
           </div>
         </div>
+        {# EAC logo #}
+        <div class="eac-logo-container">
+          <a href="{{ language == 'es' ? 'https://www.eac.gov/translations/spanish' : 'https://www.eac.gov/' }}" target="_blank">
+            <img class="eac-logo" width="146" height="48" src="{{ theme_path }}/img/eac-logo.webp" alt="{{ 'U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov' | t }}" />
+          </a>
+        </div>
+      </div>
+      <div class="usa-footer__social-links">
+        <span>{{ 'Follow vote.gov on ' | t }}</span>
+        <a class="vote-social-link" href="https://twitter.com/votegov">
+          <img class="vote-social-link__icon" src="{{ theme_path }}/img/x-logo.svg" alt="X"/>
+        </a>
       </div>
     </div>
   </div>

@@ -1,0 +1,22 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+<div class="grid-container">
+    <div class="vote-cta vote-cta__media-{{ content.field_image_alignment | field_value }} display-flex">
+        <div class="vote-cta__media-container">
+            {{ content.field_media | field_value }}
+        </div>
+        <div class="vote-cta__content-container">
+          <div class="vote-cta__header">
+            <h2>{{ content.field_heading | field_value }}</h2>
+          </div>
+          <div class="vote-cta__body">
+            {{ content.field_body | field_value }}
+          </div>
+          <p class="vote-cta__footer">
+            <span class="vote-link">{{ content.field_link | field_value }}</span>
+          </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

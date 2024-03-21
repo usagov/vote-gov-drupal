@@ -2,7 +2,11 @@
 @use "mixins" as *;
 
 .page-title {
-  @include u-margin-top(6);
+  @include u-margin-top(4);
   @include u-maxw('tablet');
-  @include narrow-container;
+  @include vote-narrow-container;
+
+  @include at-media('tablet') {
+    @include u-margin-top(6);
+  }
 }
