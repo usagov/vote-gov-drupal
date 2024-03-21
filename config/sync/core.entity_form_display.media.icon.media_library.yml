@@ -1,20 +1,20 @@
-uuid: 59eb39ec-f70b-4223-9fe5-19b2410e6fdb
+uuid: 73fd7378-7030-42ef-87ca-931e021bc6d9
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_form_mode.media.media_library
-    - field.field.media.icon.field_media_image_1
+    - field.field.media.icon.field_media_image
     - image.style.thumbnail
     - media.type.icon
   module:
-    - image
+    - svg_image
 id: media.icon.media_library
 targetEntityType: media
 bundle: icon
 mode: media_library
 content:
-  field_media_image_1:
+  field_media_image:
     type: image_image
     weight: 5
     region: content

@@ -2,5 +2,4 @@ adding:
   module:
     dblog: 0
     devel: 0
-    svg_image: 0
 removing: {  }
