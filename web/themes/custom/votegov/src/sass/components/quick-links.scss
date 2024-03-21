@@ -17,12 +17,14 @@
 
   @include at-media('tablet-lg') {
       @include u-padding-y(9);
+      @include u-padding-right(10);
   }
 }
 
 .vote-quicklinks__heading {
   @include at-media('tablet-lg') {
-    @include grid-col(4);
+    @include grid-col(5);
+    padding-top: 40px;
   }
 
     h2 {
@@ -34,11 +36,12 @@
   @include u-font-family('sans');
 
   @include at-media('tablet-lg') {
-    @include grid-col(6);
+    @include grid-col(5);
+    font-size: 18px
 }
 
     a {
-      @include vote-link-dark;
+      color: #0AAAE2 !important;
     }
 }
 
@@ -54,9 +57,15 @@
 
   @include at-media('tablet-lg') {
     position: absolute;
-    top: 0;
+    top: 50px;
     width: 4px;
-    height: 100%;
+    height: 60%;
     margin-left: -100px;
+    // margin-left: 0 auto;
+  }
+
+  @include at-media('desktop-lg') {
+
+    margin-left: -130px;
   }
 }
