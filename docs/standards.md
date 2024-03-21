@@ -13,6 +13,9 @@ All branch names should follow the guidelines below. The branch names should be 
 **Commit message:**
 The message must include the ticket number and a brief message describing specifically what the modifications represent. Use present tense action verbs. For example, use “Add” instead of Adding and “Update” instead of updated.  (Example: “VOTE-375 Add new gulp task for compiling svg sprites”)
 
+**Commit security and quality control:**
+- Review [Husky](husky.md) for installation instructions and to enable the use of git-secrets to prevent committing any AWS secrets.
+
 **Commit tips:**
 - Only commit modified files related to the task.
 - Don't change code formatting in the same commit as your modifications. Open a new ticket to reformat files as needed.
