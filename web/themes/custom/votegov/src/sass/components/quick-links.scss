@@ -34,11 +34,11 @@
 
 .vote-quicklinks__content{
   @include u-font-family('sans');
-
+  
   @include at-media('tablet-lg') {
     @include grid-col(5);
-    font-size: 18px
-}
+    font-size: 18px;
+  }
 
     a {
       color: #0AAAE2 !important;
@@ -61,11 +61,11 @@
     width: 4px;
     height: 60%;
     margin-left: -100px;
-    // margin-left: 0 auto;
+    margin-left: 0 auto;
   }
 
   @include at-media('desktop-lg') {
 
-    margin-left: -130px;
+    margin-left: -150px;
   }
 }

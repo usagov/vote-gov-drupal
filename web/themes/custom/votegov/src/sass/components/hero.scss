@@ -3,7 +3,7 @@
 
 .vote-hero {
   background-color: rgba(231, 229, 221, 1);
-
+  
   @include at-media('tablet-lg') {
     @include u-position('relative');
   }
@@ -14,13 +14,17 @@
   @include grid-row;
   @include u-flex('justify');
   position: relative;
-}
+
+  @include at-media('tablet-lg') {
+    padding-right: 0 !important;
+  }
+  }
 
 .vote-hero__image {
   
   img {
     max-height: 400px;
-    // @include add-aspect('16x9');
+    @include add-aspect('16x9');
   }
   
   @include at-media-max('tablet-lg') {
