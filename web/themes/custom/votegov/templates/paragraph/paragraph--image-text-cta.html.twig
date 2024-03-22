@@ -3,11 +3,11 @@
 {% block content %}
 <div class="grid-container">
     <div class="vote-cta vote-cta__media-{{ content.field_image_alignment | field_value }} display-flex">
-        <div class="vote-cta__media-container">
+        <div class="vote-cta__media-container tablet:grid-col-4 tablet-lg:grid-col-7 desktop-lg:grid-col-6">
             {{ content.field_media | field_value }}
         </div>
-        <div class="vote-cta__content-container">
-          <div class="vote-cta__header">
+        <div class="vote-cta__content-container tablet:grid-col-7 tablet-lg:grid-col-5 desktop-lg:grid-col-6">
+          <div class="vote-cta__header heading--red-underline">
             <h2>{{ content.field_heading | field_value }}</h2>
           </div>
           <div class="vote-cta__body">
