@@ -2,16 +2,22 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-#registration-tool {
-
+.registration-tool {
     @include at-media('tablet-lg') {
-        &.offset-container {
+        position: relative;
+
+        &::before {
+            content: '';
             background-image: url('../../../votegov/img/hero-map.jpg');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             background-color: $base-dark;
-            margin-bottom: 12rem;
+            position: absolute;
+            top: 0;
+            bottom: 126px;
+            right: 0;
+            left: 0;
         }
     }
 
@@ -156,13 +162,15 @@
         @include at-media('tablet-lg') {
             @include u-radius('lg');
             position: relative;
-            top: 108.37px;
+            // top: 32px;
             @include u-display('flex');
             flex-wrap: wrap;
             @include u-width('full');
 
             #block-votegov-breadcrumbs {
+                margin-top: 56px;
                 @include u-margin-bottom(3);
+                // @include u-margin-y(3);
             }
 
             .vote-basic {
