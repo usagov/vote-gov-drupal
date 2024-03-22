@@ -26,3 +26,7 @@
 .usa-banner__button[aria-expanded=true]{
   @include u-height(6);
 }
+
+.usa-banner__guidance {
+  max-width: unset;
+}
