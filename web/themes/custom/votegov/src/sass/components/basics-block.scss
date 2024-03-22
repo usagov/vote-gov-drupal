@@ -37,12 +37,32 @@
   h2 {
     @include u-padding(8);
     @include u-font-size('serif', 11);
-    background: linear-gradient( #2d7497b0, #2d7497b0), url(../../../votegov/img/fpo_hero.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: $ac-cool;
     border-radius: 4px 4px 0px 0px;
     color: $base-white;
     text-align: center;
+    position: relative;
+
+    span {
+      position: relative;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      background: url(../../../votegov/img/fpo_hero.webp);
+      background-size: cover;
+      background-color: $ac-cool;
+      background-repeat: no-repeat;
+      mix-blend-mode: multiply;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 33%;
+      border-radius: 4px 4px 0px 0px;
+    }
   }
 }
 

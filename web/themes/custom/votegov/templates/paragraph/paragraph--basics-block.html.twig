@@ -20,7 +20,7 @@
   <div class="basics-block--container">
     {% if content.field_heading | render %}
     <div class="basics-block--heading-container">
-      <h2>{{ content.field_heading | field_value }}</h2>
+      <h2><span>{{ content.field_heading | field_value }}<span></h2>
     </div>
     {% endif %}
     <div class="basics-block--content">
