@@ -22,6 +22,7 @@ nav:has(>.usa-sidenav) {
   &.usa-current,
   &:not(.usa-button):not(.usa-current) {
     @include u-font-weight('bold');
+    @include u-padding(2);
     color: $base-primary;
 
     &:after {
