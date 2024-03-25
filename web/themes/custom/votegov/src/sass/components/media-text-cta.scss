@@ -5,8 +5,6 @@
 .vote-cta {
     @include vote-block-margin-y;
     @include u-display('flex');
-    @include u-margin-x('auto');
-    @include u-margin-y('205');
 
     //mobile
     @include at-media-max('tablet') {
@@ -61,7 +59,6 @@
         .vote-cta {
             &__header {
                 color: $base-dark;
-                font-family: Roboto;
                 font-size: 28.83px;
                 @include u-text('medium');
                 line-height: 118%;
@@ -91,11 +88,5 @@
                 }
             }
         }
-    }
-}
-
-@include at-media-max('tablet') {
-    .grid-container {
-        @include u-padding-x(3);
     }
 }
