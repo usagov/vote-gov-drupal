@@ -4,14 +4,16 @@
   node.isSticky() ? 'node--sticky',
   not node.isPublished() ? 'node--unpublished',
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  'usa-card tablet:grid-col-6 tablet-lg:grid-col-4 desktop:grid-col-3 '
+  'usa-card tablet:grid-col-4 desktop-lg:grid-col-3'
 ] %}
 
 <article{{ attributes.addClass(classes) }}>
-    <a href={{ url }}>
+    <a href="{{ url }}" title="{{ label | field_value }}">
       <div class="usa-card__container">
         <div class="vote-feature-card__icon">
-          {{ source( directory ~ '/img/feature-circle.svg' ) }}
+          <div class="vote-feature-card__icon-circle">
+            {{ content.field_icon | field_value }}
+          </div>        
         </div>
         <div class="vote-feature-card__content">
         <div class="usa-card__header">
