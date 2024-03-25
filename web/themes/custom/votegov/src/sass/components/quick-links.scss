@@ -3,8 +3,6 @@
 @use "mixins" as *;
 
 .vote-quicklinks {
-  @include u-padding-x(1);
-  @include u-padding-y(6);
   background-color: $base-dark;
   color: $base-white;
 }
@@ -12,51 +10,41 @@
 .vote-quicklinks__container {
   @include grid-container;
   @include grid-row;
-  @include u-flex('justify');
-  position: relative;
+  @include u-padding-y(6);
 
-  @include at-media('tablet-lg') {
-      @include u-padding-y(9);
+  @include at-media('desktop'){
+    @include u-padding-y(10);  
+  }
+
+  @include at-media('widescreen'){
+    padding-top: 96px; 
+    padding-bottom: 96px; 
   }
 }
 
 .vote-quicklinks__heading {
-  @include at-media('tablet-lg') {
-    @include grid-col(4);
+  // font-size: 30px;
+  @include u-font-size('body', 'xl');
+
+  h2 {
+    color: $base-white;
   }
 
-    h2 {
-      color: $base-white;
-    }
+  @include at-media('desktop') {
+    @include grid-col(5);
+    padding-top: 40px;
+  }
 }
 
 .vote-quicklinks__content{
-  @include u-font-family('sans');
+  @include u-font('sans', 'md');
 
-  @include at-media('tablet-lg') {
-    @include grid-col(6);
-}
-
-    a {
-      @include vote-link-dark;
-    }
-}
-
-.vote-quicklinks__content::before{
-  content: '';
-  display: block;
-  background-color: $ac-warm;
-
-  @include at-media-max('tablet-lg') {
-    @include u-margin-y(4);
-    height: 4px;
+  a {
+    color: $ac-cool-light !important;
   }
 
-  @include at-media('tablet-lg') {
-    position: absolute;
-    top: 0;
-    width: 4px;
-    height: 100%;
-    margin-left: -100px;
+  @include at-media('desktop') {
+    @include grid-col(5);
+    @include grid-offset(1);
   }
 }
