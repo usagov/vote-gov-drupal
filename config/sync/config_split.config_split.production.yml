@@ -10,7 +10,8 @@ stackable: false
 no_patching: false
 storage: folder
 folder: ../config/production
-module: {  }
+module:
+  disable_language: 0
 theme: {  }
 complete_list:
   - log_stdout.settings
@@ -21,3 +22,4 @@ complete_list:
   - views.view.samlauth_map
 partial_list:
   - core.extension
+  - system.performance
