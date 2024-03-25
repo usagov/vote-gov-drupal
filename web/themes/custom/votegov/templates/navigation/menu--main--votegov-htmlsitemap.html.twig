@@ -1,0 +1,22 @@
+{% import _self as menus %}
+
+{{ menus.menu_links(items, 0) }}
+
+{% macro menu_links(items, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul class="usa-list usa-list--unstyled">
+    {% else %}
+      <ul>
+    {% endif %}
+    {% for item in items %}
+      <li>{{ link(item.title, item.url) }}
+        {% if item.below %}
+          {{ menus.menu_links(item.below, menu_level + 1) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+{% endmacro %}

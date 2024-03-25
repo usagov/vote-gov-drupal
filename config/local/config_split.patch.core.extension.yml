@@ -2,4 +2,5 @@ adding:
   module:
     dblog: 0
     devel: 0
+    disable_language: 0
 removing: {  }

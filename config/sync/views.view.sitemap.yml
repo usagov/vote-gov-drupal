@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - node.type.state_territory
-    - system.menu.footer
   module:
     - node
     - user
@@ -241,7 +240,14 @@ display:
         groups:
           1: AND
       style:
-        type: default
+        type: html_list
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: false
+          type: ul
+          wrapper_class: ''
+          class: 'usa-list usa-list--unstyled'
       row:
         type: fields
       query:

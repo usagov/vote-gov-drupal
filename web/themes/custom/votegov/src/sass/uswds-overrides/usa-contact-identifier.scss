@@ -52,7 +52,7 @@
         ul {
             list-style-type: none;
             @include u-padding(0);
-            @include u-margin(0);
+            @include u-margin-top(2);
 
             @include at-media('tablet') {
                 columns: 2;
