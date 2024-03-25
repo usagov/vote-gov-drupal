@@ -9,13 +9,3 @@
   @include u-height(0.5);
   background-color: $ac-warm;
 }
-
-.type--secondary {
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @include u-font-family('sans');
-  }
-}
