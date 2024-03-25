@@ -22,22 +22,28 @@
 
 .vote-hero__image {
   
-  img {
-    max-height: 400px;
-    @include add-aspect('16x9');
-  }
+  // img {
+  //   // @include add-aspect('2x1');
+  // }
+
+  // img {
+  //   // @include add-aspect('16x9');
+  //   object-fit: cover;
+  //   height: 100%;
+  //   width: 100%;
+  // }
   
   @include at-media-max('tablet-lg') {
-      @include u-margin-x(-2);
-    }
+    @include u-margin-x(-2);
+  }
+  
+  @include at-media('tablet-lg') {
+    @include grid-col(5);
+    @include u-order(2);
     
-    @include at-media('tablet-lg') {
-      @include grid-col(5);
-      @include u-order(2);
-      
-      img {
+    img {
+      // @include add-aspect('16x9');
       object-fit: cover;
-      max-height: none;
       height: 100%;
       width: 100%;
     }
