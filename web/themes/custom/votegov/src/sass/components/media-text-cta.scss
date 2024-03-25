@@ -1,12 +1,12 @@
 @use "uswds-core" as *;
 @use "variables" as *;
+@use "mixins" as *;
 
 .vote-cta {
+    @include vote-block-margin-y;
     @include u-display('flex');
-    @include u-margin-x('auto');
-    @include u-margin-y('205');
-    max-width: 1180px;
 
+    //mobile
     @include at-media-max('tablet') {
         flex-wrap: wrap;
         &__media-order-last, &__media-order-first {
@@ -20,6 +20,7 @@
         }
     }
 
+    //desktop
     @include at-media('tablet') {
     &__media-order-last {
         .vote-cta__content-container {
@@ -38,8 +39,6 @@
     }
 
     &__media-container {
-        width: 36.875rem;
-        @include u-margin-y('auto');
 
         img {
             flex-shrink: 0;
@@ -52,7 +51,6 @@
     }
 
     &__content-container {
-        max-width: 31.875rem;
         @include u-margin-y('auto');
     }
     }
@@ -61,22 +59,12 @@
         .vote-cta {
             &__header {
                 color: $base-dark;
-                font-family: Roboto;
                 font-size: 28.83px;
                 @include u-text('medium');
                 line-height: 118%;
 
                 h2 {
                     font-size: 28.83px;
-                }
-
-                &::after {
-                    content: "";
-                    width: 96px;
-                    @include u-height('05');
-                    @include u-display('block');
-                    background: $ac-warm;
-                    @include u-margin-y(3);
                 }
             }
             &__body {
@@ -100,11 +88,5 @@
                 }
             }
         }
-    }
-}
-
-@include at-media-max('tablet') {
-    .grid-container {
-        @include u-padding-x(3);
     }
 }

@@ -85,3 +85,14 @@ Review the details in composer.json file under `extra.patches` additionally look
 ## Migration
 Instructions for updating and running migration scripts.
 
+## Database - Mysql
+The site utilizes Mysql for its database.
+
+### Limitations
+Through its implementation via Cloud.gov there are limitations over what is configurable for Mysql.
+
+#### Setting the MySQL transaction isolation level
+Issue: The recommended database transaction isolation level is READ COMMITTED vs REPEATABLE READ.
+Description: In addition to being unable to configure Mysql, the alternate solution of setting the isolation level via the database configuration within the settings.php file is not a recommended approach as it sets the isolation level upon each page load which isn't optimal.
+Impact: Low
+Source: https://www.drupal.org/docs/getting-started/system-requirements/setting-the-mysql-transaction-isolation-level#s-other-methods-to-change-the-transaction-isolation-level
