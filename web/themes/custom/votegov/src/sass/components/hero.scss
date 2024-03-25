@@ -3,7 +3,7 @@
 
 .vote-hero {
   background-color: $bg-light-warm;
-  
+
   @include at-media('tablet-lg') {
     @include u-position('relative');
   }
@@ -21,20 +21,29 @@
 }
 
 .vote-hero__image {
-  img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-  }
-  
   @include at-media-max('tablet-lg') {
+    margin-left: -5rem;
+    margin-right: -5rem;
+  }
+  @include at-media-max('tablet') {
     @include u-margin-x(-2);
   }
-  
+
+
   @include at-media('tablet-lg') {
     @include grid-col(5);
     @include u-order(2);
-    
+    @include u-position('relative');
+
+    img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: auto;
+      height: 100%;
+      max-width: none;
+    }
   }
 }
 
@@ -51,7 +60,7 @@
 .vote-hero__heading {
   @include u-padding-bottom(2);
   @include u-font-size('body', 'xl');
-  
+
   @include at-media('tablet-lg') {
     @include u-font-size('body', '2xl')
   }
