@@ -2,28 +2,34 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-#registration-tool {
-
+.registration-tool {
     @include at-media('tablet-lg') {
-        &.offset-container {
+        position: relative;
+
+        &::before {
+            content: '';
             background-image: url('../../../votegov/img/hero-map.jpg');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            background-color: #11385B;
-            margin-bottom: 12rem;
+            background-color: $base-dark;
+            position: absolute;
+            top: 0;
+            bottom: 126px;
+            right: 0;
+            left: 0;
         }
     }
 
     .vote-basic {
-        color: #FFF;
+        color: $base-white;
         @include u-margin-top(0);
 
         #block-votegov-breadcrumbs {
             @include u-width('full');
 
             a {
-                color: #fff;
+                color: $base-white;
             }
         }
 
@@ -31,13 +37,12 @@
 
             &-text {
                 &__container {
-                    background-color: #3E79BB;
+                    background-color: $base-primary;
                 }
 
                 &__heading {
-                    color: #FFF;
+                    color: $base-white;
                     @include u-font-family('serif');
-                    font-size: 47.78px;
                     font-style: normal;
                     font-weight: 700;
                     line-height: 116%;
@@ -54,7 +59,7 @@
 
             &-tool {
                 &__container {
-                    background-color: #3E79BB;
+                    background-color: $base-primary;
                 }
 
                 &__label {
@@ -74,13 +79,13 @@
                     background-position: 23px center;
                     @include u-radius('md');
                     @include u-border(1px);
-                    border-color: #D3D3D3;
+                    border-color: $bg-light-medium;
                     @include u-margin-bottom(1);
                     padding-left: 54px;
                     padding-top: 11.65px;
                     padding-bottom: 11.65px;
                     padding-right: 25px;
-                    color: #11385B;
+                    color: $base-dark;
                     font-family: Roboto;
                     font-size: 16px;
                     font-style: normal;
@@ -89,7 +94,7 @@
                     @include u-width('full');
 
                     ::placeholder {
-                        color: #11385B;
+                        color: $base-dark;
                         font-family: Roboto;
                         font-size: 16px;
                         font-style: normal;
@@ -99,14 +104,15 @@
                 }
 
                 &__scrollable-results {
+                    background-color: $base-white;
                     overflow: auto;
                     @include u-radius('md');
                     @include u-border(1px);
-                    border-color: #D3D3D3;
+                    border-color: $bg-light-medium;
                 }
 
                 &__nav {
-                    background: #FFF;
+                    background: $base-white;
 
                     ul {
                         list-style: none;
@@ -117,17 +123,35 @@
                             @include u-margin(0);
                         }
 
-                        a, span {
+                        a {
+                            @include vote-link();
                             font-family: Roboto;
-                            color: #2E598A;
+                            color: $base-primary-hover;
                             font-size: 16px;
                             font-style: normal;
                             font-weight: 500;
                             line-height: 155%;
+
+                            &:visited {
+                                color: $base-primary-hover;
+
+                                &:hover, &:focus {
+                                    color: $base-white;
+                                }
+                            }
                         }
 
                         a {
                             text-decoration-line: underline;
+                        }
+
+                        li#no-results>span {
+                            font-family: Roboto;
+                            color: $base-primary-hover;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 155%;
                         }
                     }
                 }
@@ -138,13 +162,15 @@
         @include at-media('tablet-lg') {
             @include u-radius('lg');
             position: relative;
-            top: 108.37px;
+            // top: 32px;
             @include u-display('flex');
             flex-wrap: wrap;
             @include u-width('full');
 
             #block-votegov-breadcrumbs {
+                margin-top: 56px;
                 @include u-margin-bottom(3);
+                // @include u-margin-y(3);
             }
 
             .vote-basic {
@@ -188,7 +214,6 @@
                     }
 
                     &__scrollable-results {
-                        background-color: #fff;
                         position: absolute;
                         bottom: 0;
                         top: 0;
@@ -215,19 +240,20 @@
 
         //mobile
         @include at-media-max('tablet-lg') {
+            background-color: $base-dark;
             @include u-padding(0);
 
             #block-votegov-breadcrumbs {
-                background-color: #11385B;
+                background-color: $base-dark;
                 @include u-padding-x(3);
-                @include u-padding-y(5);
+                @include u-padding-top(4);
             }
 
             .vote-basic {
 
                 &-text {
                     &__container {
-                        background-color: #11385B;
+                        background-color: $base-dark;
                         @include u-padding-x(3);
                         @include u-padding-bottom(10);
 
@@ -245,6 +271,8 @@
 
                     &__heading {
                         @include u-margin-bottom(2);
+                        margin-top: 3rem;
+                        max-width: 40rem;
 
                         &.heading--red-underline:after {
                             @include u-display('none');
@@ -253,6 +281,8 @@
 
                     &__content {
                         font-family: Roboto;
+                        margin-top: 1.5rem;
+                        max-width: 40rem;
                     }
                 }
 
