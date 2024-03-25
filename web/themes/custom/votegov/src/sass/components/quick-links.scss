@@ -10,16 +10,8 @@
 .vote-quicklinks__container {
   @include grid-container;
   @include grid-row;
-  @include u-padding-y(6);
-
-  @include at-media('desktop'){
-    @include u-padding-y(10);  
-  }
-
-  @include at-media('widescreen'){
-    padding-top: 96px; 
-    padding-bottom: 96px; 
-  }
+  @include vote-block-padding-y;
+  @include u-flex('align-center');
 }
 
 .vote-quicklinks__heading {
@@ -31,7 +23,6 @@
 
   @include at-media('desktop') {
     @include grid-col(5);
-    padding-top: 40px;
   }
 }
 
