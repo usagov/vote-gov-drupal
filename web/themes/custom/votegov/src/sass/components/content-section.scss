@@ -1,6 +1,6 @@
 @use "uswds-core" as *;
 
-.block--content-section {
+.vote-content-section {
   * + & {
     @include u-margin-top(5);
   }

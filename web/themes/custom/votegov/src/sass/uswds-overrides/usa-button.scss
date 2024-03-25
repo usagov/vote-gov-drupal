@@ -1,6 +1,12 @@
 @use "uswds-core" as *;
 @use "variables" as *;
 
+.usa-button {
+  .usa-form & {
+    @include u-margin-top(3);
+  }
+}
+
 // Custom usa-button overrides using USWDS mixins and other settings.
 .usa-button:not(.usa-button--unstyled) {
   @include u-text('medium');
