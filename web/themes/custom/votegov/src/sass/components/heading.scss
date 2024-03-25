@@ -4,7 +4,8 @@
 .heading--red-underline:after {
   content: '';
   @include u-display('block');
-  @include u-margin-y(3);
+  @include u-margin-top(2);
+  @include u-margin-bottom(3);
   @include u-width(10);
   @include u-height(0.5);
   background-color: $ac-warm;

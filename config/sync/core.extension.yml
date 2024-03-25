@@ -65,6 +65,7 @@ module:
   serialization: 0
   simple_sitemap: 0
   system: 0
+  svg_image: 0
   taxonomy: 0
   text: 0
   token: 0
