@@ -11,31 +11,36 @@
     @include hover {
       background-color: $base-white;
       color: inherit;
-      
-      .vote-feature-card__icon-circle>svg {
-        fill: $bg-light-cool;
-      }
-  
+
       .vote-feature-card__icon-circle {
         background-color: $base-white;
+
+        svg {
+          > path {
+            fill: $bg-light-cool;
+          }
+        }
       }
     }
   }
 
   .usa-card {
     .vote-feature-card {
-      
+
       &__icon-circle {
-        background-color: $bg-light-cool;
-        border-radius: 50%;
         @include u-height(9);
         @include u-width(9);
         @include u-margin-x('auto');
+        @include u-display('flex');
+        @include u-flex('align-center');
+        @include u-flex('justify-center');
+        background-color: $bg-light-cool;
+        border-radius: 50%;
 
         svg {
           fill: $base-white;
-          @include u-height(9);
-          @include u-width(9);
+          @include u-height(6);
+          @include u-width(6);
         }
       }
      }
