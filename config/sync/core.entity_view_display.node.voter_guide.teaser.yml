@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.voter_guide.body
     - field.field.node.voter_guide.field_basics_block
+    - field.field.node.voter_guide.field_icon
     - field.field.node.voter_guide.field_subtitle
     - node.type.voter_guide
   module:
@@ -23,6 +24,15 @@ content:
       trim_length: 200
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_icon:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   content_moderation_control: true
