@@ -1,0 +1,22 @@
+@use "uswds-core" as *;
+
+.vote-sitemap {
+  @include u-margin-y(4);
+
+  li > ul {
+    @include u-margin-y(2);
+  }
+}
+
+.vote-sitemap--register {
+  ul {
+    @include at-media('mobile-lg') {
+      column-count: 2;
+      column-gap: 2rem;
+    }
+
+    @include at-media('tablet-lg') {
+      column-count: 3;
+    }
+  }
+}

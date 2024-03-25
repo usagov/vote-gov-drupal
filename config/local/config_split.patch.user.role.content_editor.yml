@@ -1,0 +1,8 @@
+adding:
+  dependencies:
+    module:
+      - disable_language
+  permissions:
+    - 'create content in disabled language'
+    - 'view disabled languages'
+removing: {  }

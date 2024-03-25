@@ -55,7 +55,14 @@ We call a macro which calls itself to render the full tree.
               >
                 <span>{{ item.title }}</span>
               </button>
-              {{ menus.menu_links(item.below, attributes, menu_level + 1, aria_id) }}
+              <div
+                id="{{ aria_id }}"
+                class="usa-nav__submenu"
+                hidden
+              >
+                <div class="usa-nav__submenu-parent-link">{{ link(item.title, item.url) }}</div>
+                {{ menus.menu_links(item.below, attributes, menu_level + 1, aria_id) }}
+              </div>
             {% else %}
               {% if item.url.routeName != '<nolink>' %}
                 {{ link(item.title, item.url) }}
@@ -74,22 +81,16 @@ We call a macro which calls itself to render the full tree.
       </ul>
     {# Secondary level menu structure. #}
     {% elseif menu_level == 1 %}
-      <div
-        id="{{ aria_id }}"
-        class="usa-nav__submenu"
-        hidden
-      >
-        <ul class="usa-nav__submenu-list">
-          {% for item in items %}
-            <li class="usa-nav__submenu-item">
-              {{ link(item.title, item.url) }}
-              {% if item.below %}
-                {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-              {% endif %}
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
+      <ul class="usa-nav__submenu-list">
+        {% for item in items %}
+          <li class="usa-nav__submenu-item">
+            {{ link(item.title, item.url) }}
+            {% if item.below %}
+              {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
     {% endif %}
   {% endif %}
 {% endmacro %}
