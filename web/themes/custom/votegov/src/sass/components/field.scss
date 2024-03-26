@@ -2,6 +2,12 @@
 
 .field {
   * + & {
-    @include u-margin-top(5);
+    @include u-margin-top(4);
+  }
+}
+
+.page-content .field:not(.field--name-field-media) {
+  @include at-media('tablet') {
+    width: calc((6 / 7) * 100%);
   }
 }

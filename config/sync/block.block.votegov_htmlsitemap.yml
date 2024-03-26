@@ -20,8 +20,8 @@ settings:
   label_display: '0'
   provider: system
   level: 1
-  depth: 1
-  expand_all_items: false
+  depth: 3
+  expand_all_items: true
   only_translated_labels: 0
   only_translated_content: 0
 visibility: {  }

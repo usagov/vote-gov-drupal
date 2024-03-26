@@ -2,7 +2,7 @@
 
 describe('Validate state selection options', () => {
   beforeEach('visit page', () => {
-    cy.visit('/')
+    cy.visit('/register')
   })
 
   it('Verify that menu drop down is working', () => {
