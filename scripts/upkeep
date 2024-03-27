@@ -76,10 +76,13 @@ echo "Adding Vote.gov custom theme assets...completed!"
 echo ""
 
 echo "**************************************************"
-echo "Deleting all 'node' directories..."
+echo "Deleting 'node' redirect files..."
 echo "**************************************************"
-find ${html_path} -type d -name "node" -print -exec rm -rf {} +
-echo "Deleting all 'node' directories...completed"
+find ${html_path} -type d -name "node" -print0 | while IFS= read -r -d '' node_dir; do
+    # Find index.html files within each 'node' directory that are a redirect.
+    find "$node_dir" -type f -path "*/index.html" -exec grep -q "http-equiv=\"refresh\"" {} \; -delete -exec dirname {} \;
+done
+echo "Deleting 'node' redirect files...completed"
 echo ""
 
 echo "**************************************************"
@@ -87,6 +90,13 @@ echo "Deleting taxonomy directories..."
 echo "**************************************************"
 rm -rf ${html_path}/taxonomy 2>/dev/null
 echo "Deleting taxonomy directories...completed"
+echo ""
+
+echo "**************************************************"
+echo "Removing empty directories..."
+echo "**************************************************"
+find ../html -type d -empty -delete
+echo "Removing empty directories...completed"
 echo ""
 
 cd ${html_path}
