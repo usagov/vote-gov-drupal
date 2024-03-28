@@ -44,7 +44,11 @@ echo "Performing find and replace tasks..."
 echo "**************************************************"
 echo "-- Replace s3-based file urls with relative urls"
 echo "**************************************************"
-find ${html_path} -type f -exec grep -l 'http[s]*://[^/]\+/s3/files' {} \; -exec sed -i 's#http[s]*://[^/]\+/s3/files#/s3/files#g' {} +
+find ${html_path} -type f -exec grep -l "${ssg_endpoint}/s3/files" {} \; -exec sed -i "s#${ssg_endpoint}/s3/files#/s3/files#g" {} +
+echo "**************************************************"
+echo "-- Replace absolute urls with relative urls in generated files"
+echo "**************************************************"
+find ${html_path}/sites/default/files -type f -exec grep -l "${ssg_endpoint}/" {} \; -exec sed -i "s#${ssg_endpoint}/#/#g" {} +
 echo "Performing find and replace tasks...completed!"
 echo ""
 
