@@ -21,7 +21,7 @@ export bucket=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | te
 export bucket_endpoint=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.endpoint')
 
 export ssg_endpoint="https://ssg-${environment}.vote.gov"
-[ "${environment}" = "prod" ] && export ssg_endpoint="https://ssg.vote.gov"
+[ "${environment}" = "prod" ] && export ssg_endpoint="https://beta.vote.gov"
 
 cd ${app_path}
 echo "**************************************************"
@@ -44,7 +44,11 @@ echo "Performing find and replace tasks..."
 echo "**************************************************"
 echo "-- Replace s3-based file urls with relative urls"
 echo "**************************************************"
-find ${html_path} -type f -exec grep -l 'http[s]*://[^/]\+/s3/files' {} \; -exec sed -i 's#http[s]*://[^/]\+/s3/files#/s3/files#g' {} +
+find ${html_path} -type f -exec grep -l "${ssg_endpoint}/s3/files" {} \; -exec sed -i "s#${ssg_endpoint}/s3/files#/s3/files#g" {} +
+echo "**************************************************"
+echo "-- Replace absolute urls with relative urls in generated files"
+echo "**************************************************"
+find ${html_path}/sites/default/files -type f -exec grep -l "${ssg_endpoint}/" {} \; -exec sed -i "s#${ssg_endpoint}/#/#g" {} +
 echo "Performing find and replace tasks...completed!"
 echo ""
 
@@ -54,6 +58,13 @@ echo "**************************************************"
 mkdir -p ${html_path}/core/assets
 cp -rfp ${app_path}/web/core/assets/vendor ${html_path}/core/assets/
 echo "Missing Core assets files...completed!"
+echo ""
+
+echo "**************************************************"
+echo "Adding missing robots.txt file"
+echo "**************************************************"
+cp -f ${app_path}/web/robots.txt ${html_path}/
+echo "Adding missing robots.txt file....completed!"
 echo ""
 
 echo "**************************************************"
@@ -76,10 +87,13 @@ echo "Adding Vote.gov custom theme assets...completed!"
 echo ""
 
 echo "**************************************************"
-echo "Deleting all 'node' directories..."
+echo "Deleting 'node' redirect files..."
 echo "**************************************************"
-find ${html_path} -type d -name "node" -print -exec rm -rf {} +
-echo "Deleting all 'node' directories...completed"
+find ${html_path} -type d -name "node" -print0 | while IFS= read -r -d '' node_dir; do
+    # Find index.html files within each 'node' directory that are a redirect.
+    find "$node_dir" -type f -path "*/index.html" -exec grep -q "http-equiv=\"refresh\"" {} \; -delete -exec dirname {} \;
+done
+echo "Deleting 'node' redirect files...completed"
 echo ""
 
 echo "**************************************************"
@@ -87,6 +101,13 @@ echo "Deleting taxonomy directories..."
 echo "**************************************************"
 rm -rf ${html_path}/taxonomy 2>/dev/null
 echo "Deleting taxonomy directories...completed"
+echo ""
+
+echo "**************************************************"
+echo "Removing empty directories..."
+echo "**************************************************"
+find ../html -type d -empty -delete
+echo "Removing empty directories...completed"
 echo ""
 
 cd ${html_path}

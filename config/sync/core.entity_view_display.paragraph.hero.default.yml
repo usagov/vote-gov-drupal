@@ -8,7 +8,7 @@ dependencies:
     - field.field.paragraph.hero.field_heading
     - field.field.paragraph.hero.field_link
     - field.field.paragraph.hero.field_media
-    - image.style.standard_xl
+    - image.style.scaled_xl
     - paragraphs.paragraphs_type.hero
   module:
     - link
@@ -59,7 +59,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: standard_xl
+      image_style: scaled_xl
       image_loading:
         attribute: lazy
     third_party_settings: {  }

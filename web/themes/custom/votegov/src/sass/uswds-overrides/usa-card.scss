@@ -3,23 +3,44 @@
 @use "mixins" as *;
 
 .usa-card-group {
-
   a {
     @include u-display('block');
     @include u-text-decoration('no-underline');
     @include u-height('full');
 
     @include hover {
-      background-color: transparent;
+      background-color: $base-white;
       color: inherit;
+
+      .vote-feature-card__icon-circle {
+        background-color: $base-white;
+
+        svg {
+          > path {
+            fill: $bg-light-cool;
+          }
+        }
+      }
     }
   }
 
   .usa-card {
     .vote-feature-card {
-      &__icon {
-        svg>circle {
-          fill: $bg-light-cool;
+
+      &__icon-circle {
+        @include u-height(9);
+        @include u-width(9);
+        @include u-margin-x('auto');
+        @include u-display('flex');
+        @include u-flex('align-center');
+        @include u-flex('justify-center');
+        background-color: $bg-light-cool;
+        border-radius: 50%;
+
+        svg {
+          fill: $base-white;
+          @include u-height(6);
+          @include u-width(6);
         }
       }
      }
@@ -44,8 +65,11 @@
       font-size: 16px;
     }
   }
-
-  @include at-media('tablet') {
+//desktop
+  @include at-media('tablet-lg') {
+    a {
+      @include u-margin-x(2);
+    }
     .usa-card {
       &:hover .usa-card__container, :focus .usa-card__container {
         background-color: $bg-light-cool;
@@ -61,6 +85,7 @@
         @include u-padding(3);
         border: 3px solid transparent;
         outline: 1px solid $base-dark;
+        @include u-margin(0);
       }
 
       .vote-feature-card {
@@ -94,8 +119,8 @@
       }
     }
   }
-
-  @include at-media-max('tablet') {
+//mobile
+  @include at-media-max('tablet-lg') {
     @include u-margin-right('auto');
     @include u-margin-left('auto');
 
@@ -113,13 +138,12 @@
     @include u-margin(0);
 
      &__container {
-       display: inline-block;
-       @include u-padding(3);
+       display: flex;
+       flex-direction: row;
        @include u-border(0);
        @include u-padding(0);
        @include u-margin(0);
-       @include u-margin-top(4);
-       @include u-margin-bottom(4);
+       @include u-padding-y(4);
        border-radius: unset;
      }
 
@@ -128,18 +152,19 @@
        &__icon {
          @include u-height(9);
          @include u-width(9);
-         float: left;
+         display: flex;
+         flex-direction: column;
        }
 
        &__content {
          width: calc(100% - 72px);
-         float: right;
+         display: flex;
+         flex-direction: column;
          @include u-padding-left(3);
        }
       }
 
      &__header {
-       float: left;
        @include u-width('full');
 
        h3 {
@@ -148,8 +173,7 @@
      }
 
      &__body {
-       float: left;
-       @include u-padding(2);
+       @include u-padding-top(2);
 
        >div {
          color: $base-dark;
@@ -157,14 +181,20 @@
          font-style: normal;
          font-weight: 400;
          line-height: 155%;
-        @include u-margin(0);
+         @include u-margin(0);
        }
      }
 
      &:last-child {
        @include u-padding(0);
-      @include u-margin(0);
+       @include u-margin(0);
      }
    }
+  }
+}
+
+.paragraph--type--feature-cards {
+  @include at-media-max('tablet-lg') {
+    margin-bottom: 86px;
   }
 }

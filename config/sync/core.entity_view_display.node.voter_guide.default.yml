@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.voter_guide.body
     - field.field.node.voter_guide.field_basics_block
+    - field.field.node.voter_guide.field_icon
     - field.field.node.voter_guide.field_subtitle
     - node.type.voter_guide
   module:
@@ -21,12 +22,12 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 2
     region: content
   content_moderation_control:
     settings: {  }
     third_party_settings: {  }
-    weight: -20
+    weight: 0
     region: content
   field_basics_block:
     type: entity_reference_revisions_entity_view
@@ -35,19 +36,28 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 103
+    weight: 4
+    region: content
+  field_icon:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_subtitle:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 102
+    weight: 3
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 1
     region: content
 hidden:
   langcode: true
