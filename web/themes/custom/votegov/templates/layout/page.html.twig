@@ -42,8 +42,14 @@
   {{ attach_library('bixaluswds/logged-in') }}
 {% endif %}
 
+{# load navajo font #}
+{% if language == 'nv' %}
+  {{ attach_library('votegov/navajo-font') }}
+{% endif %}
+
 {# set a variable if the node has a featured image #}
 {% set node_image = node.field_media.value | length %}
+
 {# Government banner component #}
   {{ drupal_entity('block_content', '1') }}
 
