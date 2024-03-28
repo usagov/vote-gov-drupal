@@ -10,7 +10,8 @@ stackable: false
 no_patching: false
 storage: folder
 folder: ../config/local
-module: {  }
+module:
+  disable_language: 0
 theme: {  }
 complete_list:
   - dblog.settings

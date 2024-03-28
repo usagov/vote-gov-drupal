@@ -61,6 +61,13 @@ echo "Missing Core assets files...completed!"
 echo ""
 
 echo "**************************************************"
+echo "Adding missing robots.txt file"
+echo "**************************************************"
+cp -f ${app_path}/web/robots.txt ${html_path}/
+echo "Adding missing robots.txt file....completed!"
+echo ""
+
+echo "**************************************************"
 echo "Adding missing module files for Sitemap..."
 echo "**************************************************"
 mkdir -p ${html_path}/modules/contrib/simple_sitemap/xsl
