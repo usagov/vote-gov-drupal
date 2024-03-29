@@ -56,7 +56,7 @@
   {% elseif links|length > 2 %}
     {%- for key, item in links -%}
       <li class="usa-language__submenu-item" {{ item.attributes.removeAttribute('hreflang') }}
-          data-lang="lang-{{ key }}">
+          data-lang="lang-{{ key }}" data-test="langItem">
         {%- if item.link -%}
           {# Create a custom override for the frontpage links. #}
           {%- if is_frontpage -%}
