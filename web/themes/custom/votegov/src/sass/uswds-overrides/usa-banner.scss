@@ -30,3 +30,7 @@
 .usa-banner__guidance {
   max-width: unset;
 }
+
+.usa-banner__header {
+  @include u-padding-y(0);
+}
