@@ -108,3 +108,8 @@ main {
 .type--secondary {
   @include u-font-family('sans');
 }
+
+.nonvfont,
+.nonvfont * {
+  @include u-font-family('sans')
+}
