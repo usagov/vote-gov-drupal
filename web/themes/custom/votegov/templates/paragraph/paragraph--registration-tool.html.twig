@@ -22,11 +22,11 @@
         <label class="vote-basic-tool__label" for="vote-basic-tool__input">{{ content.field_form_heading | field_value }}</label>
         <input type="text" class="vote-basic-tool__input"
                 id="vote-basic-tool__input" autocomplete="off"
-                placeholder="{{ content.field_placeholder | field_value }}">
+                placeholder="{{ content.field_placeholder | field_value }}" data-test="stateInput">
         <div class="vote-basic-tool__list-container">
           <div class="vote-basic-tool__scrollable-results">
             <nav id="vote-basic-tool__results" class="vote-basic-tool__nav">
-              <ul class="vote-basic-tool__list">
+              <ul class="vote-basic-tool__list" data-test="state-list">
                 {% set results = drupal_view_result('state_territory', 'block') %}
                 {% for result in results %}
                   {% set nodeID = result._entity.id() %}
