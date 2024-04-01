@@ -42,3 +42,8 @@ search_bar:
   version: VERSION
   js:
     dist/js/search-bar.js: { minified: true }
+
+nvrf_pdf_download:
+  version: VERSION
+  js:
+    dist/js/nvrf-pdf-download.js: { minified: true }
