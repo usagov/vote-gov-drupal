@@ -36,7 +36,7 @@
   font-display: swap;
 }
 
-*,
+*:not(.nonvfont),
 *.usa-button,
 *.main-heading,
 *.content-heading,

@@ -95,7 +95,7 @@ small {
   @include u-font-size('serif', 3);
 }
 
-hr {
+hr, p+hr {
   @include u-border(0);
   @include u-margin-y(3);
   border-bottom: 1px solid $bg-light-medium;
@@ -107,4 +107,9 @@ main {
 
 .type--secondary {
   @include u-font-family('sans');
+}
+
+.nonvfont,
+.nonvfont * {
+  @include u-font-family('sans')
 }
