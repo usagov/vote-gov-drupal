@@ -30,6 +30,18 @@
         @include u-position('relative');
         @include u-font-weight('normal');
 
+        &:before{
+            content: '';
+            @include u-display('block');
+            @include u-position('absolute');
+            @include u-width(0.5);
+            @include u-height(10);
+            background-color: $ac-warm;
+            bottom: 90%;
+            left: 38px;
+            rotate: 90deg;
+        }
+
         p {
             max-width: 75%;
         }
