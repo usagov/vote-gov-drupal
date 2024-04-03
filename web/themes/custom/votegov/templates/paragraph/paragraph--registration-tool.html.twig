@@ -31,8 +31,9 @@
                 {% for result in results %}
                   {% set nodeID = result._entity.id() %}
                   {% set node_path = path('entity.node.canonical', {'node': nodeID}) %}
+                  {% set node_key = result._entity.field_state_abbreviation.value %}
                   <li>
-                    <a href="{{ node_path }}">{{ result.node_field_data_title }}</a>
+                    <a key="{{ node_key }}" href="{{ node_path }}">{{ result.node_field_data_title }}</a>
                   </li>
                 {% endfor %}
                   <li id="no-results" hidden>
