@@ -1,7 +1,9 @@
 @use "uswds-core" as *;
+@use "variables" as *;
 
 .usa-banner {
   @include u-position('relative');
+  background-color: $bg-light;
 }
 
 .usa-banner__inner {
