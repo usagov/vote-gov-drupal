@@ -28,10 +28,12 @@
 
 {% if status_code != 'error' %}
   {% block content %}
-    <div class="usa-language-container usa-language--big grid-container">
       {% if content['#links']|length == 2 %}
+      <div class="usa-language-container usa-language--big grid-container">
         {{ content }}
+      </div>
       {% elseif content['#links']|length > 2 %}
+      <div class="usa-language-container usa-language--big grid-container">
         <div class="usa-language__primary usa-accordion">
           <div class="usa-language__primary-item">
             <button class="usa-button usa-language__link" data-test="language-button" aria-expanded="false"
@@ -45,7 +47,7 @@
             </ul>
           </div>
         </div>
+      </div>
       {% endif %}
-    </div>
   {% endblock %}
 {% endif %}

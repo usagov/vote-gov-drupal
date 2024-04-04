@@ -2,6 +2,8 @@
 @use "variables" as *;
 
 .usa-language-container {
+  background-color: $bg-light;
+
   @include at-media('tablet') {
     @include u-position('absolute');
     @include u-left(0);
@@ -10,9 +12,9 @@
   }
 
   @include at-media-max('tablet') {
-    @include u-padding-y(2);
-    @include u-flex('justify-center');
-    background-color: $base-white;
+    @include u-padding-y(1);
+    @include u-border-y('1px');
+    border-color: $bg-light-medium;
   }
 }
 
@@ -22,7 +24,6 @@
   }
 
   @include at-media-max('tablet') {
-    @include u-width('full');
     @include u-maxw('mobile');
   }
 }
@@ -54,5 +55,7 @@
 }
 
 .language-selector {
-  position: absolute;
+  @include at-media('tablet') {
+    position: absolute;
+  }
 }
