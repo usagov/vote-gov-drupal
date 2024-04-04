@@ -26,20 +26,16 @@
     }
 
     .usa-identifier__identity-disclaimer{
-        @include u-margin-top(6);
         @include u-position('relative');
         @include u-font-weight('normal');
 
         &:before{
             content: '';
             @include u-display('block');
-            @include u-position('absolute');
-            @include u-width(0.5);
-            @include u-height(10);
+            @include u-height(0.5);
+            @include u-margin-y(3);
             background-color: $ac-warm;
-            bottom: 90%;
-            left: 38px;
-            rotate: 90deg;
+            width: 6rem;
         }
 
         p {
