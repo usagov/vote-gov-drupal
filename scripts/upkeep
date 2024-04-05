@@ -21,48 +21,103 @@ export bucket=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | te
 export bucket_endpoint=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.endpoint')
 
 export ssg_endpoint="https://ssg-${environment}.vote.gov"
-[ "${environment}" = "prod" ] && export ssg_endpoint="https://ssg.vote.gov"
+[ "${environment}" = "prod" ] && export ssg_endpoint="https://beta.vote.gov"
 
 cd ${app_path}
+echo "**************************************************"
 echo "Running 'drush cron' in '${environment}'..."
+echo "**************************************************"
 drush --uri=${ssg_endpoint} cron
-echo "'drush cron' task completed!"
+echo "'drush cron' task...completed!"
+echo ""
 
+echo "**************************************************"
 echo "Running 'drush tome:static' in '${environment}'..."
+echo "**************************************************"
 drush tome:static --uri=${ssg_endpoint} --process-count=2 --retry-count=0 -y
 drush tome:static-export-path '/sitemap.xml,/sitemap_generator/default/sitemap.xsl' --uri=${ssg_endpoint} --process-count=2 --retry-count=0 -y
-echo "'drush tome:static' task completed!"
+echo "'drush tome:static' task...completed!"
+echo ""
 
-echo "Adding missing Core assets vendor directory"
+echo "**************************************************"
+echo "Performing find and replace tasks..."
+echo "**************************************************"
+echo "-- Replace s3-based file urls with relative urls"
+echo "**************************************************"
+find ${html_path} -type f -exec grep -l 'http[s]*://[^/]\+/s3/files' {} \; -exec sed -i 's#http[s]*://[^/]\+/s3/files#/s3/files#g' {} +
+echo "**************************************************"
+echo "-- Replace absolute urls with relative urls in generated files"
+echo "**************************************************"
+find ${html_path}/sites/default/files -type f -exec grep -l "${ssg_endpoint}/" {} \; -exec sed -i "s#${ssg_endpoint}/#/#g" {} +
+echo "Performing find and replace tasks...completed!"
+echo ""
+
+echo "**************************************************"
+echo "Adding missing Core assets vendor directory..."
+echo "**************************************************"
 mkdir -p ${html_path}/core/assets
 cp -rfp ${app_path}/web/core/assets/vendor ${html_path}/core/assets/
-echo "Missing Core assets files completed!"
+echo "Missing Core assets files...completed!"
+echo ""
 
+echo "**************************************************"
 echo "Adding missing robots.txt file"
+echo "**************************************************"
 cp -f ${app_path}/web/robots.txt ${html_path}/
 echo "Adding missing robots.txt file....completed!"
+echo ""
 
-echo "Adding missing module files for Sitemap"
+echo "**************************************************"
+echo "Adding missing module files for Sitemap..."
+echo "**************************************************"
 mkdir -p ${html_path}/modules/contrib/simple_sitemap/xsl
 cp -rfp ${app_path}/web/modules/contrib/simple_sitemap/xsl/* ${html_path}/modules/contrib/simple_sitemap/xsl/
-echo "Missing module files for Sitemap completed!"
+echo "Missing module files for Sitemap...completed!"
+echo ""
 
-echo "Adding Vote.gov custom theme assets"
+echo "**************************************************"
+echo "Adding Vote.gov custom theme assets..."
+echo "**************************************************"
 mkdir -p ${html_path}/themes/custom/votegov
 cp -rfp ${app_path}/web/themes/custom/votegov/dist ${html_path}/themes/custom/votegov/
 cp -rfp ${app_path}/web/themes/custom/votegov/fonts ${html_path}/themes/custom/votegov/
 cp -rfp ${app_path}/web/themes/custom/votegov/img ${html_path}/themes/custom/votegov/
 cp -rfp ${app_path}/web/themes/custom/votegov/json ${html_path}/themes/custom/votegov/
-echo "Adding Vote.gov custom theme assets - completed!"
+echo "Adding Vote.gov custom theme assets...completed!"
+echo ""
+
+echo "**************************************************"
+echo "Deleting 'node' redirect files..."
+echo "**************************************************"
+find ${html_path} -type d -name "node" -print0 | while IFS= read -r -d '' node_dir; do
+    # Find index.html files within each 'node' directory that are a redirect.
+    find "$node_dir" -type f -path "*/index.html" -exec grep -q "http-equiv=\"refresh\"" {} \; -delete -exec dirname {} \;
+done
+echo "Deleting 'node' redirect files...completed!"
+echo ""
+
+echo "**************************************************"
+echo "Deleting taxonomy directories..."
+echo "**************************************************"
+rm -rf ${html_path}/taxonomy 2>/dev/null
+echo "Deleting taxonomy directories...completed!"
+echo ""
+
+echo "**************************************************"
+echo "Removing empty directories..."
+echo "**************************************************"
+find ${html_path} -type d -empty -delete
+echo "Removing empty directories...completed!"
+echo ""
 
 cd ${html_path}
+echo "**************************************************"
 echo "Copying static files to '${bucket_name}'..."
+echo "**************************************************"
 aws s3 sync . s3://${bucket} --delete --no-verify-ssl 2>/dev/null
 aws s3 website s3://${bucket} --index-document index.html --error-document /404/index.html  --no-verify-ssl 2>/dev/null
-echo "Copy to '${bucket_name}' completed!"
-
-echo "Deleting the taxonomy directory..."
-aws s3 rm --recursive s3://${bucket}/taxonomy/ 2>/dev/null && echo "Successfully deleted taxonomy directory!" || echo "Failed to delete the taxonomy directory!"
+echo "Copy to '${bucket_name}'...completed!"
+echo ""
 
 # export objects=($(aws s3 ls s3://${bucket} --recursive --no-verify-ssl 2>/dev/null | awk '{print $(NF)}' | sed -z -e 's/\n/ /g'))
 
