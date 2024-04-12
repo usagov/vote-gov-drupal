@@ -33,6 +33,7 @@
   @include u-width('auto');
   @include u-radius('sm');
   @include u-text('no-wrap');
+  background-color: $base-dark;
 
   @include at-media-max('tablet') {
     overflow: auto;
@@ -59,3 +60,11 @@
     position: absolute;
   }
 }
+
+
+// #2e598a
+// button:not([disabled]):focus
+
+// .usa-language__link:not([disabled]):focus {
+//   outline: #2e598a;
+// }
