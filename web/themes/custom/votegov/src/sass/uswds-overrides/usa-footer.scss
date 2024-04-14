@@ -4,6 +4,7 @@
 
 .usa-footer__primary-section {
   @include vote-solid-border-top;
+  background-color: #f7f9fa;
 
   .grid-container {
     @include at-media-max('tablet-lg') {
