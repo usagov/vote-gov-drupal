@@ -6,48 +6,68 @@
   @include vote-solid-border-top;
 
   .grid-container {
-    @include at-media('tablet') {
-      @include u-display('flex');
-      @include u-padding(4);
-    }
+    // @include at-media('tablet') {
+      // @include u-display('flex');
+    //   @include u-padding(4);
+    // }
   }
 }
 
 .usa-footer__secondary-section {
-  @include vote-solid-border-top;
+  background-color: #F7F9FA;
+  // @include vote-solid-border-top;
 
-  @include at-media('tablet') {
-    @include u-padding-y(6);
-  }
+  // @include at-media('tablet') {
+  //   @include u-padding-y(6);
+  // }
 
-  @include at-media-max('tablet') {
-    @include u-padding-bottom(0);
-  }
+  // @include at-media-max('tablet') {
+  //   @include u-padding-bottom(0);
+  // }
 }
 
 .usa-footer__logo {
   color: $base-dark;
-  @include at-media('tablet') {
-    @include u-display('flex');
-    @include grid-col(6);
-  }
+  display: flex;
+  // @include at-media('tablet') {
+  //   @include u-display('flex');
+    // @include grid-col(6);
+  // }
 }
 
 .usa-footer__social-links {
   @include u-display('flex');
-  @include u-flex('align-center');
-  font-size: 18px;
-  font-weight: 500;
+  text-wrap: nowrap;
+  // width: 135px;
+  padding: 0;
 
-  @include at-media('tablet') {
-    @include grid-col(3);
+  &:before {
+    content: '';
+    background-color: $bg-light-medium;
+    height: 48px;
+    width: 1px;
+    margin-right: 48px;
+    margin-left: 48px;
   }
+
+  // @include u-display('flex');
+  // @include u-flex('align-center');
+  // font-size: 18px;
+  // font-weight: 500;
+
+  // @include at-media('tablet') {
+  //   @include grid-col(3);
+  // }
+  // @include at-media-max('tablet') {
+  //   @include u-flex('justify-center');
+  //   @include u-padding-bottom(0);
+  //   @include u-border-y(1px);
+  //   border-color: $bg-light-medium ;
+  //   @include u-padding-y('105');
+  //   @include u-margin-x(-2);
+  // }
+
   @include at-media-max('tablet') {
-    @include u-flex('justify-center');
-    @include u-padding-bottom(0);
-    @include u-border-y(1px);
-    border-color: $bg-light-medium ;
-    @include u-padding-y('105');
-    @include u-margin-x(-2);
+    width: 164px;
   }
 }

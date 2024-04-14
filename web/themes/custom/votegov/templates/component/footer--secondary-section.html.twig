@@ -1,17 +1,16 @@
 {% set GSAlink = link('General Services Administration' | t, 'https://www.gsa.gov/') %}
 
 <div class="usa-footer__secondary-section" data-test="footer-contact">
-  <div class="grid-container">
-    <div class="grid-row">
-      <div class="usa-footer__logo">
-        {# GSA logo #}
-        <div class="gsa-container">
-          <div class="gsa-container__img">
-            <img src="{{ theme_path }}/img/gsa-logo.svg" alt="{{'GSA logo'|t}}" width="48" height="48">
-          </div>
-          <div class="gsa-container__text" aria-label="{{ 'Agency description' | t }}">
+  <div class="usa-footer__logo grid-row">
+    {# <div class="usa-footer__logo"> #}
+      {# GSA logo #}
+      <div class="gsa-container">
+        {# <div class="gsa-container__img"> #}
+        <img src="{{ theme_path }}/img/gsa-logo.svg" alt="{{ 'GSA logo'|t }}" width="48" height="48">
+          {# </div> #}
+          <span aria-label="{{ 'Agency description' | t }}">
             {{ 'Vote.gov is an official website of the @link.' | t({'@link': GSAlink | render}) }}
-          </div>
+          </span>
         </div>
         {# EAC logo #}
         <div class="eac-logo-container">
@@ -19,13 +18,18 @@
             <img class="eac-logo" width="146" height="48" src="{{ theme_path }}/img/eac-logo.webp" alt="{{ 'U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov' | t }}" />
           </a>
         </div>
-      </div>
-      <div class="usa-footer__social-links">
-        <span>{{ 'Follow vote.gov on ' | t }}</span>
+        <div class="usa-footer__social-links">
         <a class="vote-social-link" href="https://twitter.com/votegov">
-          <img class="vote-social-link__icon" src="{{ theme_path }}/img/x-logo.svg" alt="X"/>
-        </a>
+          <span>
+            {{ 'Follow vote.gov on ' | t }}
+          </span>
+            <div class="vote-social-link__icon">
+              <img src="{{ theme_path }}/img/x-logo.svg" alt="X" />
+            </div>
+          </a>
+        </div>
       </div>
-    </div>
+    {# </div> #}
   </div>
 </div>
+  
