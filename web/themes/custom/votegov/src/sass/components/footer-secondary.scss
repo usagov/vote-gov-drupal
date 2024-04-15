@@ -8,23 +8,24 @@
     @include at-media('tablet-lg') {
         &:after {
             content: '';
+            @include u-height(6);
+            @include u-width('1px');
+            @include u-margin-x(6);
             background-color: $bg-light-medium;
-            height: 48px;
-            width: 1px;
-            margin-right: 48px;
-            margin-left: 48px;
         }
     }
 
     @include at-media-max('tablet-lg') {
-        width: 100%;
+        @include u-width('full');
     }
 
     img {
-        margin-left: auto;
+        @include u-margin-left('auto');
     }
 
     span {
+        @include u-margin-right('auto');
+        @include u-margin-left(2);
         font-family: 'Roboto';
         max-width: 202px;
         font-size: 14px;
@@ -32,8 +33,6 @@
         font-weight: 400;
         line-height: 120%;
         align-self: center;
-        margin-left: 16px;
-        margin-right: auto;
     }
 }
 
@@ -45,14 +44,12 @@
     @include at-media-max('tablet-lg') {
         &:before {
             content: "";
+            @include u-margin-y(3);
             display: block;
-            margin-top: 24px;
-            margin-bottom: 24px;
             background-color: $bg-light-medium;
             height: 1px;
             width: 96px;
-            margin-left: auto;
-            margin-right: auto;
+            @include u-margin-x('auto');
         }
     }
 
@@ -66,7 +63,7 @@
     align-items: center;
 
     span {
-        color: #11385B;
+        color: $base-dark;
         font-family: Roboto;
         font-size: 18px;
         font-style: normal;
@@ -76,12 +73,12 @@
 }
 
 .vote-social-link__icon {
-    background-color: $bg-light-cool;
     @include u-radius-top('pill');
     @include u-radius-bottom('pill');
     @include u-width(4);
     @include u-height(4);
-    margin-left: 18px;
+    background-color: $bg-light-cool;
+    margin-left: 10px;
 
     img {
         margin-left: 5px;
