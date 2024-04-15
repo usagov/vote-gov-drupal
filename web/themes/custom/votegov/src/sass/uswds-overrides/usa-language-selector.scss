@@ -60,3 +60,7 @@
     position: absolute;
   }
 }
+
+.usa-button.usa-language__link:focus {
+  border-bottom-right-radius: 0;
+}
