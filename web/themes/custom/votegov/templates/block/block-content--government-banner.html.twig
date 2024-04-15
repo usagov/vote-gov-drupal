@@ -15,7 +15,7 @@
       <div class="usa-banner__inner">
         <div class="banner__text-container tablet:grid-col-7 grid-row">
           <div class="grid-col-auto">
-            <img class="usa-banner__header-flag" data-test="header-logo" width="16" height="11" loading="lazy"
+            <img class="usa-banner__header-flag" data-test="headerLogo" width="16" height="11" loading="lazy"
                  src="{{ uswds_img_path }}/us_flag_small.png" alt="{{ 'U.S. flag' | t }}">
           </div>
           <div class="grid-col-fill tablet:grid-col-auto">
@@ -27,14 +27,14 @@
             </div>
           </div>
           <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false"
-                  aria-controls="gov-banner" data-test="header-button">
+                  aria-controls="gov-banner" data-test="headerButton">
             <span class="usa-banner__button-text">{{ content.field_accordion_link_label | field_value }}</span>
           </button>
         </div>
       </div>
     </div>
 
-    <div class="usa-banner__content usa-accordion__content" id="gov-banner" data-test="header-banner">
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner" data-test="headerBanner">
       <div class="grid-row grid-gap-lg">
         <div class="usa-banner__guidance tablet:grid-col-6">
           <img class="usa-banner__icon usa-media-block__img" loading="lazy" width="40" height="40"
