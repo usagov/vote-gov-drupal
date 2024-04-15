@@ -4,6 +4,7 @@
 .usa-sign-up {
     .usa-form {
         @include at-media('tablet') {
+            align-items: baseline;
             display: flex;
         }
     }
@@ -17,23 +18,29 @@
     }
 
     .usa-input {
-        height: 100%;
-        border-radius: 4px;
+        @include u-height(6);
+        @include u-radius('md');
         border: 1px $bg-light-medium solid;
 
         @include at-media('tablet') {
-            width:70%;
+            @include u-margin-right(2);
+            max-width: 30rem;
+        }
+
+        @include at-media-max('tablet') {
+            @include u-margin-bottom(2);
         }
     }
 
     .usa-button {
         @include u-padding-y('105');
-        height: 38px;
+        @include u-padding-x('205');
+        @include u-height(6);
+        @include u-margin(0);
+        min-width: 95px;
 
-        @include at-media('tablet') {
-            @include u-margin-top(1);
-            @include u-margin-right(0);
-            @include u-margin-left(2);
+        @include at-media-max('tablet') {
+            @include u-width('full');
         }
     }
 }

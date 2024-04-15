@@ -1,7 +1,9 @@
 @use "uswds-core" as *;
+@use "variables" as *;
 
 .usa-banner {
   @include u-position('relative');
+  background-color: $bg-light;
 }
 
 .usa-banner__inner {
@@ -15,14 +17,21 @@
 }
 
 .banner__text-container {
-  @include u-height(6);
+  @include at-media-max('tablet') {
+    @include u-height(6);
+  }
+
   @include u-flex('align-center');
 }
 
-.usa-banner__button {
-  @include u-height(6);
+.usa-banner__guidance {
+  max-width: unset;
 }
 
-.usa-banner__button[aria-expanded=true]{
-  @include u-height(6);
+.usa-banner__header {
+  @include u-padding-y(0);
+
+  &--expanded {
+    padding-right: 0;
+  }
 }
