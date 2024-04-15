@@ -23,6 +23,7 @@
   &.usa-button--hover {
     background-color: $base-primary-hover;
     outline: .25rem solid $base-primary-hover;
+    border-bottom-right-radius: 0;
   }
 
   &.usa-button--secondary {
