@@ -2,12 +2,19 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-.usa-alert .usa-alert__body, .usa-site-alert .usa-alert .usa-alert__body {
-  @include u-padding-y(2);
-  @include u-padding-x(8);
+.usa-alert__body {
+  .usa-alert & {
+    @include u-padding-left(8);
+    @include u-padding-right(4);
 
-  &:before {
-    left: 1.5rem;
+    &:before {
+      left: 1.5rem;
+    }
+  }
+
+  .usa-site-alert .usa-alert & {
+    padding-left: 7rem;
+    padding-right: 7rem;
   }
 }
 
