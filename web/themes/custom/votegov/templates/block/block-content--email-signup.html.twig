@@ -6,8 +6,8 @@
   <label class="usa-label" for="email" id="emailsub">
     {{ content.field_email_field_label | field_value }}
   </label>
-  <form class="usa-form" action="{{ content.field_link | field_value }}" method="get">
-    <input id="email" name="email" type="email" class="usa-input max-width-input" data-test="email-signup"/>
+  <form class="usa-form" target="_blank" action="{{ content.field_link | field_value }}" method="get">
+    <input id="email" name="email" type="email" class="usa-input max-width-input" data-test="emailSignup"/>
     <button class="usa-button max-width-input" id="user-submit" type="submit">
       {{ content.field_signup_button_label | field_value }}
     </button>
