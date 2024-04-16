@@ -17,7 +17,8 @@
 
         svg {
           > path {
-            fill: $bg-light-cool;
+            fill: $base-white;
+            stroke: $bg-light-cool;
           }
         }
       }
@@ -38,9 +39,13 @@
         border-radius: 50%;
 
         svg {
-          fill: $base-white;
           @include u-height(6);
-          @include u-width(6);
+          @include u-width('auto');
+          
+          > path {
+            fill: $bg-light-cool;
+            stroke: $base-white;
+          }
         }
       }
      }
