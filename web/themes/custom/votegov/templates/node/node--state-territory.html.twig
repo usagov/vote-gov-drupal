@@ -78,9 +78,9 @@
   {% if node.field_accepts_nvrf.value == 1 %}
     {{ drupal_entity('block_content', '3') }}
   {% endif %}
-
+  
   <p class="date--updated">
     {# Striptags and raw filters were added to accomodate Navajo date formats. #}
-    {{'Last updated:' | t }} {{ node.revision_timestamp.value | date('U') | format_date('revision_date') | replace(t_numbers[language].numbers | default([])) | striptags('<span>') | raw }}
+    {{'Last updated:' | t }} {{ field_updated_date.value | date('U') | format_date('revision_date') | replace(t_numbers[language].numbers | default([])) | striptags('<span>') | raw }}
   </p>
 </article>
