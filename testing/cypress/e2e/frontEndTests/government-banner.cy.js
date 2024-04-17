@@ -1,12 +1,20 @@
 // <reference types="cypress" />
 
-describe('check function', () => {
-  it('verify that fields are present', () => {
+describe('check govt banner', () => {
+  beforeEach('visit page', () => {
     cy.visit('/')
-    cy.get('[data-test="header-logo"]').should('be.visible')
-    cy.get('[data-test="header-button"]').click().get('[data-test="header-banner"]').should('be.visible')
+  })
+
+  it('verify that drop down works', () => {
+    cy.visit('/')
+    cy.get('[data-test="headerLogo"]').should('be.visible')
+    cy.get('[data-test="headerButton"]').click().get('[data-test="headerBanner"]').should('be.visible')
     // check to see if button hides banner as well
-    cy.get('[data-test="header-button"]').click().get('[data-test="header-banner"]').should('not.be.visible')
+    cy.get('[data-test="headerButton"]').click().get('[data-test="headerBanner"]').should('not.be.visible')
+  })
+
+  it('verify class is present', () =>{
+    cy.get('[data-test="govBanner"]').find('[class="usa-banner__header"]').should('exist')
   })
 })
 

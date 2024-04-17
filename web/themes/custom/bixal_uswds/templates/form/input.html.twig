@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Theme override for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+#}
+{% block library %}
+{#  Libraries can go here or in extended templates.#}
+{% endblock library %}
+
+{# Set variables for elements. #}
+{% set type = element["#attributes"].type %}
+{% set element_id = element["#id"] %}
+{% set form_id = element["#form_id"] %}
+
+{# Variable for button_type. #}
+{% if element["#button_type"] is not empty %}
+  {% set button_type = element["#button_type"] %}
+{% endif %}
+
+{# Set various classes to adhere to USWDS form classes. #}
+{% set classes = [
+  type in ['checkbox', 'radio'] ? 'usa-' ~ type ~ '__input',
+  type in ['password', 'password_confirm', 'text', 'tel', 'number', 'url', 'email', 'date', 'time'] ? 'usa-input',
+  type in ['file', 'managed_file'] ? 'usa-file-input',
+  type == 'submit' ? 'usa-button',
+  button_type == 'reset' ? 'usa-button--secondary',
+  type == 'range' ? 'usa-range',
+  time_picker_style == 'html5_time_picker' ? 'width-card-lg is-html5-time-picker',
+  form_id == 'search_form' ? 'maxw-card tablet:maxw-mobile-lg',
+] %}
+
+{# Render the input. #}
+{% block form_content %}
+  <input{{ attributes.addClass(classes).setAttribute('aria-describedby', element_id) }} />{{ children }}
+{% endblock form_content %}

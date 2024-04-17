@@ -20,7 +20,7 @@
 {{ attach_library('votegov/nvrf_pdf_download') }}
 <div{{ attributes.addClass(classes) }}>
   <h2>{{ content.field_heading | field_value | render | replace({"@state_name": currentnode.getTitle()}) | raw }}</h2>
-  <form class="usa-form" method="get" data-test="nvrf-form">
+  <form class="usa-form" method="get" id="register_form_download" data-test="nvrfForm">
     <p>{{ content.field_description | field_value }}</p>
     <div class="field">
       <label class="usa-sr-only" for="js-user-selection">{{ content.field_default_option_label }}</label>

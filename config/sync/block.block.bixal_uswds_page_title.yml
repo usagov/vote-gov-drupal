@@ -1,0 +1,20 @@
+uuid: ece2eb22-ccef-481a-9c95-71e72789e613
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bixal_uswds
+_core:
+  default_config_hash: Y1X3ac5Q9KbzE_7p4d5WMA3P1WtvzLi4I56Cf_pddy8
+id: bixal_uswds_page_title
+theme: bixal_uswds
+region: help
+weight: -3
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

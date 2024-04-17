@@ -34,6 +34,22 @@
   }
 }
 
+@mixin vote-block-margin-y--narrow {
+  @include u-margin-y(4);
+
+  @include at-media('desktop') {
+    @include u-margin-y(6);
+  }
+}
+
+@mixin vote-block-padding-y--narrow {
+  @include u-padding-y(4);
+
+  @include at-media('desktop') {
+    @include u-padding-y(6);
+  }
+}
+
 @mixin hover {
   &:hover,
   &:focus {

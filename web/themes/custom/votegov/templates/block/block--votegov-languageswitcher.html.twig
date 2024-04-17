@@ -28,24 +28,26 @@
 
 {% if status_code != 'error' %}
   {% block content %}
-    <div class="usa-language-container usa-language--big grid-container">
       {% if content['#links']|length == 2 %}
+      <div class="usa-language-container usa-language--big grid-container">
         {{ content }}
+      </div>
       {% elseif content['#links']|length > 2 %}
+      <div class="usa-language-container usa-language--big grid-container">
         <div class="usa-language__primary usa-accordion">
           <div class="usa-language__primary-item">
-            <button class="usa-button usa-language__link" data-test="language-button" aria-expanded="false"
+            <button class="usa-button usa-language__link" data-test="languageButton" aria-expanded="false"
                     aria-controls="language-options">
               {{ "Select language" | t }}
             </button>
             {# Language menu items: links--language-block.html.twig #}
-            <ul id="language-options" class="usa-language__submenu" data-test="language-switcher"
+            <ul id="language-options" class="usa-language__submenu" data-test="languageSwitcher"
                 name="language-switcher" hidden {{ attributes }}>
               {{ content }}
             </ul>
           </div>
         </div>
+      </div>
       {% endif %}
-    </div>
   {% endblock %}
 {% endif %}

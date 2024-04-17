@@ -1,0 +1,4 @@
+{% extends "input.html.twig" %}
+
+{# Overrides to adhere to USWDS code.#}
+{% set attributes = attributes.addClass(classes).setAttribute('aria-describedby', element["#id"] ~ '-hint') %}

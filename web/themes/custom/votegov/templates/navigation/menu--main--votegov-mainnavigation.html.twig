@@ -27,8 +27,8 @@ We call a macro which calls itself to render the full tree.
 @see https://twig.symfony.com/doc/1.x/tags/macro.html
 #}
 {% set attributes = attributes.addClass('menu') %}
-<nav aria-label="{{ 'Primary navigation' | t }}" class="usa-nav">
-  <button type="button" class="usa-nav__close">{{ 'Close' | t }}</button>
+<nav aria-label="{{ 'Primary navigation' | t }}" class="usa-nav" data-test="mainNav">
+  <button type="button" class="usa-nav__close" data-test="closeBtn">{{ 'Close' | t }}</button>
 
   {{ menus.menu_links(items, attributes, 0, 'basic-mega-nav-section-') }}
 
@@ -42,7 +42,7 @@ We call a macro which calls itself to render the full tree.
   {% if items %}
     {# Primary level menu structure. #}
     {% if menu_level == 0 %}
-      <ul class="usa-nav__primary usa-accordion">
+      <ul class="usa-nav__primary usa-accordion" data-test="mobileNav">
         {% for item in items %}
           {% set aria_id = aria_id ~ loop.index | clean_id %}
           <li class="usa-nav__primary-item">
@@ -81,7 +81,7 @@ We call a macro which calls itself to render the full tree.
       </ul>
     {# Secondary level menu structure. #}
     {% elseif menu_level == 1 %}
-      <ul class="usa-nav__submenu-list">
+      <ul class="usa-nav__submenu-list" data-test="subMenu">
         {% for item in items %}
           <li class="usa-nav__submenu-item">
             {{ link(item.title, item.url) }}

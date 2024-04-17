@@ -1,0 +1,20 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+@use "mixins" as *;
+
+.usa-alert__body {
+  .usa-alert & {
+    @include u-padding-left(8);
+    @include u-padding-right(4);
+
+    &:before {
+      left: 1.5rem;
+    }
+  }
+
+  .usa-site-alert .usa-alert & {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+}
+

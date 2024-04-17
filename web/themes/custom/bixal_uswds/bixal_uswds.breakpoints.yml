@@ -1,0 +1,66 @@
+bixal_uswds.images.small:
+  label: small
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+  group: bixal_uswds.images
+
+bixal_uswds.images.narrow:
+  label: narrow
+  mediaQuery: '(min-width: 480px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+  group: bixal_uswds.images
+
+bixal_uswds.images.narrow_plus:
+  label: narrow
+  mediaQuery: '(min-width: 640px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+  group: bixal_uswds.images
+
+bixal_uswds.images.medium:
+  label: medium
+  mediaQuery: '(min-width: 768px)'
+  weight: 3
+  multipliers:
+    - 1x
+  group: bixal_uswds.images
+
+bixal_uswds.images.large:
+  label: wide
+  mediaQuery: '(min-width: 1024px)'
+  weight: 5
+  multipliers:
+    - 1x
+  group: bixal_uswds.images
+
+bixal_uswds.images.large_plus:
+  label: wide
+  mediaQuery: '(min-width: 1140px)'
+  weight: 5
+  multipliers:
+    - 1x
+  group: bixal_uswds.images
+
+bixal_uswds.images.wide:
+  label: wide
+  mediaQuery: '(min-width: 1280px)'
+  weight: 5
+  multipliers:
+    - 1x
+  group: bixal_uswds.images
+
+bixal_uswds.images.wide_plus:
+  label: ultrawide
+  mediaQuery: '(min-width: 1400px)'
+  weight: 7
+  multipliers:
+    - 1x
+  group: bixal_uswds.images
