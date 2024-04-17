@@ -3,15 +3,9 @@
 @use "mixins" as *;
 
 .usa-footer__primary-section {
+  @include vote-block-padding-y--narrow;
   @include vote-solid-border-top;
   background-color: #f7f9fa;
-
-  .grid-container {
-    @include at-media-max('tablet-lg') {
-      @include u-display('flex');
-      @include u-padding(4);
-    }
-  }
 }
 
 .usa-footer__secondary-section {
