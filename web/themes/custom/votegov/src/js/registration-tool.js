@@ -24,7 +24,7 @@
   // Filter dropdown results based on user input.
   function stateListFilter() {
     let filter, txtValue, wordTxtValues, keyValue;
-    filter = stateInput.value.toUpperCase().trim();
+    filter = stateInput.value.toUpperCase();
     txtValue = "";
     wordTxtValues = [];
     keyValue = "";
@@ -32,7 +32,7 @@
 
     for (let i = 0; i < stateFilteredOptions.length; i++) {
       let li = stateFilteredOptions[i].parentNode;
-      txtValue = li.textContent.trim() || li.innerText;
+      txtValue = li.textContent.trim() || li.innerText.trim();
       wordTxtValues = txtValue.split(' ');
       keyValue = li.firstElementChild.getAttribute('key');
 
