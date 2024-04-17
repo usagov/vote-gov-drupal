@@ -16,8 +16,10 @@
         background-color: $base-white;
 
         svg {
+          fill: $base-white;
+
           > path {
-            fill: $base-white;
+            fill: $bg-light-cool;
             stroke: $bg-light-cool;
           }
         }
@@ -41,9 +43,10 @@
         svg {
           @include u-height(6);
           @include u-width('auto');
+          fill: $bg-light-cool;
           
           > path {
-            fill: $bg-light-cool;
+            fill: $base-white;
             stroke: $base-white;
           }
         }
