@@ -39,6 +39,7 @@ dependencies:
     - field.field.node.state_territory.field_registration_link
     - field.field.node.state_territory.field_registration_type
     - field.field.node.state_territory.field_state_abbreviation
+    - field.field.node.state_territory.field_updated_date
     - node.type.state_territory
   module:
     - datetime
@@ -311,6 +312,7 @@ hidden:
   field_personal_information_inst: true
   field_political_party_inst: true
   field_reg_eligibility_desc: true
+  field_updated_date: true
   langcode: true
   links: true
   published_at: true
