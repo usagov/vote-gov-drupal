@@ -2,14 +2,6 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-.identifier-links-container {
-  @include grid-col(12);
-
-  @include at-media-max('tablet') {
-    @include u-padding-y(4);
-  }
-}
-
 .identifier-links {
   column-gap: 24px;
 
@@ -32,12 +24,14 @@
   }
 
   li {
-    @include at-media-max('tablet') {
-      @include u-padding-top(2);
-    }
+    + li {
+      @include at-media-max('tablet') {
+        @include u-margin-top(2);
+      }
 
-    @include at-media('tablet') {
-      @include u-padding-top('205');
+      @include at-media('tablet') {
+        @include u-margin-top('205');
+      }
     }
 
     a, a:visited {
