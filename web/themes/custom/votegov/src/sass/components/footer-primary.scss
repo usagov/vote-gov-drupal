@@ -11,17 +11,29 @@
 }
 
 .identifier-links {
-  @include at-media('tablet') {
-    column-count: 4;
+  column-gap: 24px;
+
+  @include at-media-max('mobile-lg') {
+    column-count: 1;
+    text-align: center;
   }
 
-  @include at-media-max('tablet') {
+  @include at-media('mobile-lg') {
     column-count: 2;
+  }
+
+  @include at-media('tablet') {
+    column-count: 3;
+  }
+
+  @include at-media('tablet-lg') {
+    column-count: 4;
+    column-gap: 32px;
   }
 
   li {
     @include at-media-max('tablet') {
-      @include u-padding-top(2);//check
+      @include u-padding-top(2);
     }
 
     @include at-media('tablet') {

@@ -8,7 +8,6 @@
   .grid-container {
     @include at-media('tablet') {
       @include u-display('flex');
-      @include u-padding(4);
     }
   }
 }
