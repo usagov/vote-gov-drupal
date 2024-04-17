@@ -31,9 +31,9 @@
 .usa-language__submenu {
   @include u-padding(2.5);
   @include u-width('auto');
-  @include u-radius('sm');
   @include u-text('no-wrap');
   background-color: $base-dark;
+  border-radius: 2px 0 2px 2px;
 
   @include at-media-max('tablet') {
     overflow: auto;
@@ -63,4 +63,5 @@
 
 .usa-button.usa-language__link:focus {
   border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
