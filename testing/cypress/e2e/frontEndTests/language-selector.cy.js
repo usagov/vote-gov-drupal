@@ -10,7 +10,7 @@ describe('Test language selector', () => {
     cy.visit({
       url: page.route,
     })
-      cy.get('[data-test="language-button"]').click().get('[data-test="language-switcher"]').should('be.visible').then(selection => {
+      cy.get('[data-test="languageButton"]').click().get('[data-test="languageSwitcher"]').should('be.visible').then(selection => {
         cy.get(selection).get('[ data-test="langItem"]').each(li => {
             cy.get(li).find('a').each(link => {
               cy.request({

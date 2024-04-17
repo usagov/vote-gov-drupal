@@ -25,6 +25,8 @@
 
   @include at-media-max('tablet') {
     @include u-maxw('mobile');
+    @include u-width('full');
+    @include u-margin-x('auto');
   }
 }
 
@@ -55,11 +57,6 @@
   @include u-border(0);
 }
 
-.language-selector {
-  @include at-media('tablet') {
-    position: absolute;
-  }
-}
 
 .usa-button.usa-language__link:focus {
   border-bottom-right-radius: 0;

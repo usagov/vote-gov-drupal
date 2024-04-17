@@ -1,49 +1,46 @@
 <div class="usa-identifier">
-  <div class="grid-container">
-    <div class="grid-row">
+  <div class="usa-identifier__container">
+    <div class="grid-row grid-gap">
       {#Column 1 divider - USA Logo#}
       <section
-        class="usa-identifier__section usa-identifier__section--masthead"
+        class="usa-identifier__section--masthead"
         aria-label={{"Agency identifier," | t }}
       >
-        <div class="usa-identifier__container">
-          <section
-            class="usa-identifier__identity usa-identifier__section"
-            aria-label={{"Agency description," | t }}
-          >
+        <section
+          class="usa-identifier__identity"
+          aria-label={{"Agency description," | t }}
+        >
+          <div class="heading--red-underline">
             <a href="https://www.usa.gov/" class="usa-identifier__logo">
-            <img
+              <img
                 class="usa-identifier__logo-img"
                 src="{{ theme_path }}/img/USA_GOV_Logo.svg"
                 alt={{"USA.gov logo" | t }}
                 role="img"
               /></a>
-            <div class="usa-identifier__identity-disclaimer">
-              <p>{{"Visit our partner site to find more information about voting in the United States." | t }}</p>
-            </div>
-          </section>
-        </div>
+          </div>
+          <div class="usa-identifier__identity-disclaimer">
+            <p>{{"Visit our partner site to find more information about voting in the United States." | t }}</p>
+          </div>
+        </section>
       </section>
 
       {#Column 2 Divider - USA Links and Email block #}
-      <div>
-        <section
-          class="usa-identifier__section usa-identifier__section--usagov"
-          aria-label={{"U.S. government information and services," | t }}
+      <section
+        class="usa-identifier__section--usagov"
+        aria-label={{ "U.S. government information and services," | t }}
+      >
+        <nav
+          aria-label={{ "Important links," | t }}
         >
-          <nav
-            aria-label={{"Important links," | t }}
-          >
-            <div class="usa-identifier__container">
-              {# USA.gov election info links#}
-              {{ drupal_entity('block_content', '18') }}
-            </div>
-          </nav>
-        </section>
+            {# USA.gov election info links #}
+            {{ drupal_entity('block_content', '18') }}
+        </nav>
+
         <hr>
-         {# Email sign-up component. #}
+        {# Email sign-up component. #}
         {{ drupal_entity('block_content', 4) }}
-      </div>
+      </section>
     </div>
   </div>
 </div>
