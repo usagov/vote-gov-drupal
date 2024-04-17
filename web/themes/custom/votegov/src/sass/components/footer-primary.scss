@@ -28,10 +28,11 @@
       @include u-padding-top('205');
     }
 
-    a {
+    a, a:visited {
       @include vote-link;
       word-break: break-word;
       font-size: 16px;
+      color: $base-dark !important;
     }
   }
 }
