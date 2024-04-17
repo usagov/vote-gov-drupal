@@ -32,13 +32,13 @@
 
     for (let i = 0; i < stateFilteredOptions.length; i++) {
       let li = stateFilteredOptions[i].parentNode;
-      txtValue = li.textContent.trim() || li.innerText.trim();
+      txtValue = li.textContent.trim() || li.innerText;
       wordTxtValues = txtValue.split(' ');
       keyValue = li.firstElementChild.getAttribute('key');
 
       // Match user input with the start of the state name or state abbrev.
       if (wordTxtValues.some((elem) => elem.length > 2 && elem.toUpperCase().startsWith(filter))
-        || (filter.length === 2 && keyValue.toUpperCase() === filter)) {
+        || (filter.length === 2 && keyValue.toUpperCase() === filter) || txtValue.match(RegExp('^' + filter, 'i'))) {
         li.removeAttribute('hidden');
         stateListResults.push(stateFilteredOptions[i]);
       } else {
