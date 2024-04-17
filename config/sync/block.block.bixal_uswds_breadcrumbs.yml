@@ -1,0 +1,32 @@
+uuid: 9d925d66-c067-4f97-b040-543c96e23916
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - system
+  theme:
+    - bixal_uswds
+_core:
+  default_config_hash: W00dRxBD1MUkvdrG5GCp5ucRMano3bszsmhxU8gkn4E
+id: bixal_uswds_breadcrumbs
+theme: bixal_uswds
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article
+      bx_update: bx_update
+      page: page

@@ -1,0 +1,169 @@
+{#
+/**
+* @file
+*  Bixal USWDS Theme override to display a node.
+*
+* Available variables:
+* - node: The node entity with limited access to object properties and methods.
+* Only method names starting with "get", "has", or "is" and a few common
+* methods such as "id", "label", and "bundle" are available. For example:
+* - node.getCreatedTime() will return the node creation timestamp.
+* - node.hasField('field_example') returns TRUE if the node bundle includes
+* field_example. (This does not indicate the presence of a value in this
+* field.)
+* - node.isPublished() will return whether the node is published or not.
+* Calling other methods, such as node.delete(), will result in an exception.
+* See \Drupal\node\Entity\Node for a full list of public properties and
+* methods for the node object.
+* - label: (optional) The title of the node.
+* - content: All node items. Use {{ content }} to print them all,
+* or print a subset such as {{ content.field_example }}. Use
+* {{ content|without('field_example') }} to temporarily suppress the printing
+* of a given child element.
+* - author_picture: The node author user entity, rendered using the "compact"
+* view mode.
+* - metadata: Metadata for this node.
+* - date: (optional) Themed creation date field.
+* - author_name: (optional) Themed author name field.
+* - url: Direct URL of the current node.
+* - display_submitted: Whether submission information should be displayed.
+* - attributes: HTML attributes for the containing element.
+* The attributes.class element may contain one or more of the following
+* classes:
+* - node: The current template type (also known as a "theming hook").
+* - node--type-[type]: The current node type. For example, if the node is an
+* "Article" it would result in "node--type-article". Note that the machine
+* name will often be in a short form of the human readable label.
+* - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+* teaser would result in: "node--view-mode-teaser", and
+* full: "node--view-mode-full".
+* The following are controlled through the node publishing options.
+* - node--promoted: Appears on nodes promoted to the front page.
+* - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+* teaser listings.
+* - node--unpublished: Appears on unpublished nodes visible only to site
+* admins.
+* - title_attributes: Same as attributes, except applied to the main title
+* tag that appears in the template.
+* - content_attributes: Same as attributes, except applied to the main
+* content tag that appears in the template.
+* - author_attributes: Same as attributes, except applied to the author of
+* the node tag that appears in the template.
+* - title_prefix: Additional output populated by modules, intended to be
+* displayed in front of the main title tag that appears in the template.
+* - title_suffix: Additional output populated by modules, intended to be
+* displayed after the main title tag that appears in the template.
+* - view_mode: View mode; for example, "teaser" or "full".
+* - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+* - page: Flag for the full page state. Will be true if view_mode is 'full'.
+* - readmore: Flag for more state. Will be true if the teaser content of the
+* node cannot hold the main body content.
+* - logged_in: Flag for authenticated user status. Will be true when the
+* current user is a logged-in member.
+* - is_admin: Flag for admin user status. Will be true when the current user
+* is an administrator.
+*
+* @see template_preprocess_node()
+*
+*/
+#}
+
+{# set the post date in a nice format. #}
+{% set post_date = elements["#node"].created.getString() | date('U') | format_date('custom', 'F j, Y') %}
+{% set post_date_month = elements["#node"].created.getString() | date('U') | format_date('custom', 'M') %}
+{% set post_date_day = elements["#node"].created.getString() | date('U') | format_date('custom', 'd') %}
+{% set date_time = post_date| date('U') | format_date('custom', 'Y-m-d\\TH:i:sP') %}
+
+{% set media_uri = elements.field_bx_featured_image.0["#media"].field_media_image.entity.uri.getString() %}
+{% set media_alt = elements.field_bx_featured_image.0["#media"].field_media_image.0.alt %}
+
+{% if is_headings_only == true and content.field_bx_external_link | render %}
+  {% set title_url = content.field_bx_external_link.0["#url_title"] %}
+  {% set external_rel = 'noopener noreferrer' %}
+  {% set external_target = 'target=_blank' %}
+   {% else %}
+     {% set external_rel = 'bookmark' %}
+  {% set title_url = url %}
+{% endif %}
+
+{% set classes = [
+  'usa-collection__item',
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+] %}
+
+<li{{ attributes.addClass(classes).removeAttribute('role').setAttribute('role', 'listitem') }}>
+
+  {% if is_calendar_display == true %}
+    <div class="usa-collection__calendar-date">
+      <time datetime="{{ date_time }}">
+        <span class="usa-collection__calendar-date-month text-uppercase">{{ post_date_month }}</span>
+        <span class="usa-collection__calendar-date-day">{{ post_date_day }}</span>
+      </time>
+    </div>
+  {% endif %}
+
+  {% if is_media_thumbnail == true %}
+    {{ drupal_image( media_uri, 'medium',  { loading: 'lazy', alt: media_alt, title: media_alt, class: 'usa-collection__img'}) }}
+  {% endif %}
+
+  <div{{ content_attributes.addClass('node__content usa-collection__body clearfix') }}>
+
+    {{ title_prefix }}
+    {% if label and not page %}
+      <h2{{ title_attributes.addClass('usa-collection__heading') }}>
+        <a class="usa-link" href="{{ title_url }}" rel="{{ external_rel }}" {{ external_target }}>{{ label | field_value }}
+          {% if is_headings_only == true and content.field_bx_external_link | render %}
+            <svg class="usa-icon position-relative top-6" aria-hidden="true" role="img">
+              <use xlink:href="/{{ directory }}/dist/assets/img/sprite.svg#launch"></use>
+            </svg>
+          {% endif %}
+        </a>
+      </h2>
+    {% endif %}
+    {{ title_suffix }}
+
+    {% if is_headings_only == true and content.field_bx_external_link | render %}
+      <ul class="usa-collection__meta" aria-label="{{ "More information" | t }}">
+        <li class="usa-collection__meta-item position-relative">
+          <svg class="usa-icon position-relative bottom-neg-2px" aria-hidden="true" role="img">
+            <use xlink:href="/{{ directory }}/dist/assets/img/sprite.svg#public"></use>
+          </svg>
+          {{ content.field_bx_external_link.0["#title"] }}
+        </li>
+      </ul>
+    {% endif %}
+
+    {% if is_headings_only == false or is_calendar_display == true %}
+      <p class="usa-collection__description">
+        {{ content.field_bx_teaser | field_value }}
+      </p>
+    {% endif %}
+
+    {% if is_headings_only == false and is_calendar_display == false %}
+      <ul class="usa-collection__meta" aria-label="More information">
+        <li class="usa-collection__meta-item">
+          {% trans %}by {{ author_name }} {% endtrans %}
+        </li>
+        <li class="usa-collection__meta-item">
+          <time datetime="{{ date_time }}">{{ post_date }}</time>
+        </li>
+      </ul>
+    {% endif %}
+
+    {% if content.field_bx_tags | render %}
+      {% if is_headings_only == false and is_calendar_display == false %}
+        <ul class="usa-collection__meta" aria-label="{{ "Collection Tags" | t }}">
+          {% for item in content.field_bx_tags |  children(true) %}
+            <li class="usa-collection__meta-item usa-tag">{{ item["#plain_text"] }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endif %}
+
+  </div>
+</li>
