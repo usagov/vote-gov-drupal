@@ -96,3 +96,10 @@
   background-color: $base-white;
   font-family: $theme-font-type-sans;
 }
+
+@mixin vote-fill {
+  @include u-top(0);
+  @include u-bottom(0);
+  @include u-left(0);
+  @include u-right(0);
+}
