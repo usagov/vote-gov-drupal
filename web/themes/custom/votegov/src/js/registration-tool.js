@@ -36,9 +36,9 @@
       wordTxtValues = txtValue.split(' ');
       keyValue = li.firstElementChild.getAttribute('key');
 
-      // Match user input with the start of the state name or state abbrev.
+      // Match user input with the start of the state name, state abbrev or full state name.
       if (wordTxtValues.some((elem) => elem.length > 2 && elem.toUpperCase().startsWith(filter))
-        || (filter.length === 2 && keyValue.toUpperCase() === filter)) {
+        || (filter.length === 2 && keyValue.toUpperCase() === filter) || txtValue.match(RegExp('^' + filter, 'i'))) {
         li.removeAttribute('hidden');
         stateListResults.push(stateFilteredOptions[i]);
       } else {
