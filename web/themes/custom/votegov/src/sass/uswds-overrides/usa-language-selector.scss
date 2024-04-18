@@ -34,9 +34,7 @@
   @include u-padding(2.5);
   @include u-width('auto');
   @include u-text('no-wrap');
-  @include u-radius('sm');
   background-color: $base-dark;
-  // border-radius: 2px 0 2px 2px;
 
   @include at-media-max('tablet') {
     overflow: auto;
