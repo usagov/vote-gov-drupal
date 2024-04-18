@@ -62,9 +62,14 @@
         }
 
         .usa-nav__submenu {
+          width: fit-content;
+
           .usa-nav__submenu-list {
             .usa-nav__submenu-item {
-              a {
+              a, span {
+                display: block;
+                width: 100%;
+                text-wrap: nowrap;
                 padding: 8px 16px 8px;
               }
             }
@@ -127,18 +132,20 @@
         @include u-padding-y(2)
       }
 
-      .usa-nav__submenu-item a {
-        font-size: 16px;
-        color: $base-dark;
-        text-decoration: none;
-        @include u-padding-x(2);
-        @include u-border(0);
-
-        &:hover,
-        &:focus {
-          background-color: $base-primary;
-          color: $base-white;
+      .usa-nav__submenu-item {
+        a, span {
+          font-size: 16px;
+          color: $base-dark;
           text-decoration: none;
+          @include u-padding-x(2);
+          @include u-border(0);
+
+          &:hover,
+          &:focus {
+            background-color: $base-primary;
+            color: $base-white;
+            text-decoration: none;
+          }
         }
       }
     }
