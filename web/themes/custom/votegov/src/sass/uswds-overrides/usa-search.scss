@@ -13,8 +13,8 @@
   form {
     &:focus-within {
       .usa-input {
-        background-position: 2% 40%;
-        background-color: $bg-light;
+        background-position: 5% 45%;
+        background-color: $bg-light-cool;
         border-color: $base-primary;
         -webkit-transition: width .3s ease-in-out;
         -moz-transition: width .3s ease-in-out;
@@ -22,22 +22,26 @@
         transition: width .3s ease-in-out;
         @include u-width('tablet');
         @include u-border(2px);
+
+        &::placeholder {
+          color: $base-dark;
+        }
       }
 
       .usa-button--search {
         display: block;
-        background-color: $bg-light;
+        background-color: $bg-light-cool;
         border-color: $base-primary;
         @include u-border(2px);
         @include u-border-left(0);
       }
 
-      &:hover .usa-input, &:hover .search-icon {
-        background-color: $bg-light;
+      &:hover .usa-input {
+        background-color: $bg-light-cool;
       }
     }
 
-    &:hover .usa-input, &:hover .search-icon {
+    &:hover .usa-input {
       background-color: $bg-light-cool;
     }
 
@@ -47,17 +51,17 @@
     }
 
     .usa-input {
+      background-color: $bg-light-cool;
       background-image: url( '../../../votegov/img/svg/search.svg' );
-      background-position: 15% 40%;
+      background-position: 50% 50%;
       background-repeat: no-repeat;
       overflow: visible;
       background-color: $bg-light;
       text-indent: 40px;
-
-      @include u-radius('lg');
-      @include u-border('transparent');
+      border: 1px solid $bg-light-medium;
+      border-radius: 16px;
       height: 48px;
-      @include u-width(15);
+      width: 48px;
 
       @include at-media-max('tablet-lg') {
         background-position: 2% 40%;
@@ -68,7 +72,7 @@
 
     .usa-input::placeholder {
       font-size: 17px;
-      color: $base-dark;
+      color: transparent;
       opacity: 1;
     }
 
