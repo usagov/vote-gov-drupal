@@ -60,9 +60,10 @@ We call a macro which calls itself to render the full tree.
                 class="usa-nav__submenu"
                 hidden
               >
-                <div class="usa-nav__submenu-parent-link">{{ link(item.title, item.url) }}</div>
+              <ul class="usa-nav__submenu-list" data-test="subMenu">
+                <li class="usa-nav__submenu-item">{{ link(item.title, item.url) }}</li>
                 {{ menus.menu_links(item.below, attributes, menu_level + 1, aria_id) }}
-              </div>
+              
             {% else %}
               {% if item.url.routeName != '<nolink>' %}
                 {{ link(item.title, item.url) }}
@@ -81,7 +82,7 @@ We call a macro which calls itself to render the full tree.
       </ul>
     {# Secondary level menu structure. #}
     {% elseif menu_level == 1 %}
-      <ul class="usa-nav__submenu-list" data-test="subMenu">
+      {# <ul class="usa-nav__submenu-list" data-test="subMenu"> #}
         {% for item in items %}
           <li class="usa-nav__submenu-item">
             {{ link(item.title, item.url) }}
@@ -91,6 +92,7 @@ We call a macro which calls itself to render the full tree.
           </li>
         {% endfor %}
       </ul>
+    </div>
     {% endif %}
   {% endif %}
 {% endmacro %}
