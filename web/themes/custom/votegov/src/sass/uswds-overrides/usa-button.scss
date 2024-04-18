@@ -18,9 +18,12 @@
   }
 
   &:hover,
-  &:focus,
   &.usa-focus,
   &.usa-button--hover {
+    background-color: $base-primary-hover;
+  }
+
+  &:focus {
     background-color: $base-primary-hover;
     outline: .25rem solid $base-primary-hover;
   }
