@@ -58,7 +58,10 @@
 }
 
 
-.usa-button.usa-language__link:focus {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+.usa-button.usa-language__link {
+  &[aria-expanded="true"]{
+    background-color: $base-dark;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
