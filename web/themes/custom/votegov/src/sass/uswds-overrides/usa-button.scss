@@ -18,8 +18,8 @@
   }
 
   &:hover,
-  &.usa-focus,
   &:focus
+  &.usa-focus,
   &.usa-button--hover {
     background-color: $base-primary-hover;
   }
