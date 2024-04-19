@@ -28,7 +28,7 @@ jobs:
           command: |
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
-            cf run-task ${project}-drupal-${CIRCLE_BRANCH} --command "ENV=${CIRCLE_BRANCH} scripts/upkeep" --name "${project}-${CIRCLE_BRANCH}-upkeep"  -k "2G" -m 512M
+            cf run-task ${project}-drupal-${CIRCLE_BRANCH} --command "ENV=${CIRCLE_BRANCH} scripts/upkeep" --name "${project}-${CIRCLE_BRANCH}-upkeep"  -k "2G" -m 1024M
   build-theme:
     docker:
       - image: node:20-slim
