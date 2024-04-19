@@ -50,6 +50,12 @@
   }
 }
 
+@mixin vote-block-item-margin-y {
+  > * + * {
+    @include u-margin-top(2);
+  }
+}
+
 @mixin hover {
   &:hover,
   &:focus {
