@@ -38,6 +38,7 @@ dependencies:
     - field.field.node.state_territory.field_registration_link
     - field.field.node.state_territory.field_registration_type
     - field.field.node.state_territory.field_state_abbreviation
+    - field.field.node.state_territory.field_updated_date
     - node.type.state_territory
   module:
     - datetime
@@ -369,6 +370,15 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_updated_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 38
     region: content
   links:
     settings: {  }

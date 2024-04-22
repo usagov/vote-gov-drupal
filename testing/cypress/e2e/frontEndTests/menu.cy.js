@@ -21,7 +21,7 @@ describe('Check main menu', () => {
       cy.get(li[1]).click()
       cy.get('[data-test="subMenu"]').should('be.visible')
     })
-    cy.get('[data-test="search-box"]').should('be.visible')
+    cy.get('[data-test="searchBox"]').should('be.visible')
     // close menu
     cy.get('[data-test="closeBtn"]').click()
     cy.get('[data-test="mobileNav"]').should('not.be.visible')
