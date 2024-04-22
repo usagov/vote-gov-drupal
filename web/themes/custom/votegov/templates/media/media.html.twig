@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Theme override to display a media item.
+ *
+ * Available variables:
+ * - media: The media item, with limited access to object properties and
+ *   methods.
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% set classes = [
+  'vote-media',
+  'vote-media--' ~ media.bundle()|clean_class,
+  not media.isPublished() ? 'vote-media--unpublished',
+  view_mode ? 'vote-media--' ~ view_mode|clean_class,
+] %}
+
+{% block content %}
+  <div{{ attributes.addClass(classes) }}>
+    {{ content }}
+  </div>
+{% endblock %}
