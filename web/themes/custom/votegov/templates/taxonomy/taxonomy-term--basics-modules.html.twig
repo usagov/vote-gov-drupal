@@ -4,8 +4,8 @@
  * Default theme implementation to display a taxonomy term: Basics Modules.
  */
 #}
-{% set heading_level = '2' %}
 {% extends '@bixaluswds/taxonomy/taxonomy-term.html.twig' %}
+{% set heading_level = term._referringItem.parent.parent.entity.field_heading.value ? '3' : '2' %}
 
 {% block content %}
   <h{{heading_level}} class="heading--red-underline">{{ content.field_heading | field_value }}</h{{heading_level}}>
