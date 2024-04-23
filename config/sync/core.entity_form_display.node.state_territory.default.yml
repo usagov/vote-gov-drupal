@@ -38,6 +38,7 @@ dependencies:
     - field.field.node.state_territory.field_registration_link
     - field.field.node.state_territory.field_registration_type
     - field.field.node.state_territory.field_state_abbreviation
+    - field.field.node.state_territory.field_updated_date
     - node.type.state_territory
     - workflows.workflow.publishing_content
   module:
@@ -496,6 +497,12 @@ content:
     settings:
       size: 2
       placeholder: ''
+    third_party_settings: {  }
+  field_updated_date:
+    type: datetime_default
+    weight: 26
+    region: content
+    settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select

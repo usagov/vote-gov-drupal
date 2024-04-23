@@ -1,35 +1,20 @@
 {#
 /**
  * @file
- * Theme override to display a media item.
- *
- * Available variables:
- * - media: The media item, with limited access to object properties and
- *   methods.
- * - name: Name of the media.
- * - content: Media content.
- *
- * @see template_preprocess_media()
- *
- * @ingroup themeable
+ * Theme override to display a media item: image.
  */
 #}
 
-{% set classes = [
-  'media',
-  'media--type--' ~ media.bundle()|clean_class,
-  not media.isPublished() ? 'media--unpublished',
-  view_mode ? 'media--view-mode-' ~ view_mode|clean_class,
-] %}
+{% extends 'media.html.twig' %}
 
-<figure{{ attributes.addClass(classes) }}>
-  {{ title_suffix.contextual_links }}
+{% block content %}
+  <figure{{ attributes.addClass(classes) }}>
+    {{ content.field_media_image | field_value }}
 
-  {{ content.field_media_image | field_value }}
-
-  {% if content.field_caption | render %}
-    <figcaption>
-      {{ content.field_caption | field_value }}
-    </figcaption>
-  {% endif %}
-</figure>
+    {% if content.field_caption | render %}
+      <figcaption class="vote-caption">
+        {{ content.field_caption | field_value }}
+      </figcaption>
+    {% endif %}
+  </figure>
+{% endblock %}

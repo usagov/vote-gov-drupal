@@ -25,6 +25,8 @@
 
   @include at-media-max('tablet') {
     @include u-maxw('mobile');
+    @include u-width('full');
+    @include u-margin-x('auto');
   }
 }
 
@@ -33,6 +35,7 @@
   @include u-width('auto');
   @include u-radius('sm');
   @include u-text('no-wrap');
+  background-color: $base-dark;
 
   @include at-media-max('tablet') {
     overflow: auto;
@@ -54,8 +57,11 @@
   @include u-border(0);
 }
 
-.language-selector {
-  @include at-media('tablet') {
-    position: absolute;
+
+.usa-button.usa-language__link {
+  &[aria-expanded="true"]{
+    background-color: $base-dark;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
   }
 }
