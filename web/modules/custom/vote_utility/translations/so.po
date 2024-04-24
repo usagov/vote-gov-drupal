@@ -1,0 +1,294 @@
+# Somali translation of Vote.gov
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Vote.gov Utility\\n"
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=utf-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\\n"
+
+# config.languages.languageName
+msgid "Somali"
+msgstr "Soomaali"
+
+# config.languages.params.select_language
+msgid "Select language"
+msgstr "Ka dooro luuqadda"
+
+# config.languages.params.Owner
+msgid "@sitename in language"
+msgstr "@sitename oo af Soomaali ah"
+
+# config.languages.params.go_back
+msgid "Go back"
+msgstr "Dib u laabo"
+
+# config.languages.params.last_updated
+msgid "Last updated:"
+msgstr "waqtiga lala socodsiiyay:"
+
+# config.languages.params.ext_link_title
+msgid "External link opens in new window"
+msgstr "Xiriirka dibadda ayaa furaya daaqad cusub"
+
+# config.languages.params.skip_text
+msgid "Skip to main content"
+msgstr "u gudub dulucda"
+
+# config.languages.params.english_only
+msgid "(in English)"
+msgstr "(oo af Ingiriis ah)"
+
+# data.translations.footer.vote_logo_alt_text
+msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
+msgstr "Sawirka sanduuqa cod-bixinta oo la gelinaayo warqad saxan si loo muujiyo tallaabada cod bixineed"
+
+# data.translations.footer.identifier_gsa_txt
+msgid "An official website of the @link."
+msgstr "Bogga rasmiga ah ee @link."
+
+# data.translations.footer.identifier_gsa_txt__1
+msgid "General Services Administration"
+msgstr "General Services Administration"
+
+# data.translations.footer.identifier_more_info
+msgid "Looking for U.S. government information and services? @link."
+msgstr "Ma waxaad raadineysaa wararka la xiriira xukuumadda Mareykanka iyo adeegyadeeda? @link."
+
+# data.translations.footer.identifier_more_info__1
+msgid "Visit USA.gov"
+msgstr Booqo USA.gov"
+
+# data.translations.footer.identifier_aria
+msgid "Agency identifier"
+msgstr "Far-ku-fiiqaha (tilmaamaha) wakaaladda"
+
+# data.translations.footer.identifier_gsa_txt_aria
+msgid "Agency description"
+msgstr "Qeexitaan wakaalad"
+
+# data.translations.footer.identifier_link_aria
+msgid "Important links"
+msgstr "xiriiro muhiim ah"
+
+# data.translations.footer.identifier_more_info_aria
+msgid "Government information and services"
+msgstr "Wararka la xiriira doowladda iyo adeegyadeeda"
+
+# data.translations.footer.eac_text
+msgid "in partnership with"
+msgstr "Iyadoo lala kaashanaayo"
+
+# data.translations.footer.eac_logo_alt_text
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
+msgstr "Astaanta Guddiga Kaalmada Doorashada Mareykanka oo tilmaamaysa iskaashi lala yeesho Vote.gov"
+
+# data.translations.footer.twitter_text
+msgid "Follow Vote.gov on Twitter"
+msgstr "Raac Vote.gov oo kala soco barta Twitter ka"
+
+# data.translations.footer.section_sign_up
+msgid "Email sign-up"
+msgstr "Isdiiwaangelinta iimaylka"
+
+# data.translations.footer.section_contact
+msgid "Contact"
+msgstr "xiriir"
+
+# data.translations.footer.gsa_logo_alt
+msgid "GSA logo"
+msgstr "Astaanta GSA"
+
+# data.translations.homepage.search_placeholder
+msgid "Search Vote.gov"
+msgstr "Baar Vote.gov"
+
+# data.translations.homepage.section_banner
+msgid "Official government website"
+msgstr "Bogga rasmiga ah ee dawladda"
+
+# data.translations.register.heading
+msgid "Register to vote in @state_name"
+msgstr "Is diiwaan geli si aad uga codeyso @state_name"
+
+# data.translations.register.heading2 (state phrase updates)
+msgid "How to register to vote"
+msgstr "Sida la isugu diiwaan geliyo si’ loo codeeyo"
+
+# data.translations.register.other_language_selection__heading (state phrase updates)
+msgid "Other ways to register to vote"
+msgstr "Siyaabo kale oo la isu diwaangeliyo si loo codeeyo."
+
+msgid "Voter registration deadlines for the @election_date election"
+msgstr "Wakhtiyada kama dambaysta ah ee diiwaangelinta codbixiyaha ee doorashada @election_date"
+
+# data.translations.register.dates__bymail_deadline
+msgid "Register by mail deadline:"
+msgstr "Is-diwaangeli wakhtiga kama dambaysta ah ee boostada:"
+
+msgid "Must be postmarked by @date"
+msgstr "Waa in boostadu qabataa @date"
+
+msgid "Must be received by @date"
+msgstr "Waa in la helaa ugu dambayn @date"
+
+# data.translations.register.dates__byonline_deadline
+msgid "Online registration deadline:"
+msgstr "Is diiwaangelinta online-ka ee kama dambaysta ah:"
+
+# data.translations.register.dates__inperson_deadline
+msgid "In person registration deadline:"
+msgstr "Isdiiwaangelinta qof-ahaaneed ee kama dambaysta ah:"
+
+# data.translations.register.dates__heading (state phrase updates)
+msgid "Voter registration deadlines"
+msgstr "Wakhtiyada kama dambaysta ah ee diiwaangelinta codbixiyayaasha"
+
+# data.translations.register.confirm_registration__heading
+msgid "How to check your voter registration"
+msgstr "Sida loo hubiyo isdiiwaangelintaada cod-bixiyaha"
+
+# data.translations.register.confirm_registration__intro_WY
+msgid "You can confirm your voter registration status by contacting your local registration office. @link."
+msgstr "Waxaad ka xaqiijin kartaa halka uu maraayo diiwaangelinta codbixintaada adiga oo la xiriiraya xafiiska diiwaangelinta ee degaankaaga. @link."
+
+# @link: data.translations.register.confirm_registration__link_WY
+msgid "Click here to view Wyoming's county clerk contact information (PDF)"
+msgstr "Riix halkan si aad u daawato macluumaadka xiriirka karraaniga degmada Wyoming (PDF)"
+
+# data.translations.register.confirm_registration__intro (see accessibility updates)
+msgid "You can @link on @state_name’s election website."
+msgstr "Waxaad @link bogga doorashada gobolka @state_name."
+
+# @link: data.translations.register.confirm_registration__intro (see accessibility updates)
+msgid "confirm your voter registration status"
+msgstr "sugi kartaa xaaladda diiwaangelinta codbixintaada"
+
+# data.translations.register.by_mail__intro (see accessibility updates)
+msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
+msgstr "Diiwaangelinta onlaynka hadda lama heli karo. @link si aad uga codayso bogga gobolka @state_name."
+
+# @link: data.translations.register.by_mail__intro (see accessibility updates)
+msgid "Find out ways to register"
+msgstr "Soo ogow siyaabo la isu diwaangeliyo"
+
+# data.translations.register.in_person__intro (see accessibility updates)
+msgid "Register in person at your local election office. @link on @state_name’s election website."
+msgstr "Toos isaga diiwaan geli xafiiska maxalliga ah ee doorashada deegaankaaga. @link bogga doorashada gobolka @state_name."
+
+# @link: data.translations.register.in_person__intro (see accessibility updates)
+msgid "Learn more about how to register"
+msgstr "Ka baro wax dheeraad ah oo ku saabsan sida la isaga diiwaan geliyo"
+
+# data.translations.register.not_needed__intro (see accessibility updates)
+msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
+msgstr "Diiwaangelinta codbixiyaha looma baahna @state_name. @link bogga doorashada gobolka @state_name."
+
+# @link: data.translations.register.not_needed__intro (see accessibility updates)
+msgid "Learn more about voting"
+msgstr "Wax dheeraad ah ka baro xagga cod bixinta"
+
+# data.translations.register.online__answer1 (see accessibility updates)
+msgid "@link on @state_name’s election website."
+msgstr "@link bogga doorashada gobolka @state_name."
+
+# @link: data.translations.register.online__answer1 (see accessibility updates)
+msgid "Start your online registration"
+msgstr "Bilow is diiwaangelintaada onlyanka ah"
+
+# data.translations.register.online__answer2 (see accessibility updates)
+msgid "You can also @link on @state_name’s election website."
+msgstr "Waxaad sidoo kale @link bogga doorashada gobolka @state_name."
+
+# @link: data.translations.register.online__answer2 (see accessibility updates)
+msgid "register to vote by mail or in person"
+msgstr "isku diiwaangelin kartaa inaad ku codayso boostada ama qof ahaan"
+
+# data.translations.months.january
+msgctxt "Long month name"
+msgid "January"
+msgstr "Jannaayo"
+
+# data.translations.months.february
+msgctxt "Long month name"
+msgid "February"
+msgstr "Febraayo"
+
+# data.translations.months.march
+msgctxt "Long month name"
+msgid "March"
+msgstr "Maarso"
+
+# data.translations.months.april
+msgctxt "Long month name"
+msgid "April"
+msgstr "Abriil"
+
+# data.translations.months.may
+msgctxt "Long month name"
+msgid "May"
+msgstr "Maajo"
+
+# data.translations.months.june
+msgctxt "Long month name"
+msgid "June"
+msgstr "Juunyo"
+
+# data.translations.months.july
+msgctxt "Long month name"
+msgid "July"
+msgstr "Luulyo"
+
+# data.translations.months.august
+msgctxt "Long month name"
+msgid "August"
+msgstr "Agoosto"
+
+# data.translations.months.september
+msgctxt "Long month name"
+msgid "September"
+msgstr "Setembar"
+
+# data.translations.months.october
+msgctxt "Long month name"
+msgid "October"
+msgstr "Oktoobar"
+
+# data.translations.months.november
+msgctxt "Long month name"
+msgid "November"
+msgstr "Nofeembar"
+
+# data.translations.months.december
+msgctxt "Long month name"
+msgid "December"
+msgstr "Disember"
+
+# data.translations.days.monday
+msgid "Monday"
+msgstr "Isniin"
+
+# data.translations.days.tuesday
+msgid "Tuesday"
+msgstr "Talaada"
+
+# data.translations.days.wednesday
+msgid "Wednesday"
+msgstr "Arbaca"
+
+# data.translations.days.thursday
+msgid "Thursday"
+msgstr "Khamiis"
+
+# data.translations.days.friday
+msgid "Friday"
+msgstr "Jimce"
+
+# data.translations.days.saturday
+msgid "Saturday"
+msgstr "Sabti"
+
+# data.translations.days.sunday
+msgid "Sunday"
+msgstr "Axad"
