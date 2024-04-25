@@ -58,7 +58,7 @@ msgstr "Ma waxaad raadineysaa wararka la xiriira xukuumadda Mareykanka iyo adeeg
 
 # data.translations.footer.identifier_more_info__1
 msgid "Visit USA.gov"
-msgstr Booqo USA.gov"
+msgstr "Booqo USA.gov"
 
 # data.translations.footer.identifier_aria
 msgid "Agency identifier"
