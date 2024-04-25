@@ -64,7 +64,7 @@
   }
 }
 
-.basics-block--content {
+.vote-basics-block__content {
   @include u-padding(2.5);
   @include u-margin-top(0);
   background-color: $base-white;

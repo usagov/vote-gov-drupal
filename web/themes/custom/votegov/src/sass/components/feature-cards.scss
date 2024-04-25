@@ -2,26 +2,21 @@
 @use "mixins" as *;
 @use "variables" as *;
 
-.paragraph--type--feature-cards {
+.vote-feature-cards {
   @include vote-block-margin-y();
+  @include grid-container;
 
     .vote-feature-cards__header {
-        max-width: 581px;
-
-        @include at-media('tablet') {
-            @include u-margin-bottom(6);
-        }
-        @include at-media-max('tablet') {
-            @include u-margin-bottom(4);
-        }
-
-        h2 {
+        @include u-margin-bottom(4);
         color: $base-dark;
         font-family: Roboto;
         font-size: 28.83px;
         font-style: normal;
         font-weight: 500;
         line-height: 118%;
+
+        @include at-media('tablet') {
+            @include u-margin-bottom(6);
         }
 
         &::after {

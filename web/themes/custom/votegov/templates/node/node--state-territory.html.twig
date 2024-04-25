@@ -79,7 +79,7 @@
     {{ drupal_entity('block_content', '3') }}
   {% endif %}
 
-  <p class="date--updated">
+  <p class="vote-date--updated">
     {# Striptags and raw filters were added to accomodate Navajo date formats. #}
     {{'Last updated:' | t }} {{ node.revision_timestamp.value | date('U') | format_date('revision_date') | replace(t_numbers[language].numbers | default([])) | striptags('<span>') | raw }}
   </p>

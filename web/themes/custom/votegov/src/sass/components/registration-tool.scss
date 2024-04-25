@@ -274,7 +274,7 @@
                         margin-top: 3rem;
                         max-width: 40rem;
 
-                        &.heading--red-underline:after {
+                        &.vote-heading--red-underline:after {
                             @include u-display('none');
                         }
                     }
