@@ -9,8 +9,6 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
-    bundle_settings:
-      untranslatable_fields_hide: '0'
 id: block_content.nvrf_card
 target_entity_type_id: block_content
 target_bundle: nvrf_card

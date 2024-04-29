@@ -9,8 +9,6 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
-    bundle_settings:
-      untranslatable_fields_hide: '1'
 id: node.voter_guide
 target_entity_type_id: node
 target_bundle: voter_guide
