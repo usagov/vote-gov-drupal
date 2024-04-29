@@ -1,5 +1,6 @@
 @use "uswds-core" as *;
 @use "variables" as *;
+@use "mixins" as *;
 
 .usa-nav {
   @include u-width('full');
@@ -139,22 +140,20 @@
           text-decoration: none;
           @include u-padding-x(2);
           @include u-border(0);
+          @include u-display('block');
+        }
 
-          &:hover,
-          &:focus {
+        span {
+          opacity: 0.6;
+        }
+
+        a {
+          @include hover {
             background-color: $base-primary;
             color: $base-white;
             text-decoration: none;
           }
         }
-      }
-    }
-
-    &__submenu-item {
-      background-color: $bg-light-cool;
-
-      &:hover {
-        background-color: $base-primary;
       }
     }
   }
@@ -195,11 +194,11 @@
           font-weight: 700;
           line-height: 155%;
         }
-      }
 
-      & a:not(.usa-button):not(.usa-current) {
-        color: $base-dark;
-        padding: 16.5px 24px;
+        a:not(.usa-button):not(.usa-current) {
+          color: $base-dark;
+          padding: 16.5px 24px;
+        }
       }
 
       button:hover {
@@ -242,14 +241,22 @@
     }
 
     &__submenu-item {
-      & a:not(.usa-button):not(.usa-current) {
-        font-family: 'Roboto';
-        color: $base-dark;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 155%;
-        text-indent: -23px;
+      .usa-nav__primary & {
+        > span,
+        > a:not(.usa-button):not(.usa-current) {
+          @include u-display('block');
+          font-family: 'Roboto';
+          color: $base-dark;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 155%;
+          padding: 16.5px 24px 16.5px 0;
+        }
+
+        > span {
+          opacity: 0.6;
+        }
       }
     }
 

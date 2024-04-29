@@ -63,7 +63,7 @@ We call a macro which calls itself to render the full tree.
               <ul class="usa-nav__submenu-list" data-test="subMenu">
                 <li class="usa-nav__submenu-item">{{ link(item.title, item.url) }}</li>
                 {{ menus.menu_links(item.below, attributes, menu_level + 1, aria_id) }}
-              
+
             {% else %}
               {% if item.url.routeName != '<nolink>' %}
                 {{ link(item.title, item.url) }}
@@ -85,7 +85,11 @@ We call a macro which calls itself to render the full tree.
       {# <ul class="usa-nav__submenu-list" data-test="subMenu"> #}
         {% for item in items %}
           <li class="usa-nav__submenu-item">
-            {{ link(item.title, item.url) }}
+            {% if item.url.routeName != '<nolink>' %}
+              {{ link(item.title, item.url) }}
+            {% else %}
+              <span>{{ item.title }}</span>
+            {% endif %}
             {% if item.below %}
               {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
             {% endif %}
