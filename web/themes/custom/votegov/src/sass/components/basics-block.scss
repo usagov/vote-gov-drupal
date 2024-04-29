@@ -15,6 +15,13 @@
     @include at-media('tablet') {
       @include grid-container();
     }
+
+    > * {
+      @include at-media('desktop') {
+        @include grid-col(7);
+        @include grid-offset(1);
+      }
+    }
   }
 
   + .vote-basics-block {
@@ -24,43 +31,31 @@
   }
 }
 
-.vote-basics-block__container {
-  .vote-type-landing & {
-    @include at-media('desktop') {
-      @include grid-col(7);
-      @include grid-offset(1);
-    }
-  }
-}
+.vote-basics-block__heading {
+  @include u-padding(8);
+  @include u-font-size('serif', 11);
+  @include u-radius-top('md');
+  @include u-text-align('center');
+  @include u-position('relative');
+  background-color: $ac-cool;
+  color: $base-white;
 
-.vote-basics-block__heading-container {
-  h2 {
-    @include u-padding(8);
-    @include u-font-size('serif', 11);
-    @include u-radius-top('md');
-    @include u-text-align('center');
+  span {
     @include u-position('relative');
+  }
+
+  @include before {
+    @include u-radius-top('md');
+    @include u-position('absolute');
+    @include u-display('block');
+    @include vote-fill;
+    background: url(../../../votegov/img/fpo_hero.webp);
+    background-size: cover;
     background-color: $ac-cool;
-    color: $base-white;
-
-    span {
-      @include u-position('relative');
-    }
-
-    &::before {
-      @include u-radius-top('md');
-      @include u-position('absolute');
-      @include u-display('block');
-      @include vote-fill;
-      content: '';
-      background: url(../../../votegov/img/fpo_hero.webp);
-      background-size: cover;
-      background-color: $ac-cool;
-      background-repeat: no-repeat;
-      background-position: center center;
-      mix-blend-mode: multiply;
-      opacity: 40%
-    }
+    background-repeat: no-repeat;
+    background-position: center center;
+    mix-blend-mode: multiply;
+    opacity: 0.4;
   }
 }
 

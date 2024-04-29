@@ -6,28 +6,27 @@
   @include vote-block-margin-y();
   @include grid-container;
 
-    .vote-feature-cards__header {
-        @include u-margin-bottom(4);
-        color: $base-dark;
-        font-family: Roboto;
-        font-size: 28.83px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 118%;
+  .vote-feature-cards__header {
+    @include u-margin-bottom(4);
+    color: $base-dark;
+    font-family: Roboto;
+    font-size: 28.83px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 118%;
 
-        @include at-media('tablet') {
-            @include u-margin-bottom(6);
-        }
-
-        &::after {
-            content: "";
-            width: 96px;
-            @include u-height('05');
-            @include u-display('block');
-            background: $ac-warm;
-            @include u-margin-y(2);
-        }
+    @include at-media('tablet') {
+      @include u-margin-bottom(6);
     }
 
+    &::after {
+      content: "";
+      width: 96px;
+      @include u-height('05');
+      @include u-display('block');
+      background: $ac-warm;
+      @include u-margin-y(2);
+    }
+  }
 }
 

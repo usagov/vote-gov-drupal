@@ -16,20 +16,20 @@ figcaption {
 }
 
 // Video
-Video,
+video,
 .vote-media--remote-video__container iframe {
+  @include u-height('auto');
+  @include u-width('full');
   aspect-ratio: 16 / 9;
-  width: 100%;
-  height: auto;
 }
 
 // Image
 img {
-  max-width: 100%;
-  height: auto;
+  @include u-maxw('full');
+  @include u-height('auto');
 
-  figure.media--type--image & {
-    display: block;
+  figure.media--type-image & {
+    @include u-display('block');
     background-color: $bg-light-cool;
   }
 }
