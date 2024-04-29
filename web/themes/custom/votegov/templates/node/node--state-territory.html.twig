@@ -79,8 +79,12 @@
     {{ drupal_entity('block_content', '3') }}
   {% endif %}
 
+  {# Checking if updated date is set and then render the field #}
+  {% if content.field_updated_date | field_value is not empty %}
   <p class="vote-date--updated">
     {# Striptags and raw filters were added to accomodate Navajo date formats. #}
-    {{'Last updated:' | t }} {{ node.revision_timestamp.value | date('U') | format_date('revision_date') | replace(t_numbers[language].numbers | default([])) | striptags('<span>') | raw }}
+    {{'Last updated:' | t }} {{ content.field_updated_date | render | replace(t_numbers[language].numbers | default([])) | striptags('<span>') | raw }}
   </p>
+  {% endif %}
+
 </article>

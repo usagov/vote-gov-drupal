@@ -6,6 +6,10 @@
 #}
 
 {% extends '@bixaluswds/taxonomy/taxonomy-term.html.twig' %}
+{% set anchor = content.field_anchor_id | field_value | render | clean_class %}
+{% if anchor %}
+  {% set attributes = attributes.setAttribute('id', anchor) %}
+{% endif %}
 
 {% block content %}
   <h3 class="vote-heading--red-underline">{{ content.field_heading | field_value }}</h3>

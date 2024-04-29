@@ -26,7 +26,7 @@
 
 .vote-basics-block__container {
   .vote-type-landing & {
-    @include at-media('tablet') {
+    @include at-media('desktop') {
       @include grid-col(7);
       @include grid-offset(1);
     }
