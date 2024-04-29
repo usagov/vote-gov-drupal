@@ -1,18 +1,18 @@
-uuid: c8016aab-ef3b-489d-ba1b-dfdeadddac48
+uuid: 1379cc80-e10f-43bd-b77b-8108cd1228be
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.nvrf_a_b_message
+    - paragraphs.paragraphs_type.hero
   module:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: true
+    enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: block_content.nvrf_a_b_message
-target_entity_type_id: block_content
-target_bundle: nvrf_a_b_message
+id: paragraph.hero
+target_entity_type_id: paragraph
+target_bundle: hero
 default_langcode: site_default
 language_alterable: false
