@@ -1,27 +1,26 @@
-uuid: 48ce8da4-df22-436e-8e0a-46d78b9e5c06
+uuid: aa1a3f06-a95d-46d1-bcdd-6e98b6b6bd2a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.media.field_media_image
     - media.type.icon
   module:
     - image
-id: media.icon.field_media_image
-field_name: field_media_image
+id: media.icon.thumbnail
+field_name: thumbnail
 entity_type: media
 bundle: icon
-label: Icon
-description: ''
-required: true
+label: Thumbnail
+description: 'The thumbnail of the media item.'
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:file'
+  handler: default
   handler_settings: {  }
-  file_directory: 'media/icon/[date:custom:Y]-[date:custom:m]'
-  file_extensions: svg
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg webp'
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''
@@ -30,7 +29,7 @@ settings:
   title_field: false
   title_field_required: false
   default_image:
-    uuid: ''
+    uuid: null
     alt: ''
     title: ''
     width: null
