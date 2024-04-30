@@ -1,0 +1,26 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+@use "mixins" as *;
+
+.vote-accordion-group {
+  @include vote-block-margin-y;
+  @include grid-container;
+}
+
+.vote-accordion-group__heading {
+  @include u-maxw('tablet-lg');
+
+  @include at-media('tablet-lg') {
+    @include grid-col(7);
+    @include grid-offset(1);
+  }
+}
+
+.vote-accordion-group__content {
+  @include u-maxw('tablet');
+
+  @include at-media('tablet-lg') {
+    @include grid-col(8);
+    @include grid-offset(1);
+  }
+}
