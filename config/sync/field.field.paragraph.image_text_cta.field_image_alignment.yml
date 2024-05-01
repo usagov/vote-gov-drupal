@@ -14,7 +14,7 @@ bundle: image_text_cta
 label: 'Image Alignment'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: order-first
