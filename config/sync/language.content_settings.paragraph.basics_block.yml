@@ -1,9 +1,9 @@
-uuid: 6241ce81-c74b-48d0-bc7c-c7f533782235
+uuid: 6222bf60-b553-49ae-ad30-c09671a5f767
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.basics_modules
+    - paragraphs.paragraphs_type.basics_block
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '1'
-id: taxonomy_term.basics_modules
-target_entity_type_id: taxonomy_term
-target_bundle: basics_modules
+id: paragraph.basics_block
+target_entity_type_id: paragraph
+target_bundle: basics_block
 default_langcode: site_default
 language_alterable: false

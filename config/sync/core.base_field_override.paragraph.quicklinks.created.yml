@@ -1,19 +1,18 @@
-uuid: 00f23948-d987-407a-9c3c-35fab2bd9e24
+uuid: c8c91e3b-1371-4efe-a2b6-a71776f43204
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_heading
     - paragraphs.paragraphs_type.quicklinks
-id: paragraph.quicklinks.field_heading
-field_name: field_heading
+id: paragraph.quicklinks.created
+field_name: created
 entity_type: paragraph
 bundle: quicklinks
-label: Heading
-description: ''
-required: true
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string
+field_type: created

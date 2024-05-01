@@ -1,18 +1,17 @@
-uuid: c8016aab-ef3b-489d-ba1b-dfdeadddac48
+uuid: de04aa16-932d-4b36-850d-c544ae635c80
 langcode: en
 status: true
 dependencies:
-  config:
-    - block_content.type.nvrf_a_b_message
   module:
     - content_translation
+    - menu_link_content
 third_party_settings:
   content_translation:
-    enabled: true
+    enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: block_content.nvrf_a_b_message
-target_entity_type_id: block_content
-target_bundle: nvrf_a_b_message
+id: menu_link_content.menu_link_content
+target_entity_type_id: menu_link_content
+target_bundle: menu_link_content
 default_langcode: site_default
 language_alterable: false

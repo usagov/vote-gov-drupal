@@ -1,9 +1,9 @@
-uuid: 6241ce81-c74b-48d0-bc7c-c7f533782235
+uuid: ba3521e8-07a7-4f45-b698-38adae3e19f3
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.basics_modules
+    - paragraphs.paragraphs_type.feature_cards
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '1'
-id: taxonomy_term.basics_modules
-target_entity_type_id: taxonomy_term
-target_bundle: basics_modules
+id: paragraph.feature_cards
+target_entity_type_id: paragraph
+target_bundle: feature_cards
 default_langcode: site_default
 language_alterable: false
