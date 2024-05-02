@@ -101,18 +101,22 @@
   }
 }
 
-@mixin vote-link {
+@mixin vote-link($color: $base-primary, $color-hover: $base-primary-hover) {
   @include u-text('underline');
-  color: $base-primary;
+  color: $color;
 
   &:visited,
   &:active {
-    color: $base-primary;
+    color: $color;
+
+    @include hover {
+      color: $base-white;
+    }
   }
 
   @include hover {
     @include u-text('no-underline');
-    background-color: $base-primary-hover;
+    background-color: $color-hover;
     color: $base-white;
   }
 }
