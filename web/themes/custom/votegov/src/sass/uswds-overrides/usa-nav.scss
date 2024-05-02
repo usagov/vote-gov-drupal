@@ -164,12 +164,10 @@
     }
 
     &__close {
+      display: none;
       color: $base-dark;
       @include u-margin-right(0);
       margin-left: calc(100% - 90px);
-      @include u-margin-y('205');
-      @include u-padding-bottom('2px');
-      @include u-padding-top('05');
       width: 67px;
       background-image: url( '../../../votegov/img/svg/close.svg' );
       background-position: 100% 50%;
@@ -181,6 +179,12 @@
       font-size: 17px;
       font-weight: 500;
       padding-right: 23px;
+      padding-left: 0;
+      margin: 21px 24px;
+
+      &[aria-hidden="true"] {
+        display: block;
+      }
     }
 
     &__primary {
@@ -192,6 +196,7 @@
 
         a,
         button>span {
+          font-family: $theme-font-type-serif;
           color: $base-dark;
           font-size: 18px;
           font-style: normal;
@@ -200,8 +205,11 @@
         }
 
         a:not(.usa-button):not(.usa-current) {
+          font-family: $theme-font-type-serif;
           color: $base-dark;
-          padding: 16.5px 24px;
+          padding: 24px;
+          padding-top: 16px;
+          padding-bottom: 18.5px; 
         }
       }
 
@@ -234,8 +242,10 @@
       @include u-border(0);
 
       button {
-        padding: 16.5px 24px;
-      @include u-border(0);
+        padding: 24px;
+        padding-top: 16px;
+        padding-bottom: 18.5px; 
+        @include u-border(0);
       }
     }
 

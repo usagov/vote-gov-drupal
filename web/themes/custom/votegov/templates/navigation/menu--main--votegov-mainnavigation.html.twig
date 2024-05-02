@@ -28,10 +28,7 @@ We call a macro which calls itself to render the full tree.
 #}
 {% set attributes = attributes.addClass('menu') %}
 <nav aria-label="{{ 'Primary navigation' | t }}" class="usa-nav" data-test="mainNav">
-  <button type="button" class="usa-nav__close" data-test="closeBtn">{{ 'Close' | t }}</button>
-
   {{ menus.menu_links(items, attributes, 0, 'basic-mega-nav-section-') }}
-
   <section id="usa-search--expandable" aria-label="{{ 'Search component' | t }}">
     {{ drupal_entity('block_content', 2) }}
   </section>
