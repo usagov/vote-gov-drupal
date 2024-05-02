@@ -159,6 +159,10 @@
   }
 
   @include at-media-max('tablet-lg') {
+    &.is-visible {
+      position: relative;
+    }
+
     &__close {
       color: $base-dark;
       @include u-margin-right(0);

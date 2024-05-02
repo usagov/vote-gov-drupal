@@ -62,3 +62,9 @@
     }
   }
 }
+
+.usa-overlay {
+  &.is-visible {
+    display: none;
+  }
+}
