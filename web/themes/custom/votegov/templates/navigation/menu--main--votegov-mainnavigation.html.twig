@@ -79,7 +79,6 @@ We call a macro which calls itself to render the full tree.
       </ul>
     {# Secondary level menu structure. #}
     {% elseif menu_level == 1 %}
-      {# <ul class="usa-nav__submenu-list" data-test="subMenu"> #}
         {% for item in items %}
           <li class="usa-nav__submenu-item">
             {% if item.url.routeName != '<nolink>' %}
