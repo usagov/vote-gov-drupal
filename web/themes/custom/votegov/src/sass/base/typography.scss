@@ -111,5 +111,5 @@ main {
 
 .nonvfont,
 .nonvfont * {
-  @include u-font-family('sans')
+  @include u-font-family('sans');
 }
