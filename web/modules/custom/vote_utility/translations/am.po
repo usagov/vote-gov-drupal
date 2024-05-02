@@ -81,10 +81,10 @@ msgid "Register by mail deadline:"
 msgstr "በፖስታ ምዝገባ የመጨረሻ ቀን፦"
 
 msgid "Must be postmarked by @date"
-msgstr "በ @date የፓስታ ማህተም ያረፈበት መሆን አለበት"
+msgstr "@date የፓስታ ማህተም ያረፈበት መሆን አለበት"
 
 msgid "Must be received by @date"
-msgstr "በ @date መድረስ አለበት"
+msgstr "@date መድረስ አለበት"
 
 msgid "Online registration deadline:"
 msgstr "የድህረ ገጽ ላይ ምዝገባ የመጨረሻ ቀን፦"
