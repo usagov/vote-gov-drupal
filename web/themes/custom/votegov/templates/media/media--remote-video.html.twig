@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Theme override to display a media item: remote video.
+ */
+#}
+
+{% extends 'media.html.twig' %}
+
+{% block content %}
+  <div{{ attributes.addClass(classes) }}>
+    <div class="vote-media--remote-video__container">
+      {{ content.field_media_oembed_video | field_value }}
+    </div>
+    {% if content.field_transcript | render %}
+      <div class="vote-media--remote-video__transcript">
+        {{ content.field_transcript | field_value }}
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

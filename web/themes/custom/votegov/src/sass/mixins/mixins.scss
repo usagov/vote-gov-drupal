@@ -50,6 +50,12 @@
   }
 }
 
+@mixin vote-block-item-margin-y {
+  > * + * {
+    @include u-margin-top(2);
+  }
+}
+
 @mixin hover {
   &:hover,
   &:focus {
@@ -69,7 +75,7 @@
   @include hover {
     @include u-text('no-underline');
     background-color: $base-primary-hover;
-    color: $base-white;
+    color: $base-white !important;
   }
 }
 

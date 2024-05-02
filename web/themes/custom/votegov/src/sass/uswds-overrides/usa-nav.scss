@@ -7,7 +7,7 @@
 
   @include at-media('tablet-lg') {
 
-    &:has(input:focus) .usa-nav__primary {
+    &:has(input:focus) .usa-nav__primary, &:has(button:focus) .usa-nav__primary {
       display: none;
     }
 

@@ -26,7 +26,7 @@
 
 .basics-block--container {
   .node--landing & {
-    @include at-media('tablet') {
+    @include at-media('desktop') {
       @include grid-col(7);
       @include grid-offset(1);
     }

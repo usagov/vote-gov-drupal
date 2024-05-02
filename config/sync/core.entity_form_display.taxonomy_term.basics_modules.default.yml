@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.basics_modules.field_anchor_id
     - field.field.taxonomy_term.basics_modules.field_content
     - field.field.taxonomy_term.basics_modules.field_heading
     - taxonomy.vocabulary.basics_modules
@@ -13,6 +14,14 @@ targetEntityType: taxonomy_term
 bundle: basics_modules
 mode: default
 content:
+  field_anchor_id:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_content:
     type: text_textarea
     weight: 2
@@ -31,7 +40,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 3
+    weight: 4
     region: content
     settings:
       include_locked: true
@@ -46,13 +55,13 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 5
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   translation:
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
