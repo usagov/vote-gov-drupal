@@ -3,6 +3,10 @@
 
 body {
   color: $base-dark;
+
+  &.usa-js-mobile-nav--active {
+    overflow: unset;
+  }
 }
 
 .vote-columns--two {
