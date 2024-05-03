@@ -13,8 +13,10 @@
   }
 
   .usa-site-alert .usa-alert & {
-    padding-left: 7rem;
-    padding-right: 7rem;
+    @include at-media('tablet') {
+      padding-left: 7rem;
+      padding-right: 7rem;
+    }
   }
 }
 
