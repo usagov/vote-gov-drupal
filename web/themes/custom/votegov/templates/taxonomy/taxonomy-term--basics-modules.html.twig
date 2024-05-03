@@ -10,6 +10,8 @@
   {% set attributes = attributes.setAttribute('id', anchor) %}
 {% endif %}
 
+{% set heading_level = term._referringItem.parent.parent.entity.field_heading.value ? '3' : '2' %}
+
 {% block content %}
   <h{{heading_level}} class="heading--red-underline">{{ content.field_heading | field_value }}</h{{heading_level}}>
   {{ content.field_content | field_value }}
