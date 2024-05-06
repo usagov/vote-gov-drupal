@@ -10,7 +10,8 @@
   {% set attributes = attributes.setAttribute('id', anchor) %}
 {% endif %}
 
-{% set paragraph_parent = drupal_entity('paragraph', '30', 'default') %}
+{% set id = term._referringItem.parent.parent.entity.id.value %}
+{% set paragraph_parent = drupal_entity('paragraph', id , 'default') %}
 {% set heading_level = paragraph_parent['#paragraph'].field_heading.value ? '3' : '2' %}
 
 {% block content %}
