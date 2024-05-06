@@ -10,7 +10,8 @@
   {% set attributes = attributes.setAttribute('id', anchor) %}
 {% endif %}
 
-{% set heading_level = term._referringItem.parent.parent.entity.field_heading.value ? '3' : '2' %}
+{% set paragraph_parent = drupal_entity('paragraph', '30', 'default') %}
+{% set heading_level = paragraph_parent['#paragraph'].field_heading.value ? '3' : '2' %}
 
 {% block content %}
   <h{{heading_level}} class="heading--red-underline">{{ content.field_heading | field_value }}</h{{heading_level}}>
