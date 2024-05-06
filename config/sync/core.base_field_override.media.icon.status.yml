@@ -1,0 +1,22 @@
+uuid: 58be036d-c080-44df-a8c7-d7d09ed76369
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.icon
+id: media.icon.status
+field_name: status
+entity_type: media
+bundle: icon
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
