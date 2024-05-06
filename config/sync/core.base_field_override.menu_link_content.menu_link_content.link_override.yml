@@ -12,7 +12,7 @@ bundle: menu_link_content
 label: 'Translatable External Link Override'
 description: 'The regular link field does not support the translation of external links. If you need to translate an off-site link, use this field as an override to support translation. Do <em>not</em> use this for internal Drupal links.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
