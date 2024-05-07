@@ -10,8 +10,11 @@
   {% set attributes = attributes.setAttribute('id', anchor) %}
 {% endif %}
 
+{# Gather the id of the parent paragraph #}
 {% set id = term._referringItem.parent.parent.entity.id.value %}
+{# Load the parent paragraph object #}
 {% set paragraph_parent = drupal_entity('paragraph', id , 'default') %}
+{# Set the heading level based on the value of the header in the parent paragraph #}
 {% set heading_level = paragraph_parent['#paragraph'].field_heading.value ? 'h3' : 'h2' %}
 
 {% block content %}
