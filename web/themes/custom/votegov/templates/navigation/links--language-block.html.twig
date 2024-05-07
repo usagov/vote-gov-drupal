@@ -55,14 +55,14 @@
     {% endfor %}
   {% elseif links|length > 2 %}
     {%- for key, item in links -%}
-      <li class="usa-language__submenu-item nonvfont" {{ item.attributes.removeAttribute('hreflang') }}
+      <li class="usa-language__submenu-item" {{ item.attributes.removeAttribute('hreflang') }}
           data-lang="lang-{{ key }}" data-test="langItem">
         {%- if item.link -%}
           {# Create a custom override for the frontpage links. #}
           {%- if is_frontpage -%}
             <a href="/{{ key != 'en' ? key }}" class="usa-language__link" lang="{{ key }}" xml:lang="{{ key }}"
                hreflang="{{ key }}" data-drupal-link-system-path="{{ path('<current>') }}">
-              <strong>{{ item.link['#title'] }}</strong> {{ item.link['#english'] }}
+              <span class="nonvfont">{{ item.link['#title'] }}{{ item.link['#english'] }}</span>
             </a>
           {%- else -%}
             {{ item.link|merge({
