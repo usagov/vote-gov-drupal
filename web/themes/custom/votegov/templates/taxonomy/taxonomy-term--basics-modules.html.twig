@@ -12,9 +12,9 @@
 
 {% set id = term._referringItem.parent.parent.entity.id.value %}
 {% set paragraph_parent = drupal_entity('paragraph', id , 'default') %}
-{% set heading_level = paragraph_parent['#paragraph'].field_heading.value ? '3' : '2' %}
+{% set heading_level = paragraph_parent['#paragraph'].field_heading.value ? 'h3' : 'h2' %}
 
 {% block content %}
-  <h{{heading_level}} class="heading--red-underline">{{ content.field_heading | field_value }}</h{{heading_level}}>
+  <{{heading_level | default('h2')}} class="heading--red-underline">{{ content.field_heading | field_value }}</{{heading_level}}>
   {{ content.field_content | field_value }}
 {% endblock %}
