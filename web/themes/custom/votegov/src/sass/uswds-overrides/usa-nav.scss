@@ -68,9 +68,9 @@
           .usa-nav__submenu-list {
             .usa-nav__submenu-item {
               a, span {
+                @include u-width('full');
+                @include u-text('no-wrap');
                 display: block;
-                width: 100%;
-                text-wrap: nowrap;
                 padding: 8px 16px 8px;
               }
             }
@@ -135,12 +135,12 @@
 
       .usa-nav__submenu-item {
         a, span {
-          font-size: 16px;
-          color: $base-dark;
-          text-decoration: none;
+          @include u-font-size('body', 'sm');
           @include u-padding-x(2);
           @include u-border(0);
           @include u-display('block');
+          color: $base-dark;
+          text-decoration: none;
         }
 
         span {
@@ -160,13 +160,14 @@
 
   @include at-media-max('tablet-lg') {
     &.is-visible {
-      position: relative;
+      @include u-position('relative');
     }
 
     &__close {
-      display: none;
-      color: $base-dark;
+      @include u-display('none');
       @include u-margin-right(0);
+      @include u-padding-left(0);
+      color: $base-dark;
       margin-left: calc(100% - 90px);
       width: 67px;
       background-image: url( '../../../votegov/img/svg/close.svg' );
@@ -179,7 +180,6 @@
       font-size: 17px;
       font-weight: 500;
       padding-right: 23px;
-      padding-left: 0;
       margin: 21px 24px;
 
       &[aria-hidden="true"] {
@@ -207,9 +207,7 @@
         a:not(.usa-button):not(.usa-current) {
           font-family: $theme-font-type-serif;
           color: $base-dark;
-          padding: 24px;
-          padding-top: 16px;
-          padding-bottom: 18.5px; 
+          padding: 16px 24px 18.5px;
         }
       }
 
@@ -242,10 +240,8 @@
       @include u-border(0);
 
       button {
-        padding: 24px;
-        padding-top: 16px;
-        padding-bottom: 18.5px; 
         @include u-border(0);
+        padding: 16px 24px 18.5px;
       }
     }
 

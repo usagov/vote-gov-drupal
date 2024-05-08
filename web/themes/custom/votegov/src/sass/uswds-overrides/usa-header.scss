@@ -23,7 +23,7 @@
     margin-left: 24px;
 
     &[aria-hidden="true"] {
-      display: none;
+      @include u-display('none');
     }
   }
 }
@@ -69,6 +69,6 @@
 
 .usa-overlay {
   &.is-visible {
-    display: none;
+    @include u-display('none');
   }
 }
