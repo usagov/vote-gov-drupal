@@ -60,7 +60,7 @@
         {%- if item.link -%}
           {# Create a custom override for the frontpage links. #}
           {%- if is_frontpage -%}
-            <a href="/{{ key != 'en' ? key }}" class="usa-language__link" lang="{{ key }}" xml:lang="{{ key }}"
+            <a href="/{{ key != 'en' ? key }}" class="usa-language__link nonvfont" lang="{{ key }}" xml:lang="{{ key }}"
                hreflang="{{ key }}" data-drupal-link-system-path="{{ path('<current>') }}">
               <strong class="nonvfont">{{ item.link['#title'] }}</strong>{{ item.link['#english'] }}
             </a>
