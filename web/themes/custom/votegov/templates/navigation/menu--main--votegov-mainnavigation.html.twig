@@ -62,15 +62,15 @@ We call a macro which calls itself to render the full tree.
                 {{ menus.menu_links(item.below, attributes, menu_level + 1, aria_id) }}
 
             {% else %}
-              {% if item.url.routeName != '<nolink>' %}
-                {{ link(item.title, item.url) }}
-              {% else %}
-                <button
-                  type="button"
-                  class="usa-nav__link"
+              {% if item.url.isRouted() and item.url.routeName == '<nolink>' %}
+                  <button
+                    type="button"
+                    class="usa-nav__link"
                   >
-                  <span>{{ item.title }}</span>
-                </button>
+                    <span>{{ item.title }}</span>
+                  </button>
+              {% else %}
+                {{ link(item.title, item.url) }}
               {% endif %}
             {% endif %}
           </li>
