@@ -1,28 +1,38 @@
 [
 
   {
-    "name": "homePage",
+    "name": "Landing Page - Home Page",
     "route": "/"
   },
 
   {
-    "name": "Alaska",
+    "name": "State Page - Online(AK)",
     "route": "register/ak/"
   },
 
   {
-    "name": "Arkansas",
+    "name": "State Page - By mail(AR)",
     "route": "register/ar/"
   },
 
   {
-    "name": "American Soma",
+    "name": "State Page - In person(AS)",
     "route": "register/as/"
   },
 
   {
-    "name": "North Dakota",
+    "name": "State Page - Not needed(ND)",
     "route": "register/nd/"
+  },
+
+  {
+    "name": "Basic Page - About Us",
+    "route": "/about-us"
+  },
+
+  {
+    "name": "Voter Guide - College Student",
+    "route": "/voting-college-student"
   }
 
 ]
