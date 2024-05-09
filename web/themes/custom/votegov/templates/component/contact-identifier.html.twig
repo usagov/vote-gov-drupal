@@ -1,16 +1,28 @@
 <div class="usa-identifier">
-  <div class="usa-identifier__container">
-    <div class="grid-row grid-gap">
-      {#Column 1 divider - USA Logo#}
-      <section
-        class="usa-identifier__section--masthead"
-        aria-label={{"Agency identifier," | t }}
+    <div
+      class="usa-identifier__section--usagov grid-container"
+      aria-label={{ "U.S. government information and services," | t }}
+    >
+      {#Row 1 Divider - USA.gov Links #}
+      <nav
+        aria-label={{ "Important links," | t }}
       >
+          {# USA.gov election info links #}
+          {{ drupal_entity('block_content', '18') }}
+      </nav>
+
+      <hr>
+      {# Row 2 Divider - USA.gov link and email sign-up #}
+      <div class="vote-usa-contact-container">
+        {# USA.gov link #}
         <section
-          class="usa-identifier__identity"
-          aria-label={{"Agency description," | t }}
+          class="usa-identifier__section--masthead"
+          aria-label={{"Agency identifier," | t }}
         >
-          <div class="heading--red-underline">
+          <section
+            class="usa-identifier__identity"
+            aria-label={{"Agency description," | t }}
+          >
             <a href="https://www.usa.gov/" class="usa-identifier__logo">
               <img
                 class="usa-identifier__logo-img"
@@ -18,29 +30,13 @@
                 alt={{"USA.gov logo" | t }}
                 role="img"
               /></a>
-          </div>
-          <div class="usa-identifier__identity-disclaimer">
-            <p>{{"Visit our partner site to find more information about voting in the United States." | t }}</p>
-          </div>
+            <div class="usa-identifier__identity-disclaimer">
+              <p>{{"Visit our partner site to find more information about voting in the United States." | t }}</p>
+            </div>
+          </section>
         </section>
-      </section>
-
-      {#Column 2 Divider - USA Links and Email block #}
-      <section
-        class="usa-identifier__section--usagov"
-        aria-label={{ "U.S. government information and services," | t }}
-      >
-        <nav
-          aria-label={{ "Important links," | t }}
-        >
-            {# USA.gov election info links #}
-            {{ drupal_entity('block_content', '18') }}
-        </nav>
-
-        <hr>
         {# Email sign-up component. #}
         {{ drupal_entity('block_content', 4) }}
-      </section>
+      </div>
     </div>
-  </div>
 </div>

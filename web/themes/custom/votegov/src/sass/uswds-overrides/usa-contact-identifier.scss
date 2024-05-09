@@ -12,14 +12,16 @@
 
     @include at-media('tablet') {
         @include u-display('flex');
-        .grid-row {
-            @include u-flex('no-wrap')
-        }
     }
 
     .usa-identifier__logo{
         height: 36px;
         width: 172px;
+    }
+
+    .usa-identifier__identity
+    {
+        display:flex;
     }
 
     .usa-identifier__identity-disclaimer{
@@ -73,5 +75,10 @@
                 @include u-text('no-underline');
             }
         }
+    }
+
+    .vote-usa-contact-container{
+        display: flex;
+        flex-wrap: wrap;
     }
 }
