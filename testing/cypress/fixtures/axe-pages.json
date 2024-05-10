@@ -7,22 +7,22 @@
 
   {
     "name": "State Page - Online(AK)",
-    "route": "register/ak/"
+    "route": "/register/ak/"
   },
 
   {
     "name": "State Page - By mail(AR)",
-    "route": "register/ar/"
+    "route": "/register/ar/"
   },
 
   {
     "name": "State Page - In person(AS)",
-    "route": "register/as/"
+    "route": "/register/as/"
   },
 
   {
     "name": "State Page - Not needed(ND)",
-    "route": "register/nd/"
+    "route": "/register/nd/"
   },
 
   {
@@ -33,6 +33,11 @@
   {
     "name": "Voter Guide - College Student",
     "route": "/voting-college-student"
+  },
+
+  {
+    "name": "Register to Vote Page",
+    "route": "/register"
   }
 
 ]
