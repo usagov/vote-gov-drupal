@@ -1,4 +1,4 @@
-uuid: 4ebc719e-cac3-438c-b764-64e9be03497b
+uuid: 576ee9fc-c7e9-4792-8a26-68aaafbfcfc1
 langcode: en
 status: true
 dependencies:
@@ -12,8 +12,11 @@ dependencies:
     - block_content.type.registration_form_selector
     - block_content.type.search
     - block_content.type.sitewide_alert
+    - filter.format.basic_html
+    - filter.format.simple_html
     - media.type.audio
     - media.type.document
+    - media.type.icon
     - media.type.image
     - media.type.remote_video
     - node.type.landing
@@ -25,72 +28,198 @@ dependencies:
     - taxonomy.vocabulary.nvrf_field
     - workflows.workflow.publishing_content
   module:
+    - autologout
+    - block
     - block_content
     - ckeditor5_embedded_content
+    - config
+    - config_split
+    - config_translation
     - content_moderation
     - content_translation
+    - crop
+    - devel
+    - easy_breadcrumb
     - editoria11y
+    - entity_reference_revisions
+    - field_ui
     - file
+    - file_delete
+    - filter
+    - image
+    - language
+    - language_switcher_extended
+    - locale
     - media
+    - menu_link_content
+    - metatag
     - node
+    - node_revision_delete
     - paragraphs
+    - path
+    - pathauto
+    - redirect
+    - remove_http_headers
+    - rest
+    - simple_sitemap
     - system
     - taxonomy
+    - tome_static
     - toolbar
-id: content_manager
-label: 'Content Manager'
-weight: -6
+    - update
+    - views_ui
+    - workflows
+id: site_builder
+label: 'Site Builder'
+weight: -5
 is_admin: null
 permissions:
   - 'access administration pages'
   - 'access block library'
+  - 'access content'
   - 'access content overview'
+  - 'access devel information'
   - 'access files overview'
   - 'access media overview'
+  - 'access site in maintenance mode'
+  - 'access site reports'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'access user profiles'
+  - 'administer autologout'
+  - 'administer block content'
+  - 'administer block types'
+  - 'administer block_content display'
+  - 'administer block_content fields'
+  - 'administer block_content form display'
+  - 'administer blocks'
+  - 'administer configuration split'
+  - 'administer content translation'
+  - 'administer content types'
+  - 'administer crop'
+  - 'administer crop types'
+  - 'administer display modes'
+  - 'administer easy breadcrumb'
+  - 'administer editoria11y checker'
+  - 'administer filters'
+  - 'administer image styles'
+  - 'administer language_switcher_extended'
+  - 'administer languages'
+  - 'administer media'
+  - 'administer media display'
+  - 'administer media fields'
+  - 'administer media form display'
+  - 'administer media types'
   - 'administer menu'
+  - 'administer meta tags'
+  - 'administer modules'
+  - 'administer node display'
+  - 'administer node fields'
+  - 'administer node form display'
+  - 'administer node_revision_delete'
+  - 'administer nodes'
+  - 'administer paragraph display'
+  - 'administer paragraph fields'
+  - 'administer paragraph form display'
+  - 'administer paragraphs settings'
+  - 'administer paragraphs types'
+  - 'administer pathauto'
+  - 'administer redirect settings'
+  - 'administer redirects'
+  - 'administer rest resources'
+  - 'administer site configuration'
+  - 'administer sitemap settings'
+  - 'administer software updates'
+  - 'administer taxonomy'
+  - 'administer taxonomy_term display'
+  - 'administer taxonomy_term fields'
+  - 'administer taxonomy_term form display'
+  - 'administer themes'
+  - 'administer url aliases'
+  - 'administer user display'
+  - 'administer user fields'
+  - 'administer user form display'
+  - 'administer views'
+  - 'administer workflows'
+  - 'bypass node access'
+  - 'change own logout threshold'
+  - 'change own username'
   - 'create audio media'
   - 'create basic block content'
   - 'create content translations'
   - 'create document media'
+  - 'create email_signup block content'
+  - 'create government_banner block content'
+  - 'create icon media'
   - 'create image media'
   - 'create inline_alert block content'
   - 'create landing content'
   - 'create media'
   - 'create nvrf_a_b_message block content'
+  - 'create nvrf_card block content'
   - 'create nvrf_page content'
   - 'create page content'
+  - 'create registration_form_selector block content'
   - 'create remote_video media'
+  - 'create search block content'
   - 'create sitewide_alert block content'
   - 'create state_territory content'
   - 'create terms in basics_modules'
   - 'create terms in nvrf_field'
+  - 'create url aliases'
   - 'create voter_guide content'
   - 'delete all revisions'
   - 'delete any audio media'
+  - 'delete any audio media revisions'
   - 'delete any basic block content'
+  - 'delete any basic block content revisions'
   - 'delete any document media'
+  - 'delete any document media revisions'
+  - 'delete any email_signup block content'
+  - 'delete any email_signup block content revisions'
+  - 'delete any file'
+  - 'delete any government_banner block content'
+  - 'delete any government_banner block content revisions'
+  - 'delete any icon media'
+  - 'delete any icon media revisions'
   - 'delete any image media'
+  - 'delete any image media revisions'
   - 'delete any inline_alert block content'
+  - 'delete any inline_alert block content revisions'
   - 'delete any landing content'
   - 'delete any media'
   - 'delete any nvrf_a_b_message block content'
   - 'delete any nvrf_a_b_message block content revisions'
+  - 'delete any nvrf_card block content'
+  - 'delete any nvrf_card block content revisions'
+  - 'delete any nvrf_page content'
   - 'delete any page content'
+  - 'delete any registration_form_selector block content'
+  - 'delete any registration_form_selector block content revisions'
   - 'delete any remote_video media'
+  - 'delete any remote_video media revisions'
+  - 'delete any search block content'
+  - 'delete any search block content revisions'
   - 'delete any sitewide_alert block content'
+  - 'delete any sitewide_alert block content revisions'
+  - 'delete any state_territory content'
   - 'delete any voter_guide content'
   - 'delete content translations'
+  - 'delete files'
   - 'delete landing revisions'
   - 'delete media'
   - 'delete nvrf_page revisions'
+  - 'delete orphan revisions'
   - 'delete own audio media'
   - 'delete own document media'
+  - 'delete own files'
+  - 'delete own icon media'
   - 'delete own image media'
   - 'delete own landing content'
+  - 'delete own nvrf_page content'
   - 'delete own page content'
   - 'delete own remote_video media'
+  - 'delete own state_territory content'
   - 'delete own voter_guide content'
   - 'delete page revisions'
   - 'delete state_territory revisions'
@@ -102,6 +231,7 @@ permissions:
   - 'edit any document media'
   - 'edit any email_signup block content'
   - 'edit any government_banner block content'
+  - 'edit any icon media'
   - 'edit any image media'
   - 'edit any inline_alert block content'
   - 'edit any landing content'
@@ -115,8 +245,10 @@ permissions:
   - 'edit any sitewide_alert block content'
   - 'edit any state_territory content'
   - 'edit any voter_guide content'
+  - 'edit behavior plugin settings'
   - 'edit own audio media'
   - 'edit own document media'
+  - 'edit own icon media'
   - 'edit own image media'
   - 'edit own landing content'
   - 'edit own nvrf_page content'
@@ -126,15 +258,27 @@ permissions:
   - 'edit own voter_guide content'
   - 'edit terms in basics_modules'
   - 'edit terms in nvrf_field'
+  - 'export configuration'
+  - 'import configuration'
+  - 'link to any page'
+  - 'manage editoria11y results'
   - 'mark as hidden in editoria11y'
+  - 'mark as ok in editoria11y'
+  - 'notify of path changes'
+  - 'remove_http_headers settings access'
   - 'revert all revisions'
+  - 'revert any audio media revisions'
   - 'revert any basic block content revisions'
+  - 'revert any document media revisions'
   - 'revert any email_signup block content revisions'
   - 'revert any government_banner block content revisions'
+  - 'revert any icon media revisions'
+  - 'revert any image media revisions'
   - 'revert any inline_alert block content revisions'
   - 'revert any nvrf_a_b_message block content revisions'
   - 'revert any nvrf_card block content revisions'
   - 'revert any registration_form_selector block content revisions'
+  - 'revert any remote_video media revisions'
   - 'revert any search block content revisions'
   - 'revert any sitewide_alert block content revisions'
   - 'revert landing revisions'
@@ -142,14 +286,19 @@ permissions:
   - 'revert page revisions'
   - 'revert state_territory revisions'
   - 'revert voter_guide revisions'
+  - 'switch users'
+  - 'synchronize configuration'
   - 'translate any entity'
   - 'translate audio media'
   - 'translate basics_modules taxonomy_term'
   - 'translate block_content'
+  - 'translate configuration'
   - 'translate document media'
   - 'translate editable entities'
   - 'translate image media'
+  - 'translate interface'
   - 'translate landing node'
+  - 'translate menu_link_content'
   - 'translate nvrf_field taxonomy_term'
   - 'translate nvrf_page node'
   - 'translate page node'
@@ -166,21 +315,30 @@ permissions:
   - 'use publishing_content transition publish'
   - 'use publishing_content transition restore'
   - 'use publishing_content transition restore_to_draft'
+  - 'use text format basic_html'
+  - 'use text format simple_html'
+  - 'use tome static'
   - 'view all media revisions'
   - 'view all revisions'
+  - 'view any audio media revisions'
   - 'view any basic block content history'
+  - 'view any document media revisions'
   - 'view any email_signup block content history'
   - 'view any government_banner block content history'
+  - 'view any icon media revisions'
+  - 'view any image media revisions'
   - 'view any inline_alert block content history'
   - 'view any nvrf_a_b_message block content history'
   - 'view any nvrf_card block content history'
   - 'view any registration_form_selector block content history'
+  - 'view any remote_video media revisions'
   - 'view any search block content history'
   - 'view any sitewide_alert block content history'
   - 'view any unpublished content'
   - 'view editoria11y checker'
   - 'view landing revisions'
   - 'view latest version'
+  - 'view media'
   - 'view nvrf_page revisions'
   - 'view own unpublished content'
   - 'view own unpublished media'
@@ -188,4 +346,6 @@ permissions:
   - 'view state_territory revisions'
   - 'view the administration theme'
   - 'view unpublished paragraphs'
+  - 'view update notifications'
+  - 'view user email addresses'
   - 'view voter_guide revisions'
