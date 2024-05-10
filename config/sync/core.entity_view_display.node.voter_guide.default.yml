@@ -6,10 +6,12 @@ dependencies:
     - field.field.node.voter_guide.body
     - field.field.node.voter_guide.field_basics_block
     - field.field.node.voter_guide.field_icon
+    - field.field.node.voter_guide.field_metatags
     - field.field.node.voter_guide.field_subtitle
     - node.type.voter_guide
   module:
     - entity_reference_revisions
+    - metatag
     - text
     - user
 id: node.voter_guide.default
@@ -44,6 +46,13 @@ content:
     settings:
       view_mode: default
       link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_metatags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
     third_party_settings: {  }
     weight: 5
     region: content

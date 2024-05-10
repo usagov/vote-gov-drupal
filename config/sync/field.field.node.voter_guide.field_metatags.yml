@@ -1,0 +1,21 @@
+uuid: 9233dd3a-b4ee-488c-9e59-e5b8feb0382b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.voter_guide
+  module:
+    - metatag
+id: node.voter_guide.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: voter_guide
+label: Metatags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag
