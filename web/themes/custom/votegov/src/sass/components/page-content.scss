@@ -1,7 +1,7 @@
 @use "uswds-core" as *;
 @use "mixins" as *;
 
-.page-content {
+.vote-page-content {
   @include u-margin-top(4);
   @include u-margin-bottom(6);
   @include u-position('relative');
@@ -12,7 +12,7 @@
     @include u-margin-bottom(10);
   }
 
-  &.page-content--sidebar {
+  &.vote-page-content--sidebar {
     @include at-media('desktop-lg') {
       @include grid-offset(1);
       // Adjusting offset by .25
@@ -20,7 +20,7 @@
     }
   }
 
-  &.page-content--image-offset {
+  &.vote-page-content--image-offset {
     @include u-margin-top('neg-10');
   }
 }

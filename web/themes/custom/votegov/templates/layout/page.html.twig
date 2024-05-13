@@ -91,7 +91,7 @@
         <aside id="sidebar" role="complementary">
           {{ page.sidebar }}
         </aside>
-        <main role="main" id="main" class="page-content page-content--sidebar {{ node_image ? "page-content--image-offset" }}">
+        <main role="main" id="main" class="vote-page-content vote-page-content--sidebar {{ node_image ? "vote-page-content--image-offset" }}">
           {{ page.content }}
         </main>
       </div>
@@ -107,7 +107,7 @@
         {% include '@votegov/component/page-title.html.twig' %}
         {% include '@votegov/component/page-subtitle.html.twig' %}
       </div>
-      <div class="page-content {{ node_image ? "page-content--image-offset" }}">
+      <div class="vote-page-content {{ node_image ? "vote-page-content--image-offset" }}">
         {{ page.content }}
       </div>
     </main>
