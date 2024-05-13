@@ -138,8 +138,11 @@ msgstr "الموعد النهائي للتسجيل عبر الإنترنت:"
 msgid "In person registration deadline:"
 msgstr "الموعد النهائي للتسجيل الشخصي:"
 
-msgid "Voter registration deadlines for the @election_date election"
+msgid "Voter registration deadlines for the @election_date election."
 msgstr "المواعيد النهائية لتسجيل الناخبين لانتخابات @election_date"
+
+msgid "Find state and local election dates."
+msgstr ""
 
 # data.translations.register.dates__heading (state phrase updates)
 msgid "Voter registration deadlines"

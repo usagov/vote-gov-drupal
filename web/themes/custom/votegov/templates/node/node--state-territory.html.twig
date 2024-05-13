@@ -38,7 +38,10 @@
   {% block deadlines %}
     {# Registration deadlines #}
     <h2>{{ 'Voter registration deadlines' | t({ '@state_name': state_name }) }}</h2>
-    <p>{{ 'Voter registration deadlines for the @election_date election' | t({'@election_date': {'#markup': election_date} | render }) }}</p>
+    <p>
+      {{ 'Voter registration deadlines for the @election_date election.' | t({'@election_date': {'#markup': election_date} | render }) }}
+      <a href="https://www.eac.gov/voters/register-and-vote-in-your-state">{{ 'Find state and local election dates.' | t }}</a>
+    </p>
     <ul data-test="registrationInfo">
       {% include '@votegov/component/registration-date/registration-date--online.html.twig' %}
       {% include '@votegov/component/registration-date/registration-date--by-mail.html.twig' %}

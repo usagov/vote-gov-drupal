@@ -77,8 +77,11 @@ msgstr "Cómo registrarse para votar"
 msgid "Other ways to register to vote"
 msgstr "Otras formas de registrarse para votar"
 
-msgid "Voter registration deadlines for the @election_date election"
+msgid "Voter registration deadlines for the @election_date election."
 msgstr "Plazo de inscripción de votantes para las elecciones del @election_date"
+
+msgid "Find state and local election dates."
+msgstr ""
 
 msgid "Register by mail deadline:"
 msgstr "Registrarse por correo postal:"

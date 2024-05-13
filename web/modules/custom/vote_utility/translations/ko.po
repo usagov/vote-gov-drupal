@@ -80,8 +80,11 @@ msgstr "유권자 등록 방법"
 msgid "Other ways to register to vote"
 msgstr "기타 유권자 등록 방법"
 
-msgid "Voter registration deadlines for the @election_date election"
+msgid "Voter registration deadlines for the @election_date election."
 msgstr "@election_date 선거 유권자 등록 마감일"
+
+msgid "Find state and local election dates."
+msgstr ""
 
 msgid "Register by mail deadline:"
 msgstr "우편 투표자 등록 마감일:"

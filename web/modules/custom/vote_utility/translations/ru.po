@@ -120,8 +120,11 @@ msgstr "Как зарегистрироваться для голосовани�
 msgid "Other ways to register to vote"
 msgstr "Другие способы зарегистрироваться для голосования"
 
-msgid "Voter registration deadlines for the @election_date election"
+msgid "Voter registration deadlines for the @election_date election."
 msgstr "Крайние сроки регистрации избирателей на выборы @election_date"
+
+msgid "Find state and local election dates."
+msgstr ""
 
 # data.translations.register.dates__bymail_deadline
 msgid "Register by mail deadline:"
