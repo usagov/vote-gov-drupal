@@ -10,12 +10,16 @@
           <div class="vote-cta__header vote-heading--red-underline">
             <h2>{{ content.field_heading | field_value }}</h2>
           </div>
-          <div class="vote-cta__body">
-            {{ content.field_body | field_value }}
-          </div>
-          <p class="vote-cta__footer">
-            <span class="vote-link">{{ content.field_link | field_value }}</span>
-          </p>
+          {% if content.field_body | render %}
+            <div class="vote-cta__body">
+              {{ content.field_body | field_value }}
+            </div>
+          {% endif %}
+          {% if content.field_link | render %}
+            <p class="vote-cta__footer">
+              <span class="vote-link">{{ content.field_link | field_value }}</span>
+            </p>
+          {% endif %}
         </div>
     </div>
 </div>

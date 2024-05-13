@@ -6,9 +6,11 @@
 #}
 
 <section class="vote-basic">
-  <h2 class="vote-basic__heading vote-heading--red-underline vote-heading--max-width">
-    {{ content.field_heading | field_value }}
-  </h2>
+  {% if content.field_heading | render %}
+    <h2 class="vote-basic__heading vote-heading--red-underline vote-heading--max-width">
+      {{ content.field_heading | field_value }}
+    </h2>
+  {% endif %}
   <div class="vote-basic__content">
     {{ content.field_body | field_value }}
   </div>
