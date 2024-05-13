@@ -74,6 +74,9 @@ msgstr "Regístrese para votar en @state_name"
 msgid "How to register to vote"
 msgstr "Cómo registrarse para votar"
 
+msgid "How to register and update your registration"
+msgstr "Cómo registrarse para votar"
+
 msgid "Other ways to register to vote"
 msgstr "Otras formas de registrarse para votar"
 

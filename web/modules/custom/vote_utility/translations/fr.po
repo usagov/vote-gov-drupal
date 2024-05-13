@@ -116,6 +116,9 @@ msgstr "Inscrivez-vous pour voter @in_state_name"
 msgid "How to register to vote"
 msgstr "Comment vous inscrire pour voter"
 
+msgid "How to register and update your registration"
+msgstr "Comment vous inscrire pour voter"
+
 # data.translations.register.other_language_selection__heading (state phrase updates)
 msgid "Other ways to register to vote"
 msgstr "Autres façons de vous inscrire au vote"

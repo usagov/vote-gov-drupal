@@ -75,6 +75,9 @@ msgstr "Magparehistro para bumoto sa @state_name"
 msgid "How to register to vote"
 msgstr "Paano magparehistro para bumoto"
 
+msgid "How to register and update your registration"
+msgstr "Paano magparehistro para bumoto"
+
 msgid "Other ways to register to vote"
 msgstr "Iba pang mga paraan para magrehistro para bumoto"
 

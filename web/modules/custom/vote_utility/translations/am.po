@@ -74,6 +74,9 @@ msgstr "ለመምረጥ ይመዝገቡ @state_name"
 msgid "How to register to vote"
 msgstr "ለመምረጥ እንዴት ነው የሚመዘገቡት"
 
+msgid "How to register and update your registration"
+msgstr "ለመምረጥ እንዴት ነው የሚመዘገቡት"
+
 msgid "Other ways to register to vote"
 msgstr "ለመምረጥ መመዝገቢያ ሌላ መንገዶች"
 

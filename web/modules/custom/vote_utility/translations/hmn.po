@@ -74,6 +74,9 @@ msgstr "Sau npe mus pov ntawv lus @state_name"
 msgid "How to register to vote"
 msgstr "Sau npe mus pov ntawv"
 
+msgid "How to register and update your registration"
+msgstr "Sau npe mus pov ntawv"
+
 msgid "Other ways to register to vote"
 msgstr "Lwm koj kev sau npe mus pov ntawv xaiv tsa"
 
