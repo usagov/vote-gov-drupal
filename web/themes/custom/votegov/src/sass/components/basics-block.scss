@@ -68,6 +68,10 @@
     @include u-margin-top(5);
   }
 
+  ul {
+    @include u-margin-y(2);
+  }
+
   @include at-media('tablet') {
     @include u-padding(4);
   }

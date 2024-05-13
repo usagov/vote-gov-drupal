@@ -192,6 +192,10 @@
                     &__heading {
                         @include u-margin-top(4);
                     }
+
+                  &__content {
+                    min-height: 100px;
+                  }
                 }
 
                 &-tool {

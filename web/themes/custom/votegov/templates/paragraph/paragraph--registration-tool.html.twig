@@ -14,12 +14,16 @@
       {{ content.field_heading | field_value }}
     </h1>
     <div class="vote-basic-text__content">
-      {{ content.field_body | field_value }}
+      {% if content.field_body | render %}
+        {{ content.field_body | field_value }}
+      {% else %}
+        <p>{{ content.field_form_heading | field_value }}</p>
+      {% endif %}
     </div>
   </div>
   <div class="vote-basic-tool__container">
       <form id="vote-basic-tool__form" class="vote-basic-tool__form">
-        <label class="vote-basic-tool__label" for="vote-basic-tool__input">{{ content.field_form_heading | field_value }}</label>
+        <label class="{{ not content.field_body | render ? 'usa-sr-only' }} vote-basic-tool__label" for="vote-basic-tool__input">{{ content.field_form_heading | field_value }}</label>
         <input type="text" class="vote-basic-tool__input"
                 id="vote-basic-tool__input" autocomplete="off"
                 placeholder="{{ content.field_placeholder | field_value }}" data-test="stateInput">
