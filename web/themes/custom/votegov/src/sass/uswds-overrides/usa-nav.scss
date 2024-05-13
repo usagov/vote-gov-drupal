@@ -6,11 +6,6 @@
   @include u-width('full');
 
   @include at-media('tablet-lg') {
-
-    &:has(input:focus) .usa-nav__primary, &:has(button:focus) .usa-nav__primary {
-      display: none;
-    }
-
     .usa-search {
       margin-left: unset;
     }
