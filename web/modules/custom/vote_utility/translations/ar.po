@@ -197,7 +197,7 @@ msgid "@link on @state_name’s election website."
 msgstr "@link على @state_name موقع انتخابات الولاية"
 
 # @link: data.translations.register.online__answer1 (see accessibility updates)
-msgid "Start your online registration"
+msgid "Complete your online registration"
 msgstr "ابدأ التسجيل عبر الإنترنت"
 
 # data.translations.register.online__answer2 (see accessibility updates)
