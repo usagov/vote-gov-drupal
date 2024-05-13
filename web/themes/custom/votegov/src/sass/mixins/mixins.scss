@@ -102,3 +102,9 @@
   background-color: $base-white;
   font-family: $theme-font-type-sans;
 }
+
+@mixin vote-remove-external-link {
+  .usa-link--external::after {
+    all: unset;
+  }
+}

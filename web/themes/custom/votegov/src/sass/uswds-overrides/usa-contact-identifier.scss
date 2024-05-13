@@ -15,8 +15,7 @@
     }
 
     .usa-identifier__logo{
-        height: 36px;
-        width: 172px;
+        @include u-margin-right(2);
     }
 
     .usa-identifier__identity
@@ -29,6 +28,7 @@
         @include u-font-weight('normal');
 
         p {
+            font-size: 16px;
             max-width: 75%;
         }
     }
@@ -41,7 +41,7 @@
         ul {
             list-style-type: none;
             @include u-padding(0);
-            @include u-margin-top(5);
+            @include u-margin-y(5);
 
             @include at-media-max('tablet'){
                 @include u-margin-top(4);
@@ -91,7 +91,15 @@
     }
 
     .vote-usa-contact-container{
-        display: flex;
-        flex-wrap: wrap;
+        @include vote-remove-external-link;
+        @include vote-solid-border-top;
+        @include u-display('flex');
+        @include at-media-max('tablet-lg'){
+            flex-wrap: wrap;
+        }
+    }
+
+    .usa-identifier__section--masthead {
+        @include u-margin-y('auto');
     }
 }

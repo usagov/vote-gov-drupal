@@ -3,6 +3,7 @@
 
 .usa-sign-up {
   @include u-padding(0);
+  @include u-margin-top(4);
 
     .usa-form {
         @include at-media('tablet') {
@@ -12,6 +13,7 @@
     }
     .usa-sign-up__heading {
         font-size: 16px;
+        font-weight: 400;
     }
 
     .usa-label {
@@ -22,21 +24,28 @@
     .usa-input {
         @include u-height(6);
         @include u-radius('md');
+        @include u-padding-x(2);
+        @include u-padding-y(0);
         border: 1px $bg-light-medium solid;
-
-        @include at-media('tablet') {
-            @include u-margin-right(2);
-            max-width: 30rem;
-        }
 
         @include at-media-max('tablet') {
             @include u-margin-bottom(2);
         }
+
+        @include at-media('tablet') {
+            @include u-margin-right(2);
+            @include u-width('card-lg');
+            max-width: 30rem;
+        }
+
+        @include at-media('desktop') {
+            @include u-width('mobile');
+        }
     }
 
     .usa-button {
-        @include u-padding-y('105');
-        @include u-padding-x('205');
+        @include u-padding-y(1);
+        @include u-padding-x(4);
         @include u-height(6);
         @include u-margin(0);
         min-width: 95px;
