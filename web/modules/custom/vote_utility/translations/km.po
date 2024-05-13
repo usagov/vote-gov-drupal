@@ -74,6 +74,9 @@ msgstr "ចុះឈ្មោះដើម្បីបោះឆ្នោតនៅ
 msgid "How to register to vote"
 msgstr "របៀបចុះឈ្មោះដើម្បីបោះឆ្នោត"
 
+msgid "How to register and update your registration"
+msgstr "របៀបចុះឈ្មោះដើម្បីបោះឆ្នោត"
+
 msgid "Other ways to register to vote"
 msgstr "វិធីផ្សេងៗទៀតដើម្បីចុះឈ្មោះបោះឆ្នោត"
 

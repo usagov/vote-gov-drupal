@@ -74,6 +74,9 @@ msgstr "在 @state_name 注册投票"
 msgid "How to register to vote"
 msgstr "如何登记投票"
 
+msgid "How to register and update your registration"
+msgstr "如何登记投票"
+
 msgid "Other ways to register to vote"
 msgstr "登记投票的其他方式"
 

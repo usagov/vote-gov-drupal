@@ -116,6 +116,9 @@ msgstr "Enskri pou vote nan @state_name"
 msgid "How to register to vote"
 msgstr "Kijan pou enskri pou vote"
 
+msgid "How to register and update your registration"
+msgstr "Kijan pou enskri pou vote"
+
 # data.translations.register.other_language_selection__heading (state phrase update)
 msgid "Other ways to register to vote"
 msgstr "Lòt fason pou enskri pou vote"
