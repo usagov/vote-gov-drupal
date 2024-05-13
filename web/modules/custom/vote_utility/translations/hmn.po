@@ -128,7 +128,7 @@ msgstr "Kawm paub ntau ntxiv txog kev pov npav"
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
 msgstr "Tsis tas yuav tsum sau npe pov ntawv xaiv tsa hauv lub xeev @state_name. @link Kawm paub ntau yam txog kev sau npe xaiv tsa ntawm lub xeev @state_name’s qhov chaw xaiv tsa lub website."
 
-msgid "Start your online registration"
+msgid "Complete your online registration"
 msgstr "Pib sau koj lub npe"
 
 msgid "@link on @state_name’s election website."
