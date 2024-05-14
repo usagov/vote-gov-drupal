@@ -11,7 +11,18 @@
   @include grid-container;
   @include grid-row;
   @include vote-block-padding-y;
+  @include u-padding-x(3);
   @include u-flex('align-center');
+
+  @include at-media('tablet') {
+    @include u-padding-x(4);
+  }
+
+  @include at-media('desktop') {
+    @include u-padding-x(10);
+    @include u-padding-y(8);
+  }
+
 }
 
 .vote-quicklinks__heading {
@@ -36,21 +47,20 @@
     text-decoration: none;
 
     &:hover{
-      text-decoration: underline;
+      @include u-text('underline');
       background-color: $base-dark;
     }
 
     &::after{
       content: url( '../../../votegov/img/svg/arrow-white.svg' );
-      padding-left: 4px;
+      @include u-padding-left(0.5)
     }
 
     &:hover::after{
+      @include u-padding-left(1.5);
       transition: 0.2s ease-in-out;
       transform: translateX(12px);
-      padding-left: 12px;
     }
-
   }
   
   @include at-media('desktop') {
