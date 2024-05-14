@@ -21,15 +21,30 @@
     .usa-identifier__identity
     {
         display:flex;
+        @include at-media-max('tablet-lg'){
+            @include u-margin-top(4);
+        }
     }
 
     .usa-identifier__identity-disclaimer{
         @include u-position('relative');
         @include u-font-weight('normal');
 
-        p {
-            font-size: 16px;
-            max-width: 75%;
+        @include at-media('tablet-lg')
+        {
+            p {
+                font-size: 16px;
+                max-width: 75%;
+            }
+        }
+
+        @include at-media-max('tablet-lg'){
+            @include u-margin-y('auto');
+
+            p {
+                font-size: 14px;
+                max-width: 100%;
+            }
         }
     }
 
@@ -101,5 +116,6 @@
 
     .usa-identifier__section--masthead {
         @include u-margin-y('auto');
+        @include u-font-family('serif');
     }
 }

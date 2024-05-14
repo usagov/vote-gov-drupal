@@ -1,5 +1,6 @@
 @use "uswds-core" as *;
 @use "variables" as *;
+@use "mixins" as *;
 
 .gsa-container {
     @include u-display('flex');
@@ -40,49 +41,50 @@
     font-size: 14px;
 }
 
-.eac-logo-container {
-    @include at-media-max('tablet-lg') {
-        &:before {
-            content: "";
-            @include u-margin-y(3);
-            display: block;
-            background-color: $bg-light-medium;
-            height: 1px;
-            width: 96px;
-            @include u-margin-x('auto');
-        }
-    }
+.eac-container__text {
+    @include u-margin-y('auto');
+    @include u-padding-right(3);
+}
 
+.eac-logo-container {
     a>img {
         min-width: 144px;
+    }
+}
+
+.usa-footer__social-links {
+    text-wrap: nowrap;
+    padding: 0;
+    padding-bottom: 18px;
+
+    @include at-media-max('tablet-lg') {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+
+      &::before {
+        content: "";
+        display: block;
+        background-color: #d3d3d3;
+        height: 1px;
+        width: 100vw;
+      }
+    }
+
+    a {
+      margin-top: 18px;
+      color: $base-dark;
+    }
+
+    img {
+        @include u-height(4);
+        @include u-margin-left(2);
+        @include u-margin-top(0);
     }
 }
 
 .vote-social-link {
     display: flex;
     align-items: center;
-
-    span {
-        color: $base-dark;
-        font-family: Roboto;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 155%;
-    }
-}
-
-.vote-social-link__icon {
-    @include u-radius-top('pill');
-    @include u-radius-bottom('pill');
-    @include u-width(4);
-    @include u-height(4);
-    background-color: $bg-light-cool;
-    margin-left: 10px;
-
-    img {
-        margin-left: 8px;
-        margin-top: 8px;
-        @include u-height(2);
-    }
 }

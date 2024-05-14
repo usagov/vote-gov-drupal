@@ -9,13 +9,13 @@
 }
 
 .usa-footer__secondary-section {
-  border-top: 1px solid #D3D3D3;
   align-content: center;
-  background-color: #F7F9FA;
+  background-color: $bg-light-cool;
   padding: 0;
 }
 
 .usa-footer__logo {
+  @include vote-remove-external-link;
   color: $base-dark;
   display: flex;
   flex-wrap: wrap;
@@ -36,30 +36,5 @@
   @include at-media-max('tablet-lg') {
     justify-content: center;
     margin-right: 0;
-  }
-}
-
-.usa-footer__social-links {
-  text-wrap: nowrap;
-  padding: 0;
-  padding-bottom: 18px;
-
-  @include at-media-max('tablet-lg') {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-
-    &::before {
-      content: "";
-      display: block;
-      background-color: #d3d3d3;
-      height: 1px;
-      width: 100vw;
-    }
-  }
-
-  a {
-    margin-top: 18px;
   }
 }
