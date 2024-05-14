@@ -16,23 +16,43 @@
 
 .vote-quicklinks__heading {
   @include u-font-size('body', 'xl');
+  @include u-text('bold');
 
   h2 {
     color: $base-white;
   }
 
   @include at-media('desktop') {
-    @include grid-col(5);
+    @include grid-col(6);
   }
 }
 
 .vote-quicklinks__content{
   @include u-font('sans', 'md');
+  @include u-text('normal');
 
   a {
-    color: $ac-cool-light !important;
-  }
+    color: $base-white !important;
+    text-decoration: none;
 
+    &:hover{
+      text-decoration: underline;
+      background-color: $base-dark;
+    }
+
+    &::after{
+      content: url( '../../../votegov/img/svg/arrow-white.svg' );
+      padding-left: 4px;
+    }
+
+    &:hover::after{
+      transition: 0.2s ease-in-out;
+      transform: translateX(12px);
+      padding-left: 12px;
+    }
+
+  }
+  
   @include at-media('desktop') {
     @include grid-col(5);
     @include grid-offset(1);
