@@ -1,4 +1,4 @@
-# Russian translation of Vote.gov
+# Arabic translation of vote.gov
 #
 msgid ""
 msgstr ""
@@ -81,12 +81,12 @@ msgid "in partnership with"
 msgstr "بالشراكة مع"
 
 # data.translations.footer.eac_logo_alt_text (see accessibility updates)
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
-msgstr "شعار لجنة المساعدة الانتخابية الأمريكية الذي يشير إلى التعاون  مع Vote.gov"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
+msgstr "شعار لجنة المساعدة الانتخابية الأمريكية الذي يشير إلى التعاون  مع vote.gov"
 
 # data.translations.footer.twitter_text
-msgid "Follow Vote.gov on Twitter"
-msgstr "تابع Vote.gov على تويتر (باللغة الإنجليزية)"
+msgid "Follow vote.gov on Twitter"
+msgstr "تابع vote.gov على تويتر (باللغة الإنجليزية)"
 
 # data.translations.footer.section_sign_up
 msgid "Email sign-up"
@@ -101,8 +101,8 @@ msgid "GSA logo"
 msgstr "شعار GSA"
 
 # data.translations.homepage.search_placeholder
-msgid "Search Vote.gov"
-msgstr "ابحث عن Vote.gov"
+msgid "Search vote.gov"
+msgstr "ابحث عن vote.gov"
 
 # data.translations.homepage.section_banner
 msgid "Official government website"

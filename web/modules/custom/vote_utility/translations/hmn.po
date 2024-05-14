@@ -1,4 +1,4 @@
-# Hmong translation of Vote.gov
+# Hmong translation of vote.gov
 #
 msgid ""
 msgstr ""
@@ -57,14 +57,14 @@ msgstr "Nomtswv cov ntaub ntawv thiab kev ua haujlwm"
 msgid "in partnership with"
 msgstr "ua haujlwm uake nrog"
 
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
-msgstr "US Election Assistance Commission (Nomtswv Asmeska Kev Xaiv Tsa tes dej haujlwm pab) lub cim qhia tias muaj kev sib koomtes nrog Vote.gov"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
+msgstr "US Election Assistance Commission (Nomtswv Asmeska Kev Xaiv Tsa tes dej haujlwm pab) lub cim qhia tias muaj kev sib koomtes nrog vote.gov"
 
-msgid "Follow Vote.gov on Twitter"
-msgstr "Caum Vote.gov saum Twitter (lus Askiv)"
+msgid "Follow vote.gov on Twitter"
+msgstr "Caum vote.gov saum Twitter (lus Askiv)"
 
 #search
-msgid "Search Vote.gov"
+msgid "Search vote.gov"
 msgstr "Nrhiav vote.gov"
 
 #state

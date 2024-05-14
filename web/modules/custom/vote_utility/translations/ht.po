@@ -1,4 +1,4 @@
-# Russian translation of Vote.gov
+# Russian translation of vote.gov
 #
 msgid ""
 msgstr ""
@@ -81,12 +81,12 @@ msgid "in partnership with"
 msgstr "an patenarya ak"
 
 # data.translations.footer.eac_logo_alt_text
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
-msgstr "Logo Komisyon Etazini Asistans pou Eleksyon (US Election Assistance Commission) ki endike patenarya ak Vote.gov"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
+msgstr "Logo Komisyon Etazini Asistans pou Eleksyon (US Election Assistance Commission) ki endike patenarya ak vote.gov"
 
 # data.translations.footer.twitter_text
-msgid "Follow Vote.gov on Twitter"
-msgstr "Swiv Vote.org sou Twitter (ann Anglè)"
+msgid "Follow vote.gov on Twitter"
+msgstr "Swiv vote.gov sou Twitter (ann Anglè)"
 
 # data.translations.footer.section_sign_up
 msgid "Email sign-up"
@@ -101,7 +101,7 @@ msgid "GSA logo"
 msgstr "Logo GSA a"
 
 # data.translations.homepage.search_placeholder
-msgid "Search Vote.gov"
+msgid "Search vote.gov"
 msgstr "Fè rechèch sou vote.gov"
 
 # data.translations.homepage.section_banner

@@ -1,4 +1,4 @@
-# Chinese - traditional translation of Vote.gov
+# Chinese - traditional translation of vote.gov
 #
 msgid ""
 msgstr ""
@@ -57,15 +57,15 @@ msgstr "政府資訊和服務"
 msgid "in partnership with"
 msgstr "與合作"
 
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
 msgstr "與 U.S. Election Assistance Commission合作 "
 
-msgid "Follow Vote.gov on Twitter"
-msgstr "在 Twitter 上追蹤 Vote.gov (英語)"
+msgid "Follow vote.gov on Twitter"
+msgstr "在 Twitter 上追蹤 vote.gov (英語)"
 
 #search
-msgid "Search Vote.gov"
-msgstr "搜尋 Vote.gov"
+msgid "Search vote.gov"
+msgstr "搜尋 vote.gov"
 
 #state
 msgid "Register to vote in @state_name"

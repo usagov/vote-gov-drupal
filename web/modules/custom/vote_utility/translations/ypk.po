@@ -1,4 +1,4 @@
-# Yupʼik translation of Vote.gov
+# Yupʼik translation of vote.gov
 #
 msgid ""
 msgstr ""
@@ -57,14 +57,14 @@ msgstr "Kavemem ungipiillu salqumsugillu"
 msgid "in partnership with"
 msgstr "ilalkiilluteng"
 
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
 msgstr "ilalkiilluteng U.S. Election Assistance Commission"
 
-msgid "Follow Vote.gov on Twitter"
-msgstr "Maligtigu Vote.gov Twitter-ekun (Laluramkestun)"
+msgid "Follow vote.gov on Twitter"
+msgstr "Maligtigu vote.gov Twitter-ekun (Laluramkestun)"
 
 #search
-msgid "Search Vote.gov"
+msgid "Search vote.gov"
 msgstr "Ivaghivikigu vote.gov"
 
 #state

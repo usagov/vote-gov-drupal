@@ -1,4 +1,4 @@
-# Somali translation of Vote.gov
+# Somali translation of vote.gov
 #
 msgid ""
 msgstr ""
@@ -81,12 +81,12 @@ msgid "in partnership with"
 msgstr "Iyadoo lala kaashanaayo"
 
 # data.translations.footer.eac_logo_alt_text
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
-msgstr "Astaanta Guddiga Kaalmada Doorashada Mareykanka oo tilmaamaysa iskaashi lala yeesho Vote.gov"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
+msgstr "Astaanta Guddiga Kaalmada Doorashada Mareykanka oo tilmaamaysa iskaashi lala yeesho vote.gov"
 
 # data.translations.footer.twitter_text
-msgid "Follow Vote.gov on Twitter"
-msgstr "Raac Vote.gov oo kala soco barta Twitter ka (oo af Ingiriis ah)"
+msgid "Follow vote.gov on Twitter"
+msgstr "Raac vote.gov oo kala soco barta Twitter ka (oo af Ingiriis ah)"
 
 # data.translations.footer.section_sign_up
 msgid "Email sign-up"
@@ -101,8 +101,8 @@ msgid "GSA logo"
 msgstr "Astaanta GSA"
 
 # data.translations.homepage.search_placeholder
-msgid "Search Vote.gov"
-msgstr "Baar Vote.gov"
+msgid "Search vote.gov"
+msgstr "Baar vote.gov"
 
 # data.translations.homepage.section_banner
 msgid "Official government website"
