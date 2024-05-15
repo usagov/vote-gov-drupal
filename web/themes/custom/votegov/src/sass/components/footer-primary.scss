@@ -2,12 +2,43 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+.gsa-container {
+  @include u-display('flex');
+  align-self: center;
+
+  @include at-media-max('tablet-lg') {
+      @include u-width('full');
+  }
+
+  img {
+    @include u-margin-right(2);
+  }
+
+  span {
+      @include u-margin-right('auto');
+      font-family: 'Roboto';
+      font-size: 16px;
+      align-self: center;
+      line-height: 24.80px;
+      p {
+        color: #ADADAD;
+      }
+  }
+}
+
+.identifier-gov-info{
+  font-size: 14px;
+}
+
+.identifier-links-container {
+  @include u-margin-y(4);
+}
+
 .identifier-links {
   column-gap: 24px;
 
-  @include at-media-max('mobile-lg') {
+  @include at-media-max('mobile') {
     column-count: 1;
-    text-align: center;
   }
 
   @include at-media('mobile-lg') {
@@ -25,20 +56,13 @@
 
   li {
     + li {
-      @include at-media-max('tablet') {
-        @include u-margin-top(2);
-      }
-
-      @include at-media('tablet') {
-        @include u-margin-top('205');
-      }
+      @include u-margin-top(1);
     }
 
     a, a:visited {
-      @include vote-link;
+      @include vote-link-light;
       word-break: break-word;
-      font-size: 16px;
-      color: $base-dark !important;
+      font-size: 14px;
     }
   }
 }

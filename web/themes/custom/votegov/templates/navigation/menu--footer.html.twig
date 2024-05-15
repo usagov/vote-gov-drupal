@@ -21,19 +21,23 @@
  */
 #}
 {% import _self as menus %}
+{% set infoLink = link('Visit USA.gov' | t, (language == 'es' ? 'https://www.usa.gov/espanol/' : 'https://www.usa.gov/')) %}
 
 <div class="usa-footer__primary-section" data-test="footer">
     {# GSA logo #}
-    <div class="gsa-container">
+    <div class="gsa-container grid-container">
       <img src="{{ theme_path }}/img/gsa-logo.svg" alt="{{ 'GSA logo'|t }}" width="48" height="48">
       <span aria-label="{{ 'Agency description' | t }}">
-        {{ "Vote.gov" }}
+        <p>{{ "vote.gov" }}</p>
         <strong>{{ "An official website of the General Services Administration" | t }}</strong>
       </span>
     </div>
     {# footer links #}
     <div class="grid-container">
       {{ menus.menu_links(items, attributes, 0) }}
+    </div>
+    <div class="identifier-gov-info grid-container" aria-label="{{ 'Government information and services' | t }}">
+        {{ 'Looking for U.S. government information and services? @link.' | t({'@link': infoLink | render}) }}
     </div>
 </div>
 

@@ -2,48 +2,16 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-.gsa-container {
-    @include u-display('flex');
-    align-self: center;
-
-    @include at-media('tablet-lg') {
-        &:after {
-            content: '';
-            @include u-height(6);
-            @include u-width('1px');
-            @include u-margin-x(6);
-            background-color: $bg-light-medium;
-        }
-    }
-
-    @include at-media-max('tablet-lg') {
-        @include u-width('full');
-    }
-
-    img {
-        @include u-margin-left('auto');
-    }
-
-    span {
-        @include u-margin-right('auto');
-        @include u-margin-left(2);
-        font-family: 'Roboto';
-        max-width: 202px;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 120%;
-        align-self: center;
-    }
-}
-
-.gsa-container__text {
-    font-size: 14px;
-}
-
 .eac-container__text {
     @include u-margin-y('auto');
-    @include u-padding-right(3);
+
+    @include at-media('tablet'){
+      @include u-padding-right(3);
+    }
+
+    @include at-media-max('tablet') {
+      @include u-padding-bottom(2);
+    }
 }
 
 .eac-logo-container {

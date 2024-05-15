@@ -79,6 +79,22 @@
   }
 }
 
+@mixin vote-link-light {
+  @include u-text('underline');
+  color: $base-white;
+
+  &:visited,
+  &:active {
+    color: $base-primary;
+  }
+
+  @include hover {
+    @include u-text('no-underline');
+    background-color: $base-primary-hover;
+    color: $base-white !important;
+  }
+}
+
 @mixin vote-link-dark {
   @include u-text('underline');
   color: $base-white;
