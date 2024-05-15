@@ -43,6 +43,7 @@
   @include u-text('normal');
 
   a {
+    @include u-text('bold');
     color: $base-white !important;
     text-decoration: none;
 
