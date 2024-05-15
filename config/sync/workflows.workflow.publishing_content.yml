@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.landing
     - node.type.nvrf_page
     - node.type.page
     - node.type.state_territory
@@ -65,7 +64,6 @@ type_settings:
       weight: 3
   entity_types:
     node:
-      - landing
       - nvrf_page
       - page
       - state_territory

@@ -50,6 +50,7 @@ permissions:
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'administer menu'
+  - 'administer nodes'
   - 'create audio media'
   - 'create basic block content'
   - 'create content translations'
