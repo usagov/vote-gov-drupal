@@ -4,15 +4,8 @@
 
 .usa-identifier {
     @include vote-block-padding-y--narrow;
-    @include u-border-top(1px);
-    @include u-border-top('solid');
-    border-color: $bg-light-medium;
     background-color: $base-white;
     color: $base-dark;
-
-    @include at-media('tablet') {
-        @include u-display('flex');
-    }
 
     .usa-identifier__logo{
         @include u-margin-right(2);
@@ -106,9 +99,13 @@
         }
     }
 
-    .vote-usa-contact-container{
-        @include vote-remove-external-link;
+    .vote-partners-contact-container {
         @include vote-solid-border-top;
+    }
+
+    .vote-usa-contact-container {
+        @include grid-container;
+        @include vote-remove-external-link;
         @include u-display('flex');
 
         @include at-media-max('tablet-lg'){

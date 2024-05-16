@@ -1,17 +1,21 @@
 <div class="usa-identifier">
     <div
-      class="usa-identifier__section--usagov grid-container"
+      class="usa-identifier__section--usagov"
       aria-label={{ "U.S. government information and services," | t }}
     >
       {#Row 1 Divider - USA.gov Links #}
-      <nav
+      <nav class="grid-container"
         aria-label={{ "Important links," | t }}
       >
           {# USA.gov election info links #}
           {{ drupal_entity('block_content', '18') }}
       </nav>
 
-      {# Row 2 Divider - USA.gov link and email sign-up #}
+
+    </div>
+
+    {# Row 2 Divider - USA.gov link and email sign-up #}
+    <div class="vote-partners-contact-container">
       <div class="vote-usa-contact-container">
         {# USA.gov link #}
         <section
@@ -36,6 +40,5 @@
         </section>
         {# Email sign-up component. #}
         {{ drupal_entity('block_content', 4) }}
-      </div>
     </div>
 </div>
