@@ -30,11 +30,12 @@
   font-size: 14px;
 }
 
-.identifier-links-container {
+.vote-identifier-links-container {
+  @include grid-container;
   @include u-margin-y(4);
 }
 
-.identifier-links {
+.vote-identifier-links {
   column-gap: 24px;
 
   @include at-media-max('mobile') {
