@@ -4,7 +4,7 @@
 
 .gsa-container {
   @include u-display('flex');
-  align-self: center;
+  @include u-flex('align-self-center');
 
   @include at-media-max('tablet-lg') {
       @include u-width('full');
@@ -16,9 +16,8 @@
 
   span {
       @include u-margin-right('auto');
-      font-family: 'Roboto';
-      font-size: 16px;
-      align-self: center;
+      @include u-font('sans', 'xs');
+      @include u-flex('align-self-center');
       line-height: 24.80px;
       p {
         color: #ADADAD;
@@ -27,7 +26,7 @@
 }
 
 .identifier-gov-info{
-  font-size: 14px;
+  @include u-font('sans', '3xs');
 }
 
 .vote-identifier-links-container {
@@ -63,8 +62,8 @@
 
     a, a:visited {
       @include vote-link-light;
+      @include u-font('sans', '3xs');
       word-break: break-word;
-      font-size: 14px;
     }
   }
 }

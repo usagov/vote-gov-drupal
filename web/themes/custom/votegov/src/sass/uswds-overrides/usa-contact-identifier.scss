@@ -20,7 +20,7 @@
 
     .usa-identifier__identity
     {
-        display:flex;
+        @include u-display('flex');
         @include at-media-max('tablet-lg'){
             @include u-margin-top(4);
         }
@@ -49,14 +49,14 @@
     }
 
     .usa-identifier__section--usagov {
-      @include at-media-max('tablet') {
-        @include u-margin-top(4);
-      }
+        @include at-media-max('tablet') {
+            @include u-margin-top(4);
+        }
 
         ul {
-            list-style-type: none;
             @include u-padding(0);
             @include u-margin-y(5);
+            list-style-type: none;
 
             @include at-media-max('tablet'){
                 @include u-margin-top(4);
@@ -64,12 +64,12 @@
 
             @include at-media('tablet') {
                 columns: 2;
-              column-gap: 2rem;
+                column-gap: 2rem;
             }
 
             @include at-media('tablet-lg') {
                 columns: 3;
-              column-gap: 2rem;
+                column-gap: 2rem;
             }
 
             p {
@@ -80,27 +80,28 @@
         li {
             @include u-margin(0);
 
-          + li {
+            + li {
             @include u-margin-top(5);
 
             @include at-media-max('tablet'){
                 @include u-margin-top(4);
             }
-          }
+            }
         }
 
         a {
-            color: $base-dark;
             @include u-font-weight('bold');
             @include u-text('underline');
+            color: $base-dark;
+
             :visited {
                 color: $base-dark;
             }
             &:focus,
             &:hover {
+                @include u-text('no-underline');
                 background-color: $base-primary-hover;
                 color: $base-white;
-                @include u-text('no-underline');
             }
         }
     }
@@ -109,6 +110,7 @@
         @include vote-remove-external-link;
         @include vote-solid-border-top;
         @include u-display('flex');
+
         @include at-media-max('tablet-lg'){
             flex-wrap: wrap;
         }

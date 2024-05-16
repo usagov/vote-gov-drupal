@@ -21,27 +21,26 @@
 }
 
 .usa-footer__social-links {
+    @include u-padding(0);
+    @include u-padding-bottom(2);
     text-wrap: nowrap;
-    padding: 0;
-    padding-bottom: 18px;
 
     @include at-media-max('tablet-lg') {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-
+      @include u-display('flex');
+      @include u-flex('no-wrap');
+      @include u-flex('justify-center');
 
       &::before {
-        content: "";
-        display: block;
+        @include u-display('block');
         background-color: #d3d3d3;
         height: 1px;
         width: 100vw;
+        content: "";
       }
     }
 
     a {
-      margin-top: 18px;
+      @include u-margin-top(2);
       color: $base-dark;
     }
 
@@ -53,6 +52,6 @@
 }
 
 .vote-social-link {
-    display: flex;
-    align-items: center;
+    @include u-display('flex');
+    @include u-flex('align-center');
 }
