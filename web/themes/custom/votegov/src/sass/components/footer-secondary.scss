@@ -29,14 +29,6 @@
       @include u-display('flex');
       @include u-flex('no-wrap');
       @include u-flex('justify-center');
-
-      &::before {
-        @include u-display('block');
-        background-color: #d3d3d3;
-        height: 1px;
-        width: 100vw;
-        content: "";
-      }
     }
 
     a {
