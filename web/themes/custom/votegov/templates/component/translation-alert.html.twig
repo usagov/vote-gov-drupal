@@ -1,8 +1,0 @@
-{% set alert_translation %}
-  <p>Welcome to the new design of vote.gov! We are continuing to translate new and revised pages. View
-    <a href="/{{ language }}/legacy">pages available in {{ languagename }}.</a></p>
-{% endset %}
-{% include '@uswds_templates/usa-site-alert.html.twig' with {
-  'alert_type': 'info',
-  'text': alert_translation
-} %}
