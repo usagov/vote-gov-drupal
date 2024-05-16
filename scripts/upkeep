@@ -36,6 +36,7 @@ echo "Running 'drush tome:static' in '${environment}'..."
 echo "**************************************************"
 drush tome:static --uri=${ssg_endpoint} --path-count=1 --retry-count=0 -y
 drush tome:static-export-path '/sitemap.xml,/sitemap_generator/default/sitemap.xsl' --uri=${ssg_endpoint} --retry-count=0 -y
+drush cr
 echo "'drush tome:static' task...completed!"
 echo ""
 
