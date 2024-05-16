@@ -7,14 +7,25 @@ dependencies:
     - node_revision_delete
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
+    available_menus: {  }
+    parent: ''
   node_revision_delete:
     amount:
       status: true
       settings:
         amount: 50
+    created:
+      status: false
+      settings:
+        age: 1
+    drafts:
+      status: false
+      settings:
+        age: 1
+    only_drafts:
+      status: false
+      settings:
+        age: 0
 name: 'Basic Page'
 type: page
 description: ''

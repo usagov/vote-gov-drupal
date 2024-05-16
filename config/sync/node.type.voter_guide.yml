@@ -22,10 +22,14 @@ third_party_settings:
       status: false
       settings:
         age: 1
+    only_drafts:
+      status: false
+      settings:
+        age: 0
 name: 'Voter Guide'
 type: voter_guide
 description: ''
 help: ''
-new_revision: false
-preview_mode: 1
+new_revision: true
+preview_mode: 0
 display_submitted: false

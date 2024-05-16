@@ -6,7 +6,7 @@
   }
 }
 
-.page-content .field:not(.field--name-field-media) {
+.vote-page-content .field:not(.field--name-field-media) {
   @include at-media('tablet') {
     width: calc((6 / 7) * 100%);
   }

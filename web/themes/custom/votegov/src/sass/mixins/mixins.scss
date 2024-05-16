@@ -18,12 +18,20 @@
   }
 }
 
+.vote-narrow-container {
+  @include vote-narrow-container;
+}
+
 @mixin vote-block-margin-y {
   @include u-margin-y(6);
 
   @include at-media('desktop') {
     @include u-margin-y(10);
   }
+}
+
+.vote-block-margin-y {
+  @include vote-block-margin-y;
 }
 
 @mixin vote-block-padding-y {
@@ -34,12 +42,20 @@
   }
 }
 
+.vote-block-padding-y {
+  @include vote-block-padding-y;
+}
+
 @mixin vote-block-margin-y--narrow {
   @include u-margin-y(4);
 
   @include at-media('desktop') {
     @include u-margin-y(6);
   }
+}
+
+.vote-block-margin-y--narrow {
+  @include vote-block-margin-y--narrow;
 }
 
 @mixin vote-block-padding-y--narrow {
@@ -50,10 +66,18 @@
   }
 }
 
+.vote-block-padding-y-narrow {
+  @include vote-block-padding-y--narrow;
+}
+
 @mixin vote-block-item-margin-y {
   > * + * {
     @include u-margin-top(2);
   }
+}
+
+.vote-block-item-margin-y {
+  @include vote-block-item-margin-y;
 }
 
 @mixin hover {
@@ -63,19 +87,37 @@
   }
 }
 
-@mixin vote-link {
+@mixin after {
+  &:after {
+    content: '';
+    @content;
+  }
+}
+
+@mixin before {
+  &:before {
+    content: '';
+    @content;
+  }
+}
+
+@mixin vote-link($color: $base-primary, $color-hover: $base-primary-hover) {
   @include u-text('underline');
-  color: $base-primary;
+  color: $color;
 
   &:visited,
   &:active {
-    color: $base-primary;
+    color: $color;
+
+    @include hover {
+      color: $base-white;
+    }
   }
 
   @include hover {
     @include u-text('no-underline');
-    background-color: $base-primary-hover;
-    color: $base-white !important;
+    background-color: $color-hover;
+    color: $base-white;
   }
 }
 
@@ -112,11 +154,24 @@
 }
 
 @mixin vote-solid-border-top {
-  @include u-border-top(1px);//mixin
+  @include u-border-top(1px);
   @include u-border-top('solid');
   border-color: $bg-light-medium;
-  background-color: $base-white;
-  font-family: $theme-font-type-sans;
+}
+
+.vote-solid-border-top {
+  @include vote-solid-border-top;
+}
+
+@mixin vote-fill {
+  @include u-top(0);
+  @include u-bottom(0);
+  @include u-left(0);
+  @include u-right(0);
+}
+
+.vote-fill {
+  @include vote-fill;
 }
 
 @mixin vote-remove-external-link {

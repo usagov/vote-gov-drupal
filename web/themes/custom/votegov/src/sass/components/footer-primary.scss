@@ -42,6 +42,7 @@
   }
 
   @include at-media('mobile-lg') {
+    column-gap: 1.5rem;
     column-count: 2;
   }
 
@@ -51,7 +52,7 @@
 
   @include at-media('tablet-lg') {
     column-count: 4;
-    column-gap: 32px;
+    column-gap: 2rem;
   }
 
   li {

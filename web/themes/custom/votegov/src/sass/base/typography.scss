@@ -84,7 +84,6 @@ blockquote {
 cite {
   @include u-font-size('sans', 4);
   @include u-display('block');
-  color: gray;
 
   * + & {
     @include u-margin-top(2);
@@ -95,7 +94,7 @@ small {
   @include u-font-size('serif', 3);
 }
 
-hr, p+hr {
+hr, p + hr {
   @include u-border(0);
   @include u-margin-y(3);
   border-bottom: 1px solid $bg-light-medium;
@@ -111,5 +110,5 @@ main {
 
 .nonvfont,
 .nonvfont * {
-  @include u-font-family('sans')
+  @include u-font-family('sans');
 }

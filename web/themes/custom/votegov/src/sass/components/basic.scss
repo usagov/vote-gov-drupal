@@ -4,15 +4,10 @@
 
 .vote-basic {
   @include vote-block-margin-y;
-}
-
-.vote-basic__container {
   @include grid-container();
 }
 
 .vote-basic__heading {
-  @include u-maxw('tablet-lg');
-
   @include at-media('tablet-lg') {
     @include grid-col(7);
     @include grid-offset(1);

@@ -87,7 +87,7 @@ msgid "Must be received by @date"
 msgstr "@date መድረስ አለበት"
 
 msgid "Online registration deadline:"
-msgstr "የድህረ ገጽ ላይ ምዝገባ የመጨረሻ ቀን፦"
+msgstr "ድረገጽ ላይ ምዝገባ የመጨረሻ ቀን፦"
 
 msgid "Voter registration deadlines"
 msgstr "የመራጮች ምዝገባ የመጨረሻ ቀናት"
