@@ -1,4 +1,4 @@
-# Tagalog translation of Vote.gov
+# Tagalog translation of vote.gov
 #
 msgid ""
 msgstr ""
@@ -30,7 +30,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "Ilustrasyon ng kahon ng botante na may naka-tsek na balota na inilalagay upang ipahiwatig ang aksyon sa pagboto"
 
 #identifier
-msgid "An official website of the @link."
+msgid "an official website of the @link."
 msgstr "Isang opisyal na website ng @link"
 
 msgid "General Services Administration"
@@ -58,15 +58,15 @@ msgstr "Impormasyon at mga serbisyo ng gobyerno"
 msgid "in partnership with"
 msgstr "sa pakikipagtulungan sa"
 
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
 msgstr "sa pakikipagtulungan sa Election Assistance Commission"
 
-msgid "Follow Vote.gov on Twitter"
-msgstr "I-follow ang Vote.gov sa Twitter (sa Ingles)"
+msgid "Follow vote.gov on"
+msgstr "I-follow ang vote.gov sa X (sa Ingles)"
 
 #search
-msgid "Search Vote.gov"
-msgstr "I-search ang Vote.gov"
+msgid "Search vote.gov"
+msgstr "I-search ang vote.gov"
 
 #state
 msgid "Register to vote in @state_name"

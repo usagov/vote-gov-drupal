@@ -1,4 +1,4 @@
-# Khmer translation of Vote.gov
+# Khmer translation of vote.gov
 #
 msgid ""
 msgstr ""
@@ -29,7 +29,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "រូបភាពនៃប្រអប់អ្នកបោះឆ្នោតដែលមានសន្លឹកឆ្នោតបានគូសធីកត្រូវបានបញ្ចូល ដើម្បីបង្ហាញពីសកម្មភាពបោះឆ្នោត"
 
 #identifier
-msgid "An official website of the @link."
+msgid "an official website of the @link."
 msgstr "គេហទំព័រផ្លូវការនៃ @link"
 
 msgid "General Services Administration"
@@ -57,15 +57,15 @@ msgstr "ព័ត៌មាននិងសេវាកម្មរដ្ឋាភ
 msgid "in partnership with"
 msgstr "ក្នុងភាពជាដៃគូជាមួយ"
 
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
 msgstr "ក្នុងភាពជាដៃគូជាមួយ U.S. Election Assistance Commission"
 
-msgid "Follow Vote.gov on Twitter"
-msgstr "តាមដាន Vote.gov នៅលើ Twitter (ជាភាសាអង់គ្លេស)"
+msgid "Follow vote.gov on"
+msgstr "តាមដាន vote.gov នៅលើ X (ជាភាសាអង់គ្លេស)"
 
 #search
-msgid "Search Vote.gov"
-msgstr "ស្រាវជ្រាវរក Vote.gov"
+msgid "Search vote.gov"
+msgstr "ស្រាវជ្រាវរក vote.gov"
 
 #state
 msgid "Register to vote in @state_name"

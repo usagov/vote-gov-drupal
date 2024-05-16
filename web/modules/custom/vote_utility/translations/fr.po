@@ -1,4 +1,4 @@
-# French translation of Vote.gov
+# French translation of vote.gov
 #
 msgid ""
 msgstr ""
@@ -45,7 +45,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "Illustration d'une boîte de vote recevant un bulletin de vote rempli afin d'indiquer l'action de voter"
 
 # data.translations.footer.identifier_gsa_txt
-msgid "An official website of the @link."
+msgid "an official website of the @link."
 msgstr "Un site Web officiel de @link"
 
 # data.translations.footer.identifier_gsa_txt__1
@@ -81,12 +81,12 @@ msgid "in partnership with"
 msgstr "en partenariat avec"
 
 # data.translations.footer.eac_logo_alt_text (see accessibility updates)
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
-msgstr "Le logo de la Commission d'assistance électorale des États-Unis qui indique le partenariat avec Vote.gov"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
+msgstr "Le logo de la Commission d'assistance électorale des États-Unis qui indique le partenariat avec vote.gov"
 
 # data.translations.footer.twitter_text
-msgid "Follow Vote.gov on Twitter"
-msgstr "Suivez Vote.gov sur Twitter (en anglais)"
+msgid "Follow vote.gov on"
+msgstr "Suivez vote.gov sur X (en anglais)"
 
 # data.translations.footer.section_sign_up
 msgid "Email sign-up"
@@ -101,8 +101,8 @@ msgid "GSA logo"
 msgstr "Logo GSA a"
 
 # data.translations.homepage.search_placeholder
-msgid "Search Vote.gov"
-msgstr "Rechercher Vote.gov"
+msgid "Search vote.gov"
+msgstr "Rechercher vote.gov"
 
 # data.translations.homepage.section_banner
 msgid "Official government website"
