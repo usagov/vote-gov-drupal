@@ -40,7 +40,6 @@
 
 .vote-quicklinks__content{
   @include u-font('sans', 'md');
-  @include u-text('normal');
 
   a {
     @include u-text('bold');
