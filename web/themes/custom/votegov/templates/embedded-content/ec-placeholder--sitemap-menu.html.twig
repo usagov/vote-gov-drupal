@@ -1,3 +1,7 @@
+{% set htmlsitemap = drupal_entity('block', 'votegov_htmlsitemap') | render %}
+{% set legacy_link %}
+  <li class="usa-list usa-list--unstyled"><a href="{{ path('entity.node.canonical', { 'node': 63 }) }}">{{ drupal_field('title', 'node', 63) }}</a></li>
+{% endset %}
 <nav class="vote-sitemap vote-sitemap--menu">
-  {{ drupal_entity('block', 'votegov_htmlsitemap') }}
+  {{ htmlsitemap | default(legacy_link) }}
 </nav>
