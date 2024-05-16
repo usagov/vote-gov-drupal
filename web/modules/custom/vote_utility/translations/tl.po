@@ -78,7 +78,7 @@ msgstr "Paano magparehistro para bumoto"
 msgid "Other ways to register to vote"
 msgstr "Iba pang mga paraan para magrehistro para bumoto"
 
-msgid "Voter registration deadlines for the @election_date election."
+msgid "Voter registration deadlines for the @election_date election. @link"
 msgstr "Mga deadline ng rehistrasyon ng botante para sa @election_date, na halalan"
 
 msgid "Find state and local election dates."

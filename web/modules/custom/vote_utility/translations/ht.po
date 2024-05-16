@@ -120,7 +120,7 @@ msgstr "Kijan pou enskri pou vote"
 msgid "Other ways to register to vote"
 msgstr "Lòt fason pou enskri pou vote"
 
-msgid "Voter registration deadlines for the @election_date election."
+msgid "Voter registration deadlines for the @election_date election. @link"
 msgstr "Dat limit enskripsyon votè pou eleksyon @election_date la"
 
 msgid "Find state and local election dates."
