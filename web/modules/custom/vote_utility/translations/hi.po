@@ -29,7 +29,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "मतदान क्रिया को इंगित करने के लिए मतदाता पेटी में चेक किए गए मतपत्र को डाले जाने का चित्रण"
 
 #identifier
-msgid "An official website of the @link."
+msgid "an official website of the @link."
 msgstr "@link की आधिकारिक वेबसाइट"
 
 msgid "General Services Administration"
@@ -60,8 +60,8 @@ msgstr "के साथ साझेदारी में"
 msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
 msgstr "U.S. Election Assistance Commission के साथ साझेदारी में"
 
-msgid "Follow vote.gov on Twitter"
-msgstr "vote.gov को Twitter पर फ़ॉलो करें (अंग्रेज़ी में)"
+msgid "Follow vote.gov on"
+msgstr "vote.gov को X पर फ़ॉलो करें (अंग्रेज़ी में)"
 
 #search
 msgid "Search vote.gov"

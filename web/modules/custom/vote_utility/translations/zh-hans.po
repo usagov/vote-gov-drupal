@@ -29,7 +29,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "插有已勾选选票的选票箱图样，表示投票动作"
 
 #identifier
-msgid "An official website of the @link."
+msgid "an official website of the @link."
 msgstr "@link官方网站"
 
 msgid "General Services Administration"
@@ -60,8 +60,8 @@ msgstr "与合作"
 msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
 msgstr "与 U.S. Election Assistance Commission合作"
 
-msgid "Follow vote.gov on Twitter"
-msgstr "在 Twitter 上关注 vote.gov (英语)"
+msgid "Follow vote.gov on"
+msgstr "在 X 上关注 vote.gov (英语)"
 
 #search
 msgid "Search vote.gov"

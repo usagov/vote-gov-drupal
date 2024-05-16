@@ -45,7 +45,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "Иллюстрация ящика для голосования, в который вставляется отмеченный галочкой бюллетень для обозначения действия при голосовании"
 
 # data.translations.footer.identifier_gsa_txt
-msgid "An official website of the @link."
+msgid "an official website of the @link."
 msgstr "Официальный веб-сайт @link"
 
 # data.translations.footer.identifier_gsa_txt__1
@@ -85,7 +85,7 @@ msgid "U.S. Election Assistance Commission logo which indicates a partnership wi
 msgstr "Логотип Комиссии США по содействию выборам, который указывает на партнёрство с vote.gov"
 
 # data.translations.footer.twitter_text
-msgid "Follow vote.gov on Twitter"
+msgid "Follow vote.gov on"
 msgstr "Следите за новостями vote.gov в Твиттере (по-английски)"
 
 # data.translations.footer.section_sign_up

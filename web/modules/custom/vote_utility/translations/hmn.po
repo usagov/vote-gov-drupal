@@ -29,7 +29,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "Daim duab uas muaj daim ntawv kos ib txoj kab ntxhig rau lub thawv qhia tias tabtom pov ntawv"
 
 #identifier
-msgid "An official website of the @link."
+msgid "an official website of the @link."
 msgstr "Lub website tseeb tiag ntawm @link."
 
 msgid "General Services Administration"
@@ -60,8 +60,8 @@ msgstr "ua haujlwm uake nrog"
 msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
 msgstr "US Election Assistance Commission (Nomtswv Asmeska Kev Xaiv Tsa tes dej haujlwm pab) lub cim qhia tias muaj kev sib koomtes nrog vote.gov"
 
-msgid "Follow vote.gov on Twitter"
-msgstr "Caum vote.gov saum Twitter (lus Askiv)"
+msgid "Follow vote.gov on"
+msgstr "Caum vote.gov saum X (lus Askiv)"
 
 #search
 msgid "Search vote.gov"

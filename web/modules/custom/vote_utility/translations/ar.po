@@ -45,7 +45,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "رسم توضيحي لصندوق الناخب مع إدخال بطاقة اقتراع محددة للإشارة إلى إجراء التصويت"
 
 # data.translations.footer.identifier_gsa_txt
-msgid "An official website of the @link."
+msgid "an official website of the @link."
 msgstr "موقع الكتروني رسمي لـ @link"
 
 # data.translations.footer.identifier_gsa_txt__1
@@ -85,7 +85,7 @@ msgid "U.S. Election Assistance Commission logo which indicates a partnership wi
 msgstr "شعار لجنة المساعدة الانتخابية الأمريكية الذي يشير إلى التعاون  مع vote.gov"
 
 # data.translations.footer.twitter_text
-msgid "Follow vote.gov on Twitter"
+msgid "Follow vote.gov on"
 msgstr "تابع vote.gov على تويتر (باللغة الإنجليزية)"
 
 # data.translations.footer.section_sign_up
