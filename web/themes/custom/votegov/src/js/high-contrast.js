@@ -35,6 +35,7 @@
     localStorage.setItem(highContrastKey, !enabled);
     
     banner.classList.toggle('highContrast');
+
   }
 
   // Check if high contrast is already enabled
@@ -44,4 +45,5 @@
 
   contrastBtn.addEventListener('click', toggleHighContrast);
 })();
+
 

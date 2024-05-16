@@ -40,6 +40,7 @@
 {# Load utility libraries when logged in. #}
 {% if logged_in %}
   {{ attach_library('bixaluswds/logged-in') }}
+  {{ attach_library('votegov/high_contrast') }}
 {% endif %}
 
 {# load navajo font #}
@@ -56,7 +57,7 @@
 {# Sitewide alert component #}
   {{ drupal_view('sitewide_alert', 'block_1') }}
 
-<div class="usa-overlay"></div>
+<div class="usa-overlay" data-theme="light"></div>
 <header class="usa-header usa-header--basic usa-header--megamenu">
   <div class="usa-nav-container">
     <div class="usa-navbar">
