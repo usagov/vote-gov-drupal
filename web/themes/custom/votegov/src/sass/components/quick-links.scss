@@ -44,7 +44,7 @@
   a {
     @include u-text('bold');
     color: $base-white !important;
-    text-decoration: none;
+    @include u-text('no-underline');
 
     &:hover{
       @include u-text('underline');
