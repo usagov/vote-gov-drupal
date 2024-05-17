@@ -1,15 +1,11 @@
 @use "uswds-core" as *;
 @use "variables" as *;
+@use "mixins" as *;
 
 .usa-nav {
   @include u-width('full');
 
   @include at-media('tablet-lg') {
-
-    &:has(input:focus) .usa-nav__primary, &:has(button:focus) .usa-nav__primary {
-      display: none;
-    }
-
     .usa-search {
       margin-left: unset;
     }
@@ -62,9 +58,14 @@
         }
 
         .usa-nav__submenu {
+          width: fit-content;
+
           .usa-nav__submenu-list {
             .usa-nav__submenu-item {
-              a {
+              a, span {
+                @include u-width('full');
+                @include u-text('no-wrap');
+                display: block;
                 padding: 8px 16px 8px;
               }
             }
@@ -127,39 +128,42 @@
         @include u-padding-y(2)
       }
 
-      .usa-nav__submenu-item a {
-        font-size: 16px;
-        color: $base-dark;
-        text-decoration: none;
-        @include u-padding-x(2);
-        @include u-border(0);
-
-        &:hover,
-        &:focus {
-          background-color: $base-primary;
-          color: $base-white;
+      .usa-nav__submenu-item {
+        a, span {
+          @include u-font-size('body', 'sm');
+          @include u-padding-x(2);
+          @include u-border(0);
+          @include u-display('block');
+          color: $base-dark;
           text-decoration: none;
         }
-      }
-    }
 
-    &__submenu-item {
-      background-color: $bg-light-cool;
+        span {
+          opacity: 0.6;
+        }
 
-      &:hover {
-        background-color: $base-primary;
+        a {
+          @include hover {
+            background-color: $base-primary;
+            color: $base-white;
+            text-decoration: none;
+          }
+        }
       }
     }
   }
 
   @include at-media-max('tablet-lg') {
+    &.is-visible {
+      @include u-position('relative');
+    }
+
     &__close {
-      color: $base-dark;
+      @include u-display('none');
       @include u-margin-right(0);
+      @include u-padding-left(0);
+      color: $base-dark;
       margin-left: calc(100% - 90px);
-      @include u-margin-y('205');
-      @include u-padding-bottom('2px');
-      @include u-padding-top('05');
       width: 67px;
       background-image: url( '../../../votegov/img/svg/close.svg' );
       background-position: 100% 50%;
@@ -171,6 +175,11 @@
       font-size: 17px;
       font-weight: 500;
       padding-right: 23px;
+      margin: 21px 24px;
+
+      &[aria-hidden="true"] {
+        display: block;
+      }
     }
 
     &__primary {
@@ -182,17 +191,19 @@
 
         a,
         button>span {
+          font-family: $theme-font-type-serif;
           color: $base-dark;
           font-size: 18px;
           font-style: normal;
           font-weight: 700;
           line-height: 155%;
         }
-      }
 
-      & a:not(.usa-button):not(.usa-current) {
-        color: $base-dark;
-        padding: 16.5px 24px;
+        a:not(.usa-button):not(.usa-current) {
+          font-family: $theme-font-type-serif;
+          color: $base-dark;
+          padding: 16px 24px 18.5px;
+        }
       }
 
       button:hover {
@@ -224,8 +235,8 @@
       @include u-border(0);
 
       button {
-        padding: 16.5px 24px;
-      @include u-border(0);
+        @include u-border(0);
+        padding: 16px 24px 18.5px;
       }
     }
 
@@ -235,14 +246,22 @@
     }
 
     &__submenu-item {
-      & a:not(.usa-button):not(.usa-current) {
-        font-family: 'Roboto';
-        color: $base-dark;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 155%;
-        text-indent: -23px;
+      .usa-nav__primary & {
+        > span,
+        > a:not(.usa-button):not(.usa-current) {
+          @include u-display('block');
+          font-family: 'Roboto';
+          color: $base-dark;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 155%;
+          padding: 16.5px 24px 16.5px 0;
+        }
+
+        > span {
+          opacity: 0.6;
+        }
       }
     }
 
