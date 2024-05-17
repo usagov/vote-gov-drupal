@@ -95,8 +95,11 @@ msgstr "የመራጮች ምዝገባ የመጨረሻ ቀናት"
 msgid "In person registration deadline:"
 msgstr "በአካል ምዝገባ የመጨረሻ ቀን፦"
 
-msgid "Voter registration deadlines for the @election_date election"
+msgid "Voter registration deadlines for the @election_date election. @link"
 msgstr "ለ @election_date ምርጫ የመራጮች ምዝገባ የመጨረሻ ቀን"
+
+msgid "Find state and local election dates."
+msgstr ""
 
 msgid "How to check your voter registration"
 msgstr "ለመምረጥ መመዝገብዎን እንዴት ማረጋገጥ ይችላሉ"

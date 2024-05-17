@@ -77,8 +77,11 @@ msgstr "如何登记投票"
 msgid "Other ways to register to vote"
 msgstr "登记投票的其他方式"
 
-msgid "Voter registration deadlines for the @election_date election"
+msgid "Voter registration deadlines for the @election_date election. @link"
 msgstr "@election_date选举的选民登记截止日期"
+
+msgid "Find state and local election dates."
+msgstr ""
 
 msgid "Register by mail deadline:"
 msgstr "邮寄报名截止日期："

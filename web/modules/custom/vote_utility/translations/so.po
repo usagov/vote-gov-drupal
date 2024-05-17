@@ -120,8 +120,11 @@ msgstr "Sida la isugu diiwaan geliyo si’ loo codeeyo"
 msgid "Other ways to register to vote"
 msgstr "Siyaabo kale oo la isu diwaangeliyo si loo codeeyo."
 
-msgid "Voter registration deadlines for the @election_date election"
+msgid "Voter registration deadlines for the @election_date election. @link"
 msgstr "Wakhtiyada kama dambaysta ah ee diiwaangelinta codbixiyaha ee doorashada @election_date"
+
+msgid "Find state and local election dates."
+msgstr ""
 
 # data.translations.register.dates__bymail_deadline
 msgid "Register by mail deadline:"
