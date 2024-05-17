@@ -48,7 +48,7 @@ nvrf_pdf_download:
   js:
     dist/js/nvrf-pdf-download.js: { minified: true }
 
-high_contrast:
+theme_switcher:
   version: VERSION
   js:
-    dist/js/high-contrast.js: { minified: true }
+    dist/js/theme-switcher.js: { minified: true }
