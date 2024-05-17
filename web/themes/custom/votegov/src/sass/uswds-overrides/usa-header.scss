@@ -43,19 +43,19 @@
   border-color: $bg-light-medium;
   @include u-border-bottom(1px);
 
-  &--basic {
+  &--extended {
     .usa-nav-container {
       align-items: center;
     }
+    .usa-nav__primary-item {
+      .usa-nav {
+        @include u-padding(0);
 
-    .usa-nav {
-      @include u-padding(0);
-
-      &__link:hover::after {
-        display: none; 
+        &__link:hover::after {
+          display: none;
+        }
       }
     }
-
     .usa-navbar {
       width: unset;
 
@@ -71,4 +71,9 @@
   &.is-visible {
     @include u-display('none');
   }
+}
+
+
+.usa-header--extended .usa-nav__primary-item>.usa-nav__link:hover::after {
+
 }

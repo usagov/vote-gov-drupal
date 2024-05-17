@@ -56,8 +56,7 @@
 {# Sitewide alert component #}
   {{ drupal_view('sitewide_alert', 'block_1') }}
 
-<header class="usa-header usa-header--basic usa-header--megamenu">
-  <div class="usa-nav-container">
+<header class="usa-header usa-header--extended usa-header--megamenu">
     <div class="usa-navbar">
 
       {# Site branding component #}
@@ -70,8 +69,6 @@
 
     {# Main navigation component #}
     {{ drupal_entity('block', 'votegov_mainnavigation') }}
-
-  </div>
 </header>
 
 {{ page.admin }}
