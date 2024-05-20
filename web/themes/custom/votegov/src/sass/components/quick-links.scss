@@ -41,6 +41,15 @@
 .vote-quicklinks__content{
   @include u-font('sans', 'md');
 
+  @include at-media('desktop') {
+    @include grid-col(5);
+    @include grid-offset(1);
+
+    ul{
+      @include u-padding-left(0);
+    }
+  }
+
   a {
     @include u-text('bold');
     color: $base-white !important;
@@ -61,10 +70,5 @@
       transition: 0.2s ease-in-out;
       transform: translateX(12px);
     }
-  }
-  
-  @include at-media('desktop') {
-    @include grid-col(5);
-    @include grid-offset(1);
   }
 }
