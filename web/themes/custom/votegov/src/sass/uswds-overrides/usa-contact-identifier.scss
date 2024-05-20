@@ -7,7 +7,7 @@
     @include u-border-top(1px);
     @include u-border-top('solid');
     border-color: $bg-light-medium;
-    background-color: var(--main-color);
+    background-color: $base-white;;
 
     color: $base-dark;
 
