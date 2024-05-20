@@ -65,3 +65,15 @@
     @include u-display('flex');
     @include u-flex('align-center');
 }
+
+.usa-footer__logo {
+  @include vote-remove-external-link;
+  @include u-display('flex');
+  @include u-flex('wrap');
+  color: $base-dark;
+  justify-content: space-between;
+
+  @include at-media-max('tablet-lg') {
+    @include u-flex('justify-center');
+  }
+}
