@@ -74,6 +74,9 @@ msgstr "@state_name এ ভোট দিতে নিবন্ধন করু�
 msgid "How to register to vote"
 msgstr "ভোট দেওয়ার জন্য কীভাবে নিবন্ধন করবেন"
 
+msgid "How to register and update your registration"
+msgstr "ভোট দেওয়ার জন্য কীভাবে নিবন্ধন করবেন"
+
 msgid "Other ways to register to vote"
 msgstr "ভোট নিবন্ধন করার অন্যান্য উপায়"
 
@@ -125,7 +128,7 @@ msgstr "ভোটিং সম্পর্কে আরও জানুন"
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
 msgstr "ভার্জিনিয়ায় ভোটার নিবন্ধনের প্রয়োজন নেই। @link রাজ্য নির্বাচনের ওয়েবসাইটে"
 
-msgid "Start your online registration"
+msgid "Complete your online registration"
 msgstr "আপনার অনলাইন নিবন্ধন শুরু করুন"
 
 msgid "@link on @state_name’s election website."

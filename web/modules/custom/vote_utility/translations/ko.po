@@ -77,6 +77,9 @@ msgstr "@state_name 유권자 등록 안내 "
 msgid "How to register to vote"
 msgstr "유권자 등록 방법"
 
+msgid "How to register and update your registration"
+msgstr "유권자 등록 방법"
+
 msgid "Other ways to register to vote"
 msgstr "기타 유권자 등록 방법"
 
@@ -134,7 +137,7 @@ msgstr "투표에 대해 자세히 알아보기"
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
 msgstr "@state_name 는 유권자 등록이 필요하지 않습니다. @state_name 선거국 웹사이트에서 @link를 이용하시기 바랍니다."
 
-msgid "Start your online registration"
+msgid "Complete your online registration"
 msgstr "온라인 등록 시작하기"
 
 msgid "@link on @state_name’s election website."

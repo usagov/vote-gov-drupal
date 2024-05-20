@@ -116,6 +116,9 @@ msgstr "Enskri pou vote nan @state_name"
 msgid "How to register to vote"
 msgstr "Kijan pou enskri pou vote"
 
+msgid "How to register and update your registration"
+msgstr "Kijan pou enskri pou vote"
+
 # data.translations.register.other_language_selection__heading (state phrase update)
 msgid "Other ways to register to vote"
 msgstr "Lòt fason pou enskri pou vote"
@@ -197,7 +200,7 @@ msgid "@link on @state_name’s election website."
 msgstr "@link sou sit wèb eleksyon Eta w la sou @state_name"
 
 # @link: data.translations.register.online__answer1 (see accessibility updates)
-msgid "Start your online registration"
+msgid "Complete your online registration"
 msgstr "Kòmanse enskripsyon ou anliy"
 
 # data.translations.register.online__answer2 (see accessibility updates)
