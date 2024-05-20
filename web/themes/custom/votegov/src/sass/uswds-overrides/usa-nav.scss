@@ -191,7 +191,6 @@
 
         a,
         button>span {
-          font-family: $theme-font-type-serif;
           color: $base-dark;
           font-size: 18px;
           font-style: normal;
@@ -200,7 +199,6 @@
         }
 
         a:not(.usa-button):not(.usa-current) {
-          font-family: $theme-font-type-serif;
           color: $base-dark;
           padding: 16px 24px 18.5px;
         }
