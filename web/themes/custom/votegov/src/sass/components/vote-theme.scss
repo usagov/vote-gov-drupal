@@ -1,0 +1,13 @@
+@use "uswds-core" as *;
+@use "mixins" as *;
+@use "variables" as *;
+
+
+.vote-theme{
+  @include u-margin-left(2);
+  @include u-margin-bottom(2);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+}

@@ -21,4 +21,9 @@ $bg-light-warm: #e7e5dd; // hero-background
 
 // High Contrast Colors/
 $bg-high-contrast: black;
-$text-high-contrast: white
+$text-high-contrast: white;
+
+
+[data-theme="contrast"] {
+  --main-color: black;
+  }
