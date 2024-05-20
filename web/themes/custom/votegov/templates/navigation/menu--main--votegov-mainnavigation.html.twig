@@ -28,10 +28,7 @@ We call a macro which calls itself to render the full tree.
 #}
 {% set attributes = attributes.addClass('menu') %}
 <nav aria-label="{{ 'Primary navigation' | t }}" class="usa-nav" data-test="mainNav">
-  <button type="button" class="usa-nav__close" data-test="closeBtn">{{ 'Close' | t }}</button>
-
   {{ menus.menu_links(items, attributes, 0, 'basic-mega-nav-section-') }}
-
   <section id="usa-search--expandable" aria-label="{{ 'Search component' | t }}">
     {{ drupal_entity('block_content', 2) }}
   </section>
@@ -60,9 +57,10 @@ We call a macro which calls itself to render the full tree.
                 class="usa-nav__submenu"
                 hidden
               >
-                <div class="usa-nav__submenu-parent-link">{{ link(item.title, item.url) }}</div>
+              <ul class="usa-nav__submenu-list" data-test="subMenu">
+                <li class="usa-nav__submenu-item">{{ link(item.title, item.url) }}</li>
                 {{ menus.menu_links(item.below, attributes, menu_level + 1, aria_id) }}
-              </div>
+
             {% else %}
               {% if item.url.isRouted() and item.url.routeName == '<nolink>' %}
                   <button
@@ -81,16 +79,20 @@ We call a macro which calls itself to render the full tree.
       </ul>
     {# Secondary level menu structure. #}
     {% elseif menu_level == 1 %}
-      <ul class="usa-nav__submenu-list" data-test="subMenu">
         {% for item in items %}
           <li class="usa-nav__submenu-item">
-            {{ link(item.title, item.url) }}
+            {% if item.url.routeName != '<nolink>' %}
+              {{ link(item.title, item.url) }}
+            {% else %}
+              <span>{{ item.title }}</span>
+            {% endif %}
             {% if item.below %}
               {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
             {% endif %}
           </li>
         {% endfor %}
       </ul>
+    </div>
     {% endif %}
   {% endif %}
 {% endmacro %}

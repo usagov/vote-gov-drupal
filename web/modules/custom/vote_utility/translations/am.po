@@ -1,4 +1,4 @@
-# Amharic translation of Vote.gov
+# Amharic translation of vote.gov
 #
 msgid ""
 msgstr ""
@@ -29,7 +29,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "የድምጽ አሰጣጥ እንዴት እንደሚተገበር ለማመልከት ምልክት የተደረገበት ድምጽ መስጫ ወረቀት በምሳሌነት የገባበት የመራጮች ሳጥን "
 
 #identifier
-msgid "An official website of the @link."
+msgid "an official website of the @link."
 msgstr "ኦፊሲያል ድህረ ገጽ @link"
 
 msgid "General Services Administration"
@@ -57,15 +57,15 @@ msgstr "የመንግስት መረጃ እና አገልግሎቶች"
 msgid "in partnership with"
 msgstr "ጋር በመተባበር"
 
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
-msgstr "ከVote.gov ጋር አጋርነትን የሚያመለክት የU.S. ምርጫ እርዳታ ሰጪ ኮሚሽን አርማ"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
+msgstr "ከvote.gov ጋር አጋርነትን የሚያመለክት የU.S. ምርጫ እርዳታ ሰጪ ኮሚሽን አርማ"
 
-msgid "Follow Vote.gov on Twitter"
-msgstr "Vote.govን በትዊተር ላይ ይከተሉ (በእንግሊዘኛ)"
+msgid "Follow vote.gov on"
+msgstr "vote.govን በትዊተር ላይ ይከተሉ (በእንግሊዘኛ)"
 
 #search
-msgid "Search Vote.gov"
-msgstr "Vote.gov ን ይፈልጉ"
+msgid "Search vote.gov"
+msgstr "vote.gov ን ይፈልጉ"
 
 #state
 msgid "Register to vote in @state_name"
@@ -95,8 +95,11 @@ msgstr "የመራጮች ምዝገባ የመጨረሻ ቀናት"
 msgid "In person registration deadline:"
 msgstr "በአካል ምዝገባ የመጨረሻ ቀን፦"
 
-msgid "Voter registration deadlines for the @election_date election"
+msgid "Voter registration deadlines for the @election_date election. @link"
 msgstr "ለ @election_date ምርጫ የመራጮች ምዝገባ የመጨረሻ ቀን"
+
+msgid "Find state and local election dates."
+msgstr ""
 
 msgid "How to check your voter registration"
 msgstr "ለመምረጥ መመዝገብዎን እንዴት ማረጋገጥ ይችላሉ"

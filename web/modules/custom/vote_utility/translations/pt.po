@@ -1,4 +1,4 @@
-# Portuguese translation of Vote.gov
+# Portuguese translation of vote.gov
 #
 msgid ""
 msgstr ""
@@ -45,7 +45,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "Ilustração da caixa do eleitor com voto marcado ao ser inserido para indicar ação de votação"
 
 # data.translations.footer.identifier_gsa_txt
-msgid "An official website of the @link."
+msgid "an official website of the @link."
 msgstr "Uma página web oficial da @link"
 
 # data.translations.footer.identifier_gsa_txt__1
@@ -81,12 +81,12 @@ msgid "in partnership with"
 msgstr "em parceria com"
 
 # data.translations.footer.eac_logo_alt_text (see accessibility updates)
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
-msgstr "Logomarca da Comissão de Assistência das Eleições dos EUA que indica uma parceria com Vote.gov"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
+msgstr "Logomarca da Comissão de Assistência das Eleições dos EUA que indica uma parceria com vote.gov"
 
 # data.translations.footer.twitter_text
-msgid "Follow Vote.gov on Twitter"
-msgstr "Siga Vote.gov no Twitter (em inglês)"
+msgid "Follow vote.gov on"
+msgstr "Siga vote.gov no X (em inglês)"
 
 # data.translations.footer.section_sign_up
 msgid "Email sign-up"
@@ -101,8 +101,8 @@ msgid "GSA logo"
 msgstr "Logotipo do GSA"
 
 # data.translations.homepage.search_placeholder
-msgid "Search Vote.gov"
-msgstr "Pesquisar Vote.gov"
+msgid "Search vote.gov"
+msgstr "Pesquisar vote.gov"
 
 # data.translations.homepage.section_banner
 msgid "Official government website"
@@ -120,8 +120,11 @@ msgstr "Como registrar-se para votar"
 msgid "Other ways to register to vote"
 msgstr "Outras maneiras de registrar-se para votar"
 
-msgid "Voter registration deadlines for the @election_date election"
+msgid "Voter registration deadlines for the @election_date election. @link"
 msgstr "Prazos para registro de eleitores para a eleição de @election_date"
+
+msgid "Find state and local election dates."
+msgstr ""
 
 # data.translations.register.dates__bymail_deadline
 msgid "Register by mail deadline:"
