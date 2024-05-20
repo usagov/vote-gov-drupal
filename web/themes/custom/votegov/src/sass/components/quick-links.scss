@@ -44,10 +44,6 @@
   @include at-media('desktop') {
     @include grid-col(5);
     @include grid-offset(1);
-
-    ul{
-      @include u-padding-left(0);
-    }
   }
 
   a {
@@ -61,14 +57,11 @@
     }
 
     &::after{
-      content: url( '../../../votegov/img/svg/arrow-white.svg' );
-      @include u-padding-left(0.5)
-    }
-
-    &:hover::after{
-      @include u-padding-left(1.5);
-      transition: 0.2s ease-in-out;
-      transform: translateX(12px);
+      content: "";
+      @include u-padding-left(2);
+      background: url( '../../../votegov/img/svg/arrow-white.svg' );
+      background-repeat: no-repeat;
+      background-position: 100% 50%;
     }
   }
 }
