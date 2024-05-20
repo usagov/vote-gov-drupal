@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph: Accordion Group
+ */
+#}
+
+<section class="vote-accordion-group">
+  <h2 class="vote-accordion-group__heading heading--red-underline">
+    {{ content.field_heading | field_value }}
+  </h2>
+  <div class="vote-accordion-group__content">
+    {{ content.field_accordions }}
+  </div>
+</section>

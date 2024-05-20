@@ -2,36 +2,37 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-.identifier-links-container {
-  @include grid-col(12);
-
-  @include at-media-max('tablet') {
-    @include u-padding-y(4);
+.vote-identifier-links {
+  @include at-media-max('mobile-lg') {
+    @include u-text-align('center');
   }
-}
-
-.identifier-links {
-  @include at-media('tablet') {
-    column-count: 4;
-  }
-
-  @include at-media-max('tablet') {
+  
+  @include at-media('mobile-lg') {
+    column-gap: 1.5rem;
     column-count: 2;
   }
 
-  li {
-    @include at-media-max('tablet') {
-      @include u-padding-top(2);//check
-    }
+  @include at-media('tablet') {
+    column-count: 3;
+  }
 
-    @include at-media('tablet') {
-      @include u-padding-top('205');
+  @include at-media('tablet-lg') {
+    column-count: 4;
+    column-gap: 2rem;
+  }
+
+  li {
+    + li {
+      @include u-margin-top(2);
+
+      @include at-media('tablet') {
+        @include u-margin-top('205');
+      }
     }
 
     a {
-      @include vote-link;
+      @include vote-link($base-dark, $base-dark); 
       word-break: break-word;
-      font-size: 16px;
     }
   }
 }

@@ -38,6 +38,7 @@ dependencies:
     - field.field.node.state_territory.field_registration_link
     - field.field.node.state_territory.field_registration_type
     - field.field.node.state_territory.field_state_abbreviation
+    - field.field.node.state_territory.field_updated_date
     - node.type.state_territory
     - workflows.workflow.publishing_content
   module:
@@ -47,7 +48,6 @@ dependencies:
     - field_group
     - link
     - metatag
-    - path
     - text
     - vote_nvrf
 third_party_settings:
@@ -346,7 +346,7 @@ content:
     third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
-    weight: 11
+    weight: 8
     region: content
     settings:
       sidebar: true
@@ -497,33 +497,28 @@ content:
       size: 2
       placeholder: ''
     third_party_settings: {  }
+  field_updated_date:
+    type: datetime_default
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 10
+    weight: 7
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 7
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  path:
-    type: path
     weight: 5
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  simple_sitemap:
-    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 8
+    weight: 6
     region: content
     settings:
       display_label: true
@@ -536,11 +531,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  translation:
-    weight: 9
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
     weight: 2
@@ -552,12 +542,15 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 6
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   body: true
+  path: true
   promote: true
   published_at: true
+  simple_sitemap: true
   sticky: true
+  translation: true

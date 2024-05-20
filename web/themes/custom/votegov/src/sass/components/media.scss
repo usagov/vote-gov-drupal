@@ -1,0 +1,7 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+@use "mixins" as *;
+
+.vote-media--remote-video {
+  @include vote-block-item-margin-y;
+}

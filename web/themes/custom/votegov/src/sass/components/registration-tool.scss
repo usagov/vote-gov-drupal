@@ -192,6 +192,10 @@
                     &__heading {
                         @include u-margin-top(4);
                     }
+
+                  &__content {
+                    min-height: 100px;
+                  }
                 }
 
                 &-tool {
@@ -274,7 +278,7 @@
                         margin-top: 3rem;
                         max-width: 40rem;
 
-                        &.heading--red-underline:after {
+                        &.vote-heading--red-underline:after {
                             @include u-display('none');
                         }
                     }
