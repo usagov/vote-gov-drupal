@@ -1,8 +1,8 @@
 {% set GSAlink = link('General Services Administration' | t, 'https://www.gsa.gov/') %}
 
-<div class="usa-footer__secondary-section" data-test="footerContact">
+<div class="vote-eac__section" data-test="footerContact">
   <div class="usa-footer__logo grid-container">
-      <div class="vote-partnership-container">
+      <div class="vote-eac-partner-container">
         {# EAC Text #}
         <div class="eac-container__text">
           <p>{{ 'Vote.gov is made possible in partnership with ' | t }}</p>
@@ -13,7 +13,7 @@
             <img class="eac-logo" width="146" height="48" src="{{ theme_path }}/img/eac-logo.webp" alt="{{ 'U.S. Election Assistance Commission logo which indicates a partnership with vote.gov' | t }}" /></a>
         </div>
       </div>
-      <div class="usa-footer__social-links">
+      <div class="vote-usa-footer__social-links">
         <a class="vote-social-link" href="https://twitter.com/votegov">
           <p> {{ 'Follow vote.gov on ' | t }} </p>
           <img src="{{ theme_path }}/img/x-logo-dark.svg" alt="X" />

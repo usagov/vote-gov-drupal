@@ -21,33 +21,63 @@
  */
 #}
 {% import _self as menus %}
-{% set infoLink = link('Visit USA.gov' | t, (language == 'es' ? 'https://www.usa.gov/espanol/' : 'https://www.usa.gov/')) %}
+{% set gsaLink = link('General Services Administration' | t , 'https://www.gsa.gov/') %}
 
-<div class="usa-footer__primary-section" data-test="footer">
-    {# GSA logo #}
-    <div class="gsa-container grid-container">
-      <img src="{{ theme_path }}/img/gsa-logo.svg" alt="{{ 'GSA logo'|t }}" width="48" height="48">
-      <span aria-label="{{ 'Agency description' | t }}">
-        <p>{{ "vote.gov" }}</p>
-        <strong>{{ "An official website of the General Services Administration" | t }}</strong>
-      </span>
+{# USWDS Default #}
+<div class="usa-identifier">
+  {# GSA logo #}
+  <section
+    class="usa-identifier__section usa-identifier__section--masthead"
+    aria-label="Agency identifier,"
+  >
+    <div class="usa-identifier__container">
+      <div class="usa-identifier__logos">
+        <a href="" class="usa-identifier__logo"
+          ><img
+            class="usa-identifier__logo-img"
+            src="{{ theme_path }}/img/gsa-logo.svg"
+            alt="{{ 'GSA logo'|t }}"
+            role="img"
+        /></a>
+      </div>
+      <section
+        class="usa-identifier__identity"
+        aria-label="Agency description,"
+      >
+        <p class="usa-identifier__identity-domain">vote.gov</p>
+        <p class="usa-identifier__identity-disclaimer">
+          {{ "An official website of the @link" | t({'@link': gsaLink | render}) }}
+        </p>
+      </section>
     </div>
-    {# footer links #}
-    <div class="vote-identifier-links-container">
+  </section>
+  {# footer links #}
+  <nav class="usa-identifier__section usa-identifier__section--required-links">
+    <div class="usa-identifier__container">
       {{ menus.menu_links(items, attributes, 0) }}
     </div>
-    <div class="identifier-gov-info grid-container" aria-label="{{ 'Government information and services' | t }}">
-        {{ 'Looking for U.S. government information and services? @link.' | t({'@link': infoLink | render}) }}
+  </nav>
+  {# USAgov identifier #}
+  <section
+    class="usa-identifier__section usa-identifier__section--usagov"
+    aria-label="U.S. government information and services,"
+  >
+    <div class="usa-identifier__container">
+      <div class="usa-identifier__usagov-description">
+        {{'Looking for U.S. government information and services?' | t }}
+      </div>
+      <a href="https://www.usa.gov/" class="usa-link">{{'Visit USA.gov' | t }}</a>
     </div>
+  </section>
 </div>
 
 {% macro menu_links(items, attributes, menu_level) %}
   {% import _self as menus %}
 
   {% if items %}
-      <ul class="usa-list usa-list--unstyled vote-identifier-links" data-test="footerLinks">
+      <ul class="usa-identifier__required-links-list" data-test="footerLinks">
     {% for item in items %}
-        <li>{{ link(item.title, item.url) }}</li>
+        <li class="usa-identifier__required-links-item">{{ link(item.title, item.url) }}</li>
     {% endfor %}
       </ul>
   {% endif %}

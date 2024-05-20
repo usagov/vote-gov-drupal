@@ -2,46 +2,12 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-.usa-identifier {
+.vote-usagov-partner {
     @include vote-block-padding-y--narrow;
     background-color: $base-white;
     color: $base-dark;
 
-    .usa-identifier__logo{
-        @include u-margin-right(2);
-    }
-
-    .usa-identifier__identity
-    {
-        @include u-display('flex');
-        @include at-media-max('tablet-lg'){
-            @include u-margin-top(4);
-        }
-    }
-
-    .usa-identifier__identity-disclaimer{
-        @include u-position('relative');
-        @include u-font-weight('normal');
-
-        @include at-media('tablet-lg')
-        {
-            p {
-                font-size: 16px;
-                max-width: 75%;
-            }
-        }
-
-        @include at-media-max('tablet-lg'){
-            @include u-margin-y('auto');
-
-            p {
-                font-size: 14px;
-                max-width: 100%;
-            }
-        }
-    }
-
-    .usa-identifier__section--usagov {
+    .vote-usagov-partner-links {
         @include at-media-max('tablet') {
             @include u-margin-top(4);
         }
@@ -85,16 +51,40 @@
         a {
             @include u-font-weight('bold');
             @include u-text('underline');
-            color: $base-dark;
+            @include vote-link($color: $base-dark);
+        }
+    }
 
-            :visited {
-                color: $base-dark;
+    .vote-usagov-partner__logo{
+        @include u-margin-right(2);
+    }
+
+    .vote-usagov-partner__identity
+    {
+        @include u-display('flex');
+        @include at-media-max('tablet-lg'){
+            @include u-margin-top(4);
+        }
+    }
+
+    .vote-usagov-partner__identity-disclaimer{
+        @include u-position('relative');
+        @include u-font-weight('normal');
+
+        @include at-media('tablet-lg')
+        {
+            p {
+                font-size: 16px;
+                max-width: 75%;
             }
-            &:focus,
-            &:hover {
-                @include u-text('no-underline');
-                background-color: $base-primary-hover;
-                color: $base-white;
+        }
+
+        @include at-media-max('tablet-lg'){
+            @include u-margin-y('auto');
+
+            p {
+                font-size: 14px;
+                max-width: 100%;
             }
         }
     }
@@ -113,7 +103,7 @@
         }
     }
 
-    .usa-identifier__section--masthead {
+    .vote-usagov-partner__section--masthead {
         @include u-margin-y('auto');
         @include u-font-family('serif');
     }

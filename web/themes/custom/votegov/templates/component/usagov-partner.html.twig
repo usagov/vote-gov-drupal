@@ -1,39 +1,33 @@
-<div class="usa-identifier">
-    <div
-      class="usa-identifier__section--usagov"
-      aria-label={{ "U.S. government information and services," | t }}
+<div class="vote-usagov-partner">
+    {# USA.gov Links #}
+    <nav class="vote-usagov-partner-links grid-container"
+      aria-label={{ "Important links," | t }}
     >
-      {#Row 1 Divider - USA.gov Links #}
-      <nav class="grid-container"
-        aria-label={{ "Important links," | t }}
-      >
-          {# USA.gov election info links #}
-          {{ drupal_entity('block_content', '18') }}
-      </nav>
-
-
-    </div>
+        {# USA.gov election info links #}
+        {{ drupal_entity('block_content', '18') }}
+    </nav>
 
     {# Row 2 Divider - USA.gov link and email sign-up #}
     <div class="vote-partners-contact-container">
       <div class="vote-usa-contact-container">
         {# USA.gov link #}
         <section
-          class="usa-identifier__section--masthead"
+          class="vote-usagov-partner__section--masthead"
           aria-label={{"Agency identifier," | t }}
         >
           <section
-            class="usa-identifier__identity"
+            class="vote-usagov-partner__identity"
             aria-label={{"Agency description," | t }}
           >
-            <a href="https://www.usa.gov/" class="usa-identifier__logo">
+            <a href="https://www.usa.gov/" class="vote-usagov-partner__logo">
               <img
-                class="usa-identifier__logo-img"
                 src="{{ theme_path }}/img/usa.gov.svg"
                 alt={{"USA.gov logo" | t }}
                 role="img"
+                width="48"
+                height="48"
               /></a>
-            <div class="usa-identifier__identity-disclaimer">
+            <div class="vote-usagov-partner__identity-disclaimer">
               <p>{{"Visit our partner site, USA.gov, to find more information about voting in the United States." | t }}</p>
             </div>
           </section>

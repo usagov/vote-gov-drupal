@@ -8,12 +8,6 @@
   color: $base-white;
 }
 
-.usa-footer__secondary-section {
-  @include u-padding(0);
-  align-content: center;
-  background-color: $bg-light-cool;
-}
-
 .usa-footer__logo {
   @include vote-remove-external-link;
   @include u-display('flex');
@@ -23,17 +17,5 @@
 
   @include at-media-max('tablet-lg') {
     @include u-flex('justify-center');
-  }
-}
-
-.vote-partnership-container {
-  @include u-display('flex');
-  @include u-flex('wrap');
-  @include u-margin-right(6);
-  @include u-padding-y(4);
-
-  @include at-media-max('tablet-lg') {
-    @include u-flex('justify-center');
-    @include u-margin-right(0);
   }
 }

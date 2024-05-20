@@ -2,6 +2,24 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+.vote-eac__section {
+  @include u-padding(0);
+  align-content: center;
+  background-color: $bg-light-cool;
+}
+
+.vote-eac-partner-container {
+  @include u-display('flex');
+  @include u-flex('wrap');
+  @include u-margin-right(6);
+  @include u-padding-y(4);
+
+  @include at-media-max('tablet-lg') {
+    @include u-flex('justify-center');
+    @include u-margin-right(0);
+  }
+}
+
 .eac-container__text {
     @include u-margin-y('auto');
 
@@ -20,7 +38,7 @@
     }
 }
 
-.usa-footer__social-links {
+.vote-usa-footer__social-links {
     @include u-padding(0);
     @include u-padding-bottom(2);
     text-wrap: nowrap;
@@ -32,8 +50,8 @@
     }
 
     a {
+      @include vote-link($color: $base-dark);
       @include u-margin-top(2);
-      color: $base-dark;
     }
 
     img {
