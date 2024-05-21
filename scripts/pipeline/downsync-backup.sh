@@ -129,8 +129,9 @@ echo "Downloading media files..."
   export AWS_SECRET_ACCESS_KEY=$(echo "${s3_credentials}" | jq -r '.credentials.secret_access_key')
 
   rm -rf ${backup_media}
+  mkdir -p ${backup_media}
   aws s3 sync --no-verify-ssl s3://${bucket}/${backup_media} ${backup_media}/ 2>/dev/null
-  tar czf media_${BACKUP_ENV}.tar.gz ${backup_media}
+  #tar czf media_${BACKUP_ENV}.tar.gz ${backup_media}
 
   cf delete-service-key "${service}" "${service_key}" -f
 } >/dev/null 2>&1

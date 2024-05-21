@@ -79,9 +79,9 @@ echo "Uploading media files..."
   export AWS_DEFAULT_REGION=$(echo "${s3_credentials}" | jq -r '.credentials.region')
   export AWS_SECRET_ACCESS_KEY=$(echo "${s3_credentials}" | jq -r '.credentials.secret_access_key')
 
-  rm -rf ${backup_media}
-  mkdir -p ${backup_media}
-  tar xzf -C ${backup_media} media_${BACKUP_ENV}.tar.gz
+  #rm -rf ${backup_media}
+  #mkdir -p ${backup_media}
+  #tar xzf media_${BACKUP_ENV}.tar.gz -C ${backup_media}
 
   aws s3 sync --no-verify-ssl ${backup_media}/ s3://${bucket}/${backup_media} 2>/dev/null
 
