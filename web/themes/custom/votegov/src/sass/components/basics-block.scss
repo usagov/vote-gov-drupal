@@ -2,82 +2,70 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-.basics-block {
-  .page-content & {
+.vote-basics-block {
+  .vote-page-content & {
     @include at-media-max('tablet') {
       @include u-margin-x('neg-3');
     }
   }
 
-  .node--landing & {
+  .vote-type-landing & {
     @include vote-block-margin-y;
 
     @include at-media('tablet') {
       @include grid-container();
     }
+
+    > * {
+      @include at-media('desktop') {
+        @include grid-col(7);
+        @include grid-offset(1);
+      }
+    }
   }
 
-  + .basics-block {
+  + .vote-basics-block {
     @include at-media('tablet') {
       @include u-margin-top(3);
     }
   }
 }
 
-.basics-block--container {
-  .node--landing & {
-    @include at-media('desktop') {
-      @include grid-col(7);
-      @include grid-offset(1);
-    }
-  }
-}
+.vote-basics-block__heading {
+  @include u-padding(8);
+  @include u-font-size('serif', 11);
+  @include u-radius-top('md');
+  @include u-text-align('center');
+  @include u-position('relative');
+  background-color: $ac-cool;
+  color: $base-white;
 
-.basics-block--heading-container {
-  h2 {
-    @include u-padding(8);
-    @include u-font-size('serif', 11);
+  span {
+    @include u-position('relative');
+  }
+
+  @include before {
+    @include u-radius-top('md');
+    @include u-position('absolute');
+    @include u-display('block');
+    @include vote-fill;
+    background: url(../../../votegov/img/fpo_hero.webp);
+    background-size: cover;
     background-color: $ac-cool;
-    border-radius: 4px 4px 0px 0px;
-    color: $base-white;
-    text-align: center;
-    position: relative;
-
-    span {
-      position: relative;
-    }
-
-    &::before {
-      content: '';
-      display: block;
-      position: absolute;
-      background: url(../../../votegov/img/fpo_hero.webp);
-      background-size: cover;
-      background-color: $ac-cool;
-      background-repeat: no-repeat;
-      background-position: center center;
-      mix-blend-mode: multiply;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      opacity: 40%;
-      border-radius: 4px 4px 0px 0px;
-    }
+    background-repeat: no-repeat;
+    background-position: center center;
+    mix-blend-mode: multiply;
+    opacity: 0.4;
   }
 }
 
-.basics-block--content {
+.vote-basics-block__content {
   @include u-padding(2.5);
   @include u-margin-top(0);
   background-color: $base-white;
 
   > * + * {
     @include u-margin-top(5);
-  }
-
-  ul {
-    @include u-margin-y(2);
   }
 
   @include at-media('tablet') {

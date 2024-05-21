@@ -20,7 +20,7 @@
       noResultsMsg.setAttribute('hidden', '');
     }
   }
-  
+
   // Filter dropdown results based on user input.
   function stateListFilter() {
     let filter, txtValue, wordTxtValues, keyValue;
@@ -34,7 +34,7 @@
       let li = stateFilteredOptions[i].parentNode;
       txtValue = li.textContent.trim() || li.innerText.trim();
       wordTxtValues = txtValue.split(' ');
-      keyValue = li.firstElementChild.getAttribute('key');
+      keyValue = li.firstElementChild.getAttribute('data-key');
 
       // Match user input with the start of the state name, state abbrev or full state name.
       if (wordTxtValues.some((elem) => elem.length > 2 && elem.toUpperCase().startsWith(filter))
@@ -118,7 +118,7 @@
         stateListFilter();
       }
     });
-    
+
     // Attach events for state links in dropdown.
     for (let i = 0; i < stateFilteredOptions.length; i++) {
       stateListResults.push(stateFilteredOptions[i]);

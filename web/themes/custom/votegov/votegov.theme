@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Functions to support theming in the Vote.gov USWDS theme.
+ * Functions to support theming in the vote.gov USWDS theme.
  */
 
 require_once dirname(__FILE__) . '/php-includes/block.inc';
