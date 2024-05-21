@@ -3,11 +3,8 @@
 
 body {
   color: $base-dark;
-}
 
-.vote-columns--two {
-  @include at-media('tablet-lg') {
-    column-count: 2;
-    column-gap: 2rem;
+  &.usa-js-mobile-nav--active {
+    overflow: unset;
   }
 }

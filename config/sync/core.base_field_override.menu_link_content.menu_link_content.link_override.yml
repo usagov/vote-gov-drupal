@@ -1,0 +1,21 @@
+uuid: 8b1ad66a-9092-4408-8618-6dcfdfb87fc1
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - menu_link_content
+id: menu_link_content.menu_link_content.link_override
+field_name: link_override
+entity_type: menu_link_content
+bundle: menu_link_content
+label: 'Translatable External Link Override'
+description: 'The regular link field does not support the translation of external links. If you need to translate an off-site link, use this field as an override to support translation. Do <em>not</em> use this for internal Drupal links.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

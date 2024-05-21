@@ -3,7 +3,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
 reporter: 'cypress-mochawesome-reporter',
   e2e: {
-    baseUrl: 'http://vote-gov.lndo.site/',
+    baseUrl: 'http://vote-gov.lndo.site',
     redirectionLimit: 100,
     video: false,
     viewportHeight: 800,

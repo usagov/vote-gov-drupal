@@ -1,7 +1,7 @@
 @use "uswds-core" as *;
 @use "variables" as *;
 
-.heading--red-underline:after {
+.vote-heading--red-underline:after {
   content: '';
   @include u-display('block');
   @include u-margin-top(2);
@@ -9,4 +9,8 @@
   @include u-width(10);
   @include u-height(0.5);
   background-color: $ac-warm;
+}
+
+.vote-heading--max-width {
+  @include u-maxw('tablet-lg');
 }

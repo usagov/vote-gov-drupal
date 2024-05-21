@@ -3,76 +3,86 @@
 
 .gsa-container {
     @include u-display('flex');
-    @include u-flex('align-center');
-}
+    align-self: center;
 
-.gsa-container__img {
-    @include u-padding-right(2);
-    @include grid-col(auto);
+    @include at-media('tablet-lg') {
+        &:after {
+            content: '';
+            @include u-height(6);
+            @include u-width('1px');
+            @include u-margin-x(6);
+            background-color: $bg-light-medium;
+        }
+    }
+
+    @include at-media-max('tablet-lg') {
+        @include u-width('full');
+    }
+
+    img {
+        @include u-margin-left('auto');
+    }
+
+    span {
+        @include u-margin-right('auto');
+        @include u-margin-left(2);
+        font-family: 'Roboto';
+        max-width: 202px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        align-self: center;
+    }
 }
 
 .gsa-container__text {
     font-size: 14px;
-    @include at-media('tablet') {
-        @include grid-col(10);
-    }
-    @include at-media-max('tablet') {
-        @include grid-col(9);
-    }
 }
 
 .eac-logo-container {
-    @include u-display('flex');
-    @include u-position('relative');
-
-    @include at-media('tablet') {
-        @include u-padding-left(6);
+    @include at-media-max('tablet-lg') {
         &:before {
-            content: '';
+            content: "";
+            @include u-margin-y(3);
+            display: block;
             background-color: $bg-light-medium;
-            @include u-display('block');
-            @include u-position('absolute');
-            @include u-width('2px');
-            @include u-height(6);
-            @include u-margin-y('auto');
-            @include u-left(0);
-            @include u-top(0);
-            @include u-bottom(0);
-
+            height: 1px;
+            width: 96px;
+            @include u-margin-x('auto');
         }
     }
 
-    @include at-media-max('tablet') {
-        @include u-flex('justify-center');
-        @include u-margin-bottom(2);
-        @include u-margin-top(4);
-
-        &:before {
-            content: '';
-            background-color: $bg-light-medium;
-            @include u-display('block');
-            @include u-position('absolute');
-            @include u-width('2px');
-            @include u-height(10);
-            @include u-margin-y('auto');
-            bottom: 32px;
-            rotate: 90deg;
-        }
+    a>img {
+        min-width: 144px;
     }
 }
 
 .vote-social-link {
-    @include u-display('flex');
-    @include u-flex('align-center');
+    display: flex;
+    align-items: center;
+
+    span {
+        color: $base-dark;
+        font-family: Roboto;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 155%;
+    }
+}
+
+.vote-social-link__icon {
     @include u-radius-top('pill');
     @include u-radius-bottom('pill');
     @include u-width(4);
     @include u-height(4);
-    @include u-margin(0.5);
     background-color: $bg-light-cool;
-}
+    margin-left: 10px;
 
-.vote-social-link__icon {
-    @include u-width(4);
-    @include u-height(4);
+    img {
+        margin-left: 8px;
+        margin-top: 8px;
+        @include u-height(2);
+    }
 }

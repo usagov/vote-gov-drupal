@@ -1,6 +1,9 @@
 @use "uswds-core" as *;
 
-.date--updated {
-  @include u-margin-top(4);
+.vote-date--updated {
   @include u-font-family('sans');
+
+  * + & {
+    @include u-margin-top(4);
+  }
 }

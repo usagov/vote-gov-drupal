@@ -10,15 +10,11 @@ Insert a brief summary of the changes included in this PR and any additional inf
 
 ## Deployment and testing
 
-### Pre-deploy
-
-1. Insert any required steps to take before merging and running post-deploy.
-
-### Post-deploy
+### Post-deploy steps
 
 1. Insert any required steps to take before beginning test.
 
-### QA/Test
+### QA/Testing instructions
 
 1. Insert steps to test and confirm the result meets the "definition of done".
 

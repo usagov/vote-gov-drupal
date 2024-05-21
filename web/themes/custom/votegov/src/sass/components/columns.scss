@@ -1,0 +1,9 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+
+.vote-columns--two {
+  @include at-media('tablet-lg') {
+    column-count: 2;
+    column-gap: 2rem;
+  }
+}

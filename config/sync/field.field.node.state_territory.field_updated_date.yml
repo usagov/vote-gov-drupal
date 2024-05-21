@@ -1,0 +1,21 @@
+uuid: 85b824f2-2203-4a16-8908-96d0a66a7e39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_updated_date
+    - node.type.state_territory
+  module:
+    - datetime
+id: node.state_territory.field_updated_date
+field_name: field_updated_date
+entity_type: node
+bundle: state_territory
+label: 'Updated Date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

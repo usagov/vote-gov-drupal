@@ -8,16 +8,22 @@
     @include u-text-decoration('no-underline');
     @include u-height('full');
 
-    @include hover {
-      background-color: $base-white;
-      color: inherit;
+    @include at-media('tablet-lg') {
+      @include hover {
+        .usa-card__container {
+          background-color: $bg-light-cool;
+          border: 3px solid #3E79BB;
+        }
 
-      .vote-feature-card__icon-circle {
-        background-color: $base-white;
+        .vote-feature-card__icon-circle {
+          background-color: $base-white;
 
-        svg {
-          > path {
-            fill: $bg-light-cool;
+          svg {
+            fill: $base-white;
+
+            * {
+              fill: $bg-light-cool;
+            }
           }
         }
       }
@@ -38,9 +44,12 @@
         border-radius: 50%;
 
         svg {
-          fill: $base-white;
           @include u-height(6);
           @include u-width(6);
+
+          * {
+            fill: $base-white;
+          }
         }
       }
      }
@@ -71,16 +80,6 @@
       @include u-margin-x(2);
     }
     .usa-card {
-      &:hover .usa-card__container, :focus .usa-card__container {
-        background-color: $bg-light-cool;
-        outline: 0;
-        border: 3px solid #3E79BB;
-
-        & >.vote-feature-card__icon>svg>circle {
-          fill: #fff;
-        }
-      }
-
       &__container {
         @include u-padding(3);
         border: 3px solid transparent;

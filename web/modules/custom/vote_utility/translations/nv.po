@@ -1,4 +1,4 @@
-# Navajo translation of Vote.gov
+# Navajo translation of vote.gov
 #
 msgid ""
 msgstr ""
@@ -45,7 +45,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "Sitsaa y1zh7 biyi' asdzogo naashch'22'go e'et'11d biih yilts0osgo bik11'"
 
 # data.translations.footer.identifier_gsa_txt
-msgid "An official website of the @link."
+msgid "an official website of the @link."
 msgstr "!l32j8' han1lki'7g77 website kod00 @link"
 
 # data.translations.footer.identifier_gsa_txt__1
@@ -81,12 +81,12 @@ msgid "in partnership with"
 msgstr "yi[ nidaalnish"
 
 # data.translations.footer.eac_logo_alt_text
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
-msgstr "US Election Assistance Commission bi-logo bik1'7g77 Vote.gov yi[ naazhnish biniy4"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
+msgstr "US Election Assistance Commission bi-logo bik1'7g77 vote.gov yi[ naazhnish biniy4"
 
 # data.translations.footer.twitter_text
-msgid "Follow Vote.gov on Twitter"
-msgstr "Vote.gov bik44' nanin1 Twitter biyi' &lt;Bilag1ana k'ehj7&gt"
+msgid "Follow vote.gov on"
+msgstr "vote.gov bik44' nanin1 X biyi' &lt;Bilag1ana k'ehj7&gt"
 
 # data.translations.footer.section_sign_up
 msgid "Email sign-up"
@@ -101,7 +101,7 @@ msgid "GSA logo"
 msgstr "GSA bi-logo"
 
 # data.translations.homepage.search_placeholder
-msgid "Search Vote.gov"
+msgid "Search vote.gov"
 msgstr "vote.gov hanit1h"
 
 # data.translations.homepage.section_banner
@@ -115,6 +115,10 @@ msgstr "Ha'did77l77[ i'ii'n77[ biniiy4 @state_name"
 # data.translations.register.heading2
 msgid "How to register to vote"
 msgstr "E'et'11d haayit'4ego b1 hazh'dii['88h"
+
+msgid "How to register and update your registration"
+msgstr "E'et'11d haayit'4ego b1 hazh'dii['88h"
+
 
 # data.translations.register.other_language_selection__heading
 msgid "Other ways to register to vote"
@@ -191,7 +195,7 @@ msgid "@link on @state_name’s election website."
 msgstr "@link h0tsaago hahoodzo i'ii'n77[ bi[ haz'32gi bi-website-gi @state_name."
 
 # @link: data.translations.register.online__answer1
-msgid "Start your online registration"
+msgid "Complete your online registration"
 msgstr "B44sh [ich7'ii nits7kees7 biyi'j8' hada'diln4h7g77 bee ha'd7l44h"
 
 # data.translations.register.online__answer2
