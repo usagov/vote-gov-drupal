@@ -84,7 +84,9 @@ echo "Uploading media files..."
   #tar xzf media_${BACKUP_ENV}.tar.gz -C ${backup_media}
 
   #sync the files that were backed up, deleting those not found from the backup env
-  aws s3 sync --no-verify-ssl --delete ${backup_media}/ s3://${bucket}/${backup_media} #2>/dev/null
+  which aws
+  aws s3 sync --no-verify-ssl --delete ${backup_media}/ s3://${bucket}/${backup_media}
+  #2>/dev/null
 
   cf delete-service-key "${service}" "${service_key}" -f
 } #>/dev/null 2>&1

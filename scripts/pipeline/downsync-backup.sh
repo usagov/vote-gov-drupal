@@ -130,7 +130,9 @@ echo "Downloading media files..."
 
   rm -rf ${backup_media}
   mkdir -p ${backup_media}
-  aws s3 sync --no-verify-ssl s3://${bucket}/${backup_media} ${backup_media}/ #2>/dev/null
+  which aws
+  aws s3 sync --no-verify-ssl s3://${bucket}/${backup_media} ${backup_media}/
+  #2>/dev/null
   #tar czf media_${BACKUP_ENV}.tar.gz ${backup_media}
 
   cf delete-service-key "${service}" "${service_key}" -f
