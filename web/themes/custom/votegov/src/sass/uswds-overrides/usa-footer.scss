@@ -5,6 +5,7 @@
 .usa-footer__primary-section {
   @include vote-block-padding-y--narrow;
   @include vote-solid-border-top;
+  @include u-font-family('sans');
   background-color: #f7f9fa;
 }
 

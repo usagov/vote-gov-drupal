@@ -1,4 +1,4 @@
-# Korean translation of Vote.gov
+# Korean translation of vote.gov
 #
 msgid ""
 msgstr ""
@@ -32,7 +32,7 @@ msgid "state"
 msgstr "주"
 
 #identifier
-msgid "An official website of the @link."
+msgid "an official website of the @link."
 msgstr "@link의 공식 웹사이트"
 
 msgid "General Services Administration"
@@ -60,15 +60,15 @@ msgstr "정부 관련 정보 및 제공 서비스"
 msgid "in partnership with"
 msgstr "협력 제공 기관"
 
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
 msgstr "협력 제공 기관: U.S. Election Assistance Commission"
 
-msgid "Follow Vote.gov on Twitter"
-msgstr "Vote.gov 사이트 트위터 팔로우하기 (영어로 제공)"
+msgid "Follow vote.gov on"
+msgstr "vote.gov 사이트 트위터 팔로우하기 (영어로 제공)"
 
 #search
-msgid "Search Vote.gov"
-msgstr "Vote.gov 사이트 검색"
+msgid "Search vote.gov"
+msgstr "vote.gov 사이트 검색"
 
 #state
 msgid "Register to vote in @state_name"
@@ -77,11 +77,17 @@ msgstr "@state_name 유권자 등록 안내 "
 msgid "How to register to vote"
 msgstr "유권자 등록 방법"
 
+msgid "How to register and update your registration"
+msgstr "유권자 등록 방법"
+
 msgid "Other ways to register to vote"
 msgstr "기타 유권자 등록 방법"
 
-msgid "Voter registration deadlines for the @election_date election"
+msgid "Voter registration deadlines for the @election_date election. @link"
 msgstr "@election_date 선거 유권자 등록 마감일"
+
+msgid "Find state and local election dates."
+msgstr ""
 
 msgid "Register by mail deadline:"
 msgstr "우편 투표자 등록 마감일:"
@@ -131,7 +137,7 @@ msgstr "투표에 대해 자세히 알아보기"
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
 msgstr "@state_name 는 유권자 등록이 필요하지 않습니다. @state_name 선거국 웹사이트에서 @link를 이용하시기 바랍니다."
 
-msgid "Start your online registration"
+msgid "Complete your online registration"
 msgstr "온라인 등록 시작하기"
 
 msgid "@link on @state_name’s election website."
