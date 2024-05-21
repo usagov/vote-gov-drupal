@@ -1,6 +1,5 @@
 @use "uswds-core" as *;
 @use "variables" as *;
-@use "mixins" as *;
 
 .usa-navbar {
   @include u-justify-content('justify');
@@ -36,7 +35,7 @@
 }
 
 .usa-header {
-  background-color: var(--main-color);
+  background-color: $base-white;;
   border-color: $bg-light-medium;
   @include u-border-bottom(1px);
 

@@ -13,10 +13,10 @@
       currentIndex = (currentIndex + 1) % themes.length;
       container.setAttribute("data-theme", themes[currentIndex]);
       // set theme selection in local storage
-      localStorage.setItem('theme', themes[currentIndex]);
+      sessionStorage.setItem('theme', themes[currentIndex]);
     }
 
-    const storedTheme = localStorage.getItem('theme');
+    const storedTheme = sessionStorage.getItem('theme');
     if (storedTheme) {
         // Set the current theme index based on the stored value
         currentIndex = themes.indexOf(storedTheme);

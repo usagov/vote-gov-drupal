@@ -9,9 +9,6 @@
  */
 #}
 
-
-{{ attach_library('votegov/theme_switcher') }}
-
 <section class="usa-banner" aria-label="{{ 'Official government website' | t }}" data-test="govBanner">
   <div class="usa-accordion">
     <div class="usa-banner__header">
@@ -73,9 +70,6 @@
       </div>
     </div>
   </div>
-  {% if logged_in %}
-<button id="theme-btn" class="vote-theme" type="button">Toggle Theme</button>
-{% endif %}
   {# Language selector component #}
   {{ drupal_entity('block', 'votegov_languageswitcher') }}
 </section>
