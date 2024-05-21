@@ -55,10 +55,22 @@
 {# Government banner component #}
   {{ drupal_entity('block_content', '1') }}
 
+{# If the current page has been marked as outdated and it's the front page #}
+{% if is_front and node.content_translation_outdated.value == 1 %}
+  {# Display a translation alert with a link to the legacy homepage #}
+  {% set alert_translation %}
+    <p>Welcome to the new vote.gov! We're continuing to add more languages to the site.
+      <a href="/{{ language }}/legacy">Find information about registering to vote in {{ languagename }}.</a></p>
+  {% endset %}
+  {% include '@uswds_templates/usa-site-alert.html.twig' with {
+    'alert_type': 'info',
+    'text': alert_translation
+  } %}
+{% endif %}
+
 {# Sitewide alert component #}
   {{ drupal_view('sitewide_alert', 'block_1') }}
 
-<div class="usa-overlay"></div>
 <header class="usa-header usa-header--basic usa-header--megamenu">
   <div class="usa-nav-container">
     <div class="usa-navbar">
@@ -67,6 +79,8 @@
       {{ drupal_entity('block', 'votegov_sitebranding') }}
 
       <button type="button" class="usa-menu-btn" data-test="mobileBtn">{{ 'Menu' | t }}</button>
+      <button type="button" class="usa-nav__close" data-test="closeBtn">{{ 'Close' | t }}</button>
+
     </div>
 
     {# Main navigation component #}
