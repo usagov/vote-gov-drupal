@@ -11,27 +11,11 @@
   @include grid-container;
   @include grid-row;
   @include vote-block-padding-y;
-  @include u-padding-x(3);
   @include u-flex('align-center');
-
-  @include at-media('tablet') {
-    @include u-padding-x(4);
-  }
-
-  @include at-media('desktop') {
-    @include u-padding-x(10);
-    @include u-padding-y(8);
-  }
-
 }
 
 .vote-quicklinks__heading {
-  @include u-font-size('body', 'xl');
-  @include u-text('bold');
-
-  h2 {
-    color: $base-white;
-  }
+  color: $base-white;
 
   @include at-media('desktop') {
     @include grid-col(6);
@@ -39,7 +23,7 @@
 }
 
 .vote-quicklinks__content{
-  @include u-font('sans', 'md');
+  @include u-font('sans', 6);
 
   @include at-media('desktop') {
     @include grid-col(5);
@@ -47,21 +31,14 @@
   }
 
   a {
+    @include vote-link-dark;
     @include u-text('bold');
-    color: $base-white !important;
     @include u-text('no-underline');
-
-    &:hover{
-      @include u-text('underline');
-      background-color: $base-dark;
-    }
 
     &::after{
       content: "";
       @include u-padding-left(2);
-      background: url( '../../../votegov/img/svg/arrow-white.svg' );
-      background-repeat: no-repeat;
-      background-position: 100% 50%;
+      background: url('../../img/svg/arrow-white.svg') no-repeat right center;
     }
   }
 }

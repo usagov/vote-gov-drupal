@@ -7,11 +7,9 @@
 
 <section class="vote-quicklinks">
   <div class="vote-quicklinks__container">
-    <div class="vote-quicklinks__heading heading--red-underline">
-      <h2>
+    <h2 class="vote-quicklinks__heading heading--red-underline">
         {{ content.field_heading | field_value }}
-      </h2>
-    </div>
+    </h2>
     <div class="vote-quicklinks__content">
       {{ content.field_body | field_value }}
       {% if content.field_link | render %}
