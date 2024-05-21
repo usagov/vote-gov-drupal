@@ -23,7 +23,11 @@
     </h2>
   {% endif %}
   <div class="vote-basics-block__content">
-    {{ content.field_body | field_value }}
+    {% if content.field_body | render %}
+      <div class="vote-basics-block__text">
+        {{ content.field_body | field_value }}
+      </div>
+    {% endif %}
     {{ content.field_basics_modules | field_value }}
   </div>
 </div>
