@@ -7,7 +7,7 @@ describe('Check main menu', () => {
 
   it('main menu - desktop', () => {
     cy.get('[data-test="mainNav"]').find('li').then(li => {
-      cy.get(li[1]).click()
+      cy.get(li[1]).realClick()
       cy.get('[data-test="subMenu"]').should('be.visible')
     })
   })
@@ -23,7 +23,7 @@ describe('Check main menu', () => {
     })
     cy.get('[data-test="searchBox"]').should('be.visible')
     // close menu
-    cy.get('[data-test="closeBtn"]').click()
+    cy.get('[data-test="closeBtn"]').click({force: true})
     cy.get('[data-test="mobileNav"]').should('not.be.visible')
 
   })

@@ -2,15 +2,13 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-.identifier-links {
-  column-gap: 24px;
-
+.vote-identifier-links {
   @include at-media-max('mobile-lg') {
-    column-count: 1;
-    text-align: center;
+    @include u-text-align('center');
   }
-
+  
   @include at-media('mobile-lg') {
+    column-gap: 1.5rem;
     column-count: 2;
   }
 
@@ -20,25 +18,21 @@
 
   @include at-media('tablet-lg') {
     column-count: 4;
-    column-gap: 32px;
+    column-gap: 2rem;
   }
 
   li {
     + li {
-      @include at-media-max('tablet') {
-        @include u-margin-top(2);
-      }
+      @include u-margin-top(2);
 
       @include at-media('tablet') {
         @include u-margin-top('205');
       }
     }
 
-    a, a:visited {
-      @include vote-link;
+    a {
+      @include vote-link($base-dark, $base-dark); 
       word-break: break-word;
-      font-size: 16px;
-      color: $base-dark !important;
     }
   }
 }

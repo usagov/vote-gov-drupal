@@ -1,4 +1,4 @@
-# Hindi translation of Vote.gov
+# Hindi translation of vote.gov
 #
 msgid ""
 msgstr ""
@@ -29,7 +29,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "मतदान क्रिया को इंगित करने के लिए मतदाता पेटी में चेक किए गए मतपत्र को डाले जाने का चित्रण"
 
 #identifier
-msgid "An official website of the @link."
+msgid "an official website of the @link."
 msgstr "@link की आधिकारिक वेबसाइट"
 
 msgid "General Services Administration"
@@ -57,15 +57,15 @@ msgstr "सरकारी सूचना और सेवाएं"
 msgid "in partnership with"
 msgstr "के साथ साझेदारी में"
 
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
 msgstr "U.S. Election Assistance Commission के साथ साझेदारी में"
 
-msgid "Follow Vote.gov on Twitter"
-msgstr "Vote.gov को Twitter पर फ़ॉलो करें (अंग्रेज़ी में)"
+msgid "Follow vote.gov on"
+msgstr "vote.gov को X पर फ़ॉलो करें (अंग्रेज़ी में)"
 
 #search
-msgid "Search Vote.gov"
-msgstr "Vote.gov पर खोजें"
+msgid "Search vote.gov"
+msgstr "vote.gov पर खोजें"
 
 #state
 msgid "Register to vote in @state_name"
@@ -74,11 +74,17 @@ msgstr "@state_name में मतदान करने के लिए प�
 msgid "How to register to vote"
 msgstr "मतदान करने के लिए पंजीकरण कैसे करें"
 
+msgid "How to register and update your registration"
+msgstr "मतदान करने के लिए पंजीकरण कैसे करें"
+
 msgid "Other ways to register to vote"
 msgstr "मतदान के लिए पंजीकरण करने के अन्य तरीके"
 
-msgid "Voter registration deadlines for the @election_date election"
+msgid "Voter registration deadlines for the @election_date election. @link"
 msgstr "@election_date चुनाव के लिए मतदाता पंजीकरण की समय सीमा"
+
+msgid "Find state and local election dates."
+msgstr ""
 
 msgid "Register by mail deadline:"
 msgstr "डाक द्वारा पंजीकरण की अंतिम तिथि:"
@@ -128,7 +134,7 @@ msgstr "मतदान के बारे में अधिक जानक�
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
 msgstr "वर्जीनिया में मतदाता पंजीकरण की आवश्यकता नहीं है। @state_name राज्य की चुनाव वेबसाइट पर @link।"
 
-msgid "Start your online registration"
+msgid "Complete your online registration"
 msgstr "अपना ऑनलाइन पंजीकरण शुरू करें"
 
 msgid "@link on @state_name’s election website."

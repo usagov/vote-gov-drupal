@@ -32,22 +32,26 @@
  */
 #}
 {% if links -%}
+  {# Add new lang attributes #}
+  {% set link_attributes = {
+    'lang': key,
+    'xml:lang': key
+  } %}
   {% if links|length == 2 %}
     {% for key, item in links %}
       {%- if item.link -%}
         {% if language != key %}
           <div class='usa-language__primary'>
-            {{ item.link|merge({
-              '#attributes': {
-                'lang': key,
-                'xml:lang': key
-              },
-              '#options': {
-                'language': item.link['#options'].language,
-                'attributes': {
-                  'class': ['usa-button', 'usa-language__link']
-                }
+            {# Add class to exclude navajo font from link render #}
+            {% set link_button_options = item.link['#options'] | merge({
+              'attributes': {
+                'class': ['usa-button', 'usa-language__link']
               }
+            }) %}
+            {# Merge modifications in the link output #}
+            {{ item.link | merge({
+              '#attributes': link_attributes,
+              '#options': link_button_options
             }) }}
           </div>
         {% endif %}
@@ -58,23 +62,24 @@
       <li class="usa-language__submenu-item" {{ item.attributes.removeAttribute('hreflang') }}
           data-lang="lang-{{ key }}" data-test="langItem">
         {%- if item.link -%}
-          {# Create a custom override for the frontpage links. #}
-          {%- if is_frontpage -%}
-            <a href="/{{ key != 'en' ? key }}" class="usa-language__link" lang="{{ key }}" xml:lang="{{ key }}"
-               hreflang="{{ key }}" data-drupal-link-system-path="{{ path('<current>') }}">
-              <strong>{{ item.link['#title'] }}</strong> {{ item.link['#english'] }}
-            </a>
-          {%- else -%}
-            {{ item.link|merge({
-              '#title': {
-                '#markup': "<strong>#{item.link['#title']}</strong> #{item.link['#english']}"
-              },
-              '#attributes': {
-                'lang': key,
-                'xml:lang': key
-              }
-            }) }}
-          {%- endif -%}
+          {# Replace default title with combo of endonym and english versions #}
+          {% set link_title %}
+            <strong class="nonvfont">{{ item.link['#title'] }}</strong> {{ item.link['#english'] }}
+          {% endset %}
+          {# Add class to exclude navajo font from link render #}
+          {% set link_options = item.link['#options'] | merge({
+            'attributes': {
+              'class': ['language-link', 'nonvfont']
+            }
+          }) %}
+          {# Merge modifications in the link output #}
+          {{ item.link | merge({
+            '#title': {
+              '#markup': link_title
+            },
+            '#attributes': link_attributes,
+            '#options': link_options
+          }) }}
         {%- endif -%}
       </li>
     {%- endfor -%}

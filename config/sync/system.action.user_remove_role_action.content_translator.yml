@@ -1,0 +1,14 @@
+uuid: 18166f5c-0a29-411c-8a54-791f47dcf765
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.content_translator
+  module:
+    - user
+id: user_remove_role_action.content_translator
+label: 'Remove the Content Translator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: content_translator

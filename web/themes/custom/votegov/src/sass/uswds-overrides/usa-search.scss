@@ -2,8 +2,8 @@
 @use "variables" as *;
 
 #usa-search--expandable {
+  @include u-padding-y(2);
   order: 3;
-  padding-top: 16px;
 
   @include at-media('tablet-lg') {
     @include u-padding-bottom(2);

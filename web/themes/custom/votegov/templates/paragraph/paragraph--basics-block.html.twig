@@ -7,7 +7,7 @@
 
 {%
   set classes = [
-    'basics-block',
+    'vote-basics-block',
     'type--secondary',
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
@@ -17,15 +17,17 @@
 %}
 
 <div{{ attributes.addClass(classes) }}>
-  <div class="basics-block--container">
-    {% if content.field_heading | render %}
-    <div class="basics-block--heading-container">
-      <h2><span>{{ content.field_heading | field_value }}<span></h2>
-    </div>
+  {% if content.field_heading | render %}
+    <h2 class="vote-basics-block__heading">
+      <span>{{ content.field_heading | field_value }}<span>
+    </h2>
+  {% endif %}
+  <div class="vote-basics-block__content">
+    {% if content.field_body | render %}
+      <div class="vote-basics-block__text">
+        {{ content.field_body | field_value }}
+      </div>
     {% endif %}
-    <div class="basics-block--content">
-      {{ content.field_body | field_value }}
-      {{ content.field_basics_modules | field_value }}
-    </div>
+    {{ content.field_basics_modules | field_value }}
   </div>
 </div>

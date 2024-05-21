@@ -1,6 +1,6 @@
 # Git workflow guidelines
 
-These are the workflow guidelines that are being used to develop and maintain the Vote.gov website.
+These are the workflow guidelines that are being used to develop and maintain the vote.gov website.
 
 ## Application development task
 1. Checkout and pull the latest commits from `dev`
