@@ -15,26 +15,30 @@
 }
 
 .vote-quicklinks__heading {
-  @include u-font-size('body', 'xl');
-
-  h2 {
-    color: $base-white;
-  }
+  color: $base-white;
 
   @include at-media('desktop') {
-    @include grid-col(5);
+    @include grid-col(6);
   }
 }
 
 .vote-quicklinks__content{
-  @include u-font('sans', 'md');
-
-  a {
-    color: $ac-cool-light !important;
-  }
+  @include u-font('sans', 6);
 
   @include at-media('desktop') {
     @include grid-col(5);
     @include grid-offset(1);
+  }
+
+  a {
+    @include vote-link-dark;
+    @include u-text('bold');
+    @include u-text('no-underline');
+
+    &::after{
+      content: "";
+      @include u-padding-left(2);
+      background: url('../../img/svg/arrow-white.svg') no-repeat right center;
+    }
   }
 }

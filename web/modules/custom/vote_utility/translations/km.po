@@ -74,11 +74,17 @@ msgstr "ចុះឈ្មោះដើម្បីបោះឆ្នោតនៅ
 msgid "How to register to vote"
 msgstr "របៀបចុះឈ្មោះដើម្បីបោះឆ្នោត"
 
+msgid "How to register and update your registration"
+msgstr "របៀបចុះឈ្មោះដើម្បីបោះឆ្នោត"
+
 msgid "Other ways to register to vote"
 msgstr "វិធីផ្សេងៗទៀតដើម្បីចុះឈ្មោះបោះឆ្នោត"
 
-msgid "Voter registration deadlines for the @election_date election"
+msgid "Voter registration deadlines for the @election_date election. @link"
 msgstr "ថ្ងៃផុតកំណត់នៃការចុះឈ្មោះឣ្នកបោះឆ្នោតសម្រាប់ការបោះឆ្នោត @election_date"
+
+msgid "Find state and local election dates."
+msgstr ""
 
 msgid "Register by mail deadline:"
 msgstr "ថ្ងៃផុតកំណត់ចុះឈ្មោះតាមសំបុត្រ៖"
@@ -128,7 +134,7 @@ msgstr "ស្វែងយល់បន្ថែមអំពីការបោះ
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
 msgstr "ការចុះឈ្មោះបោះឆ្នោតមិនត្រូវបានទាមទារនៅក្នុងរដ្ឋ Virginia ទេ។ @link នៅលើគេហទំព័របោះឆ្នោតរដ្ឋរបស់ @state_name"
 
-msgid "Start your online registration"
+msgid "Complete your online registration"
 msgstr "ចាប់ផ្តើមការចុះឈ្មោះតាមអ៊ីនធឺណិតរបស់អ្នក"
 
 msgid "@link on @state_name’s election website."

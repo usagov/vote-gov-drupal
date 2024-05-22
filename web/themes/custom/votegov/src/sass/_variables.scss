@@ -18,4 +18,8 @@ $bg-light: #F7F9FA; // gray-cool-2
 $bg-light-medium: #D3D3D3; // gray-cool-20 is this just for the horizontal rule?
 $bg-light-cool: #E2EDF2; // blue-warm-10
 $bg-light-warm: #e7e5dd; // hero-background
-$bg-dark: #1B1B1B; //footer menu background
+
+// Theme Colors
+[data-theme="contrast"] {
+  --main-color: black;
+}
