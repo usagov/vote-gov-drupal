@@ -25,6 +25,7 @@ jobs:
             source ./scripts/pipeline/deb-cf-install.sh
       - run:
           name: "Run Drush Cron and Generate Static Site"
+          no_output_timeout: 30m
           command: |
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
@@ -142,6 +143,7 @@ jobs:
             source ./scripts/pipeline/deb-cf-install.sh
       - run:
           name: "Post Deploy Upkeep"
+          no_output_timeout: 30m
           command: |
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh

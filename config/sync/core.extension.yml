@@ -71,6 +71,7 @@ module:
   token: 0
   tome_base: 0
   tome_static: 0
+  tome_static_super_cache: 0
   toolbar: 0
   translatable_menu_link_uri: 0
   twig_field_value: 0
