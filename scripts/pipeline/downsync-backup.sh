@@ -108,3 +108,29 @@ if [ ${BACKUP_ENV} = "prod" ]; then
   cf disable-ssh ${project}-drupal-${BACKUP_ENV}
 fi
 rm -rf backup.txt ~/.mysql
+
+# Download media files.
+backup_media="cms/public/media"
+
+echo "Downloading media files..."
+{
+  cf target -s "${cf_space}"
+
+  service="${project}-storage-${BACKUP_ENV}"
+  service_key="${service}-key"
+  cf delete-service-key "${service}" "${service_key}" -f
+  cf create-service-key "${service}" "${service_key}"
+  sleep 2
+  s3_credentials=$(cf service-key "${service}" "${service_key}" | tail -n +2)
+
+  export AWS_ACCESS_KEY_ID=$(echo "${s3_credentials}" | jq -r '.credentials.access_key_id')
+  export bucket=$(echo "${s3_credentials}" | jq -r '.credentials.bucket')
+  export AWS_DEFAULT_REGION=$(echo "${s3_credentials}" | jq -r '.credentials.region')
+  export AWS_SECRET_ACCESS_KEY=$(echo "${s3_credentials}" | jq -r '.credentials.secret_access_key')
+
+  rm -rf ${backup_media}
+  mkdir -p ${backup_media}
+  aws s3 sync --no-verify-ssl s3://${bucket}/${backup_media} ${backup_media}/ 2>/dev/null
+
+  cf delete-service-key "${service}" "${service_key}" -f
+} >/dev/null 2>&1

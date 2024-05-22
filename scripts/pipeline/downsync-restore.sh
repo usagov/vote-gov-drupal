@@ -59,3 +59,28 @@ rm -rf restore.txt ~/.mysql backup_${BACKUP_ENV}.sql
 
 echo "Running 'drush cr' on '${BACKUP_ENV}' database..."
 source $(pwd $(dirname $0))/scripts/pipeline/cloud-gov-remote-command.sh "${project}-drupal-${RESTORE_ENV}" "drush cr"
+
+# Upload media files.
+backup_media="cms/public/media"
+
+echo "Uploading media files..."
+{
+  cf target -s "${cf_space}"
+
+  service="${project}-storage-${RESTORE_ENV}"
+  service_key="${service}-key"
+  cf delete-service-key "${service}" "${service_key}" -f
+  cf create-service-key "${service}" "${service_key}"
+  sleep 2
+  s3_credentials=$(cf service-key "${service}" "${service_key}" | tail -n +2)
+
+  export AWS_ACCESS_KEY_ID=$(echo "${s3_credentials}" | jq -r '.credentials.access_key_id')
+  export bucket=$(echo "${s3_credentials}" | jq -r '.credentials.bucket')
+  export AWS_DEFAULT_REGION=$(echo "${s3_credentials}" | jq -r '.credentials.region')
+  export AWS_SECRET_ACCESS_KEY=$(echo "${s3_credentials}" | jq -r '.credentials.secret_access_key')
+
+  # Sync files to restore env, deleting those not found from backup env.
+  aws s3 sync --no-verify-ssl --delete ${backup_media}/ s3://${bucket}/${backup_media} 2>/dev/null
+
+  cf delete-service-key "${service}" "${service_key}" -f
+} >/dev/null 2>&1
