@@ -42,7 +42,6 @@
 
                 &__heading {
                     color: $base-white;
-                    @include u-font-family('serif');
                     font-style: normal;
                     font-weight: 700;
                     line-height: 116%;
