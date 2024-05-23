@@ -57,7 +57,7 @@ echo "Cleaning up old connections..."
 ## Clean up.
 rm -rf restore.txt ~/.mysql backup_${BACKUP_ENV}.sql
 
-echo "Running 'drush cr' on '${BACKUP_ENV}' database..."
+echo "Running 'drush cr' on '${RESTORE_ENV}' database..."
 source $(pwd $(dirname $0))/scripts/pipeline/cloud-gov-remote-command.sh "${project}-drupal-${RESTORE_ENV}" "drush cr"
 
 # Upload media files.
@@ -79,8 +79,11 @@ echo "Uploading media files..."
   export AWS_DEFAULT_REGION=$(echo "${s3_credentials}" | jq -r '.credentials.region')
   export AWS_SECRET_ACCESS_KEY=$(echo "${s3_credentials}" | jq -r '.credentials.secret_access_key')
 
-  # Sync files to restore env, deleting those not found from backup env.
+  # Sync files to restore env, deleting those not found in backup env.
   aws s3 sync --no-verify-ssl --delete ${backup_media}/ s3://${bucket}/${backup_media} 2>/dev/null
 
   cf delete-service-key "${service}" "${service_key}" -f
 } >/dev/null 2>&1
+
+echo "Running 'drush image-flush --all' on '${RESTORE_ENV}'..."
+source $(pwd $(dirname $0))/scripts/pipeline/cloud-gov-remote-command.sh "${project}-drupal-${RESTORE_ENV}" "drush image-flush --all"
