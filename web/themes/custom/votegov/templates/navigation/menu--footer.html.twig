@@ -21,65 +21,30 @@
  */
 #}
 {% import _self as menus %}
-{% set gsaLink = link('General Services Administration' | t , 'https://www.gsa.gov/') %}
 
-{# USWDS Default #}
-<div class="usa-identifier">
-  {# GSA logo #}
-  <section
-    class="usa-identifier__section usa-identifier__section--masthead"
-    aria-label="Agency identifier,"
-  >
-    <div class="usa-identifier__container">
-      <div class="usa-identifier__logos">
-        <a href="" class="usa-identifier__logo"
-          ><img
-            class="usa-identifier__logo-img"
-            src="{{ theme_path }}/img/gsa-logo.svg"
-            alt="{{ 'GSA logo'|t }}"
-            role="img"
-        /></a>
-      </div>
-      <section
-        class="usa-identifier__identity"
-        aria-label="Agency description,"
-      >
-        <p class="usa-identifier__identity-domain">vote.gov</p>
-        <p class="usa-identifier__identity-disclaimer">
-          {{ "An official website of the @link" | t({'@link': gsaLink | render}) }}
-        </p>
-      </section>
-    </div>
-  </section>
-  {# footer links #}
-  <nav class="usa-identifier__section usa-identifier__section--required-links">
-    <div class="usa-identifier__container">
-      {{ menus.menu_links(items, attributes, 0) }}
-    </div>
-  </nav>
-  {# USAgov identifier #}
-  <section
-    class="usa-identifier__section usa-identifier__section--usagov"
-    aria-label="U.S. government information and services,"
-  >
-    <div class="usa-identifier__container">
-      <div class="usa-identifier__usagov-description">
-        {{'Looking for U.S. government information and services?' | t }}
-      </div>
-      <a href="https://www.usa.gov/" class="usa-link">{{'Visit USA.gov' | t }}</a>
-    </div>
-  </section>
-</div>
+{# footer links #}
+<nav class="usa-identifier__section usa-identifier__section--required-links">
+  <div class="usa-identifier__container">
+    {{ menus.menu_links(items, attributes, 0) }}
+  </div>
+</nav>
 
 {% macro menu_links(items, attributes, menu_level) %}
   {% import _self as menus %}
 
   {% if items %}
-      <ul class="usa-identifier__required-links-list" data-test="footerLinks">
-    {% for item in items %}
-        <li class="usa-identifier__required-links-item">{{ link(item.title, item.url) }}</li>
-    {% endfor %}
-      </ul>
+    <ul class="usa-identifier__required-links-list">
+      {% for item in items %}
+        <li class="usa-identifier__required-links-item">
+          {% set link_classes = [
+            'usa-identifier__required-link',
+            'usa-link',
+            item.in_active_trail ? 'usa-current'
+          ] %}
+          {{ link(item.title, item.url, create_attribute({'class': link_classes})) }}
+        </li>
+      {% endfor %}
+    </ul>
   {% endif %}
 
 {% endmacro %}

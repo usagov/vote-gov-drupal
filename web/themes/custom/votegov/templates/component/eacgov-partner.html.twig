@@ -1,23 +1,26 @@
 {% set GSAlink = link('General Services Administration' | t, 'https://www.gsa.gov/') %}
 
-<div class="vote-eac__section" data-test="footerContact">
-  <div class="usa-footer__logo grid-container">
-      <div class="vote-eac-partner-container">
-        {# EAC Text #}
-        <div class="eac-container__text">
-          <p>{{ 'Vote.gov is made possible in partnership with ' | t }}</p>
-        </div>
-        {# EAC logo #}
-        <div class="eac-logo-container">
-          <a href="{{ language == 'es' ? 'https://www.eac.gov/translations/spanish' : 'https://www.eac.gov/' }}" target="_blank">
-            <img class="eac-logo" width="146" height="48" src="{{ theme_path }}/img/eac-logo.webp" alt="{{ 'U.S. Election Assistance Commission logo which indicates a partnership with vote.gov' | t }}" /></a>
-        </div>
+<div class="vote-eac-partner vote-block-padding-y-narrow" data-test="footerContact">
+  <div class="vote-eac-partner__container">
+    <div class="vote-eac-partner__logo">
+      {# EAC Text #}
+      <div class="vote-eac-partner__text">
+        <p>{{ 'Vote.gov is made possible in partnership with ' | t }}</p>
       </div>
-      <div class="vote-usa-footer__social-links">
-        <a class="vote-social-link" href="https://twitter.com/votegov">
-          <p> {{ 'Follow vote.gov on ' | t }} </p>
-          <img src="{{ theme_path }}/img/x-logo-dark.svg" alt="X" />
-        </a>
+      {# EAC logo #}
+      <div class="vote-eac-partner__logo-img">
+        <a extlinkjs-ignore
+           href="{{ language == 'es' ? 'https://www.eac.gov/translations/spanish' : 'https://www.eac.gov/' }}"
+           target="_blank">
+          <img width="146" height="48" src="{{ theme_path }}/img/eac-logo.webp"
+               alt="{{ 'U.S. Election Assistance Commission logo which indicates a partnership with vote.gov' | t }}"/></a>
       </div>
+    </div>
+    <div class="vote-eac-partner__social-links">
+      <a class="vote-eac-partner__social-link" extlinkjs-ignore href="https://twitter.com/votegov">
+        <p> {{ 'Follow vote.gov on ' | t }} </p>
+        <img src="{{ theme_path }}/img/x-logo.svg" width="34" height="32" alt="X"/>
+      </a>
+    </div>
   </div>
 </div>

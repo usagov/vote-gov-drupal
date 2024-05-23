@@ -1,38 +1,28 @@
 <div class="vote-usagov-partner">
-    {# USA.gov Links #}
-    <nav class="vote-usagov-partner-links grid-container"
-      aria-label={{ "Important links," | t }}
-    >
-        {# USA.gov election info links #}
-        {{ drupal_entity('block_content', '18') }}
-    </nav>
+  {# USA.gov Links #}
+  <nav class="vote-usagov-partner__links" aria-label={{ "Election links" | t }}>
+    {# USA.gov election info links #}
+    {{ drupal_entity('block_content', '18') }}
+  </nav>
 
-    {# Row 2 Divider - USA.gov link and email sign-up #}
-    <div class="vote-partners-contact-container">
-      <div class="vote-usa-contact-container">
+  {# Row 2 Divider - USA.gov link and email sign-up #}
+  <div class="vote-usagov-partner__contact-container">
+    <div class="vote-usagov-partner__contact">
+      <div class="vote-usagov-partner__logo">
         {# USA.gov link #}
-        <section
-          class="vote-usagov-partner__section--masthead"
-          aria-label={{"Agency identifier," | t }}
-        >
-          <section
-            class="vote-usagov-partner__identity"
-            aria-label={{"Agency description," | t }}
-          >
-            <a href="https://www.usa.gov/" class="vote-usagov-partner__logo">
-              <img
-                src="{{ theme_path }}/img/usa.gov.svg"
-                alt={{"USA.gov logo" | t }}
-                role="img"
-                width="48"
-                height="48"
-              /></a>
-            <div class="vote-usagov-partner__identity-disclaimer">
-              <p>{{"Visit our partner site, USA.gov, to find more information about voting in the United States." | t }}</p>
-            </div>
-          </section>
-        </section>
-        {# Email sign-up component. #}
-        {{ drupal_entity('block_content', 4) }}
+        <a href="https://www.usa.gov/" extlinkjs-ignore>
+          <img
+            src="{{ theme_path }}/img/usagov-logo.svg"
+            alt="{{ "USA.gov logo" | t }}"
+            width="48"
+            height="48"
+          /></a>
+        <div class="vote-usagov-partner__disclaimer">
+          <p>{{ "Visit our partner site, USA.gov, to find more information about voting in the United States." | t }}</p>
+        </div>
+      </div>
+      {# Email sign-up component. #}
+      {{ drupal_entity('block_content', 4) }}
     </div>
+  </div>
 </div>

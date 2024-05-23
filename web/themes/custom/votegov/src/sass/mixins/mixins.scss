@@ -101,39 +101,18 @@
   }
 }
 
-@mixin vote-link($color: $base-primary, $color-hover: $base-primary-hover) {
+@mixin vote-link($color: $base-primary, $color-hover: $base-white, $color-bg: $base-primary-hover) {
   @include u-text('underline');
   color: $color;
 
-  &:visited,
-  &:active {
+  &:visited {
     color: $color;
-
-    @include hover {
-      color: $base-white;
-    }
   }
 
   @include hover {
     @include u-text('no-underline');
-    background-color: $color-hover;
-    color: $base-white;
-  }
-}
-
-@mixin vote-link-light {
-  @include u-text('underline');
-  color: $base-white;
-
-  &:visited,
-  &:active {
-    color: $base-primary;
-  }
-
-  @include hover {
-    @include u-text('no-underline');
-    background-color: $base-primary-hover;
-    color: $base-white !important;
+    background-color: $color-bg;
+    color: $color-hover;
   }
 }
 
@@ -172,10 +151,4 @@
 
 .vote-fill {
   @include vote-fill;
-}
-
-@mixin vote-remove-external-link {
-  .usa-link--external::after {
-    all: unset;
-  }
 }
