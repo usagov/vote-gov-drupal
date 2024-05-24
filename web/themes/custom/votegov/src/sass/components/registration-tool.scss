@@ -5,20 +5,7 @@
 .registration-tool {
     @include at-media('tablet-lg') {
         position: relative;
-
-        &::before {
-            content: '';
-            background-image: url('../../img/hero-map.webp');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-color: $base-dark;
-            position: absolute;
-            top: 0;
-            bottom: 126px;
-            right: 0;
-            left: 0;
-        }
+        background-image: url('../../img/hero-map.webp');
     }
 
     .vote-basic {
@@ -36,9 +23,6 @@
         .vote-basic {
 
             &-text {
-                &__container {
-                    background-color: $base-primary;
-                }
 
                 &__heading {
                     color: $base-white;
@@ -57,9 +41,6 @@
             }
 
             &-tool {
-                &__container {
-                    background-color: $base-primary;
-                }
 
                 &__label {
                     @include u-display('flex');
@@ -123,34 +104,19 @@
                         }
 
                         a {
-                            @include vote-link();
+                            @include vote-link($color: $base-dark);
                             font-family: Roboto;
-                            color: $base-primary-hover;
-                            font-size: 16px;
-                            font-style: normal;
                             font-weight: 500;
-                            line-height: 155%;
+                            text-decoration-line: none;
 
-                            &:visited {
-                                color: $base-primary-hover;
-
-                                &:hover, &:focus {
-                                    color: $base-white;
-                                }
+                            &:hover, &:focus {
+                                text-decoration-line: underline;
                             }
-                        }
-
-                        a {
-                            text-decoration-line: underline;
                         }
 
                         li#no-results>span {
                             font-family: Roboto;
-                            color: $base-primary-hover;
-                            font-size: 16px;
-                            font-style: normal;
                             font-weight: 500;
-                            line-height: 155%;
                         }
                     }
                 }
@@ -178,14 +144,12 @@
                     &__container {
                         flex: 1;
                         position: relative;
-                        @include u-padding(8);
+                        @include u-padding-right(8);
+                        @include u-padding-bottom(8);
+
                         background-position: 64px 64px;
                         ;
                         border-radius: 8px 0px 0px 8px;
-
-                        &::before {
-                            content: url('../../../votegov/img/svg/map-transparent.svg');
-                        }
                     }
 
                     &__heading {
@@ -258,18 +222,7 @@
                     &__container {
                         background-color: $base-dark;
                         @include u-padding-x(3);
-                        @include u-padding-bottom(10);
-
-                        &::after {
-                            content: url('../../../votegov/img/svg/map-blue.svg');
-                            @include u-display('block');
-                            @include u-width('full');
-                            text-align: center;
-                            margin-bottom: -150px;
-                            @include u-padding-top(6);
-                            @include u-padding-bottom(4);
-                        }
-
+                        @include u-padding-bottom(5);
                     }
 
                     &__heading {
@@ -291,7 +244,7 @@
 
                 &-tool {
                     &__container {
-                        @include u-padding-top(8);
+                        //@include u-padding-top(8);
                         @include u-padding-bottom(5);
                         @include u-padding-x(3);
                     }

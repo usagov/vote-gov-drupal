@@ -18,7 +18,7 @@
 
     > * {
       @include at-media('desktop') {
-        @include grid-col(7);
+        @include grid-col(6);
       }
     }
   }
