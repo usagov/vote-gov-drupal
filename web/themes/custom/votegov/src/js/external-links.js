@@ -5,7 +5,7 @@
 (() => {
 
   // Enable external links behavior.
-  const externalLinks = document.querySelectorAll('a[href^="https"]');
+  const externalLinks = document.querySelectorAll('a[href^="https"]:not([extlinkjs-ignore])');
   const title_translated = Drupal.t('External link opens in new window');
 
   // Process external links.
