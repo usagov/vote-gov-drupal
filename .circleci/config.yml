@@ -340,15 +340,13 @@ workflows:
                 - stage
           requires:
             - post-deploy
-      # - cypress:
-      #     filters:
-      #       branches:
-      #         only:
-      #           - test
-      #           - dev
-      #           - stage
-      #     requires:
-      #       - upkeep
+      - cypress:
+          filters:
+            branches:
+              only:
+                - stage
+          requires:
+            -  post-deploy-upkeep
   deploy-prod-workflow:
     when:
       and:
@@ -408,3 +406,4 @@ workflows:
           - equal: [ test, << pipeline.parameters.restore >> ]
     jobs:
       - downsync
+      
