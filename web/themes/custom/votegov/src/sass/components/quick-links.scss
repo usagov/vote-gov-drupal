@@ -22,12 +22,13 @@
   }
 }
 
-.vote-quicklinks__content{
+.vote-quicklinks__content {
   @include u-font('sans', 6);
 
   @include at-media('desktop') {
     @include grid-col(5);
     @include grid-offset(1);
+    @include u-margin-top(0);
   }
 
   a {
@@ -35,10 +36,13 @@
     @include u-text('bold');
     @include u-text('no-underline');
 
-    &::after{
-      content: "";
+    @include after {
       @include u-padding-left(2);
       background: url('../../img/svg/arrow-white.svg') no-repeat right center;
     }
+  }
+
+  ul {
+    @include add-list-reset;
   }
 }

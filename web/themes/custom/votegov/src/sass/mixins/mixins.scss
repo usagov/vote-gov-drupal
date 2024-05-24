@@ -82,6 +82,8 @@
 
 @mixin hover {
   &:hover,
+  &:visited:hover,
+  &:active,
   &:focus {
     @content;
   }
@@ -120,8 +122,7 @@
   @include u-text('underline');
   color: $base-white;
 
-  &:visited,
-  &:active {
+  &:visited {
     color: $base-white;
   }
 
