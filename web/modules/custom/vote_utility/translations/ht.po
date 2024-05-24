@@ -45,7 +45,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "Ilistrasyon sou bwat votè montre bilten vòt ki gen tchèk pou endike aksyon pou vote"
 
 # data.translations.footer.identifier_gsa_txt
-msgid "an official website of the @link."
+msgid "An official website of the @link."
 msgstr "Sitwèb ofisyèl @link la"
 
 # data.translations.footer.identifier_gsa_txt__1

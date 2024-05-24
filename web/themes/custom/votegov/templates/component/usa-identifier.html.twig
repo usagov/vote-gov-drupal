@@ -13,7 +13,7 @@
         ><img
             class="usa-identifier__logo-img"
             src="{{ theme_path }}/img/gsa-logo.svg"
-            alt="{{ 'GSA logo'|t }}"
+            alt="{{ 'GSA logo' | t }}"
             role="img"
           /></a>
       </div>
@@ -21,9 +21,9 @@
         class="usa-identifier__identity"
         aria-label="{{ 'Agency description' | t }}"
       >
-        <p class="usa-identifier__identity-domain">vote.gov</p>
+        <p class="usa-identifier__identity-domain">{{ 'Vote.gov' | t }}</p>
         <p class="usa-identifier__identity-disclaimer">
-          {{ "An official website of the @link" | t({'@link': gsaLink | render}) }}
+          {{ "An official website of the @link." | t({'@link': gsaLink | render}) }}
         </p>
       </section>
     </div>
@@ -36,10 +36,12 @@
     aria-label="{{ 'U.S. government information and services' | t }}"
   >
     <div class="usa-identifier__container">
-      <div class="usa-identifier__usagov-description">
-        {{'Looking for U.S. government information and services?' | t }}
-      </div>
-      <a href="https://www.usa.gov/" class="usa-link">{{'Visit USA.gov' | t }}</a>
+      <p>
+        {% set usagov_link = "Visit USA.gov" | t %}
+        {{'Looking for U.S. government information and services? @link.' | t({
+          '@link': {'#markup': " <a href=\"https://www.usa.gov/\" class=\"usa-link\">#{usagov_link}</a>"} | render
+        }) }}
+      </p>
     </div>
   </section>
 </div>
