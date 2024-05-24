@@ -29,16 +29,20 @@
     @include grid-col(5);
     @include grid-offset(1);
   }
-
+  
   a {
     @include vote-link-dark;
     @include u-text('bold');
     @include u-text('no-underline');
-
+    
     &::after{
       content: "";
       @include u-padding-left(2);
       background: url('../../img/svg/arrow-white.svg') no-repeat right center;
     }
   }
+  
+    ul {
+      list-style: none;
+    }
 }
