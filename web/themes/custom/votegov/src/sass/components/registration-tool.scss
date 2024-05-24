@@ -139,16 +139,18 @@
             }
 
             .vote-basic {
+                &-container {
+                    @include grid-row;
+                    @include grid-gap;
+                }
 
                 &-text {
                     &__container {
                         flex: 1;
                         position: relative;
-                        @include u-padding-right(8);
                         @include u-padding-bottom(8);
-
+                        @include grid-col(6);
                         background-position: 64px 64px;
-                        ;
                         border-radius: 8px 0px 0px 8px;
                     }
 
@@ -163,9 +165,11 @@
 
                 &-tool {
                     &__container {
+                        @include grid-col(5);
+                        @include grid-offset(1);
+                        @include u-margin(8);
                         flex: 1;
-                        position: relative;
-                        @include u-padding(8);
+                        position:relative;
                         border-radius: 0px 8px 8px 0px;
                     }
 
