@@ -5,33 +5,44 @@
 .usa-nav {
   @include u-width('full');
 
+  //desktop
   @include at-media('tablet-lg') {
     .usa-search {
       margin-left: unset;
     }
 
     &__primary {
-      @include u-height(10);
       left: 0%;
       @include u-margin-x(auto);
 
       button[aria-expanded=true] span::after {
-        background-color: $base-dark;
+        background-color: #FFF;
       }
 
       a {
         @include u-padding(0);
       }
 
-      .usa-nav__primary-item {
-        a {
-          font-size: 19px;
+      button[aria-expanded=false]:hover span::after {
+        background-color: #fff;
+      }
+
+      >.usa-nav__primary-item {
+
+        >a,
+        >button>span {
+          font-weight: 700 !important;
+        }
+
+        >a {
+          padding: 23px 16px;
+          font-size: 16px;
           line-height: 155%;
           color: $base-dark;
           @include u-text('normal');
 
           &:hover {
-            color: $base-dark;
+            color: #FFF;
           }
         }
 
@@ -61,12 +72,33 @@
           width: fit-content;
 
           .usa-nav__submenu-list {
+            @include u-padding(2);
+
             .usa-nav__submenu-item {
-              a, span {
+
+              a,
+              span {
                 @include u-width('full');
                 @include u-text('no-wrap');
-                display: block;
-                padding: 8px 16px 8px;
+                @include u-padding-x(0);
+                @include u-margin(0);
+                color: #FFF;
+              }
+
+              a {
+                @include u-margin-bottom(2)
+              }
+
+              span {
+                margin-bottom: 12px;
+              }
+
+              &:nth-of-type(2)>span {
+                @include u-margin-top(2);
+              }
+
+              &:last-of-type>span {
+                @include u-margin-bottom(0);
               }
             }
           }
@@ -94,42 +126,36 @@
 
       &:hover {
         color: $base-dark;
-        background-color: $bg-light-cool;
+        background-color: $base-dark;
       }
 
       button {
-        font-size: 19px;
+        font-size: 16px;
         line-height: 155%;
-        padding: 23px 16px;
+        font-weight: 700;
         color: $base-dark;
         @include u-text('normal');
 
         &[aria-expanded=true] {
-          color: $base-dark;
-          background-color: $bg-light-cool;
+          color: #FFF;
+          background-color: $base-dark
         }
 
         &:hover {
-          color: $base-dark;
+          color: #FFF;
         }
-      }
-
-      a {
-        padding: 23px 16px;
       }
     }
 
     &__submenu {
       color: $base-dark;
-      background-color: $bg-light-cool;
+      background-color: $base-dark;
       @include u-padding(0);
 
-      &-list {
-        @include u-padding-y(2)
-      }
-
       .usa-nav__submenu-item {
-        a, span {
+
+        a,
+        span {
           @include u-font-size('body', 'sm');
           @include u-padding-x(2);
           @include u-border(0);
@@ -141,18 +167,15 @@
         span {
           opacity: 0.6;
         }
-
-        a {
-          @include hover {
-            background-color: $base-primary;
-            color: $base-white;
-            text-decoration: none;
-          }
-        }
       }
+    }
+
+    &__secondary {
+      bottom: 5rem;
     }
   }
 
+  //mobile
   @include at-media-max('tablet-lg') {
     &.is-visible {
       @include u-position('relative');
@@ -165,7 +188,7 @@
       color: $base-dark;
       margin-left: calc(100% - 90px);
       width: 67px;
-      background-image: url( '../../../votegov/img/svg/close.svg' );
+      background-image: url('../../../votegov/img/svg/close.svg');
       background-position: 100% 50%;
       background-repeat: no-repeat;
       overflow: visible;
@@ -189,14 +212,21 @@
 
       .usa-nav__primary-item {
 
-        a,
-        button>span {
+        >a {
           font-family: $theme-font-type-serif;
           color: $base-dark;
           font-size: 18px;
-          font-style: normal;
           font-weight: 700;
           line-height: 155%;
+        }
+
+        >button>span {
+          font-family: $theme-font-type-serif;
+          color: $base-dark;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 155%;
+          margin-left: 8px;
         }
 
         a:not(.usa-button):not(.usa-current) {
@@ -247,8 +277,9 @@
 
     &__submenu-item {
       .usa-nav__primary & {
-        > span,
-        > a:not(.usa-button):not(.usa-current) {
+
+        >span,
+        >a:not(.usa-button):not(.usa-current) {
           @include u-display('block');
           font-family: 'Roboto';
           color: $base-dark;
@@ -259,12 +290,10 @@
           padding: 16.5px 24px 16.5px 0;
         }
 
-        > span {
+        >span {
           opacity: 0.6;
         }
       }
     }
-
   }
-
 }
