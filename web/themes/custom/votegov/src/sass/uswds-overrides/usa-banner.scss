@@ -2,36 +2,53 @@
 @use "variables" as *;
 
 .usa-banner {
-  @include u-position('relative');
-  background-color: $bg-light;
-}
-
-.usa-banner__inner {
-  @include at-media-max('tablet') {
-    @include u-height(6);
+  .vote-banner__container {
+    @include at-media('tablet-lg') {
+      display: flex;
+      @include grid-container();
+    }
+    justify-content: space-between;
+    align-items: center;
   }
 
-  @include at-media('tablet') {
-    @include u-height(8);
+  &__inner {
+    padding: 0;
+  }
+
+  &__guidance {
+    max-width: unset;
+  }
+
+  &__header {
+    font-size: 14px;
+    @include u-padding-y(0);
+    @include grid-container();
+
+    @include at-media-max('tablet') {
+      font-size: 18px;
+    }
+
+    &--expanded {
+      padding-right: 0;
+    }
   }
 }
 
 .banner__text-container {
+  margin-bottom: 16px;
+  margin-top: 16px;
+
   @include at-media-max('tablet') {
     @include u-height(6);
   }
 
   @include u-flex('align-center');
-}
 
-.usa-banner__guidance {
-  max-width: unset;
-}
+  .usa-banner__header-text {
+    font-size: 14px;
 
-.usa-banner__header {
-  @include u-padding-y(0);
-
-  &--expanded {
-    padding-right: 0;
+    @include at-media-max('tablet') {
+      font-size: 18px;
+    }
   }
 }
