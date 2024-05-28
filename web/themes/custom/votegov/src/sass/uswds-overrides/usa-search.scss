@@ -2,112 +2,57 @@
 @use "variables" as *;
 
 #usa-search--expandable {
-  @include u-padding-y(2);
-  order: 3;
-
-  @include at-media('tablet-lg') {
-    @include u-padding-bottom(2);
-    @include u-padding-x(3)
-  }
-
   form {
-    &:focus-within {
-      .usa-input {
-        background-position: 5% 45%;
-        background-color: $bg-light-cool;
-        border-color: $base-primary;
-        -webkit-transition: width .3s ease-in-out;
-        -moz-transition: width .3s ease-in-out;
-        -o-transition: width .3s ease-in-out;
-        transition: width .3s ease-in-out;
-        @include u-width('tablet');
-        @include u-border(2px);
-
-        &::placeholder {
-          color: $base-dark;
-        }
-      }
-
-      .usa-button--search {
-        display: block;
-        background-color: $bg-light-cool;
-        border-color: $base-primary;
-        @include u-border(2px);
-        @include u-border-left(0);
-      }
-
-      &:hover .usa-input {
-        background-color: $bg-light-cool;
-      }
-    }
-
-    &:hover .usa-input {
-      background-color: $bg-light-cool;
-    }
-
     @include at-media-max('tablet-lg') {
-      @include u-padding-x(3);
-      justify-content: center;
+      margin: 16px;
     }
 
     .usa-input {
-      background-color: $bg-light-cool;
-      background-image: url( '../../../votegov/img/svg/search.svg' );
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-      overflow: visible;
-      background-color: $bg-light;
-      text-indent: 40px;
-      border: 1px solid $bg-light-medium;
-      border-radius: 16px;
-      height: 48px;
-      width: 48px;
-
-      @include at-media-max('tablet-lg') {
-        background-position: 2% 40%;
-        min-width: 100%;
-        border-color: $bg-light-medium;
-      }
-    }
-
-    .usa-input::placeholder {
-      font-size: 17px;
-      color: transparent;
-      opacity: 1;
-    }
-
-    .usa-button--search {
-      display: none;
-      border-color: $bg-light-medium;
-      background-color: $bg-light;
-      -webkit-transition: width .3s ease-in-out;
-      -moz-transition: width .3s ease-in-out;
-      -o-transition: width .3s ease-in-out;
-      transition: width .3s ease-in-out;
-      @include u-margin-left('neg-6');
-      @include u-radius-left(0);
-      @include u-radius-right('lg');
-      height: 48px;
-      @include u-border(2px);
-      @include u-border-left(0);
-
-      @include at-media-max('tablet-lg') {
-        display: block;
-        @include u-border(1px);
-        @include u-border-left(0);
+      padding: 8px 16px;
+      width: 100%;
+      height: 40px;
+      border-radius: 4px 0px 0px 4px;
+      border-top: 1px solid #565C65;
+      border-bottom: 1px solid #565C65;
+      border-left: 1px solid #565C65;
+      background: #FFF;
+      color: #A9A9A9;
+      font-size: 14px;
+      font-weight: 500;
       }
 
-      &:hover svg path {
-        fill: $ac-warm-hover;
-      }
+      button {
+        border-radius: 0px 4px 4px 0px;
+        background: #345D96;
+        display: flex;
+        height: 40px;
+        width: 40px;
+        padding: 10px;
+        justify-content: center;
 
-        svg path {
-          fill: $base-primary;
-          top: 50%;
-          @include u-height(4);
-          @include u-width(4);
-          @include u-padding(1);
+        svg, svg>path {
+          fill: #fff;
         }
-    }
+      }
+  }
+}
+
+.vote-search--desktop {
+  @include at-media-max('mobile') {
+    display: none;
+  }
+
+  @include at-media('mobile') {
+    display: block;
+  }
+}
+
+.vote-search--mobile {
+  @include at-media-max('mobile') {
+    display: block;
+  }
+
+  @include at-media('mobile') {
+    display: none;
   }
 }
