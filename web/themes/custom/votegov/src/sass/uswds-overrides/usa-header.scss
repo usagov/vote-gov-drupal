@@ -29,22 +29,17 @@
   }
 }
 
-.usa-logo {
-  width: 157px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-
-  @include at-media-max('desktop') {
-    @include u-margin-y(2);
-  }
-}
-
 .usa-header {
   background-color: $base-white;
   border-color: $bg-light-medium;
   @include u-border-bottom(1px);
 
   &--extended {
+    .usa-logo {
+      width: 157px;
+      margin: .5rem 0 0;
+    }
+
     .usa-nav--primary {
       margin-left: 0 !important;
     }
