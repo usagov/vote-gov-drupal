@@ -371,13 +371,13 @@ workflows:
     jobs:
       - upkeep
   link-validation-workflow:
-    # triggers:
-      # - schedule:
-      #     cron: '0 10 * * 1,4'
-      #     filters:
-      #       branches:
-      #         only:
-      #           - stage
+    triggers:
+      - schedule:
+          cron: '0 10 * * 1,4'
+          filters:
+            branches:
+              only:
+                - stage
     jobs:
       - link-validation
   scheduled-backup-workflow:
