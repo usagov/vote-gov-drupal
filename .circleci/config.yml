@@ -258,11 +258,11 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/
-      - run:
-          name: "Install cloudfoundry dependencies"
-          command: |
-            source ./scripts/pipeline/deb-basic-deps.sh
-            source ./scripts/pipeline/deb-cf-install.sh
+      # - run:
+          # name: "Install cloudfoundry dependencies"
+          # command: |
+          #   source ./scripts/pipeline/deb-basic-deps.sh
+          #   source ./scripts/pipeline/deb-cf-install.sh
       - run:
           name: "Cypress Internal Links"
           command: |
