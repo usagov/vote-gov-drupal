@@ -267,7 +267,7 @@ jobs:
           name: "Cypress Internal Links"
           command: |
             cd testing
-            cypress_baseurl="{{BETA_URL}}"
+            # cypress_baseurl="{{BETA_URL}}"
             npm install
             npm run cy:pipeline:links
       - run:
