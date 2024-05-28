@@ -29,14 +29,14 @@ describe('Footer Menu Function', () => {
 
     cy.visit('/admin/structure/menu/manage/footer')
 
-    cy.get('[class="dropbutton__toggle"]').then(dropDown => {
+    cy.get('[class="edit dropbutton__item dropbutton-action"]').then(dropDown => {
       cy.get(dropDown[0]).click()
-      cy.get('[class="delete dropbutton__item dropbutton-action secondary-action"]').then(remove => {
-        cy.get(remove[0]).click()
+      cy.get('[data-drupal-selector="edit-delete"]').click()
+      
+      cy.get('[class="ui-dialog-buttonset form-actions"]').find('button').then(btn => {
+        cy.get(btn[0]).click()
       })
     })
-
-    cy.get('[data-drupal-selector="edit-submit"]').click({force: true})
 
     cy.logout()
   })

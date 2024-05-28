@@ -25,6 +25,7 @@ jobs:
             source ./scripts/pipeline/deb-cf-install.sh
       - run:
           name: "Run Drush Cron and Generate Static Site"
+          no_output_timeout: 30m
           command: |
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
@@ -142,6 +143,7 @@ jobs:
             source ./scripts/pipeline/deb-cf-install.sh
       - run:
           name: "Post Deploy Upkeep"
+          no_output_timeout: 30m
           command: |
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
@@ -160,6 +162,7 @@ jobs:
             source ./scripts/pipeline/deb-basic-deps.sh
             source ./scripts/pipeline/deb-cf-install.sh
             source ./scripts/pipeline/deb-mysql-client-install.sh
+            source ./scripts/pipeline/deb-awscli.sh
 
             cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/v1.1.3/cf-service-connect_linux_amd64
       - run:
@@ -337,15 +340,13 @@ workflows:
                 - stage
           requires:
             - post-deploy
-      # - cypress:
-      #     filters:
-      #       branches:
-      #         only:
-      #           - test
-      #           - dev
-      #           - stage
-      #     requires:
-      #       - upkeep
+      - cypress:
+          filters:
+            branches:
+              only:
+                - stage
+          requires:
+            -  post-deploy-upkeep
   deploy-prod-workflow:
     when:
       and:
@@ -405,3 +406,4 @@ workflows:
           - equal: [ test, << pipeline.parameters.restore >> ]
     jobs:
       - downsync
+      

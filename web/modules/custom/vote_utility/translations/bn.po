@@ -1,4 +1,4 @@
-# Bengali translation of Vote.gov
+# Bengali translation of vote.gov
 #
 msgid ""
 msgstr ""
@@ -29,7 +29,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "চেক করা ব্যালট ঢোকানো হচ্ছে সহ ভোটার বাক্সের চিত্র ভোটিং কার্যক্রম নির্দেশ করে"
 
 #identifier
-msgid "An official website of the @link."
+msgid "an official website of the @link."
 msgstr "@link এর একটি দাপ্তরিক ওয়েবসাইট"
 
 msgid "General Services Administration"
@@ -57,15 +57,15 @@ msgstr "সরকারি তথ্য ও সেবা"
 msgid "in partnership with"
 msgstr "এর সাথে অংশীদারিত্বে"
 
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
 msgstr "এর সাথে অংশীদারিত্বে U.S. Election Assistance Commission"
 
-msgid "Follow Vote.gov on Twitter"
-msgstr "টুইটারে Vote.gov অনুসরণ করুন (ইংরেজীতে)"
+msgid "Follow vote.gov on"
+msgstr "টুইটারে vote.gov অনুসরণ করুন (ইংরেজীতে)"
 
 #search
-msgid "Search Vote.gov"
-msgstr "Vote.gov অনুসন্ধান করুন"
+msgid "Search vote.gov"
+msgstr "vote.gov অনুসন্ধান করুন"
 
 #state
 msgid "Register to vote in @state_name"
@@ -74,11 +74,17 @@ msgstr "@state_name এ ভোট দিতে নিবন্ধন করু�
 msgid "How to register to vote"
 msgstr "ভোট দেওয়ার জন্য কীভাবে নিবন্ধন করবেন"
 
+msgid "How to register and update your registration"
+msgstr "ভোট দেওয়ার জন্য কীভাবে নিবন্ধন করবেন"
+
 msgid "Other ways to register to vote"
 msgstr "ভোট নিবন্ধন করার অন্যান্য উপায়"
 
-msgid "Voter registration deadlines for the @election_date election"
+msgid "Voter registration deadlines for the @election_date election. @link"
 msgstr "@election_date নির্বাচনের জন্য ভোটার নিবন্ধনের সময়সীমা"
+
+msgid "Find state and local election dates."
+msgstr ""
 
 msgid "Register by mail deadline:"
 msgstr "ডাকযোগে নিবন্ধনের সময়সীমা:"
@@ -122,7 +128,7 @@ msgstr "ভোটিং সম্পর্কে আরও জানুন"
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
 msgstr "ভার্জিনিয়ায় ভোটার নিবন্ধনের প্রয়োজন নেই। @link রাজ্য নির্বাচনের ওয়েবসাইটে"
 
-msgid "Start your online registration"
+msgid "Complete your online registration"
 msgstr "আপনার অনলাইন নিবন্ধন শুরু করুন"
 
 msgid "@link on @state_name’s election website."

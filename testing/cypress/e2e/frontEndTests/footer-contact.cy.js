@@ -1,6 +1,6 @@
 // <reference types="cypress" />
 
-describe('Check Homepage for Vote.gov', () =>{
+describe('Check Homepage for vote.gov', () =>{
 
   it('Test Footer Contact on Home Page', () => {
     // check that the footer contact section is present on home page

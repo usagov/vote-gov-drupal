@@ -39,7 +39,7 @@ dependencies:
     - toolbar
 id: content_manager
 label: 'Content Manager'
-weight: 3
+weight: -6
 is_admin: null
 permissions:
   - 'access administration pages'
