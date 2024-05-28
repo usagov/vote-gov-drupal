@@ -4,9 +4,10 @@
 .usa-banner {
   .vote-banner__container {
     @include at-media('tablet-lg') {
-      display: flex;
+      @include u-display('flex');
       @include grid-container();
     }
+
     justify-content: space-between;
     align-items: center;
 
@@ -19,7 +20,7 @@
   }
 
   &__inner {
-    padding: 0;
+    @include u-padding(0);
   }
 
   &__guidance {
@@ -33,10 +34,6 @@
     @include at-media-max('tablet') {
       font-size: 18px;
     }
-
-    &--expanded {
-      padding-right: 0;
-    }
   }
 }
 
@@ -47,8 +44,6 @@
   @include at-media-max('tablet') {
     @include u-height(6);
   }
-
-  @include u-flex('align-center');
 
   .usa-banner__header-text {
     font-size: 14px;

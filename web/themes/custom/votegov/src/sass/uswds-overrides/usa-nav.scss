@@ -12,8 +12,8 @@
     }
 
     &__primary {
-      left: 0%;
       @include u-margin-x(auto);
+      left: 0;
 
       button[aria-expanded=true] span::after {
         background-color: #FFF;
@@ -35,11 +35,12 @@
         }
 
         >a {
-          padding: 23px 16px;
+          @include u-padding-x(2);
+          @include u-padding-y(3);
+          @include u-text('normal');
           font-size: 16px;
           line-height: 155%;
           color: $base-dark;
-          @include u-text('normal');
 
           &:hover {
             color: #FFF;
@@ -48,24 +49,24 @@
 
         &:has(.is-active)::after {
           content: "";
-          background-color: $ac-warm;
-          display: block;
-          position: relative;
           @include u-radius(0);
           @include u-height(0.5);
           @include u-margin-top(-2px);
+          background-color: $ac-warm;
+          display: block;
+          position: relative;
 
           @include at-media-max('tablet-lg') {
-            display: none;
+            @include u-display('none');
           }
         }
 
         &:has(.usa-current[aria-expanded=true])::after {
-          display: none;
+          @include u-display('none');
         }
 
         >.usa-current::after {
-          display: none;
+          @include u-display('none');
         }
 
         .usa-nav__submenu {
@@ -90,7 +91,7 @@
               }
 
               span {
-                margin-bottom: 12px;
+                @include u-margin-bottom('105')
               }
 
               &:nth-of-type(2)>span {
@@ -112,10 +113,10 @@
       @include at-media-max('tablet-lg') {
         .li-divider {
           @include u-height('2px');
-          width: 83%;
-          display: block;
-          background-color: $bg-light-medium;
           @include u-margin-x('auto');
+          @include u-display('block');
+          width: 83%;
+          background-color: $bg-light-medium;
         }
       }
     }
@@ -177,7 +178,7 @@
 
   //mobile
   @include at-media-max('tablet-lg') {
-    padding: 0;
+    @include u-padding(0);
 
     .usa-search {
       width: unset;
@@ -191,8 +192,8 @@
       @include u-display('none');
       @include u-margin-right(0);
       @include u-padding-left(0);
+      @include u-margin-x(3);
       color: $base-dark;
-      margin-left: calc(100% - 90px);
       width: 67px;
       background-image: url('../../../votegov/img/svg/close.svg');
       background-position: 100% 50%;
@@ -204,10 +205,11 @@
       font-size: 17px;
       font-weight: 500;
       padding-right: 23px;
-      margin: 21px 24px;
+      margin-top: 21px;
+      margin-bottom: 21px;
 
       &[aria-hidden="true"] {
-        display: block;
+        @include u-display('block');
       }
     }
 
@@ -225,12 +227,12 @@
         }
 
         >button>span {
+          @include u-margin-left(1);
           font-family: $theme-font-type-serif;
           color: $base-dark;
           font-size: 18px;
           font-weight: 700;
           line-height: 155%;
-          margin-left: 8px;
         }
 
         a:not(.usa-button):not(.usa-current) {
@@ -250,18 +252,18 @@
       }
 
       .usa-current::after {
-        display: none;
+        @include u-display('none');
       }
     }
 
     .li-divider {
       @include u-height('1px');
+      @include u-margin-x('auto');
+      @include u-display('block');
       width: -webkit-calc(100% - 48px);
       width: -moz-calc(100% - 48px);
       width: calc(100% - 48px);
-      display: block;
       background-color: $bg-light-medium;
-      @include u-margin-x('auto')
     }
 
 

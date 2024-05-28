@@ -4,11 +4,12 @@
 #usa-search--expandable {
   form {
     @include at-media-max('tablet-lg') {
-      margin: 16px;
+      @include u-margin(2);
     }
 
     .usa-input {
-      padding: 8px 16px;
+      @include u-padding-x(2);
+      @include u-padding-y(1);
       width: 100%;
       height: 40px;
       border-radius: 4px 0px 0px 4px;
@@ -39,20 +40,20 @@
 
 .vote-search--desktop {
   @include at-media-max('mobile') {
-    display: none;
+    @include u-display('none');
   }
 
   @include at-media('mobile') {
-    display: block;
+    @include u-display('block');
   }
 }
 
 .vote-search--mobile {
   @include at-media-max('mobile') {
-    display: block;
+    @include u-display('block');
   }
 
   @include at-media('mobile') {
-    display: none;
+    @include u-display('none');
   }
 }
