@@ -4,15 +4,20 @@
 .usa-language-container {
   background-color: #F0F0F0;
 
-  @include at-media('tablet') {
-    height: 48px;
-  }
-
 
   @include at-media-max('tablet') {
-    @include grid-container();
-    @include u-padding-y(1);
     border-color: $bg-light-medium;
+  }
+
+  @include at-media-max('tablet-lg') {
+    @include grid-container();
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #dfe1e2;
+  }
+
+  @include at-media('tablet-lg') {
+    padding: 0 !important;
   }
 }
 
@@ -21,9 +26,6 @@
     background-color: #345D96;
   }
 
-  @include at-media('tablet') {
-    @include u-position('absolute');
-  }
 
   @include at-media-max('tablet') {
     @include u-margin-left('auto');

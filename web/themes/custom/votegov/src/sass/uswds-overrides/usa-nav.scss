@@ -171,12 +171,18 @@
     }
 
     &__secondary {
-      bottom: 5rem;
+      bottom: 5.5rem;
     }
   }
 
   //mobile
   @include at-media-max('tablet-lg') {
+    padding: 0;
+
+    .usa-search {
+      width: unset;
+    }
+
     &.is-visible {
       @include u-position('relative');
     }
@@ -207,8 +213,6 @@
 
     &__primary {
       @include u-margin(0);
-      @include u-border-top('1px');
-      border-color: $bg-light-medium;
 
       .usa-nav__primary-item {
 

@@ -17,7 +17,7 @@
   <div class="usa-logo">
     {% if site_name %}
       <a href="{{ path('<front>') }}" rel="home" title="{{ site_name }}">
-        <span>{{ source( directory ~ '/img/logo.svg' ) }}</span>
+        {{ source( directory ~ '/img/logo.svg' ) }}
       </a>
     {% endif %}
   </div>
