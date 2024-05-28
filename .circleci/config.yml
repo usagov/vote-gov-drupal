@@ -267,7 +267,7 @@ jobs:
           name: "Cypress Internal Links"
           command: |
             cd testing
-            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
+            cypress_baseurl="{{BETA_URL}}"
             npm install
             npm run cy:pipeline:links
       - run:
@@ -374,16 +374,16 @@ workflows:
         - equal: [ true, << pipeline.parameters.upkeep >> ]
     jobs:
       - upkeep
-  # link-validation-workflow:
-  #   triggers:
-  #     - schedule:
-  #         cron: '0 10 * * 1,4'
-  #         filters:
-  #           branches:
-  #             only:
-  #               - stage
-  #   jobs:
-  #     - link-validation
+  link-validation-workflow:
+    # triggers:
+      # - schedule:
+      #     cron: '0 10 * * 1,4'
+      #     filters:
+      #       branches:
+      #         only:
+      #           - stage
+    jobs:
+      - link-validation
   scheduled-backup-workflow:
     when:
       and:
