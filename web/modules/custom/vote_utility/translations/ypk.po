@@ -29,7 +29,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "Teruwiiq nakmikellghem salngaganeng igaq apeghiiqaq kananghtekanga kelgutilghii nakmikilleghmeng"
 
 #identifier
-msgid "an official website of the @link."
+msgid "An official website of the @link."
 msgstr "Website-eghpigaa @link-em"
 
 msgid "General Services Administration"

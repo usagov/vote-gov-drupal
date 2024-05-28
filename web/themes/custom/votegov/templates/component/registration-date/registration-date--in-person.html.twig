@@ -17,16 +17,19 @@
     "@type": "FAQPage",
     "mainEntity": [{
       "@type": "Question",
-      "name": "{{ 'How to register to vote in @state_name' | t({ '@state_name': state_name }) }}",
+      "name": "{{ 'How to register and update your registration' | t }}",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "{{ 'Register in person at your local election office. Learn more about how to register on @link.' | t({
-            '@link': { "#markup": "<a href=\"#{more_info_link}\">#{more_info_link_text}</a>" } | render
-        }) }}"
+        "text": "{{ 'Register in person at your local election office. @link on @state_name’s election website.' | t({
+    '@link': { "#markup": "<a href=\"#{more_info_link}\" data-state-ext=\"offline-registration\">#{more_info_link_text}</a>" } | render,
+    '@state_name': state_name,
+    '@of_state_name': of_state_name,
+    '@in_state_name': in_state_name
+  }) }}"
     }
     },{
         "@type": "Question",
-        "name": "{{ 'Voter registration deadlines in @state_name' | t({ '@state_name': state_name }) }}",
+        "name": "{{ 'Voter registration deadlines' | t }}",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "{{ 'Register by mail deadline:' | t }} {{ deadline }}"

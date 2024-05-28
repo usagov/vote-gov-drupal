@@ -29,7 +29,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "চেক করা ব্যালট ঢোকানো হচ্ছে সহ ভোটার বাক্সের চিত্র ভোটিং কার্যক্রম নির্দেশ করে"
 
 #identifier
-msgid "an official website of the @link."
+msgid "An official website of the @link."
 msgstr "@link এর একটি দাপ্তরিক ওয়েবসাইট"
 
 msgid "General Services Administration"
@@ -65,7 +65,7 @@ msgstr "টুইটারে vote.gov অনুসরণ করুন (ইং�
 
 #search
 msgid "Search vote.gov"
-msgstr "vote.gov অনুসন্ধান করুন"
+msgstr "Vote.gov অনুসন্ধান করুন"
 
 #state
 msgid "Register to vote in @state_name"

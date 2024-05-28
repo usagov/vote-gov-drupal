@@ -45,7 +45,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "Illustration d'une boîte de vote recevant un bulletin de vote rempli afin d'indiquer l'action de voter"
 
 # data.translations.footer.identifier_gsa_txt
-msgid "an official website of the @link."
+msgid "An official website of the @link."
 msgstr "Un site Web officiel de @link"
 
 # data.translations.footer.identifier_gsa_txt__1
