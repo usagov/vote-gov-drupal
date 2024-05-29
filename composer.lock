@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b53d881b8d5e16cb440840c22595a8b4",
+    "content-hash": "a91408d34e90536e09303d980e36e76e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1810,17 +1810,17 @@
         },
         {
             "name": "drupal/autologout",
-            "version": "1.5.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/autologout.git",
-                "reference": "8.x-1.5"
+                "reference": "2.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/autologout-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "1beb693f56eb119624dd270ee789db00eb1ce288"
+                "url": "https://ftp.drupal.org/files/projects/autologout-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "e9a1d4846cc323eef2eb54a0276023b1f0ff8bd2"
             },
             "require": {
                 "drupal/core": "^9.2 || ^10 || ^11",
@@ -1829,8 +1829,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1716413630",
+                    "version": "2.0.0",
+                    "datestamp": "1716413762",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3627,20 +3627,20 @@
         },
         {
             "name": "drupal/menu_multilingual",
-            "version": "1.0.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/menu_multilingual.git",
-                "reference": "8.x-1.0"
+                "reference": "2.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/menu_multilingual-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "b533af65081e31031cb28b2f51a5f4ed040d9cbe"
+                "url": "https://ftp.drupal.org/files/projects/menu_multilingual-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "1127bd6a9aee1f27bc82a71e5eb8d49ca719783b"
             },
             "require": {
-                "drupal/core": "^9 || ^10"
+                "drupal/core": "^10.1 || ^11"
             },
             "require-dev": {
                 "drupal/context": "^5.0@RC",
@@ -3649,8 +3649,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1714584507",
+                    "version": "2.0.0",
+                    "datestamp": "1714589635",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -15300,7 +15300,6 @@
         "drupal/config_ignore": 10,
         "drupal/config_split": 5,
         "drupal/disable_language": 10,
-        "drupal/menu_multilingual": 15,
         "drupal/node_revision_delete": 15,
         "drupal/translatable_menu_link_uri": 20,
         "drupal/uswds_templates": 20
