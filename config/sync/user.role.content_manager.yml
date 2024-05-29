@@ -33,6 +33,7 @@ dependencies:
     - file
     - media
     - node
+    - override_node_options
     - paragraphs
     - system
     - taxonomy
@@ -50,7 +51,6 @@ permissions:
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'administer menu'
-  - 'administer nodes'
   - 'create audio media'
   - 'create basic block content'
   - 'create content translations'
@@ -127,7 +127,9 @@ permissions:
   - 'edit own voter_guide content'
   - 'edit terms in basics_modules'
   - 'edit terms in nvrf_field'
+  - 'enter all revision log entry'
   - 'mark as hidden in editoria11y'
+  - 'override landing published option'
   - 'revert all revisions'
   - 'revert any basic block content revisions'
   - 'revert any email_signup block content revisions'
