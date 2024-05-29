@@ -33,7 +33,7 @@ echo "Downloading media files..."
 
   rm -rf ${BACKUP_ENV}
 
-  aws s3 sync --no-verify-ssl s3://${bucket}/${backup_media} ${backup_media}/ 2>/dev/null
+  aws s3 sync --delete --no-verify-ssl s3://${bucket}/${backup_media} ${backup_media}/ 2>/dev/null
   tar czvf media_${now}.tar.gz ${backup_media}
 
 

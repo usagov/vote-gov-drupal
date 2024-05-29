@@ -1,4 +1,4 @@
-# Yupʼik translation of Vote.gov
+# Yupʼik translation of vote.gov
 #
 msgid ""
 msgstr ""
@@ -57,14 +57,14 @@ msgstr "Kavemem ungipiillu salqumsugillu"
 msgid "in partnership with"
 msgstr "ilalkiilluteng"
 
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
 msgstr "ilalkiilluteng U.S. Election Assistance Commission"
 
-msgid "Follow Vote.gov on Twitter"
-msgstr "Maligtigu Vote.gov Twitter-ekun (Laluramkestun)"
+msgid "Follow vote.gov on"
+msgstr "Maligtigu vote.gov X-ekun (Laluramkestun)"
 
 #search
-msgid "Search Vote.gov"
+msgid "Search vote.gov"
 msgstr "Ivaghivikigu vote.gov"
 
 #state
@@ -72,6 +72,9 @@ msgid "Register to vote in @state_name"
 msgstr "Ilaten nakmikinaluten @state_name-mi"
 
 msgid "How to register to vote"
+msgstr "Naten ilatelleghqaq nakmikimun"
+
+msgid "How to register and update your registration"
 msgstr "Naten ilatelleghqaq nakmikimun"
 
 msgid "Other ways to register to vote"
@@ -125,7 +128,7 @@ msgstr "Liitaghaghhu nakmilleq"
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
 msgstr "Nakmikimun ilaasughniituq Virginia-mi. @link @state_name-em state-angan nakmikillghan website-angani. "
 
-msgid "Start your online registration"
+msgid "Complete your online registration"
 msgstr "Piinlighhu online-ekun ilatelleq"
 
 msgid "@link on @state_name’s election website."

@@ -1,8 +1,10 @@
 adding:
   dependencies:
     module:
+      - devel
       - disable_language
   permissions:
+    - 'access devel information'
     - 'create content in disabled language'
     - 'view disabled languages'
 removing: {  }

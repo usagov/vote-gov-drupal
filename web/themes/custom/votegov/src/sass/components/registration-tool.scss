@@ -2,313 +2,97 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-.registration-tool {
-    @include at-media('tablet-lg') {
-        position: relative;
 
-        &::before {
-            content: '';
-            background-image: url('../../img/hero-map.webp');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-color: $base-dark;
-            position: absolute;
-            top: 0;
-            bottom: 126px;
-            right: 0;
-            left: 0;
-        }
+.vote-registration-tool {
+  @include vote-block-padding-y--narrow;
+  background-color: $base-dark;
+  color: $base-white;
+
+  @include at-media('tablet-lg') {
+    background: $base-dark url('../../img/hero-map.webp') no-repeat center center;
+    background-size: cover;
+  }
+
+  a {
+    @include vote-link-dark;
+  }
+}
+
+.vote-registration-tool__container {
+  @include grid-container;
+}
+
+.vote-registration-tool__content {
+  @include at-media('tablet-lg') {
+    @include grid-row;
+
+    .vote-registration-tool__text {
+      @include grid-col(6);
     }
 
-    .vote-basic {
-        color: $base-white;
-        @include u-margin-top(0);
-
-        #block-votegov-breadcrumbs {
-            @include u-width('full');
-
-            a {
-                color: $base-white;
-            }
-        }
-
-        .vote-basic {
-
-            &-text {
-                &__container {
-                    background-color: $base-primary;
-                }
-
-                &__heading {
-                    color: $base-white;
-                    @include u-font-family('serif');
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: 116%;
-                }
-
-                &__content {
-                    font-family: Roboto;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 155%;
-                }
-            }
-
-            &-tool {
-                &__container {
-                    background-color: $base-primary;
-                }
-
-                &__label {
-                    @include u-display('flex');
-                    font-family: Roboto;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 155%;
-                    @include u-margin-bottom(2);
-                }
-
-                &__input {
-                    @include u-display('flex');
-                    background-image: url('../../../votegov/img/svg/location.svg');
-                    background-repeat: no-repeat;
-                    background-position: 23px center;
-                    @include u-radius('md');
-                    @include u-border(1px);
-                    border-color: $bg-light-medium;
-                    @include u-margin-bottom(1);
-                    padding-left: 54px;
-                    padding-top: 11.65px;
-                    padding-bottom: 11.65px;
-                    padding-right: 25px;
-                    color: $base-dark;
-                    font-family: Roboto;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 155%;
-                    @include u-width('full');
-
-                    ::placeholder {
-                        color: $base-dark;
-                        font-family: Roboto;
-                        font-size: 16px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 155%;
-                    }
-                }
-
-                &__scrollable-results {
-                    background-color: $base-white;
-                    overflow: auto;
-                    @include u-radius('md');
-                    @include u-border(1px);
-                    border-color: $bg-light-medium;
-                }
-
-                &__nav {
-                    background: $base-white;
-
-                    ul {
-                        list-style: none;
-                        padding-left: 23px;
-                        @include u-margin-top(0);
-
-                        li {
-                            @include u-margin(0);
-                        }
-
-                        a {
-                            @include vote-link();
-                            font-family: Roboto;
-                            color: $base-primary-hover;
-                            font-size: 16px;
-                            font-style: normal;
-                            font-weight: 500;
-                            line-height: 155%;
-
-                            &:visited {
-                                color: $base-primary-hover;
-
-                                &:hover, &:focus {
-                                    color: $base-white;
-                                }
-                            }
-                        }
-
-                        a {
-                            text-decoration-line: underline;
-                        }
-
-                        li#no-results>span {
-                            font-family: Roboto;
-                            color: $base-primary-hover;
-                            font-size: 16px;
-                            font-style: normal;
-                            font-weight: 500;
-                            line-height: 155%;
-                        }
-                    }
-                }
-            }
-        }
-
-        //desktop
-        @include at-media('tablet-lg') {
-            @include u-radius('lg');
-            position: relative;
-            // top: 32px;
-            @include u-display('flex');
-            flex-wrap: wrap;
-            @include u-width('full');
-
-            #block-votegov-breadcrumbs {
-                margin-top: 56px;
-                @include u-margin-bottom(3);
-                // @include u-margin-y(3);
-            }
-
-            .vote-basic {
-
-                &-text {
-                    &__container {
-                        flex: 1;
-                        position: relative;
-                        @include u-padding(8);
-                        background-position: 64px 64px;
-                        ;
-                        border-radius: 8px 0px 0px 8px;
-
-                        &::before {
-                            content: url('../../../votegov/img/svg/map-transparent.svg');
-                        }
-                    }
-
-                    &__heading {
-                        @include u-margin-top(4);
-                    }
-
-                  &__content {
-                    min-height: 100px;
-                  }
-                }
-
-                &-tool {
-                    &__container {
-                        flex: 1;
-                        position: relative;
-                        @include u-padding(8);
-                        border-radius: 0px 8px 8px 0px;
-                    }
-
-                    &__form {
-                        @include u-display('flex');
-                        flex-direction: column;
-                        @include u-height('full');
-                    }
-
-                    &__list-container {
-                        position: relative;
-                        @include u-height('full');
-                    }
-
-                    &__scrollable-results {
-                        position: absolute;
-                        bottom: 0;
-                        top: 0;
-                        @include u-width('full');
-                    }
-
-                    &__nav {
-                        ul {
-                            overflow: auto;
-                            position: absolute;
-                            bottom: 0;
-                            top: 0;
-                            @include u-width('full');
-
-                            li {
-                                @include u-padding-top(1);
-                                @include u-padding-bottom(1);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        //mobile
-        @include at-media-max('tablet-lg') {
-            background-color: $base-dark;
-            @include u-padding(0);
-
-            #block-votegov-breadcrumbs {
-                background-color: $base-dark;
-                @include u-padding-x(3);
-                @include u-padding-top(4);
-            }
-
-            .vote-basic {
-
-                &-text {
-                    &__container {
-                        background-color: $base-dark;
-                        @include u-padding-x(3);
-                        @include u-padding-bottom(10);
-
-                        &::after {
-                            content: url('../../../votegov/img/svg/map-blue.svg');
-                            @include u-display('block');
-                            @include u-width('full');
-                            text-align: center;
-                            margin-bottom: -150px;
-                            @include u-padding-top(6);
-                            @include u-padding-bottom(4);
-                        }
-
-                    }
-
-                    &__heading {
-                        @include u-margin-bottom(2);
-                        margin-top: 3rem;
-                        max-width: 40rem;
-
-                        &.vote-heading--red-underline:after {
-                            @include u-display('none');
-                        }
-                    }
-
-                    &__content {
-                        font-family: Roboto;
-                        margin-top: 1.5rem;
-                        max-width: 40rem;
-                    }
-                }
-
-                &-tool {
-                    &__container {
-                        @include u-padding-top(8);
-                        @include u-padding-bottom(5);
-                        @include u-padding-x(3);
-                    }
-
-                    &__scrollable-results {
-                        height: 288px;
-                    }
-
-                    &__nav {
-                        ul>li {
-                            padding-top: 11px;
-                            padding-bottom: 11px;
-                        }
-                    }
-                }
-            }
-        }
+    .vote-registration-tool__form {
+      @include grid-col(5);
+      margin-inline-start: calc(100% / 12);
     }
+  }
+
+  @include at-media-max('tablet-lg') {
+    .vote-registration-tool__form {
+      @include u-margin-top(5);
+    }
+  }
+}
+
+.vote-registration-tool__heading {
+  color: $base-white;
+}
+
+.vote-registration-tool__label {
+  @include u-display('block');
+  @include u-font-family('sans');
+  @include u-margin-bottom(2);
+}
+
+.vote-registration-tool__input {
+  @include u-display('block');
+  @include u-radius('md');
+  @include u-width('full');
+  @include u-margin-bottom(1);
+  padding-inline-start: 2.5rem;
+  color: $base-dark;
+  border: 1px $bg-light-medium solid;
+  background: $base-white url('../../img/svg/location.svg') no-repeat 1rem center;
+
+  [dir="rtl"] & {
+    background-position: calc(100% - 1rem) center;
+  }
+}
+
+.vote-registration-tool__list-container {
+  @include u-radius('md');
+  @include u-font-family('sans');
+  @include u-height('card-lg');
+  border-color: 1px $bg-light-medium solid;
+  background-color: $base-white;
+  color: $base-dark;
+  overflow: auto;
+}
+
+.vote-registration-tool__nav {
+  ul {
+    @include add-list-reset;
+    @include u-padding(2);
+
+    a {
+      @include vote-link($color: $base-dark, $color-hover: $base-primary-hover, $color-bg: 'transparent');
+      @include u-padding-y(0.5);
+      @include u-padding-x(1);
+      @include u-display('inline-block');
+      text-decoration: none;
+
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }

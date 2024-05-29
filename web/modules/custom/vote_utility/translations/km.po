@@ -1,4 +1,4 @@
-# Khmer translation of Vote.gov
+# Khmer translation of vote.gov
 #
 msgid ""
 msgstr ""
@@ -29,7 +29,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "រូបភាពនៃប្រអប់អ្នកបោះឆ្នោតដែលមានសន្លឹកឆ្នោតបានគូសធីកត្រូវបានបញ្ចូល ដើម្បីបង្ហាញពីសកម្មភាពបោះឆ្នោត"
 
 #identifier
-msgid "An official website of the @link."
+msgid "an official website of the @link."
 msgstr "គេហទំព័រផ្លូវការនៃ @link"
 
 msgid "General Services Administration"
@@ -57,15 +57,15 @@ msgstr "ព័ត៌មាននិងសេវាកម្មរដ្ឋាភ
 msgid "in partnership with"
 msgstr "ក្នុងភាពជាដៃគូជាមួយ"
 
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
 msgstr "ក្នុងភាពជាដៃគូជាមួយ U.S. Election Assistance Commission"
 
-msgid "Follow Vote.gov on Twitter"
-msgstr "តាមដាន Vote.gov នៅលើ Twitter (ជាភាសាអង់គ្លេស)"
+msgid "Follow vote.gov on"
+msgstr "តាមដាន vote.gov នៅលើ X (ជាភាសាអង់គ្លេស)"
 
 #search
-msgid "Search Vote.gov"
-msgstr "ស្រាវជ្រាវរក Vote.gov"
+msgid "Search vote.gov"
+msgstr "ស្រាវជ្រាវរក vote.gov"
 
 #state
 msgid "Register to vote in @state_name"
@@ -74,11 +74,17 @@ msgstr "ចុះឈ្មោះដើម្បីបោះឆ្នោតនៅ
 msgid "How to register to vote"
 msgstr "របៀបចុះឈ្មោះដើម្បីបោះឆ្នោត"
 
+msgid "How to register and update your registration"
+msgstr "របៀបចុះឈ្មោះដើម្បីបោះឆ្នោត"
+
 msgid "Other ways to register to vote"
 msgstr "វិធីផ្សេងៗទៀតដើម្បីចុះឈ្មោះបោះឆ្នោត"
 
-msgid "Voter registration deadlines for the @election_date election"
+msgid "Voter registration deadlines for the @election_date election. @link"
 msgstr "ថ្ងៃផុតកំណត់នៃការចុះឈ្មោះឣ្នកបោះឆ្នោតសម្រាប់ការបោះឆ្នោត @election_date"
+
+msgid "Find state and local election dates."
+msgstr ""
 
 msgid "Register by mail deadline:"
 msgstr "ថ្ងៃផុតកំណត់ចុះឈ្មោះតាមសំបុត្រ៖"
@@ -128,7 +134,7 @@ msgstr "ស្វែងយល់បន្ថែមអំពីការបោះ
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
 msgstr "ការចុះឈ្មោះបោះឆ្នោតមិនត្រូវបានទាមទារនៅក្នុងរដ្ឋ Virginia ទេ។ @link នៅលើគេហទំព័របោះឆ្នោតរដ្ឋរបស់ @state_name"
 
-msgid "Start your online registration"
+msgid "Complete your online registration"
 msgstr "ចាប់ផ្តើមការចុះឈ្មោះតាមអ៊ីនធឺណិតរបស់អ្នក"
 
 msgid "@link on @state_name’s election website."
