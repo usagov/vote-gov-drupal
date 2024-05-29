@@ -3,11 +3,11 @@
  */
 
 (() => {
-  const stateComboBox = document.getElementById("vote-basic-tool__form");
-  const stateInput = document.getElementById("vote-basic-tool__input");
-  const stateResultsContainer = document.getElementById("vote-basic-tool__results");
+  const stateComboBox = document.getElementById("vote-registration-tool__form");
+  const stateInput = document.getElementById("vote-registration-tool__input");
+  const stateResultsContainer = document.getElementById("vote-registration-tool__results");
   const stateFilteredOptions = stateComboBox ? stateResultsContainer.getElementsByTagName('a') : null;
-  const noResultsMsg = document.getElementById("no-results");
+  const noResultsMsg = document.getElementById("vote-registration-tool__no-results");
 
   // Store dynamic filtered results.
   let stateListResults = [];

@@ -7,3 +7,9 @@
     @include u-font-family('serif');
   }
 }
+
+.usa-input {
+  @include u-padding(1.5);
+  @include u-height('auto');
+  @include u-line-height('sans', 1);
+}

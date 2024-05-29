@@ -3,9 +3,11 @@
 @use "mixins" as *;
 
 $usagov-partner-breakpoint: 'tablet-lg';
+
 .vote-usagov-partner {
   @include vote-solid-border-top;
 }
+
 .vote-usagov-partner__links {
   @include vote-block-padding-y--narrow;
   @include grid-container;
