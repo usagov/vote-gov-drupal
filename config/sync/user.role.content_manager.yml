@@ -35,6 +35,7 @@ dependencies:
     - node
     - override_node_options
     - paragraphs
+    - path
     - system
     - taxonomy
     - toolbar
@@ -67,6 +68,7 @@ permissions:
   - 'create state_territory content'
   - 'create terms in basics_modules'
   - 'create terms in nvrf_field'
+  - 'create url aliases'
   - 'create voter_guide content'
   - 'delete all revisions'
   - 'delete any audio media'
