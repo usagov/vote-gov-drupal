@@ -372,7 +372,7 @@ workflows:
           filters:
             branches:
               only:
-                - stage
+                - prod
     jobs:
       - link-validation
   scheduled-backup-workflow:
