@@ -8,8 +8,6 @@
  */
 #}
 
-{% set title = drupal_title() %}
-
 {% if breadcrumb %}
   <nav role="navigation" aria-labelledby="system-breadcrumb" class="usa-breadcrumb">
     <h2 id="system-breadcrumb" class="usa-sr-only visually-hidden">{{ 'Breadcrumb'|t }}</h2>
@@ -19,7 +17,7 @@
         {% if item.url %}
           <a class="usa-breadcrumb__link" href="{{ item.url }}"><span>{{ item.text }}</span></a>
         {% else %}
-          {{ title }}
+          {{ item.text }}
         {% endif %}
       </li>
     {% endfor %}
