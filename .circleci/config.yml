@@ -259,15 +259,9 @@ jobs:
       - attach_workspace:
           at: ~/
       - run:
-          name: "Install cloudfoundry dependencies"
-          command: |
-            source ./scripts/pipeline/deb-basic-deps.sh
-            source ./scripts/pipeline/deb-cf-install.sh
-      - run:
           name: "Cypress Internal Links"
           command: |
             cd testing
-            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
             npm install
             npm run cy:pipeline:links
       - run:
@@ -275,7 +269,6 @@ jobs:
           command: |
             echo "I am the result of Internal Links failed job"
             cd testing
-            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
             npm install
             npm run cy:pipeline:links
           when: on_fail
@@ -283,7 +276,6 @@ jobs:
           name: "Cypress External Links"
           command: |
             cd testing
-            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
             npm install
             npm run cy:pipeline:proofer
           when: always
@@ -292,7 +284,6 @@ jobs:
           command: |
             echo "I am the result of External Links failed job"
             cd testing
-            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
             npm install
             npm run cy:pipeline:proofer
           when: on_fail
@@ -374,16 +365,16 @@ workflows:
         - equal: [ true, << pipeline.parameters.upkeep >> ]
     jobs:
       - upkeep
-  # link-validation-workflow:
-  #   triggers:
-  #     - schedule:
-  #         cron: '0 10 * * 1,4'
-  #         filters:
-  #           branches:
-  #             only:
-  #               - stage
-  #   jobs:
-  #     - link-validation
+  link-validation-workflow:
+    triggers:
+      - schedule:
+          cron: '0 10 * * 1,4'
+          filters:
+            branches:
+              only:
+                - prod
+    jobs:
+      - link-validation
   scheduled-backup-workflow:
     when:
       and:
