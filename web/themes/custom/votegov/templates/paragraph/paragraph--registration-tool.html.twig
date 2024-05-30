@@ -32,7 +32,7 @@
                placeholder="{{ content.field_placeholder | field_value }}" data-test="stateInput">
         <div class="vote-basic-tool__list-container">
           <div class="vote-basic-tool__scrollable-results">
-            <nav id="vote-basic-tool__results" class="vote-basic-tool__nav">
+            <div id="vote-basic-tool__results" class="vote-basic-tool__nav">
               <ul class="vote-basic-tool__list" data-test="stateList">
                 {% set results = drupal_view_result('state_territory', 'block') %}
                 {% for result in results %}
@@ -47,7 +47,7 @@
                   <span tabindex="0" data-key="">{{ "No matching results. Please check spelling." | t }}</span>
                 </li>
               </ul>
-            </nav>
+            </div>
           </div>
         </div>
       </form>
