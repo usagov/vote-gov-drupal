@@ -1,0 +1,20 @@
+{# {% extends "page.html.twig" %} #}
+
+{% block main %}
+    <main role="main" id="main" class="grid-container content-container">
+      {# link is in html.html.twig #}
+      <a id="main-content" tabindex="-1"></a>
+      <div class="voter-guide-page-masthead {{ node_image ? "page-masthead--image-offset" }}">
+        {# Breadcrumbs component. #}
+        {{ drupal_entity('block', 'votegov_breadcrumbs') }}
+        {# Page title component #}
+        {% include '@votegov/component/page-title.html.twig' %}
+        {% include '@votegov/component/page-subtitle.html.twig' %}
+      </div>
+      <div class="vote-page-content {{ node_image ? "vote-page-content--image-offset" }}">
+        {{ page.content }}
+      </div>
+    </main>
+{% endblock %}
+
+
