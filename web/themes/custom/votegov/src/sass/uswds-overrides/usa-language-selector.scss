@@ -1,38 +1,49 @@
 @use "uswds-core" as *;
 @use "variables" as *;
+@use "mixins" as *;
 
 .usa-language-container {
-  background-color: #F0F0F0;
+  background-color: $bg-light;
+  @include grid-container;
+  @include u-position('relative');
 
-
-  @include at-media-max('tablet') {
-    border-color: $bg-light-medium;
+  @include at-media('tablet-lg') {
+    @include u-position('absolute');
+    @include u-left(0);
+    @include u-right(0);
+    @include u-top(0);
   }
 
   @include at-media-max('tablet-lg') {
-    @include grid-container();
     @include u-padding-y(1);
-    border-bottom: 1px solid #dfe1e2;
-  }
-
-  @include at-media('tablet-lg') {
-    padding: 0 !important;
+    @include u-border-y('1px');
+    border-color: $bg-light-medium;
   }
 }
 
 .usa-language__primary {
-  .usa-button.usa-language__link {
-    background-color: #345D96;
-  }
+  .usa-banner & {
+    @include at-media('tablet-lg') {
+      @include u-position('absolute');
+      @include u-top(0.5);
+    }
 
+    @include at-media-max('tablet-lg') {
+      margin-inline-start: auto;
+    }
 
-  @include at-media-max('tablet') {
-    @include u-margin-left('auto');
+    @include at-media-max('tablet') {
+      @include u-maxw('mobile');
+      @include u-width('full');
+      margin-inline-end: auto;
+    }
   }
 }
 
-.usa-language__primary-item:last-of-type {
-  position: static;
+.usa-media-block__img,
+.usa-banner__header-flag {
+  @include u-margin(0);
+  margin-inline-end: 0.5rem;
 }
 
 .usa-language__submenu {
@@ -42,8 +53,13 @@
   @include u-text('no-wrap');
   background-color: $base-dark;
 
+  .usa-language__primary-item:last-of-type & {
+    @include u-right('auto');
+    inset-inline-end: 0;
+  }
+
   ul{
-    @include u-padding-left(0);
+    @include u-padding(0);
     @include u-margin-top(0);
     list-style: none;
   }
@@ -53,19 +69,16 @@
     @include u-width('full');
     @include u-padding(2);
     @include u-z(500);
-    @include u-top(0);
-    @include u-right(0);
-    @include u-bottom(0);
+    @include vote-fill;
     overflow: auto;
+
+    .usa-language__primary-item:last-of-type & {
+      @include u-position('fixed');
+    }
   }
 
   @include at-media('tablet') {
     columns: 2 auto;
-  }
-
-  [dir="rtl"] .usa-language__primary-item & {
-    right: unset;
-    left: 0;
   }
 }
 
@@ -77,24 +90,25 @@
 
 .usa-button.usa-language__link {
   &[aria-expanded="true"]{
+    @include u-radius-bottom(0);
     background-color: $base-dark;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
   }
 }
 
 .usa-language__close {
   @include u-margin-top('205');
   @include u-border(0);
+  @include u-font-size('sans', 6);
   @include u-font-weight('medium');
-  @include u-padding-right(3);
   color: $base-white;
-  margin-left: calc(100% - 90px);
-  background-image: url( '../../../votegov/img/svg/close-white.svg' );
-  background-position: 100% 50%;
-  background-repeat: no-repeat;
-  font-size: 17px;
-  background-color: transparent;
+  padding-inline-end: 1.5rem;
+  margin-inline-start: calc(100% - 90px);
+  background: transparent url( '../../img/svg/close-white.svg' ) no-repeat right 50%;
+  cursor: pointer;
+
+  [dir="rtl"] & {
+    background-position: left 50%;
+  }
 
   @include at-media('tablet') {
     @include u-display('none');

@@ -188,31 +188,6 @@
       @include u-position('relative');
     }
 
-    &__close {
-      @include u-display('none');
-      @include u-margin-right(0);
-      @include u-padding-left(0);
-      @include u-margin-x(3);
-      color: $base-dark;
-      width: 67px;
-      background-image: url('../../../votegov/img/svg/close.svg');
-      background-position: 100% 50%;
-      background-repeat: no-repeat;
-      overflow: visible;
-      height: unset;
-      text-transform: unset;
-      text-decoration: none;
-      font-size: 17px;
-      font-weight: 500;
-      padding-right: 23px;
-      margin-top: 21px;
-      margin-bottom: 21px;
-
-      &[aria-hidden="true"] {
-        @include u-display('block');
-      }
-    }
-
     &__primary {
       @include u-margin(0);
 

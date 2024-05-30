@@ -2,54 +2,48 @@
 @use "variables" as *;
 
 .usa-banner {
-  .vote-banner__container {
-    @include at-media('tablet-lg') {
-      @include u-display('flex');
-      @include grid-container();
-    }
+  @include u-position('relative');
+  @include u-z(100);
+  background-color: $bg-light;
+}
 
-    justify-content: space-between;
-    align-items: center;
+.usa-banner__inner {
+  height: 3.5rem;
 
-    .usa-accordion {
-      @include at-media-max('tablet-lg') {
-        @include grid-container();
-        border-bottom: 1px solid #dfe1e2;
-      }
-    }
-  }
-
-  &__inner {
-    @include u-padding(0);
-  }
-
-  &__guidance {
-    max-width: unset;
-  }
-
-  &__header {
-    font-size: 14px;
-    @include u-padding-y(0);
-
-    @include at-media-max('tablet') {
-      font-size: 18px;
-    }
+  @include at-media-max('tablet') {
+    @include u-padding-right(2);
+    padding-inline-end: 0;
   }
 }
 
 .banner__text-container {
-  margin-bottom: 16px;
-  margin-top: 16px;
+  @include u-flex('align-center');
 
-  @include at-media-max('tablet') {
-    @include u-height(6);
+  @include at-media('tablet-lg') {
+    @include grid-col(8);
   }
+}
 
-  .usa-banner__header-text {
-    font-size: 14px;
+.usa-banner__guidance {
+  @include u-maxw('none');
+}
 
+.usa-banner__header {
+  @include u-padding-y(0);
+}
+
+.usa-banner__header-text,
+.usa-banner__button-text {
+  @include u-font-size('sans', 3);
+}
+
+
+.usa-banner__button[aria-expanded="true"] {
+  &:before,
+  &:after {
     @include at-media-max('tablet') {
-      font-size: 18px;
+      @include u-right('auto');
+      inset-inline-end: 0;
     }
   }
 }

@@ -1,5 +1,17 @@
 @use "uswds-core" as *;
 @use "variables" as *;
+@use "mixins" as *;
+
+.usa-header {
+  border-bottom: 1px $bg-light-medium solid;
+
+  .usa-logo {
+    @include u-margin(0);
+    @include u-margin-top(1);
+    width: 12.5rem;
+  }
+}
+
 
 .usa-navbar {
   @include u-justify-content('justify');
@@ -7,71 +19,42 @@
   @include grid-container();
 
   .usa-menu-btn {
-    background-image: url( '../../../votegov/img/svg/menu.svg' );
-    background-position: 100% 50%;
-    background-repeat: no-repeat;
-    overflow: visible;
-    background-color: $bg-light;
-    height: unset;
-    text-transform: unset;
-    font-size: 17px;
-    font-weight: 500;
-    padding-right: 23px;
-    margin-top: 21px;
-    margin-bottom: 21px;
-    @include u-margin-x(3);
+    @include u-height('auto');
+    @include u-font-size('sans', 6);
+    @include u-font-weight('medium');
+    @include u-padding-x(0);
+    @include u-padding-y(2);
+    text-transform: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: $base-dark;
+
+    @include after {
+      @include u-width(2);
+      @include u-display('inline-block');
+      margin-inline-start: 0.5rem;
+      height: 0.75rem;
+      background: url( '../../img/svg/menu.svg' ) no-repeat;
+      background-size: contain;
+    }
 
     &[aria-hidden="true"] {
       @include u-display('none');
     }
   }
-}
 
-.usa-header {
-  background-color: $base-white;
-  border-color: $bg-light-medium;
-  @include u-border-bottom(1px);
-
-  &--extended {
-    .usa-logo {
-      width: 157px;
-      margin: .5rem 0 0;
-    }
-
-    .usa-nav--primary {
-      margin-left: 0 !important;
-    }
-    .usa-nav-container {
-      @include u-text-align('center');
-    }
-    .usa-nav__primary-item {
-      .usa-nav {
-        @include u-padding(0);
-
-        &__link {
-          &:hover::after {
-            @include u-display('none');
-          }
-        }
-      }
-    }
-    .usa-navbar {
-      width: unset;
-
-      .usa-menu-btn {
-        background-color: transparent;
-        color: #11385B;
-      }
-    }
-  }
-}
-
-.usa-overlay {
-  &.is-visible {
+  .usa-menu-btn--close {
     @include u-display('none');
-  }
-}
 
-.usa-header--extended .usa-nav__primary {
-  @include u-margin-left(0);
+    @include after {
+      background: url( '../../img/svg/close.svg' ) no-repeat;
+      background-size: contain;
+    }
+
+    &[aria-hidden="true"] {
+      @include at-media-max('tablet-lg') {
+        @include u-display('block');
+      }
+    }
+  }
 }
