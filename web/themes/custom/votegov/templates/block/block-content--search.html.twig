@@ -12,7 +12,7 @@
 
 {% set affiliated_search = content.field_translated_affiliate | field_value | render %}
 
-<form class="usa-search usa-search--small" role="search" action="https://search.vote.gov/search" accept-charset="UTF-8" method="get">
+<form class="usa-search usa-search--small" action="https://search.vote.gov/search" accept-charset="UTF-8" method="get">
   {# if current language is chinese simplified, change the search to use Chinese tradional 'zh' #}
   {% set searchLanguage = language == 'zh-hans' ? 'zh' : language %}
   <input type="hidden" name="affiliate" id="affiliate"
