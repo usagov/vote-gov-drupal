@@ -5,7 +5,18 @@
   @include u-margin-top(4);
   @include u-margin-bottom(6);
   @include u-position('relative');
-  @include vote-narrow-container;
+
+  .field--name-field-media {
+    @include u-text-align('center');
+
+    img {
+      height: 310px;
+    }
+  }
+
+  .field--name-field-body {
+    @include vote-narrow-container;
+}
 
   @include at-media('tablet') {
     @include u-margin-top(6);
@@ -21,6 +32,6 @@
   }
 
   &.vote-page-content--image-offset {
-    @include u-margin-top('neg-10');
+    margin-top: -14rem;
   }
 }
