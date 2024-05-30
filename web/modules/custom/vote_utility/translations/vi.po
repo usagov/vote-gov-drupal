@@ -29,7 +29,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "Hình minh họa của ô bỏ phiếu với lá phiếu đã đánh dấu được chèn vào để biểu thị hành động bỏ phiếu"
 
 #identifier
-msgid "an official website of the @link."
+msgid "An official website of the @link."
 msgstr "Một trang web chính thức của @link"
 
 msgid "General Services Administration"

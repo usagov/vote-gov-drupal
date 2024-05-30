@@ -18,8 +18,8 @@
 
 <div{{ attributes.addClass(classes) }}>
   {% if content.field_heading | render %}
-    <h2 class="vote-basics-block__heading">
-      <span>{{ content.field_heading | field_value }}<span>
+    <h2 class="vote-heading--red-underline">
+      {{ content.field_heading | field_value }}
     </h2>
   {% endif %}
   <div class="vote-basics-block__content">
