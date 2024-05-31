@@ -11,7 +11,7 @@
 .usa-button:not(.usa-button--unstyled) {
   @include u-text('medium');
   padding: 0.9rem 1.4rem;
-  background-color: $base-primary;
+  background-color: #345D96;
 
   &.usa-button--active {
     background-color: $base-dark;
