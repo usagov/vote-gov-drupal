@@ -34,8 +34,13 @@
   &.vote-page-content--sidebar {
     @include at-media('desktop-lg') {
       @include grid-offset(1);
-      // Adjusting offset by .25
-      margin-left: calc((0.75 / 12) * 100%);
+      margin-left: 135px;
+      margin-right: 213px;
+
+      article>div {
+        width: 100%;
+        margin-left: 0;
+      }
     }
   }
 
