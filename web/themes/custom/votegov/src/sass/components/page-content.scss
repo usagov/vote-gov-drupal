@@ -1,6 +1,14 @@
 @use "uswds-core" as *;
 @use "mixins" as *;
 
+.vote-main-content-row {
+  display: flex;
+}
+
+.vote-state-territory-content {
+  @include vote-narrow-container;
+}
+
 .vote-page-content {
   @include u-margin-top(4);
   @include u-margin-bottom(6);
@@ -16,7 +24,7 @@
 
   .field--name-field-body {
     @include vote-narrow-container;
-}
+  }
 
   @include at-media('tablet') {
     @include u-margin-top(6);
