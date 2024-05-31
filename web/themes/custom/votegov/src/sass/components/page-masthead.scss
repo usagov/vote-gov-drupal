@@ -31,7 +31,6 @@ $masthead-background-color: $base-dark;
   }
 }
 
-
 .voter-guide-page-masthead {
   background-color: $masthead-background-color;
   @include u-position('relative');
@@ -55,7 +54,7 @@ $masthead-background-color: $base-dark;
     @include u-position('relative');
   }
 
-  &.page-masthead--image-offset {
+  &.voter-guide-page-masthead--image-offset {
     @include u-padding-bottom(15);
   }
 }

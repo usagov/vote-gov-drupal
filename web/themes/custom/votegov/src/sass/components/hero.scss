@@ -65,3 +65,12 @@
     @include u-font-size('body', '2xl')
   }
 }
+
+.vote-hero--dark {
+  background-color: $base-dark;
+  color: $base-white;
+
+    .vote-hero__heading {
+      color: $base-white;
+    }
+}
