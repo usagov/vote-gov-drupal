@@ -5,15 +5,18 @@
     <div class="vote-eac-partner__logo">
       {# EAC Text #}
       <div class="vote-eac-partner__text">
-        <p>{{ 'Vote.gov is made possible in partnership with' | t }}</p>
+        <p>{{ 'Vote.gov is in partnership with' | t }}</p>
       </div>
       {# EAC logo #}
       <div class="vote-eac-partner__logo-img">
         <a extlinkjs-ignore
            href="{{ language == 'es' ? 'https://www.eac.gov/translations/spanish' : 'https://www.eac.gov/' }}"
-           target="_blank">
-          <img width="146" height="48" src="{{ theme_path }}/img/eac-logo.webp"
-               alt="{{ 'U.S. Election Assistance Commission logo which indicates a partnership with vote.gov' | t }}"/></a>
+           target="_blank"
+           class="vote-eac-partner__logo-link">
+          <img width="64" height="64" src="{{ theme_path }}/img/eac-logo.png"
+               alt="{{ 'U.S. Election Assistance Commission logo which indicates a partnership with vote.gov' | t }}"/>
+            <span>{{ 'U.S. ELECTION ASSISTANCE COMMISSION' | t }}</span>
+        </a>
       </div>
     </div>
     <div class="vote-eac-partner__social-links">
