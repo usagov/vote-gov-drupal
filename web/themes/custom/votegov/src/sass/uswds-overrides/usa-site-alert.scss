@@ -1,0 +1,24 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+@use "mixins" as *;
+
+.usa-site-alert--info .usa-alert {
+  @include u-border-left(0);
+  border-inline-start: 0.5rem $ac-cool-light solid;
+
+  .usa-alert__body {
+    @include at-media-max('tablet') {
+      @include u-padding-left(0);
+      padding-inline-start: 3rem;
+    }
+
+    &:before {
+      @include u-left('auto');
+      inset-inline-start: 0.5rem;
+
+      @include at-media('tablet') {
+        inset-inline-start: 4.5rem;
+      }
+    }
+  }
+}
