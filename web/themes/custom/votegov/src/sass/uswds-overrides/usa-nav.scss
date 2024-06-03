@@ -173,6 +173,8 @@
 
     &__secondary {
       bottom: 5.6rem;
+      right: unset;
+      inset-inline-end: 5rem;
     }
   }
 
@@ -194,7 +196,6 @@
       .usa-nav__primary-item {
 
         >a {
-          font-family: $theme-font-type-serif;
           color: $base-dark;
           font-size: 18px;
           font-weight: 700;
@@ -203,7 +204,6 @@
 
         >button>span {
           @include u-margin-left(1);
-          font-family: $theme-font-type-serif;
           color: $base-dark;
           font-size: 18px;
           font-weight: 700;
@@ -211,7 +211,6 @@
         }
 
         a:not(.usa-button):not(.usa-current) {
-          font-family: $theme-font-type-serif;
           color: $base-dark;
           padding: 16px 24px 18.5px;
         }
