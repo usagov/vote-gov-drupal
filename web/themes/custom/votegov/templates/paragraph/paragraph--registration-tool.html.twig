@@ -31,7 +31,7 @@
                placeholder="{{ content.field_placeholder | field_value }}" data-test="stateInput"
                aria-autocomplete="list" aria-expanded="true" aria-controls="vote-registration-tool__results">
         <div class="vote-registration-tool__list-container">
-          <nav id="vote-registration-tool__results" class="vote-registration-tool__nav" role="listbox"
+          <div id="vote-registration-tool__results" class="vote-registration-tool__nav" role="listbox"
                aria-label="{{ 'States and territories list' | t }}">
             <ul class="vote-registration-tool__list" data-test="stateList">
               {% set results = drupal_view_result('state_territory', 'block') %}
@@ -47,7 +47,7 @@
                 <span tabindex="0" data-key="">{{ "No matching results. Please check spelling." | t }}</span>
               </li>
             </ul>
-          </nav>
+          </div>
         </div>
       </form>
     </div>
