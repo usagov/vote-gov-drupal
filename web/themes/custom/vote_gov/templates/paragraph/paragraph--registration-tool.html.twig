@@ -32,7 +32,7 @@
                           aria-hidden="true" data-test="dropdown-btn"></button>
                 </div>
               </div>
-              <div id="state-results-container" hidden>
+              <nav id="state-results-container" hidden>
                 <ul id="results-list" data-test="state-list">
                   {% set results = drupal_view_result('state_territory', 'block') %}
                   {% for result in results %}
@@ -42,7 +42,7 @@
                       <a href="{{ node_path }}">{{ result.node_field_data_title }}</a>
                     </li>
                   {% endfor %}
-                </div>
+                </ul>
               </nav>
             </form>
 
