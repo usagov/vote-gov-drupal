@@ -24,6 +24,7 @@
   @include u-font-size('sans', 5);
   @include u-text('bold');
   @include u-margin-bottom(2);
+  min-width: 187px;
   margin-top: -6rem;
   background-color: $ac-cool;
   color: $base-white;
