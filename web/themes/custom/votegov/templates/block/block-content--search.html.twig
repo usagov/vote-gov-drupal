@@ -20,11 +20,11 @@
 
   <label class="usa-sr-only" for="search-field-en-small">{{ content.field_search_placeholder | field_value }}</label>
 
-  <input id="usa-search-input" class="usa-input" data-test="searchBox" id="search-field-en-small" type="search" name="query"
+  <input id="usa-search-input" class="usa-input" aria-label="{{ 'Submit' | t }}" data-test="searchBox" id="search-field-en-small" type="search" name="search"
          autocomplete="off"
          placeholder="{{ content.field_search_placeholder | field_value }} {{ affiliated_search != '1' ? '(in English)' | t }}">
 
-  <button class="usa-button usa-button--unstyled usa-button--search" data-test="searchBtn" type="submit" name="commit" data-disable-with="Search">
+  <button class="usa-button usa-button--unstyled usa-button--search" data-test="searchBtn" type="submit" name="submit" data-disable-with="Search">
     {{ source( directory ~ '/img/svg/arrow.svg' ) }}
   </button>
 </form>
