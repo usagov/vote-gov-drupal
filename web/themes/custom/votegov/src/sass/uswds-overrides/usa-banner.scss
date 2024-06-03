@@ -3,35 +3,47 @@
 
 .usa-banner {
   @include u-position('relative');
+  @include u-z(100);
   background-color: $bg-light;
 }
 
 .usa-banner__inner {
-  @include at-media-max('tablet') {
-    @include u-height(6);
-  }
+  height: 3.5rem;
 
-  @include at-media('tablet') {
-    @include u-height(8);
+  @include at-media-max('tablet') {
+    @include u-padding-right(2);
+    padding-inline-end: 0;
   }
 }
 
 .banner__text-container {
-  @include at-media-max('tablet') {
-    @include u-height(6);
-  }
-
   @include u-flex('align-center');
+
+  @include at-media('tablet-lg') {
+    @include grid-col(8);
+  }
 }
 
 .usa-banner__guidance {
-  max-width: unset;
+  @include u-maxw('none');
 }
 
 .usa-banner__header {
   @include u-padding-y(0);
+}
 
-  &--expanded {
-    padding-right: 0;
+.usa-banner__header-text,
+.usa-banner__button-text {
+  @include u-font-size('sans', 3);
+}
+
+
+.usa-banner__button[aria-expanded="true"] {
+  &:before,
+  &:after {
+    @include at-media-max('tablet') {
+      @include u-right('auto');
+      inset-inline-end: 0;
+    }
   }
 }

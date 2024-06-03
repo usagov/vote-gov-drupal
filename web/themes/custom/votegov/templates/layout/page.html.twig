@@ -71,22 +71,19 @@
 {# Sitewide alert component #}
   {{ drupal_view('sitewide_alert', 'block_1') }}
 
-<header class="usa-header usa-header--basic usa-header--megamenu">
-  <div class="usa-nav-container">
+<header class="usa-header usa-header--extended">
     <div class="usa-navbar">
 
       {# Site branding component #}
       {{ drupal_entity('block', 'votegov_sitebranding') }}
 
       <button type="button" class="usa-menu-btn" data-test="mobileBtn">{{ 'Menu' | t }}</button>
-      <button type="button" class="usa-nav__close" data-test="closeBtn">{{ 'Close' | t }}</button>
+      <button type="button" class="usa-menu-btn usa-menu-btn--close" data-test="closeBtn">{{ 'Close' | t }}</button>
 
     </div>
 
     {# Main navigation component #}
     {{ drupal_entity('block', 'votegov_mainnavigation') }}
-
-  </div>
 </header>
 
 {{ page.admin }}
