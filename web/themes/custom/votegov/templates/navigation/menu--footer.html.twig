@@ -23,7 +23,7 @@
 {% import _self as menus %}
 
 {# footer links #}
-<nav class="usa-identifier__section usa-identifier__section--required-links">
+<nav class="usa-identifier__section usa-identifier__section--required-links" data-test="footer">
   <div class="usa-identifier__container">
     {{ menus.menu_links(items, attributes, 0) }}
   </div>
@@ -33,7 +33,7 @@
   {% import _self as menus %}
 
   {% if items %}
-    <ul class="usa-identifier__required-links-list">
+    <ul class="usa-identifier__required-links-list" data-test="footerLinks">
       {% for item in items %}
         <li class="usa-identifier__required-links-item">
           {% set link_classes = [
