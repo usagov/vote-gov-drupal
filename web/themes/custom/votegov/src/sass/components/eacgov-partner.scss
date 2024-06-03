@@ -7,6 +7,10 @@ $eacgov-partner-breakpoint: 'tablet-lg';
 .vote-eac-partner {
   @include u-text-align('center');
   background-color: $bg-light-cool;
+
+  &__text {
+    font-size: 14px;
+  }
 }
 
 .vote-eac-partner__container {
@@ -40,6 +44,23 @@ $eacgov-partner-breakpoint: 'tablet-lg';
 
 .vote-eac-partner__logo-img img {
   @include u-maxw('none');
+}
+
+.vote-eac-partner__logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-align: start;
+  gap: 1.5rem;
+  text-decoration: none;
+  color: $base-dark;
+  width: 180px;
+  font-family: Merriweather;
+  font-size: 13px;
+  line-height: 125%;
+
+  span {
+    height: 40px;
+  }
 }
 
 .vote-eac-partner__social-link {

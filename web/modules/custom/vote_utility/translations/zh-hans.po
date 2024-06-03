@@ -29,7 +29,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "插有已勾选选票的选票箱图样，表示投票动作"
 
 #identifier
-msgid "an official website of the @link."
+msgid "An official website of the @link."
 msgstr "@link官方网站"
 
 msgid "General Services Administration"

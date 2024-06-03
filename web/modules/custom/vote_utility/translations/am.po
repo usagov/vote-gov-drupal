@@ -29,7 +29,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "የድምጽ አሰጣጥ እንዴት እንደሚተገበር ለማመልከት ምልክት የተደረገበት ድምጽ መስጫ ወረቀት በምሳሌነት የገባበት የመራጮች ሳጥን "
 
 #identifier
-msgid "an official website of the @link."
+msgid "An official website of the @link."
 msgstr "ኦፊሲያል ድህረ ገጽ @link"
 
 msgid "General Services Administration"
@@ -61,11 +61,11 @@ msgid "U.S. Election Assistance Commission logo which indicates a partnership wi
 msgstr "ከvote.gov ጋር አጋርነትን የሚያመለክት የU.S. ምርጫ እርዳታ ሰጪ ኮሚሽን አርማ"
 
 msgid "Follow vote.gov on"
-msgstr "vote.govን በትዊተር ላይ ይከተሉ (በእንግሊዘኛ)"
+msgstr "Vote.govን በትዊተር ላይ ይከተሉ (በእንግሊዘኛ)"
 
 #search
 msgid "Search vote.gov"
-msgstr "vote.gov ን ይፈልጉ"
+msgstr "Vote.gov ን ይፈልጉ"
 
 #state
 msgid "Register to vote in @state_name"

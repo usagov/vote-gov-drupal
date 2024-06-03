@@ -45,7 +45,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "Sawirka sanduuqa cod-bixinta oo la gelinaayo warqad saxan si loo muujiyo tallaabada cod bixineed"
 
 # data.translations.footer.identifier_gsa_txt
-msgid "an official website of the @link."
+msgid "An official website of the @link."
 msgstr "Bogga rasmiga ah ee @link."
 
 # data.translations.footer.identifier_gsa_txt__1
