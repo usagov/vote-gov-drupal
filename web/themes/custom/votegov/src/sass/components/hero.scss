@@ -15,9 +15,9 @@
   @include u-flex('justify');
   position: relative;
 
-  @include at-media('tablet-lg') {
-    padding-right: 0 !important;
-  }
+  // @include at-media('tablet-lg') {
+  //   padding-block-end: 0 !important;
+  // }
 }
 
 .vote-hero__image {
@@ -66,15 +66,34 @@
   }
 }
 
+// styles for voter guide hero, will be updated to a component in the future
 .vote-hero--dark {
-  background-color: $base-dark;
+  background-color: #162E51;
   color: $base-white;
 
-  .vote-hero__image {
-    aspect-ratio: 16 / 9;
+  .vote-hero__callout {  
+    @include at-media('tablet-lg') {
+      padding: 0px 40px 150px 0px;
+    }
   }
 
-    .vote-hero__heading {
-      color: $base-white;
+  .vote-hero__image {
+    @include u-order(2);
+    margin-bottom: -1rem;
+
+    @include at-media('tablet-lg') {
+      margin-bottom: 0;
     }
+  }
+
+  .vote-hero__heading {
+    color: $base-white;
+  }
+
+  .usa-breadcrumb__list {
+    @include at-media('tablet-lg') {
+      @include u-padding-y(6)
+
+    }
+  }
 }
