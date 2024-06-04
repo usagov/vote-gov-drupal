@@ -3,4 +3,6 @@ adding:
     dblog: 0
     devel: 0
     disable_language: 0
+  permissions:
+    - 'switch users'
 removing: {  }

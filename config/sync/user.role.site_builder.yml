@@ -282,7 +282,6 @@ permissions:
   - 'revert page revisions'
   - 'revert state_territory revisions'
   - 'revert voter_guide revisions'
-  - 'switch users'
   - 'synchronize configuration'
   - 'translate any entity'
   - 'translate audio media'

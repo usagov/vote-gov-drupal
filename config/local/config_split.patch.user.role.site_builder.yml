@@ -3,8 +3,14 @@ adding:
     module:
       - devel
       - disable_language
+      - field_ui
+      - views_ui
   permissions:
     - 'access devel information'
     - 'create content in disabled language'
     - 'view disabled languages'
-removing: {  }
+removing:
+  dependencies:
+    module:
+      - field_ui
+      - views_ui
