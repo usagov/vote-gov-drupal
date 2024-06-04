@@ -1,5 +1,6 @@
 @use "uswds-core" as *;
 @use "variables" as *;
+@use "mixins" as *;
 
 .vote-hero {
   background-color: $bg-light-warm;
@@ -73,16 +74,21 @@
 
   .vote-hero__callout {  
     @include at-media('tablet-lg') {
-      padding: 0px 40px 150px 0px;
+      padding: 3rem 2.5rem 9rem 0;
+
+      // padding-top: 3rem;
+      // padding-block-end: 2.5rem;
+      // padding-bottom: 9rem;
+      // padding-block-start: 0;
     }
   }
 
   .vote-hero__image {
     @include u-order(2);
-    margin-bottom: -1rem;
+    @include u-margin-bottom('neg-1');
 
     @include at-media('tablet-lg') {
-      margin-bottom: 0;
+      @include u-margin-bottom(0);
     }
   }
 
@@ -92,7 +98,7 @@
 
   .usa-breadcrumb__list {
     @include at-media('tablet-lg') {
-      @include u-padding-y(6)
+      @include u-padding-bottom(6)
 
     }
   }
