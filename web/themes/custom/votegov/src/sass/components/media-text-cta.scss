@@ -56,7 +56,7 @@
 
       &__footer {
         a {
-          padding: 5px;
+          @include u-padding(0.5);
         }
       }
     }
