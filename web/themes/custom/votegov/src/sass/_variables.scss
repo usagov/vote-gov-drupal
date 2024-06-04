@@ -14,7 +14,12 @@ $ac-cool-light: #0AAAE2; // cyan-30v
 //$ac-dark: #8F4F91; // violet-warm-60
 
 // Background Colors.
-$bg-light: #F7F9FA; // gray-cool-2
+$bg-light: #F0F0F0; // gray-cool-2
 $bg-light-medium: #D3D3D3; // gray-cool-20 is this just for the horizontal rule?
 $bg-light-cool: #E2EDF2; // blue-warm-10
 $bg-light-warm: #e7e5dd; // hero-background
+
+// Theme Colors
+[data-theme="contrast"] {
+  --main-color: black;
+}

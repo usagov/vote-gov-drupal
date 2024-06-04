@@ -33,7 +33,9 @@ dependencies:
     - file
     - media
     - node
+    - override_node_options
     - paragraphs
+    - path
     - system
     - taxonomy
     - toolbar
@@ -66,6 +68,7 @@ permissions:
   - 'create state_territory content'
   - 'create terms in basics_modules'
   - 'create terms in nvrf_field'
+  - 'create url aliases'
   - 'create voter_guide content'
   - 'delete all revisions'
   - 'delete any audio media'
@@ -126,7 +129,9 @@ permissions:
   - 'edit own voter_guide content'
   - 'edit terms in basics_modules'
   - 'edit terms in nvrf_field'
+  - 'enter all revision log entry'
   - 'mark as hidden in editoria11y'
+  - 'override landing published option'
   - 'revert all revisions'
   - 'revert any basic block content revisions'
   - 'revert any email_signup block content revisions'

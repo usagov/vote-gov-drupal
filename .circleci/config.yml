@@ -25,6 +25,7 @@ jobs:
             source ./scripts/pipeline/deb-cf-install.sh
       - run:
           name: "Run Drush Cron and Generate Static Site"
+          no_output_timeout: 30m
           command: |
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
@@ -142,6 +143,7 @@ jobs:
             source ./scripts/pipeline/deb-cf-install.sh
       - run:
           name: "Post Deploy Upkeep"
+          no_output_timeout: 30m
           command: |
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
@@ -160,6 +162,7 @@ jobs:
             source ./scripts/pipeline/deb-basic-deps.sh
             source ./scripts/pipeline/deb-cf-install.sh
             source ./scripts/pipeline/deb-mysql-client-install.sh
+            source ./scripts/pipeline/deb-awscli.sh
 
             cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/v1.1.3/cf-service-connect_linux_amd64
       - run:
@@ -256,15 +259,9 @@ jobs:
       - attach_workspace:
           at: ~/
       - run:
-          name: "Install cloudfoundry dependencies"
-          command: |
-            source ./scripts/pipeline/deb-basic-deps.sh
-            source ./scripts/pipeline/deb-cf-install.sh
-      - run:
           name: "Cypress Internal Links"
           command: |
             cd testing
-            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
             npm install
             npm run cy:pipeline:links
       - run:
@@ -272,7 +269,6 @@ jobs:
           command: |
             echo "I am the result of Internal Links failed job"
             cd testing
-            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
             npm install
             npm run cy:pipeline:links
           when: on_fail
@@ -280,7 +276,6 @@ jobs:
           name: "Cypress External Links"
           command: |
             cd testing
-            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
             npm install
             npm run cy:pipeline:proofer
           when: always
@@ -289,7 +284,6 @@ jobs:
           command: |
             echo "I am the result of External Links failed job"
             cd testing
-            cypress_baseurl="ssg-${CIRCLE_BRANCH}.vote.gov"
             npm install
             npm run cy:pipeline:proofer
           when: on_fail
@@ -337,15 +331,13 @@ workflows:
                 - stage
           requires:
             - post-deploy
-      # - cypress:
-      #     filters:
-      #       branches:
-      #         only:
-      #           - test
-      #           - dev
-      #           - stage
-      #     requires:
-      #       - upkeep
+      - cypress:
+          filters:
+            branches:
+              only:
+                - stage
+          requires:
+            -  post-deploy-upkeep
   deploy-prod-workflow:
     when:
       and:
@@ -373,16 +365,16 @@ workflows:
         - equal: [ true, << pipeline.parameters.upkeep >> ]
     jobs:
       - upkeep
-  # link-validation-workflow:
-  #   triggers:
-  #     - schedule:
-  #         cron: '0 10 * * 1,4'
-  #         filters:
-  #           branches:
-  #             only:
-  #               - stage
-  #   jobs:
-  #     - link-validation
+  link-validation-workflow:
+    triggers:
+      - schedule:
+          cron: '0 10 * * 1,4'
+          filters:
+            branches:
+              only:
+                - prod
+    jobs:
+      - link-validation
   scheduled-backup-workflow:
     when:
       and:
@@ -405,3 +397,4 @@ workflows:
           - equal: [ test, << pipeline.parameters.restore >> ]
     jobs:
       - downsync
+      

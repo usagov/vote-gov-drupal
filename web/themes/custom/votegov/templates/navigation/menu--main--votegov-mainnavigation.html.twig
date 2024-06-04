@@ -27,11 +27,15 @@ We call a macro which calls itself to render the full tree.
 @see https://twig.symfony.com/doc/1.x/tags/macro.html
 #}
 {% set attributes = attributes.addClass('menu') %}
-<nav aria-label="{{ 'Primary navigation' | t }}" class="usa-nav" data-test="mainNav">
+<nav aria-label="{{ 'Primary' | t }}" class="usa-nav" data-test="mainNav">
+  <div class="usa-nav__inner">
   {{ menus.menu_links(items, attributes, 0, 'basic-mega-nav-section-') }}
-  <section id="usa-search--expandable" aria-label="{{ 'Search component' | t }}">
+  <div class="usa-nav__secondary">
+  <section id="usa-search--expandable" aria-label="{{ 'Search' | t }}">
     {{ drupal_entity('block_content', 2) }}
   </section>
+  </div>
+</div>
 </nav>
 
 {% macro menu_links(items, attributes, menu_level, aria_id) %}
@@ -73,8 +77,8 @@ We call a macro which calls itself to render the full tree.
                 {{ link(item.title, item.url) }}
               {% endif %}
             {% endif %}
+                      <span class="li-divider"></span>
           </li>
-          <span class="li-divider"></span>
         {% endfor %}
       </ul>
     {# Secondary level menu structure. #}

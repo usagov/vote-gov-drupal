@@ -232,6 +232,10 @@ This workflow will run the command `drush cron`. It current runs once an hour.
 
 This work flow runs [scheduled-backup.sh](#scheduled-backupsh). This currently runs once an hour.
 
+`link-validation-workflow`
+
+This work flow runs every Monday and Thursday at 9am EST.  This schedule it set up with a cron since it tests a url and not environment  based.
+
 #### [.circleci/config.yml](#circleciconfigyml)
 
 The configuration file for the CI/CD pipeline.

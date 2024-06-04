@@ -29,7 +29,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "Ilustración del acto del voto donde una boleta marcada está siendo insertada en una urna"
 
 #identifier
-msgid "an official website of the @link."
+msgid "An official website of the @link."
 msgstr "Un sitio web oficial de la @link"
 
 msgid "General Services Administration"
