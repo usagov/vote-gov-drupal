@@ -1,0 +1,10 @@
+uuid: c927ccbf-a396-46a2-9245-14a1323ae0b9
+langcode: en
+status: true
+dependencies: {  }
+id: double_deck_card
+label: 'Double Deck Card'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

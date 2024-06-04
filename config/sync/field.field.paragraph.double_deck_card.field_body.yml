@@ -1,0 +1,28 @@
+uuid: 18186897-2f95-4729-a521-e0b90b48c743
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - filter.format.basic_html
+    - filter.format.plain_text
+    - filter.format.simple_html
+    - paragraphs.paragraphs_type.double_deck_card
+  module:
+    - text
+id: paragraph.double_deck_card.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: double_deck_card
+label: Text
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - simple_html
+    - plain_text
+field_type: text_long

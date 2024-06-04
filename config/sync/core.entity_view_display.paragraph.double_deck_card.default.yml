@@ -1,0 +1,48 @@
+uuid: 4db3a117-f120-4eef-ae45-c9ebb20c94d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.double_deck_card.field_body
+    - field.field.paragraph.double_deck_card.field_body_secondary
+    - field.field.paragraph.double_deck_card.field_classes
+    - field.field.paragraph.double_deck_card.field_heading
+    - paragraphs.paragraphs_type.double_deck_card
+  module:
+    - text
+id: paragraph.double_deck_card.default
+targetEntityType: paragraph
+bundle: double_deck_card
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_body_secondary:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_classes:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
