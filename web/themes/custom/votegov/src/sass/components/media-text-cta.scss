@@ -16,7 +16,7 @@
   //desktop
   @include at-media('tablet') {
     @include u-display('flex');
-    @include u-align-items('center');
+    @include u-align-items('align-center');
 
     &__media-order-last {
       .vote-cta__content-container {
@@ -62,5 +62,3 @@
     }
   }
 }
-
-.vote-cta
