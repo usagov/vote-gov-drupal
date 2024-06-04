@@ -1,113 +1,29 @@
 @use "uswds-core" as *;
 @use "variables" as *;
 
-#usa-search--expandable {
-  order: 3;
-  padding-top: 16px;
-
-  @include at-media('tablet-lg') {
-    @include u-padding-bottom(2);
-    @include u-padding-x(3)
+.usa-search {
+  header & {
+    @include at-media-max('tablet-lg') {
+      @include u-margin(2);
+    }
   }
 
-  form {
-    &:focus-within {
-      .usa-input {
-        background-position: 5% 45%;
-        background-color: $bg-light-cool;
-        border-color: $base-primary;
-        -webkit-transition: width .3s ease-in-out;
-        -moz-transition: width .3s ease-in-out;
-        -o-transition: width .3s ease-in-out;
-        transition: width .3s ease-in-out;
-        @include u-width('tablet');
-        @include u-border(2px);
+  .usa-input {
+    @include u-radius(0);
+    @include u-padding-x(2);
+    @include u-padding-y(1);
+    @include u-height(5);
+    border: 1px solid $bg-light-medium;
+    border-inline-end-width: 0;
+    border-end-start-radius: 0.25rem;
+    border-start-start-radius: 0.25rem;
+  }
 
-        &::placeholder {
-          color: $base-dark;
-        }
-      }
-
-      .usa-button--search {
-        display: block;
-        background-color: $bg-light-cool;
-        border-color: $base-primary;
-        @include u-border(2px);
-        @include u-border-left(0);
-      }
-
-      &:hover .usa-input {
-        background-color: $bg-light-cool;
-      }
-    }
-
-    &:hover .usa-input {
-      background-color: $bg-light-cool;
-    }
-
-    @include at-media-max('tablet-lg') {
-      @include u-padding-x(3);
-      justify-content: center;
-    }
-
-    .usa-input {
-      background-color: $bg-light-cool;
-      background-image: url( '../../../votegov/img/svg/search.svg' );
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-      overflow: visible;
-      background-color: $bg-light;
-      text-indent: 40px;
-      border: 1px solid $bg-light-medium;
-      border-radius: 16px;
-      height: 48px;
-      width: 48px;
-
-      @include at-media-max('tablet-lg') {
-        background-position: 2% 40%;
-        min-width: 100%;
-        border-color: $bg-light-medium;
-      }
-    }
-
-    .usa-input::placeholder {
-      font-size: 17px;
-      color: transparent;
-      opacity: 1;
-    }
-
-    .usa-button--search {
-      display: none;
-      border-color: $bg-light-medium;
-      background-color: $bg-light;
-      -webkit-transition: width .3s ease-in-out;
-      -moz-transition: width .3s ease-in-out;
-      -o-transition: width .3s ease-in-out;
-      transition: width .3s ease-in-out;
-      @include u-margin-left('neg-6');
-      @include u-radius-left(0);
-      @include u-radius-right('lg');
-      height: 48px;
-      @include u-border(2px);
-      @include u-border-left(0);
-
-      @include at-media-max('tablet-lg') {
-        display: block;
-        @include u-border(1px);
-        @include u-border-left(0);
-      }
-
-      &:hover svg path {
-        fill: $ac-warm-hover;
-      }
-
-        svg path {
-          fill: $base-primary;
-          top: 50%;
-          @include u-height(4);
-          @include u-width(4);
-          @include u-padding(1);
-        }
-    }
+  .usa-button--search {
+    @include u-radius(0);
+    @include u-height(5);
+    @include u-padding(1);
+    border-end-end-radius: 0.25rem;
+    border-start-end-radius: 0.25rem;
   }
 }

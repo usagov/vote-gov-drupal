@@ -3,10 +3,6 @@
 
 .usa-breadcrumb {
   background-color: transparent;
-
-  .page-masthead & {
-    @include vote-narrow-container;
-  }
 }
 
 .usa-breadcrumb__link {

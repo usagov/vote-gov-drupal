@@ -4,7 +4,8 @@
 .page-title {
   @include u-margin-top(4);
   @include u-maxw('tablet');
-  @include vote-narrow-container;
+  @include u-text-align('center');
+  max-width: 100%;
 
   @include at-media('tablet') {
     @include u-margin-top(6);

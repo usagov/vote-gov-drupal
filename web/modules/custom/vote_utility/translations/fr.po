@@ -1,4 +1,4 @@
-# French translation of Vote.gov
+# French translation of vote.gov
 #
 msgid ""
 msgstr ""
@@ -81,12 +81,12 @@ msgid "in partnership with"
 msgstr "en partenariat avec"
 
 # data.translations.footer.eac_logo_alt_text (see accessibility updates)
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
-msgstr "Le logo de la Commission d'assistance électorale des États-Unis qui indique le partenariat avec Vote.gov"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
+msgstr "Le logo de la Commission d'assistance électorale des États-Unis qui indique le partenariat avec vote.gov"
 
 # data.translations.footer.twitter_text
-msgid "Follow Vote.gov on Twitter"
-msgstr "Suivez Vote.gov sur Twitter (en anglais)"
+msgid "Follow vote.gov on"
+msgstr "Suivez vote.gov sur X (en anglais)"
 
 # data.translations.footer.section_sign_up
 msgid "Email sign-up"
@@ -101,8 +101,8 @@ msgid "GSA logo"
 msgstr "Logo GSA a"
 
 # data.translations.homepage.search_placeholder
-msgid "Search Vote.gov"
-msgstr "Rechercher Vote.gov"
+msgid "Search vote.gov"
+msgstr "Rechercher vote.gov"
 
 # data.translations.homepage.section_banner
 msgid "Official government website"
@@ -116,12 +116,18 @@ msgstr "Inscrivez-vous pour voter @in_state_name"
 msgid "How to register to vote"
 msgstr "Comment vous inscrire pour voter"
 
+msgid "How to register and update your registration"
+msgstr "Comment vous inscrire pour voter"
+
 # data.translations.register.other_language_selection__heading (state phrase updates)
 msgid "Other ways to register to vote"
 msgstr "Autres façons de vous inscrire au vote"
 
-msgid "Voter registration deadlines for the @election_date election"
+msgid "Voter registration deadlines for the @election_date election. @link"
 msgstr "Dates limites d'inscription au vote pour l'élection du @election_date."
+
+msgid "Find state and local election dates."
+msgstr ""
 
 # data.translations.register.dates__bymail_deadline
 msgid "Register by mail deadline:"
@@ -194,7 +200,7 @@ msgid "@link on @state_name’s election website."
 msgstr "@link au site Web électoral @of_state_name."
 
 # @link: data.translations.register.online__answer1 (see accessibility updates)
-msgid "Start your online registration"
+msgid "Complete your online registration"
 msgstr "Commencez votre inscription en ligne"
 
 # data.translations.register.online__answer2 (see accessibility updates)

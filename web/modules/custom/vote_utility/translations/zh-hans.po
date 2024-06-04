@@ -1,4 +1,4 @@
-# Chinese - simplified translation of Vote.gov
+# Chinese - simplified translation of vote.gov
 #
 msgid ""
 msgstr ""
@@ -57,15 +57,15 @@ msgstr "政府信息和服务"
 msgid "in partnership with"
 msgstr "与合作"
 
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with Vote.gov"
+msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
 msgstr "与 U.S. Election Assistance Commission合作"
 
-msgid "Follow Vote.gov on Twitter"
-msgstr "在 Twitter 上关注 Vote.gov (英语)"
+msgid "Follow vote.gov on"
+msgstr "在 X 上关注 vote.gov (英语)"
 
 #search
-msgid "Search Vote.gov"
-msgstr "搜索 Vote.gov"
+msgid "Search vote.gov"
+msgstr "搜索 vote.gov"
 
 #state
 msgid "Register to vote in @state_name"
@@ -74,11 +74,17 @@ msgstr "在 @state_name 注册投票"
 msgid "How to register to vote"
 msgstr "如何登记投票"
 
+msgid "How to register and update your registration"
+msgstr "如何登记投票"
+
 msgid "Other ways to register to vote"
 msgstr "登记投票的其他方式"
 
-msgid "Voter registration deadlines for the @election_date election"
+msgid "Voter registration deadlines for the @election_date election. @link"
 msgstr "@election_date选举的选民登记截止日期"
+
+msgid "Find state and local election dates."
+msgstr ""
 
 msgid "Register by mail deadline:"
 msgstr "邮寄报名截止日期："
@@ -128,7 +134,7 @@ msgstr "详细了解如何注册"
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
 msgstr "弗吉尼亚州不要求选民注册。 @link @state_name 州的选举网站"
 
-msgid "Start your online registration"
+msgid "Complete your online registration"
 msgstr "开始在线注册"
 
 msgid "@link on @state_name’s election website."

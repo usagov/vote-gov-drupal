@@ -11,6 +11,7 @@
   node.isSticky() ? 'node--sticky',
   not node.isPublished() ? 'node--unpublished',
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  'vote-state-territory-content'
 ] %}
 
 <article{{ attributes.addClass(classes) }}>
@@ -24,6 +25,9 @@
   {% set state_abrev = content.field_state_abbreviation | field_value | render %}
   {% set in_english = "(in English)" | t %}
   {% set election_date = "11/05/2024"  | date('U') | format_date('revision_date') | replace(t_numbers[language].numbers | default([])) %}
+  {% set election_link %}
+    <a href="https://www.eac.gov/voters/register-and-vote-in-your-state">{{ 'Find state and local election dates.' | t }}</a>
+  {% endset %}
 
   {# Korean 'state' character logic #}
   {% if language == 'ko' and node.field_is_state.value %}
@@ -38,7 +42,12 @@
   {% block deadlines %}
     {# Registration deadlines #}
     <h2>{{ 'Voter registration deadlines' | t({ '@state_name': state_name }) }}</h2>
-    <p>{{ 'Voter registration deadlines for the @election_date election' | t({'@election_date': {'#markup': election_date} | render }) }}</p>
+    <p>
+      {{ 'Voter registration deadlines for the @election_date election. @link' | t({
+        '@link': {'#markup': election_link} | render,
+        '@election_date': {'#markup': election_date} | render }
+      ) }}
+    </p>
     <ul data-test="registrationInfo">
       {% include '@votegov/component/registration-date/registration-date--online.html.twig' %}
       {% include '@votegov/component/registration-date/registration-date--by-mail.html.twig' %}

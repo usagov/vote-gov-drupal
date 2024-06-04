@@ -4,10 +4,10 @@
 $masthead-background-color: $base-dark;
 
 .page-masthead {
-  background-color: $masthead-background-color;
   @include u-position('relative');
   @include u-padding-top(4);
-  @include u-padding-bottom(6);
+  background-color: $masthead-background-color;
+  padding-bottom: 6rem;
 
   &:before {
     content: "";
@@ -27,6 +27,6 @@ $masthead-background-color: $base-dark;
   }
 
   &.page-masthead--image-offset {
-    @include u-padding-bottom(15);
+    padding-bottom: 16.7rem;
   }
 }
