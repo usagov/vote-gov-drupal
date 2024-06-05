@@ -92,35 +92,3 @@
     }
   }
 }
-
-// styles for voter guide hero, will be updated to a component in the future
-.vote-hero--dark {
-  background-color: #162E51;
-  color: $base-white;
-
-  .vote-hero__callout {  
-    @include at-media('tablet-lg') {
-      padding: 3rem 2.5rem 9rem 0;
-    }
-  }
-
-  .vote-hero__image {
-    @include u-order(2);
-    @include u-margin-bottom('neg-1');
-
-    @include at-media('tablet-lg') {
-      @include u-margin-bottom(0);
-    }
-  }
-
-  .vote-hero__heading {
-    color: $base-white;
-  }
-
-  .usa-breadcrumb__list {
-    @include at-media('tablet-lg') {
-      @include u-padding-bottom(6)
-
-    }
-  }
-}
