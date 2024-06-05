@@ -12,6 +12,8 @@ storage: folder
 folder: ../config/local
 module:
   disable_language: 0
+  field_ui: 0
+  views_ui: 0
 theme: {  }
 complete_list:
   - dblog.settings
