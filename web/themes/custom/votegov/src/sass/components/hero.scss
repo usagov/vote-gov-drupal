@@ -16,9 +16,6 @@
   @include u-flex('justify');
   position: relative;
 
-  // @include at-media('tablet-lg') {
-  //   padding-block-end: 0 !important;
-  // }
 }
 
 .vote-hero__image {
@@ -75,11 +72,6 @@
   .vote-hero__callout {  
     @include at-media('tablet-lg') {
       padding: 3rem 2.5rem 9rem 0;
-
-      // padding-top: 3rem;
-      // padding-block-end: 2.5rem;
-      // padding-bottom: 9rem;
-      // padding-block-start: 0;
     }
   }
 
