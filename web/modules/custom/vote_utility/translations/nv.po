@@ -45,7 +45,7 @@ msgid "Illustration of voter box with checked ballot being inserted to indicate 
 msgstr "Sitsaa y1zh7 biyi' asdzogo naashch'22'go e'et'11d biih yilts0osgo bik11'"
 
 # data.translations.footer.identifier_gsa_txt
-msgid "an official website of the @link."
+msgid "An official website of the @link."
 msgstr "!l32j8' han1lki'7g77 website kod00 @link"
 
 # data.translations.footer.identifier_gsa_txt__1
@@ -86,7 +86,7 @@ msgstr "US Election Assistance Commission bi-logo bik1'7g77 vote.gov yi[ naazhni
 
 # data.translations.footer.twitter_text
 msgid "Follow vote.gov on"
-msgstr "vote.gov bik44' nanin1 X biyi' &lt;Bilag1ana k'ehj7&gt"
+msgstr "Vote.gov bik44' nanin1 X biyi' &lt;Bilag1ana k'ehj7&gt"
 
 # data.translations.footer.section_sign_up
 msgid "Email sign-up"
@@ -102,7 +102,7 @@ msgstr "GSA bi-logo"
 
 # data.translations.homepage.search_placeholder
 msgid "Search vote.gov"
-msgstr "vote.gov hanit1h"
+msgstr "Vote.gov hanit1h"
 
 # data.translations.homepage.section_banner
 msgid "Official government website"

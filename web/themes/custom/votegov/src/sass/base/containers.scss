@@ -3,6 +3,7 @@
 
 body {
   color: $base-dark;
+  background-color: var(--main-color);
 
   &.usa-js-mobile-nav--active {
     overflow: unset;

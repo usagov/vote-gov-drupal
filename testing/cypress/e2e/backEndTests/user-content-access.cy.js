@@ -13,7 +13,7 @@ describe('Test User Role Access to Content Moderation', () => {
       cy.get(field[0]).clear().realType('test page')
     })
     cy.get('[class="claro-details__summary claro-details__summary--accordion-item"]').then(dropdown => {
-      cy.get(dropdown[3]).click()
+      cy.get(dropdown[1]).click()
       cy.get('[data-drupal-selector="edit-path-0-pathauto"]').click()
       cy.get('[data-drupal-selector="edit-path-0-alias"]').type('/cypress-content-moderation-test')
     })
@@ -82,33 +82,29 @@ describe('Test User Role Access to Content Moderation', () => {
     cy.get('[class="ck-blurred ck ck-content ck-editor__editable ck-rounded-corners ck-editor__editable_inline"]').then(field => {
       cy.get(field[0]).clear().realType('test page')
     })
-    cy.get('[class="claro-details__summary claro-details__summary--accordion-item"]').then(dropdown => {
-      cy.get(dropdown[0]).click()
-      cy.get('[data-drupal-selector="edit-menu-enabled"]').click()
-      cy.get('[data-drupal-selector="edit-menu-title"]').clear().type('/cypress-content-moderation-test-2')
-    })
+
     cy.get('[data-drupal-selector="edit-submit"]').click()
-    cy.url().should('contain', 'cypress-content-moderation-test-2')
+    cy.url().should('contain', 'test-page')
 
     // Can view draft content 
-    cy.request('/cypress-content-moderation-test-2').then((response) => {
+    cy.request('/test-page').then((response) => {
       expect(response.status).to.eq(200)})
    
     // Can modify draft content
-    cy.visit('/cypress-content-moderation-test-2')
+    cy.visit('/test-page')
     cy.get('[class="usa-button-group__item"]').then(btn => {
       cy.get(btn[1]).click()
     })
     cy.url().should('contain', 'edit')
 
     // Can publish content
-    cy.visit('/cypress-content-moderation-test-2')
+    cy.visit('/test-page')
     cy.get('[data-drupal-selector="edit-new-state"]').select('Published')
     cy.get('[data-drupal-selector="edit-submit"]').click()
     cy.get('[class="usa-alert__body"]').should('contain', 'The moderation state has been updated.')
 
     // Can move content to archived status 
-    cy.visit('/cypress-content-moderation-test-2')
+    cy.visit('/test-page')
     cy.get('[class="usa-button-group__item"]').then(btn => {
       cy.get(btn[1]).click()
     })
@@ -117,13 +113,13 @@ describe('Test User Role Access to Content Moderation', () => {
     cy.get('[id="edit-current"]').should('contain', 'Archived')
 
     // Can move archived content to draft
-    cy.visit('/cypress-content-moderation-test-2')
+    cy.visit('/test-page')
     cy.get('[data-drupal-selector="edit-new-state"]').select('Draft')
     cy.get('[data-drupal-selector="edit-submit"]').click()
     cy.get('[id="edit-current"]').should('contain', 'Draft')
 
     // Can delete content
-    cy.visit('/cypress-content-moderation-test-2')
+    cy.visit('/test-page')
     cy.get('[class="usa-button-group__item"]').then(btn => {
       cy.get(btn[2]).click()
     })
@@ -215,28 +211,28 @@ describe('Test User Role Access to Content Moderation', () => {
   })
 
   // ! commenting out this test for the time being until content is published. 
-  // it('test anonymous user access', () => {
-  //   // Can view published content  
-  // cy.request('/').then((response) => {
-  //   expect(response.status).to.eq(200)})
+  it('test anonymous user access', () => {
+    // Can view published content  
+  cy.request('/').then((response) => {
+    expect(response.status).to.eq(200)})
 
-  //    // Can not view draft content  
-  //   cy.request({
-  //     url: '/cypress-content-moderation-test',
-  //     failOnStatusCode:false,
-  //       }).then((resp) => {
-  //     expect(resp.status).to.eq(403)
-  //       })
+     // Can not view draft content  
+    cy.request({
+      url: '/cypress-content-moderation-test',
+      failOnStatusCode:false,
+        }).then((resp) => {
+      expect(resp.status).to.eq(403)
+        })
 
 
-  //     // can not view archived content 
-  //   cy.request({
-  //     url: '/admin/content/moderated',
-  //     failOnStatusCode:false,
-  //       }).then((resp) => {
-  //     expect(resp.status).to.eq(403)
-  //         })
-  // })
+      // can not view archived content 
+    cy.request({
+      url: '/admin/content/moderated',
+      failOnStatusCode:false,
+        }).then((resp) => {
+      expect(resp.status).to.eq(403)
+          })
+  })
 })
 
 
