@@ -9,8 +9,5 @@ adding:
     - 'access devel information'
     - 'create content in disabled language'
     - 'view disabled languages'
-removing:
-  dependencies:
-    module:
-      - field_ui
-      - views_ui
+    - 'switch users'
+removing: { }

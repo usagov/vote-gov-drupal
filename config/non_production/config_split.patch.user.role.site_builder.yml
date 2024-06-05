@@ -1,0 +1,7 @@
+adding:
+  dependencies:
+    module:
+      - field_ui
+      - views_ui
+  permissions: { }
+removing: { }
