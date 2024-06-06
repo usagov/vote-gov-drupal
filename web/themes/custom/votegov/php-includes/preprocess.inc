@@ -39,9 +39,10 @@ function votegov_preprocess(&$variables) {
       }
     }
   }
-  //set variable for node title in english
+
+  // Set variable for node title in english.
   $translated_entity = $node->getTranslation('en');
-  $variables['title_english'] =  $translated_entity->getTitle();
+  $variables['title_english'] = $translated_entity->getTitle();
 
   // Set variable for frontpage.
   $variables['is_frontpage'] = \Drupal::service('path.matcher')->isFrontPage();
