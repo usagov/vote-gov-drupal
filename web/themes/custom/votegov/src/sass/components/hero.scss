@@ -4,91 +4,85 @@
 
 .vote-hero {
   background-color: $bg-light-warm;
-
-  @include at-media('tablet-lg') {
-    @include u-position('relative');
-  }
 }
 
 .vote-hero__container {
-  @include grid-container;
   @include grid-row;
-  @include u-flex('justify');
-  position: relative;
+
+  @include at-media('tablet-lg') {
+    @include grid-container;
+  }
+
+  @include at-media-max('tablet-lg') {
+    @include u-flex-direction('column');
+    @include u-flex('no-wrap');
+  }
 }
 
 .vote-hero__image {
-  @include at-media-max('tablet-lg') {
-    @include u-margin-x('neg-10');
-  }
-  @include at-media-max('tablet') {
-    @include u-margin-x(-2);
-  }
-
   @include at-media('tablet-lg') {
     @include grid-col(5);
     @include u-order(2);
     @include u-position('relative');
+    margin-inline-start: calc(100% / 12);
+  }
 
-    img {
+  img {
+    @include u-display('block');
+
+    @include at-media('tablet-lg') {
       @include u-position('absolute');
       @include u-top(0);
       @include u-bottom(0);
-      @include u-left(0);
       @include u-width('auto');
       @include u-height('full');
       @include u-maxw('none');
+      inset-inline-start: 0;
     }
   }
 }
 
 .vote-hero__callout {
-  @include u-padding(3);
+  @include vote-block-padding-y--narrow;
 
   @include at-media('tablet-lg') {
-    @include grid-col(7);
-    @include u-order(1);
-    padding: 150px 40px 150px 0;
+    @include grid-col(6);
+    @include u-padding-bottom(15);
+
+    &:not(:has(nav)) {
+      @include u-padding-top(15);
+    }
+  }
+
+  @include at-media-max('tablet-lg') {
+    @include grid-container;
   }
 }
 
 .vote-hero__heading {
-  @include u-padding-bottom(2);
+  @include u-margin-bottom(4);
   @include u-font-size('body', 12);
 
   @include at-media('tablet-lg') {
     @include u-font-size('body', 14);
   }
+
+  &:not(:first-child) {
+    @include at-media('tablet-lg') {
+      @include u-margin-top(10);
+    }
+  }
 }
 
-// styles for voter guide hero, will be updated to a component in the future
 .vote-hero--dark {
-  background-color: #162E51;
+  background-color: $base-dark;
   color: $base-white;
-
-  .vote-hero__callout {  
-    @include at-media('tablet-lg') {
-      padding: 3rem 2.5rem 9rem 0;
-    }
-  }
-
-  .vote-hero__image {
-    @include u-order(2);
-    @include u-margin-bottom('neg-1');
-
-    @include at-media('tablet-lg') {
-      @include u-margin-bottom(0);
-    }
-  }
 
   .vote-hero__heading {
     color: $base-white;
   }
 
-  .usa-breadcrumb__list {
-    @include at-media('tablet-lg') {
-      @include u-padding-bottom(6)
-
-    }
+  .vote-hero__image {
+    @include u-order(2);
   }
 }

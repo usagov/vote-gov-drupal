@@ -2,37 +2,35 @@
 {% set title = drupal_title() %}
 
 {% block main %}
+  <main role="main" id="main">
+    <a id="main-content" tabindex="-1"></a>
     <section class="vote-hero vote-hero--dark">
       <div class="vote-hero__container">
-          <div class="vote-hero__image">
-            <img src="{{ theme_path }}/img/fpo_hero.png"/>
-          </div>
+        <div class="vote-hero__image">
+          <img src="{{ theme_path }}/img/fpo_hero.png"/>
+        </div>
         <div class="vote-hero__callout">
-        {{ drupal_entity('block', 'votegov_breadcrumbs') }}
+          {{ drupal_entity('block', 'votegov_breadcrumbs') }}
           <h1 class="vote-hero__heading">
-              {{ title }}
+            {{ title }}
           </h1>
-        {{ node.field_subtitle.value  | check_markup(node.field_subtitle.format) }}
+          {{ node.field_subtitle.value  | check_markup(node.field_subtitle.format) }}
         </div>
       </div>
     </section>
-
-      <div class="voter-guide usa-in-page-nav-container">
-          <aside
-          class="usa-in-page-nav"
-          data-title-text="On this page"
-          data-title-heading-level="h4"
-          data-scroll-offset="15"
-          data-root-margin="0px 0px -800px 0px"
-          data-threshold="0"
-          ></aside>
-    <main role="main" id="main">
-      {# link is in html.html.twig #}
-      <a id="main-content" tabindex="-1"></a>
-
-        <div class="voter-guide__content"> 
-              {{ page.content }}
-        </div>
+    <div class="vote-main-content-row vote-block-margin-y--narrow grid-container usa-in-page-nav-container">
+      <aside
+        class="usa-in-page-nav"
+        data-main-content-selector=".usa-in-page-nav-container"
+        data-title-text="On this page"
+        data-title-heading-level="h2"
+        data-scroll-offset="0"
+        data-root-margin="0px 0px -800px 0px"
+        data-threshold="0"
+      ></aside>
+      <div class="vote-page-content vote-page-content--alt">
+        {{ page.content }}
+      </div>
     </div>
-    </main>
+  </main>
 {% endblock %}

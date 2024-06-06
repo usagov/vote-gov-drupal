@@ -48,3 +48,11 @@
     margin-top: -14rem;
   }
 }
+
+.vote-page-content--alt {
+  @include u-margin-y(0);
+
+  @include at-media('tablet-lg') {
+    @include grid-col(6);
+  }
+}
