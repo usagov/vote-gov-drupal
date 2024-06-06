@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.voter_guide.field_basics_block
     - field.field.node.voter_guide.field_icon
     - field.field.node.voter_guide.field_metatags
+    - field.field.node.voter_guide.field_state_guides
     - field.field.node.voter_guide.field_subtitle
     - node.type.voter_guide
   module:
@@ -34,6 +35,15 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_state_guides:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   content_moderation_control: true
