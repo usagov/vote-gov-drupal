@@ -40,31 +40,43 @@
     <script id="taxonomy-data">
       dataLayer = [{
         "Language" : {{ languagename }},
-        {% if is_frontpage %}
-            "State_or_Territory": "",
-            "Content_Group_1": "Homepage",
-            "Content_Group_2": "Homepage",
-            "Content_Group_3": "Homepage"
-        {% elseif  node_type == 'page' %}
+
+        {% if node_type == 'state_territory' %}
+          "State_or_Territory": "{{ title_english }}",
+        {% else %}
           "State_or_Territory": "",
+        {% endif %}
+
+        {% if is_frontpage %}
+          "Content_Group_1": "Homepage",
+          "Content_Group_2": "Homepage",
+          "Content_Group_3": "Homepage"
+
+        {% elseif  node_type == 'page' %}
           "Content_Group_1": "About section",
           "Content_Group_2": "About section",
-          "Content_Group_3": "title in english placeholder"
+          "Content_Group_3": "{{ title_english }}"
+
         {% elseif node_type == 'state_territory' %}
-          "State_or_Territory": "state name placeholder",
           "Content_Group_1": "Registration section",
           "Content_Group_2": "Registration state page",
-          "Content_Group_3": "Registration in state name placeholder"
+          "Content_Group_3": "Registration in {{ title_english }}"
+
         {% elseif node_type == 'voter_guide' %}
-          "State_or_Territory": "",
           "Content_Group_1": "Voter guide section",
           "Content_Group_2": "Voter guide content page",
-          "Content_Group_3": "Voter guide name placeholder"
+          "Content_Group_3": "{{ title_english }}"
+
         {% elseif node_type == 'landing' %}
-          "State_or_Territory": "",
-          "Content_Group_1": "landing placeholder",
-          "Content_Group_2": "landing placeholder",
-          "Content_Group_3": "landing placeholder"
+          {% if title_english == 'Register to Vote'%}
+            "Content_Group_1": "Registration section",
+          {% elseif title_english == "Guide to Voting" %}
+            "Content_Group_1": "Voter guide section",
+          {% else %}
+            "Content_Group_1": "{{ title_english }}",
+          {% endif %}
+          "Content_Group_2": "{{ title_english }} landing page",
+          "Content_Group_3": "{{ title_english }} landing page"
         {% endif %}
       }];
     </script>
