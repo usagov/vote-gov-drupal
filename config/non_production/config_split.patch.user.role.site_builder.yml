@@ -1,12 +1,9 @@
 adding:
   dependencies:
     module:
-      - devel
-      - disable_language
       - field_ui
       - views_ui
   permissions:
-    - 'access devel information'
     - 'administer block_content display'
     - 'administer block_content fields'
     - 'administer block_content form display'
@@ -27,7 +24,4 @@ adding:
     - 'administer user fields'
     - 'administer user form display'
     - 'administer views'
-    - 'create content in disabled language'
-    - 'switch users'
-    - 'view disabled languages'
-removing: {  }
+removing: { }

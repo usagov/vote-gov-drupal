@@ -5,4 +5,4 @@ adding:
   permissions:
     - 'create content in disabled language'
     - 'view disabled languages'
-removing: {  }
+removing: { }
