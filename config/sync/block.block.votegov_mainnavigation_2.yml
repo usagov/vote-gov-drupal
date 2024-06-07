@@ -28,7 +28,9 @@ settings:
   depth: 1
   expand_all_items: false
   parent: 'main:'
+  render_parent: false
   suggestion: main_sidebar
+  hide_on_nonactive: false
   only_translated_labels: 1
   only_translated_content: 1
 visibility:
