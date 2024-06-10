@@ -2,6 +2,7 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+// all breakpoints
 .usa-card-group {
   a {
     @include u-display('block');
@@ -9,12 +10,11 @@
     @include u-height('full');
 
     @include at-media('tablet-lg') {
+      //for all states
       @include hover {
-        .usa-card__container {
-          background-color: $bg-light-cool;
-          border: 3px solid #3E79BB;
+        h3, .usa-card__body {
+          @include u-text('white');
         }
-
         .vote-feature-card__icon-circle {
           background-color: $base-white;
 
@@ -25,6 +25,20 @@
               fill: $bg-light-cool;
             }
           }
+        }
+      }
+
+      &:hover,
+      &:focus {
+        .usa-card__container {
+          background-color: #345D96;
+          border: 2px solid $base-dark;
+        }
+      }
+
+      &:active {
+        .usa-card__container {
+          background-color:$base-primary-active;
         }
       }
     }
@@ -81,7 +95,8 @@
     }
     .usa-card {
       &__container {
-        @include u-padding(3);
+        @include u-padding-x(4);
+        @include u-padding-y(5);
         border: 3px solid transparent;
         outline: 1px solid $base-dark;
         @include u-margin(0);
@@ -96,16 +111,16 @@
         &__icon {
           text-align: center;
           border-color: $base-dark;
-          @include u-border(1px, 'dashed');
           @include u-border-top(0);
           @include u-border-x(0);
           @include u-margin-top(2);
-          @include u-padding-bottom(4);
+          @include u-padding-bottom(3);
         }
       }
 
       &__header {
         @include u-margin-bottom(1);
+        @include u-text('center');
 
         h2 {
           text-decoration-line: none;
