@@ -40,7 +40,7 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "{{ 'Register in person at your local election office. @link on @state_name’s election website.' | t({
-    '@link': { "#markup": "<a href=\"#{more_info_link}\" data-state-ext=\"offline-registration\">#{more_info_link_text}</a>" } | render,
+    '@link': { "#markup": "<a href=\"#{more_info_link}\" data-state-ext=\"offline-registration\">#{more_info_link_text}</a>" } | render | replace({'"': "\""}),
     '@state_name': state_name,
     '@of_state_name': of_state_name,
     '@in_state_name': in_state_name
