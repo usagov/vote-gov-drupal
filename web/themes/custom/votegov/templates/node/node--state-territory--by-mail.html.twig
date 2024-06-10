@@ -44,15 +44,16 @@
   '@of_state_name': of_state_name,
   '@in_state_name': in_state_name
 }) }}"
+}
+},{
+    "@type": "Question",
+    "name": "{{ 'Voter registration deadlines' | t }}",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "{{ 'Register by mail deadline:' | t }} {{ deadline_bymail }}"
+    }
   }
-  },{
-      "@type": "Question",
-      "name": "{{ 'Voter registration deadlines' | t }}",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "{{ 'Register by mail deadline:' | t }} {{ deadline }}"
-      }
-    }{{ end }}]
+  {{ end }}]
 }
 </script>
 {% endblock %}

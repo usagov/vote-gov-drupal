@@ -45,16 +45,25 @@
     '@of_state_name': of_state_name,
     '@in_state_name': in_state_name
   }) }}"
-    }
-    },{
-        "@type": "Question",
-        "name": "{{ 'Voter registration deadlines' | t }}",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "{{ 'Register by mail deadline:' | t }} {{ deadline }}"
-        }
-      }{{ end }}]
   }
+  },{
+      "@type": "Question",
+      "name": "{{ 'Voter registration deadlines' | t }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ 'In person registration deadline:' | t }} {{ deadline_inperson }}"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "{{ 'Voter registration deadlines' | t }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ 'Register by mail deadline:' | t }} {{ deadline_bymail }}"
+      }
+    }
+    {{ end }}]
+}
 </script>
 {% endblock %}
 
