@@ -12,7 +12,9 @@
       <div class="usa-card__container">
         <div class="vote-feature-card__icon">
           <div class="vote-feature-card__icon-circle">
-            {{ content.field_icon | field_value }}
+            <span class="icon-default">{{ content.field_icon | field_value }}</span>
+            <span class="icon-hover">{{ content.field_icon_hover | field_value }}</span>
+            <span class="icon-active">{{ content.field_icon_active | field_value }}</span>
           </div>
         </div>
         <div class="vote-feature-card__content">

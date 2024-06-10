@@ -15,16 +15,20 @@
         h3, .usa-card__body {
           @include u-text('white');
         }
-        .vote-feature-card__icon-circle {
-          //background: url('../../img/icon/voter_guides/Voting_new_citizen-1.svg');
-        }
       }
 
       &:hover,
       &:focus {
+        transition: 0.3s;
         .usa-card__container {
           background-color: #345D96;
           border: 2px solid $base-dark;
+        }
+        .icon-hover {
+          display: inherit;
+        }
+        .icon-default {
+          display: none;
         }
       }
 
@@ -32,7 +36,21 @@
         .usa-card__container {
           background-color:$base-primary-active;
         }
+        .icon-active {
+          display: inherit;
+        }
+        .icon-default, .icon-hover {
+          display: none;
+        }
       }
+    }
+
+    .icon-hover {
+      display: none;
+    }
+
+    .icon-active {
+      display: none;
     }
   }
 
@@ -46,8 +64,6 @@
         @include u-display('flex');
         @include u-flex('align-center');
         @include u-flex('justify-center');
-        background-color: $bg-light-cool;
-        border-radius: 50%;
       }
      }
 
