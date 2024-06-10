@@ -21,9 +21,9 @@
 {% endif %}
 
 {# Set the deadline with fallback, prioritizing postmarked deadline. #}
-{% set deadline = postmarked_deadline | default(received_deadline) %}
+{% set deadline_bymail = postmarked_deadline | default(received_deadline) %}
 
-{% if deadline %}
-  <li><strong>{{ 'Register by mail deadline:' | t }}</strong> {{ deadline }}</li>
+{% if deadline_bymail %}
+  <li><strong>{{ 'Register by mail deadline:' | t }}</strong> {{ deadline_bymail }}</li>
 {% endif %}
 

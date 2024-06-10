@@ -5,9 +5,9 @@
  *
  */
 #}
-{% set deadline = content.field_online_deadline | field_value | default(content.field_g_online_deadline | field_value) %}
+{% set deadline_online = content.field_online_deadline | field_value | default(content.field_g_online_deadline | field_value) %}
 
-{% if deadline %}
-  <li><strong>{{ 'Online registration deadline:' | t }}</strong> {{ deadline }}</li>
+{% if deadline_online %}
+  <li><strong>{{ 'Online registration deadline:' | t }}</strong> {{ deadline_online }}</li>
 {% endif %}
 
