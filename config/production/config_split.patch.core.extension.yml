@@ -7,7 +7,4 @@ adding:
     samlauth: 0
     usagov_login: 0
     externalauth: 10
-removing:
-  module:
-    field_ui: 0
-    views_ui: 0
+removing: {  }
