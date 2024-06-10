@@ -6,6 +6,8 @@ dependencies:
     - field.field.node.voter_guide.body
     - field.field.node.voter_guide.field_basics_block
     - field.field.node.voter_guide.field_icon
+    - field.field.node.voter_guide.field_icon_active
+    - field.field.node.voter_guide.field_icon_hover
     - field.field.node.voter_guide.field_metatags
     - field.field.node.voter_guide.field_subtitle
     - node.type.voter_guide
@@ -49,12 +51,30 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
+  field_icon_active:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_icon_hover:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
   field_metatags:
     type: metatag_empty_formatter
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 8
     region: content
   field_subtitle:
     type: text_default

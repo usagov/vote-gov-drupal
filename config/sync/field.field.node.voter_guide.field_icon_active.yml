@@ -1,16 +1,16 @@
-uuid: 4c5c78d6-ed84-4f65-96ce-d5713d127d15
+uuid: 82b4a22b-2b13-4ea8-8d33-73d3f896a7f3
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_icon
+    - field.storage.node.field_icon_active
     - media.type.icon
     - node.type.voter_guide
-id: node.voter_guide.field_icon
-field_name: field_icon
+id: node.voter_guide.field_icon_active
+field_name: field_icon_active
 entity_type: node
 bundle: voter_guide
-label: 'Icon default'
+label: 'Icon active'
 description: ''
 required: true
 translatable: false

@@ -16,15 +16,7 @@
           @include u-text('white');
         }
         .vote-feature-card__icon-circle {
-          background-color: $base-white;
-
-          svg {
-            fill: $base-white;
-
-            * {
-              fill: $bg-light-cool;
-            }
-          }
+          //background: url('../../img/icon/voter_guides/Voting_new_citizen-1.svg');
         }
       }
 
@@ -56,15 +48,6 @@
         @include u-flex('justify-center');
         background-color: $bg-light-cool;
         border-radius: 50%;
-
-        svg {
-          @include u-height(6);
-          @include u-width(6);
-
-          * {
-            fill: $base-white;
-          }
-        }
       }
      }
 
