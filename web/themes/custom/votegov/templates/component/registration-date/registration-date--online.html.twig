@@ -5,7 +5,6 @@
  *
  */
 #}
-{% set deadline_online = content.field_online_deadline | field_value | default(content.field_g_online_deadline | field_value) %}
 
 {% if deadline_online %}
   <li><strong>{{ 'Online registration deadline:' | t }}</strong> {{ deadline_online }}</li>
