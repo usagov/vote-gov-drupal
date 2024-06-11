@@ -153,3 +153,9 @@
 .vote-fill {
   @include vote-fill;
 }
+
+@mixin vote-heading-breadcrumb {
+  &:not(:first-child) {
+      @include u-margin-top(10);
+  }
+}
