@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.paragraph.double_deck_card.field_body
     - field.field.paragraph.double_deck_card.field_body_secondary
-    - field.field.paragraph.double_deck_card.field_classes
     - field.field.paragraph.double_deck_card.field_heading
     - paragraphs.paragraphs_type.double_deck_card
   module:
@@ -26,14 +25,6 @@ content:
     type: text_default
     label: hidden
     settings: {  }
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field_classes:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
     third_party_settings: {  }
     weight: 2
     region: content

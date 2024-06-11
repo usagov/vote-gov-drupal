@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: double_deck_card
-label: 'Double Deck Card'
+label: 'States Double Deck Card'
 icon_uuid: null
 icon_default: null
 description: ''

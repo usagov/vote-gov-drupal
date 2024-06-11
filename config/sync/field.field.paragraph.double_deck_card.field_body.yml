@@ -4,8 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_body
-    - filter.format.basic_html
-    - filter.format.plain_text
     - filter.format.simple_html
     - paragraphs.paragraphs_type.double_deck_card
   module:
@@ -14,7 +12,7 @@ id: paragraph.double_deck_card.field_body
 field_name: field_body
 entity_type: paragraph
 bundle: double_deck_card
-label: Text
+label: 'State list'
 description: ''
 required: true
 translatable: false
@@ -22,7 +20,5 @@ default_value: {  }
 default_value_callback: ''
 settings:
   allowed_formats:
-    - basic_html
     - simple_html
-    - plain_text
 field_type: text_long
