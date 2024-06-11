@@ -9,47 +9,28 @@
     @include u-text-decoration('no-underline');
     @include u-height('full');
 
-    @include at-media('tablet-lg') {
-      //for all states
-      @include hover {
-        h3, .usa-card__body {
-          @include u-text('white');
-        }
+    @include hover {
+      transition: 0.3s;
+
+      h3, .usa-card__body {
+        @include u-text('white');
       }
 
-      &:hover,
-      &:focus {
-        transition: 0.3s;
-        .usa-card__container {
-          background-color: #345D96;
-          border: 2px solid $base-dark;
-        }
-        .icon-hover {
-          display: inherit;
-        }
-        .icon-default {
-          display: none;
-        }
+      .usa-card__container {
+        background-color: #345D96;
+        border: 2px solid $base-dark;
       }
 
-      &:active {
-        .usa-card__container {
-          background-color:$base-primary-active;
-        }
-        .icon-active {
-          display: inherit;
-        }
-        .icon-default, .icon-hover {
-          display: none;
-        }
+      .icon-hover {
+        display: inherit;
+      }
+
+      .icon-default {
+        display: none;
       }
     }
 
     .icon-hover {
-      display: none;
-    }
-
-    .icon-active {
       display: none;
     }
   }

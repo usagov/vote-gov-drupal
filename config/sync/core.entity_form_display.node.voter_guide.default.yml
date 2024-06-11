@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.voter_guide.body
     - field.field.node.voter_guide.field_basics_block
     - field.field.node.voter_guide.field_icon
-    - field.field.node.voter_guide.field_icon_active
     - field.field.node.voter_guide.field_icon_hover
     - field.field.node.voter_guide.field_metatags
     - field.field.node.voter_guide.field_subtitle
@@ -62,13 +61,6 @@ content:
   field_icon:
     type: media_library_widget
     weight: 4
-    region: content
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
-  field_icon_active:
-    type: media_library_widget
-    weight: 6
     region: content
     settings:
       media_types: {  }
