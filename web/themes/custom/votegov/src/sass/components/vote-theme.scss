@@ -3,11 +3,19 @@
 @use "variables" as *;
 
 
-.vote-theme{
+.vote-theme-options {
   @include u-margin-left(2);
   @include u-margin-bottom(2);
   position: fixed;
   bottom: 0;
   left: 0;
   z-index: 20;
+}
+
+[data-scale="large"] {
+  font-size: 115%;
+}
+
+[data-scale="x-large"] {
+  font-size: 130%;
 }

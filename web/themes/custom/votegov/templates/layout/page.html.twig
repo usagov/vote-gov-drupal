@@ -41,7 +41,20 @@
 {% if logged_in %}
   {{ attach_library('bixaluswds/logged-in') }}
   {{ attach_library('votegov/theme_switcher') }}
-  <button id="theme-btn" class="vote-theme" type="button">Toggle Theme</button>
+  <div class="vote-theme-options">
+    <button
+      class="vote-theme-btn"
+      data-ui-switch-id="theme"
+      data-values="default,contrast"
+      type="button"
+    >Switch display preset</button>
+    <button
+      class="vote-scale-btn"
+      data-ui-switch-id="scale"
+      data-values="default,large,x-large"
+      type="button"
+    >Switch font size preset</button>
+  </div>
 {% endif %}
 
 {# load navajo font #}
