@@ -78,7 +78,7 @@
         "name": "{{ 'Voter registration deadlines' | t }}",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "{{ 'In person registration deadline:' | t }} {{ deadline_inperson }}"
+          "text": "{{ 'In person registration deadline:' | t }} {{ deadline_inperson | render | replace({'"': "\""}) }}"
         }
       },
       {
@@ -86,7 +86,7 @@
         "name": "{{ 'Voter registration deadlines' | t }}",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "{{ 'Register by mail deadline:' | t }} {{ deadline_bymail }}"
+          "text": "{{ 'Register by mail deadline:' | t }} {{ deadline_bymail | render | replace({'"': "\""}) }}"
         }
       },
       {
@@ -94,7 +94,7 @@
         "name": "{{ 'Voter registration deadlines' | t }}",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "{{ 'Online registration deadline:' | t }} {{ deadline_online }}"
+          "text": "{{ 'Online registration deadline:' | t }} {{ deadline_online | render | replace({'"': "\""})  }}"
         }
       }
       {{ end }}]

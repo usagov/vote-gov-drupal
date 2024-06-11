@@ -50,7 +50,7 @@
     "name": "{{ 'Voter registration deadlines' | t }}",
     "acceptedAnswer": {
       "@type": "Answer",
-      "text": "{{ 'Register by mail deadline:' | t }} {{ deadline_bymail }}"
+      "text": "{{ 'Register by mail deadline:' | t }} {{ deadline_bymail | render | replace({'"': "\""}) }}"
     }
   }
   {{ end }}]
