@@ -5,14 +5,16 @@ dependencies:
   config:
     - field.storage.node.field_basics_block
     - node.type.voter_guide
+    - paragraphs.paragraphs_type.basic
     - paragraphs.paragraphs_type.basics_block
+    - paragraphs.paragraphs_type.double_deck_card
   module:
     - entity_reference_revisions
 id: node.voter_guide.field_basics_block
 field_name: field_basics_block
 entity_type: node
 bundle: voter_guide
-label: 'Basics Block'
+label: 'Page Components'
 description: ''
 required: false
 translatable: false
@@ -22,7 +24,9 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
+      basic: basic
       basics_block: basics_block
+      double_deck_card: double_deck_card
     negate: 0
     target_bundles_drag_drop:
       accordion_group:
@@ -30,10 +34,25 @@ settings:
         enabled: false
       basic:
         weight: 5
-        enabled: false
+        enabled: true
       basics_block:
         weight: 7
         enabled: true
+      double_deck_card:
+        weight: 10
+        enabled: true
+      feature_cards:
+        weight: 14
+        enabled: false
+      hero:
+        weight: 15
+        enabled: false
+      image_text_cta:
+        weight: 16
+        enabled: false
+      quicklinks:
+        weight: 17
+        enabled: false
       registration_tool:
         weight: 6
         enabled: false
