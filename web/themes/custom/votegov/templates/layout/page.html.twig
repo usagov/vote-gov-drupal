@@ -43,17 +43,19 @@
   {{ attach_library('votegov/theme_switcher') }}
   <div class="vote-theme-options">
     <button
-      class="vote-theme-btn"
-      data-ui-switch-id="theme"
-      data-values="default,contrast"
-      type="button"
-    >Switch display preset</button>
-    <button
-      class="vote-scale-btn"
+      class="vote-theme-options__button vote-theme-options__button--scale"
       data-ui-switch-id="scale"
       data-values="default,large,x-large"
       type="button"
-    >Switch font size preset</button>
+      title="Switch font size preset"
+    ><span class="usa-sr-only">Switch font size preset</span></button>
+    <button
+      class="vote-theme-options__button vote-theme-options__button--theme"
+      data-ui-switch-id="theme"
+      data-values="default,contrast"
+      type="button"
+      title="Switch display preset"
+    ><span class="usa-sr-only">Switch display preset</span></button>
   </div>
 {% endif %}
 
