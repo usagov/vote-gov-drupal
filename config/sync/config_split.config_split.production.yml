@@ -16,6 +16,7 @@ theme: {  }
 complete_list:
   - log_stdout.settings
   - new_relic_rpm.settings
+  - robotstxt.settings
   - s3fs.settings
   - samlauth.authentication
   - usagov_login.settings
