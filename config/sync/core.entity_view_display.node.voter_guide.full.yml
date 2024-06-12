@@ -7,11 +7,13 @@ dependencies:
     - field.field.node.voter_guide.body
     - field.field.node.voter_guide.field_basics_block
     - field.field.node.voter_guide.field_icon
+    - field.field.node.voter_guide.field_media
     - field.field.node.voter_guide.field_metatags
     - field.field.node.voter_guide.field_subtitle
     - node.type.voter_guide
   module:
     - entity_reference_revisions
+    - media
     - text
     - user
 id: node.voter_guide.full
@@ -34,6 +36,17 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_media:
+    type: media_thumbnail
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   content_moderation_control: true

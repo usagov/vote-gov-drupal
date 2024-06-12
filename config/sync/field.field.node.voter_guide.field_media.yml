@@ -1,19 +1,19 @@
-uuid: a332c8c7-9075-4f7b-b516-dde113a5c71e
+uuid: 767902ce-ad05-404b-ae0a-a10f81bbb985
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_media
     - media.type.image
-    - node.type.page
-id: node.page.field_media
+    - node.type.voter_guide
+id: node.voter_guide.field_media
 field_name: field_media
 entity_type: node
-bundle: page
+bundle: voter_guide
 label: Image
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

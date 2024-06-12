@@ -1,0 +1,40 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+@use "mixins" as *;
+
+.usa-in-page-nav {
+  @include grid-offset(1);
+  margin-inline-start: calc(100% / 12);
+  padding-inline-start: 2rem;
+
+  @include at-media-max('tablet-lg') {
+    @include u-display('none');
+  }
+}
+
+.usa-in-page-nav__list {
+  @include u-border(0);
+  border-inline-start: 1px solid $bg-light-medium;
+
+  a:not(.usa-button) {
+    &:not(.usa-current) {
+      @include vote-link;
+    }
+
+    &.usa-current {
+      @include vote-link($color: $base-dark);
+
+      &:after {
+        @include u-left(0);
+        inset-inline-start: 0;
+        background-color: $base-dark;
+      }
+    }
+  }
+}
+
+.usa-in-page-nav__item {
+  &:not(.usa-in-page-nav__item--primary) a {
+    padding-inline-start: 1.5rem;
+  }
+}
