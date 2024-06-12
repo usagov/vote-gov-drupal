@@ -15,6 +15,7 @@
 ] %}
 
 <article{{ attributes.addClass(classes) }}>
+  {{ content.field_media | field_value }}
   {% if drupal_view('inline_alert', 'embed_1') | render | striptags | trim %}
     {{ drupal_view('inline_alert', 'embed_1') }}
   {% endif %}

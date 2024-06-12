@@ -72,15 +72,7 @@
 
 {# If the current page has been marked as outdated and it's the front page #}
 {% if is_front and node.content_translation_outdated.value == 1 %}
-  {# Display a translation alert with a link to the legacy homepage #}
-  {% set alert_translation %}
-    <p>Welcome to the new vote.gov! We're continuing to add more languages to the site.
-      <a href="/{{ language }}/legacy">Find information about registering to vote in {{ languagename }}.</a></p>
-  {% endset %}
-  {% include '@uswds_templates/usa-site-alert.html.twig' with {
-    'alert_type': 'info',
-    'text': alert_translation
-  } %}
+  {{ drupal_entity('block_content', '20') }}
 {% endif %}
 
 {# Sitewide alert component #}

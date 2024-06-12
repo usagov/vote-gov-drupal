@@ -21,6 +21,7 @@ dependencies:
     - field.field.node.state_territory.field_mail_received_deadline
     - field.field.node.state_territory.field_mail_registration_link
     - field.field.node.state_territory.field_mailing_address_inst
+    - field.field.node.state_territory.field_media
     - field.field.node.state_territory.field_metatags
     - field.field.node.state_territory.field_more_info_link
     - field.field.node.state_territory.field_nvrf_fields
@@ -180,6 +181,15 @@ content:
       format_type: long_date
     third_party_settings: {  }
     weight: 10
+    region: content
+  field_media:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
+    weight: 0
     region: content
   field_more_info_link:
     type: link
