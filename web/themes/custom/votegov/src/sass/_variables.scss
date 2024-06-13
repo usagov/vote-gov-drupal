@@ -19,7 +19,12 @@ $bg-light-medium: #D3D3D3; // gray-cool-20 is this just for the horizontal rule?
 $bg-light-cool: #E2EDF2; // blue-warm-10
 $bg-light-warm: #e7e5dd; // hero-background
 
+//High contrast colors
+$bg-high-contrast: #0A0A2A;
+$link-high-contrast: #0000FF;
+
 // Theme Colors
 [data-theme="contrast"] {
   --main-color: black;
+  --registration-tool--bg:#11385B;
 }
