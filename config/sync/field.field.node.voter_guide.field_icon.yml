@@ -10,7 +10,7 @@ id: node.voter_guide.field_icon
 field_name: field_icon
 entity_type: node
 bundle: voter_guide
-label: 'Icon'
+label: Icon
 description: ''
 required: true
 translatable: false
