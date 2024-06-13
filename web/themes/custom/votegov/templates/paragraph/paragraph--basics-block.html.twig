@@ -5,18 +5,13 @@
  */
 #}
 
-{%
-  set classes = [
-    'vote-basics-block',
-    'type--secondary',
-    'paragraph',
-    'paragraph--type--' ~ paragraph.bundle|clean_class,
-    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished',
-  ]
-%}
+{# Caching the data in content object #}
+{% set savedCache = content | render %}
 
-<div{{ attributes.addClass(classes) }}>
+<div{{ attributes.addClass(['vote-basics-block', 'type--secondary']) }}>
+  {# Hold these title_* placeholders for potential integration #}
+  {{ title_prefix }}
+  {{ title_suffix }}
   {% if content.field_heading | render %}
     <h2 class="vote-heading--red-underline">
       {{ content.field_heading | field_value }}

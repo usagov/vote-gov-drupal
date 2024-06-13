@@ -1,4 +1,17 @@
-<div class="vote-feature-cards">
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph: Feature cards
+ */
+#}
+
+{# Caching the data in content object #}
+{% set savedCache = content | render %}
+
+<div{{ attributes.addClass('vote-feature-cards') }}>
+  {# Hold these title_* placeholders for potential integration #}
+  {{ title_prefix }}
+  {{ title_suffix }}
   <h2 class="vote-feature-cards__header vote-heading--red-underline vote-heading--max-width">
     {{ content.field_heading | field_value }}
   </h2>

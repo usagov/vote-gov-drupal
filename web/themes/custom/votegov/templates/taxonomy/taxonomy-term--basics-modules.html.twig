@@ -1,10 +1,13 @@
+{% extends '@bixaluswds/taxonomy/taxonomy-term.html.twig' %}
 {#
 /**
  * @file
  * Default theme implementation to display a taxonomy term: Basics Modules.
  */
 #}
-{% extends '@bixaluswds/taxonomy/taxonomy-term.html.twig' %}
+
+{# Caching the data in content object #}
+{% set savedCache = content | render %}
 {% set anchor = content.field_anchor_id | field_value | render | clean_class %}
 {% if anchor %}
   {% set attributes = attributes.setAttribute('id', anchor) %}
