@@ -1,6 +1,7 @@
 adding:
   dependencies:
     module:
+      - devel
       - disable_language
       - field_ui
       - views_ui
@@ -29,8 +30,4 @@ adding:
     - 'create content in disabled language'
     - 'switch users'
     - 'view disabled languages'
-removing:
-  dependencies:
-    module:
-      - field_ui
-      - views_ui
+removing: {  }
