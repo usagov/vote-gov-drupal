@@ -13,7 +13,6 @@ dependencies:
     - node.type.voter_guide
   module:
     - entity_reference_revisions
-    - media
     - text
     - user
 id: node.voter_guide.full
@@ -37,21 +36,11 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_media:
-    type: media_thumbnail
-    label: above
-    settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: lazy
-    third_party_settings: {  }
-    weight: 2
-    region: content
 hidden:
   content_moderation_control: true
   field_icon: true
   field_icon_hover: true
+  field_media: true
   field_metatags: true
   field_subtitle: true
   langcode: true
