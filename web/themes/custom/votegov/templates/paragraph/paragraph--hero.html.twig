@@ -4,8 +4,12 @@
  * Default theme implementation to display a paragraph: Basics Block.
  */
 #}
+{% set classes = [
+  'vote-hero',
+  'vote-hero--' ~ content.field_background_color | field_value | render
+] %}
 
-<section class="vote-hero">
+<section{{ attributes.addClass(classes) }}>
   <div class="vote-hero__container">
     {% if content.field_media | render %}
       <div class="vote-hero__image">
