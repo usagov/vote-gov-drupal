@@ -22,4 +22,5 @@ complete_list:
   - views.view.samlauth_map
 partial_list:
   - core.extension
+  - simple_sitemap.settings
   - system.performance

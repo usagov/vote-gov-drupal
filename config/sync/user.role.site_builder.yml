@@ -38,9 +38,11 @@ dependencies:
     - content_moderation
     - content_translation
     - crop
+    - devel
     - easy_breadcrumb
     - editoria11y
     - entity_reference_revisions
+    - field_ui
     - file
     - file_delete
     - filter
@@ -65,6 +67,7 @@ dependencies:
     - tome_static
     - toolbar
     - update
+    - views_ui
     - workflows
 id: site_builder
 label: 'Site Builder'
@@ -75,6 +78,7 @@ permissions:
   - 'access block library'
   - 'access content'
   - 'access content overview'
+  - 'access devel information'
   - 'access files overview'
   - 'access media overview'
   - 'access site in maintenance mode'
