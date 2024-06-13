@@ -14,7 +14,6 @@
   }
 
   a {
-    //incldue hc trigger in this file
     @include vote-link-dark;
   }
 
@@ -114,7 +113,7 @@
 
   [data-theme="contrast"] & {
     --input-placeholder--text: #{$text-high-contrast};
-    opacity: 1;
+    opacity: 1;//override Firefox
   }
 }
 
