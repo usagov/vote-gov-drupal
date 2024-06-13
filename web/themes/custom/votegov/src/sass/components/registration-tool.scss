@@ -60,17 +60,22 @@
 }
 
 .vote-registration-tool__input {
+  --registration-tool__input--text: #{$base-dark};
   @include u-display('block');
   @include u-radius('md');
   @include u-width('full');
   @include u-margin-bottom(1);
   padding-inline-start: 2.5rem;
-  color: $base-dark;
+  color: var(--registration-tool__input--text);
   border: 1px $bg-light-medium solid;
   background: $base-white url('../../img/svg/location.svg') no-repeat 1rem center;
 
   [dir="rtl"] & {
     background-position: calc(100% - 1rem) center;
+  }
+
+  [data-theme="contrast"] & {
+    --registration-tool__input--text: #{$text-high-contrast};
   }
 }
 
@@ -102,3 +107,14 @@
     }
   }
 }
+
+::placeholder {
+  --input-placeholder--text: inherit;
+  color: var(--input-placeholder--text);
+
+  [data-theme="contrast"] & {
+    --input-placeholder--text: #{$text-high-contrast};
+    opacity: 1;
+  }
+}
+
