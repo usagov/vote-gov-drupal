@@ -5,14 +5,9 @@ dependencies:
   config:
     - system.menu.main
   module:
-    - menu_multilingual
     - system
   theme:
     - votegov
-third_party_settings:
-  menu_multilingual:
-    only_translated_labels: false
-    only_translated_content: true
 id: votegov_mainnavigation
 theme: votegov
 region: header
