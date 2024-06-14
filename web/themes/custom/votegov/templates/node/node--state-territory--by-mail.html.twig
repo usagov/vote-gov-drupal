@@ -1,11 +1,10 @@
+{% extends 'node--state-territory.html.twig' %}
 {#
 /**
  * @file
  *  Bixal USWDS Theme override to display a node: State/Territory - By mail.
  */
 #}
-
-{% extends 'node--state-territory.html.twig' %}
 
 {% block content %}
   {# How to register to vote #}
@@ -27,4 +26,33 @@
       }) }}
     </p>
   {% endif %}
+
+  {# JSON Schema #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "{{ 'How to register and update your registration' | t }}",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "{{ 'Online registration is currently not available. @link to vote at @state_name’s election website.' | t({
+  '@link': { "#markup": "<a href=\"#{more_info_link}\" data-state-ext=\"offline-registration\">#{more_info_link_text}</a>" } | render | replace({'"': "\""}),
+  '@state_name': state_name,
+  '@of_state_name': of_state_name,
+  '@in_state_name': in_state_name
+}) }}"
+}
+},{
+    "@type": "Question",
+    "name": "{{ 'Voter registration deadlines' | t }}",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "{{ 'Register by mail deadline:' | t }} {{ deadline_bymail | render | replace({'"': "\""}) }}"
+    }
+  }
+  {{ end }}]
+}
+</script>
 {% endblock %}

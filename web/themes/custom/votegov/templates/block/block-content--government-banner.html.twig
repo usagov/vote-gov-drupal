@@ -2,14 +2,16 @@
 /**
  * @file
  * Default theme implementation to display a block content: Government Banner.
- *
- * @see template_preprocess_block_content_template()
- *
- * @ingroup themeable
  */
 #}
 
-<section class="usa-banner" aria-label="{{ 'Official government website' | t }}" data-test="govBanner">
+{# Caching the data in content object #}
+{% set savedCache = content | render %}
+
+<section{{ attributes.addClass('usa-banner').setAttribute('aria-label', 'Official government website' | t) }} data-test="govBanner">
+  {# Hold these title_* placeholders for potential integration #}
+  {{ title_prefix }}
+  {{ title_suffix }}
   <div class="usa-accordion">
     <div class="usa-banner__header">
       <div class="usa-banner__inner">
