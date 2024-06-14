@@ -12,6 +12,17 @@
     @include hover {
       transition: 0.3s;
 
+      .vote-feature-card__icon-circle {
+        background-color:white;
+        border: 2px solid white;
+
+        svg {
+          path, circle {
+            fill: #345D96;
+          }
+        }
+      }
+
       .usa-card__heading, .usa-card__body {
         @include u-text('white');
       }
@@ -43,6 +54,16 @@
       @include u-display('flex');
       @include u-flex('align-center');
       @include u-flex('justify-center');
+
+      background-color:$base-dark;
+      border-radius: 50%;
+      border: 2px solid $base-dark;
+
+      svg {
+        path, circle {
+          fill: white;
+        }
+      }
      }
 
     .usa-card__header {
