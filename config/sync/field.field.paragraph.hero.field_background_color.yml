@@ -13,9 +13,11 @@ entity_type: paragraph
 bundle: hero
 label: 'Background Color'
 description: ''
-required: false
+required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: predefined_color_list_from_color_palette
 default_value_callback: ''
 settings: {  }
 field_type: list_string
