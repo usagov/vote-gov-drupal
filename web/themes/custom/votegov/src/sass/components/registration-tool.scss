@@ -2,15 +2,22 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-
 .vote-registration-tool {
+  --registration-tool--bg: #{$base-dark};
+  --registration-tool__input--text: #{$base-dark};
   @include vote-block-padding-y--narrow;
-  background-color: $base-dark;
+  background-color: var(--registration-tool--bg);
   color: $base-white;
 
   @include at-media('tablet-lg') {
-    background: $base-dark url('../../img/hero-map.webp') no-repeat center center;
+    background: var(--registration-tool--bg) url('../../img/hero-map.webp') no-repeat center center;
     background-size: cover;
+  }
+
+  [data-theme="contrast"] & {
+    --registration-tool--bg: #{$bg-high-contrast};
+    --registration-tool__input--text: #{$text-high-contrast};
+    background-image: unset;
   }
 
   a {
@@ -59,7 +66,7 @@
   @include u-width('full');
   @include u-margin-bottom(1);
   padding-inline-start: 2.5rem;
-  color: $base-dark;
+  color: var(--registration-tool__input--text);
   border: 1px $bg-light-medium solid;
   background: $base-white url('../../img/svg/location.svg') no-repeat 1rem center;
 
@@ -96,3 +103,4 @@
     }
   }
 }
+
