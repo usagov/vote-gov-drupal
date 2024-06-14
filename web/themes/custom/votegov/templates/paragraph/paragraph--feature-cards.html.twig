@@ -1,3 +1,13 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph: Feature cards
+ */
+#}
+
+{# Caching the data in content object #}
+{% set savedCache = content | render %}
+
 {% include '@votegov/component/feature-cards.html.twig' with {
   'heading': content.field_heading | field_value,
   'cards': content.field_cards | field_value

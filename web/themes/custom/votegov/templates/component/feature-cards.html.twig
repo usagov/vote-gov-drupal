@@ -1,4 +1,7 @@
-<div class="vote-feature-cards">
+<div{{ attributes.addClass('vote-feature-cards') }}>
+  {# Hold these title_* placeholders for potential integration #}
+  {{ title_prefix }}
+  {{ title_suffix }}
   <h2 class="vote-feature-cards__header vote-heading--red-underline vote-heading--max-width">
     {{ heading }}
   </h2>

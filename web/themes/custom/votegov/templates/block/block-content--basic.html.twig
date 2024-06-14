@@ -1,30 +1,21 @@
 {#
 /**
  * @file
- * Default theme implementation to display a block content.
- *
- * @see template_preprocess_block_content_template()
- *
- * @ingroup themeable
+ * Default theme implementation to display a block content: Basic.
  */
 #}
+
+{# Caching the data in content object #}
+{% set savedCache = content | render %}
+
 {% set field_classes = content.field_classes | field_value | render %}
 
-{%
-  set classes = [
-  'block-content',
-  'block-content--type-' ~ bundle|clean_class,
-  'block-content--view-mode-' ~ view_mode|clean_class,
-  field_classes
-]
-%}
-
-<div{{ attributes.addClass(classes) }}>
-  {% block content %}
-    {% if content.field_heading | render %}
-      <h2 class="vote-heading--red-underline">{{ content.field_heading | field_value }}</h2>
-    {% endif %}
-    {{ content.body | field_value }}
-  {% endblock %}
-
+<div{{ attributes.addClass(field_classes) }}>
+  {# Hold these title_* placeholders for module integrations #}
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% if content.field_heading | render %}
+    <h2 class="vote-heading--red-underline">{{ content.field_heading | field_value }}</h2>
+  {% endif %}
+  {{ content.body | field_value }}
 </div>
