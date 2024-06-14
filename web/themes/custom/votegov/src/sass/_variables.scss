@@ -17,14 +17,9 @@ $ac-cool-light: #0AAAE2; // cyan-30v
 $bg-light: #F0F0F0; // gray-cool-2
 $bg-light-medium: #D3D3D3; // gray-cool-20 is this just for the horizontal rule?
 $bg-light-cool: #E2EDF2; // blue-warm-10
-$bg-light-warm: #e7e5dd; // hero-background
+$bg-light-warm: #E7E5DD; // hero-background
 
 //High contrast colors
 $bg-high-contrast: #0A0A2A;
 $text-high-contrast: #0A0A2A;
 $link-high-contrast: #0000FF;
-
-// Theme Colors
-[data-theme="contrast"] {
-  --main-color: black;
-}

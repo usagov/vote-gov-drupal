@@ -3,7 +3,8 @@
 @use "mixins" as *;
 
 .vote-registration-tool {
-  --registration-tool--bg:#{$base-dark};
+  --registration-tool--bg: #{$base-dark};
+  --registration-tool__input--text: #{$base-dark};
   @include vote-block-padding-y--narrow;
   background-color: var(--registration-tool--bg);
   color: $base-white;
@@ -13,13 +14,14 @@
     background-size: cover;
   }
 
-  a {
-    @include vote-link-dark;
-  }
-
   [data-theme="contrast"] & {
     --registration-tool--bg: #{$bg-high-contrast};
-    background: unset;
+    --registration-tool__input--text: #{$text-high-contrast};
+    background-image: unset;
+  }
+
+  a {
+    @include vote-link-dark;
   }
 }
 
@@ -59,7 +61,6 @@
 }
 
 .vote-registration-tool__input {
-  --registration-tool__input--text: #{$base-dark};
   @include u-display('block');
   @include u-radius('md');
   @include u-width('full');
@@ -71,10 +72,6 @@
 
   [dir="rtl"] & {
     background-position: calc(100% - 1rem) center;
-  }
-
-  [data-theme="contrast"] & {
-    --registration-tool__input--text: #{$text-high-contrast};
   }
 }
 
@@ -104,16 +101,6 @@
         text-decoration: underline;
       }
     }
-  }
-}
-
-::placeholder {
-  --input-placeholder--text: inherit;
-  color: var(--input-placeholder--text);
-
-  [data-theme="contrast"] & {
-    --input-placeholder--text: #{$text-high-contrast};
-    opacity: 1;//override Firefox
   }
 }
 
