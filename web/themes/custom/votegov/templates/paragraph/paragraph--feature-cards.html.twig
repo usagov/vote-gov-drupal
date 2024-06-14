@@ -1,8 +1,4 @@
-<div class="vote-feature-cards">
-  <h2 class="vote-feature-cards__header vote-heading--red-underline vote-heading--max-width">
-    {{ content.field_heading | field_value }}
-  </h2>
-  <ul class="usa-card-group">
-    {{ content.field_cards | field_value }}
-  </ul>
-</div>
+{% include '@votegov/component/feature-cards.html.twig' with {
+  'heading': content.field_heading | field_value,
+  'cards': content.field_cards | field_value
+} %}
