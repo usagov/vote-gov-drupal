@@ -63,10 +63,14 @@
   @include u-margin-bottom(4);
   @include u-font-size('body', 12);
 
-
   @include at-media('tablet-lg') {
     @include u-font-size('body', 14);
-    @include vote-heading-breadcrumb
+  }
+
+  &:not(:first-child) {
+    @include at-media('tablet-lg') {
+      @include u-margin-top(10);
+    }
   }
 }
 

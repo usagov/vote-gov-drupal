@@ -45,10 +45,6 @@
 
 .vote-registration-tool__heading {
   color: $base-white;
-  
-  @include at-media('tablet-lg'){
-    @include vote-heading-breadcrumb
-  }
 }
 
 .vote-registration-tool__label {
