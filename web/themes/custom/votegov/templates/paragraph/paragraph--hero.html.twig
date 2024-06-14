@@ -4,11 +4,15 @@
  * Default theme implementation to display a paragraph: Hero.
  */
 #}
+{% set classes = [
+  'vote-hero',
+  'vote-hero--' ~ content.field_background_color | field_value | render
+] %}
 
 {# Caching the data in content object #}
 {% set savedCache = content | render %}
 
-<section{{ attributes.addClass('vote-hero') }}>
+<section{{ attributes.addClass(classes) }}>
   {# Hold these title_* placeholders for potential integration #}
   {{ title_prefix }}
   {{ title_suffix }}

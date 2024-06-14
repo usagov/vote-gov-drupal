@@ -1,0 +1,13 @@
+{#
+/**
+ * @file
+ * Default theme implementation for main view template: voter_guides - embed_1.
+ */
+#}
+
+{% if rows %}
+  {% include '@votegov/component/feature-cards.html.twig' with {
+    'heading': 'Voting Guides for specific audiences',
+    'cards': rows
+  } %}
+{% endif %}
