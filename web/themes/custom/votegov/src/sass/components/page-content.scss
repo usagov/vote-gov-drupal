@@ -1,4 +1,5 @@
 @use "uswds-core" as *;
+@use "variables" as *;
 @use "mixins" as *;
 
 .vote-main-content-row {
@@ -7,12 +8,42 @@
 
 .vote-state-territory-content {
   @include vote-narrow-container;
+  --state-territory-text: inherit;
+  --state-territory-h2: inherit;
+  color: var(--state-territory-text);
+
+  h2 {
+    color: var(--state-territory-h2);
+  }
+
+  [data-theme="contrast"] & {
+    --state-territory-text: #{$base-white};
+
+    h2 {
+      --state-territory-h2: #{$base-white};
+    }
+  }
 }
 
 .vote-page-content {
   @include u-margin-top(4);
   @include u-margin-bottom(6);
   @include u-position('relative');
+  --vote-page-content-text: inherit;
+  --vote-page-content-h2: inherit;
+  color: var(--vote-page-content-text);
+
+  h2 {
+    color: var(--vote-page-content-h2);
+  }
+
+  [data-theme="contrast"] & {
+    --vote-page-content-text: #{$base-white};
+
+    h2 {
+      --vote-page-content-h2: #{$base-white};
+    }
+  }
 
   .field--name-field-media {
     @include u-text-align('center');

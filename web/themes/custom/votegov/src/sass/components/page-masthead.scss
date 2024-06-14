@@ -19,7 +19,15 @@ $masthead-background-color: $base-dark;
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    background-color: $masthead-background-color;
+    --page-masthead-bg: #11385B;
+    --page-masthead-text: inherit;
+    background-color: var(--page-masthead-bg);
+    color: var(--page-masthead-text);
+
+    [data-theme="contrast"] & {
+      --page-masthead-bg: #0A0A2A;
+      --page-masthead-text: $base-white;
+    }
   }
 
   > * {
