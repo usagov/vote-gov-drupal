@@ -28,7 +28,7 @@
 
 {% if label %}
   {% if href %}
-    <p>{{ link(label, href, create_attribute({'class': classes})) }}</p>
+    <div>{{ link(label, href, create_attribute({'class': classes})) }}</div>
   {% else %}
     <button{{ create_attribute().addClass(classes).setAttribute('type', 'button').setAttribute('id', (id | clean_id)) }}>{{ label }}</button>
   {% endif %}

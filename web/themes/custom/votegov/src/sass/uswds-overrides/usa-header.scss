@@ -29,6 +29,10 @@
     background-color: transparent;
     color: $base-dark;
 
+    @include hover {
+      @include u-text-decoration('underline');
+    }
+
     @include after {
       @include u-width(2);
       @include u-display('inline-block');
@@ -40,21 +44,6 @@
 
     &[aria-hidden="true"] {
       @include u-display('none');
-    }
-  }
-
-  .usa-menu-btn--close {
-    @include u-display('none');
-
-    @include after {
-      background: url( '../../img/svg/close.svg' ) no-repeat;
-      background-size: contain;
-    }
-
-    &[aria-hidden="true"] {
-      @include at-media-max('tablet-lg') {
-        @include u-display('block');
-      }
     }
   }
 }

@@ -52,7 +52,7 @@
     }
 
     &.usa-button--active {
-      --usa-button-bg: $ac-warm-active;
+      --usa-button-bg: $ac-warm-hover;
       --usa-button-text: #FFF;
       background-color: var(--usa-button-bg);
       color: var(--usa-button-text);
