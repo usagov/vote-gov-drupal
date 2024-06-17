@@ -12,7 +12,7 @@
   background-color: var(--usa-button-bg);
 
   [data-theme="contrast"] & {
-    --usa-button-bg: #{$button-high-contrast};
+    --usa-button-bg: #{$btn-bg-high-contrast};
   }
 }
 
@@ -39,8 +39,8 @@
     background-color: var(--usa-button-bg);
 
     [data-theme="contrast"] & {
-      --usa-button-bg: #{$button-hover-bg-high-contrast};
-      --usa-button-text: #{$button-hover-txt-high-contrast};
+      --usa-button-bg: #{$btn-bg-high-contrast-hover};
+      --usa-button-text: #{$base-white};
     }
   }
 
@@ -48,7 +48,7 @@
     --usa-button-bg: #{$ac-warm};
 
     [data-theme="contrast"] & {
-      --usa-button-bg: #{$button-high-contrast};
+      --usa-button-bg: #{$btn-bg-high-contrast};
     }
 
     &.usa-button--active {
@@ -58,8 +58,8 @@
       color: var(--usa-button-text);
 
       [data-theme="contrast"] & {
-        --usa-button-bg: #{$button-hover-bg-high-contrast};
-        --usa-button-text: #{$button-hover-txt-high-contrast};
+        --usa-button-bg: #{$btn-bg-high-contrast-hover};
+        --usa-button-text: #{$base-white};
       }
     }
 
@@ -73,8 +73,8 @@
       color: var(--usa-button-text);
 
       [data-theme="contrast"] & {
-        --usa-button-bg: #{$button-hover-bg-high-contrast};
-        --usa-button-text: #{$button-hover-txt-high-contrast};
+        --usa-button-bg: #{$btn-bg-high-contrast-hover};
+        --usa-button-text: #{$base-white};
       }
     }
   }

@@ -91,7 +91,7 @@
     @include u-padding(2);
 
     a {
-      @include vote-link($color: $base-dark, $color-hover: $base-primary-hover, $color-bg: 'transparent');
+      @include vote-link($color: $base-dark, $color-hover: $base-primary-hover);
       @include u-padding-y(0.5);
       @include u-padding-x(1);
       @include u-display('inline-block');

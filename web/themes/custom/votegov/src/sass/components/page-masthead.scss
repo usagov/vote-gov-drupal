@@ -1,13 +1,17 @@
 @use "uswds-core" as *;
 @use "variables" as *;
 
-$masthead-background-color: $base-dark;
-
 .page-masthead {
+  --page-masthead-bg: #{$base-dark};
+  --page-masthead-text: inherit;
   @include u-position('relative');
   @include u-padding-top(4);
-  background-color: $masthead-background-color;
+  background-color: var(--page-masthead-bg);
   padding-bottom: 6rem;
+
+  [data-theme="contrast"] & {
+    --page-masthead-bg: #{$bg-high-contrast};
+  }
 
   &:before {
     content: "";
@@ -19,14 +23,12 @@ $masthead-background-color: $base-dark;
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    --page-masthead-bg: #11385B;
-    --page-masthead-text: inherit;
     background-color: var(--page-masthead-bg);
     color: var(--page-masthead-text);
 
     [data-theme="contrast"] & {
-      --page-masthead-bg: #0A0A2A;
-      --page-masthead-text: $base-white;
+      --page-masthead-bg: #{$bg-high-contrast};
+      --page-masthead-text: #{$base-white};
     }
   }
 

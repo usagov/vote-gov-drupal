@@ -45,7 +45,7 @@ $eacgov-partner-breakpoint: 'tablet-lg';
 }
 
 .vote-eac-partner__logo-link {
-  @include vote-link($color: $base-dark, $color-hover: $base-primary-hover, $color-bg: 'transparent');
+  @include vote-link($color: $base-dark, $color-hover: $base-primary-hover);
   @include u-display('inline-flex');
   @include u-align-items('align-center');
   @include u-text-decoration('no-underline');
@@ -62,7 +62,7 @@ $eacgov-partner-breakpoint: 'tablet-lg';
 
 .vote-eac-partner__social-link {
   @include u-white-space('no-wrap');
-  @include vote-link($color: $base-dark, $color-hover: $base-primary-hover, $color-bg: 'transparent');
+  @include vote-link($color: $base-dark, $color-hover: $base-primary-hover);
   @include u-display('inline-flex');
   @include u-align-items('align-center');
 
