@@ -78,6 +78,9 @@
 ] %}
 
 <article{{ attributes.addClass(classes) }}>
+  {# Hold these title_* placeholders for potential integration #}
+  {{ title_prefix }}
+  {{ title_suffix }}
   {% block content %}
     {{ content }}
   {% endblock %}

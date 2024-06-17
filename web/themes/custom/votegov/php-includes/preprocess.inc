@@ -38,6 +38,10 @@ function votegov_preprocess(&$variables) {
         $variables['status_code'] = 'error';
       }
     }
+
+    // Set variable for node title in english.
+    $translated_entity = $node->getTranslation('en');
+    $variables['title_english'] = $translated_entity->getTitle();
   }
 
   // Set variable for frontpage.

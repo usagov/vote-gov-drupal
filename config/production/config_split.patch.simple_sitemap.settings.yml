@@ -1,0 +1,4 @@
+adding:
+  base_url: 'https://vote.gov'
+removing:
+  base_url: ''

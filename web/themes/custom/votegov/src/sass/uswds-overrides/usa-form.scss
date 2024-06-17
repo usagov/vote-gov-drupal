@@ -1,4 +1,5 @@
 @use "uswds-core" as *;
+@use "variables" as *;
 
 .usa-form {
   @include u-maxw('tablet');
@@ -12,4 +13,14 @@
   @include u-padding(1.5);
   @include u-height('auto');
   @include u-line-height('sans', 1);
+}
+
+::placeholder {
+  --input-placeholder--text: inherit;
+  color: var(--input-placeholder--text);
+
+  [data-theme="contrast"] & {
+    --input-placeholder--text: #{$text-high-contrast};
+    opacity: 1; //override Firefox
+  }
 }
