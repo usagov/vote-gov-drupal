@@ -13,7 +13,9 @@
 
 // targeting the div wrapping the breadcrumb block and add margin top to the following element
 .system-breadcrumb-block + * {
+  @include u-margin-top(5);
+
   @include at-media('tablet') {
-    @include u-margin-top(10)
+    @include u-margin-top(10);
   }
 }
