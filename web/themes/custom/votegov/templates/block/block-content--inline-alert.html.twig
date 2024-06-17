@@ -5,6 +5,9 @@
  */
 #}
 
+{# Caching the data in content object #}
+{% set savedCache = content | render %}
+
 {% include '@uswds_templates/usa-alert.html.twig' with {
   'alert_type': content.field_inline_alert_type | field_value | render,
   'heading': content.field_heading | field_value | render,

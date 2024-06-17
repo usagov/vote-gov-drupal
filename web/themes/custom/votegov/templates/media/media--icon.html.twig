@@ -1,1 +1,4 @@
+{# Caching the data in content object #}
+{% set savedCache = content | render %}
+
 {{ content.field_media_image | field_value }}

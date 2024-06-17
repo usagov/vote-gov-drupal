@@ -104,17 +104,27 @@
 }
 
 @mixin vote-link($color: $base-primary, $color-hover: $base-white, $color-bg: $base-primary-hover) {
+  --vote-link--color: #{$color};
+  --vote-link-hover--color: #{$color-hover};
   @include u-text('underline');
-  color: $color;
+  color: var(--vote-link--color);
 
   &:visited {
-    color: $color;
+    color: var(--vote-link--color);
   }
 
   @include hover {
     @include u-text('no-underline');
     background-color: $color-bg;
-    color: $color-hover;
+    color: var(--vote-link-hover--color);
+  }
+
+  [data-theme="contrast"] & {
+    --vote-link--color: #{$link-high-contrast};
+    --vote-link-hover--color: #{$link-high-contrast};
+    @include hover {
+      @include u-text('underline');
+    }
   }
 }
 
