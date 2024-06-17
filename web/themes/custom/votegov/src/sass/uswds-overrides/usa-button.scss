@@ -34,10 +34,9 @@
   &.usa-focus,
   &.usa-button--hover
   {
-    --usa-button-bg: $base-primary-hover;
+    --usa-button-bg: #{$base-primary-hover};
     --usa-button-text: #FFF;
     background-color: var(--usa-button-bg);
-    color: var(--usa-button-text);
 
     [data-theme="contrast"] & {
       --usa-button-bg: #{$button-hover-bg-high-contrast};
