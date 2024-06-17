@@ -3,7 +3,6 @@
 
 .page-masthead {
   --page-masthead-bg: #{$base-dark};
-  --page-masthead-text: inherit;
   @include u-position('relative');
   @include u-padding-top(4);
   background-color: var(--page-masthead-bg);
@@ -24,11 +23,9 @@
     margin-left: -50vw;
     margin-right: -50vw;
     background-color: var(--page-masthead-bg);
-    color: var(--page-masthead-text);
 
     [data-theme="contrast"] & {
       --page-masthead-bg: #{$bg-high-contrast};
-      --page-masthead-text: #{$base-white};
     }
   }
 

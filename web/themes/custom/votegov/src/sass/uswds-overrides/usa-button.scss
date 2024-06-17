@@ -19,14 +19,18 @@
 // Custom usa-button overrides using USWDS mixins and other settings.
 .usa-button:not(.usa-button--unstyled) {
   @include u-text('medium');
-  --usa-button-bg: #345D96;
-  --usa-button-text: #FFF;
+  --usa-button-bg: #{$base-primary};
+  --usa-button-text: #{$base-white};
   padding: 0.9rem 1.4rem;
   background-color: var(--usa-button-bg);
   color: var(--usa-button-text);
 
   &.usa-button--active {
     --usa-button-bg: #{$base-dark};
+
+    [data-theme="contrast"] & {
+      --usa-button-bg: #{$btn-bg-high-contrast-hover};
+    }
   }
 
   &:hover,
@@ -35,12 +39,9 @@
   &.usa-button--hover
   {
     --usa-button-bg: #{$base-primary-hover};
-    --usa-button-text: #FFF;
-    background-color: var(--usa-button-bg);
 
     [data-theme="contrast"] & {
       --usa-button-bg: #{$btn-bg-high-contrast-hover};
-      --usa-button-text: #{$base-white};
     }
   }
 
@@ -52,14 +53,10 @@
     }
 
     &.usa-button--active {
-      --usa-button-bg: $ac-warm-hover;
-      --usa-button-text: #FFF;
-      background-color: var(--usa-button-bg);
-      color: var(--usa-button-text);
+      --usa-button-bg: #{$ac-warm-hover};
 
       [data-theme="contrast"] & {
         --usa-button-bg: #{$btn-bg-high-contrast-hover};
-        --usa-button-text: #{$base-white};
       }
     }
 
@@ -67,14 +64,10 @@
     &:focus,
     &.usa-focus,
     &.usa-button--hover {
-      --usa-button-bg: $ac-warm-active;
-      --usa-button-text: #FFF;
-      background-color: var(--usa-button-bg);
-      color: var(--usa-button-text);
+      --usa-button-bg: #{$ac-warm-hover};
 
       [data-theme="contrast"] & {
         --usa-button-bg: #{$btn-bg-high-contrast-hover};
-        --usa-button-text: #{$base-white};
       }
     }
   }
