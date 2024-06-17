@@ -17,3 +17,4 @@ require_once dirname(__FILE__) . '/php-includes/taxonomy.inc';
 require_once dirname(__FILE__) . '/php-includes/user.inc';
 require_once dirname(__FILE__) . '/php-includes/views.inc';
 require_once dirname(__FILE__) . '/php-includes/navigation.inc';
+require_once dirname(__FILE__) . '/php-includes/taxonomy.inc';
