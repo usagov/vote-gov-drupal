@@ -7,14 +7,9 @@
 }
 
 .vote-hero__container {
-  @include grid-row;
-
   @include at-media('tablet-lg') {
     @include grid-container;
-  }
-
-  @include at-media('tablet-lg') {
-    @include u-display('flex');
+    @include grid-row;
   }
 }
 
