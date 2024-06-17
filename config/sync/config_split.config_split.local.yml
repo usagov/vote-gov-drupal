@@ -23,3 +23,7 @@ complete_list:
 partial_list:
   - autologout.settings
   - core.extension
+  - user.role.content_editor
+  - user.role.content_manager
+  - user.role.content_translator
+  - user.role.site_builder
