@@ -3,32 +3,27 @@
 @use "mixins" as *;
 
 .usa-card-group {
-
   a {
     @include u-display('block');
     @include u-text-decoration('no-underline');
     @include u-height('full');
+    transition: 0.3s;
+
+    @include at-media('tablet-lg') {
+      @include u-margin-x(2);
+    }
 
     @include hover {
-      transition: 0.3s;
-
-      .vote-feature-card__icon-circle {
-        background-color:white;
-        border: 2px solid white;
-
-        svg {
-          path, circle {
-            fill: #345D96;
-          }
-        }
-      }
+       svg {
+        fill:$base-white;
+       }
 
       .usa-card__heading, .usa-card__body {
-        @include u-text('white');
+        color: $base-white;
       }
 
       .usa-card__container {
-        background-color: #345D96;
+        background-color: $feature-card-primary;
         border: 2px solid $base-dark;
       }
 
@@ -39,6 +34,7 @@
       .icon-default {
         @include u-display('none');
       }
+
     }
 
     .icon-hover {
@@ -46,80 +42,8 @@
     }
   }
 
-  .usa-card {
-    .vote-feature-card__icon-circle {
-      @include u-height(9);
-      @include u-width(9);
-      @include u-margin-x('auto');
-      @include u-display('flex');
-      @include u-flex('align-center');
-      @include u-flex('justify-center');
-
-      background-color:$base-dark;
-      border-radius: 50%;
-      border: 2px solid $base-dark;
-
-      svg {
-        path, circle {
-          fill: white;
-        }
-      }
-     }
-
-    .usa-card__header {
-      @include u-padding(0);
-
-      .usa-card__heading {
-        @include u-font-family('serif');
-        @include u-text('bold');
-        font-size: 20.25px;
-        line-height: 155%;
-      }
-    }
-
-    .usa-card__body {
-      @include u-font('sans', 'md');
-      @include u-padding(0);
-      @include u-margin-top(1);
-      color: $base-dark;
-    }
-  }
-
-  //desktop
-  @include at-media('tablet-lg') {
-    a {
-      @include u-margin-x(2);
-    }
-    .usa-card__container {
-      @include u-padding-x(4);
-      @include u-padding-y(5);
-      @include u-margin(0);
-      border: 3px solid transparent;
-      outline: 1px solid $base-dark;
-    }
-
-    .usa-card__header {
-      @include u-margin-bottom(1);
-      @include u-text('center');
-    }
-
-    .usa-card__body {
-      @include u-margin(0);
-    }
-
-    .vote-feature-card__content {
-      @include u-padding-x(1);
-      @include u-padding-top(3);
-    }
-
-    .vote-feature-card__icon {
-      @include u-border-top(0);
-      @include u-border-x(0);
-      @include u-margin-top(2);
-      @include u-padding-bottom(3);
-      text-align: center;
-      border-color: $base-dark;
-    }
+  svg {
+    fill: $base-dark;
   }
 
   //mobile
@@ -137,44 +61,75 @@
       }
     }
 
-    .usa-card {
-      @include u-margin(0);
-    }
-
-    .usa-card__container {
-      @include u-display('flex');
-      @include u-flex('row');
-      @include u-border(0);
+    &:last-child {
       @include u-padding(0);
       @include u-margin(0);
-      @include u-padding-y(4);
-      border-radius: unset;
     }
+  }
+}
 
-    .vote-feature-card__icon {
-      @include u-height(9);
-      @include u-width(9);
-      @include u-display('flex');
-      @include u-flex('column');
+.usa-card {
+  @include at-media-max('tablet-lg'){
+    @include u-margin(0);
+  }
+
+}
+
+.usa-card__container {
+  @include at-media('tablet-lg') {
+    @include u-padding-x(4);
+    @include u-padding-y(5);
+    @include u-margin(0);
+    border: 3px solid transparent;
+    outline: 1px solid $base-dark;
+  }
+
+  @include at-media-max('tablet-lg') {
+    @include u-display('flex');
+    @include u-flex('row');
+    @include u-border(0);
+    @include u-padding(0);
+    @include u-margin(0);
+    @include u-padding-y(4);
+    border-radius: unset;
+  }
+}
+
+.usa-card__header {
+  @include u-padding(0);
+
+  @include at-media('tablet-lg') {
+    @include u-margin-bottom(1);
+    @include u-text('center');
+  }
+
+  @include at-media-max('tablet-lg') {
+    @include u-width('full');
+    h3 {
+      text-decoration-line: underline;
     }
+  }
+}
 
-    .vote-feature-card__content {
-      @include u-display('flex');
-      @include u-flex('column');
-      @include u-padding-left(3);
-      width: calc(100% - 72px);
-    }
+.usa-card__heading {
+  @include u-font-family('serif');
+  @include u-text('bold');
+  font-size: 20.25px;
+  line-height: 155%;
+}
 
-    .usa-card__header {
-      @include u-width('full');
+.usa-card__body {
+  @include u-font('sans', 6);
+  @include u-padding(0);
+  @include u-margin-top(1);
+  color: $base-dark;
 
-      h3 {
-        text-decoration-line: underline;
-      }
-    }
+  @include at-media('tablet-lg') {
+    @include u-margin(0);
+  }
 
-    .usa-card__body {
-      @include u-padding-top(2);
+  @include at-media-max('tablet-lg') {
+    @include u-padding-top(2);
 
       >div {
         @include u-font('sans', 'md');
@@ -183,11 +138,48 @@
         color: $base-dark;
         line-height: 155%;
       }
-    }
-
-    &:last-child {
-      @include u-padding(0);
-      @include u-margin(0);
-    }
   }
 }
+
+.vote-feature-card__content {
+  @include at-media('tablet-lg') {
+    @include u-padding-x(1);
+    @include u-padding-top(3);
+  }
+
+  @include at-media-max('tablet-lg') {
+    @include u-display('flex');
+    @include u-flex('column');
+    @include u-padding-left(3);
+    width: calc(100% - 72px);
+  }
+}
+
+.vote-feature-card__icon {
+  @include at-media('tablet-lg') {
+    @include u-border-top(0);
+    @include u-border-x(0);
+    @include u-margin-top(2);
+    @include u-padding-bottom(3);
+    text-align: center;
+    border-color: $base-dark;
+  }
+
+  @include at-media-max('tablet-lg') {
+    @include u-height(9);
+    @include u-width(9);
+    @include u-display('flex');
+    @include u-flex('column');
+  }
+}
+
+.vote-feature-card__icon-circle {
+  @include u-height(9);
+  @include u-width(9);
+  @include u-margin-x('auto');
+  @include u-display('flex');
+  @include u-flex('align-center');
+  @include u-flex('justify-center');
+}
+
+
