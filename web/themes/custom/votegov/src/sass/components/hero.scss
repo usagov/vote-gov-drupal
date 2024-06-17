@@ -13,15 +13,12 @@
     @include grid-container;
   }
 
-  @include at-media-max('tablet-lg') {
-    @include u-flex-direction('column');
-    @include u-flex('no-wrap');
+  @include at-media('tablet-lg') {
+    @include u-display('flex');
   }
 }
 
 .vote-hero__image {
-  @include u-order(2);
-
   @include at-media('tablet-lg') {
     @include grid-col(5);
     @include u-position('relative');
@@ -59,26 +56,13 @@
     @include grid-container;
   }
 
-  .usa-button {
-    font-family: $theme-font-type-sans;
-    font-size: 16x;
-    width: auto;
-
-    @include at-media-max('mobile') {
-      width: 193px;
-    }
-  }
-
-  p {
-    @include u-margin-top(2);
-    @include u-margin-bottom(3);
-    font-family: $theme-font-type-sans;
-    font-size: 19.2px;
+  > * + * {
+    @include u-margin-top(3);
   }
 }
 
 .vote-hero__heading {
-  @include u-font('serif', 'xl');
+  @include u-font('serif', 12);
 
   @include at-media('tablet-lg') {
     @include u-font-size('body', 14);
@@ -97,9 +81,5 @@
 
   .vote-hero__heading {
     color: $base-white;
-  }
-
-  .vote-hero__image {
-    @include u-order(2);
   }
 }
