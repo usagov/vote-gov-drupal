@@ -3,13 +3,18 @@
 
 // Headings
 h1 {
+  --h1-txt-color: #{$base-dark};
   @include u-font-family('serif');
   @include u-text('bold');
   @include u-margin-top(5);
-  color: $base-dark;
+  color: var(--h1-txt-color);
 
   @include at-media-max('tablet') {
     @include u-font-size('serif', 12)
+  }
+
+  [data-theme="contrast"] & {
+    --h1-txt-color: #{$text-high-contrast};
   }
 
   &:first-child {
@@ -26,12 +31,17 @@ h3,
 h4,
 h5,
 h6 {
+  --h-txt-color: #{$base-dark};
   @include u-font-family('sans');
   @include u-text('no-uppercase');
   @include u-font-weight('medium');
   @include u-margin-top(5);
   @include u-text('ls-auto');
-  color: $base-dark;
+  color: var(--h-txt-color);
+
+  [data-theme="contrast"] & {
+    --h-txt-color: #{$text-high-contrast};
+  }
 
   &:first-child {
     @include u-margin-top(0);
