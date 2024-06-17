@@ -66,12 +66,6 @@
   @include at-media('tablet-lg') {
     @include u-font-size('body', 14);
   }
-
-  &:not(:first-child) {
-    @include at-media('tablet-lg') {
-      @include u-margin-top(10);
-    }
-  }
 }
 
 .vote-hero--dark {
