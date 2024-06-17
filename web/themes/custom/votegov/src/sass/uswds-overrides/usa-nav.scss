@@ -5,6 +5,10 @@
 .usa-nav {
   @include u-width('full');
 
+  @include at-media-max('tablet-lg') {
+    overflow: visible;
+  }
+
   //desktop
   @include at-media('tablet-lg') {
     .usa-search {
@@ -276,4 +280,43 @@
       }
     }
   }
+}
+
+.usa-nav__close-container {
+  @include u-height(0);
+}
+
+.usa-nav__close {
+  @include u-margin(0);
+  @include u-width('auto');
+  @include u-height('auto');
+  @include u-font-size('sans', 6);
+  @include u-font-weight('medium');
+  @include u-padding-x(0);
+  @include u-padding-y(2);
+  @include u-display('block');
+  @include u-margin-left('auto');
+  @include u-float('none');
+  @include u-text-decoration('no-underline');
+  transform: translateY(-4.2rem);
+  cursor: pointer;
+  background-color: transparent;
+  color: $base-dark;
+
+  @include hover {
+    @include u-text-decoration('underline');
+  }
+
+  @include after {
+    @include u-width(2);
+    @include u-display('inline-block');
+    margin-inline-start: 0.5rem;
+    height: 0.75rem;
+    background: url( '../../img/svg/close.svg' ) no-repeat;
+    background-size: contain;
+  }
+}
+
+body.usa-js-mobile-nav--active {
+  @include u-padding-right(0, '!important');
 }
