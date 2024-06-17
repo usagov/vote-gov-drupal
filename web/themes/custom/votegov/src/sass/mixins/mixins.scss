@@ -106,6 +106,7 @@
 @mixin vote-link($color: $base-primary, $color-hover: $base-white, $color-bg: $base-primary-hover) {
   --vote-link--color: #{$color};
   --vote-link-hover--color: #{$color-hover};
+  --vote-link-hover--bg-color: #{$color-bg};
   @include u-text('underline');
   color: var(--vote-link--color);
 
@@ -117,13 +118,19 @@
     @include u-text('no-underline');
     background-color: $color-bg;
     color: var(--vote-link-hover--color);
+    background-color: var(--vote-link-hover--bg-color);
   }
 
   [data-theme="contrast"] & {
     --vote-link--color: #{$link-high-contrast};
     --vote-link-hover--color: #{$link-high-contrast};
+
     @include hover {
       @include u-text('underline');
+      --vote-link--color: #{$button-hover-txt-high-contrast};
+      --vote-link-hover--bg-color: #{$text-high-contrast};
+      color: var(--vote-link--color);
+      background-color: var(--vote-link-hover--bg-color);
     }
   }
 }
