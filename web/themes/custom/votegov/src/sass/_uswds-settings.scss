@@ -126,13 +126,13 @@ https://designsystem.digital.gov/documentation/settings/
   // -- Card
   // $theme-card-border-color: "#3E79BB",
   $theme-card-border-radius: "md",
-  // $theme-card-border-width: "3px",
+  $theme-card-border-width: 0,
   $theme-card-gap: 4,
   $theme-card-font-family: "sans",
   $theme-card-header-typeset: "serif",
-  // $theme-card-margin-bottom: 4,
-  // $theme-card-padding-perimeter: 4,
-  // $theme-card-padding-y: 4,
+  $theme-card-margin-bottom: 0,
+  $theme-card-padding-perimeter: 0,
+  $theme-card-padding-y: 0,
   // -- Checkbox
   // -- Collection
   // -- Footer
