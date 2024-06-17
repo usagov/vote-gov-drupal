@@ -29,6 +29,9 @@ We call a macro which calls itself to render the full tree.
 {% set attributes = attributes.addClass('menu') %}
 <nav aria-label="{{ 'Primary' | t }}" class="usa-nav" data-test="mainNav">
   <div class="usa-nav__inner">
+    <div class="grid-container usa-nav__close-container">
+      <button type="button" class="usa-nav__close" data-test="closeBtn">{{ 'Close' | t }}</button>
+    </div>
   {{ menus.menu_links(items, attributes, 0, 'basic-mega-nav-section-') }}
   <div class="usa-nav__secondary">
   <section id="usa-search--expandable" aria-label="{{ 'Search' | t }}">
