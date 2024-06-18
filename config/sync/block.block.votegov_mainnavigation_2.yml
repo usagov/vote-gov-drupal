@@ -6,9 +6,14 @@ dependencies:
     - system.menu.main
   module:
     - menu_block
+    - menu_multilingual
     - node
   theme:
     - votegov
+third_party_settings:
+  menu_multilingual:
+    only_translated_labels: false
+    only_translated_content: true
 id: votegov_mainnavigation_2
 theme: votegov
 region: sidebar
@@ -28,7 +33,9 @@ settings:
   depth: 1
   expand_all_items: false
   parent: 'main:'
+  render_parent: false
   suggestion: main_sidebar
+  hide_on_nonactive: false
   only_translated_labels: 1
   only_translated_content: 1
 visibility:

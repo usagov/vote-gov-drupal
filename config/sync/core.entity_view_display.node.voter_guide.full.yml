@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.voter_guide.body
     - field.field.node.voter_guide.field_basics_block
     - field.field.node.voter_guide.field_icon
+    - field.field.node.voter_guide.field_media
     - field.field.node.voter_guide.field_metatags
     - field.field.node.voter_guide.field_subtitle
     - node.type.voter_guide
@@ -38,6 +39,7 @@ content:
 hidden:
   content_moderation_control: true
   field_icon: true
+  field_media: true
   field_metatags: true
   field_subtitle: true
   langcode: true

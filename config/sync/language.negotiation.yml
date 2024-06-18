@@ -23,7 +23,6 @@ url:
     pt: pt
     ar: ar
     fr: fr
-    hmn: hmn
     am: am
     so: so
   domains:
@@ -44,7 +43,6 @@ url:
     pt: ''
     ar: ''
     fr: ''
-    hmn: ''
     am: ''
     so: ''
 selected_langcode: site_default

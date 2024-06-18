@@ -5,6 +5,9 @@
  */
 #}
 
+{# Caching the data in content object #}
+{% set savedCache = content | render %}
+
 {% set classes = [
   'node--' ~ node.bundle|clean_class,
   node.isPromoted() ? 'node--promoted',
@@ -14,25 +17,52 @@
   'vote-state-territory-content'
 ] %}
 
+{% set state_name = label | field_value | render %}
+{% set in_state_name = node.field_in_state_name.value | default("@state_name") | t({ "@state_name": state_name}) %}
+{% set of_state_name = node.field_of_state_name.value | default("@state_name") | t({ "@state_name": state_name}) %}
+{% set state_abrev = content.field_state_abbreviation | field_value | render %}
+{% set in_english = "(in English)" | t %}
+{% set election_date = "11/05/2024"  | date('U') | format_date('revision_date') | replace(t_numbers[language].numbers | default([])) %}
+{% set election_link %}
+  <a href="https://www.eac.gov/voters/register-and-vote-in-your-state">{{ 'Find state and local election dates.' | t }}</a>
+{% endset %}
+
+{# Set postmarked deadline with fallback #}
+{% if content.field_mail_postmarked_deadline | render %}
+{% set postmarked_deadline = 'Must be postmarked by @date' | t({'@date': content.field_mail_postmarked_deadline.0 | render}) %}
+{% else %}
+{% set postmarked_deadline = content.field_g_mail_postmarked_deadline | field_value %}
+{% endif %}
+
+{# Set received deadline with fallback #}
+{% if content.field_mail_received_deadline | render %}
+{% set received_deadline = 'Must be received by @date' | t({'@date': content.field_mail_received_deadline.0 | render}) %}
+{% else %}
+{% set received_deadline = content.field_g_mail_received_deadline | field_value %}
+{% endif %}
+
+{# Set the deadline with fallback, prioritizing postmarked deadline. #}
+{% set deadline_bymail = postmarked_deadline | default(received_deadline) %}
+
+{# Set in person deadline #}
+{% set deadline_inperson = content.field_in_person_deadline | field_value | default(content.field_g_in_person_deadline | field_value) %}
+
+{# Set online deadline #}
+{% set deadline_online = content.field_online_deadline | field_value | default(content.field_g_online_deadline | field_value) %}
+
+{# Korean 'state' character logic #}
+{% if language == 'ko' and node.field_is_state.value %}
+  {% set korean_state_char = "state" | t %}
+  {% set state_name = state_name ~ " " ~ korean_state_char %}
+{% endif %}
+
 <article{{ attributes.addClass(classes) }}>
+  {# Hold these title_* placeholders for potential integration #}
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {{ content.field_media | field_value }}
   {% if drupal_view('inline_alert', 'embed_1') | render | striptags | trim %}
     {{ drupal_view('inline_alert', 'embed_1') }}
-  {% endif %}
-
-  {% set state_name = label | field_value | render %}
-  {% set in_state_name = node.field_in_state_name.value | default("@state_name") | t({ "@state_name": state_name}) %}
-  {% set of_state_name = node.field_of_state_name.value | default("@state_name") | t({ "@state_name": state_name}) %}
-  {% set state_abrev = content.field_state_abbreviation | field_value | render %}
-  {% set in_english = "(in English)" | t %}
-  {% set election_date = "11/05/2024"  | date('U') | format_date('revision_date') | replace(t_numbers[language].numbers | default([])) %}
-  {% set election_link %}
-    <a href="https://www.eac.gov/voters/register-and-vote-in-your-state">{{ 'Find state and local election dates.' | t }}</a>
-  {% endset %}
-
-  {# Korean 'state' character logic #}
-  {% if language == 'ko' and node.field_is_state.value %}
-    {% set korean_state_char = "state" | t %}
-    {% set state_name = state_name ~ " " ~ korean_state_char %}
   {% endif %}
 
   {% block content %}
@@ -49,9 +79,17 @@
       ) }}
     </p>
     <ul data-test="registrationInfo">
-      {% include '@votegov/component/registration-date/registration-date--online.html.twig' %}
-      {% include '@votegov/component/registration-date/registration-date--by-mail.html.twig' %}
-      {% include '@votegov/component/registration-date/registration-date--in-person.html.twig' %}
+      {% if deadline_online %}
+        <li><strong>{{ 'Online registration deadline:' | t }}</strong> {{ deadline_online }}</li>
+      {% endif %}
+
+      {% if deadline_bymail %}
+        <li><strong>{{ 'Register by mail deadline:' | t }}</strong> {{ deadline_bymail }}</li>
+      {% endif %}
+
+      {% if deadline_inperson %}
+        <li><strong>{{ 'In person registration deadline:' | t }}</strong> {{ deadline_inperson }}</li>
+      {% endif %}
     </ul>
   {% endblock %}
 

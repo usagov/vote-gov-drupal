@@ -3,90 +3,62 @@
 @use "mixins" as *;
 
 .vote-cta {
-    @include vote-block-margin-y;
-    @include u-display('flex');
+  @include grid-container;
+  @include vote-block-margin-y;
 
-    //mobile
-    @include at-media-max('tablet') {
-        flex-wrap: wrap;
-        &__media-order-last, &__media-order-first {
-            .vote-cta__content-container {
-                order: 2;
-            }
-        }
-
-        &__media-container, &__content-container {
-            @include u-margin-y(3);
-        }
+  //mobile
+  @include at-media-max('tablet') {
+    > * + * {
+      @include u-margin-top(3);
     }
+  }
 
-    //desktop
-    @include at-media('tablet') {
+  //desktop
+  @include at-media('tablet') {
+    @include u-display('flex');
+    @include u-align-items('align-center');
+
     &__media-order-last {
-        .vote-cta__content-container {
-            @include u-margin-right(10);
-        }
-        .vote-cta__media-container {
-            order: 2;
-        }
+      .vote-cta__content-container {
+        @include u-margin-right(10);
+      }
+
+      .vote-cta__media-container {
+        order: 2;
+      }
     }
 
     &__media-order-first {
-        .vote-cta__content-container {
-            order: 2;
-            @include u-margin-left(10);
-        }
+      .vote-cta__content-container {
+        @include u-margin-left(10);
+      }
     }
 
     &__media-container {
+      img {
+        @include u-radius('md');
+        background: $bg-light-cool;
+      }
+    }
+  }
 
-        img {
-            flex-shrink: 0;
-            border-color: #000;
-            @include u-radius('md');
-            @include u-border(0);
-            background: #E2EDF2;
-            mix-blend-mode: multiply;
+  &__content-container {
+    .vote-cta {
+      &__body {
+        p, ul, ul > li {
+          @include u-margin(0);
         }
-    }
 
-    &__content-container {
-        @include u-margin-y('auto');
-    }
-    }
-
-    &__content-container {
-        .vote-cta {
-            &__header {
-                color: $base-dark;
-                font-size: 28.83px;
-                @include u-text('medium');
-                line-height: 118%;
-
-                h2 {
-                    font-size: 28.83px;
-                }
-            }
-            &__body {
-                color: $base-dark;
-                @include u-font-family('serif');
-                font-size: 16px;
-                @include u-text('normal');
-                line-height: 155%;
-
-                p, ul, ul>li {
-                    @include u-margin(0);
-                }
-
-                p {
-                    @include u-margin-bottom(2);
-                }
-            }
-            &__footer {
-                a {
-                    padding: 5px;
-                }
-            }
+        p {
+          @include u-margin-bottom(2);
         }
+      }
+
+      &__footer {
+        a {
+          @include u-padding(0.5);
+        }
+      }
     }
+  }
 }

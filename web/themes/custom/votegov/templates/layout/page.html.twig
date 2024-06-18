@@ -41,7 +41,22 @@
 {% if logged_in %}
   {{ attach_library('bixaluswds/logged-in') }}
   {{ attach_library('votegov/theme_switcher') }}
-  <button id="theme-btn" class="vote-theme" type="button">Toggle Theme</button>
+  <div class="vote-theme-options">
+    <button
+      class="vote-theme-options__button vote-theme-options__button--scale"
+      data-ui-switch-id="scale"
+      data-values="default,large,x-large"
+      type="button"
+      title="Switch font size preset"
+    ><span class="usa-sr-only">Switch font size preset</span></button>
+    <button
+      class="vote-theme-options__button vote-theme-options__button--theme"
+      data-ui-switch-id="theme"
+      data-values="default,contrast"
+      type="button"
+      title="Switch display preset"
+    ><span class="usa-sr-only">Switch display preset</span></button>
+  </div>
 {% endif %}
 
 {# load navajo font #}
@@ -57,15 +72,7 @@
 
 {# If the current page has been marked as outdated and it's the front page #}
 {% if is_front and node.content_translation_outdated.value == 1 %}
-  {# Display a translation alert with a link to the legacy homepage #}
-  {% set alert_translation %}
-    <p>Welcome to the new vote.gov! We're continuing to add more languages to the site.
-      <a href="/{{ language }}/legacy">Find information about registering to vote in {{ languagename }}.</a></p>
-  {% endset %}
-  {% include '@uswds_templates/usa-site-alert.html.twig' with {
-    'alert_type': 'info',
-    'text': alert_translation
-  } %}
+  {{ drupal_entity('block_content', '20') }}
 {% endif %}
 
 {# Sitewide alert component #}
@@ -78,7 +85,6 @@
       {{ drupal_entity('block', 'votegov_sitebranding') }}
 
       <button type="button" class="usa-menu-btn" data-test="mobileBtn">{{ 'Menu' | t }}</button>
-      <button type="button" class="usa-menu-btn usa-menu-btn--close" data-test="closeBtn">{{ 'Close' | t }}</button>
 
     </div>
 

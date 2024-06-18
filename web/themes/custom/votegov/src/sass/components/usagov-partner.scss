@@ -41,7 +41,7 @@ $usagov-partner-breakpoint: 'tablet-lg';
 
     a {
       @include u-font-weight('bold');
-      @include vote-link($color: $base-dark);
+      @include vote-link-bg($color: $base-dark);
     }
   }
 }

@@ -1,27 +1,36 @@
+{#
+/**
+ * @file
+ *  Bixal USWDS Theme override to display a node: Voter Guide - teaser.
+ */
+#}
+
+{# Caching the data in content object #}
+{% set savedCache = content | render %}
+
 {% set classes = [
   'node--' ~ node.bundle|clean_class,
   node.isPromoted() ? 'node--promoted',
   node.isSticky() ? 'node--sticky',
   not node.isPublished() ? 'node--unpublished',
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  'usa-card tablet:grid-col-4 desktop-lg:grid-col-3'
+  'usa-card'
 ] %}
 
 <article{{ attributes.addClass(classes) }}>
-    <a href="{{ url }}" title="{{ label | field_value }}">
+  {# Hold these title_* placeholders for potential integration #}
+  {{ title_prefix }}
+  {{ title_suffix }}
+    <a class="vote-card__link" href="{{ url }}" title="{{ label | field_value }}">
       <div class="usa-card__container">
         <div class="vote-feature-card__icon">
-          <div class="vote-feature-card__icon-circle">
-            {{ content.field_icon | field_value }}
-          </div>        
+          {{ content.field_icon | field_value }}
         </div>
         <div class="vote-feature-card__content">
-        <div class="usa-card__header">
-            <h3 class="usa-card__heading">{{ label }}</h3>
-        </div>
-        <div class="usa-card__body">
+          <h3 class="usa-card__heading">{{ label }}</h3>
+          <div class="usa-card__body">
             {{ content.body | render | striptags }}
-        </div>
+          </div>
         </div>
       </div>
   </a>

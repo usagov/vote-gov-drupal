@@ -1,11 +1,10 @@
+{% extends 'node--state-territory.html.twig' %}
 {#
 /**
  * @file
  *  Bixal USWDS Theme override to display a node: State/Territory - Online.
  */
 #}
-
-{% extends 'node--state-territory.html.twig' %}
 
 {% block content %}
   {# How to register to vote #}
@@ -43,4 +42,61 @@
       }) }}
     </p>
   {% endif %}
+
+  {# JSON Schema #}
+ <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "{{ 'How to register and update your registration' | t }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ '@link on @state_name’s election website.' | t({
+    '@link': { "#markup": "<a href=\"#{registration_link}\" data-state-ext=\"online-registration\">#{registration_link_text}</a>" } | render | replace({'"': "\""}),
+    '@state_name': state_name,
+    '@of_state_name': of_state_name,
+    '@in_state_name': in_state_name
+  }) }}"
+    }
+    },{
+        "@type": "Question",
+        "name": "{{ 'Other ways to register to vote' | t }}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{ 'You can also @link on @state_name’s election website.' | t({
+    '@link': { "#markup": "<a href=\"#{more_info_link}\" data-state-ext=\"offline-registration\">#{more_info_link_text}</a>" } | render | replace({'"': "\""}),
+    '@state_name': state_name,
+    '@of_state_name': of_state_name,
+    '@in_state_name': in_state_name
+  }) }}"
+    }
+    },{
+        "@type": "Question",
+        "name": "{{ 'Voter registration deadlines' | t }}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{ 'In person registration deadline:' | t }} {{ deadline_inperson | render | replace({'"': "\""}) }}"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "{{ 'Voter registration deadlines' | t }}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{ 'Register by mail deadline:' | t }} {{ deadline_bymail | render | replace({'"': "\""}) }}"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "{{ 'Voter registration deadlines' | t }}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{ 'Online registration deadline:' | t }} {{ deadline_online | render | replace({'"': "\""})  }}"
+        }
+      }
+      {{ end }}]
+  }
+</script>
 {% endblock %}

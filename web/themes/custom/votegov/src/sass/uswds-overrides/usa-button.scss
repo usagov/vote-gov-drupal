@@ -7,35 +7,68 @@
   }
 }
 
+.usa-button, .usa-button:not(.usa-button--unstyled), .usa-button:not(.usa-button--unstyled):hover {
+  --usa-button-bg: inherit;
+  background-color: var(--usa-button-bg);
+
+  [data-theme="contrast"] & {
+    --usa-button-bg: #{$btn-bg-high-contrast};
+  }
+}
+
 // Custom usa-button overrides using USWDS mixins and other settings.
 .usa-button:not(.usa-button--unstyled) {
   @include u-text('medium');
+  --usa-button-bg: #{$base-primary};
+  --usa-button-text: #{$base-white};
   padding: 0.9rem 1.4rem;
-  background-color: #345D96;
+  background-color: var(--usa-button-bg);
+  color: var(--usa-button-text);
 
   &.usa-button--active {
-    background-color: $base-dark;
+    --usa-button-bg: #{$base-dark};
+
+    [data-theme="contrast"] & {
+      --usa-button-bg: #{$btn-bg-high-contrast-hover};
+    }
   }
 
   &:hover,
   &:focus,
   &.usa-focus,
-  &.usa-button--hover {
-    background-color: $base-primary-hover;
+  &.usa-button--hover
+  {
+    --usa-button-bg: #{$base-primary-hover};
+
+    [data-theme="contrast"] & {
+      --usa-button-bg: #{$btn-bg-high-contrast-hover};
+    }
   }
 
   &.usa-button--secondary {
-    background-color: $ac-warm;
+    --usa-button-bg: #{$ac-warm};
+
+    [data-theme="contrast"] & {
+      --usa-button-bg: #{$btn-bg-high-contrast};
+    }
 
     &.usa-button--active {
-      background-color: $ac-warm-active;
+      --usa-button-bg: #{$ac-warm-hover};
+
+      [data-theme="contrast"] & {
+        --usa-button-bg: #{$btn-bg-high-contrast-hover};
+      }
     }
 
     &:hover,
     &:focus,
     &.usa-focus,
     &.usa-button--hover {
-      background-color: $ac-warm-hover;
+      --usa-button-bg: #{$ac-warm-hover};
+
+      [data-theme="contrast"] & {
+        --usa-button-bg: #{$btn-bg-high-contrast-hover};
+      }
     }
   }
 
