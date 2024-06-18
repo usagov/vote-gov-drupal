@@ -1,0 +1,94 @@
+@use "uswds-core" as *;
+@use "mixins" as *;
+@use "variables" as *;
+
+
+.vote-theme-options {
+  @include u-position('fixed');
+  @include u-display('flex');
+  @include u-z(300);
+
+  @include at-media('tablet') {
+    @include u-flex-direction('column');
+    top: calc(50% - 3.125rem);
+    inset-inline-start: 0;
+  }
+
+  @include at-media-max('tablet') {
+    inset-inline-start: calc(50% - 3.125rem);
+    bottom: 0;
+  }
+}
+
+.vote-theme-options__button {
+  @include button-unstyled;
+  @include u-display('block');
+  @include u-width('full');
+  @include u-padding(2);
+  border: 1px solid $base-dark;
+  background-color: $base-white;
+  cursor: pointer;
+
+  @include at-media('tablet') {
+    border-inline-start: 0;
+  }
+
+  @include at-media-max('tablet') {
+    border-bottom: 0;
+  }
+
+
+  @include hover {
+    background-color: $base-white;
+  }
+
+  &:first-child {
+    @include at-media('tablet') {
+      @include u-border-bottom(0);
+      border-start-end-radius: 0.5rem;
+    }
+
+    @include at-media-max('tablet') {
+      border-inline-end: 0;
+      border-start-start-radius: 0.5rem;
+    }
+  }
+
+  &:last-child {
+    @include at-media('tablet') {
+      border-end-end-radius: 0.5rem;
+    }
+
+    @include at-media-max('tablet') {
+      border-start-end-radius: 0.5rem;
+    }
+  }
+}
+
+.vote-theme-options__button--theme {
+  @include before {
+    @include u-width(2);
+    @include u-height(2);
+    @include u-display('block');
+    background: url("../../img/svg/dark-light.svg") no-repeat center center;
+    background-size: contain;
+  }
+}
+
+.vote-theme-options__button--scale {
+  @include before {
+    @include u-width(2);
+    @include u-height(2);
+    @include u-display('block');
+    background: url("../../img/svg/text-size.svg") no-repeat center center;
+    background-size: contain;
+  }
+}
+
+[data-scale="large"] {
+  font-size: 115%;
+}
+
+[data-scale="x-large"] {
+  font-size: 130%;
+}

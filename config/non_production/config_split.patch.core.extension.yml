@@ -2,8 +2,10 @@ adding:
   module:
     new_relic_rpm: -20
     dblog: 0
+    field_ui: 0
     s3fs: 0
     samlauth: 0
     usagov_login: 0
+    views_ui: 0
     externalauth: 10
 removing: { }

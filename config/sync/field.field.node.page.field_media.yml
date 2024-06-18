@@ -10,7 +10,7 @@ id: node.page.field_media
 field_name: field_media
 entity_type: node
 bundle: page
-label: Media
+label: Image
 description: ''
 required: false
 translatable: false

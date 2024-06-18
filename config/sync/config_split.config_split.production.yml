@@ -22,4 +22,9 @@ complete_list:
   - views.view.samlauth_map
 partial_list:
   - core.extension
+  - simple_sitemap.settings
   - system.performance
+  - user.role.content_editor
+  - user.role.content_manager
+  - user.role.content_translator
+  - user.role.site_builder

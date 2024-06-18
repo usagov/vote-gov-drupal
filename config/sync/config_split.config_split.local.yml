@@ -11,15 +11,19 @@ no_patching: false
 storage: folder
 folder: ../config/local
 module:
+  devel: 0
   disable_language: 0
+  field_ui: 0
+  views_ui: 0
 theme: {  }
 complete_list:
   - dblog.settings
-  - devel.settings
-  - devel.toolbar.settings
   - field_ui.settings
-  - system.menu.devel
   - views.view.watchdog
 partial_list:
   - autologout.settings
   - core.extension
+  - user.role.content_editor
+  - user.role.content_manager
+  - user.role.content_translator
+  - user.role.site_builder

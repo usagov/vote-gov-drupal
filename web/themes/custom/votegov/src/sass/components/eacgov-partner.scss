@@ -7,10 +7,6 @@ $eacgov-partner-breakpoint: 'tablet-lg';
 .vote-eac-partner {
   @include u-text-align('center');
   background-color: $bg-light-cool;
-
-  &__text {
-    font-size: 14px;
-  }
 }
 
 .vote-eac-partner__container {
@@ -29,6 +25,8 @@ $eacgov-partner-breakpoint: 'tablet-lg';
 }
 
 .vote-eac-partner__logo {
+  @include u-font-size('serif', 3);
+
   @include at-media($eacgov-partner-breakpoint) {
     @include u-display('flex');
     @include u-align-items('align-center');
@@ -47,25 +45,24 @@ $eacgov-partner-breakpoint: 'tablet-lg';
 }
 
 .vote-eac-partner__logo-link {
-  display: inline-flex;
-  align-items: center;
+  @include vote-link($color: $base-dark, $color-hover: $base-primary-hover);
+  @include u-display('inline-flex');
+  @include u-align-items('align-center');
+  @include u-text-decoration('no-underline');
+  @include u-font-size('serif', 2);
+  @include u-line-height('serif', 3);
   text-align: start;
-  gap: 1.5rem;
-  text-decoration: none;
-  color: $base-dark;
-  width: 180px;
-  font-family: Merriweather;
-  font-size: 13px;
-  line-height: 125%;
+  gap: 1rem;
 
   span {
-    height: 40px;
+    @include u-display('block');
+    @include u-width(15);
   }
 }
 
 .vote-eac-partner__social-link {
   @include u-white-space('no-wrap');
-  @include vote-link($color: $base-dark, $color-hover: $base-primary-hover, $color-bg: 'transparent');
+  @include vote-link($color: $base-dark, $color-hover: $base-primary-hover);
   @include u-display('inline-flex');
   @include u-align-items('align-center');
 

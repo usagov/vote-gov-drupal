@@ -1,67 +1,74 @@
 @use "uswds-core" as *;
 @use "variables" as *;
+@use "mixins" as *;
 
 .vote-hero {
   background-color: $bg-light-warm;
-
-  @include at-media('tablet-lg') {
-    @include u-position('relative');
-  }
 }
 
 .vote-hero__container {
-  @include grid-container;
-  @include grid-row;
-  @include u-flex('justify');
-  position: relative;
-
   @include at-media('tablet-lg') {
-    padding-right: 0 !important;
+    @include grid-container;
+    @include grid-row;
   }
 }
 
 .vote-hero__image {
-  @include at-media-max('tablet-lg') {
-    margin-left: -5rem;
-    margin-right: -5rem;
-  }
-  @include at-media-max('tablet') {
-    @include u-margin-x(-2);
-  }
-
-
   @include at-media('tablet-lg') {
     @include grid-col(5);
-    @include u-order(2);
     @include u-position('relative');
+    margin-inline-start: calc(100% / 12);
+  }
 
-    img {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      width: auto;
-      height: 100%;
-      max-width: none;
+  img {
+    @include u-display('block');
+
+    @include at-media('tablet-lg') {
+      @include u-position('absolute');
+      @include u-top(0);
+      @include u-bottom(0);
+      @include u-width('auto');
+      @include u-height('full');
+      @include u-maxw('none');
+      inset-inline-start: 0;
     }
   }
 }
 
 .vote-hero__callout {
-  padding: 25px;
+  @include vote-block-padding-y--narrow;
 
   @include at-media('tablet-lg') {
-    @include grid-col(7);
-    @include u-order(1);
-    padding: 150px 40px 150px 0px;
+    @include grid-col(6);
+    @include u-padding-bottom(15);
+
+    &:not(:has(nav)) {
+      @include u-padding-top(15);
+    }
+  }
+
+  @include at-media-max('tablet-lg') {
+    @include grid-container;
+  }
+
+  > * + * {
+    @include u-margin-top(3);
   }
 }
 
 .vote-hero__heading {
-  @include u-padding-bottom(2);
-  @include u-font-size('body', 'xl');
+  @include u-font('serif', 12);
 
   @include at-media('tablet-lg') {
-    @include u-font-size('body', '2xl')
+    @include u-font-size('body', 14);
+  }
+}
+
+.vote-hero--dark {
+  background-color: $base-dark;
+  color: $base-white;
+
+  .vote-hero__heading {
+    color: $base-white;
   }
 }
