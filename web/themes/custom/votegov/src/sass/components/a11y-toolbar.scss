@@ -21,12 +21,14 @@
 }
 
 .vote-theme-options__button {
+  --theme-options-button--bg: #{$base-white};
+  --theme-options-button--bg-hover: #{$base-primary-hover};
   @include button-unstyled;
   @include u-display('block');
   @include u-width('full');
   @include u-padding(2);
   border: 1px solid $base-dark;
-  background-color: $base-white;
+  background-color: var(--theme-options-button--bg);
   cursor: pointer;
 
   @include at-media('tablet') {
@@ -37,9 +39,8 @@
     border-bottom: 0;
   }
 
-
   @include hover {
-    background-color: $base-white;
+    background-color: var(--theme-options-button--bg-hover);
   }
 
   &:first-child {
@@ -63,6 +64,20 @@
       border-start-end-radius: 0.5rem;
     }
   }
+
+  [data-theme="contrast"] & {
+    @include hover {
+      --theme-options-button--bg-hover: #{$btn-bg-high-contrast};
+    }
+  }
+}
+
+.vote-theme-options__button.vote-theme-options__button--theme {
+  @include hover {
+    @include before {
+      background: url("../../img/svg/dark-light-white.svg") no-repeat center center;
+    }
+  }
 }
 
 .vote-theme-options__button--theme {
@@ -72,6 +87,14 @@
     @include u-display('block');
     background: url("../../img/svg/dark-light.svg") no-repeat center center;
     background-size: contain;
+  }
+}
+
+.vote-theme-options__button.vote-theme-options__button--scale {
+  @include hover {
+    @include before {
+      background: url("../../img/svg/text-size-white.svg") no-repeat center center;
+    }
   }
 }
 
