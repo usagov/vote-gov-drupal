@@ -6,11 +6,6 @@
     <a id="main-content" tabindex="-1"></a>
     <section class="vote-hero vote-hero--dark">
       <div class="vote-hero__container">
-        {% if node.field_media.value %}
-          <div class="vote-hero__image">
-            {{ drupal_field('field_media', 'node', node.id(), {type: 'media_thumbnail', settings: {image_style: 'scaled_lg'}}) | field_value }}
-          </div>
-        {% endif %}
         <div class="vote-hero__callout">
           {{ drupal_entity('block', 'votegov_breadcrumbs') }}
           <h1 class="vote-hero__heading">
@@ -18,6 +13,11 @@
           </h1>
           {{ node.field_subtitle.value  | check_markup(node.field_subtitle.format) }}
         </div>
+        {% if node.field_media.value %}
+          <div class="vote-hero__image">
+            {{ drupal_field('field_media', 'node', node.id(), {type: 'media_thumbnail', settings: {image_style: 'scaled_lg'}}) | field_value }}
+          </div>
+        {% endif %}
       </div>
     </section>
     <div class="vote-main-content-row vote-block-margin-y--narrow grid-container usa-in-page-nav-container">

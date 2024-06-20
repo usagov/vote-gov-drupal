@@ -1,7 +1,7 @@
 // Base Colors.
 $base-white: #FFF; // gray-cool-1
 $base-dark: #11385B; // blue-warm-80v
-$base-primary: #3E79BB; // blue-warm-50
+$base-primary: #345D96; // blue-warm-50
 $base-primary-hover: #2E598A; // blue-60
 $base-primary-active: $base-dark;
 
@@ -18,7 +18,10 @@ $bg-light-medium: #D3D3D3; // gray-cool-20 is this just for the horizontal rule?
 $bg-light-cool: #E2EDF2; // blue-warm-10
 $bg-light-warm: #E7E5DD; // hero-background
 
-//High contrast colors
+//High Contrast Colors.
 $bg-high-contrast: #0A0A2A;
-$text-high-contrast: #0A0A2A;
+$text-high-contrast: $bg-high-contrast;
 $link-high-contrast: #0000FF;
+$link-high-contrast-hover: #010156;
+$btn-bg-high-contrast: $link-high-contrast;
+$btn-bg-high-contrast-hover: $link-high-contrast-hover;

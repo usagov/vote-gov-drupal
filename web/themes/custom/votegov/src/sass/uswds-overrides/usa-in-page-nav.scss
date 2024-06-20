@@ -18,11 +18,11 @@
 
   a:not(.usa-button) {
     &:not(.usa-current) {
-      @include vote-link;
+      @include vote-link-bg;
     }
 
     &.usa-current {
-      @include vote-link($color: $base-dark);
+      @include vote-link-bg($color: $base-dark);
 
       &:after {
         @include u-left(0);
