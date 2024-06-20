@@ -37,6 +37,11 @@
 
   @include at-media-max('tablet') {
     border-bottom: 0;
+    --theme-options-button--bg: #{$base-primary};
+
+    @include hover {
+      --theme-options-button--bg-hover: #{$base-dark};
+    }
   }
 
   @include hover {
@@ -69,6 +74,13 @@
     @include hover {
       --theme-options-button--bg-hover: #{$btn-bg-high-contrast};
     }
+
+    @include at-media-max('tablet') {
+      --theme-options-button--bg: #{$btn-bg-high-contrast};
+      @include hover {
+        --theme-options-button--bg-hover: #{$btn-bg-high-contrast-hover};
+      }
+    }
   }
 }
 
@@ -87,6 +99,10 @@
     @include u-display('block');
     background: url("../../img/svg/dark-light.svg") no-repeat center center;
     background-size: contain;
+
+    @include at-media-max('tablet') {
+      background: url("../../img/svg/dark-light-white.svg") no-repeat center center;
+    }
   }
 }
 
@@ -105,6 +121,10 @@
     @include u-display('block');
     background: url("../../img/svg/text-size.svg") no-repeat center center;
     background-size: contain;
+
+    @include at-media-max('tablet') {
+      background: url("../../img/svg/text-size-white.svg") no-repeat center center;
+    }
   }
 }
 
