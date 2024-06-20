@@ -36,7 +36,6 @@
   }
 
   @include at-media-max('tablet') {
-    border-bottom: 0;
     --theme-options-button--bg: #{$base-primary};
 
     @include hover {
@@ -56,7 +55,8 @@
 
     @include at-media-max('tablet') {
       border-inline-end: 0;
-      border-radius: 0.5rem 0 0 0.5rem;
+      border-start-start-radius: 0.5rem;
+      border-end-start-radius: 0.5rem;
     }
   }
 
@@ -66,7 +66,8 @@
     }
 
     @include at-media-max('tablet') {
-      border-radius: 0 0.5rem 0.5rem 0;
+      border-start-end-radius: 0.5rem;
+      border-end-end-radius: 0.5rem;
     }
   }
 
