@@ -133,6 +133,7 @@
     }
 
     > a.usa-nav__Link,
+    > a.usa-current,
     > a:not(.usa-button):not(.usa-current),
     > span {
       @include u-font-size('sans', 5);
@@ -143,6 +144,7 @@
     }
 
     > a.usa-nav__Link,
+    > a.usa-current,
     > a:not(.usa-button):not(.usa-current) {
       @include hover {
         background-color: $bg-light-cool;
