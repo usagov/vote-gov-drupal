@@ -7,7 +7,7 @@
 
 {% if rows %}
   {% include '@votegov/component/feature-cards.html.twig' with {
-    'heading': 'Know your voting rights',
+    'heading': 'Know your voting rights' | t,
     'cards': rows
   } %}
 {% endif %}
