@@ -5,8 +5,8 @@
  * Defines custom view alter hooks.
  */
 
-use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
 
 /**
  * Implements hook_taxonomy_term_view_alter().
