@@ -3,6 +3,16 @@
 
 .usa-breadcrumb {
   background-color: transparent;
+
+  // & + * {
+  //   @include u-margin-top(5);
+  
+  //   @include at-media('tablet') {
+  //     @include u-margin-top(10);
+  //   }
+
+  // }
+
 }
 
 .usa-breadcrumb__link {
@@ -12,10 +22,11 @@
 }
 
 // targeting the div wrapping the breadcrumb block and add margin top to the following element
-.system-breadcrumb-block + * {
+.block.system-breadcrumb-block + * {
   @include u-margin-top(5);
 
   @include at-media('tablet') {
     @include u-margin-top(10);
   }
 }
+
