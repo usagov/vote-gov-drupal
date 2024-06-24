@@ -32,9 +32,9 @@ h4,
 h5,
 h6 {
   --h-txt-color: #{$base-dark};
-  @include u-font-family('sans');
+  @include u-font-family('serif');
   @include u-text('no-uppercase');
-  @include u-font-weight('medium');
+  @include u-font-weight('bold');
   @include u-margin-top(5);
   @include u-text('ls-auto');
   color: var(--h-txt-color);
@@ -55,6 +55,8 @@ h6 {
 
 // Paragraph
 p {
+  @include u-font-family('sans');
+
   .page-content & {
     &:has(.usa-button) {
       @include u-margin-top(5);
@@ -64,6 +66,7 @@ p {
 
 // Lists
 ul, ol {
+  @include u-font-family('sans');
   main & {
     &:last-child {
       @include u-margin-bottom(0);
