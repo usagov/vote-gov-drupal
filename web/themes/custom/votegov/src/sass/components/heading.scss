@@ -3,12 +3,17 @@
 
 .vote-heading--red-underline {
   &:after {
+    --vote-heading--underline: #{$ac-warm};
     content: '';
     @include u-display('block');
     @include u-margin-top(2);
     @include u-width(10);
     @include u-height(0.5);
-    background-color: $ac-warm;
+    background-color: var(--vote-heading--underline);
+
+    [data-theme="contrast"] & {
+      --vote-heading--underline: #{$bg-high-contrast};
+    }
   }
 
   + * {
