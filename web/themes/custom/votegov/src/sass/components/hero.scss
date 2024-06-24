@@ -3,7 +3,10 @@
 @use "mixins" as *;
 
 .vote-hero {
-  background-color: $bg-light-warm;
+  --vote-hero--bg-color: #{$bg-light-warm};
+  --vote-hero--text-color: inherit;
+  background-color: var(--vote-hero--bg-color);
+  color: var(--vote-hero--text-color);
 }
 
 .vote-hero__container {
@@ -57,6 +60,7 @@
 }
 
 .vote-hero__heading {
+  color: var(--vote-hero--text-color);
   @include u-font('serif', 12);
 
   @include at-media('tablet-lg') {
@@ -65,10 +69,10 @@
 }
 
 .vote-hero--dark {
-  background-color: $base-dark;
-  color: $base-white;
+  --vote-hero--bg-color: #{$base-dark};
+  --vote-hero--text-color: #{$base-white};
 
-  .vote-hero__heading {
-    color: $base-white;
+  [data-theme="contrast"] & {
+    --vote-hero--bg-color: #{$bg-high-contrast};
   }
 }

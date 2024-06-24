@@ -4,5 +4,9 @@
 .local-tasks-block {
   @include at-media('tablet') {
     background-color: $base-primary;
+
+    [data-theme="contrast"] & {
+      background-color: $link-high-contrast;
+    }
   }
 }
