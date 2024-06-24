@@ -3,12 +3,14 @@
 @use "mixins" as *;
 
 .usa-header {
-  border-bottom: 1px $bg-light-medium solid;
-
   .usa-logo {
     @include u-margin(0);
     @include u-margin-top(1);
-    width: 12.5rem;
+    width: 10rem;
+
+    @include at-media('tablet-lg') {
+      width: 12.5rem;
+    }
   }
 }
 
