@@ -3,7 +3,12 @@
 @use "mixins" as *;
 
 .vote-hero {
-  background-color: $bg-light-warm;
+  --vote-hero-bg: #{$bg-light-warm};
+  background-color: var(--vote-hero-bg);
+
+  [data-theme="contrast"] & {
+    --vote-hero-bg: #{$bg-high-contrast};
+  }
 }
 
 .vote-hero__container {
@@ -57,11 +62,28 @@
 }
 
 .vote-hero__heading {
+  --vote-hero-heading: #{$base-dark};
   @include u-font('serif', 12);
+  color: var(--vote-hero-heading);
 
   @include at-media('tablet-lg') {
     @include u-font-size('body', 14);
   }
+
+  [data-theme="contrast"] & {
+    --vote-hero-heading: #{$base-white};
+  }
+
+}
+
+.vote-hero__text {
+  --vote-hero-text: #{$base-dark};
+  color: var(--vote-hero-text);
+
+  [data-theme="contrast"] & {
+    --vote-hero-text: #{$base-white};
+  }
+
 }
 
 .vote-hero--dark {
