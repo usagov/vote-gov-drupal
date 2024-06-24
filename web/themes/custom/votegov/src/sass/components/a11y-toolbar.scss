@@ -10,13 +10,17 @@
 
   @include at-media('tablet') {
     @include u-flex-direction('column');
+    @include u-border('solid');
+    border-color: $base-white;
+    border-width: 2px 2px 2px 0;
+    border-radius: 0 0.5rem 0.5rem 0;
     top: calc(50% - 3.125rem);
     inset-inline-start: 0;
   }
 
   @include at-media-max('tablet') {
     inset-inline-start: calc(50% - 3.125rem);
-    @include u-bottom('205');
+    bottom: units(6);
   }
 }
 
@@ -45,6 +49,9 @@
 
   @include hover {
     background-color: var(--theme-options-button--bg-hover);
+    @include before {
+      background-color: $base-white;
+    }
   }
 
   &:first-child {
@@ -71,6 +78,18 @@
     }
   }
 
+  @include before {
+    @include u-width(2);
+    @include u-height(2);
+    @include u-display('block');
+    background-color: $base-dark;
+    background-size: contain;
+
+    @include at-media-max('tablet') {
+      background-color: $base-white;
+    }
+  }
+
   [data-theme="contrast"] & {
     @include hover {
       --theme-options-button--bg-hover: #{$btn-bg-high-contrast};
@@ -85,47 +104,15 @@
   }
 }
 
-.vote-theme-options__button.vote-theme-options__button--theme {
-  @include hover {
-    @include before {
-      background: url("../../img/svg/dark-light-white.svg") no-repeat center center;
-    }
-  }
-}
-
 .vote-theme-options__button--theme {
   @include before {
-    @include u-width(2);
-    @include u-height(2);
-    @include u-display('block');
-    background: url("../../img/svg/dark-light.svg") no-repeat center center;
-    background-size: contain;
-
-    @include at-media-max('tablet') {
-      background: url("../../img/svg/dark-light-white.svg") no-repeat center center;
-    }
-  }
-}
-
-.vote-theme-options__button.vote-theme-options__button--scale {
-  @include hover {
-    @include before {
-      background: url("../../img/svg/text-size-white.svg") no-repeat center center;
-    }
+    mask: url("../../img/svg/dark-light.svg") no-repeat center center;
   }
 }
 
 .vote-theme-options__button--scale {
   @include before {
-    @include u-width(2);
-    @include u-height(2);
-    @include u-display('block');
-    background: url("../../img/svg/text-size.svg") no-repeat center center;
-    background-size: contain;
-
-    @include at-media-max('tablet') {
-      background: url("../../img/svg/text-size-white.svg") no-repeat center center;
-    }
+    mask: url("../../img/svg/text-size.svg") no-repeat center center;
   }
 }
 
