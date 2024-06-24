@@ -1,0 +1,34 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+@use "mixins" as *;
+
+.usa-identifier {
+  --usa-identifier-bg: #{#1b1b1b};
+  background-color: var(--usa-identifier-bg);
+
+  [data-theme="contrast"] & {
+    --usa-identifier-bg: #{$bg-high-contrast};
+  }
+}
+
+.usa-identifier__required-link.usa-link:visited, .usa-identifier__required-link:visited,
+.usa-identifier__required-link, .usa-identifier__required-link.usa-link,
+.usa-identifier__identity-disclaimer a,
+.usa-identifier__container a {
+  --usa-identifier-text: #{#a9aeb1};
+  color: var(--usa-identifier-text);
+
+  [data-theme="contrast"] & {
+    --usa-identifier-text: #{$base-white};
+  }
+
+  @include hover {
+    --usa-identifier-text-hover: #{#dfe1e2};
+    color: var(--usa-identifier-text-hover);
+
+    [data-theme="contrast"] & {
+      --usa-identifier-text-hover: #{$link-high-contrast-hover-blue};
+    }
+  }
+}
+
