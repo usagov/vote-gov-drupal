@@ -46,11 +46,6 @@ h6 {
   &:first-child {
     @include u-margin-top(0);
   }
-
-  .type--secondary & {
-    @include u-font-family('serif');
-    @include u-font-weight('bold');
-  }
 }
 
 // Paragraph
@@ -115,10 +110,6 @@ hr, p + hr {
 
 main {
   @include u-font-family('serif');
-}
-
-.type--secondary {
-  @include u-font-family('sans');
 }
 
 .nonvfont,
