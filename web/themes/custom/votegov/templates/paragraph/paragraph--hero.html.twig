@@ -12,6 +12,8 @@
 {# Caching the data in content object #}
 {% set savedCache = content | render %}
 
+{# add if statement - if alt is set of alt = alt else null alt = alt="" #}
+
 <section{{ attributes.addClass(classes) }}>
   {# Hold these title_* placeholders for potential integration #}
   {{ title_prefix }}
@@ -32,6 +34,7 @@
         'secondary': true
       } %}
     </div>
+    {{ dd(content.field.media[0]['#media'].field_media_image.alt) }}
     {% if content.field_media | render %}
     {% if image.attributes.alt %}
     <div class="vote-hero__image">
@@ -40,9 +43,10 @@
     {% else %}
     
     <div class="vote-hero__image">
-      {{ content.field_media | field_value }}
+      {{ content.field_media | field_value }} 
     </div>
     {% endif %}
   {% endif %}
+
   </div>
 </section>
