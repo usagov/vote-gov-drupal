@@ -38,6 +38,15 @@
   @include u-font-size('sans', 3);
 }
 
+.usa-banner__header-text {
+  --usa-banner-text: #{#1B1B1B};
+  color: var(--usa-banner-text);
+
+  [data-theme="contrast"] & {
+    --usa-banner-text: #{$bg-high-contrast};
+  }
+}
+
 .usa-banner__button-text {
   @include vote-link($color: $base-dark, $color-hover: $base-primary-hover);
 }
@@ -50,5 +59,14 @@
       @include u-right('auto');
       inset-inline-end: 0;
     }
+  }
+}
+
+.usa-media-block__body, .usa-banner__guidance {
+  --usa-banner-body-text: #{#1B1B1B};
+  color: var(--usa-banner-body-text);
+
+  [data-theme="contrast"] & {
+    --usa-banner-body-text: #{$bg-high-contrast};
   }
 }
