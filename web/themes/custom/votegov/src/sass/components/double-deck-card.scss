@@ -1,0 +1,75 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+@use "mixins" as *;
+
+.vote-double-deck-card {
+  --vote-ddc-bg: #{#F7F9FA};
+  @include vote-block-margin-y;
+  background-color: var(--vote-ddc-bg);
+  border: 1px solid $base-dark;
+  line-height: 155%;
+
+  [data-theme="contrast"] & {
+    --vote-ddc-bg: #{$base-white};
+  }
+
+  &__primary {
+    @include u-padding(4);
+
+    @include at-media('tablet') {
+      @include u-display('flex');
+    }
+  }
+
+  &__icon {
+    @include u-margin-bottom(3);
+    @include u-margin-right(3);
+    text-align: center;
+
+    svg {
+      --vote-ddc-icon-fill: #{$base-dark};
+      fill: var(--vote-ddc-icon-fill);
+
+      [data-theme="contrast"] & {
+        --vote-ddc-icon-fill: #{$bg-high-contrast};
+      }
+    }
+  }
+
+  &__heading {
+    @include u-font('serif', 9);
+  }
+
+  &__body {
+    @include u-padding-y(3);
+    font-size: 16px;
+
+    ul {
+      margin: 0;
+
+      @include at-media('tablet') {
+        column-count: 2;
+        column-gap: 7px;
+        max-height: 450px;
+        overflow-y: auto;
+        column-fill: auto;
+      }
+    }
+  }
+
+  &__body_secondary {
+    --vote-ddc-body-secondary-bg: #{$bg-light-cool};
+    background-color: var(--vote-ddc-body-secondary-bg);
+    @include u-padding(4);
+
+    [data-theme="contrast"] & {
+      --vote-ddc-body-secondary-bg: #{$bg-light};
+    }
+
+    p {
+      @include at-media-max('tablet') {
+        @include u-margin-x(4);
+      }
+    }
+  }
+}
