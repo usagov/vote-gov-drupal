@@ -12,21 +12,24 @@
     @include u-flex-direction('column');
     @include u-border('solid');
     border-color: $base-white;
-    border-width: 2px 2px 2px 0;
-    border-radius: 0 0.5rem 0.5rem 0;
+    border-width: 2px;
+    border-inline-start-width: 0;
+    border-start-end-radius: 0.5rem;
+    border-end-end-radius: 0.5rem;
     top: calc(50% - 3.125rem);
     inset-inline-start: 0;
   }
 
   @include at-media-max('tablet') {
+    @include u-bottom('205');
     inset-inline-start: calc(50% - 3.125rem);
-    bottom: units(6);
   }
 }
 
 .vote-theme-options__button {
   --theme-options-button--bg: #{$base-white};
   --theme-options-button--bg-hover: #{$base-primary-hover};
+  --theme-options-button--icon: #{$base-dark};
   @include button-unstyled;
   @include u-display('block');
   @include u-width('full');
@@ -49,8 +52,9 @@
 
   @include hover {
     background-color: var(--theme-options-button--bg-hover);
+
     @include before {
-      background-color: $base-white;
+      --theme-options-button--icon: #{$base-white};
     }
   }
 
@@ -82,11 +86,11 @@
     @include u-width(2);
     @include u-height(2);
     @include u-display('block');
-    background-color: $base-dark;
+    background-color: var(--theme-options-button--icon);
     background-size: contain;
 
     @include at-media-max('tablet') {
-      background-color: $base-white;
+      --theme-options-button--icon: #{$base-white};
     }
   }
 
@@ -97,6 +101,7 @@
 
     @include at-media-max('tablet') {
       --theme-options-button--bg: #{$btn-bg-high-contrast};
+
       @include hover {
         --theme-options-button--bg-hover: #{$btn-bg-high-contrast-hover};
       }
