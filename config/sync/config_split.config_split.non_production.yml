@@ -26,4 +26,3 @@ complete_list:
 partial_list:
   - core.extension
   - system.performance
-  - user.role.site_builder

@@ -13,10 +13,7 @@ settings:
   allowed_values:
     -
       value: predefined_color_list_from_color_palette
-      label: Default
-    -
-      value: dark
-      label: Dark
+      label: 'Background color'
   allowed_values_function: ''
 module: options
 locked: false
