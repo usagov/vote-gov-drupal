@@ -17,6 +17,9 @@ settings:
     -
       value: dark
       label: Dark
+    -
+      value: homepage
+      label: Homepage
   allowed_values_function: ''
 module: options
 locked: false
