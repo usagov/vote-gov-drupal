@@ -65,11 +65,5 @@
     [data-theme="contrast"] & {
       --vote-ddc-body-secondary-bg: #{$bg-light};
     }
-
-    p {
-      @include at-media-max('tablet') {
-        @include u-margin-x(4);
-      }
-    }
   }
 }
