@@ -24,7 +24,7 @@
   &__icon {
     @include u-margin-bottom(3);
     @include u-margin-right(3);
-    text-align: center;
+    @include u-text-align('center');
 
     svg {
       --vote-ddc-icon-fill: #{$base-dark};
@@ -42,7 +42,7 @@
 
   &__body {
     @include u-padding-y(3);
-    font-size: 16px;
+    font-size: 1rem;
 
     ul {
       margin: 0;
