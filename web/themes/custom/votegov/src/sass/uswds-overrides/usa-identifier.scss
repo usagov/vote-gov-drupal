@@ -1,0 +1,33 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+@use "mixins" as *;
+
+.usa-identifier {
+  // Default to USWDS colors
+  --usa-identifier-bg: #{color('base-darkest')};
+  --usa-identifier-link: #{color('base-light')};
+  --usa-identifier-link-hover: #{color('base-lighter')};
+  background-color: var(--usa-identifier-bg);
+
+  [data-theme="contrast"] & {
+    --usa-identifier-bg: #{$bg-high-contrast};
+    --usa-identifier-link: #{$base-white};
+    --usa-identifier-link-hover: #{$link-high-contrast-hover-blue};
+  }
+}
+
+.usa-identifier__required-link,
+.usa-identifier__required-link.usa-link,
+.usa-identifier__identity-disclaimer a,
+.usa-identifier__container a {
+  color: var(--usa-identifier-link);
+
+  &:visited {
+    color: var(--usa-identifier-link);
+  }
+
+  @include hover {
+    color: var(--usa-identifier-link-hover);
+  }
+}
+

@@ -1,10 +1,18 @@
 @use "uswds-core" as *;
 @use "variables" as *;
+@use "mixins" as *;
 
 .usa-banner {
+  --usa-banner-body-text: #{color('base-darkest')};
+  --usa-banner-text: #{color('base-darkest')};
   @include u-position('relative');
   @include u-z(100);
   background-color: $bg-light;
+
+  [data-theme="contrast"] & {
+    --usa-banner-body-text: #{$bg-high-contrast};
+    --usa-banner-text: #{$bg-high-contrast};
+  }
 }
 
 .usa-banner__inner {
@@ -37,6 +45,14 @@
   @include u-font-size('sans', 3);
 }
 
+.usa-banner__header-text {
+  color: var(--usa-banner-text);
+}
+
+.usa-banner__button-text {
+  @include vote-link($color: $base-dark, $color-hover: $base-primary-hover);
+}
+
 
 .usa-banner__button[aria-expanded="true"] {
   &:before,
@@ -46,4 +62,8 @@
       inset-inline-end: 0;
     }
   }
+}
+
+.usa-media-block__body, .usa-banner__guidance {
+  color: var(--usa-banner-body-text);
 }
