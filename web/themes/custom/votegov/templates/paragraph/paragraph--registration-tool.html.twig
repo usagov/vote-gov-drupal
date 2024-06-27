@@ -38,14 +38,14 @@
                aria-autocomplete="list" aria-controls="vote-registration-tool__results">
         <div class="vote-registration-tool__list-container">
           <div id="vote-registration-tool__results" class="vote-registration-tool__nav">
-            <ul class="vote-registration-tool__list" data-test="stateList" role="listbox"
+            <ul class="vote-registration-tool__list" data-test="stateList"
                 aria-label="{{ 'States and territories list' | t }}">
               {% set results = drupal_view_result('state_territory', 'block') %}
               {% for result in results %}
                 {% set nodeID = result._entity.id() %}
                 {% set node_path = path('entity.node.canonical', {'node': nodeID}) %}
                 {% set node_key = result._entity.field_state_abbreviation.value %}
-                <li role="option">
+                <li>
                   <a data-key="{{ node_key }}" href="{{ node_path }}">{{ result.node_field_data_title }}</a>
                 </li>
               {% endfor %}
