@@ -6,7 +6,6 @@
 
   // Enable external links behavior.
   // `extlinkjs-ignore` attribute should be added to all icons in order to not render the uswds external links icon
-  //.filter( (externalLink) => !externalLink.matches()
   const externalLinks = document.querySelectorAll('a[href^="https"]:not([extlinkjs-ignore])');
   const title_translated = Drupal.t('External link opens in new window');
 
