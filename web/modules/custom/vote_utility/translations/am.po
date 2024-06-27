@@ -15,6 +15,10 @@ msgstr "አማርኛ"
 msgid "Select language"
 msgstr "ቋንቋ ይምረጡ"
 
+#breadcrumb
+msgid "Home"
+msgstr "መነሻ ገጽ"
+
 #main
 msgid "@sitename in language"
 msgstr "@sitename በአማርኛ"

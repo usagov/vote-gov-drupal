@@ -12,9 +12,16 @@ msgstr ""
 msgid "French"
 msgstr "Français"
 
+msgid "Home"
+msgstr "Page d'accueil"
+
 # config.languages.params.select_language
 msgid "Select language"
 msgstr "Sélectionner une langue"
+
+#breadcrumb
+msgid "Home"
+msgstr "Page d'accueil"
 
 # config.languages.params.Owner
 msgid "@sitename in language"

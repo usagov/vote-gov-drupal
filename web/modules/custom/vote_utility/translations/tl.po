@@ -16,6 +16,10 @@ msgstr ""
 msgid "Select language"
 msgstr "Pumili ng wika"
 
+#breadcrumb
+msgid "Home"
+msgstr "Homepage"
+
 #main
 msgid "@sitename in language"
 msgstr "@sitename sa Tagalog"
