@@ -50,8 +50,6 @@ h6 {
 
 // Paragraph
 p {
-  @include u-font-family('sans');
-
   .page-content & {
     &:has(.usa-button) {
       @include u-margin-top(5);
