@@ -6,7 +6,6 @@
 #}
 
 <div class="vote-double-deck-card">
-  {% block content %}
   <div class="vote-double-deck-card__primary">
     <div class="vote-double-deck-card__icon">
       {{ source(directory ~ '/img/svg/map-icon.svg' ) }}
@@ -17,5 +16,4 @@
     </div>
   </div>
   <div class="vote-double-deck-card__body_secondary">{{ content.field_body_secondary | field_value}}</div>
-  {% endblock %}
 </div>
