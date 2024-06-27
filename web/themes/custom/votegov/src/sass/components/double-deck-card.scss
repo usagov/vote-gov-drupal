@@ -47,12 +47,10 @@
     ul {
       margin: 0;
 
-      @include at-media('tablet') {
-        column-count: 2;
-        column-gap: 7px;
-        max-height: 450px;
-        overflow-y: auto;
-        column-fill: auto;
+      &:has(:nth-child(6)) {
+        @include at-media('tablet') {
+          column-count: 2;
+        }
       }
     }
   }
