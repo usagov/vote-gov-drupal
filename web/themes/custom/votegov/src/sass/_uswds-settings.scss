@@ -168,6 +168,7 @@ https://designsystem.digital.gov/documentation/settings/
   $theme-column-gap-mobile: 5,
   //$theme-column-gap-desktop: 7,
   $theme-site-margins-width: 10,
+  $theme-site-margins-mobile-width: 3,
   $theme-site-margins-breakpoint: 'tablet',
 
   // Typography settings ---------------------------------------------------------------
@@ -182,7 +183,7 @@ https://designsystem.digital.gov/documentation/settings/
   $theme-font-type-serif: "merriweather",
   $theme-font-role-ui: "sans",
   $theme-font-role-heading: "sans",
-  $theme-font-role-body: "serif",
+  $theme-font-role-body: "sans",
   $theme-font-role-alt: "sans",
   $theme-text-measure: none, // Set standard line-length to 100%
   $theme-lead-measure: none,
