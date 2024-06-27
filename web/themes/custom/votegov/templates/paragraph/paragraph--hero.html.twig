@@ -9,10 +9,16 @@
   'vote-hero--' ~ content.field_background_color | field_value | render
 ] %}
 
+{% set alt_text = content.field_media[0]['#item'].alt %}
+
 {# Caching the data in content object #}
 {% set savedCache = content | render %}
 
 {# add if statement - if alt is set of alt = alt else null alt = alt="" #}
+
+{# {% if item.alt %}
+  {{ item.alt|t }} -> {{ 'New alt text'|t }}
+{% endif %} #}
 
 <section{{ attributes.addClass(classes) }}>
   {# Hold these title_* placeholders for potential integration #}
@@ -34,16 +40,18 @@
         'secondary': true
       } %}
     </div>
-    {{ dd(content.field.media[0]['#media'].field_media_image.alt) }}
+    {# {{ dd(content.field_media[0]['#item'].alt) }} #}
+
     {% if content.field_media | render %}
-    {% if image.attributes.alt %}
+    {# {{ dd(alt_text) }} #}
+    {% if alt_text is not empty %}
     <div class="vote-hero__image">
       {{ content.field_media | field_value }}
     </div>
     {% else %}
-    
     <div class="vote-hero__image">
-      {{ content.field_media | field_value }} 
+      {{ content.field_media | {{ add_alt_text(content.field_media, 'Your alt text here') | field_value }} }}
+    
     </div>
     {% endif %}
   {% endif %}
