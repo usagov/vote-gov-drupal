@@ -17,7 +17,7 @@ msgstr "Seleccione el idioma"
 
 #breadcrumb
 msgid "Home"
-msgstr "Página de inicio"
+msgstr "Página principal"
 
 #main
 msgid "@sitename in language"
