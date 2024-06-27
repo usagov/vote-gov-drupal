@@ -1,0 +1,13 @@
+{#
+/**
+ * @file
+ * setting conditional that if alt text is not set to add `role="presentation"` to address accessability
+ */
+#}
+
+
+{% if attributes.alt %}
+  <img{{ attributes }} />
+{% else %}
+  <img{{ attributes.setAttribute('role', 'presentation') }}/>
+{% endif %}
