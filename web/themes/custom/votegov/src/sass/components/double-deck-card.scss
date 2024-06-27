@@ -3,7 +3,7 @@
 @use "mixins" as *;
 
 .vote-double-deck-card {
-  --vote-ddc-bg: #{$base-secondary-white;
+  --vote-ddc-bg: #{$base-secondary-white};
   @include vote-block-margin-y;
   background-color: var(--vote-ddc-bg);
   border: 1px solid $base-dark;
@@ -11,55 +11,55 @@
   [data-theme="contrast"] & {
     --vote-ddc-bg: #{$base-white};
   }
+}
 
-  &__primary {
-    @include u-padding(4);
+.vote-double-deck-card__primary {
+  @include u-padding(4);
 
-    @include at-media('tablet') {
-      @include u-display('flex');
-      gap: 1.5rem;
-    }
+  @include at-media('tablet') {
+    @include u-display('flex');
+    gap: 1.5rem;
   }
+}
 
-  &__icon {
-    @include u-margin-bottom(3);
-    @include u-text-align('center');
+.vote-double-deck-card__icon {
+  @include u-margin-bottom(3);
+  @include u-text-align('center');
 
-    svg {
-      --vote-ddc-icon-fill: #{$base-dark};
-      fill: var(--vote-ddc-icon-fill);
-
-      [data-theme="contrast"] & {
-        --vote-ddc-icon-fill: #{$bg-high-contrast};
-      }
-    }
-  }
-
-  &__heading {
-    @include u-font('serif', 9);
-  }
-
-  &__body {
-    @include u-padding-y(3);
-
-    ul {
-      margin: 0;
-
-      &:has(:nth-child(6)) {
-        @include at-media('tablet') {
-          column-count: 2;
-        }
-      }
-    }
-  }
-
-  &__body_secondary {
-    --vote-ddc-body-secondary-bg: #{$bg-light-cool};
-    background-color: var(--vote-ddc-body-secondary-bg);
-    @include u-padding(4);
+  svg {
+    --vote-ddc-icon-fill: #{$base-dark};
+    fill: var(--vote-ddc-icon-fill);
 
     [data-theme="contrast"] & {
-      --vote-ddc-body-secondary-bg: #{$bg-light};
+      --vote-ddc-icon-fill: #{$bg-high-contrast};
     }
+  }
+}
+
+.vote-double-deck-card__heading {
+  @include u-font('serif', 9);
+}
+
+.vote-double-deck-card__body {
+  @include u-padding-y(3);
+
+  ul {
+    margin: 0;
+
+    &:has(:nth-child(6)) {
+      @include at-media('tablet') {
+        column-count: 2;
+      }
+    }
+  }
+}
+
+.vote-double-deck-card__body_secondary {
+  --vote-ddc-body-secondary-bg: #{$bg-light-cool};
+  background-color: var(--vote-ddc-body-secondary-bg);
+  @include u-padding(4);
+
+  [data-theme="contrast"] & {
+    --vote-ddc-body-secondary-bg: #{$bg-light};
   }
 }
