@@ -13,7 +13,7 @@
     }
 
     a {
-      display: inline-block;
+      @include u-display('inline-block')
     }
   }
 }
