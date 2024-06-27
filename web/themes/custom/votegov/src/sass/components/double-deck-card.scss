@@ -3,11 +3,10 @@
 @use "mixins" as *;
 
 .vote-double-deck-card {
-  --vote-ddc-bg: #{#F7F9FA};
+  --vote-ddc-bg: #{$base-secondary-white;
   @include vote-block-margin-y;
   background-color: var(--vote-ddc-bg);
   border: 1px solid $base-dark;
-  line-height: 155%;
 
   [data-theme="contrast"] & {
     --vote-ddc-bg: #{$base-white};
@@ -18,12 +17,12 @@
 
     @include at-media('tablet') {
       @include u-display('flex');
+      gap: 1.5rem;
     }
   }
 
   &__icon {
     @include u-margin-bottom(3);
-    @include u-margin-right(3);
     @include u-text-align('center');
 
     svg {
@@ -42,7 +41,6 @@
 
   &__body {
     @include u-padding-y(3);
-    font-size: 1rem;
 
     ul {
       margin: 0;
