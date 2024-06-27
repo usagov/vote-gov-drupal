@@ -26,10 +26,7 @@
     @include grid-col(6);
   }
 
-  &.vote-heading--red-underline::after {
-    --vote-heading--underline: #{$ac-warm};
-    background-color: var(--vote-heading--underline);
-
+  &.vote-heading--red-underline {
     [data-theme="contrast"] & {
       --vote-heading--underline: #{$base-white};
     }

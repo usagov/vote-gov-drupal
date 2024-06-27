@@ -7,6 +7,7 @@ $eacgov-partner-breakpoint: 'tablet-lg';
 .vote-eac-partner {
   --vote-eac-patner-bg: #{$bg-light-cool};
   @include u-text-align('center');
+  @include u-font-family('serif');
   background-color: var(--vote-eac-patner-bg);
 
   [data-theme="contrast"] & {

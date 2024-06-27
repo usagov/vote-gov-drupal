@@ -3,32 +3,31 @@
 @use "mixins" as *;
 
 .usa-identifier {
-  --usa-identifier-bg: #{#1b1b1b};
+  // Default to USWDS colors
+  --usa-identifier-bg: #{color('base-darkest')};
+  --usa-identifier-link: #{color('base-light')};
+  --usa-identifier-link-hover: #{color('base-lighter')};
   background-color: var(--usa-identifier-bg);
 
   [data-theme="contrast"] & {
     --usa-identifier-bg: #{$bg-high-contrast};
+    --usa-identifier-link: #{$base-white};
+    --usa-identifier-link-hover: #{$link-high-contrast-hover-blue};
   }
 }
 
-.usa-identifier__required-link.usa-link:visited, .usa-identifier__required-link:visited,
-.usa-identifier__required-link, .usa-identifier__required-link.usa-link,
+.usa-identifier__required-link,
+.usa-identifier__required-link.usa-link,
 .usa-identifier__identity-disclaimer a,
 .usa-identifier__container a {
-  --usa-identifier-text: #{#a9aeb1};
-  color: var(--usa-identifier-text);
+  color: var(--usa-identifier-link);
 
-  [data-theme="contrast"] & {
-    --usa-identifier-text: #{$base-white};
+  &:visited {
+    color: var(--usa-identifier-link);
   }
 
   @include hover {
-    --usa-identifier-text-hover: #{#dfe1e2};
-    color: var(--usa-identifier-text-hover);
-
-    [data-theme="contrast"] & {
-      --usa-identifier-text-hover: #{$link-high-contrast-hover-blue};
-    }
+    color: var(--usa-identifier-link-hover);
   }
 }
 

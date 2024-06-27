@@ -3,9 +3,16 @@
 @use "mixins" as *;
 
 .usa-banner {
+  --usa-banner-body-text: #{color('base-darkest')};
+  --usa-banner-text: #{color('base-darkest')};
   @include u-position('relative');
   @include u-z(100);
   background-color: $bg-light;
+
+  [data-theme="contrast"] & {
+    --usa-banner-body-text: #{$bg-high-contrast};
+    --usa-banner-text: #{$bg-high-contrast};
+  }
 }
 
 .usa-banner__inner {
@@ -39,12 +46,7 @@
 }
 
 .usa-banner__header-text {
-  --usa-banner-text: #{#1B1B1B};
   color: var(--usa-banner-text);
-
-  [data-theme="contrast"] & {
-    --usa-banner-text: #{$bg-high-contrast};
-  }
 }
 
 .usa-banner__button-text {
@@ -63,10 +65,5 @@
 }
 
 .usa-media-block__body, .usa-banner__guidance {
-  --usa-banner-body-text: #{#1B1B1B};
   color: var(--usa-banner-body-text);
-
-  [data-theme="contrast"] & {
-    --usa-banner-body-text: #{$bg-high-contrast};
-  }
 }

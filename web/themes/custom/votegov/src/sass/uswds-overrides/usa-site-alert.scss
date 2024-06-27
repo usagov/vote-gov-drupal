@@ -3,21 +3,22 @@
 @use "mixins" as *;
 
 .usa-site-alert--info .usa-alert {
-  --usa-alert-info-bg: #{#e7f6f8};
+  --usa-alert-info-bg: #{color('cyan-5')};
   --usa-alert-info-border: #{$ac-cool-light};
+  --usa-alert-info-text: #{color('base-darkest')};
+  --usa-alert-info-icon: #{color('base-darkest')};
   @include u-border-left(0);
   background-color: var(--usa-alert-info-bg);
   border-inline-start: 0.5rem var(--usa-alert-info-border) solid;
 
-
   [data-theme="contrast"] & {
-    --usa-alert-info-bg: #{#FFFF00};
-    --usa-alert-info-border: #{#0A0A2A};
+    --usa-alert-info-bg: #{$btn-secondary-bg-high-contrast-hover};
+    --usa-alert-info-border: #{$bg-high-contrast};
+    --usa-alert-info-text: #{$bg-high-contrast};
+    --usa-alert-info-icon: #{$bg-high-contrast};
   }
 
   .usa-alert__body {
-    --usa-alert-info-bg: #{#e7f6f8};
-    --usa-alert-info-text: #{#1B1B1B};
     background-color: var(--usa-alert-info-bg);
     color: var(--usa-alert-info-text);
 
@@ -27,7 +28,6 @@
     }
 
     &:before {
-      --usa-alert-info-icon: #{#1B1B1B};
       background-color: var(--usa-alert-info-icon);
 
       @include u-left('auto');
@@ -36,15 +36,6 @@
       @include at-media('tablet') {
         inset-inline-start: 4.5rem;
       }
-
-      [data-theme="contrast"] & {
-        --usa-alert-info-icon: #{#0A0A2A};
-      }
-    }
-
-    [data-theme="contrast"] & {
-      --usa-alert-info-bg: #{#FFFF00};
-      --usa-alert-info-text: #{#0A0A2A};
     }
   }
 }
