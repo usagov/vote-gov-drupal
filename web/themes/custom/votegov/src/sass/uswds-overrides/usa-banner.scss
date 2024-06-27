@@ -17,6 +17,7 @@
 
 .usa-banner__inner {
   height: 3.5rem;
+  align-items: center;
 
   @include at-media-max('tablet') {
     @include u-padding-right(2);
