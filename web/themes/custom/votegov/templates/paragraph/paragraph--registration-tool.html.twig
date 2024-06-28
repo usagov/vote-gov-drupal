@@ -38,8 +38,7 @@
                aria-autocomplete="list" aria-controls="vote-registration-tool__results">
         <div class="vote-registration-tool__list-container">
           <div id="vote-registration-tool__results" class="vote-registration-tool__nav">
-            <ul class="vote-registration-tool__list" data-test="stateList"
-                aria-label="{{ 'States and territories list' | t }}">
+            <ul class="vote-registration-tool__list" aria-label="{{ 'States and territories list' | t }}" data-test="stateList">
               {% set results = drupal_view_result('state_territory', 'block') %}
               {% for result in results %}
                 {% set nodeID = result._entity.id() %}
