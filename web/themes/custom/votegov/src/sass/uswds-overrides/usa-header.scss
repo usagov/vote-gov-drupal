@@ -11,6 +11,10 @@
     @include at-media('tablet-lg') {
       width: 12.5rem;
     }
+
+    a {
+      @include u-display('inline-block')
+    }
   }
 }
 

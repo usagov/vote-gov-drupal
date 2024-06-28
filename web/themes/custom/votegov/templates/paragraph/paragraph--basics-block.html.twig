@@ -8,7 +8,7 @@
 {# Caching the data in content object #}
 {% set savedCache = content | render %}
 
-<div{{ attributes.addClass(['vote-basics-block', 'type--secondary']) }}>
+<div{{ attributes.addClass('vote-basics-block') }}>
   {# Hold these title_* placeholders for potential integration #}
   {{ title_prefix }}
   {{ title_suffix }}

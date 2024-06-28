@@ -10,23 +10,32 @@
 
   @include at-media('tablet') {
     @include u-flex-direction('column');
+    @include u-border('solid');
+    border-color: $base-white;
+    border-width: 2px;
+    border-inline-start-width: 0;
+    border-start-end-radius: 0.5rem;
+    border-end-end-radius: 0.5rem;
     top: calc(50% - 3.125rem);
     inset-inline-start: 0;
   }
 
   @include at-media-max('tablet') {
+    @include u-bottom('205');
     inset-inline-start: calc(50% - 3.125rem);
-    bottom: 0;
   }
 }
 
 .vote-theme-options__button {
+  --theme-options-button--bg: #{$base-white};
+  --theme-options-button--bg-hover: #{$base-primary-hover};
+  --theme-options-button--icon: #{$base-dark};
   @include button-unstyled;
   @include u-display('block');
   @include u-width('full');
   @include u-padding(2);
   border: 1px solid $base-dark;
-  background-color: $base-white;
+  background-color: var(--theme-options-button--bg);
   cursor: pointer;
 
   @include at-media('tablet') {
@@ -34,12 +43,19 @@
   }
 
   @include at-media-max('tablet') {
-    border-bottom: 0;
+    --theme-options-button--bg: #{$base-primary};
+
+    @include hover {
+      --theme-options-button--bg-hover: #{$base-dark};
+    }
   }
 
-
   @include hover {
-    background-color: $base-white;
+    background-color: var(--theme-options-button--bg-hover);
+
+    @include before {
+      --theme-options-button--icon: #{$base-white};
+    }
   }
 
   &:first-child {
@@ -51,6 +67,7 @@
     @include at-media-max('tablet') {
       border-inline-end: 0;
       border-start-start-radius: 0.5rem;
+      border-end-start-radius: 0.5rem;
     }
   }
 
@@ -61,27 +78,46 @@
 
     @include at-media-max('tablet') {
       border-start-end-radius: 0.5rem;
+      border-end-end-radius: 0.5rem;
+    }
+  }
+
+  @include before {
+    @include u-width(2);
+    @include u-height(2);
+    @include u-display('block');
+    background-color: var(--theme-options-button--icon);
+    background-size: contain;
+
+    @include at-media-max('tablet') {
+      --theme-options-button--icon: #{$base-white};
+    }
+  }
+
+  [data-theme="contrast"] & {
+    @include hover {
+      --theme-options-button--bg-hover: #{$btn-bg-high-contrast};
+    }
+
+    @include at-media-max('tablet') {
+      --theme-options-button--bg: #{$btn-bg-high-contrast};
+
+      @include hover {
+        --theme-options-button--bg-hover: #{$btn-bg-high-contrast-hover};
+      }
     }
   }
 }
 
 .vote-theme-options__button--theme {
   @include before {
-    @include u-width(2);
-    @include u-height(2);
-    @include u-display('block');
-    background: url("../../img/svg/dark-light.svg") no-repeat center center;
-    background-size: contain;
+    mask: url("../../img/svg/dark-light.svg") no-repeat center center;
   }
 }
 
 .vote-theme-options__button--scale {
   @include before {
-    @include u-width(2);
-    @include u-height(2);
-    @include u-display('block');
-    background: url("../../img/svg/text-size.svg") no-repeat center center;
-    background-size: contain;
+    mask: url("../../img/svg/text-size.svg") no-repeat center center;
   }
 }
 

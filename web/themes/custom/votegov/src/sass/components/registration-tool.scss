@@ -5,13 +5,15 @@
 .vote-registration-tool {
   --registration-tool--bg: #{$base-dark};
   --registration-tool__input--text: #{$base-dark};
-  @include vote-block-padding-y--narrow;
+  @include u-padding-top(5);
+  @include u-padding-bottom(6);
   background-color: var(--registration-tool--bg);
   color: $base-white;
 
   @include at-media('tablet-lg') {
     background: var(--registration-tool--bg) url('../../img/hero-map.webp') no-repeat center center;
     background-size: cover;
+    @include u-padding-bottom(10);
   }
 
   [data-theme="contrast"] & {
@@ -27,19 +29,18 @@
 
 .vote-registration-tool__container {
   @include grid-container;
-}
 
-.vote-registration-tool__content {
   @include at-media('tablet-lg') {
     @include grid-row;
+    @include u-flex('align-center');
+    @include u-flex('justify');
 
-    .vote-registration-tool__text {
+    .vote-registration-tool__content {
       @include grid-col(6);
     }
 
     .vote-registration-tool__form {
       @include grid-col(5);
-      margin-inline-start: calc(100% / 12);
     }
   }
 
