@@ -1,9 +1,13 @@
 <div class="vote-usagov-partner">
   {# USA.gov Links #}
-  <nav class="vote-usagov-partner__links" aria-label={{ "External election resources" | t }}>
-    {# USA.gov election info links #}
-    {{ drupal_entity('block_content', '18') }}
-  </nav>
+  {% set content_original = drupal_entity('block_content', '18') | render | striptags %}
+  {% set content_translated = content_original | t %}
+  {% if language == 'en' or language == 'es' or content_translated != content_original %}
+    <nav class="vote-usagov-partner__links" aria-label={{ "External election resources" | t }}>
+      {# USA.gov election info links #}
+      {{ drupal_entity('block_content', '18') }}
+    </nav>
+  {% endif %}
 
   {# Row 2 Divider - USA.gov link and email sign-up #}
   <div class="vote-usagov-partner__contact-container">
