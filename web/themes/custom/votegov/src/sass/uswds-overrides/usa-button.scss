@@ -1,5 +1,6 @@
 @use "uswds-core" as *;
 @use "variables" as *;
+@use "mixins" as *;
 
 .usa-button {
   .usa-form & {
@@ -33,12 +34,10 @@
     }
   }
 
-  &:hover,
-  &:focus,
-  &.usa-focus,
-  &.usa-button--hover
-  {
+  @include hover {
+    @include u-text-decoration('no-underline');
     --usa-button-bg: #{$base-primary-hover};
+    color: var(--usa-button-text);
 
     [data-theme="contrast"] & {
       --usa-button-bg: #{$btn-bg-high-contrast-hover};
@@ -49,25 +48,25 @@
     --usa-button-bg: #{$ac-warm};
 
     [data-theme="contrast"] & {
-      --usa-button-bg: #{$btn-bg-high-contrast};
+      --usa-button-bg: #{$bg-hero-default};
+      --usa-button-text: #{$text-high-contrast};
     }
 
     &.usa-button--active {
       --usa-button-bg: #{$ac-warm-hover};
 
       [data-theme="contrast"] & {
-        --usa-button-bg: #{$btn-bg-high-contrast-hover};
+        --usa-button-bg: #{$btn-secondary-bg-high-contrast-hover};
+        --usa-button-text: #{$text-high-contrast};
       }
     }
 
-    &:hover,
-    &:focus,
-    &.usa-focus,
-    &.usa-button--hover {
+    @include hover {
       --usa-button-bg: #{$ac-warm-hover};
 
       [data-theme="contrast"] & {
-        --usa-button-bg: #{$btn-bg-high-contrast-hover};
+        --usa-button-bg: #{$btn-secondary-bg-high-contrast-hover};
+        --usa-button-text: #{$text-high-contrast};
       }
     }
   }

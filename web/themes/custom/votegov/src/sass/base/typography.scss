@@ -32,9 +32,9 @@ h4,
 h5,
 h6 {
   --h-txt-color: #{$base-dark};
-  @include u-font-family('sans');
+  @include u-font-family('serif');
   @include u-text('no-uppercase');
-  @include u-font-weight('medium');
+  @include u-font-weight('bold');
   @include u-margin-top(5);
   @include u-text('ls-auto');
   color: var(--h-txt-color);
@@ -45,11 +45,6 @@ h6 {
 
   &:first-child {
     @include u-margin-top(0);
-  }
-
-  .type--secondary & {
-    @include u-font-family('serif');
-    @include u-font-weight('bold');
   }
 }
 
@@ -64,6 +59,7 @@ p {
 
 // Lists
 ul, ol {
+  @include u-font-family('sans');
   main & {
     &:last-child {
       @include u-margin-bottom(0);
@@ -112,10 +108,6 @@ hr, p + hr {
 
 main {
   @include u-font-family('serif');
-}
-
-.type--secondary {
-  @include u-font-family('sans');
 }
 
 .nonvfont,

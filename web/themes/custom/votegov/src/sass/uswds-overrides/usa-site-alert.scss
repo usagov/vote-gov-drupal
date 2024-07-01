@@ -3,16 +3,33 @@
 @use "mixins" as *;
 
 .usa-site-alert--info .usa-alert {
+  --usa-alert-info-bg: #{color('cyan-5')};
+  --usa-alert-info-border: #{$ac-cool-light};
+  --usa-alert-info-text: #{color('base-darkest')};
+  --usa-alert-info-icon: #{color('base-darkest')};
   @include u-border-left(0);
-  border-inline-start: 0.5rem $ac-cool-light solid;
+  background-color: var(--usa-alert-info-bg);
+  border-inline-start: 0.5rem var(--usa-alert-info-border) solid;
+
+  [data-theme="contrast"] & {
+    --usa-alert-info-bg: #{$btn-secondary-bg-high-contrast-hover};
+    --usa-alert-info-border: #{$bg-high-contrast};
+    --usa-alert-info-text: #{$bg-high-contrast};
+    --usa-alert-info-icon: #{$bg-high-contrast};
+  }
 
   .usa-alert__body {
+    background-color: var(--usa-alert-info-bg);
+    color: var(--usa-alert-info-text);
+
     @include at-media-max('tablet') {
       @include u-padding-left(0);
       padding-inline-start: 3rem;
     }
 
     &:before {
+      background-color: var(--usa-alert-info-icon);
+
       @include u-left('auto');
       inset-inline-start: 0.5rem;
 

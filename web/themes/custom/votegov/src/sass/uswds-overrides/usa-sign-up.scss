@@ -39,7 +39,7 @@
 
   @include at-media('mobile-lg') {
     @include u-display('flex');
-    @include u-align-items('align-baseline');
+    @include u-align-items('align-center');
 
     .usa-input {
       @include u-margin(0);
