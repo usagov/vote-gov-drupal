@@ -3,6 +3,17 @@
 @use "mixins" as *;
 
 .usa-card {
+  --usa-card-container-bg: #{$base-primary};
+  --usa-card-body: #{$base-dark};
+  --vote-feature-card-icon-fill: #{$base-dark};
+
+  [data-theme="contrast"] & {
+    --usa-card-container-bg: #{$bg-high-contrast};
+    --usa-card-body: #{$bg-high-contrast};
+    --vote-feature-card-icon-fill: #{$bg-high-contrast};
+  }
+
+
   @include at-media('tablet-lg') {
     @include u-margin(0);
   }
@@ -41,7 +52,7 @@
       }
 
       .usa-card__container {
-        background-color: $base-primary;
+        background-color: var(--usa-card-container-bg);
         border: 2px solid $base-dark;
         box-shadow: 0px 4px 4px 0px rgba($base-dark, 0.25);
       }
@@ -92,7 +103,7 @@
 .usa-card__body {
   @include u-font('sans', 6);
   @include u-padding(0);
-  color: $base-dark;
+  color: var(--usa-card-body);
 
   &:last-child {
     @include u-padding-bottom(0);
@@ -119,7 +130,7 @@
   }
 
   svg {
-    fill: $base-dark;
+    fill: var(--vote-feature-card-icon-fill);
   }
 }
 
