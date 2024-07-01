@@ -30,7 +30,7 @@ We call a macro which calls itself to render the full tree.
 <nav aria-label="{{ 'Primary' | t }}" class="usa-nav" data-test="mainNav">
   <div class="usa-nav__inner">
     <div class="grid-container usa-nav__close-container">
-      <button type="button" class="usa-nav__close" data-test="closeBtn">{{ 'Close' | t }}</button>
+      <button type="button" class="usa-nav__close" data-test="mainCloseBtn">{{ 'Close' | t }}</button>
     </div>
   {{ menus.menu_links(items, attributes, 0, 'basic-mega-nav-section-') }}
   <div class="usa-nav__secondary">
