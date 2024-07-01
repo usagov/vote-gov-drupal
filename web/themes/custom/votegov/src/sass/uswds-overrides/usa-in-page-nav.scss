@@ -22,15 +22,14 @@
     }
 
     &.usa-current {
-      // @include vote-link-bg($color: $base-dark);
-      @include vote-link-bg; // temporarily using default color
+      @include vote-link-bg; // add back ($color: $base-dark) when USWDS fix is made
 
-      // section indicator (left of current section heading)
+      // turning off styling until USWDS fix is made
       &:after {
-        @include u-left(0);
-        inset-inline-start: 0;
-        background-color: $base-dark;
-        visibility: hidden; // temporarily hiding section indicator
+        display: none; // temporarily hiding section indicator
+        // @include u-left(0);
+        // inset-inline-start: 0;
+        // background-color: $base-dark;
       }
     }
   }
