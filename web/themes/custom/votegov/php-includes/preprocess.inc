@@ -23,6 +23,16 @@ function votegov_preprocess(&$variables) {
   $sitename = Drupal::config('system.site')->get('name');
   $variables['sitename'] = $sitename;
 
+  $block = \Drupal\block_content\Entity\BlockContent::load(18);
+  if ($block) {
+    $html_content = $block->get('body')->value;
+    $dom = new DOMDocument();
+    @$dom->loadHTML($html_content);
+    $a_tag = $dom->getElementsByTagName('li')[0]->getElementsByTagName('a')[0];
+    $text = $a_tag->nodeValue;
+    $variables['footer_links_content'] = $text;
+  }
+
   // Set variable for node object.
   $node = \Drupal::request()->attributes->get('node');
   if (!empty($node)) {
