@@ -25,14 +25,6 @@ function votegov_preprocess(&$variables) {
   $sitename = Drupal::config('system.site')->get('name');
   $variables['sitename'] = $sitename;
 
-  // Set block 18 translation flags for each language.
-  $block_18 = BlockContent::load(18);
-  $languages = Drupal::languageManager()->getLanguages();
-  $variables['block_18_translations'] = [];
-  foreach ($languages as $langcode => $langauge) {
-    $variables['block_18_translations'][$langcode] = $block_18->hasTranslation($langcode);
-  }
-
   // Set variable for node object.
   $node = \Drupal::request()->attributes->get('node');
   if (!empty($node)) {
