@@ -7,7 +7,6 @@ dependencies:
     - block_content.type.government_banner
     - block_content.type.registration_form_selector
     - block_content.type.search
-    - user.role.authenticated
   module:
     - block_content
     - user
@@ -370,10 +369,9 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: role
+        type: perm
         options:
-          role:
-            authenticated: authenticated
+          perm: 'access block library'
       cache:
         type: tag
         options: {  }
@@ -726,7 +724,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user.roles
+        - user.permissions
       tags: {  }
   page_1:
     id: page_1
@@ -752,5 +750,5 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user.roles
+        - user.permissions
       tags: {  }
