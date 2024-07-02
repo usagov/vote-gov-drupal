@@ -5,8 +5,6 @@
  * Theme preprocess functions.
  */
 
-use Drupal\block_content\Entity\BlockContent;
-
 /**
  * Implements hook_preprocess().
  */
