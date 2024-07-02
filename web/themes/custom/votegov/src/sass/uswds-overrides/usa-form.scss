@@ -13,6 +13,7 @@
   @include u-padding(1.5);
   @include u-height('auto');
   @include u-line-height('sans', 1);
+  @include u-font-size('sans', 5);
 }
 
 ::placeholder {

@@ -5,8 +5,14 @@
 $eacgov-partner-breakpoint: 'tablet-lg';
 
 .vote-eac-partner {
+  --vote-eac-patner-bg: #{$bg-light-cool};
   @include u-text-align('center');
-  background-color: $bg-light-cool;
+  @include u-font-family('serif');
+  background-color: var(--vote-eac-patner-bg);
+
+  [data-theme="contrast"] & {
+    --vote-eac-patner-bg: #{$section-bg-high-contrast};
+  }
 }
 
 .vote-eac-partner__container {

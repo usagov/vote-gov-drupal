@@ -3,8 +3,13 @@
 @use "mixins" as *;
 
 .vote-quicklinks {
-  background-color: $base-dark;
+  --vote-quicklinks-bg: #{$base-dark};
+  background-color: var(--vote-quicklinks-bg);
   color: $base-white;
+
+  [data-theme="contrast"] & {
+    --vote-quicklinks-bg: #{$bg-high-contrast};
+  }
 }
 
 .vote-quicklinks__container {
@@ -19,6 +24,12 @@
 
   @include at-media('desktop') {
     @include grid-col(6);
+  }
+
+  &.vote-heading--red-underline {
+    [data-theme="contrast"] & {
+      --vote-heading--underline: #{$base-white};
+    }
   }
 }
 
