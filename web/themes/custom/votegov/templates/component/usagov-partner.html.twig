@@ -1,9 +1,6 @@
 <div class="vote-usagov-partner">
   {# USA.gov Links #}
-  {% set content_cleaned = footer_links_content | render | striptags %}
-  {% set content_original = content_cleaned %}
-  {% set content_translated = content_original | t %}
-  {% if language == 'en' or content_translated != content_original %}
+  {% if block_18_translations[language] %}
     <nav class="vote-usagov-partner__links" aria-label={{ "External election resources" | t }}>
       {# USA.gov election info links #}
       {{ drupal_entity('block_content', '18') }}

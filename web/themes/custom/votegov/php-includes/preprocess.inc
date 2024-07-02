@@ -23,6 +23,14 @@ function votegov_preprocess(&$variables) {
   $sitename = Drupal::config('system.site')->get('name');
   $variables['sitename'] = $sitename;
 
+  // Block 18 translation flags
+  $block_18 = \Drupal\block_content\Entity\BlockContent::load(18);
+  $languages = Drupal::languageManager()->getLanguages();
+  $variables['block_18_translations'] = [];
+  foreach ($languages as $langcode => $langauge) {
+    $variables['block_18_translations'][$langcode] = $block_18->hasTranslation($langcode);
+  }
+
   $block = \Drupal\block_content\Entity\BlockContent::load(18);
   if ($block) {
     $html_content = $block->get('body')->value;
