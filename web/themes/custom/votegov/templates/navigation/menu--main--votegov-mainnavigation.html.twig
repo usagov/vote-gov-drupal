@@ -49,7 +49,7 @@ We call a macro which calls itself to render the full tree.
       <ul class="usa-nav__primary usa-accordion" data-test="mobileNav">
         {% for item in items %}
           {% set aria_id = aria_id ~ loop.index | clean_id %}
-          <li class="usa-nav__primary-item">
+          <li class="usa-nav__primary-item" aria-current="{{ item.in_active_trail ? 'page' : 'false' }}">
             {% if item.below %}
               <button
                 type="button"
