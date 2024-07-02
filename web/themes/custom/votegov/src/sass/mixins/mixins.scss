@@ -164,7 +164,7 @@
 
   [data-theme="contrast"] & {
     --vote-link--color: #{$base-white};
-    --vote-link-hover--color: #{$link-high-contrast-hover-blue};
+    --vote-link-hover--color: #{$btn-secondary-bg-high-contrast-hover};
   }
 
   &:visited {
