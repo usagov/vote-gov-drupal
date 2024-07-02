@@ -32,14 +32,12 @@
 }
 
 .usa-nav__primary-item {
-  --usa-nav--primary-item-bg: #{$base-white};
   --usa-nav--primary-item-text: #{$base-dark};
   --usa-nav--primary-item-bg-hover: #{$base-dark};
   --usa-nav--primary-item-text-hover: #{$base-white};
   --usa-current-bg: #{$ac-warm};
 
   [data-theme="contrast"] & {
-    --usa-nav--primary-item-bg: #{$bg-high-contrast};
     --usa-nav--primary-item-text: #{$bg-high-contrast};
     --usa-nav--primary-item-bg-hover: #{$bg-high-contrast};
     --usa-nav--primary-item-text-hover: #{$base-white};
@@ -99,7 +97,7 @@
 
         &[aria-expanded="false"] {
           span::after {
-            background-color:  var(--usa-nav--primary-item-bg-hover);
+            background-color: $base-white;
           }
         }
 
@@ -122,6 +120,12 @@
 }
 
 .usa-nav__submenu {
+  --usa-nav--submenu-bg: #{$base-dark};
+
+  [data-theme="contrast"] & {
+    --usa-nav--submenu-bg: #{$bg-high-contrast};
+  }
+
   @include at-media-max('tablet-lg') {
     border-top: 1px solid $bg-light-medium;
   }
@@ -129,11 +133,19 @@
   @include at-media('tablet-lg') {
     @include u-width('auto');
     @include u-padding-top(0);
-    background-color: $base-dark;
+    background-color: var(--usa-nav--submenu-bg);
   }
 }
 
 .usa-nav__submenu-item {
+  --usa-nav--submenu-item-text: #{$base-dark};
+  --usa-nav--submenu-item-text-hover: #{$base-white};
+
+  [data-theme="contrast"] & {
+    --usa-nav--submenu-item-text: #{$bg-high-contrast};
+    --usa-nav--submenu-item-text-hover: #{$btn-secondary-bg-high-contrast-hover};
+  }
+
   > span {
     opacity: 0.6;
   }
@@ -172,7 +184,11 @@
       @include u-padding-x(2);
       @include u-padding-y(1);
       @include u-display('block');
-      color: $base-white;
+      color: var(--usa-nav--submenu-item-text);
+
+      @include hover {
+        color: var(--usa-nav--submenu-item-text-hover);
+      }
     }
   }
 }
@@ -196,6 +212,18 @@
 }
 
 .usa-nav__link--parent {
+  --usa-nav--parent-after-color: #{$base-dark};
+
+  [data-theme="contrast"] & {
+    @include at-media('tablet-lg') {
+      --usa-nav--parent-after-color: #{$base-white};
+
+      @include hover {
+        --usa-nav--parent-after-color: #{$btn-secondary-bg-high-contrast-hover};
+      }
+    }
+  }
+
   @include u-font-weight('bold');
 
   @include after {
@@ -203,13 +231,9 @@
     @include u-display('inline-block');
     margin-inline-start: 0.5rem;
     height: 0.75rem;
-    background-color: $base-dark;
+    background-color: var(--usa-nav--parent-after-color);
     mask: url('../../img/svg/arrow-white.svg') no-repeat;
     mask-size: contain;
-
-    @include at-media('tablet-lg') {
-      background-color: $base-white;
-    }
   }
 }
 
