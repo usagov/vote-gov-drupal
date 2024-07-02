@@ -5,7 +5,7 @@
  * Theme preprocess functions.
  */
 
- use Drupal\block_content\Entity\BlockContent;
+use Drupal\block_content\Entity\BlockContent;
 
 /**
  * Implements hook_preprocess().
@@ -25,7 +25,7 @@ function votegov_preprocess(&$variables) {
   $sitename = Drupal::config('system.site')->get('name');
   $variables['sitename'] = $sitename;
 
-  // set Block 18 translation flags for each language.
+  // Set block 18 translation flags for each language.
   $block_18 = BlockContent::load(18);
   $languages = Drupal::languageManager()->getLanguages();
   $variables['block_18_translations'] = [];
