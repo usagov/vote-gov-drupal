@@ -32,6 +32,20 @@
 }
 
 .usa-nav__primary-item {
+  --usa-nav--primary-item-bg: #{$base-white};
+  --usa-nav--primary-item-text: #{$base-dark};
+  --usa-nav--primary-item-bg-hover: #{$base-dark};
+  --usa-nav--primary-item-text-hover: #{$base-white};
+  --usa-current-bg: #{$ac-warm};
+
+  [data-theme="contrast"] & {
+    --usa-nav--primary-item-bg: #{$bg-high-contrast};
+    --usa-nav--primary-item-text: #{$bg-high-contrast};
+    --usa-nav--primary-item-bg-hover: #{$bg-high-contrast};
+    --usa-nav--primary-item-text-hover: #{$base-white};
+    --usa-current-bg: #{$link-high-contrast-hover-blue};
+  }
+
   @include at-media-max('tablet-lg') {
     border-top-color: $bg-light-medium;
 
@@ -72,20 +86,20 @@
       @include u-padding-y(2.5);
       @include u-font-size('sans', 5);
       @include u-line-height('sans', 4);
-      color: $base-dark;
+      color: var(--usa-nav--primary-item-text);
 
       &[aria-expanded="true"] {
-        background-color: $base-dark;
-        color: $base-white;
+        background-color: var(--usa-nav--primary-item-bg-hover);
+        color: var(--usa-nav--primary-item-text-hover);
       }
 
       @include hover {
-        background-color: $base-dark;
-        color: $base-white;
+        background-color: var(--usa-nav--primary-item-bg-hover);
+        color: var(--usa-nav--primary-item-text-hover);
 
         &[aria-expanded="false"] {
           span::after {
-            background-color: $base-white;
+            background-color:  var(--usa-nav--primary-item-bg-hover);
           }
         }
 
@@ -100,7 +114,7 @@
         @include after {
           @include u-left(0);
           @include u-right(0);
-          background-color: $ac-warm;
+          background-color: var(--usa-current-bg);
         }
       }
     }
