@@ -158,16 +158,23 @@
 
 @mixin vote-link-dark {
   @include u-text('underline');
-  color: $base-white;
+  --vote-link--color: #{$base-white};
+  --vote-link-hover--color: #{$ac-cool-light};
+  color: var(--vote-link--color);
+
+  [data-theme="contrast"] & {
+    --vote-link--color: #{$base-white};
+    --vote-link-hover--color: #{$link-high-contrast-hover-blue};
+  }
 
   &:visited {
-    color: $base-white;
+    color: var(--vote-link--color);
   }
 
   @include hover {
     @include u-text('underline');
     background-color: transparent;
-    color: $ac-cool-light;
+    color: var(--vote-link-hover--color);
   }
 }
 
