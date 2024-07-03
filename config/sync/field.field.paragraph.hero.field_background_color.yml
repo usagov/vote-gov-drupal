@@ -17,7 +17,7 @@ required: true
 translatable: false
 default_value:
   -
-    value: predefined_color_list_from_color_palette
+    value: dark
 default_value_callback: ''
 settings: {  }
 field_type: list_string
