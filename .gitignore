@@ -71,7 +71,6 @@ node_modules
 .lando.local.yml
 
 # Ignore Theme dist files
-/web/themes/custom/vote_gov/dist/
 /web/themes/custom/votegov/dist/
 
 # Allow cloud.gov settings file.
