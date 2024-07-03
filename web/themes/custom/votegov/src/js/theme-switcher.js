@@ -34,7 +34,7 @@
 
       if (storedSwitch) {
         // Set the current theme index based on the stored value
-        let storedValue = values.indexOf(storedSwitch);
+        let storedValue = currentIndex = values.indexOf(storedSwitch);
         targetContainer.setAttribute(attr, values[storedValue]);
       }
 
