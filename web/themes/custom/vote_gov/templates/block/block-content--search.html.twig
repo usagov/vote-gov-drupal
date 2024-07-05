@@ -24,11 +24,11 @@
     <form class="usa-search usa-search--small search-bar" role="search" id="search_form" action="https://search.vote.gov/search" accept-charset="UTF-8" method="get">
       {# if current language is chinese simplified, change the search to use Chinese tradional 'zh' #}
       {% set searchLanguage = language == 'zh-hans' ? 'zh' : language %}
-      <input type="hidden" name="affiliate" id="affiliate" value="vote_{{ affiliated_search == '1' ? searchLanguage : 'en' }}" autocomplete="off">
+      <input type="hidden" name="affiliate" id="affiliate" value="vote_{{ affiliated_search == '1' ? searchLanguage : 'en' }}">
 
       <label class="usa-sr-only" for="search-field-en-small">{{ content.field_search_placeholder | field_value }}</label>
 
-      <input class="usa-input" data-test="search-box" id="search-field-en-small" type="search" name="query" autocomplete="off" placeholder="{{ content.field_search_placeholder | field_value }} {{ affiliated_search != '1' ? '(in English)' | t }}">
+      <input class="usa-input" data-test="search-box" id="search-field-en-small" type="search" name="query" placeholder="{{ content.field_search_placeholder | field_value }} {{ affiliated_search != '1' ? '(in English)' | t }}">
 
       <button class="usa-button" data-test="search-btn" type="submit" name="commit" data-disable-with="Search">
         <img src="{{ theme_path }}/dist/assets/img/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="{{ 'Search Vote.gov' | t }}">
