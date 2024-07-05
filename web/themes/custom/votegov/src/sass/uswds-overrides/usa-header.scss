@@ -25,6 +25,12 @@
   @include grid-container();
 
   .usa-menu-btn {
+    --usa-menu-btn: #{$base-dark};
+
+    [data-theme="contrast"] & {
+      --usa-menu-btn: #{$link-high-contrast};
+    }
+
     @include u-height('auto');
     @include u-font-size('sans', 6);
     @include u-font-weight('medium');
@@ -33,7 +39,7 @@
     text-transform: none;
     cursor: pointer;
     background-color: transparent;
-    color: $base-dark;
+    color: var(--usa-menu-btn);
 
     @include hover {
       @include u-text-decoration('underline');

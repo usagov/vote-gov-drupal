@@ -32,19 +32,15 @@
 }
 
 .usa-nav__primary-item {
-  --usa-nav--primary-item-text: #{$base-dark};
-  --usa-nav--primary-item-bg-hover: #{$base-dark};
-  --usa-nav--primary-item-text-hover: #{$base-white};
-  --usa-current-bg: #{$ac-warm};
-
-  [data-theme="contrast"] & {
-    --usa-nav--primary-item-text: #{$bg-high-contrast};
-    --usa-nav--primary-item-bg-hover: #{$bg-high-contrast};
-    --usa-nav--primary-item-text-hover: #{$base-white};
-    --usa-current-bg: #{$link-high-contrast-hover-blue};
-  }
-
   @include at-media-max('tablet-lg') {
+    --usa-nav--primary-item-text: #{$base-dark};
+    --usa-nav--primary-item-bg: #{$bg-light-cool};
+
+    [data-theme="contrast"] & {
+      --usa-nav--primary-item-text: #{$link-high-contrast};
+      --usa-nav--primary-item-bg: #{$bg-high-contrast-light-cool};
+    }
+
     border-top-color: $bg-light-medium;
 
     &:first-child {
@@ -58,14 +54,14 @@
       @include u-font-weight('bold');
       @include u-padding(2);
       @include u-width('full');
-      color: $base-dark;
+      color: var(--usa-nav--primary-item-text);
 
       @include hover {
-        background-color: $bg-light-cool;
+        background-color: var(--usa-nav--primary-item-bg);
       }
 
       &:not(.usa-button):not(.usa-current) {
-        color: $base-dark;
+        color: var(--usa-nav--primary-item-text);
       }
 
       &.usa-current {
@@ -77,6 +73,18 @@
   }
 
   @include at-media('tablet-lg') {
+    --usa-nav--primary-item-text: #{$base-dark};
+    --usa-nav--primary-item-bg-hover: #{$base-dark};
+    --usa-nav--primary-item-text-hover: #{$base-white};
+    --usa-current-bg: #{$ac-warm};
+
+    [data-theme="contrast"] & {
+      --usa-nav--primary-item-text: #{$bg-high-contrast};
+      --usa-nav--primary-item-bg-hover: #{$bg-high-contrast};
+      --usa-nav--primary-item-text-hover: #{$base-white};
+      --usa-current-bg: #{$link-high-contrast-hover-blue};
+    }
+
     > button.usa-nav__link,
     > a.usa-nav__link {
       @include u-font-weight('bold');
@@ -138,12 +146,24 @@
 }
 
 .usa-nav__submenu-item {
-  --usa-nav--submenu-item-text: #{$base-dark};
-  --usa-nav--submenu-item-text-hover: #{$base-white};
+  @include at-media-max('tablet-lg') {
+    --usa-nav--submenu-item-text: #{$base-dark};
+    --usa-nav--submenu-item-bg-hover: #{$bg-light-cool};
 
-  [data-theme="contrast"] & {
-    --usa-nav--submenu-item-text: #{$bg-high-contrast};
-    --usa-nav--submenu-item-text-hover: #{$btn-secondary-bg-high-contrast-hover};
+    [data-theme="contrast"] & {
+      --usa-nav--submenu-item-text: #{$link-high-contrast};
+      --usa-nav--submenu-item-bg-hover: #{$bg-high-contrast-light-cool};
+    }
+  }
+
+  @include at-media('tablet-lg') {
+    --usa-nav--submenu-item-text: #{$base-white};
+    --usa-nav--submenu-item-text-hover: #{$base-white};
+
+    [data-theme="contrast"] & {
+      --usa-nav--submenu-item-text: #{$base-white};
+      --usa-nav--submenu-item-text-hover: #{$btn-secondary-bg-high-contrast-hover};
+    }
   }
 
   > span {
@@ -166,14 +186,15 @@
       @include u-padding-x(1);
       @include u-padding-y(1.5);
       @include u-display('block');
-      color: $base-dark;
+      color: var(--usa-nav--submenu-item-text);
     }
 
     > a.usa-nav__Link,
     > a.usa-current,
     > a:not(.usa-button):not(.usa-current) {
       @include hover {
-        background-color: $bg-light-cool;
+        background-color: var(--usa-nav--submenu-item-bg-hover);
+        color: var(--usa-nav--submenu-item-text);
       }
     }
   }
@@ -184,10 +205,10 @@
       @include u-padding-x(2);
       @include u-padding-y(1);
       @include u-display('block');
-      color: var(--usa-nav--submenu-item-text);
+      color: var(--usa-nav--submenu-item-text) !important;
 
       @include hover {
-        color: var(--usa-nav--submenu-item-text-hover);
+        color: var(--usa-nav--submenu-item-text-hover) !important;
       }
     }
   }
