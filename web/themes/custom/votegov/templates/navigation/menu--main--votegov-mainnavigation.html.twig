@@ -49,7 +49,7 @@ We call a macro which calls itself to render the full tree.
       <ul class="usa-nav__primary usa-accordion" data-test="mobileNav">
         {% for item in items %}
           {% set aria_id = aria_id ~ loop.index | clean_id %}
-          <li class="usa-nav__primary-item" aria-current="{{ item.in_active_trail ? 'page' : 'false' }}">
+          <li class="usa-nav__primary-item">
             {% if item.below %}
               <button
                 type="button"
@@ -84,9 +84,10 @@ We call a macro which calls itself to render the full tree.
               {% else %}
                 {% set link_classes = [
                   'usa-nav__link',
-                  item.in_active_trail ? 'usa-current'
+                  item.in_active_trail ? 'usa-current',
                 ] %}
-                {{ link(item.title, item.url, {'class': link_classes}) }}
+                {% set link_attributes = item.in_active_trail? {'aria-current': 'page'} : {} %}
+                {{ link(item.title, item.url, {'class': link_classes} | merge(link_attributes)) }}
               {% endif %}
             {% endif %}
           </li>
@@ -97,7 +98,8 @@ We call a macro which calls itself to render the full tree.
         {% for item in items %}
           <li class="usa-nav__submenu-item">
             {% if item.url.routeName != '<nolink>' %}
-              {{ link(item.title, item.url) }}
+                {% set link_attributes = item.in_active_trail? {'aria-current': 'page'} : {} %}
+              {{ link(item.title, item.url, link_attributes) }}
             {% else %}
               <span>{{ item.title }}</span>
             {% endif %}
