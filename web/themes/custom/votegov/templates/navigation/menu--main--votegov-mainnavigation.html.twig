@@ -84,7 +84,7 @@ We call a macro which calls itself to render the full tree.
               {% else %}
                 {% set link_classes = [
                   'usa-nav__link',
-                  item.in_active_trail ? 'usa-current',
+                  item.in_active_trail ? 'usa-current'
                 ] %}
                 {% set link_attributes = item.in_active_trail? {'aria-current': 'page'} : {} %}
                 {{ link(item.title, item.url, {'class': link_classes} | merge(link_attributes)) }}
