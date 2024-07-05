@@ -233,7 +233,7 @@
 }
 
 .usa-nav__link--parent {
-  --usa-nav--parent-after-color: #{$base-dark};
+  --usa-nav--parent-after-color: #{$base-white};
 
   [data-theme="contrast"] & {
     @include at-media('tablet-lg') {
@@ -252,7 +252,6 @@
     @include u-display('inline-block');
     margin-inline-start: 0.5rem;
     height: 0.75rem;
-    background-color: var(--usa-nav--parent-after-color);
     mask: url('../../img/svg/arrow-white.svg') no-repeat;
     mask-size: contain;
   }
