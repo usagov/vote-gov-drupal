@@ -2,7 +2,7 @@
   {# USA.gov Links #}
   {% set usagov_links_block = drupal_entity('block_content', '18') %}
   {% if usagov_links_block['#block_content'].langcode.value == language %}
-    <nav class="vote-usagov-partner__links" aria-label={{ "External election resources" | t }}>
+    <nav class="vote-usagov-partner__links" aria-label="{{ 'External election resources' | t }}">
       {# USA.gov election info links #}
       {{ usagov_links_block }}
     </nav>
