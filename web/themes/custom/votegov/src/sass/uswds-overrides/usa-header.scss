@@ -50,8 +50,8 @@
       @include u-display('inline-block');
       margin-inline-start: 0.5rem;
       height: 0.75rem;
-      background: url( '../../img/svg/menu.svg' ) no-repeat;
-      background-size: contain;
+      mask: url( '../../img/svg/menu.svg' ) no-repeat;
+      background-color: var(--usa-menu-btn);
     }
 
     &[aria-hidden="true"] {

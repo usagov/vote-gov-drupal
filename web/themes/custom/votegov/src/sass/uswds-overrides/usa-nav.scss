@@ -262,6 +262,12 @@
 }
 
 .usa-nav__close {
+  --usa-nav--close: #{$base-dark};
+
+  [data-theme="contrast"] & {
+    --usa-nav--close: #{$link-high-contrast};
+  }
+
   @include u-margin(0);
   @include u-width('auto');
   @include u-height('auto');
@@ -276,7 +282,7 @@
   transform: translateY(-3.75rem);
   cursor: pointer;
   background-color: transparent;
-  color: $base-dark;
+  color: var(--usa-nav--close);
 
   @include hover {
     @include u-text-decoration('underline');
@@ -287,8 +293,9 @@
     @include u-display('inline-block');
     margin-inline-start: 0.5rem;
     height: 0.75rem;
-    background: url('../../img/svg/close.svg') no-repeat;
-    background-size: contain;
+    mask: url('../../img/svg/close.svg') no-repeat;
+    background-color: var(--usa-nav--close);
+    mask-size: 70%;
   }
 
   @include at-media-max('tablet-lg') {
