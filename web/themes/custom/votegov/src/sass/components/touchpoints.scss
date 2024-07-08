@@ -6,6 +6,10 @@
   }
 }
 
+.touchpoints-form-wrapper, .wrapper {
+  outline: none;
+}
+
 .vote-touchpoints--button {
   @include u-margin(0);
 
