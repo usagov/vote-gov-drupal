@@ -4,22 +4,30 @@
 @mixin vote-narrow-container {
   @include at-media('tablet') {
     @include grid-col(10);
-    @include grid-offset(1);
+    margin-inline-start: calc(1 / 12 * 100%);
   }
 
   @include at-media('tablet-lg') {
     @include grid-col(8);
-    @include grid-offset(2);
+    margin-inline-start: calc(2 / 12 * 100%);
   }
 
   @include at-media('desktop-lg') {
-    @include grid-col(7);
-    @include grid-offset(3);
+    @include grid-col(6);
+    margin-inline-start: calc(3 / 12 * 100%);
   }
 }
 
 .vote-narrow-container {
   @include vote-narrow-container;
+
+  .field--name-field-media + & {
+    @include u-margin-top(4);
+
+    @include at-media('tablet-lg') {
+      @include u-margin-top(6);
+    }
+  }
 }
 
 @mixin vote-block-margin-y {
