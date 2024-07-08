@@ -10,7 +10,7 @@
 
 {{ attach_library('votegov/registration_tool') }}
 
-<section{{ attributes.addClass('vote-registration-tool').setAttribute('role', 'region').setAttribute('aria-label', 'Register to vote selector tool' | t).setAttribute('aria-describedby', content.field_form_heading | field_value | render) }}>
+<section{{ attributes.addClass('vote-registration-tool').setAttribute('role', 'region').setAttribute('aria-label', 'Register to vote selector tool' | t) }}>
   {# Hold these title_* placeholders for potential integration #}
   {{ title_prefix }}
   {{ title_suffix }}

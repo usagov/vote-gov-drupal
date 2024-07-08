@@ -6,9 +6,7 @@
 }
 
 .usa-breadcrumb__link {
-  .page-masthead & {
-    @include vote-link-dark;
-  }
+  @include vote-link-dark;
 }
 
 // targeting the div wrapping the breadcrumb block and add margin top to the following element
