@@ -5,11 +5,15 @@
   background-color: transparent;
 }
 
-.usa-breadcrumb__list-item {
-  &::after {
-    [dir="rtl"] & {
-      transform: rotate(180deg);
-    }
+.usa-breadcrumb__list-item::after {
+  [dir="rtl"] & {
+    transform: rotate(180deg);
+  }
+}
+
+.usa-breadcrumb__link::before {
+  [dir="rtl"] & {
+    transform: rotate(180deg);
   }
 }
 

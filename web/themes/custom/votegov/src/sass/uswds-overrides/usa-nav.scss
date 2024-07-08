@@ -64,13 +64,11 @@
     }
 
     >button {
-      [dir="rtl"] & {
-        text-align: right;
+      text-align: start;
 
-        span:after {
-          right: unset;
-          left: 0;
-        }
+      span:after {
+        right: unset;
+        inset-inline-end: 0;
       }
     }
   }
