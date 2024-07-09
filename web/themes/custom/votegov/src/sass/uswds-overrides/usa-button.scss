@@ -3,6 +3,8 @@
 @use "mixins" as *;
 
 .usa-button {
+  margin-right: unset;
+
   .usa-form & {
     @include u-margin-top(3);
   }

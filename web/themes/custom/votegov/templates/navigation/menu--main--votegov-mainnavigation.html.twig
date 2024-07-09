@@ -70,7 +70,10 @@ We call a macro which calls itself to render the full tree.
                   'usa-nav__link--parent',
                   item.in_active_trail ? 'usa-current'
                 ] %}
-                <li class="usa-nav__submenu-item">{{ link(item.title, item.url, {'class': link_classes}) }}</li>
+                <li class="usa-nav__submenu-item">
+                  {% set link_attributes = item.in_active_trail ? {'aria-current': 'page'} : {} %}
+                  {{ link(item.title, item.url, {'class': link_classes} | merge(link_attributes)) }}
+                </li>
                 {{ menus.menu_links(item.below, attributes, menu_level + 1, aria_id) }}
 
             {% else %}
@@ -86,7 +89,8 @@ We call a macro which calls itself to render the full tree.
                   'usa-nav__link',
                   item.in_active_trail ? 'usa-current'
                 ] %}
-                {{ link(item.title, item.url, {'class': link_classes}) }}
+                {% set link_attributes = item.in_active_trail ? {'aria-current': 'page'} : {} %}
+                {{ link(item.title, item.url, {'class': link_classes} | merge(link_attributes)) }}
               {% endif %}
             {% endif %}
           </li>
@@ -97,7 +101,8 @@ We call a macro which calls itself to render the full tree.
         {% for item in items %}
           <li class="usa-nav__submenu-item">
             {% if item.url.routeName != '<nolink>' %}
-              {{ link(item.title, item.url) }}
+              {% set link_attributes = item.in_active_trail ? {'aria-current': 'page'} : {} %}
+              {{ link(item.title, item.url, link_attributes) }}
             {% else %}
               <span>{{ item.title }}</span>
             {% endif %}
