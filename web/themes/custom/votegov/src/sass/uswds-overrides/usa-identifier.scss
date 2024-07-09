@@ -19,3 +19,12 @@
   @include vote-link-dark;
 }
 
+.usa-identifier__logos {
+  margin-right: unset;
+  margin-inline-end: 1rem;
+}
+
+.usa-identifier__required-links-list {
+  padding-inline-start: 0;
+}
+
