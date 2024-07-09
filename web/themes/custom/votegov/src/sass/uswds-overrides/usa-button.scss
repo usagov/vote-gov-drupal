@@ -10,12 +10,25 @@
   }
 }
 
-.usa-button, .usa-button:not(.usa-button--unstyled), .usa-button:not(.usa-button--unstyled):hover {
+.usa-button,
+.usa-button:not(.usa-button--unstyled),
+.usa-button:not(.usa-button--unstyled):hover {
   --usa-button-bg: inherit;
+  --usa-button--outline: #{color('blue-40v')};
   background-color: var(--usa-button-bg);
+  outline-color: var(--usa-button--outline);
 
   [data-theme="contrast"] & {
     --usa-button-bg: #{$btn-bg-high-contrast};
+    outline-color: var(--usa-button--outline);
+  }
+
+  .vote-hero--homepage & {
+    --usa-button--outline: #{color('blue-70v')};
+
+    [data-theme="contrast"] & {
+      --usa-button--outline: #{color('blue-40v')};
+    }
   }
 }
 
