@@ -10,6 +10,12 @@
   [data-theme="contrast"] & {
     --usa-identifier-bg: #{$bg-high-contrast};
   }
+
+  @include at-media-max('tablet') {
+    &.vote-block-padding-y-narrow {
+      padding-bottom: 4.5rem;
+    }
+  }
 }
 
 .usa-identifier__required-link,
