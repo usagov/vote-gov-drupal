@@ -205,10 +205,10 @@
       @include u-padding-x(2);
       @include u-padding-y(1);
       @include u-display('block');
-      color: var(--usa-nav--submenu-item-text) !important;
+      color: var(--usa-nav--submenu-item-text);
 
       @include hover {
-        color: var(--usa-nav--submenu-item-text-hover) !important;
+        color: var(--usa-nav--submenu-item-text-hover);
       }
     }
   }
