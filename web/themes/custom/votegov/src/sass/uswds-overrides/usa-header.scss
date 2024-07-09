@@ -13,7 +13,13 @@
     }
 
     a {
-      @include u-display('inline-block')
+      @include u-display('inline-block');
+
+      [data-theme="contrast"] & {
+        svg>path {
+          fill: #0A0A2A;
+        }
+      }
     }
   }
 }
