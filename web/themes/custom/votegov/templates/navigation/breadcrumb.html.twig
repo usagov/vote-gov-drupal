@@ -14,9 +14,9 @@
     {% for item in breadcrumb %}
       <li class="usa-breadcrumb__list-item">
         {% if item.url %}
-          <a class="usa-breadcrumb__link" href="{{ item.url }}"><span>{{ item.text }}</span></a>
+            <a class="usa-breadcrumb__link" href="{{ item.url }}"><span>{{ item.text | t }}</span></a>
         {% else %}
-          {{ item.text }}
+          {{ item.text | t }}
         {% endif %}
       </li>
     {% endfor %}

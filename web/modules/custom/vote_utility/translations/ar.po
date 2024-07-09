@@ -16,6 +16,10 @@ msgstr "العربية"
 msgid "Select language"
 msgstr "اختر اللغة"
 
+#breadcrumb
+msgid "Home"
+msgstr "الصفحة الرئيسية"
+
 # config.languages.params.Owner
 msgid "@sitename in language"
 msgstr "@sitename باللغة العربية"
