@@ -15,6 +15,10 @@ msgstr "한국어"
 msgid "Select language"
 msgstr "언어 선택"
 
+#breadcrumb
+msgid "Home"
+msgstr "홈페이지"
+
 #main
 msgid "@sitename in language"
 msgstr "@sitename 한국어 "

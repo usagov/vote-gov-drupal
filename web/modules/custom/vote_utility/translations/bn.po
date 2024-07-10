@@ -15,6 +15,10 @@ msgstr "বাংলা"
 msgid "Select language"
 msgstr "ভাষা নির্বাচন করুন"
 
+#breadcrumb
+msgid "Home"
+msgstr "হোমপেজ"
+
 #main
 msgid "@sitename in language"
 msgstr "বাংলায় @sitename"

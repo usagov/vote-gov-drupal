@@ -60,7 +60,9 @@
   {# Hold these title_* placeholders for potential integration #}
   {{ title_prefix }}
   {{ title_suffix }}
-  {{ content.field_media | field_value }}
+  {{ content.field_media }}
+
+  <div class="vote-narrow-container">
   {% if drupal_view('inline_alert', 'embed_1') | render | striptags | trim %}
     {{ drupal_view('inline_alert', 'embed_1') }}
   {% endif %}
@@ -133,5 +135,5 @@
     {{'Last updated:' | t }} {{ content.field_updated_date | render | replace(t_numbers[language].numbers | default([])) | striptags('<span>') | raw }}
   </p>
   {% endif %}
-
+  </div>
 </article>

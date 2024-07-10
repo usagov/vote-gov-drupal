@@ -16,6 +16,10 @@ msgstr "Soomaali"
 msgid "Select language"
 msgstr "Ka dooro luuqadda"
 
+#breadcrumb
+msgid "Home"
+msgstr "Bogga guriga"
+
 # config.languages.params.Owner
 msgid "@sitename in language"
 msgstr "@sitename oo af Soomaali ah"
