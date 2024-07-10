@@ -3,12 +3,16 @@
 @use "mixins" as *;
 
 .vote-basic {
-  @include vote-block-margin-y;
-  @include grid-container();
+  .vote-type-landing & {
+    @include vote-block-margin-y;
+    @include grid-container();
+  }
 }
 
 .vote-basic__content {
+  .vote-type-landing & {
   @include at-media('tablet-lg') {
     @include grid-col(6);
+  }
   }
 }
