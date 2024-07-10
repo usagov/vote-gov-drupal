@@ -1,8 +1,10 @@
 adding:
   module:
-    dblog: 0
-    devel: 0
+    new_relic_rpm: -20
     disable_language: 0
-    field_ui: 0
-    views_ui: 0
+    log_stdout: 0
+    s3fs: 0
+    samlauth: 0
+    usagov_login: 0
+    externalauth: 10
 removing: {  }

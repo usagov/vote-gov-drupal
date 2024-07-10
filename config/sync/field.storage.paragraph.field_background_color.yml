@@ -12,6 +12,9 @@ type: list_string
 settings:
   allowed_values:
     -
+      value: predefined_color_list_from_color_palette
+      label: Default
+    -
       value: dark
       label: Dark
     -

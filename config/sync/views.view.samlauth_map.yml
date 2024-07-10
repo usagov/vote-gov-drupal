@@ -1,185 +1,36 @@
-uuid: 2b5d275b-a2b4-4c54-9c86-2f849dc93a19
+uuid: 8426eeca-862f-4709-885c-bd5c16b1bcb1
 langcode: en
 status: true
 dependencies:
   module:
-    - dblog
+    - externalauth
+    - samlauth
     - user
-_core:
-  default_config_hash: j0txIxY4nkJT_dscmXckM-1vanygDkJAeHPawZKfyH0
-id: watchdog
-label: 'Admin: Watchdog'
+id: samlauth_map
+label: 'SAML Authentication Links'
 module: views
-description: 'Recent log messages'
+description: ''
 tag: ''
-base_table: watchdog
-base_field: wid
+base_table: authmap
+base_field: ''
 display:
   default:
     id: default
-    display_title: Default
+    display_title: Master
     display_plugin: default
     position: 0
     display_options:
-      title: 'Recent log messages'
+      title: 'SAML Authentication Links'
       fields:
-        nothing:
-          id: nothing
-          table: views
-          field: nothing
-          relationship: none
-          group_type: group
-          admin_label: Icon
-          plugin_id: custom
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: icon
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: false
-        wid:
-          id: wid
-          table: watchdog
-          field: wid
+        authname:
+          id: authname
+          table: authmap
+          field: authname
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: standard
-          label: WID
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-        severity:
-          id: severity
-          table: watchdog
-          field: severity
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: machine_name
-          label: Severity
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          machine_name: false
-        type:
-          id: type
-          table: watchdog
-          field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: standard
-          label: Type
+          label: 'SAML IdP Unique ID'
           exclude: false
           alter:
             alter_text: false
@@ -220,15 +71,15 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-        timestamp:
-          id: timestamp
-          table: watchdog
-          field: timestamp
+        uid:
+          id: uid
+          table: authmap
+          field: uid
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: date
-          label: Date
+          plugin_id: numeric
+          label: 'Drupal User ID'
           exclude: false
           alter:
             alter_text: false
@@ -269,59 +120,14 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          date_format: short
-          custom_date_format: ''
-          timezone: ''
-        message:
-          id: message
-          table: watchdog
-          field: message
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: dblog_message
-          label: Message
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: true
-            path: 'admin/reports/dblog/event/{{ wid }}'
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: '{{ message }}'
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 56
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: true
-            trim: true
-            preserve_tags: ''
-            html: true
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          replace_variables: true
+          set_precision: false
+          precision: 0
+          decimal: .
+          separator: ''
+          format_plural: false
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
         name:
           id: name
           table: users_field_data
@@ -332,7 +138,7 @@ display:
           entity_type: user
           entity_field: name
           plugin_id: field
-          label: User
+          label: 'Drupal User Name'
           exclude: false
           alter:
             alter_text: false
@@ -387,15 +193,15 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        link:
-          id: link
-          table: watchdog
-          field: link
+        delete:
+          id: delete
+          table: authmap
+          field: delete
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: dblog_operations
-          label: Operations
+          plugin_id: samlauth_link_delete
+          label: delete
           exclude: false
           alter:
             alter_text: false
@@ -436,6 +242,9 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
+          text: delete
+          output_url_as_text: false
+          absolute: false
       pager:
         type: mini
         options:
@@ -454,79 +263,114 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
-          submit_button: Filter
-          reset_button: true
+          submit_button: Apply
+          reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
-          expose_sort_order: false
+          expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
         type: perm
         options:
-          perm: 'access site reports'
+          perm: 'configure saml'
       cache:
         type: none
         options: {  }
       empty:
-        area:
+        area_text_custom:
           id: area_text_custom
           table: views
           field: area_text_custom
           relationship: none
           group_type: group
-          admin_label: 'No log messages available.'
+          admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'No log messages available.'
+          content: 'No links (from SAML Authentication ID to Drupal user)  found.'
           tokenize: false
-      sorts:
-        wid:
-          id: wid
-          table: watchdog
-          field: wid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: standard
-          order: DESC
-          expose:
-            label: ''
-            field_identifier: wid
-          exposed: false
+      sorts: {  }
       arguments: {  }
       filters:
-        type:
-          id: type
-          table: watchdog
-          field: type
+        authname:
+          id: authname
+          table: authmap
+          field: authname
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: dblog_types
+          plugin_id: string
+          operator: starts
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: authname_op
+            label: 'SAML IdP Unique ID'
+            description: ''
+            use_operator: false
+            operator: authname_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: authname
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              role3: '0'
+              role4: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        uid:
+          id: uid
+          table: users_field_data
+          field: uid
+          relationship: uid
+          group_type: group
+          admin_label: ''
+          entity_type: user
+          entity_field: uid
+          plugin_id: user_name
           operator: in
           value: {  }
           group: 1
           exposed: true
           expose:
-            operator_id: type_op
-            label: Type
+            operator_id: uid_op
+            label: 'Drupal user'
             description: ''
             use_operator: false
-            operator: type_op
+            operator: uid_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: type
+            identifier: uid
             required: false
             remember: false
-            multiple: true
+            multiple: false
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+              role3: '0'
+              role4: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -540,35 +384,33 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        severity:
-          id: severity
-          table: watchdog
-          field: severity
+        provider_field:
+          id: provider_field
+          table: authmap
+          field: provider_field
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: in_operator
-          operator: in
-          value: {  }
+          plugin_id: string
+          operator: '='
+          value: samlauth
           group: 1
-          exposed: true
+          exposed: false
           expose:
-            operator_id: severity_op
-            label: Severity
+            operator_id: ''
+            label: ''
             description: ''
             use_operator: false
-            operator: severity_op
+            operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: severity
+            identifier: ''
             required: false
             remember: false
-            multiple: true
+            multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-            reduce: false
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -581,62 +423,28 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
       style:
         type: table
         options:
           grouping: {  }
-          row_class: '{{ type }} {{ severity }}'
+          row_class: ''
           default_row_class: true
           columns:
-            nothing: nothing
-            wid: wid
-            severity: severity
-            type: type
-            timestamp: timestamp
-            message: message
+            authname: authname
+            uid: uid
             name: name
-            link: link
-          default: wid
+            delete: delete
+          default: authname
           info:
-            nothing:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: priority-medium
-            wid:
-              sortable: false
-              default_sort_order: desc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: priority-low
-            severity:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: priority-low
-            type:
+            authname:
               sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
-              responsive: priority-medium
-            timestamp:
+              responsive: ''
+            uid:
               sortable: true
-              default_sort_order: desc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: priority-low
-            message:
-              sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
@@ -648,12 +456,14 @@ display:
               align: ''
               separator: ''
               empty_column: false
-              responsive: priority-medium
-            link:
+              responsive: ''
+            delete:
+              sortable: false
+              default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
-              responsive: priority-low
+              responsive: ''
           override: true
           sticky: false
           summary: ''
@@ -673,14 +483,14 @@ display:
       relationships:
         uid:
           id: uid
-          table: watchdog
+          table: authmap
           field: uid
           relationship: none
           group_type: group
-          admin_label: User
+          admin_label: 'Linked Drupal user'
           plugin_id: standard
           required: false
-      css_class: admin-dblog
+      show_admin_links: false
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -700,7 +510,16 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/reports/dblog
+      path: admin/config/people/saml/authmap
+      menu:
+        type: tab
+        title: Links
+        description: ''
+        weight: 7
+        expanded: false
+        menu_name: admin
+        parent: samlauth.samlauth_configure_form
+        context: '0'
     cache_metadata:
       max-age: -1
       contexts:

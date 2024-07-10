@@ -6,9 +6,9 @@ dependencies:
     - core.entity_view_mode.media.media_library
     - image.style.media_library
   module:
-    - image
     - media
     - media_library
+    - svg_image
     - user
   enforced:
     module:
@@ -153,6 +153,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:

@@ -8,7 +8,7 @@ entities_per_queue_item: 50
 remove_duplicates: true
 skip_untranslated: true
 xsl: true
-base_url: ''
+base_url: 'https://vote.gov'
 default_variant: default
 custom_links_include_images: false
 disable_language_hreflang: true

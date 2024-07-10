@@ -14,10 +14,10 @@ dependencies:
     - user.role.authenticated
   module:
     - block_content
-    - image
     - media
     - rest
     - serialization
+    - svg_image
     - text
     - user
 id: nvrf_api_blocks
@@ -499,6 +499,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
