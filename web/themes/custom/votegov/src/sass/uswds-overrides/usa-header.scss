@@ -6,18 +6,24 @@
   .usa-logo {
     @include u-margin(0);
     @include u-margin-top(1);
-    width: 10rem;
-
-    @include at-media('tablet-lg') {
-      width: 12.5rem;
-    }
 
     a {
-      @include u-display('inline-block');
+      svg {
+        @include u-display('inline-block');
+        width: 10rem;
 
-      [data-theme="contrast"] & {
-        svg>path {
-          fill: #0A0A2A;
+        @include at-media('tablet-lg') {
+          width: 12.5rem;
+        }
+
+        @include at-media-max('tablet-lg') {
+          max-height: 3.5rem;
+        }
+
+        [data-theme="contrast"] & {
+          >path {
+            fill: #0A0A2A;
+          }
         }
       }
     }
