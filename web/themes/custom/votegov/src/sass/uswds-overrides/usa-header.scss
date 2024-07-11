@@ -7,23 +7,24 @@
     @include u-margin(0);
     @include u-margin-top(1);
 
+    @include u-display('inline-block');
+    width: 10rem;
+
+    @include at-media('tablet-lg') {
+      width: 12.5rem;
+    }
+
     a {
-      svg {
-        @include u-display('inline-block');
-        width: 10rem;
+      @include u-display('inline-block');
+    }
 
-        @include at-media('tablet-lg') {
-          width: 12.5rem;
-        }
+    svg {
+      @include u-maxw('full');
+      @include u-height('auto');
 
-        @include at-media-max('tablet-lg') {
-          max-height: 3.5rem;
-        }
-
+      > path {
         [data-theme="contrast"] & {
-          >path {
-            fill: #0A0A2A;
-          }
+          fill: $bg-high-contrast;
         }
       }
     }
