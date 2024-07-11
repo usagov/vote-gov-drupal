@@ -56,6 +56,7 @@
       --usa-nav--primary-item-bg: #{$base-white};
 
       @include hover {
+        --usa-nav--primary-item-text: #{$link-high-contrast};
         --usa-nav--primary-item-bg: #{$bg-high-contrast-light-cool};
       }
     }
@@ -177,6 +178,7 @@
     --usa-nav--submenu-item-bg: #{$base-white};
 
     @include hover {
+      --usa-nav--submenu-item-text: #{$base-secondary-hover};
       --usa-nav--submenu-item-bg: #{$bg-light-cool};
     }
 
@@ -185,6 +187,7 @@
       --usa-nav--submenu-item-bg: #{$base-white};
 
       @include hover {
+        --usa-nav--submenu-item-text: #{$link-high-contrast};
         --usa-nav--submenu-item-bg: #{$bg-high-contrast-light-cool};
       }
     }
@@ -205,7 +208,7 @@
       @include u-padding-x(1);
       @include u-padding-y(1.5);
       @include u-display('block');
-      background-color: var(--usa-nav--submenu-item-bg) !important;
+      background-color: var(--usa-nav--submenu-item-bg);
       color: var(--usa-nav--submenu-item-text) !important;
     }
 
@@ -214,8 +217,9 @@
     > a.usa-current,
     > a:not(.usa-button):not(.usa-current),
     > button.usa-nav__Link {
-      background-color: var(--usa-nav--submenu-item-bg) !important;
+      background-color: var(--usa-nav--submenu-item-bg);
       color: var(--usa-nav--submenu-item-text) !important;
+
     }
   }
 
@@ -263,17 +267,37 @@
 }
 
 .usa-nav__link--parent {
+  @include at-media-max('tablet-lg') {
+    --usa-nav--parent-color: #{$base-dark};
+
+      @include hover {
+        --usa-nav--parent-color: #{$base-secondary-hover};
+      }
+
+    [data-theme="contrast"] & {
+        --usa-nav--parent-color: #{$link-high-contrast};
+
+        @include hover {
+          --usa-nav--parent-color: #{$link-high-contrast};
+        }
+    }
+  }
+
+  @include at-media('tablet-lg') {
   --usa-nav--parent-color: #{$base-white};
 
+  @include hover {
+    --usa-nav--parent-color: #{$base-white};
+  }
+
   [data-theme="contrast"] & {
-    @include at-media('tablet-lg') {
       --usa-nav--parent-color: #{$base-white};
 
       @include hover {
         --usa-nav--parent-color: #{$btn-secondary-bg-high-contrast-hover};
       }
-    }
   }
+}
 
   @include u-font-weight('bold');
   color: var(--usa-nav--parent-color);
