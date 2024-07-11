@@ -28,4 +28,5 @@ settings:
         - rel
         - target
         - title
-image_upload: {  }
+image_upload:
+  status: false
