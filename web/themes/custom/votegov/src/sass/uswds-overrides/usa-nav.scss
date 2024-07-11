@@ -39,6 +39,10 @@
     [data-theme="contrast"] & {
       --usa-nav--primary-item-text: #{$link-high-contrast};
       --usa-nav--primary-item-bg: #{$bg-high-contrast-light-cool};
+
+      // @include hover {
+      //   --usa-nav--primary-item-bg: #{$bg-high-contrast-light-cool};
+      // }
     }
 
     border-top-color: $bg-light-medium;
@@ -55,10 +59,11 @@
       @include u-padding(2);
       @include u-width('full');
       color: var(--usa-nav--primary-item-text);
+      // background-color: var(--usa-nav--primary-item-bg);
 
-      @include hover {
-        background-color: var(--usa-nav--primary-item-bg);
-      }
+      // @include hover {
+      //   background-color: var(--usa-nav--primary-item-bg);
+      // }
 
       &:not(.usa-button):not(.usa-current) {
         color: var(--usa-nav--primary-item-text);
@@ -74,15 +79,23 @@
 
   @include at-media('tablet-lg') {
     --usa-nav--primary-item-text: #{$base-dark};
-    --usa-nav--primary-item-bg-hover: #{$base-dark};
-    --usa-nav--primary-item-text-hover: #{$base-white};
+    --usa-nav--primary-item-bg: #{$base-white};
     --usa-current-bg: #{$ac-warm};
+
+    @include hover {
+      --usa-nav--primary-item-text: #{$base-white};
+      --usa-nav--primary-item-bg: #{$base-dark};
+    }
 
     [data-theme="contrast"] & {
       --usa-nav--primary-item-text: #{$bg-high-contrast};
-      --usa-nav--primary-item-bg-hover: #{$bg-high-contrast};
-      --usa-nav--primary-item-text-hover: #{$base-white};
+      --usa-nav--primary-item-bg: #{$base-white};
       --usa-current-bg: #{$link-high-contrast-hover-blue};
+
+      @include hover {
+        --usa-nav--primary-item-text: #{$btn-secondary-bg-high-contrast-hover};
+        --usa-nav--primary-item-bg: #{$bg-high-contrast};
+      }
     }
 
     > button.usa-nav__link,
@@ -93,26 +106,14 @@
       @include u-font-size('sans', 5);
       @include u-line-height('sans', 4);
       color: var(--usa-nav--primary-item-text);
+      background-color: var(--usa-nav--primary-item-bg);
 
-      &[aria-expanded="true"] {
-        background-color: var(--usa-nav--primary-item-bg-hover);
-        color: var(--usa-nav--primary-item-text-hover);
-      }
+      &[aria-expanded="true"], &[aria-expanded="false"] {
+        color: var(--usa-nav--primary-item-text);
+        background-color: var(--usa-nav--primary-item-bg);
 
-      @include hover {
-        background-color: var(--usa-nav--primary-item-bg-hover);
-        color: var(--usa-nav--primary-item-text-hover);
-
-        &[aria-expanded="false"] {
-          span::after {
-            background-color: $base-white;
-          }
-        }
-
-        .usa-header--extended & {
-          &:after {
-            background-color: transparent;
-          }
+        span::after {
+          background-color: var(--usa-nav--primary-item-text);
         }
       }
 
@@ -121,6 +122,16 @@
           @include u-left(0);
           @include u-right(0);
           background-color: var(--usa-current-bg);
+        }
+      }
+
+      @include hover {
+        color: var(--usa-nav--primary-item-text);
+
+        .usa-header--extended & {
+          &:after {
+            background-color: transparent;
+          }
         }
       }
     }
@@ -158,11 +169,17 @@
 
   @include at-media('tablet-lg') {
     --usa-nav--submenu-item-text: #{$base-white};
-    --usa-nav--submenu-item-text-hover: #{$base-white};
+
+    @include hover {
+      --usa-nav--submenu-item-text: #{$base-white};
+    }
 
     [data-theme="contrast"] & {
       --usa-nav--submenu-item-text: #{$base-white};
-      --usa-nav--submenu-item-text-hover: #{$btn-secondary-bg-high-contrast-hover};
+
+      @include hover {
+        --usa-nav--submenu-item-text: #{$btn-secondary-bg-high-contrast-hover};
+      }
     }
   }
 
@@ -178,6 +195,7 @@
       @include u-border-top(0);
     }
 
+    > a,
     > a.usa-nav__Link,
     > a.usa-current,
     > a:not(.usa-button):not(.usa-current),
@@ -189,13 +207,16 @@
       color: var(--usa-nav--submenu-item-text);
     }
 
+    > a,
     > a.usa-nav__Link,
     > a.usa-current,
     > a:not(.usa-button):not(.usa-current) {
-      @include hover {
-        background-color: var(--usa-nav--submenu-item-bg-hover);
-        color: var(--usa-nav--submenu-item-text);
-      }
+      // background-color: ;
+      color: var(--usa-nav--submenu-item-text);
+      // @include hover {
+      //   background-color: var(--usa-nav--submenu-item-bg-hover);
+      //   color: var(--usa-nav--submenu-item-text);
+      // }
     }
   }
 
@@ -205,11 +226,11 @@
       @include u-padding-x(2);
       @include u-padding-y(1);
       @include u-display('block');
-      color: var(--usa-nav--submenu-item-text);
+      color: var(--usa-nav--submenu-item-text) !important;
 
-      @include hover {
-        color: var(--usa-nav--submenu-item-text-hover);
-      }
+      // @include hover {
+      //   --usa-nav--submenu-item-text: #{$btn-secondary-bg-high-contrast-hover};
+      // }
     }
   }
 }
@@ -233,19 +254,20 @@
 }
 
 .usa-nav__link--parent {
-  --usa-nav--parent-after-color: #{$base-white};
+  --usa-nav--parent-color: #{$base-white};
 
   [data-theme="contrast"] & {
     @include at-media('tablet-lg') {
-      --usa-nav--parent-after-color: #{$base-white};
+      --usa-nav--parent-color: #{$base-white};
 
       @include hover {
-        --usa-nav--parent-after-color: #{$btn-secondary-bg-high-contrast-hover};
+        --usa-nav--parent-color: #{$btn-secondary-bg-high-contrast-hover};
       }
     }
   }
 
   @include u-font-weight('bold');
+  color: var(--usa-nav--parent-color);
 
   @include after {
     @include u-width(2);
@@ -254,6 +276,7 @@
     height: 0.75rem;
     mask: url('../../img/svg/arrow-white.svg') no-repeat;
     mask-size: contain;
+    background-color: var(--usa-nav--parent-color);
   }
 }
 
