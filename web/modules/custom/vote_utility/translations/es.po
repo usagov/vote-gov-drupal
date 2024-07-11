@@ -19,6 +19,10 @@ msgstr "Seleccione el idioma"
 msgid "Home"
 msgstr "Página principal"
 
+#in-page nav
+msgid "On this page"
+msgstr "En esta página"
+
 #main
 msgid "@sitename in language"
 msgstr "@sitename en Español"
