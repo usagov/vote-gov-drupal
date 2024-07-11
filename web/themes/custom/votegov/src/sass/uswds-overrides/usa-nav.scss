@@ -275,29 +275,29 @@
       }
 
     [data-theme="contrast"] & {
-        --usa-nav--parent-color: #{$link-high-contrast};
+      --usa-nav--parent-color: #{$link-high-contrast};
 
-        @include hover {
-          --usa-nav--parent-color: #{$link-high-contrast};
-        }
+      @include hover {
+        --usa-nav--parent-color: #{$link-high-contrast};
+      }
     }
   }
 
   @include at-media('tablet-lg') {
   --usa-nav--parent-color: #{$base-white};
 
-  @include hover {
-    --usa-nav--parent-color: #{$base-white};
-  }
+    @include hover {
+      --usa-nav--parent-color: #{$base-white};
+    }
 
-  [data-theme="contrast"] & {
+    [data-theme="contrast"] & {
       --usa-nav--parent-color: #{$base-white};
 
       @include hover {
         --usa-nav--parent-color: #{$btn-secondary-bg-high-contrast-hover};
       }
+    }
   }
-}
 
   @include u-font-weight('bold');
   color: var(--usa-nav--parent-color);
@@ -309,7 +309,7 @@
     height: 0.75rem;
     mask: url('../../img/svg/arrow-white.svg') no-repeat;
     mask-size: contain;
-    background-color: var(--usa-nav--parent-color);
+    background-color: var(--usa-nav--parent-color) !important;
   }
 }
 
