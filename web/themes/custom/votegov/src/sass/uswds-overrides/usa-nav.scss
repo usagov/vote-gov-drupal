@@ -209,7 +209,7 @@
       @include u-padding-y(1.5);
       @include u-display('block');
       background-color: var(--usa-nav--submenu-item-bg);
-      color: var(--usa-nav--submenu-item-text) !important;
+      color: var(--usa-nav--submenu-item-text);
     }
 
     > a,
@@ -218,7 +218,7 @@
     > a:not(.usa-button):not(.usa-current),
     > button.usa-nav__Link {
       background-color: var(--usa-nav--submenu-item-bg);
-      color: var(--usa-nav--submenu-item-text) !important;
+      color: var(--usa-nav--submenu-item-text);
 
     }
   }
@@ -243,7 +243,7 @@
       @include u-padding-x(2);
       @include u-padding-y(1);
       @include u-display('block');
-      color: var(--usa-nav--submenu-item-text) !important;
+      color: var(--usa-nav--submenu-item-text);
     }
   }
 }
@@ -309,7 +309,7 @@
     height: 0.75rem;
     mask: url('../../img/svg/arrow-white.svg') no-repeat;
     mask-size: contain;
-    background-color: var(--usa-nav--parent-color) !important;
+    background-color: var(--usa-nav--parent-color);
   }
 }
 
