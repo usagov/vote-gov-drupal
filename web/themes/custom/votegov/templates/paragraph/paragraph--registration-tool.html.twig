@@ -50,7 +50,7 @@
               </li>
             {% endfor %}
             <li id="vote-registration-tool__no-results" hidden>
-              <span tabindex="0" data-key="">{{ "No matching results. Please check spelling." | t }}</span>
+              <span tabindex="0" data-key="">{{ content.field_no_results_message | field_value }}</span>
             </li>
           </ul>
         </div>
