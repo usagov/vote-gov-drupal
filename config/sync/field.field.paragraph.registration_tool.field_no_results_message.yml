@@ -1,0 +1,19 @@
+uuid: 0fa55891-9519-46e0-ad9f-2fba31fbb232
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_no_results_message
+    - paragraphs.paragraphs_type.registration_tool
+id: paragraph.registration_tool.field_no_results_message
+field_name: field_no_results_message
+entity_type: paragraph
+bundle: registration_tool
+label: 'No Results Message'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
