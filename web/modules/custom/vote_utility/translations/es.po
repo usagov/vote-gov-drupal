@@ -260,8 +260,5 @@ msgstr "Votar como miembro del servicio militar"
 msgid "Learn more from the Federal Voting Assistance Program."
 msgstr "Obtenga más información del Programa Federal de Asistencia para Votar (sigla en inglés)."
 
-msgid "Voting from outside the U.S."
+msgid "Voting as a U.S. citizenfrom outside the U.S."
 msgstr "Votar como ciudadano en el extrajero"
-
-msgid "You have a right to vote as a U.S. citizen, even if you’re living outside the U.S. Learn more from the Federal Voting Assistance Program."
-msgstr "Usted tiene derecho a votar como ciudadano estadounidense aunque viva fuera de EE.UU. Obtenga más información en el Programa Federal de Asistencia para Votar (sigla en inglés)."
