@@ -252,3 +252,13 @@ msgstr "sábado"
 
 msgid "Sunday"
 msgstr "domingo"
+
+# Temporary military and overseas voter cards
+msgid "Voting as a military service member"
+msgstr "Votar como miembro del servicio militar"
+
+msgid "Learn more from the Federal Voting Assistance Program."
+msgstr "Obtenga más información del Programa Federal de Asistencia para Votar (sigla en inglés)."
+
+msgid "Voting as a U.S. citizenfrom outside the U.S."
+msgstr "Votar como ciudadano en el extrajero"
