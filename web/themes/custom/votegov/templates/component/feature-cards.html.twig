@@ -1,9 +1,3 @@
-{% if language != "es" %}
-  {% set fvap_link = "https://www.fvap.gov/" %}
-{% else %}
-  {% set fvap_link = "https://www.fvap.gov/translated-materials" %}
-{% endif %}
-
 <div{{ attributes.addClass('vote-feature-cards') }}>
   {# Hold these title_* placeholders for potential integration #}
   {{ title_prefix }}
@@ -13,6 +7,14 @@
   </h2>
   <div class="vote-card-group">
     {{ cards }}
+
+    {# Start temporary cards. #}
+    {% if language != "es" %}
+      {% set fvap_link = "https://www.fvap.gov/" %}
+    {% else %}
+      {% set fvap_link = "https://www.fvap.gov/translated-materials" %}
+    {% endif %}
+
     {# Temporary card for military FVAP.gov #}
     <article class="node--voter-guide node--view-mode-teaser usa-card">
       <a extlinkjs-ignore class="vote-card__link" href={{ fvap_link }} target="_blank" title={{"Voting as a military service member" | t }}>
@@ -49,5 +51,7 @@
         </div>
       </a>
     </article>
+   {# End temporary cards. #}
+
   </div>
 </div>
