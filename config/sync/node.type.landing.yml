@@ -28,8 +28,8 @@ third_party_settings:
         age: 0
 name: 'Landing Page'
 type: landing
-description: ''
-help: ''
+description: null
+help: null
 new_revision: true
 preview_mode: 0
 display_submitted: false

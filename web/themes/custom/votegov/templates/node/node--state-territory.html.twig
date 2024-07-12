@@ -56,7 +56,7 @@
   {% set state_name = state_name ~ " " ~ korean_state_char %}
 {% endif %}
 
-<article{{ attributes.addClass(classes) }}>
+<div{{ attributes.addClass(classes) }}>
   {# Hold these title_* placeholders for potential integration #}
   {{ title_prefix }}
   {{ title_suffix }}
@@ -136,4 +136,4 @@
   </p>
   {% endif %}
   </div>
-</article>
+</div>
