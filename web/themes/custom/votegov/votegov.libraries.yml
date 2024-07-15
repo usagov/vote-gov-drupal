@@ -14,7 +14,10 @@ uswdsjs:
   version: VERSION
   js:
     dist/js/uswds-init.min.js: { minified: true }
-    dist/js/uswds.min.js: { minified: true }
+    dist/js/uswds.min.js:
+      minified: true
+      attributes:
+        defer: true
 
 navajo-font:
   version: VERSION
@@ -31,19 +34,31 @@ roboto:
 external_links:
   version: VERSION
   js:
-    dist/js/external-links.js: { minified: true }
+    dist/js/external-links.js:
+      minified: true
+      attributes:
+        defer: true
 
 registration_tool:
   version: VERSION
   js:
-    dist/js/registration-tool.js: { minified: true }
+    dist/js/registration-tool.js:
+      minified: true
+      attributes:
+        defer: true
 
 nvrf_pdf_download:
   version: VERSION
   js:
-    dist/js/nvrf-pdf-download.js: { minified: true }
+    dist/js/nvrf-pdf-download.js:
+      minified: true
+      attributes:
+        defer: true
 
 theme_switcher:
   version: VERSION
   js:
-    dist/js/theme-switcher.js: { minified: true }
+    dist/js/theme-switcher.js:
+      minified: true
+      attributes:
+        defer: true
