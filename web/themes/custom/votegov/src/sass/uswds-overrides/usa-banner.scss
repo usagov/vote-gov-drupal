@@ -52,8 +52,11 @@
 
 .usa-banner__button-text {
   @include vote-link($color: $base-dark, $color-hover: $base-primary-hover);
-  position: static;
-  display: none;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  inset-inline-start: 1px;
+  inset-inline-end: 1px;
 }
 
 .usa-banner__button {
