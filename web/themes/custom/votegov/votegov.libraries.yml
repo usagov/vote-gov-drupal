@@ -14,7 +14,10 @@ uswdsjs:
   version: VERSION
   js:
     dist/js/uswds-init.min.js: { minified: true }
-    dist/js/uswds.min.js: { minified: true }
+    dist/js/uswds.min.js:
+      minified: true
+      attributes:
+        defer: true
 
 navajo-font:
   version: VERSION
