@@ -262,6 +262,12 @@
 }
 
 .usa-nav__secondary {
+  @include at-media('tablet-lg') {
+    [dir="rtl"] & {
+      right: unset;
+    }
+  }
+
   @include at-media-max('tablet-lg') {
     @include u-margin(0);
     @include grid-container;
