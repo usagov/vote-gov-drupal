@@ -67,8 +67,8 @@
       @include u-border-top(0);
     }
 
-    > a.usa-nav__link,
-    > button.usa-nav__link {
+    >a.usa-nav__link,
+    >button.usa-nav__link {
       @include u-font-size('serif', 6);
       @include u-font-family('serif');
       @include u-font-weight('bold');
@@ -85,6 +85,15 @@
         @include after {
           @include u-display('none');
         }
+      }
+    }
+
+    >button {
+      text-align: start;
+
+      span:after {
+        right: unset;
+        inset-inline-end: 0;
       }
     }
   }
@@ -165,6 +174,10 @@
     @include u-width('auto');
     @include u-padding-top(0);
     background-color: var(--usa-nav--submenu-bg);
+  }
+
+  .usa-nav__submenu-list {
+    padding-inline-start: 0;
   }
 }
 

@@ -10,7 +10,7 @@
 
 {{ attach_library('votegov/registration_tool') }}
 
-<section{{ attributes.addClass('vote-registration-tool').setAttribute('role', 'region').setAttribute('aria-label', 'Register to vote selector tool' | t).setAttribute('aria-describedby', content.field_form_heading | field_value | render) }}>
+<section{{ attributes.addClass('vote-registration-tool').setAttribute('role', 'region').setAttribute('aria-label', 'Register to vote selector tool' | t) }}>
   {# Hold these title_* placeholders for potential integration #}
   {{ title_prefix }}
   {{ title_suffix }}
@@ -50,7 +50,7 @@
               </li>
             {% endfor %}
             <li id="vote-registration-tool__no-results" hidden>
-              <span tabindex="0" data-key="">{{ "No matching results. Please check spelling." | t }}</span>
+              <span tabindex="0" data-key="">{{ content.field_no_results_message | field_value }}</span>
             </li>
           </ul>
         </div>

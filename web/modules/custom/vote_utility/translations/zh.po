@@ -15,6 +15,10 @@ msgstr "繁體中文"
 msgid "Select language"
 msgstr "選擇語言"
 
+#breadcrumb
+msgid "Home"
+msgstr "主頁 "
+
 #main
 msgid "@sitename in language"
 msgstr "@sitename 中文"

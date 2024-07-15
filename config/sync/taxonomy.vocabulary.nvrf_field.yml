@@ -6,3 +6,4 @@ name: 'NVRF Field'
 vid: nvrf_field
 description: 'NVRF app form field requirement data'
 weight: 0
+new_revision: false
