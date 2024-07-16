@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.registration_tool.field_body
     - field.field.paragraph.registration_tool.field_form_heading
     - field.field.paragraph.registration_tool.field_heading
+    - field.field.paragraph.registration_tool.field_no_results_message
     - field.field.paragraph.registration_tool.field_placeholder
     - paragraphs.paragraphs_type.registration_tool
   module:
@@ -37,6 +38,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_no_results_message:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
     region: content
   field_placeholder:
     type: string

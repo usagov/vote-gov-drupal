@@ -1,4 +1,6 @@
 @use "uswds-core" as *;
+@use "variables" as *;
+@use "mixins" as *;
 
 .vote-touchpoints--button {
   @include u-margin(0);
@@ -14,5 +16,18 @@
     @include u-right(3);
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+  }
+}
+
+// Targeting the submit button on embedded form
+.fba-modal-dialog .usa-form .usa-button {
+  --usa-button-bg: #{$base-primary};
+  --usa-button--outline: #{color('blue-40v')};
+  background-color: var(--usa-button-bg);
+  outline-color: var(--usa-button--outline);
+
+  [data-theme="contrast"] & {
+    --usa-button-bg: #{$btn-bg-high-contrast};
+    outline-color: var(--usa-button--outline);
   }
 }
