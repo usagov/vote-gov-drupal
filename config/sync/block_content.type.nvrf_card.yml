@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: nvrf_card
 label: 'NVRF Card'
-revision: 1
+revision: true
 description: ''

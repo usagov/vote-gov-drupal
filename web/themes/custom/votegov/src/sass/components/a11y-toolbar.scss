@@ -21,7 +21,7 @@
   }
 
   @include at-media-max('tablet') {
-    @include u-bottom('205');
+    @include u-bottom('105');
     inset-inline-start: calc(50% - 3.125rem);
   }
 }

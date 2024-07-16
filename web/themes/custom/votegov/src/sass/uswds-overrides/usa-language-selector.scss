@@ -47,11 +47,17 @@
 }
 
 .usa-language__submenu {
+  --usa-language--submenu-bg: #{$base-dark};
+
+  [data-theme="contrast"] & {
+    --usa-language--submenu-bg: #{$btn-bg-high-contrast};
+  }
+
   @include u-padding(2.5);
   @include u-width('auto');
   @include u-radius('sm');
   @include u-text('no-wrap');
-  background-color: $base-dark;
+  background-color: var(--usa-language--submenu-bg);
 
   .usa-language__primary-item:last-of-type & {
     @include u-right('auto');
@@ -89,9 +95,15 @@
 
 
 .usa-button.usa-language__link {
-  &[aria-expanded="true"]{
+  --usa-language--link-bg: #{$base-dark};
+
+  [data-theme="contrast"] & {
+    --usa-language--link-bg: #{$btn-bg-high-contrast};
+  }
+
+  &[aria-expanded="true"] {
     @include u-radius-bottom(0);
-    background-color: $base-dark;
+    background-color: var(--usa-language--link-bg);
   }
 }
 

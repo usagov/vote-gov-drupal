@@ -6,6 +6,8 @@
   .usa-logo {
     @include u-margin(0);
     @include u-margin-top(1);
+
+    @include u-display('inline-block');
     width: 10rem;
 
     @include at-media('tablet-lg') {
@@ -13,7 +15,18 @@
     }
 
     a {
-      @include u-display('inline-block')
+      @include u-display('inline-block');
+    }
+
+    svg {
+      @include u-maxw('full');
+      @include u-height('auto');
+
+      > path {
+        [data-theme="contrast"] & {
+          fill: $bg-high-contrast;
+        }
+      }
     }
   }
 }

@@ -15,6 +15,10 @@ msgstr "ភាសាខ្មែរ"
 msgid "Select language"
 msgstr "ជ្រើសរើសភាសា"
 
+#breadcrumb
+msgid "Home"
+msgstr "ទំព័រដើម"
+
 #main
 msgid "@sitename in language"
 msgstr "@sitename ជាភាសាខ្មែរ"

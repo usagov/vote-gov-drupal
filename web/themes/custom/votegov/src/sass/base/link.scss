@@ -6,3 +6,7 @@ a {
     @include vote-link-bg;
   }
 }
+
+[href]:focus {
+  outline-offset: 0.25rem;
+}

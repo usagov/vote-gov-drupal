@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: registration_form_selector
 label: 'Registration form selector'
-revision: 0
+revision: false
 description: ''
