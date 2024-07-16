@@ -5,6 +5,22 @@
   background-color: transparent;
 }
 
+.usa-sr-only {
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  inset-inline-start: 1px;
+  inset-inline-end: 1px;
+}
+
+.usa-breadcrumb__list-item {
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  inset-inline-start: 1px;
+  inset-inline-end: 1px;
+}
+
 .usa-breadcrumb__list-item::after {
   [dir="rtl"] & {
     transform: rotate(180deg);
