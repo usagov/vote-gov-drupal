@@ -5,6 +5,14 @@
   background-color: transparent;
 }
 
+.usa-sr-only {
+  @include vote-rtl-format-override;
+}
+
+.usa-breadcrumb__list-item {
+  @include vote-rtl-format-override;
+}
+
 .usa-breadcrumb__list-item::after {
   [dir="rtl"] & {
     transform: rotate(180deg);

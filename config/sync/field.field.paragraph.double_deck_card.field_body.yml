@@ -15,7 +15,7 @@ bundle: double_deck_card
 label: 'State list'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

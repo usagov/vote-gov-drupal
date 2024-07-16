@@ -8,7 +8,7 @@
 {# Caching the data in content object #}
 {% set savedCache = content | render %}
 
-<section{{ attributes.addClass('usa-sign-up').setAttribute('title', 'Email sign-up' | t).setAttribute('aria-label', 'Email sign-up' | t) }}>
+<section{{ attributes.addClass('usa-sign-up').setAttribute('title', 'Email sign-up' | t) }}>
   {# Hold these title_* placeholders for potential integration #}
   {{ title_prefix }}
   {{ title_suffix }}

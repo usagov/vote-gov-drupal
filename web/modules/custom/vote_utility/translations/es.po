@@ -19,6 +19,10 @@ msgstr "Seleccione el idioma"
 msgid "Home"
 msgstr "Página principal"
 
+#in-page nav
+msgid "On this page"
+msgstr "En esta página"
+
 #main
 msgid "@sitename in language"
 msgstr "@sitename en Español"
@@ -170,6 +174,9 @@ msgid "Official government website"
 msgstr "Sitio web oficial del gobierno"
 
 #footer
+msgid "Visit our partner site to find more information about voting in the United States."
+msgstr "Visite el sitio web de nuestro colaborador para encontrar más información sobre las elecciones en Estados Unidos."
+
 msgid "Email sign-up"
 msgstr "Email para inscripción"
 
@@ -248,3 +255,13 @@ msgstr "sábado"
 
 msgid "Sunday"
 msgstr "domingo"
+
+# Temporary military and overseas voter cards
+msgid "Voting as a military service member"
+msgstr "Votar como miembro del servicio militar"
+
+msgid "Learn more from the Federal Voting Assistance Program."
+msgstr "Obtenga más información del Programa Federal de Asistencia para Votar (sigla en inglés)."
+
+msgid "Voting as a U.S. citizenfrom outside the U.S."
+msgstr "Votar como ciudadano en el extrajero"
