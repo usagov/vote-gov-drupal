@@ -83,16 +83,16 @@ msgid "How to register to vote"
 msgstr "Cómo registrarse para votar"
 
 msgid "How to register and update your registration"
-msgstr "Cómo registrarse para votar"
+msgstr "Cómo registrarse y poner al día su registro"
 
 msgid "Other ways to register to vote"
 msgstr "Otras formas de registrarse para votar"
 
 msgid "Voter registration deadlines for the @election_date election. @link"
-msgstr "Plazo de inscripción de votantes para las elecciones del @election_date"
+msgstr "Los plazos para el registro de votantes son para las elecciones del @election_date. @link"
 
 msgid "Find state and local election dates."
-msgstr ""
+msgstr "Busque las fechas de las elecciones locales y estatales (en inglés)."
 
 msgid "Register by mail deadline:"
 msgstr "Registrarse por correo postal:"
