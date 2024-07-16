@@ -6,19 +6,11 @@
 }
 
 .usa-sr-only {
-  width: 0px;
-  height: 0px;
-  overflow: hidden;
-  inset-inline-start: 1px;
-  inset-inline-end: 1px;
+  @include vote-rtl-format-override;
 }
 
 .usa-breadcrumb__list-item {
-  width: 0px;
-  height: 0px;
-  overflow: hidden;
-  inset-inline-start: 1px;
-  inset-inline-end: 1px;
+  @include vote-rtl-format-override;
 }
 
 .usa-breadcrumb__list-item::after {
