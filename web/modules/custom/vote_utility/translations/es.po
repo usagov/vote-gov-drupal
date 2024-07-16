@@ -8,6 +8,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
+msgid "Primary navigation"
+msgstr "Navegación principal"
+
 msgid "Primary tabs"
 msgstr "Pestañas principales"
 
@@ -24,6 +27,9 @@ msgstr "Seleccione el idioma"
 #breadcrumb
 msgid "Home"
 msgstr "Página principal"
+
+msgid "Breadcrumb"
+msgstr "Ruta de navegación"
 
 #in-page nav
 msgid "On this page"
@@ -67,6 +73,10 @@ msgstr "USAGov en Español"
 msgid "USA.gov logo"
 msgstr "Logotipo de USA.gov"
 
+#aria-label for election links
+msgid "External election resources"
+msgstr "Recursos electorales externos"
+
 msgid "Agency identifier"
 msgstr "Identificador de la agencia"
 
@@ -92,6 +102,10 @@ msgstr "Siga a vote.gov en X (en inglés)"
 #search
 msgid "Search vote.gov"
 msgstr "Busque en vote.gov"
+
+#search aira-label
+msgid "Search component"
+msgstr "Componente de búsqueda"
 
 #state
 msgid "Register to vote in @state_name"
