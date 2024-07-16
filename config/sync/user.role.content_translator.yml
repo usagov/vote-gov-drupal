@@ -8,10 +8,8 @@ dependencies:
     - node.type.landing
     - node.type.page
     - node.type.voter_guide
-    - taxonomy.vocabulary.basics_modules
     - workflows.workflow.publishing_content
   module:
-    - block_content
     - ckeditor5_embedded_content
     - content_moderation
     - content_translation
@@ -31,8 +29,6 @@ permissions:
   - 'edit own landing content'
   - 'edit own page content'
   - 'edit own voter_guide content'
-  - 'translate basics_modules taxonomy_term'
-  - 'translate block_content'
   - 'translate landing node'
   - 'translate page node'
   - 'translate paragraph'
