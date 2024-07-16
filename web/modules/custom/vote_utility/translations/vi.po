@@ -15,6 +15,10 @@ msgstr "Tiếng Việt"
 msgid "Select language"
 msgstr "Lựa chọn ngôn ngữ"
 
+#breadcrumb
+msgid "Home"
+msgstr "Trang chủ"
+
 #main
 msgid "@sitename in language"
 msgstr "@sitename bằng Tiếng Việt"
