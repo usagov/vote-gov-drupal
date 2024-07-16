@@ -140,7 +140,7 @@ msgid "Learn more about voting"
 msgstr "Para más información sobre la votación"
 
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
-msgstr "En Virginia no es obligatorio inscribirse para votar. @link, visite el sitio web de elecciones estatales de @state_name."
+msgstr "En @state_name no es obligatorio inscribirse para votar. @link, visite el sitio web de elecciones estatales de @state_name."
 
 msgid "Complete your online registration"
 msgstr "Inicie su inscripción en línea"
