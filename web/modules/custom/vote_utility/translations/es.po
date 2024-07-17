@@ -8,6 +8,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
+msgid "Primary navigation"
+msgstr "Navegación principal"
+
+msgid "Primary tabs"
+msgstr "Pestañas principales"
+
+msgid "Secondary tabs"
+msgstr "Pestañas secundarias"
+
 #language selector
 msgid "Spanish"
 msgstr "Español"
@@ -19,9 +28,20 @@ msgstr "Seleccione el idioma"
 msgid "Home"
 msgstr "Página principal"
 
+msgid "Breadcrumb"
+msgstr "Ruta de navegación"
+
 #in-page nav
 msgid "On this page"
 msgstr "En esta página"
+
+#main menu button
+msgid "Menu"
+msgstr "Menú"
+
+#main menu close button
+msgid "Close"
+msgstr "Cerrar"
 
 #main
 msgid "@sitename in language"
@@ -44,10 +64,18 @@ msgid "General Services Administration"
 msgstr "Administración General de Servicios (GSA, en inglés)"
 
 msgid "Looking for U.S. government information and services? @link."
-msgstr "¿Busca información y servicios del Gobierno de Estados Unidos? @link"
+msgstr "Información y servicios del gobierno de EE. UU. @link"
 
 msgid "Visit USA.gov"
 msgstr "USAGov en Español"
+
+#alt text for USA.gov logo
+msgid "USA.gov logo"
+msgstr "Logotipo de USA.gov"
+
+#aria-label for election links
+msgid "External election resources"
+msgstr "Recursos electorales externos"
 
 msgid "Agency identifier"
 msgstr "Identificador de la agencia"
@@ -75,9 +103,22 @@ msgstr "Siga a vote.gov en X (en inglés)"
 msgid "Search vote.gov"
 msgstr "Busque en vote.gov"
 
+#search aira-label
+msgid "Search component"
+msgstr "Componente de búsqueda"
+
 #state
 msgid "Register to vote in @state_name"
 msgstr "Regístrese para votar en @state_name"
+
+#state tool aria label
+msgid "Register to vote selector tool"
+msgstr "Herramienta selector para registrarse para votar"
+
+#state list aria label
+msgid "States and territories list"
+msgstr "Lista de estados y territorios"
+
 
 msgid "How to register to vote"
 msgstr "Cómo registrarse para votar"
@@ -92,7 +133,7 @@ msgid "Voter registration deadlines for the @election_date election. @link"
 msgstr "Plazo de inscripción de votantes para las elecciones del @election_date"
 
 msgid "Find state and local election dates."
-msgstr ""
+msgstr "Encuentre las fechas de las elecciones locales y estatales."
 
 msgid "Register by mail deadline:"
 msgstr "Registrarse por correo postal:"
@@ -173,12 +214,20 @@ msgstr "(en inglés)"
 msgid "Official government website"
 msgstr "Sitio web oficial del gobierno"
 
+#U.S. flag alt text
+msgid "U.S. flag"
+msgstr "Bandera de Estados Unidos"
+
 #footer
 msgid "Visit our partner site to find more information about voting in the United States."
 msgstr "Visite el sitio web de nuestro colaborador para encontrar más información sobre las elecciones en Estados Unidos."
 
 msgid "Email sign-up"
 msgstr "Email para inscripción"
+
+#eac partner text
+msgid "Vote.gov is in partnership with"
+msgstr "Vote.gov es posible gracias a la colaboración de"
 
 msgid "Contact"
 msgstr "Contacto"

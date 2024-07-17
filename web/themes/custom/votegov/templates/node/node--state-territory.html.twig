@@ -23,8 +23,12 @@
 {% set state_abrev = content.field_state_abbreviation | field_value | render %}
 {% set in_english = "(in English)" | t %}
 {% set election_date = "11/05/2024"  | date('U') | format_date('revision_date') | replace(t_numbers[language].numbers | default([])) %}
+{% set election_link_text = 'Find state and local election dates.' | t %}
+{% if language != "en" %}
+  {% set election_link_text = election_link_text ~ ' ' ~ in_english %}
+{% endif %}
 {% set election_link %}
-  <a href="https://www.eac.gov/voters/register-and-vote-in-your-state">{{ 'Find state and local election dates.' | t }}</a>
+  <a href="https://www.eac.gov/voters/register-and-vote-in-your-state">{{ election_link_text }}</a>
 {% endset %}
 
 {# Set postmarked deadline with fallback #}
@@ -75,8 +79,8 @@
     {# Registration deadlines #}
     <h2>{{ 'Voter registration deadlines' | t({ '@state_name': state_name }) }}</h2>
     <p>
-      {{ 'Voter registration deadlines for the @election_date election. @link' | t({
-        '@link': {'#markup': election_link} | render,
+      {{ 'Voter registration deadlines for the @election_date election. @election_link' | t({
+        '@election_link': {'#markup': election_link} | render,
         '@election_date': {'#markup': election_date} | render }
       ) }}
     </p>

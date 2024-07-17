@@ -27,14 +27,14 @@ We call a macro which calls itself to render the full tree.
 @see https://twig.symfony.com/doc/1.x/tags/macro.html
 #}
 {% set attributes = attributes.addClass('menu') %}
-<nav aria-label="{{ 'Primary' | t }}" class="usa-nav" data-test="mainNav">
+<nav aria-label="{{ 'Primary navigation' | t }}" class="usa-nav" data-test="mainNav">
   <div class="usa-nav__inner">
     <div class="grid-container usa-nav__close-container">
       <button type="button" class="usa-nav__close" data-test="mainCloseBtn">{{ 'Close' | t }}</button>
     </div>
   {{ menus.menu_links(items, attributes, 0, 'basic-mega-nav-section-') }}
   <div class="usa-nav__secondary">
-  <section id="usa-search--expandable" aria-label="{{ 'Search' | t }}">
+  <section id="usa-search--expandable" aria-label="{{ 'Search component' | t }}">
     {{ drupal_entity('block_content', 2) }}
   </section>
   </div>
