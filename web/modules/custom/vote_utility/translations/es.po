@@ -210,6 +210,15 @@ msgstr "Ir al contenido principal"
 msgid "(in English)"
 msgstr "(en inglés)"
 
+msgid "Register to vote selector tool"
+msgstr "Herramienta selector para registrarse para votar"
+
+msgid "Select your state or territory"
+msgstr "Seleccione su estado o territorio"
+
+msgid "States and territories list"
+msgstr "Lista de sugerencias de estados y territorios"
+
 #banner
 msgid "Official government website"
 msgstr "Sitio web oficial del gobierno"
