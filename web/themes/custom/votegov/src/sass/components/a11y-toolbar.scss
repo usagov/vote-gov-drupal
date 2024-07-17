@@ -30,11 +30,12 @@
   --theme-options-button--bg: #{$base-white};
   --theme-options-button--bg-hover: #{$base-primary-hover};
   --theme-options-button--icon: #{$base-dark};
+  --theme-options-button--border: #{$base-dark};
   @include button-unstyled;
   @include u-display('block');
   @include u-width('full');
   @include u-padding(2);
-  border: 1px solid $base-dark;
+  border: 2px solid var(--theme-options-button--border);
   background-color: var(--theme-options-button--bg);
   cursor: pointer;
 
@@ -51,6 +52,7 @@
   }
 
   @include hover {
+    --theme-options-button--border: #{$base-white};
     background-color: var(--theme-options-button--bg-hover);
 
     @include before {
@@ -101,21 +103,31 @@
 
     @include at-media-max('tablet') {
       --theme-options-button--bg: #{$btn-bg-high-contrast};
+      --theme-options-button--border: #{$base-white};
 
       @include hover {
         --theme-options-button--bg-hover: #{$btn-bg-high-contrast-hover};
+        --theme-options-button--border: #{$base-white};
       }
     }
   }
 }
 
 .vote-theme-options__button--theme {
+  @include hover {
+    z-index: 0;
+  }
+
   @include before {
     mask: url("../../img/svg/dark-light.svg") no-repeat center center;
   }
 }
 
 .vote-theme-options__button--scale {
+  @include hover {
+    z-index: 0;
+  }
+
   @include before {
     mask: url("../../img/svg/text-size.svg") no-repeat center center;
   }

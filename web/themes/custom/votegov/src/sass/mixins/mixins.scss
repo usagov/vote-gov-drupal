@@ -233,3 +233,11 @@
 .vote-card-group {
   @include vote-card-group;
 }
+
+@mixin vote-rtl-format-override {
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  inset-inline-start: 1px;
+  inset-inline-end: 1px;
+}

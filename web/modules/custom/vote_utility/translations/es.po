@@ -219,6 +219,9 @@ msgid "U.S. flag"
 msgstr "Bandera de Estados Unidos"
 
 #footer
+msgid "Visit our partner site to find more information about voting in the United States."
+msgstr "Visite el sitio web de nuestro colaborador para encontrar más información sobre las elecciones en Estados Unidos."
+
 msgid "Email sign-up"
 msgstr "Email para inscripción"
 
