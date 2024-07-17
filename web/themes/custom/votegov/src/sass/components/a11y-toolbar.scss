@@ -35,7 +35,7 @@
   @include u-display('block');
   @include u-width('full');
   @include u-padding(2);
-  border: 1px solid var(--theme-options-button--border);
+  border: 2px solid var(--theme-options-button--border);
   background-color: var(--theme-options-button--bg);
   cursor: pointer;
 
