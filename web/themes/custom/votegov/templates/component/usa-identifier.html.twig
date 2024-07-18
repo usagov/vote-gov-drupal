@@ -41,6 +41,8 @@
     </div>
   </section>
 
-  <button type="button" class="usa-button vote-touchpoints--button" id="touchpoints-form-embed">How can we improve vote.gov?</button>
-  <script src="https://touchpoints.app.cloud.gov/touchpoints/c169d3b2.js" async></script>
+  {% if language == 'en' %}
+    <button type="button" class="usa-button vote-touchpoints--button" id="touchpoints-form-embed">How can we improve vote.gov?</button>
+    <script src="https://touchpoints.app.cloud.gov/touchpoints/c169d3b2.js" async></script>
+  {% endif %}
 </div>
