@@ -326,7 +326,7 @@ workflows:
           filters:
             branches:
               only:
-                - stage
+                - test
           requires:
             -  post-deploy-upkeep
   deploy-prod-workflow:
