@@ -44,31 +44,30 @@
 
 .usa-nav__primary-item {
   @include at-media-max('tablet-lg') {
-    --usa-nav--primary-item-text: #{$base-dark};
-    --usa-nav--primary-item-bg: #{$base-white};
-
-    @include hover {
-      --usa-nav--primary-item-bg: #{$bg-light-cool};
-    }
-
-    [data-theme="contrast"] & {
-      --usa-nav--primary-item-text: #{$link-high-contrast};
-      --usa-nav--primary-item-bg: #{$base-white};
-
-      @include hover {
-        --usa-nav--primary-item-text: #{$link-high-contrast};
-        --usa-nav--primary-item-bg: #{$bg-high-contrast-light-cool};
-      }
-    }
-
     border-top-color: $bg-light-medium;
 
     &:first-child {
       @include u-border-top(0);
     }
 
-    >a.usa-nav__link,
-    >button.usa-nav__link {
+    >a.usa-nav__link, >button.usa-nav__link {
+      --usa-nav--primary-item-text: #{$base-dark};
+      --usa-nav--primary-item-bg: #{$base-white};
+
+      @include hover {
+        --usa-nav--primary-item-bg: #{$bg-light-cool};
+      }
+
+      [data-theme="contrast"] & {
+        --usa-nav--primary-item-text: #{$link-high-contrast};
+        --usa-nav--primary-item-bg: #{$base-white};
+
+        @include hover {
+          --usa-nav--primary-item-text: #{$link-high-contrast};
+          --usa-nav--primary-item-bg: #{$bg-high-contrast-light-cool};
+        }
+      }
+
       @include u-font-size('serif', 6);
       @include u-font-family('serif');
       @include u-font-weight('bold');
@@ -86,41 +85,44 @@
           @include u-display('none');
         }
       }
-    }
 
-    >button {
-      text-align: start;
+      >button {
+        text-align: start;
 
-      span:after {
-        right: unset;
-        inset-inline-end: 0;
+        span:after {
+          right: unset;
+          inset-inline-end: 0;
+        }
       }
     }
   }
 
   @include at-media('tablet-lg') {
-    --usa-nav--primary-item-text: #{$base-dark};
-    --usa-nav--primary-item-bg: #{$base-white};
-    --usa-current-bg: #{$ac-warm};
-
-    @include hover {
-      --usa-nav--primary-item-text: #{$base-white};
-      --usa-nav--primary-item-bg: #{$base-dark};
-    }
-
-    [data-theme="contrast"] & {
-      --usa-nav--primary-item-text: #{$bg-high-contrast};
+    >a.usa-nav__link, >button.usa-nav__link {
+      --usa-nav--primary-item-text: #{$base-dark};
       --usa-nav--primary-item-bg: #{$base-white};
-      --usa-current-bg: #{$link-high-contrast-hover-blue};
+      --usa-nav--primary-item-text-expanded: #{$base-white};
+      --usa-nav--primary-item-bg-expanded: #{$base-dark};
+      --usa-current-bg: #{$ac-warm};
 
       @include hover {
-        --usa-nav--primary-item-text: #{$btn-secondary-bg-high-contrast-hover};
-        --usa-nav--primary-item-bg: #{$bg-high-contrast};
+        --usa-nav--primary-item-text: #{$base-white};
+        --usa-nav--primary-item-bg: #{$base-dark};
       }
-    }
 
-    > button.usa-nav__link,
-    > a.usa-nav__link {
+      [data-theme="contrast"] & {
+        --usa-nav--primary-item-text: #{$bg-high-contrast};
+        --usa-nav--primary-item-bg: #{$base-white};
+        --usa-nav--primary-item-text-expanded: #{$btn-secondary-bg-high-contrast-hover};
+        --usa-nav--primary-item-bg-expanded: #{$bg-high-contrast};
+        --usa-current-bg: #{$link-high-contrast-hover-blue};
+
+        @include hover {
+          --usa-nav--primary-item-text: #{$btn-secondary-bg-high-contrast-hover};
+          --usa-nav--primary-item-bg: #{$bg-high-contrast};
+        }
+      }
+
       @include u-font-weight('bold');
       @include u-padding-x(2);
       @include u-padding-y(2.5);
@@ -129,12 +131,18 @@
       color: var(--usa-nav--primary-item-text);
       background-color: var(--usa-nav--primary-item-bg);
 
-      &[aria-expanded="true"], &[aria-expanded="false"] {
-        color: var(--usa-nav--primary-item-text);
-        background-color: var(--usa-nav--primary-item-bg);
-
-        span::after {
+      &[aria-expanded="false"] {
+        > span::after {
           background-color: var(--usa-nav--primary-item-text);
+        }
+      }
+
+      &[aria-expanded="true"] {
+        color: var(--usa-nav--primary-item-text-expanded);
+        background-color: var(--usa-nav--primary-item-bg-expanded);
+
+        > span::after {
+          background-color: var(--usa-nav--primary-item-text-expanded);
         }
       }
 
@@ -187,24 +195,6 @@
   }
 
   @include at-media-max('tablet-lg') {
-    --usa-nav--submenu-item-text: #{$base-dark};
-    --usa-nav--submenu-item-bg: #{$base-white};
-
-    @include hover {
-      --usa-nav--submenu-item-text: #{$base-secondary-hover};
-      --usa-nav--submenu-item-bg: #{$bg-light-cool};
-    }
-
-    [data-theme="contrast"] & {
-      --usa-nav--submenu-item-text: #{$link-high-contrast};
-      --usa-nav--submenu-item-bg: #{$base-white};
-
-      @include hover {
-        --usa-nav--submenu-item-text: #{$link-high-contrast};
-        --usa-nav--submenu-item-bg: #{$bg-high-contrast-light-cool};
-      }
-    }
-
     margin-inline-start: 1rem;
     border-top-color: $bg-light-medium;
 
@@ -212,62 +202,80 @@
       @include u-border-top(0);
     }
 
-    > a,
-    > a.usa-nav__Link,
-    > a.usa-current,
-    > a:not(.usa-button):not(.usa-current),
-    > span {
-      @include u-font-size('sans', 5);
-      @include u-padding-x(1);
-      @include u-padding-y(1.5);
-      @include u-display('block');
-      background-color: var(--usa-nav--submenu-item-bg);
-      color: var(--usa-nav--submenu-item-text);
-    }
+    >a {
+      --usa-nav--submenu-item-text: #{$base-dark};
+      --usa-nav--submenu-item-bg: #{$base-white};
 
-    > a,
-    > a.usa-nav__Link,
-    > a.usa-current,
-    > a:not(.usa-button):not(.usa-current),
-    > button.usa-nav__Link {
-      background-color: var(--usa-nav--submenu-item-bg);
-      color: var(--usa-nav--submenu-item-text);
+      @include hover {
+        --usa-nav--submenu-item-text: #{$base-secondary-hover};
+        --usa-nav--submenu-item-bg: #{$bg-light-cool};
+      }
 
+      [data-theme="contrast"] & {
+        --usa-nav--submenu-item-text: #{$link-high-contrast};
+        --usa-nav--submenu-item-bg: #{$base-white};
+
+        @include hover {
+          --usa-nav--submenu-item-text: #{$link-high-contrast};
+          --usa-nav--submenu-item-bg: #{$bg-high-contrast-light-cool};
+        }
+      }
+
+      &.usa-nav__Link,
+      &.usa-current,
+      &:not(.usa-button):not(.usa-current),
+      span {
+        @include u-font-size('sans', 5);
+        @include u-padding-x(1);
+        @include u-padding-y(1.5);
+        @include u-display('block');
+        background-color: var(--usa-nav--submenu-item-bg);
+        color: var(--usa-nav--submenu-item-text);
+      }
+
+      &.usa-nav__Link,
+      &.usa-current,
+      &:not(.usa-button):not(.usa-current),
+      >button.usa-nav__Link {
+        background-color: var(--usa-nav--submenu-item-bg) !important;
+        color: var(--usa-nav--submenu-item-text) !important;
+      }
     }
   }
 
   @include at-media('tablet-lg') {
-    --usa-nav--submenu-item-text: #{$base-white};
-
-    @include hover {
-      --usa-nav--submenu-item-text: #{$base-white};
-    }
-
-    [data-theme="contrast"] & {
+    >a {
       --usa-nav--submenu-item-text: #{$base-white};
 
       @include hover {
-        --usa-nav--submenu-item-text: #{$btn-secondary-bg-high-contrast-hover};
+        --usa-nav--submenu-item-text: #{$base-white};
       }
-    }
 
-    > a,
-    > span {
-      @include u-padding-x(2);
-      @include u-padding-y(1);
-      @include u-display('block');
-      color: var(--usa-nav--submenu-item-text);
+      [data-theme="contrast"] & {
+        --usa-nav--submenu-item-text: #{$base-white};
+
+        @include hover {
+          --usa-nav--submenu-item-text: #{$btn-secondary-bg-high-contrast-hover};
+        }
+      }
+
+      color: var(--usa-nav--submenu-item-text) !important;
+
+      >span {
+        @include u-padding-x(2);
+        @include u-padding-y(1);
+        @include u-display('block');
+        color: var(--usa-nav--submenu-item-text);
+      }
+
+      @include hover {
+        @include u-text-decoration('underline');
+      }
     }
   }
 }
 
 .usa-nav__secondary {
-  @include at-media('tablet-lg') {
-    [dir="rtl"] & {
-      right: unset;
-    }
-  }
-
   @include at-media-max('tablet-lg') {
     @include u-margin(0);
     @include grid-container;
@@ -279,6 +287,10 @@
   }
 
   @include at-media('tablet-lg') {
+    [dir="rtl"] & {
+      right: unset;
+    }
+
     @include u-right(0);
     bottom: 5.5rem;
     inset-inline-end: 5rem;
@@ -289,9 +301,9 @@
   @include at-media-max('tablet-lg') {
     --usa-nav--parent-color: #{$base-dark};
 
-      @include hover {
-        --usa-nav--parent-color: #{$base-secondary-hover};
-      }
+    @include hover {
+      --usa-nav--parent-color: #{$base-secondary-hover};
+    }
 
     [data-theme="contrast"] & {
       --usa-nav--parent-color: #{$link-high-contrast};
@@ -303,7 +315,7 @@
   }
 
   @include at-media('tablet-lg') {
-  --usa-nav--parent-color: #{$base-white};
+    --usa-nav--parent-color: #{$base-white};
 
     @include hover {
       --usa-nav--parent-color: #{$base-white};
