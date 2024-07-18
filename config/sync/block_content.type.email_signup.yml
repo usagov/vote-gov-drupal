@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: email_signup
 label: 'Email Signup'
-revision: 0
+revision: false
 description: ''

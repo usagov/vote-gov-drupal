@@ -106,10 +106,6 @@ hr, p + hr {
   border-bottom: 1px solid $bg-light-medium;
 }
 
-main {
-  @include u-font-family('serif');
-}
-
 .nonvfont,
 .nonvfont * {
   @include u-font-family('sans');

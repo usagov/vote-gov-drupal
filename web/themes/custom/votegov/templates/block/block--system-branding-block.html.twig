@@ -17,7 +17,9 @@
   <div class="usa-logo">
     {% if site_name %}
       <a href="{{ path('<front>') }}" rel="home" title="{{ site_name }}">
-        <img src="{{ theme_path }}/img/logo.svg" role="img" alt="{{ 'Vote.gov - Home' | t}}" width="200" height="70" />
+        <div id="vote-logo" aria-label="{{ 'Vote.gov - Home' | t}}">
+          {{ source( directory ~ '/img/logo.svg' ) }}
+        </div>
       </a>
     {% endif %}
   </div>

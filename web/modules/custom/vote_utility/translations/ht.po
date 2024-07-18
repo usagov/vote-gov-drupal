@@ -16,6 +16,10 @@ msgstr "Kreyòl Ayisyen"
 msgid "Select language"
 msgstr "Chwazi lang"
 
+#breadcrumb
+msgid "Home"
+msgstr "Paj dakèy"
+
 # config.languages.params.Owner
 msgid "@sitename in language"
 msgstr "@sitename an Kreyòl Ayisyen"
