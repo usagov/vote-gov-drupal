@@ -84,6 +84,10 @@ jobs:
           when: on_fail
       - store_artifacts:
           path: testing/cypress/screenshots
+      - run:
+          name: "Delay tests"
+          command: |
+            sleep 30    
   deploy:
     docker:
       - image: cimg/base:stable
@@ -329,8 +333,6 @@ workflows:
                 - test
           requires:
             -  post-deploy-upkeep
-          run: |
-            sleep 30
   deploy-prod-workflow:
     when:
       and:
