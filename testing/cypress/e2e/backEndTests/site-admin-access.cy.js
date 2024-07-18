@@ -72,4 +72,11 @@ describe('Test Site Admin Role access', () => {
     })
   })
 
+  it('verify ability to publish', () => {
+    cy.visit('/node/add/page')
+    cy.get('[data-drupal-selector="edit-moderation-state-0-state"]').find('option').then(option => {
+      cy.wrap(option).should('contain', 'Published')
+    })
+  })
+
 })
