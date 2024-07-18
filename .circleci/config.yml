@@ -323,14 +323,14 @@ workflows:
           requires:
             - post-deploy
       - cypress:
-          run:
-            - sleep 1m
           filters:
             branches:
               only:
                 - test
           requires:
             -  post-deploy-upkeep
+          run: |
+            sleep 30
   deploy-prod-workflow:
     when:
       and:
