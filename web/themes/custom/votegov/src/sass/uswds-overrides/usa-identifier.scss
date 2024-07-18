@@ -1,0 +1,36 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+@use "mixins" as *;
+
+.usa-identifier {
+  // Default to USWDS colors
+  --usa-identifier-bg: #{color('base-darkest')};
+  background-color: var(--usa-identifier-bg);
+
+  [data-theme="contrast"] & {
+    --usa-identifier-bg: #{$bg-high-contrast};
+  }
+
+  @include at-media-max('tablet') {
+    &.vote-block-padding-y-narrow {
+      padding-bottom: 4.5rem;
+    }
+  }
+}
+
+.usa-identifier__required-link,
+.usa-identifier__required-link.usa-link,
+.usa-identifier__identity-disclaimer a,
+.usa-identifier__container a {
+  @include vote-link-dark;
+}
+
+.usa-identifier__logos {
+  margin-right: unset;
+  margin-inline-end: 1rem;
+}
+
+.usa-identifier__required-links-list {
+  padding-inline-start: 0;
+}
+

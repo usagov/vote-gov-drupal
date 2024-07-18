@@ -2,16 +2,19 @@
 {% set title = drupal_title() %}
 
 {% block main %}
-  <main role="main" id="main">
-    <a id="main-content" tabindex="-1"></a>
+  <main role="main" id="main-content">
     <section class="vote-hero vote-hero--dark">
       <div class="vote-hero__container">
         <div class="vote-hero__callout">
           {{ drupal_entity('block', 'votegov_breadcrumbs') }}
-          <h1 class="vote-hero__heading">
-            {{ title }}
-          </h1>
-          {{ node.field_subtitle.value  | check_markup(node.field_subtitle.format) }}
+          <div class="vote-hero__content">
+            <h1 class="vote-hero__heading">
+              {{ title }}
+            </h1>
+            <div class="vote-hero__text usa-intro">
+              {{ node.field_subtitle.value  | check_markup(node.field_subtitle.format) }}
+            </div>
+          </div>
         </div>
         {% if node.field_media.value %}
           <div class="vote-hero__image">
@@ -24,17 +27,19 @@
       <aside
         class="usa-in-page-nav"
         data-main-content-selector=".usa-in-page-nav-container"
-        data-title-text="On this page"
+        data-title-text="{{ 'On this page' | t }}"
         data-title-heading-level="h2"
-        data-scroll-offset="0"
-        data-root-margin="0px 0px -800px 0px"
-        data-threshold="0"
+        data-scroll-offset="-600"
+        data-root-margin="48px 0px -90% 0px"
+        data-threshold="1"
       ></aside>
       <div class="vote-page-content vote-page-content--alt">
         {{ page.content }}
       </div>
     </div>
   </main>
+  <div role="region" aria-label="{{ 'Know your voting rights' | t }}">
   {# Voter guide listing #}
   {{ drupal_view('voter_guides', 'embed_1') }}
+  </div>
 {% endblock %}

@@ -16,6 +16,10 @@ msgstr "Diné"
 msgid "Select language"
 msgstr "Saad choid77['88[7g77"
 
+#breadcrumb
+msgid "Home"
+msgstr "Hooghangi naaltsoos"
+
 # config.languages.params.Owner
 msgid "@sitename in language"
 msgstr "@sitename Diné"

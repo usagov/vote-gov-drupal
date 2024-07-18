@@ -15,6 +15,10 @@ msgstr ""
 msgid "Select language"
 msgstr "Ulu nakmiighhu"
 
+#breadcrumb
+msgid "Home"
+msgstr "Nem pinga"
+
 #main
 msgid "@sitename in language"
 msgstr "@sitename Akuzipigestun"

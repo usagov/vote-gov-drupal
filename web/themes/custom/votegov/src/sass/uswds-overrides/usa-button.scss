@@ -1,18 +1,34 @@
 @use "uswds-core" as *;
 @use "variables" as *;
+@use "mixins" as *;
 
 .usa-button {
+  margin-right: unset;
+
   .usa-form & {
     @include u-margin-top(3);
   }
 }
 
-.usa-button, .usa-button:not(.usa-button--unstyled), .usa-button:not(.usa-button--unstyled):hover {
+.usa-button,
+.usa-button:not(.usa-button--unstyled),
+.usa-button:not(.usa-button--unstyled):hover {
   --usa-button-bg: inherit;
+  --usa-button--outline: #{color('blue-40v')};
   background-color: var(--usa-button-bg);
+  outline-color: var(--usa-button--outline);
 
   [data-theme="contrast"] & {
     --usa-button-bg: #{$btn-bg-high-contrast};
+    outline-color: var(--usa-button--outline);
+  }
+
+  .vote-hero--homepage & {
+    --usa-button--outline: #{color('blue-70v')};
+
+    [data-theme="contrast"] & {
+      --usa-button--outline: #{color('blue-40v')};
+    }
   }
 }
 
@@ -33,12 +49,10 @@
     }
   }
 
-  &:hover,
-  &:focus,
-  &.usa-focus,
-  &.usa-button--hover
-  {
+  @include hover {
+    @include u-text-decoration('no-underline');
     --usa-button-bg: #{$base-primary-hover};
+    color: var(--usa-button-text);
 
     [data-theme="contrast"] & {
       --usa-button-bg: #{$btn-bg-high-contrast-hover};
@@ -49,25 +63,25 @@
     --usa-button-bg: #{$ac-warm};
 
     [data-theme="contrast"] & {
-      --usa-button-bg: #{$btn-bg-high-contrast};
+      --usa-button-bg: #{$bg-hero-default};
+      --usa-button-text: #{$text-high-contrast};
     }
 
     &.usa-button--active {
       --usa-button-bg: #{$ac-warm-hover};
 
       [data-theme="contrast"] & {
-        --usa-button-bg: #{$btn-bg-high-contrast-hover};
+        --usa-button-bg: #{$btn-secondary-bg-high-contrast-hover};
+        --usa-button-text: #{$text-high-contrast};
       }
     }
 
-    &:hover,
-    &:focus,
-    &.usa-focus,
-    &.usa-button--hover {
+    @include hover {
       --usa-button-bg: #{$ac-warm-hover};
 
       [data-theme="contrast"] & {
-        --usa-button-bg: #{$btn-bg-high-contrast-hover};
+        --usa-button-bg: #{$btn-secondary-bg-high-contrast-hover};
+        --usa-button-text: #{$text-high-contrast};
       }
     }
   }

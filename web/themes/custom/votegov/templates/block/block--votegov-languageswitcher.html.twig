@@ -42,10 +42,9 @@
             </button>
 
             <div class="usa-language__submenu" id="language-options" hidden {{ attributes }}>
-            <button type="button" class="usa-language__close" data-test="closeBtn">{{ 'Close' | t }}</button>
+            <button type="button" class="usa-language__close" data-test="langcloseBtn">{{ 'Close' | t }}</button>
             {# Language menu items: links--language-block.html.twig #}
-            <ul data-test="languageSwitcher"
-                name="language-switcher">
+            <ul data-test="languageSwitcher">
               {{ content }}
             </ul>
             </div>

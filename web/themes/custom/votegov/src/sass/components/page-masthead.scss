@@ -34,6 +34,10 @@
   }
 
   &.page-masthead--image-offset {
-    padding-bottom: 16.7rem;
+    padding-bottom: 8rem;
+
+    @include at-media('tablet-lg') {
+      padding-bottom: 17rem;
+    }
   }
 }

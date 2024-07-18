@@ -67,22 +67,21 @@ jobs:
             npm install
             npm run cy:pipeline:frontEnd
           when: on_fail
-          # keeping this commented out till fixes are address and then will add back to have a baseline for accessability testing
-      # - run:
-      #     name: "Cypress - axe tests"
-      #     command: |
-      #       cd testing
-      #       npm install
-      #       npm run cy:pipeline:axe
-      #     when: always
-      # - run:
-      #     name: "Cypress - axe tests - rerun"
-      #     command: |
-      #       echo "I am the result of axe tests failed job"
-      #       cd testing
-      #       npm install
-      #       npm run cy:pipeline:axe
-      #     when: on_fail
+      - run:
+          name: "Cypress - axe tests"
+          command: |
+            cd testing
+            npm install
+            npm run cy:pipeline:axe
+          when: always
+      - run:
+          name: "Cypress - axe tests - rerun"
+          command: |
+            echo "I am the result of axe tests failed job"
+            cd testing
+            npm install
+            npm run cy:pipeline:axe
+          when: on_fail
       - store_artifacts:
           path: testing/cypress/screenshots
   deploy:
