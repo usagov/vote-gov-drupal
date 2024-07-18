@@ -13,7 +13,12 @@
     <div class="vote-usagov-partner__contact">
       <div class="vote-usagov-partner__logo">
         {# USA.gov link #}
-        <a href="https://www.usa.gov/" extlinkjs-ignore>
+        {% if language != "es" %}
+          {% set usagov_url = "https://www.usa.gov/" %}
+        {% else %}
+          {% set usagov_url = "https://www.usa.gov/es" %}
+        {% endif %}
+        <a href={{ usagov_url }} extlinkjs-ignore>
           <img
             src="{{ theme_path }}/img/usagov-logo.svg"
             alt="{{ "USA.gov logo" | t }}"
