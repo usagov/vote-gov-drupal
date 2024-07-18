@@ -80,17 +80,20 @@
   {{ drupal_view('sitewide_alert', 'block_1') }}
 
 <header class="usa-header usa-header--extended">
-    <div class="usa-navbar">
+  {% set mainmenu = drupal_entity('block', 'votegov_mainnavigation') | render %}
+  <div class="usa-navbar">
 
-      {# Site branding component #}
-      {{ drupal_entity('block', 'votegov_sitebranding') }}
+    {# Site branding component #}
+    {{ drupal_entity('block', 'votegov_sitebranding') }}
 
-      <button type="button" class="usa-menu-btn" data-test="mobileBtn">{{ 'Menu' | t }}</button>
+    {% if mainmenu %}
+    <button type="button" class="usa-menu-btn" data-test="mobileBtn">{{ 'Menu' | t }}</button>
+    {% endif %}
 
-    </div>
+  </div>
 
-    {# Main navigation component #}
-    {{ drupal_entity('block', 'votegov_mainnavigation') }}
+  {# Main navigation component #}
+  {{ mainmenu }}
 </header>
 
 {{ page.admin }}
