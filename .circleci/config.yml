@@ -329,6 +329,8 @@ workflows:
                 - test
           requires:
             -  post-deploy-upkeep
+          run:
+            - sleep 1m
   deploy-prod-workflow:
     when:
       and:
