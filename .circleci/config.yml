@@ -50,22 +50,20 @@ jobs:
       cypress_pipeline: 1
       cypress_cloudgov_application_name: "${project}-drupal-${CIRCLE_BRANCH}"
     steps:
-      - run:
-          name: "Delay tests"
-          command: |
-            sleep 30    
       - checkout
       - attach_workspace:
           at: ~/
       - run:
           name: "Cypress - frontend tests"
           command: |
+            sleep 120    
             cd testing
             npm install
             npm run cy:pipeline:frontEnd
       - run:
           name: "Cypress - frontend tests - rerun"
           command: |
+            sleep 120   
             echo "I am the result of frontend tests failed job"
             cd testing
             npm install
@@ -81,6 +79,7 @@ jobs:
       - run:
           name: "Cypress - axe tests - rerun"
           command: |
+            sleep 120    
             echo "I am the result of axe tests failed job"
             cd testing
             npm install
