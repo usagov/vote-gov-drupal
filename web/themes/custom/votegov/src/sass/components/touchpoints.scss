@@ -2,6 +2,12 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+.touchpoints-form-wrapper {
+  h2.fba-modal-title {
+    @include u-margin-top(3);
+  }
+}
+
 .vote-touchpoints--button {
   @include u-margin(0);
 
