@@ -52,20 +52,12 @@
 
     >a.usa-nav__link, >button.usa-nav__link {
       --usa-nav--primary-item-text: #{$base-dark};
-      --usa-nav--primary-item-bg: #{$base-white};
-
-      @include hover {
-        --usa-nav--primary-item-bg: #{$bg-light-cool};
-      }
+      --usa-nav--primary-item-bg: transparent;
+      --usa-nav--primary-item-bg--hover: #{$bg-light-cool};
 
       [data-theme="contrast"] & {
         --usa-nav--primary-item-text: #{$link-high-contrast};
-        --usa-nav--primary-item-bg: #{$base-white};
-
-        @include hover {
-          --usa-nav--primary-item-text: #{$link-high-contrast};
-          --usa-nav--primary-item-bg: #{$bg-high-contrast-light-cool};
-        }
+        --usa-nav--primary-item-bg--hover: #{$bg-high-contrast-light-cool};
       }
 
       @include u-font-size('serif', 6);
@@ -78,6 +70,10 @@
 
       &:not(.usa-button):not(.usa-current) {
         color: var(--usa-nav--primary-item-text);
+      }
+
+      @include hover {
+        background-color: var(--usa-nav--primary-item-bg--hover);
       }
 
       &.usa-current {
@@ -100,7 +96,7 @@
   @include at-media('tablet-lg') {
     >a.usa-nav__link, >button.usa-nav__link {
       --usa-nav--primary-item-text: #{$base-dark};
-      --usa-nav--primary-item-bg: #{$base-white};
+      --usa-nav--primary-item-bg: transparent;
       --usa-nav--primary-item-text-expanded: #{$base-white};
       --usa-nav--primary-item-bg-expanded: #{$base-dark};
       --usa-current-bg: #{$ac-warm};
@@ -112,8 +108,7 @@
 
       [data-theme="contrast"] & {
         --usa-nav--primary-item-text: #{$bg-high-contrast};
-        --usa-nav--primary-item-bg: #{$base-white};
-        --usa-nav--primary-item-text-expanded: #{$btn-secondary-bg-high-contrast-hover};
+        --usa-nav--primary-item-text-expanded: #{$base-white};
         --usa-nav--primary-item-bg-expanded: #{$bg-high-contrast};
         --usa-current-bg: #{$link-high-contrast-hover-blue};
 
@@ -366,13 +361,14 @@
   @include u-float('none');
   @include u-text-decoration('no-underline');
   margin-inline-start: auto;
-  transform: translateY(-3.75rem);
+  transform: translateY(-3.95rem);
   cursor: pointer;
   background-color: transparent;
   color: var(--usa-nav--close);
 
   @include hover {
     @include u-text-decoration('underline');
+    color: var(--usa-nav--close);
   }
 
   @include after {
@@ -381,8 +377,8 @@
     margin-inline-start: 0.5rem;
     height: 0.75rem;
     mask: url('../../img/svg/close.svg') no-repeat;
+    mask-size: contain;
     background-color: var(--usa-nav--close);
-    mask-size: 70%;
   }
 
   @include at-media-max('tablet-lg') {

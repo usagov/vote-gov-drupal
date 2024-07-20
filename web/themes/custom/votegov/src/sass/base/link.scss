@@ -9,4 +9,8 @@ a {
 
 [href]:focus {
   outline-offset: 0.25rem;
+
+  &.usa-nav__link {
+    outline-offset: 0;
+  }
 }
