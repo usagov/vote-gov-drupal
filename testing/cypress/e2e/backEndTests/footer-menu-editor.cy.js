@@ -12,7 +12,7 @@ describe('Footer Menu Function', () => {
 
     cy.get('[data-drupal-selector="edit-title-0-value"]').type('Cypress Test Link')
     cy.get('[data-drupal-selector="edit-link-0-uri"]').type('https://www.bixal.com/')
-    cy.get('[data-drupal-selector="edit-weight-0-value"]').clear().type('-99')
+    cy.get('[data-drupal-selector="edit-menu-link-display-settings"]').click().get('[data-drupal-selector="edit-weight-0-value"]').clear().type('-99')
 
 
     cy.get('[data-drupal-selector="edit-submit"]').click()

@@ -3,6 +3,7 @@ $base-white: #FFF; // gray-cool-1
 $base-dark: #11385B; // blue-warm-80v
 $base-primary: #345D96; // blue-warm-50
 $base-primary-hover: #2E598A; // blue-60
+$base-secondary-hover: #005EA2;
 
 // Accent Colors.
 $ac-warm: #992E30;
@@ -22,7 +23,9 @@ $bg-high-contrast: #0A0A2A;
 $text-high-contrast: $bg-high-contrast;
 $link-high-contrast: #0000FF;
 $link-high-contrast-hover: #010156;
+$link-high-contrast-hover-blue: #00FFFF;
 $btn-bg-high-contrast: $link-high-contrast;
 $btn-bg-high-contrast-hover: $link-high-contrast-hover;
 $section-bg-high-contrast: $bg-light;
 $btn-secondary-bg-high-contrast-hover: #FFFF00;
+$bg-high-contrast-light-cool: #F5F5F5;

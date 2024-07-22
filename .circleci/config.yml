@@ -62,6 +62,7 @@ jobs:
       - run:
           name: "Cypress - frontend tests - rerun"
           command: |
+            sleep 120
             echo "I am the result of frontend tests failed job"
             cd testing
             npm install
@@ -77,6 +78,7 @@ jobs:
       - run:
           name: "Cypress - axe tests - rerun"
           command: |
+            sleep 120
             echo "I am the result of axe tests failed job"
             cd testing
             npm install
