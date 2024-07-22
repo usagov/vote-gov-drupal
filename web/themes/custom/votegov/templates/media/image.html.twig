@@ -9,5 +9,5 @@
 {% if attributes.alt %}
   <img{{ attributes }} />
 {% else %}
-  <img{{ attributes.setAttribute('role', 'presentation').setAttribute('alt', '') }}/>
+  <img{{ attributes.setAttribute('role', 'presentation').setAttribute('alt', '').removeAttribute('loading') }}/>
 {% endif %}
