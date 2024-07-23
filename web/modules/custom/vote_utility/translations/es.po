@@ -119,7 +119,6 @@ msgstr "Herramienta selector para registrarse para votar"
 msgid "States and territories list"
 msgstr "Lista de estados y territorios"
 
-
 msgid "How to register to vote"
 msgstr "Cómo registrarse para votar"
 
@@ -326,3 +325,7 @@ msgstr "Votar como ciudadano en el extrajero"
 
 msgid "Secondary navigation"
 msgstr "navegación secundaria"
+
+msgid "Know your voting rights"
+msgstr "Conozca su derecho al voto"
+
