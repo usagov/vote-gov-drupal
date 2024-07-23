@@ -323,5 +323,9 @@ msgstr "Obtenga más información del Programa Federal de Asistencia para Votar 
 msgid "Voting as a U.S. citizen from outside the U.S."
 msgstr "Votar como ciudadano en el extrajero"
 
+msgid "Secondary navigation"
+msgstr "navegación secundaria"
+
 msgid "Know your voting rights"
 msgstr "Conozca su derecho al voto"
+
