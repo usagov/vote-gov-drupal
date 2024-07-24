@@ -122,7 +122,7 @@ msgstr "Lista de estados y territorios"
 msgid "How to register to vote"
 msgstr "Cómo registrarse para votar"
 
-msgid "How to register and update your registration"
+msgid "Start or update your online registration"
 msgstr "Cómo registrarse y poner al día su registro"
 
 msgid "Other ways to register to vote"
