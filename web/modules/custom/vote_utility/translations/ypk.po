@@ -78,7 +78,7 @@ msgstr "Ilaten nakmikinaluten @state_name-mi"
 msgid "How to register to vote"
 msgstr "Naten ilatelleghqaq nakmikimun"
 
-msgid "How to register and update your registration"
+msgid "Start or update your online registration"
 msgstr "Naten ilatelleghqaq nakmikimun"
 
 msgid "Other ways to register to vote"

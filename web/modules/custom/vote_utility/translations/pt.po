@@ -123,7 +123,7 @@ msgstr "Registrar-se para votar em @state_name"
 msgid "How to register to vote"
 msgstr "Como registrar-se para votar"
 
-msgid "How to register and update your registration"
+msgid "Start or update your online registration"
 msgstr "Como registrar-se para votar"
 
 # data.translations.register.other_language_selection__heading (state phrase updates)
