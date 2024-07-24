@@ -123,7 +123,7 @@ msgid "How to register to vote"
 msgstr "Cómo registrarse para votar"
 
 msgid "Start or update your online registration"
-msgstr "Cómo registrarse y poner al día su registro"
+msgstr "Empiece o actualice su registración online"
 
 msgid "Other ways to register to vote"
 msgstr "Otras formas de registrarse para votar"
