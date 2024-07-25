@@ -6,7 +6,12 @@
     {{ heading }}
   </h2>
   <div class="vote-card-group">
-    {{ cards }}
+    {% for card in cards %}
+      {# Exclude cards that do not match the current language #}
+      {% if card['#node'].langcode.value == language %}
+        {{ card }}
+      {% endif %}
+    {% endfor %}
 
     {# Start temporary cards. #}
     {% if language != "es" %}
