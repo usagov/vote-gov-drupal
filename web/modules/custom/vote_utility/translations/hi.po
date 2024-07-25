@@ -17,7 +17,7 @@ msgstr "भाषा चुनें"
 
 #breadcrumb
 msgid "Home"
-msgstr "मुख्य पृष्ठ "
+msgstr "मुख्य पृष्ठ"
 
 #main
 msgid "@sitename in language"
