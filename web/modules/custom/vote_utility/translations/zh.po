@@ -15,6 +15,10 @@ msgstr "繁體中文"
 msgid "Select language"
 msgstr "選擇語言"
 
+#breadcrumb
+msgid "Home"
+msgstr "主頁 "
+
 #main
 msgid "@sitename in language"
 msgstr "@sitename 中文"
@@ -74,7 +78,7 @@ msgstr "在 @state_name 登記投票"
 msgid "How to register to vote"
 msgstr "如何登記投票"
 
-msgid "How to register and update your registration"
+msgid "Start or update your online registration"
 msgstr "如何登記投票"
 
 msgid "Other ways to register to vote"

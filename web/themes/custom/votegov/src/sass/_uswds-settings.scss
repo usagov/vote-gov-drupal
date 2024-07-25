@@ -126,13 +126,13 @@ https://designsystem.digital.gov/documentation/settings/
   // -- Card
   // $theme-card-border-color: "#3E79BB",
   $theme-card-border-radius: "md",
-  // $theme-card-border-width: "3px",
+  $theme-card-border-width: 0,
   $theme-card-gap: 4,
   $theme-card-font-family: "sans",
   $theme-card-header-typeset: "serif",
-  // $theme-card-margin-bottom: 4,
-  // $theme-card-padding-perimeter: 4,
-  // $theme-card-padding-y: 4,
+  $theme-card-margin-bottom: 0,
+  $theme-card-padding-perimeter: 0,
+  $theme-card-padding-y: 0,
   // -- Checkbox
   // -- Collection
   // -- Footer
@@ -146,6 +146,8 @@ https://designsystem.digital.gov/documentation/settings/
   $theme-in-page-nav-margin-top: 0,
   // -- Input
   // -- Link
+  // turning off USWDS sting to let users know of an external link in favor of project settings
+    $theme-external-link-sr-label-tab-new: " ",
   // -- Modal
   // -- Navigation
   $theme-header-min-width: 'tablet-lg',
@@ -168,6 +170,7 @@ https://designsystem.digital.gov/documentation/settings/
   $theme-column-gap-mobile: 5,
   //$theme-column-gap-desktop: 7,
   $theme-site-margins-width: 10,
+  $theme-site-margins-mobile-width: 3,
   $theme-site-margins-breakpoint: 'tablet',
 
   // Typography settings ---------------------------------------------------------------
@@ -182,7 +185,7 @@ https://designsystem.digital.gov/documentation/settings/
   $theme-font-type-serif: "merriweather",
   $theme-font-role-ui: "sans",
   $theme-font-role-heading: "sans",
-  $theme-font-role-body: "serif",
+  $theme-font-role-body: "sans",
   $theme-font-role-alt: "sans",
   $theme-text-measure: none, // Set standard line-length to 100%
   $theme-lead-measure: none,

@@ -2,17 +2,12 @@
 @use "variables" as *;
 
 .usa-search {
-  header & {
-    @include at-media-max('tablet-lg') {
-      @include u-margin(2);
-    }
-  }
-
   .usa-input {
     @include u-radius(0);
     @include u-padding-x(2);
     @include u-padding-y(1);
     @include u-height(5);
+    @include u-maxw('none');
     border: 1px solid $bg-light-medium;
     border-inline-end-width: 0;
     border-end-start-radius: 0.25rem;

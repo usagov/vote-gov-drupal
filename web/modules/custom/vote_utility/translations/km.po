@@ -15,6 +15,10 @@ msgstr "ភាសាខ្មែរ"
 msgid "Select language"
 msgstr "ជ្រើសរើសភាសា"
 
+#breadcrumb
+msgid "Home"
+msgstr "ទំព័រដើម"
+
 #main
 msgid "@sitename in language"
 msgstr "@sitename ជាភាសាខ្មែរ"
@@ -74,7 +78,7 @@ msgstr "ចុះឈ្មោះដើម្បីបោះឆ្នោតនៅ
 msgid "How to register to vote"
 msgstr "របៀបចុះឈ្មោះដើម្បីបោះឆ្នោត"
 
-msgid "How to register and update your registration"
+msgid "Start or update your online registration"
 msgstr "របៀបចុះឈ្មោះដើម្បីបោះឆ្នោត"
 
 msgid "Other ways to register to vote"

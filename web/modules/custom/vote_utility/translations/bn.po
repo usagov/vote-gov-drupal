@@ -15,6 +15,10 @@ msgstr "বাংলা"
 msgid "Select language"
 msgstr "ভাষা নির্বাচন করুন"
 
+#breadcrumb
+msgid "Home"
+msgstr "হোমপেজ"
+
 #main
 msgid "@sitename in language"
 msgstr "বাংলায় @sitename"
@@ -74,7 +78,7 @@ msgstr "@state_name এ ভোট দিতে নিবন্ধন করু�
 msgid "How to register to vote"
 msgstr "ভোট দেওয়ার জন্য কীভাবে নিবন্ধন করবেন"
 
-msgid "How to register and update your registration"
+msgid "Start or update your online registration"
 msgstr "ভোট দেওয়ার জন্য কীভাবে নিবন্ধন করবেন"
 
 msgid "Other ways to register to vote"

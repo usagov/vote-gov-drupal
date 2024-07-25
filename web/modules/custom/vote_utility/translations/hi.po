@@ -15,6 +15,10 @@ msgstr "हिन्दी"
 msgid "Select language"
 msgstr "भाषा चुनें"
 
+#breadcrumb
+msgid "Home"
+msgstr "मुख्य पृष्ठ "
+
 #main
 msgid "@sitename in language"
 msgstr "@sitename हिन्दी में"
@@ -74,7 +78,7 @@ msgstr "@state_name में मतदान करने के लिए प�
 msgid "How to register to vote"
 msgstr "मतदान करने के लिए पंजीकरण कैसे करें"
 
-msgid "How to register and update your registration"
+msgid "Start or update your online registration"
 msgstr "मतदान करने के लिए पंजीकरण कैसे करें"
 
 msgid "Other ways to register to vote"

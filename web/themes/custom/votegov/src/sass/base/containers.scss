@@ -2,8 +2,13 @@
 @use "variables" as *;
 
 body {
-  color: $base-dark;
+  --body-txt-color: #{$base-dark};
+  color: var(--body-txt-color);
   background-color: var(--main-color);
+
+  [data-theme="contrast"] & {
+    --body-txt-color: #{$text-high-contrast};
+  }
 
   &.usa-js-mobile-nav--active {
     overflow: unset;

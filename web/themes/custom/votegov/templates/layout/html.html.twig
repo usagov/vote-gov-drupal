@@ -29,6 +29,7 @@
   db_offline ? 'db-offline',
 ] %}
 
+
 <!DOCTYPE html>
 <html{{ html_attributes }}>
 <head>
@@ -36,6 +37,41 @@
   <title>{{ head_title|safe_join(' | ') }}</title>
   <css-placeholder token="{{ placeholder_token }}">
   <js-placeholder token="{{ placeholder_token }}">
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <!-- DataLayer -->
+    <script id="taxonomy-data">
+      dataLayer = [{
+        "Page_Language" : "{{ languagename }}",
+        "State_or_Territory": "{{ node_type == 'state_territory' ? title_english }}",
+{% if is_frontpage %}
+        "Content_Group_1": "Homepage",
+        "Content_Group_2": "Homepage",
+        "Content_Group_3": "Homepage"
+{% elseif  node_type == 'page' %}
+        "Content_Group_1": "About section",
+        "Content_Group_2": "About section",
+        "Content_Group_3": "{{ title_english }}"
+{% elseif node_type == 'state_territory' %}
+        "Content_Group_1": "Registration section",
+        "Content_Group_2": "Registration state page",
+        "Content_Group_3": "Registration in {{ title_english }}"
+{% elseif node_type == 'voter_guide' %}
+        "Content_Group_1": "Voter guide section",
+        "Content_Group_2": "Voter guide content page",
+        "Content_Group_3": "{{ title_english }}"
+{% elseif node_type == 'landing' %}
+{% if title_english == 'Register to vote'%}
+        "Content_Group_1": "Registration section",
+{% elseif title_english == "Guide to voting" %}
+        "Content_Group_1": "Voter guide section",
+{% else %}
+        "Content_Group_1": "{{ title_english }}",
+{% endif %}
+        "Content_Group_2": "{{ title_english }} landing page",
+        "Content_Group_3": "{{ title_english }} landing page"
+{% endif %}
+      }];
+    </script>
     {% if not logged_in %}
       <!-- Google Tag Manager -->
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(

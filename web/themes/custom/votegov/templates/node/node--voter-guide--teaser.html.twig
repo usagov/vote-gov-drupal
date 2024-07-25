@@ -1,28 +1,27 @@
-{% set classes = [
-  'node--' ~ node.bundle|clean_class,
-  node.isPromoted() ? 'node--promoted',
-  node.isSticky() ? 'node--sticky',
-  not node.isPublished() ? 'node--unpublished',
-  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  'usa-card tablet:grid-col-4 desktop-lg:grid-col-3'
-] %}
+{% extends 'node--teaser.html.twig' %}
+{#
+/**
+ * @file
+ *  Bixal USWDS Theme override to display a node: Voter Guide - teaser.
+ */
+#}
 
-<article{{ attributes.addClass(classes) }}>
-    <a href="{{ url }}" title="{{ label | field_value }}">
-      <div class="usa-card__container">
-        <div class="vote-feature-card__icon">
-          <div class="vote-feature-card__icon-circle">
-            {{ content.field_icon | field_value }}
-          </div>        
-        </div>
-        <div class="vote-feature-card__content">
-        <div class="usa-card__header">
-            <h3 class="usa-card__heading">{{ label }}</h3>
-        </div>
+{# Caching the data in content object #}
+{% set savedCache = content | render %}
+{% set attributes = attributes.addClass('usa-card') %}
+
+{% block content %}
+  <a class="vote-card__link" href="{{ url }}" title="{{ label | field_value }}">
+    <div class="usa-card__container">
+      <div class="vote-feature-card__icon">
+        {{ content.field_icon | field_value }}
+      </div>
+      <div class="vote-feature-card__content">
+        <h3 class="usa-card__heading">{{ label }}</h3>
         <div class="usa-card__body">
-            {{ content.body | render | striptags }}
-        </div>
+          {{ content.body | render | striptags }}
         </div>
       </div>
+    </div>
   </a>
-</article>
+{% endblock %}

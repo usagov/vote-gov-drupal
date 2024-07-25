@@ -2,13 +2,19 @@
 @use "variables" as *;
 
 .vote-heading--red-underline {
+  --vote-heading--underline: #{$ac-warm};
+
   &:after {
     content: '';
     @include u-display('block');
     @include u-margin-top(2);
     @include u-width(10);
     @include u-height(0.5);
-    background-color: $ac-warm;
+    background-color: var(--vote-heading--underline);
+  }
+
+  [data-theme="contrast"] & {
+    --vote-heading--underline: #{$bg-high-contrast};
   }
 
   + * {
@@ -17,5 +23,5 @@
 }
 
 .vote-heading--max-width {
-  @include u-maxw('tablet-lg');
+  @include u-maxw('tablet');
 }

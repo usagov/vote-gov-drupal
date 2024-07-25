@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: nvrf_a_b_message
 label: 'NVRF A/B Message'
-revision: 0
+revision: false
 description: ''

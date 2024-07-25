@@ -1,3 +1,4 @@
+{% extends 'media.html.twig' %}
 {#
 /**
  * @file
@@ -5,10 +6,14 @@
  */
 #}
 
-{% extends 'media.html.twig' %}
+{# Caching the data in content object #}
+{% set savedCache = content | render %}
 
 {% block content %}
   <div{{ attributes.addClass(classes) }}>
+    {# Hold these title_* placeholders for potential integration #}
+    {{ title_prefix }}
+    {{ title_suffix }}
     {% if content.field_media_file | render %}
       {{ content.field_media_file | field_value }}
       <svg class="usa-icon usa-icon--size-3 text-tbottom" aria-hidden="true" focusable="false" role="img">

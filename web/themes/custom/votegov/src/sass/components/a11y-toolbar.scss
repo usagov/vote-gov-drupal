@@ -1,0 +1,142 @@
+@use "uswds-core" as *;
+@use "mixins" as *;
+@use "variables" as *;
+
+
+.vote-theme-options {
+  @include u-position('fixed');
+  @include u-display('flex');
+  @include u-z(300);
+
+  @include at-media('tablet') {
+    @include u-flex-direction('column');
+    @include u-border('solid');
+    border-color: $base-white;
+    border-width: 2px;
+    border-inline-start-width: 0;
+    border-start-end-radius: 0.5rem;
+    border-end-end-radius: 0.5rem;
+    top: calc(50% - 3.125rem);
+    inset-inline-start: 0;
+  }
+
+  @include at-media-max('tablet') {
+    @include u-bottom('105');
+    inset-inline-start: calc(50% - 3.125rem);
+  }
+}
+
+.vote-theme-options__button {
+  --theme-options-button--bg: #{$base-white};
+  --theme-options-button--bg-hover: #{$base-primary-hover};
+  --theme-options-button--icon: #{$base-dark};
+  --theme-options-button--border: #{$base-dark};
+  @include button-unstyled;
+  @include u-display('block');
+  @include u-width('full');
+  @include u-padding(2);
+  border: 2px solid var(--theme-options-button--border);
+  background-color: var(--theme-options-button--bg);
+  cursor: pointer;
+
+  @include at-media('tablet') {
+    border-inline-start: 0;
+  }
+
+  @include at-media-max('tablet') {
+    --theme-options-button--bg: #{$base-primary};
+
+    @include hover {
+      --theme-options-button--bg-hover: #{$base-dark};
+    }
+  }
+
+  @include hover {
+    --theme-options-button--border: #{$base-white};
+    background-color: var(--theme-options-button--bg-hover);
+
+    @include before {
+      --theme-options-button--icon: #{$base-white};
+    }
+  }
+
+  &:first-child {
+    @include at-media('tablet') {
+      @include u-border-bottom(0);
+      border-start-end-radius: 0.5rem;
+    }
+
+    @include at-media-max('tablet') {
+      border-inline-end: 0;
+      border-start-start-radius: 0.5rem;
+      border-end-start-radius: 0.5rem;
+    }
+  }
+
+  &:last-child {
+    @include at-media('tablet') {
+      border-end-end-radius: 0.5rem;
+    }
+
+    @include at-media-max('tablet') {
+      border-start-end-radius: 0.5rem;
+      border-end-end-radius: 0.5rem;
+    }
+  }
+
+  @include before {
+    @include u-width(2);
+    @include u-height(2);
+    @include u-display('block');
+    background-color: var(--theme-options-button--icon);
+    background-size: contain;
+
+    @include at-media-max('tablet') {
+      --theme-options-button--icon: #{$base-white};
+    }
+  }
+
+  [data-theme="contrast"] & {
+    @include hover {
+      --theme-options-button--bg-hover: #{$btn-bg-high-contrast};
+    }
+
+    @include at-media-max('tablet') {
+      --theme-options-button--bg: #{$btn-bg-high-contrast};
+      --theme-options-button--border: #{$base-white};
+
+      @include hover {
+        --theme-options-button--bg-hover: #{$btn-bg-high-contrast-hover};
+        --theme-options-button--border: #{$base-white};
+      }
+    }
+  }
+}
+
+.vote-theme-options__button--theme {
+  @include hover {
+    z-index: 0;
+  }
+
+  @include before {
+    mask: url("../../img/svg/dark-light.svg") no-repeat center center;
+  }
+}
+
+.vote-theme-options__button--scale {
+  @include hover {
+    z-index: 0;
+  }
+
+  @include before {
+    mask: url("../../img/svg/text-size.svg") no-repeat center center;
+  }
+}
+
+[data-scale="large"] {
+  font-size: 115%;
+}
+
+[data-scale="x-large"] {
+  font-size: 130%;
+}

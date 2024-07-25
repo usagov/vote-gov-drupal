@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: inline_alert
 label: 'Inline alert'
-revision: 1
+revision: true
 description: ''

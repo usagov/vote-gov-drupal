@@ -4,52 +4,57 @@
  * Default theme implementation to display a paragraph: Registration tool
  */
 #}
+
+{# Caching the data in content object #}
+{% set savedCache = content | render %}
+
 {{ attach_library('votegov/registration_tool') }}
 
-<section class="vote-registration-tool" role="region" aria-label="{{ 'Register to vote selector tool' | t }}"
-         aria-describedby="{{ content.field_form_heading | field_value }}">
+<section{{ attributes.addClass('vote-registration-tool').setAttribute('role', 'region').setAttribute('aria-label', 'Register to vote selector tool' | t) }}>
+  {# Hold these title_* placeholders for potential integration #}
+  {{ title_prefix }}
+  {{ title_suffix }}
   <div class="vote-registration-tool__container">
-    {{ drupal_entity('block', 'votegov_breadcrumbs') }}
-    <h1 class="vote-registration-tool__heading">
-      {{ content.field_heading | field_value }}
-    </h1>
     <div class="vote-registration-tool__content">
-      <div class="vote-registration-tool__text type--secondary">
+      {{ drupal_entity('block', 'votegov_breadcrumbs') }}
+      <h1 class="vote-registration-tool__heading">
+        {{ content.field_heading | field_value }}
+      </h1>
+      <div class="vote-registration-tool__text">
         {% if content.field_body | render %}
           {{ content.field_body | field_value }}
         {% else %}
           <p>{{ content.field_form_heading | field_value }}</p>
         {% endif %}
       </div>
-      <form id="vote-registration-tool__form" class="vote-registration-tool__form">
-        <label class="{{ not content.field_body | render ? 'usa-sr-only' }} vote-registration-tool__label"
-               for="vote-registration-tool__input">
-          {{ content.field_form_heading | field_value }}
-        </label>
-        <input type="text" class="vote-registration-tool__input usa-input maxw-none"
-               id="vote-registration-tool__input" autocomplete="off"
-               placeholder="{{ content.field_placeholder | field_value }}" data-test="stateInput"
-               aria-autocomplete="list" aria-expanded="true" aria-controls="vote-registration-tool__results">
-        <div class="vote-registration-tool__list-container">
-          <div id="vote-registration-tool__results" class="vote-registration-tool__nav" role="listbox"
-               aria-label="{{ 'States and territories list' | t }}">
-            <ul class="vote-registration-tool__list" data-test="stateList">
-              {% set results = drupal_view_result('state_territory', 'block') %}
-              {% for result in results %}
-                {% set nodeID = result._entity.id() %}
-                {% set node_path = path('entity.node.canonical', {'node': nodeID}) %}
-                {% set node_key = result._entity.field_state_abbreviation.value %}
-                <li role="option">
-                  <a data-key="{{ node_key }}" href="{{ node_path }}">{{ result.node_field_data_title }}</a>
-                </li>
-              {% endfor %}
-              <li id="vote-registration-tool__no-results" hidden>
-                <span tabindex="0" data-key="">{{ "No matching results. Please check spelling." | t }}</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </form>
     </div>
+    <form id="vote-registration-tool__form" class="vote-registration-tool__form">
+      <label class="{{ not content.field_body | render ? 'usa-sr-only' }} vote-registration-tool__label"
+            for="vote-registration-tool__input">
+        {{ content.field_form_heading | field_value }}
+      </label>
+      <input type="text" class="vote-registration-tool__input usa-input maxw-none"
+            id="vote-registration-tool__input" autocomplete="off"
+            placeholder="{{ content.field_placeholder | field_value }}"
+            aria-controls="vote-registration-tool__results" data-test="stateInput">
+      <div class="vote-registration-tool__list-container">
+        <div id="vote-registration-tool__results" class="vote-registration-tool__nav">
+          <ul class="vote-registration-tool__list" aria-label="{{ 'States and territories list' | t }}" data-test="stateList">
+            {% set results = drupal_view_result('state_territory', 'block') %}
+            {% for result in results %}
+              {% set nodeID = result._entity.id() %}
+              {% set node_path = path('entity.node.canonical', {'node': nodeID}) %}
+              {% set node_key = result._entity.field_state_abbreviation.value %}
+              <li>
+                <a data-key="{{ node_key }}" href="{{ node_path }}">{{ result.node_field_data_title }}</a>
+              </li>
+            {% endfor %}
+            <li id="vote-registration-tool__no-results" hidden>
+              <span tabindex="0" data-key="">{{ content.field_no_results_message | field_value }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </form>
   </div>
 </section>

@@ -16,6 +16,10 @@ msgstr "Русский"
 msgid "Select language"
 msgstr "Выберите Язык"
 
+#breadcrumb
+msgid "Home"
+msgstr "Главная страница"
+
 # config.languages.params.Owner
 msgid "@sitename in language"
 msgstr "@sitename по-русски"
@@ -116,7 +120,7 @@ msgstr "Зарегистрируйтесь для голосования в @sta
 msgid "How to register to vote"
 msgstr "Как зарегистрироваться для голосования"
 
-msgid "How to register and update your registration"
+msgid "Start or update your online registration"
 msgstr "Как зарегистрироваться для голосования"
 
 # data.translations.register.other_language_selection__heading (state phrase updates)

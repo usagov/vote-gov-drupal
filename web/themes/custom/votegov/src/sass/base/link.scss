@@ -3,6 +3,14 @@
 
 a {
   main & {
-    @include vote-link;
+    @include vote-link-bg;
+  }
+}
+
+[href]:focus {
+  outline-offset: 0.25rem;
+
+  &.usa-nav__link {
+    outline-offset: 0;
   }
 }

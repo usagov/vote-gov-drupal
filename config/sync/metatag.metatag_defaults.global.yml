@@ -20,7 +20,7 @@ tags:
   icon_32x32: /themes/custom/votegov/img/favicon/favicon-32x32.ico
   icon_96x96: /themes/custom/votegov/img/favicon/favicon-96x96.ico
   og_description: '[current-page:metatag:description]'
-  og_image: /themes/custom/vote_gov/img/ballot-box-OG.png
+  og_image: /themes/custom/votegov/img/votegov-social.jpg
   og_site_name: '[site:name]'
   og_title: '[current-page:metatag:title]'
   og_type: website
@@ -28,7 +28,7 @@ tags:
   shortcut_icon: /themes/custom/votegov/img/favicon/favicon.ico
   title: 'Register to vote | [site:name]'
   twitter_cards_description: '[current-page:metatag:description]'
-  twitter_cards_image: /themes/custom/vote_gov/img/ballot-box-OG.png
+  twitter_cards_image: /themes/custom/votegov/img/votegov-social.jpg
   twitter_cards_site: '@votegov'
   twitter_cards_title: '[current-page:metatag:title]'
   twitter_cards_type: summary_large_image

@@ -1,13 +1,16 @@
 @use "uswds-core" as *;
 @use "variables" as *;
 
-$masthead-background-color: $base-dark;
-
 .page-masthead {
+  --page-masthead-bg: #{$base-dark};
   @include u-position('relative');
   @include u-padding-top(4);
-  background-color: $masthead-background-color;
+  background-color: var(--page-masthead-bg);
   padding-bottom: 6rem;
+
+  [data-theme="contrast"] & {
+    --page-masthead-bg: #{$bg-high-contrast};
+  }
 
   &:before {
     content: "";
@@ -19,7 +22,11 @@ $masthead-background-color: $base-dark;
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    background-color: $masthead-background-color;
+    background-color: var(--page-masthead-bg);
+
+    [data-theme="contrast"] & {
+      --page-masthead-bg: #{$bg-high-contrast};
+    }
   }
 
   > * {
@@ -27,6 +34,10 @@ $masthead-background-color: $base-dark;
   }
 
   &.page-masthead--image-offset {
-    padding-bottom: 16.7rem;
+    padding-bottom: 8rem;
+
+    @include at-media('tablet-lg') {
+      padding-bottom: 17rem;
+    }
   }
 }

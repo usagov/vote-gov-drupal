@@ -9,9 +9,9 @@ dependencies:
     - system
     - user
   theme:
-    - vote_gov
+    - votegov
 id: loginalert
-theme: vote_gov
+theme: votegov
 region: content
 weight: -6
 provider: null

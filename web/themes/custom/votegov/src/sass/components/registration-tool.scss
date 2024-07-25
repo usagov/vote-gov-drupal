@@ -2,15 +2,24 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-
 .vote-registration-tool {
-  @include vote-block-padding-y--narrow;
-  background-color: $base-dark;
+  --registration-tool--bg: #{$base-dark};
+  --registration-tool__input--text: #{$base-dark};
+  @include u-padding-top(5);
+  @include u-padding-bottom(6);
+  background-color: var(--registration-tool--bg);
   color: $base-white;
 
   @include at-media('tablet-lg') {
-    background: $base-dark url('../../img/hero-map.webp') no-repeat center center;
+    background: var(--registration-tool--bg) url('../../img/hero-map.webp') no-repeat center center;
     background-size: cover;
+    @include u-padding-bottom(10);
+  }
+
+  [data-theme="contrast"] & {
+    --registration-tool--bg: #{$bg-high-contrast};
+    --registration-tool__input--text: #{$text-high-contrast};
+    background-image: unset;
   }
 
   a {
@@ -20,19 +29,18 @@
 
 .vote-registration-tool__container {
   @include grid-container;
-}
 
-.vote-registration-tool__content {
   @include at-media('tablet-lg') {
     @include grid-row;
+    @include u-flex('align-center');
+    @include u-flex('justify');
 
-    .vote-registration-tool__text {
+    .vote-registration-tool__content {
       @include grid-col(6);
     }
 
     .vote-registration-tool__form {
       @include grid-col(5);
-      margin-inline-start: calc(100% / 12);
     }
   }
 
@@ -59,7 +67,7 @@
   @include u-width('full');
   @include u-margin-bottom(1);
   padding-inline-start: 2.5rem;
-  color: $base-dark;
+  color: var(--registration-tool__input--text);
   border: 1px $bg-light-medium solid;
   background: $base-white url('../../img/svg/location.svg') no-repeat 1rem center;
 
@@ -84,7 +92,7 @@
     @include u-padding(2);
 
     a {
-      @include vote-link($color: $base-dark, $color-hover: $base-primary-hover, $color-bg: 'transparent');
+      @include vote-link($color: $base-dark, $color-hover: $base-primary-hover);
       @include u-padding-y(0.5);
       @include u-padding-x(1);
       @include u-display('inline-block');
@@ -96,3 +104,4 @@
     }
   }
 }
+

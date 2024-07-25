@@ -5,7 +5,6 @@
   {# GSA logo #}
   <section
     class="usa-identifier__section usa-identifier__section--masthead padding-top-0"
-    aria-label="{{ 'Agency identifier' | t }}"
   >
     <div class="usa-identifier__container">
       <div class="usa-identifier__logos">
@@ -14,12 +13,10 @@
             class="usa-identifier__logo-img"
             src="{{ theme_path }}/img/gsa-logo.svg"
             alt="{{ 'GSA logo' | t }}"
-            role="img"
           /></a>
       </div>
       <section
         class="usa-identifier__identity"
-        aria-label="{{ 'Agency description' | t }}"
       >
         <p class="usa-identifier__identity-domain">{{ 'Vote.gov' | t }}</p>
         <p class="usa-identifier__identity-disclaimer">
@@ -33,15 +30,23 @@
   {# USAgov identifier #}
   <section
     class="usa-identifier__section usa-identifier__section--usagov"
-    aria-label="{{ 'U.S. government information and services' | t }}"
   >
     <div class="usa-identifier__container">
       <p>
         {% set usagov_link = "Visit USA.gov" | t %}
+        {% if language == "es" %}
+          {% set usagov_url = "https://www.usa.gov/es" %}
+        {% else %}
+          {% set usagov_url = "https://www.usa.gov" %}
+        {% endif %}
         {{'Looking for U.S. government information and services? @link.' | t({
-          '@link': {'#markup': " <a href=\"https://www.usa.gov/\" class=\"usa-link\">#{usagov_link}</a>"} | render
+          '@link': {'#markup': " <a href=#{usagov_url} class=\"usa-link\">#{usagov_link}</a>"} | render
         }) }}
       </p>
     </div>
   </section>
+
+  {% if language == 'en' %}
+    <a class="usa-button vote-touchpoints--button" target="_blank" title="External link opens in new window" href="https://touchpoints.app.cloud.gov/touchpoints/c169d3b2/submit" extlinkjs-ignore>How can we improve vote.gov?</a>
+  {% endif %}
 </div>

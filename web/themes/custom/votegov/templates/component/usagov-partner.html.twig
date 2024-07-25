@@ -1,16 +1,24 @@
 <div class="vote-usagov-partner">
   {# USA.gov Links #}
-  <nav class="vote-usagov-partner__links" aria-label={{ "External election resources" | t }}>
-    {# USA.gov election info links #}
-    {{ drupal_entity('block_content', '18') }}
-  </nav>
+  {% set usagov_links_block = drupal_entity('block_content', '18') %}
+  {% if usagov_links_block['#block_content'].langcode.value == language %}
+    <nav class="vote-usagov-partner__links" aria-label="{{ 'External election resources' | t }}">
+      {# USA.gov election info links #}
+      {{ usagov_links_block }}
+    </nav>
+  {% endif %}
 
   {# Row 2 Divider - USA.gov link and email sign-up #}
   <div class="vote-usagov-partner__contact-container">
     <div class="vote-usagov-partner__contact">
       <div class="vote-usagov-partner__logo">
         {# USA.gov link #}
-        <a href="https://www.usa.gov/" extlinkjs-ignore>
+        {% if language == "es" %}
+          {% set usagov_url = "https://www.usa.gov/es" %}
+        {% else %}
+          {% set usagov_url = "https://www.usa.gov" %}
+        {% endif %}
+        <a href={{ usagov_url }} extlinkjs-ignore>
           <img
             src="{{ theme_path }}/img/usagov-logo.svg"
             alt="{{ "USA.gov logo" | t }}"
@@ -18,7 +26,7 @@
             height="48"
           /></a>
         <div class="vote-usagov-partner__disclaimer">
-          <p>{{ "Visit our partner site, USA.gov, to find more information about voting in the United States." | t }}</p>
+          <p>{{ "Visit our partner site to find more information about voting in the United States." | t }}</p>
         </div>
       </div>
       {# Email sign-up component. #}

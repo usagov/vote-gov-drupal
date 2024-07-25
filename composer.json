@@ -39,9 +39,9 @@
         "drupal/ckeditor5_embedded_content": "^1.0",
         "drupal/config_ignore": "^3.0@beta",
         "drupal/config_split": "^2.0@RC",
-        "drupal/core-composer-scaffold": "^10.2.2",
-        "drupal/core-project-message": "^10.2.2",
-        "drupal/core-recommended": "^10.2.2",
+        "drupal/core-composer-scaffold": "^10.3.1",
+        "drupal/core-project-message": "^10.3.1",
+        "drupal/core-recommended": "^10.3.1",
         "drupal/devel": "^5.1",
         "drupal/disable_language": "^1.0@beta",
         "drupal/double_field": "^4.1",
@@ -58,8 +58,6 @@
         "drupal/menu_block": "^1.10",
         "drupal/menu_multilingual": "^2.0",
         "drupal/metatag": "^2.0",
-        "drupal/migrate_plus": "^6.0",
-        "drupal/migrate_tools": "^6.0",
         "drupal/new_relic_rpm": "^2.1",
         "drupal/node_revision_delete": "^2.0@alpha",
         "drupal/override_node_options": "^2.8",
@@ -82,7 +80,7 @@
         "drush/drush": "^12.4"
     },
     "require-dev": {
-        "drupal/core-dev": "^10.2.2"
+        "drupal/core-dev": "^10.3.1"
     },
     "conflict": {
         "drupal/drupal": "*"

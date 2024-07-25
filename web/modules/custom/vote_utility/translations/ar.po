@@ -16,6 +16,10 @@ msgstr "العربية"
 msgid "Select language"
 msgstr "اختر اللغة"
 
+#breadcrumb
+msgid "Home"
+msgstr "الصفحة الرئيسية"
+
 # config.languages.params.Owner
 msgid "@sitename in language"
 msgstr "@sitename باللغة العربية"
@@ -116,7 +120,7 @@ msgstr "سجل للتصويت في @state_name"
 msgid "How to register to vote"
 msgstr "كيفية التسجيل للتصويت"
 
-msgid "How to register and update your registration"
+msgid "Start or update your online registration"
 msgstr "كيفية التسجيل للتصويت"
 
 # data.translations.register.other_language_selection__heading (state phrase updates)

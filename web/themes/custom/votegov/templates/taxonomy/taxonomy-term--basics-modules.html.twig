@@ -1,10 +1,13 @@
+{% extends '@bixaluswds/taxonomy/taxonomy-term.html.twig' %}
 {#
 /**
  * @file
  * Default theme implementation to display a taxonomy term: Basics Modules.
  */
 #}
-{% extends '@bixaluswds/taxonomy/taxonomy-term.html.twig' %}
+
+{# Caching the data in content object #}
+{% set savedCache = content | render %}
 {% set anchor = content.field_anchor_id | field_value | render | clean_class %}
 {% if anchor %}
   {% set attributes = attributes.setAttribute('id', anchor) %}
@@ -12,10 +15,13 @@
 
 {# Gather the id of the parent paragraph #}
 {% set id = term._referringItem.parent.parent.entity.id.value %}
-{# Load the parent paragraph object #}
-{% set paragraph_parent = drupal_entity('paragraph', id , 'default') %}
-{# Set the heading level based on the value of the header in the parent paragraph #}
-{% set heading_level = paragraph_parent['#paragraph'].field_heading.value ? 'h3' : 'h2' %}
+{% set heading_level = 'h2' %}
+{% if id %}
+  {# Load the parent paragraph object #}
+  {% set paragraph_parent = drupal_entity('paragraph', id , 'default') %}
+  {# Set the heading level based on the value of the header in the parent paragraph #}
+  {% set heading_level = paragraph_parent['#paragraph'].field_heading.value ? 'h3' : 'h2' %}
+{% endif %}
 
 {% block content %}
   <{{heading_level | default('h2')}} {{ heading_level != 'h3' ? 'class="vote-heading--red-underline"' }}>{{ content.field_heading | field_value }}</{{heading_level}}>

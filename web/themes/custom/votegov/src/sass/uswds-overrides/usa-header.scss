@@ -3,12 +3,31 @@
 @use "mixins" as *;
 
 .usa-header {
-  border-bottom: 1px $bg-light-medium solid;
-
   .usa-logo {
     @include u-margin(0);
     @include u-margin-top(1);
-    width: 12.5rem;
+
+    @include u-display('inline-block');
+    width: 10rem;
+
+    @include at-media('tablet-lg') {
+      width: 12.5rem;
+    }
+
+    a {
+      @include u-display('inline-block');
+    }
+
+    svg {
+      @include u-maxw('full');
+      @include u-height('auto');
+
+      > path {
+        [data-theme="contrast"] & {
+          fill: $bg-high-contrast;
+        }
+      }
+    }
   }
 }
 
@@ -19,6 +38,12 @@
   @include grid-container();
 
   .usa-menu-btn {
+    --usa-menu-btn: #{$base-dark};
+
+    [data-theme="contrast"] & {
+      --usa-menu-btn: #{$link-high-contrast};
+    }
+
     @include u-height('auto');
     @include u-font-size('sans', 6);
     @include u-font-weight('medium');
@@ -27,34 +52,23 @@
     text-transform: none;
     cursor: pointer;
     background-color: transparent;
-    color: $base-dark;
+    color: var(--usa-menu-btn);
+
+    @include hover {
+      @include u-text-decoration('underline');
+    }
 
     @include after {
       @include u-width(2);
       @include u-display('inline-block');
       margin-inline-start: 0.5rem;
       height: 0.75rem;
-      background: url( '../../img/svg/menu.svg' ) no-repeat;
-      background-size: contain;
+      mask: url( '../../img/svg/menu.svg' ) no-repeat;
+      background-color: var(--usa-menu-btn);
     }
 
     &[aria-hidden="true"] {
       @include u-display('none');
-    }
-  }
-
-  .usa-menu-btn--close {
-    @include u-display('none');
-
-    @include after {
-      background: url( '../../img/svg/close.svg' ) no-repeat;
-      background-size: contain;
-    }
-
-    &[aria-hidden="true"] {
-      @include at-media-max('tablet-lg') {
-        @include u-display('block');
-      }
     }
   }
 }

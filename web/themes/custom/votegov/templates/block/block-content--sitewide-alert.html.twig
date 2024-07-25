@@ -1,13 +1,12 @@
 {#
 /**
  * @file
- * Default theme implementation to display a block content.
- *
- * @see template_preprocess_block_content_template()
- *
- * @ingroup themeable
+ * Default theme implementation to display a block content: Site-wide alert.
  */
 #}
+
+{# Caching the data in content object #}
+{% set savedCache = content | render %}
 
 {% include '@uswds_templates/usa-site-alert.html.twig' with {
    'alert_type': content.field_alert_type | field_value | render,

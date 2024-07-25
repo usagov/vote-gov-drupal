@@ -16,6 +16,10 @@ msgstr "Français"
 msgid "Select language"
 msgstr "Sélectionner une langue"
 
+#breadcrumb
+msgid "Home"
+msgstr "Page d'accueil"
+
 # config.languages.params.Owner
 msgid "@sitename in language"
 msgstr "@sitename en Français"
@@ -116,7 +120,7 @@ msgstr "Inscrivez-vous pour voter @in_state_name"
 msgid "How to register to vote"
 msgstr "Comment vous inscrire pour voter"
 
-msgid "How to register and update your registration"
+msgid "Start or update your online registration"
 msgstr "Comment vous inscrire pour voter"
 
 # data.translations.register.other_language_selection__heading (state phrase updates)

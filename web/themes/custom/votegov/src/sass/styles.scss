@@ -5,7 +5,36 @@
 
 // USWDS individual components
 // to include everything, just code it as @forward "uswds";
-@forward "uswds";
+@forward "uswds-global"; //normalize, uswds-core, uswds-elements, uswds-fonts, uswds-helpers
+@forward "uswds-typography"; //usa-content, usa-dark-background, usa-display, usa-intro, usa-link, usa-list, usa-paragraph, usa-prose
+@forward "uswds-utilities";
+@forward "usa-accordion";
+@forward "usa-alert";
+@forward "usa-banner";
+@forward "usa-breadcrumb";
+@forward "usa-card";
+@forward "usa-form";
+@forward "usa-legend";
+@forward "usa-label";
+@forward "usa-language-selector";
+@forward "usa-header";
+@forward "usa-footer";
+@forward "usa-button";
+@forward "usa-button-group";
+@forward "usa-select";
+@forward "usa-banner";
+@forward "usa-card";
+@forward "usa-search";
+@forward "usa-sidenav";
+@forward "usa-nav";
+@forward "usa-in-page-navigation";
+@forward "usa-alert";
+@forward "usa-site-alert";
+@forward "usa-skipnav";
+@forward "usa-identifier";
+@forward "usa-icon";
+@forward "usa-input";
+@forward "usa-media-block";
 
 // Custom styles
 @use "uswds-overrides";

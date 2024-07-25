@@ -1,12 +1,9 @@
 @use "uswds-core" as *;
+@use "variables" as *;
 @use "mixins" as *;
 
 .vote-main-content-row {
   display: flex;
-}
-
-.vote-state-territory-content {
-  @include vote-narrow-container;
 }
 
 .vote-page-content {
@@ -15,10 +12,22 @@
   @include u-position('relative');
 
   .field--name-field-media {
-    @include u-text-align('center');
+    @include at-media('desktop') {
+      @include u-maxw('tablet-lg');
+      @include u-margin-x('auto');
+    }
 
     img {
-      height: 310px;
+      aspect-ratio: 5 / 2;
+      object-fit: cover;
+    }
+
+    + .field--name-field-body {
+      @include u-margin-top(4);
+
+      @include at-media('tablet-lg') {
+        @include u-margin-top(6);
+      }
     }
   }
 
@@ -45,7 +54,11 @@
   }
 
   &.vote-page-content--image-offset {
-    margin-top: -14rem;
+    margin-top: -6rem;
+
+    @include at-media('tablet-lg') {
+      margin-top: -14rem;
+    }
   }
 }
 

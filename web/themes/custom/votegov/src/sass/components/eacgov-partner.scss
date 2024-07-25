@@ -5,8 +5,14 @@
 $eacgov-partner-breakpoint: 'tablet-lg';
 
 .vote-eac-partner {
+  --vote-eac-patner-bg: #{$bg-light-cool};
   @include u-text-align('center');
-  background-color: $bg-light-cool;
+  @include u-font-family('serif');
+  background-color: var(--vote-eac-patner-bg);
+
+  [data-theme="contrast"] & {
+    --vote-eac-patner-bg: #{$section-bg-high-contrast};
+  }
 }
 
 .vote-eac-partner__container {
@@ -45,7 +51,7 @@ $eacgov-partner-breakpoint: 'tablet-lg';
 }
 
 .vote-eac-partner__logo-link {
-  @include vote-link($color: $base-dark, $color-hover: $base-primary-hover, $color-bg: 'transparent');
+  @include vote-link($color: $base-dark, $color-hover: $base-primary-hover);
   @include u-display('inline-flex');
   @include u-align-items('align-center');
   @include u-text-decoration('no-underline');
@@ -62,7 +68,7 @@ $eacgov-partner-breakpoint: 'tablet-lg';
 
 .vote-eac-partner__social-link {
   @include u-white-space('no-wrap');
-  @include vote-link($color: $base-dark, $color-hover: $base-primary-hover, $color-bg: 'transparent');
+  @include vote-link($color: $base-dark, $color-hover: $base-primary-hover);
   @include u-display('inline-flex');
   @include u-align-items('align-center');
 

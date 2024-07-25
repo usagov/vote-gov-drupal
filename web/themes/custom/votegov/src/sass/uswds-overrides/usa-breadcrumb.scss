@@ -5,8 +5,31 @@
   background-color: transparent;
 }
 
-.usa-breadcrumb__link {
-  .page-masthead & {
-    @include vote-link-dark;
+.usa-sr-only {
+  @include vote-rtl-format-override;
+}
+
+.usa-breadcrumb__list-item {
+  @include vote-rtl-format-override;
+}
+
+.usa-breadcrumb__list-item::after {
+  [dir="rtl"] & {
+    transform: rotate(180deg);
   }
+}
+
+.usa-breadcrumb__link::before {
+  [dir="rtl"] & {
+    transform: rotate(180deg);
+  }
+}
+
+.usa-breadcrumb__link {
+  @include vote-link-dark;
+}
+
+// targeting the div wrapping the breadcrumb block and add margin top to the following element
+.block.system-breadcrumb-block + * {
+  @include u-margin-top(5);
 }

@@ -15,6 +15,10 @@ msgstr "한국어"
 msgid "Select language"
 msgstr "언어 선택"
 
+#breadcrumb
+msgid "Home"
+msgstr "홈페이지"
+
 #main
 msgid "@sitename in language"
 msgstr "@sitename 한국어 "
@@ -77,7 +81,7 @@ msgstr "@state_name 유권자 등록 안내 "
 msgid "How to register to vote"
 msgstr "유권자 등록 방법"
 
-msgid "How to register and update your registration"
+msgid "Start or update your online registration"
 msgstr "유권자 등록 방법"
 
 msgid "Other ways to register to vote"

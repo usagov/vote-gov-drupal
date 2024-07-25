@@ -1,25 +1,31 @@
 // Base Colors.
 $base-white: #FFF; // gray-cool-1
 $base-dark: #11385B; // blue-warm-80v
-$base-primary: #3E79BB; // blue-warm-50
+$base-primary: #345D96; // blue-warm-50
 $base-primary-hover: #2E598A; // blue-60
-$base-primary-active: $base-dark;
+$base-secondary-hover: #005EA2;
 
 // Accent Colors.
-$ac-warm: #CB5154; // red-cool-50
-$ac-warm-hover: #A13032;
-$ac-warm-active: #721113;
+$ac-warm: #992E30;
+$ac-warm-hover: #6D1516;
 $ac-cool: #2D7497; // blue-cool-50
 $ac-cool-light: #0AAAE2; // cyan-30v
-//$ac-dark: #8F4F91; // violet-warm-60
 
 // Background Colors.
 $bg-light: #F0F0F0; // gray-cool-2
+$bg-secondary-light: #F7F9FA;
 $bg-light-medium: #D3D3D3; // gray-cool-20 is this just for the horizontal rule?
 $bg-light-cool: #E2EDF2; // blue-warm-10
-$bg-light-warm: #e7e5dd; // hero-background
+$bg-hero-default: #A9CFD2;
 
-// Theme Colors
-[data-theme="contrast"] {
-  --main-color: black;
-}
+//High Contrast Colors.
+$bg-high-contrast: #0A0A2A;
+$text-high-contrast: $bg-high-contrast;
+$link-high-contrast: #0000FF;
+$link-high-contrast-hover: #010156;
+$link-high-contrast-hover-blue: #00FFFF;
+$btn-bg-high-contrast: $link-high-contrast;
+$btn-bg-high-contrast-hover: $link-high-contrast-hover;
+$section-bg-high-contrast: $bg-light;
+$btn-secondary-bg-high-contrast-hover: #FFFF00;
+$bg-high-contrast-light-cool: #F5F5F5;
