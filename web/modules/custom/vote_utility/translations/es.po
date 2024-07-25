@@ -328,4 +328,3 @@ msgstr "navegación secundaria"
 
 msgid "Know your voting rights"
 msgstr "Conozca su derecho al voto"
-

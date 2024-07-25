@@ -17,7 +17,7 @@ msgstr "选择语言"
 
 #breadcrumb
 msgid "Home"
-msgstr "主页  "
+msgstr "主页"
 
 #main
 msgid "@sitename in language"

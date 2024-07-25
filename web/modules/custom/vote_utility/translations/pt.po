@@ -21,7 +21,7 @@ msgstr "Selecionar a língua"
 
 #breadcrumb
 msgid "Home"
-msgstr "Página inicial "
+msgstr "Página inicial"
 
 # config.languages.params.Owner
 msgid "@sitename in language"
