@@ -16,7 +16,7 @@ msgstr "Русский"
 msgid "Select language"
 msgstr "Выберите Язык"
 
-#breadcrumb
+#Breadcrumb
 msgid "Home"
 msgstr "Главная страница"
 

@@ -16,7 +16,7 @@ msgstr "Diné"
 msgid "Select language"
 msgstr "Saad choid77['88[7g77"
 
-#breadcrumb
+#Breadcrumb
 msgid "Home"
 msgstr "Hooghangi naaltsoos"
 

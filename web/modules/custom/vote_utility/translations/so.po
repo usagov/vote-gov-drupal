@@ -16,7 +16,7 @@ msgstr "Soomaali"
 msgid "Select language"
 msgstr "Ka dooro luuqadda"
 
-#breadcrumb
+#Breadcrumb
 msgid "Home"
 msgstr "Bogga guriga"
 

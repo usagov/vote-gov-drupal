@@ -16,7 +16,7 @@ msgstr ""
 msgid "Select language"
 msgstr "Pumili ng wika"
 
-#breadcrumb
+#Breadcrumb
 msgid "Home"
 msgstr "Homepage"
 

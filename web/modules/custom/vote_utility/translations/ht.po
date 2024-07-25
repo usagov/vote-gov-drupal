@@ -16,7 +16,7 @@ msgstr "Kreyòl Ayisyen"
 msgid "Select language"
 msgstr "Chwazi lang"
 
-#breadcrumb
+#Breadcrumb
 msgid "Home"
 msgstr "Paj dakèy"
 

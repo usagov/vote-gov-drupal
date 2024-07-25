@@ -15,7 +15,7 @@ msgstr "বাংলা"
 msgid "Select language"
 msgstr "ভাষা নির্বাচন করুন"
 
-#breadcrumb
+#Breadcrumb
 msgid "Home"
 msgstr "হোমপেজ"
 

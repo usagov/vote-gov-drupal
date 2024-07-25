@@ -24,7 +24,7 @@ msgstr "Español"
 msgid "Select language"
 msgstr "Seleccione el idioma"
 
-#breadcrumb
+#Breadcrumb
 msgid "Home"
 msgstr "Página principal"
 
@@ -328,4 +328,3 @@ msgstr "navegación secundaria"
 
 msgid "Know your voting rights"
 msgstr "Conozca su derecho al voto"
-

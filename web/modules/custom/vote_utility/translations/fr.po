@@ -16,7 +16,7 @@ msgstr "Français"
 msgid "Select language"
 msgstr "Sélectionner une langue"
 
-#breadcrumb
+#Breadcrumb
 msgid "Home"
 msgstr "Page d'accueil"
 

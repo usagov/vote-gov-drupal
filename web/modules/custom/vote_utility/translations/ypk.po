@@ -15,7 +15,7 @@ msgstr ""
 msgid "Select language"
 msgstr "Ulu nakmiighhu"
 
-#breadcrumb
+#Breadcrumb
 msgid "Home"
 msgstr "Nem pinga"
 

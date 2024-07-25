@@ -15,7 +15,7 @@ msgstr "한국어"
 msgid "Select language"
 msgstr "언어 선택"
 
-#breadcrumb
+#Breadcrumb
 msgid "Home"
 msgstr "홈페이지"
 

@@ -15,7 +15,7 @@ msgstr "Tiếng Việt"
 msgid "Select language"
 msgstr "Lựa chọn ngôn ngữ"
 
-#breadcrumb
+#Breadcrumb
 msgid "Home"
 msgstr "Trang chủ"
 

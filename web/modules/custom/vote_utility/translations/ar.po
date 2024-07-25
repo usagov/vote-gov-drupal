@@ -16,7 +16,7 @@ msgstr "العربية"
 msgid "Select language"
 msgstr "اختر اللغة"
 
-#breadcrumb
+#Breadcrumb
 msgid "Home"
 msgstr "الصفحة الرئيسية"
 

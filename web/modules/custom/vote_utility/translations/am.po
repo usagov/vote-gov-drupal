@@ -15,7 +15,7 @@ msgstr "አማርኛ"
 msgid "Select language"
 msgstr "ቋንቋ ይምረጡ"
 
-#breadcrumb
+#Breadcrumb
 msgid "Home"
 msgstr "መነሻ ገጽ"
 

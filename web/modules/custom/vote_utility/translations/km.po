@@ -15,7 +15,7 @@ msgstr "ភាសាខ្មែរ"
 msgid "Select language"
 msgstr "ជ្រើសរើសភាសា"
 
-#breadcrumb
+#Breadcrumb
 msgid "Home"
 msgstr "ទំព័រដើម"
 

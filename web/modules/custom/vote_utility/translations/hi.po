@@ -15,7 +15,7 @@ msgstr "हिन्दी"
 msgid "Select language"
 msgstr "भाषा चुनें"
 
-#breadcrumb
+#Breadcrumb
 msgid "Home"
 msgstr "मुख्य पृष्ठ "
 

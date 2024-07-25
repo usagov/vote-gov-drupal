@@ -15,7 +15,7 @@ msgstr "繁體中文"
 msgid "Select language"
 msgstr "選擇語言"
 
-#breadcrumb
+#Breadcrumb
 msgid "Home"
 msgstr "主頁 "
 
