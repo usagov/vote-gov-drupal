@@ -9,8 +9,10 @@ use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Session\AccountInterface;
 
-function vote_utility_entity_access(EntityInterface $entity, $operation, AccountInterface $account)
-{
+/**
+ * Implements hook_entity_access().
+ */
+function vote_utility_entity_access(EntityInterface $entity, $operation, AccountInterface $account) {
   $langcode = Drupal::languageManager()->getCurrentLanguage()->getId();
   $restricted_entity_types = ['paragraph', 'taxonomy_term', 'node'];
 
@@ -18,7 +20,8 @@ function vote_utility_entity_access(EntityInterface $entity, $operation, Account
     && in_array($entity->getEntityTypeId(), $restricted_entity_types)
     && !$entity->hasTranslation($langcode)) {
     $access = AccessResult::forbidden();
-  } else {
+  }
+  else {
     $access = AccessResult::neutral();
   }
 
