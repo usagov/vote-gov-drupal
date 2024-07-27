@@ -1,0 +1,25 @@
+{#
+/**
+* @file
+* Theme override to display a single page: maintenance page.
+*/
+#}
+
+{# Sitewide alert component #}
+  {{ drupal_view('sitewide_alert', 'block_1') }}
+
+<header class="usa-header usa-header--extended">
+  <div class="usa-navbar">
+    {# Site branding component #}
+    {{ drupal_entity('block', 'votegov_sitebranding') }}
+  </div>
+</header>
+
+<main role="main" id="main-content" class="grid-container content-container">
+  <div class="vote-page-content">
+    {% if title %}
+      <h1>{{ title }}</h1>
+    {% endif %}
+    {{ page.content }}
+  </div>
+</main>
