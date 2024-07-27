@@ -59,6 +59,7 @@ dependencies:
     - redirect
     - remove_http_headers
     - rest
+    - robotstxt
     - simple_sitemap
     - system
     - taxonomy
@@ -110,6 +111,7 @@ permissions:
   - 'administer redirect settings'
   - 'administer redirects'
   - 'administer rest resources'
+  - 'administer robots.txt'
   - 'administer site configuration'
   - 'administer sitemap settings'
   - 'administer software updates'
