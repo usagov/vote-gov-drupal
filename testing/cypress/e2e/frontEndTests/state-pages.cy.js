@@ -1,7 +1,5 @@
 /// <reference types="cypress" />
 
-// * data-test="registration-info"
-
 describe('test state pages', () => {
   it('test - online', () => {
     cy.visit('/register/ak')

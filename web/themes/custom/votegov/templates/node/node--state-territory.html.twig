@@ -22,9 +22,13 @@
 {% set of_state_name = node.field_of_state_name.value | default("@state_name") | t({ "@state_name": state_name}) %}
 {% set state_abrev = content.field_state_abbreviation | field_value | render %}
 {% set in_english = "(in English)" | t %}
-{% set election_date = "11/05/2024"  | date('U') | format_date('revision_date') | replace(t_numbers[language].numbers | default([])) %}
+{% set election_date = "11/05/2024"  | date('U') | format_date('long_date') | replace(t_numbers[language].numbers | default([])) %}
+{% set election_link_text = 'Find state and local election dates.' | t %}
+{% if language != "en" %}
+  {% set election_link_text = election_link_text ~ ' ' ~ in_english %}
+{% endif %}
 {% set election_link %}
-  <a href="https://www.eac.gov/voters/register-and-vote-in-your-state">{{ 'Find state and local election dates.' | t }}</a>
+  <a href="https://www.eac.gov/voters/register-and-vote-in-your-state">{{ election_link_text }}</a>
 {% endset %}
 
 {# Set postmarked deadline with fallback #}
