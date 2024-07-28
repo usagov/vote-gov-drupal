@@ -128,8 +128,8 @@ msgstr "Empiece o actualice su registración online"
 msgid "Other ways to register to vote"
 msgstr "Otras formas de registrarse para votar"
 
-msgid "Voter registration deadlines for the @election_date election. @election_link"
-msgstr "Los plazos para el registro de votantes son para las elecciones del @election_date. @election_link"
+msgid "Voter registration deadlines for the @election_date election. @link"
+msgstr "Los plazos para el registro de votantes son para las elecciones del @election_date. @link"
 
 msgid "Find state and local election dates."
 msgstr "Encuentre las fechas de las elecciones locales y estatales."
