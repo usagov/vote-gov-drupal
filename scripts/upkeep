@@ -22,10 +22,9 @@ export bucket=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | te
 export bucket_endpoint=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.endpoint')
 
 export ssg_endpoint="https://ssg-${environment}.vote.gov"
-[ "${environment}" = "prod" ] && export ssg_endpoint="https://beta.vote.gov"
-
+[ "${environment}" = "stage" ] && export ssg_endpoint="https://staging.vote.gov"
+[ "${environment}" = "prod" ] && export ssg_endpoint="https://vote.gov"
 export ssg_sitemap_endpoint=ssg_endpoint
-[ "${environment}" = "prod" ] && export ssg_sitemap_endpoint="https://vote.gov"
 
 cd ${app_path}
 echo "**************************************************"
