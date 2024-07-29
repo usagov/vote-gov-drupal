@@ -78,7 +78,7 @@ msgstr "Đăng ký bỏ phiếu bầu ở @state_name"
 msgid "How to register to vote"
 msgstr "Làm thế nào để đăng ký bỏ phiếu"
 
-msgid "Start or update your online registration"
+msgid "How to register and update your registration"
 msgstr "Làm thế nào để đăng ký bỏ phiếu"
 
 msgid "Other ways to register to vote"
