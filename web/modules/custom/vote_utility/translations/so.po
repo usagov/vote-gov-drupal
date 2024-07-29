@@ -204,7 +204,7 @@ msgid "@link on @state_name’s election website."
 msgstr "@link bogga doorashada gobolka @state_name."
 
 # @link: data.translations.register.online__answer1 (see accessibility updates)
-msgid "Complete your online registration"
+msgid "Start or update your registration"
 msgstr "Bilow is diiwaangelintaada onlyanka ah"
 
 # data.translations.register.online__answer2 (see accessibility updates)

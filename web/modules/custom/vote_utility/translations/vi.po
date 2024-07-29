@@ -138,7 +138,7 @@ msgstr "Tìm hiểu thêm về cách đăng ký"
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
 msgstr "Ở tiểu bang @state_name không yêu cầu bắt buộc phải đăng ký bầu cử. @link tại trang website bầu cử cấp tiểu bang của @state_name."
 
-msgid "Complete your online registration"
+msgid "Start or update your registration"
 msgstr "Hãy bắt đầu đăng ký bầu cử trực tuyến"
 
 msgid "@link on @state_name’s election website."
