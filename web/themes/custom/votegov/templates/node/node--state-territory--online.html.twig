@@ -12,7 +12,7 @@
   {# registration link, more info link #}
   {% if content.field_registration_link | render %}
     {% set registration_link = content.field_override_registration_link | field_value | render | default( content.field_registration_link | field_value | render ) %}
-    {% set registration_link_text = "Complete your online registration" | t({'@state_name': state_name}) %}
+    {% set registration_link_text = "Start or update your registration" | t({'@state_name': state_name}) %}
 
     {% if language != "en" and not content.field_override_registration_link | render %}
       {% set registration_link_text = registration_link_text ~ ' ' ~ in_english %}
