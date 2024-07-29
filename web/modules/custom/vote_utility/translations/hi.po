@@ -78,7 +78,7 @@ msgstr "@state_name में मतदान करने के लिए प�
 msgid "How to register to vote"
 msgstr "मतदान करने के लिए पंजीकरण कैसे करें"
 
-msgid "Start or update your online registration"
+msgid "How to register and update your registration"
 msgstr "मतदान करने के लिए पंजीकरण कैसे करें"
 
 msgid "Other ways to register to vote"

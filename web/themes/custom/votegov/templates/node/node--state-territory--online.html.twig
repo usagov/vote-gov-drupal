@@ -8,7 +8,7 @@
 
 {% block content %}
   {# How to register to vote #}
-  <h2>{{ 'Start or update your online registration' | t({ '@state_name': state_name }) }}</h2>
+  <h2>{{ 'How to register and update your registration' | t({ '@state_name': state_name }) }}</h2>
   {# registration link, more info link #}
   {% if content.field_registration_link | render %}
     {% set registration_link = content.field_override_registration_link | field_value | render | default( content.field_registration_link | field_value | render ) %}
@@ -50,7 +50,7 @@
     "@type": "FAQPage",
     "mainEntity": [{
       "@type": "Question",
-      "name": "{{ 'Start or update your online registration' | t }}",
+      "name": "{{ 'How to register and update your registration' | t }}",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "{{ '@link on @state_name’s election website.' | t({
