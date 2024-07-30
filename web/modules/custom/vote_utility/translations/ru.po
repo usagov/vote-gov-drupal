@@ -120,7 +120,7 @@ msgstr "Зарегистрируйтесь для голосования в @sta
 msgid "How to register to vote"
 msgstr "Как зарегистрироваться для голосования"
 
-msgid "Start or update your online registration"
+msgid "How to register and update your registration"
 msgstr "Как зарегистрироваться для голосования"
 
 # data.translations.register.other_language_selection__heading (state phrase updates)
@@ -204,7 +204,7 @@ msgid "@link on @state_name’s election website."
 msgstr "@link на веб-сайте выборов штата @state_name"
 
 # @link: data.translations.register.online__answer1 (see accessibility updates)
-msgid "Complete your online registration"
+msgid "Start or update your registration"
 msgstr "Начните онлайн-регистрацию"
 
 # data.translations.register.online__answer2 (see accessibility updates)

@@ -78,7 +78,7 @@ msgstr "ចុះឈ្មោះដើម្បីបោះឆ្នោតនៅ
 msgid "How to register to vote"
 msgstr "របៀបចុះឈ្មោះដើម្បីបោះឆ្នោត"
 
-msgid "Start or update your online registration"
+msgid "How to register and update your registration"
 msgstr "របៀបចុះឈ្មោះដើម្បីបោះឆ្នោត"
 
 msgid "Other ways to register to vote"
@@ -138,7 +138,7 @@ msgstr "ស្វែងយល់បន្ថែមអំពីការបោះ
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
 msgstr "ការចុះឈ្មោះបោះឆ្នោតមិនត្រូវបានទាមទារនៅក្នុងរដ្ឋ @state_name ទេ។ @link នៅលើគេហទំព័របោះឆ្នោតរដ្ឋរបស់ @state_name"
 
-msgid "Complete your online registration"
+msgid "Start or update your registration"
 msgstr "ចាប់ផ្តើមការចុះឈ្មោះតាមអ៊ីនធឺណិតរបស់អ្នក"
 
 msgid "@link on @state_name’s election website."

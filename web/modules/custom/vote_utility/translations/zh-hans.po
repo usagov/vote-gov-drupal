@@ -78,7 +78,7 @@ msgstr "在 @state_name 注册投票"
 msgid "How to register to vote"
 msgstr "如何登记投票"
 
-msgid "Start or update your online registration"
+msgid "How to register and update your registration"
 msgstr "如何登记投票"
 
 msgid "Other ways to register to vote"
@@ -138,7 +138,7 @@ msgstr "详细了解如何注册"
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
 msgstr "弗吉尼亚州不要求选民注册。 @link @state_name 州的选举网站"
 
-msgid "Complete your online registration"
+msgid "Start or update your registration"
 msgstr "开始在线注册"
 
 msgid "@link on @state_name’s election website."
