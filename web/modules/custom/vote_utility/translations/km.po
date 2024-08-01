@@ -136,9 +136,9 @@ msgid "Learn more about voting"
 msgstr "ស្វែងយល់បន្ថែមអំពីការបោះឆ្នោត"
 
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
-msgstr "ការចុះឈ្មោះបោះឆ្នោតមិនត្រូវបានទាមទារនៅក្នុងរដ្ឋ Virginia ទេ។ @link នៅលើគេហទំព័របោះឆ្នោតរដ្ឋរបស់ @state_name"
+msgstr "ការចុះឈ្មោះបោះឆ្នោតមិនត្រូវបានទាមទារនៅក្នុងរដ្ឋ @state_name ទេ។ @link នៅលើគេហទំព័របោះឆ្នោតរដ្ឋរបស់ @state_name"
 
-msgid "Complete your online registration"
+msgid "Start or update your registration"
 msgstr "ចាប់ផ្តើមការចុះឈ្មោះតាមអ៊ីនធឺណិតរបស់អ្នក"
 
 msgid "@link on @state_name’s election website."

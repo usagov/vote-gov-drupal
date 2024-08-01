@@ -43,13 +43,14 @@
 {% endif %}
 
 {{ attach_library('votegov/theme_switcher') }}
-<div class="vote-theme-options">
+<div class="vote-theme-options" data-test="themeSwitcher">
   <button
     class="vote-theme-options__button vote-theme-options__button--scale"
     data-ui-switch-id="scale"
     data-values="default,large,x-large"
     type="button"
     title="Switch font size preset"
+    data-test="themeText"
   ><span class="usa-sr-only">Switch font size preset</span></button>
   <button
     class="vote-theme-options__button vote-theme-options__button--theme"
@@ -57,6 +58,7 @@
     data-values="default,contrast"
     type="button"
     title="Switch display preset"
+    data-test="themeContrast"
   ><span class="usa-sr-only">Switch display preset</span></button>
 </div>
 
@@ -80,17 +82,20 @@
   {{ drupal_view('sitewide_alert', 'block_1') }}
 
 <header class="usa-header usa-header--extended">
-    <div class="usa-navbar">
+  {% set mainmenu = drupal_entity('block', 'votegov_mainnavigation') | render %}
+  <div class="usa-navbar">
 
-      {# Site branding component #}
-      {{ drupal_entity('block', 'votegov_sitebranding') }}
+    {# Site branding component #}
+    {{ drupal_entity('block', 'votegov_sitebranding') }}
 
-      <button type="button" class="usa-menu-btn" data-test="mobileBtn">{{ 'Menu' | t }}</button>
+    {% if mainmenu %}
+    <button type="button" class="usa-menu-btn" data-test="mobileBtn">{{ 'Menu' | t }}</button>
+    {% endif %}
 
-    </div>
+  </div>
 
-    {# Main navigation component #}
-    {{ drupal_entity('block', 'votegov_mainnavigation') }}
+  {# Main navigation component #}
+  {{ mainmenu }}
 </header>
 
 {{ page.admin }}

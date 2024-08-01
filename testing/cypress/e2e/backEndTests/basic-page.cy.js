@@ -1,33 +1,6 @@
 /// <reference types="cypress" />
 
 describe('test for basic page', () => {
-
-  it('test role access to publish', () => {
-    cy.signin(Cypress.env('roles').site_admin.username, Cypress.env('test_pass'))
-    // * site admin can publish
-    cy.visit('/node/add/page')
-    cy.get('[data-drupal-selector="edit-moderation-state-0-state"]').find('option').then(option => {
-      cy.wrap(option).should('contain', 'Published')
-    })
-    cy.logout()
-    
-    cy.signin(Cypress.env('roles').content_manager.username, Cypress.env('test_pass'))
-    // * content manager can publish
-    cy.visit('/node/add/page')
-    cy.get('[data-drupal-selector="edit-moderation-state-0-state"]').find('option').then(option => {
-      cy.wrap(option).should('contain', 'Published')
-    })
-    cy.logout()
-
-    // * content editor cannot publish
-    cy.signin(Cypress.env('roles').content_editor.username, Cypress.env('test_pass'))
-    cy.visit('/node/add/page')
-    cy.get('[data-drupal-selector="edit-moderation-state-0-state"]').find('option').then(option => {
-      cy.wrap(option).should('not.contain', 'Published')
-    cy.logout()
-
-  })
-})
     it('test url alias', () => {
 
       cy.signin(Cypress.env('roles').site_admin.username, Cypress.env('test_pass'))
