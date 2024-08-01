@@ -56,6 +56,7 @@ jobs:
       - run:
           name: "Cypress - frontend tests"
           command: |
+            sleep 120    
             cd testing
             npm install
             npm run cy:pipeline:frontEnd
@@ -328,7 +329,7 @@ workflows:
           filters:
             branches:
               only:
-                - stage
+                - test
           requires:
             -  post-deploy-upkeep
   deploy-prod-workflow:
