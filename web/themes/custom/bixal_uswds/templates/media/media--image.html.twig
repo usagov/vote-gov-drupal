@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * Theme override to display a media item.
+ *
+ * Available variables:
+ * - media: The media item, with limited access to object properties and
+ *   methods.
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% set classes = [
+  'media-image',
+  'media',
+  'media--type-' ~ media.bundle()|clean_class,
+  not media.isPublished() ? 'media--unpublished',
+  view_mode ? 'media--view-mode-' ~ view_mode|clean_class,
+] %}
+
+<figure{{ attributes.addClass(classes) }}>
+  {{ title_suffix.contextual_links }}
+
+  {% if content.field_media_image | render %}
+    {{ content.field_media_image | field_value }}
+  {% endif %}
+
+  {% if content.field_image_caption | render %}
+    <figcaption>
+      {{ content.field_image_caption | field_value }}
+    </figcaption>
+  {% endif %}
+</figure>
+{{ drupal_breakpoint() }}

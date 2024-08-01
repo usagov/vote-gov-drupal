@@ -1,0 +1,28 @@
+global:
+  version: VERSION
+  css:
+    theme:
+      dist/css/styles.css: { minified: true }
+  js:
+    dist/js/uswds.min.js: { minified: true }
+    dist/js/bx-global.js: { minified: true }
+  dependencies:
+    - core/once
+    - core/drupal.active-link
+
+form_range:
+  version: VERSION
+  js:
+    dist/js/bx-form-range.js: { minified: true }
+
+# https://github.com/AgnosticUI/a11y-tabs
+a11y_tabs:
+  version: VERSION
+  js:
+    dist/vendor/js/a11y-tabs.min.js: { minified: true }
+    dist/js/bx-a11y-tabs-init.js: { minified: true }
+
+remote_video:
+  version: VERSION
+  js:
+    dist/js/bx-remote-video.js: { minified: true }

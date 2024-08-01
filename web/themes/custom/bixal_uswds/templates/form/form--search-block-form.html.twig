@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+{%
+  set classes = [
+  'search-form',
+  'search-block-form',
+  'usa-search',
+  'usa-search--small',
+]
+%}
+
+<form{{ attributes.addClass(classes).setAttribute('role', 'search') }}>
+  {{ children }}
+</form>

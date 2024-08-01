@@ -1,0 +1,53 @@
+{#
+/**
+ * partial
+ * Voter registration mail-in deadline
+ *
+ */
+#}
+
+{# Set postmarked deadline with fallback #}
+{% if content.field_mail_postmarked_deadline | render %}
+  {% set postmarked_deadline = 'Must be postmarked by @date' | t({'@date': content.field_mail_postmarked_deadline.0 | render}) %}
+{% else %}
+  {% set postmarked_deadline = content.field_g_mail_postmarked_deadline | field_value %}
+{% endif %}
+
+{# Set received deadline with fallback #}
+{% if content.field_mail_received_deadline | render %}
+  {% set received_deadline = 'Must be received by @date' | t({'@date': content.field_mail_received_deadline.0 | render}) %}
+{% else %}
+  {% set received_deadline = content.field_g_mail_received_deadline | field_value %}
+{% endif %}
+
+{# Set the deadline with fallback, prioritizing postmarked deadline. #}
+{% set deadline = postmarked_deadline | default(received_deadline) %}
+
+{% if deadline %}
+  <li><span class="bold-text">{{ 'Register by mail deadline:' | t }}</span> {{ deadline }}</li>
+{% endif %}
+
+{# JSON Schema #}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "{{ 'How to register to vote in @state_name' | t({ '@state_name': state_name }) }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ 'Online registration is currently not available. Find out ways to register to vote at @link.' | t({
+          '@link': { "#markup": "<a href=\"#{more_info_link}\">#{more_info_link_text}</a>" } | render
+        }) }}"
+    }
+    },{
+        "@type": "Question",
+        "name": "{{ 'Voter registration deadlines in @state_name' | t({ '@state_name': state_name }) }}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{ 'Register by mail deadline:' | t }} {{ deadline }}"
+        }
+      }{{ end }}]
+  }
+</script>
