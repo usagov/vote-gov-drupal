@@ -33,4 +33,5 @@ filters:
       default_view_mode: default
       allowed_view_modes:
         default: default
-      allowed_media_types: {  }
+      allowed_media_types:
+        image: image
