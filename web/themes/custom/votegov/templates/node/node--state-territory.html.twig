@@ -128,6 +128,10 @@
     {% endif %}
   {% endblock %}
 
+<h2>{{ 'Other ways to register to vote' | t }}</h2>
+<p>{{ 'We\'ll walk you through each step with state-specific instructions. When you\'ve finished filling out hte digital form, you\'ll be able to print, sign, and mail it to your state.' | t }}</p>
+<a href="" class="usa-button" title="{{ 'Register by mail with the digital form filler' | t }}">Register by mail with the digital form filler</a>
+
   {% if node.field_accepts_nvrf.value == 1 %}
     {{ drupal_entity('block_content', '3') }}
   {% endif %}
