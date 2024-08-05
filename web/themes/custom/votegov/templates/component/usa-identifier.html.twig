@@ -40,13 +40,13 @@
           {% set usagov_url = "https://www.usa.gov" %}
         {% endif %}
         {{'Looking for U.S. government information and services? @link.' | t({
-          '@link': {'#markup': " <a href=#{usagov_url} class=\"usa-link\">#{usagov_link}</a>"} | render
+          '@link': {'#markup': " <a href=\"#{usagov_url}\" class=\"usa-link\">#{usagov_link}</a>"} | render
         }) }}
       </p>
     </div>
   </section>
 
   {% if language == 'en' %}
-    <a class="usa-button vote-touchpoints--button" target="_blank" title="External link opens in new window" href="https://touchpoints.app.cloud.gov/touchpoints/c169d3b2/submit" extlinkjs-ignore>How can we improve vote.gov?</a>
+    <a class="usa-button vote-touchpoints--button" target="_blank" title="{{ 'External link opens in new window' | t }}" href="https://touchpoints.app.cloud.gov/touchpoints/c169d3b2/submit" extlinkjs-ignore>{{ 'How can we improve vote.gov?' | t }}</a>
   {% endif %}
 </div>

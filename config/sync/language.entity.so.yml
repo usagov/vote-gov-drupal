@@ -2,7 +2,6 @@ uuid: 2b30c6ab-f133-4c1d-a7be-997bb27da4b6
 langcode: so
 status: true
 dependencies: {  }
-third_party_settings: {  }
 id: so
 label: Somali
 direction: ltr

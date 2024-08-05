@@ -64,9 +64,7 @@
         {%- if item.link -%}
           {# Replace default title with combo of endonym and english versions #}
           {% set link_title %}
-            <span lang="{{ key }}">
-              <strong class="nonvfont">{{ item.link['#title'] }}</strong> {{ item.link['#english'] }}
-            </span>
+            <strong lang="{{ key }}" class="nonvfont">{{ item.link['#title'] }}</strong> <span lang="en">{{ item.link['#english'] }}</span>
           {% endset %}
           {# Add class to exclude navajo font from link render #}
           {% set link_options = item.link['#options'] | merge({

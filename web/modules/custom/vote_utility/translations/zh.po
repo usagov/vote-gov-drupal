@@ -17,7 +17,7 @@ msgstr "選擇語言"
 
 #breadcrumb
 msgid "Home"
-msgstr "主頁 "
+msgstr "主頁"
 
 #main
 msgid "@sitename in language"
@@ -78,7 +78,7 @@ msgstr "在 @state_name 登記投票"
 msgid "How to register to vote"
 msgstr "如何登記投票"
 
-msgid "Start or update your online registration"
+msgid "How to register and update your registration"
 msgstr "如何登記投票"
 
 msgid "Other ways to register to vote"
@@ -138,7 +138,7 @@ msgstr "詳細瞭解如何註冊"
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
 msgstr "維吉尼亞州不要求選民註冊。 @link @state_name 州的選舉網站"
 
-msgid "Complete your online registration"
+msgid "Start or update your registration"
 msgstr "開始線上註冊"
 
 msgid "@link on @state_name’s election website."

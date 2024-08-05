@@ -79,7 +79,7 @@ msgstr "Magparehistro para bumoto sa @state_name"
 msgid "How to register to vote"
 msgstr "Paano magparehistro para bumoto"
 
-msgid "Start or update your online registration"
+msgid "How to register and update your registration"
 msgstr "Paano magparehistro para bumoto"
 
 msgid "Other ways to register to vote"
@@ -137,9 +137,9 @@ msgid "Learn more about voting"
 msgstr "Matuto pa tungkol sa pagboto"
 
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
-msgstr "Ang pagpaparehistro ng botante ay hindi kinakailangan sa Virginia. @link sa website ng eleksyon ng estado ng @state_name."
+msgstr "Ang pagpaparehistro ng botante ay hindi kinakailangan sa @state_name. @link sa website ng eleksyon ng estado ng @state_name."
 
-msgid "Complete your online registration"
+msgid "Start or update your registration"
 msgstr "Simulan ang inyong online na rehistrasyon"
 
 msgid "@link on @state_name’s election website."

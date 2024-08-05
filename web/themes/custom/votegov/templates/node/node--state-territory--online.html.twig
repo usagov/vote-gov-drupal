@@ -8,11 +8,11 @@
 
 {% block content %}
   {# How to register to vote #}
-  <h2>{{ 'Start or update your online registration' | t({ '@state_name': state_name }) }}</h2>
+  <h2>{{ 'How to register and update your registration' | t({ '@state_name': state_name }) }}</h2>
   {# registration link, more info link #}
   {% if content.field_registration_link | render %}
     {% set registration_link = content.field_override_registration_link | field_value | render | default( content.field_registration_link | field_value | render ) %}
-    {% set registration_link_text = "Complete your online registration" | t({'@state_name': state_name}) %}
+    {% set registration_link_text = "Start or update your registration" | t({'@state_name': state_name}) %}
 
     {% if language != "en" and not content.field_override_registration_link | render %}
       {% set registration_link_text = registration_link_text ~ ' ' ~ in_english %}
@@ -44,59 +44,60 @@
   {% endif %}
 
   {# JSON Schema #}
- <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [{
-      "@type": "Question",
-      "name": "{{ 'Start or update your online registration' | t }}",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "{{ '@link on @state_name’s election website.' | t({
-    '@link': { "#markup": "<a href=\"#{registration_link}\" data-state-ext=\"online-registration\">#{registration_link_text}</a>" } | render | replace({'"': "\""}),
-    '@state_name': state_name,
-    '@of_state_name': of_state_name,
-    '@in_state_name': in_state_name
-  }) }}"
-    }
-    },{
-        "@type": "Question",
-        "name": "{{ 'Other ways to register to vote' | t }}",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "{{ 'You can also @link on @state_name’s election website.' | t({
-    '@link': { "#markup": "<a href=\"#{more_info_link}\" data-state-ext=\"offline-registration\">#{more_info_link_text}</a>" } | render | replace({'"': "\""}),
-    '@state_name': state_name,
-    '@of_state_name': of_state_name,
-    '@in_state_name': in_state_name
-  }) }}"
-    }
-    },{
-        "@type": "Question",
-        "name": "{{ 'Voter registration deadlines' | t }}",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "{{ 'In person registration deadline:' | t }} {{ deadline_inperson | render | replace({'"': "\""}) }}"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "{{ 'Voter registration deadlines' | t }}",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "{{ 'Register by mail deadline:' | t }} {{ deadline_bymail | render | replace({'"': "\""}) }}"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "{{ 'Voter registration deadlines' | t }}",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "{{ 'Online registration deadline:' | t }} {{ deadline_online | render | replace({'"': "\""})  }}"
-        }
-      }
-      {{ end }}]
-  }
-</script>
+  {# Commenting this out until we have a chance to review and improve #}
+{# <script type="application/ld+json">#}
+{#  {#}
+{#    "@context": "https://schema.org",#}
+{#    "@type": "FAQPage",#}
+{#    "mainEntity": [{#}
+{#      "@type": "Question",#}
+{#      "name": "{{ 'How to register and update your registration' | t }}",#}
+{#      "acceptedAnswer": {#}
+{#        "@type": "Answer",#}
+{#        "text": "{{ '@link on @state_name’s election website.' | t({#}
+{#    '@link': { "#markup": "<a href=\"#{registration_link}\" data-state-ext=\"online-registration\">#{registration_link_text}</a>" } | render | replace({'"': "\""}),#}
+{#    '@state_name': state_name,#}
+{#    '@of_state_name': of_state_name,#}
+{#    '@in_state_name': in_state_name#}
+{#  }) }}"#}
+{#    }#}
+{#    },{#}
+{#        "@type": "Question",#}
+{#        "name": "{{ 'Other ways to register to vote' | t }}",#}
+{#        "acceptedAnswer": {#}
+{#          "@type": "Answer",#}
+{#          "text": "{{ 'You can also @link on @state_name’s election website.' | t({#}
+{#    '@link': { "#markup": "<a href=\"#{more_info_link}\" data-state-ext=\"offline-registration\">#{more_info_link_text}</a>" } | render | replace({'"': "\""}),#}
+{#    '@state_name': state_name,#}
+{#    '@of_state_name': of_state_name,#}
+{#    '@in_state_name': in_state_name#}
+{#  }) }}"#}
+{#    }#}
+{#    },{#}
+{#        "@type": "Question",#}
+{#        "name": "{{ 'Voter registration deadlines' | t }}",#}
+{#        "acceptedAnswer": {#}
+{#          "@type": "Answer",#}
+{#          "text": "{{ 'In person registration deadline:' | t }} {{ deadline_inperson | render | replace({'"': "\""}) }}"#}
+{#        }#}
+{#      },#}
+{#      {#}
+{#        "@type": "Question",#}
+{#        "name": "{{ 'Voter registration deadlines' | t }}",#}
+{#        "acceptedAnswer": {#}
+{#          "@type": "Answer",#}
+{#          "text": "{{ 'Register by mail deadline:' | t }} {{ deadline_bymail | render | replace({'"': "\""}) }}"#}
+{#        }#}
+{#      },#}
+{#      {#}
+{#        "@type": "Question",#}
+{#        "name": "{{ 'Voter registration deadlines' | t }}",#}
+{#        "acceptedAnswer": {#}
+{#          "@type": "Answer",#}
+{#          "text": "{{ 'Online registration deadline:' | t }} {{ deadline_online | render | replace({'"': "\""})  }}"#}
+{#        }#}
+{#      }#}
+{#      {{ end }}]#}
+{#  }#}
+{#</script>#}
 {% endblock %}

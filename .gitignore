@@ -22,6 +22,7 @@
 /drush/Commands/contrib/
 /web/profiles/contrib/
 /web/libraries/
+/web/robots.txt
 
 # Ignore configuration files that may contain sensitive information.
 /web/sites/*/settings*.php

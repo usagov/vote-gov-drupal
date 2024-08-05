@@ -78,7 +78,7 @@ msgstr "ለመምረጥ ይመዝገቡ @state_name"
 msgid "How to register to vote"
 msgstr "ለመምረጥ እንዴት ነው የሚመዘገቡት"
 
-msgid "Start or update your online registration"
+msgid "How to register and update your registration"
 msgstr "ለመምረጥ እንዴት ነው የሚመዘገቡት"
 
 msgid "Other ways to register to vote"
@@ -138,7 +138,7 @@ msgstr "እንዴት መመዝገብ እንዳለብዎ የበለጠ ይወቁ"
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
 msgstr "የመራጮች ምዝገባ አያስፈልግም በ@state_name. @link በ@state_name ስቴት የምርጫ ድረገጽ።"
 
-msgid "Complete your online registration"
+msgid "Start or update your registration"
 msgstr "በድረገጽ ላይ ምዝገባዎን ይጀምሩ"
 
 msgid "@link on @state_name’s election website."
