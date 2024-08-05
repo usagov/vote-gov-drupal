@@ -21,16 +21,3 @@ function vote_utility_form_node_state_territory_edit_form_alter(&$form, FormStat
     $form['field_override_registration_link']['#access'] = FALSE;
   }
 }
-
-/**
- * Implements hook_form_FORM_ID_alter().
- */
-function vote_utility_form_user_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  // Check if the user has the "content_translator" role.
-  if (\Drupal::currentUser()->hasRole('content_translator')) {
-    // Disable access to alter user profile settings.
-    $form['language']['#disabled'] = TRUE;
-    $form['account']['#disabled'] = TRUE;
-    $form['actions']['#access'] = FALSE;
-  }
-}
