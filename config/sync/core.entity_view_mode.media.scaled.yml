@@ -1,0 +1,11 @@
+uuid: 71e28add-26ea-4400-9cde-70baf155c1df
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.scaled
+label: Scaled
+description: ''
+targetEntityType: media
+cache: true

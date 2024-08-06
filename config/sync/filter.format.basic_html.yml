@@ -2,6 +2,8 @@ uuid: 7541554d-e57b-4314-953a-24e11f9082c4
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.scaled
   module:
     - ckeditor5_embedded_content
     - media
@@ -30,8 +32,8 @@ filters:
     status: true
     weight: 100
     settings:
-      default_view_mode: default
+      default_view_mode: scaled
       allowed_view_modes:
-        default: default
+        scaled: scaled
       allowed_media_types:
         image: image
