@@ -81,6 +81,10 @@
     .usa-language__primary-item:last-of-type & {
       @include u-position('fixed');
     }
+
+    /*&[aria-hidden="true"] {
+      display: block;
+    }*/
   }
 
   @include at-media('tablet') {
