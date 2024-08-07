@@ -1,7 +1,5 @@
 /// <reference types="Cypress" />
 
-// const allPages = require("../../fixtures/site-pages.json");
-
 const excludedlinks = [
   'https://voterregistration.ct.gov/OLVR/welcome.do?ref=voteusa_es',
   'https://voterregistration.ct.gov/OLVR/welcome.do',
