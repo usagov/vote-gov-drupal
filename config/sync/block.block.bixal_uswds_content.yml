@@ -1,0 +1,22 @@
+uuid: 2b0e2fb8-f0e6-4673-aa12-57a4701ff740
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bixal_uswds
+_core:
+  default_config_hash: 2G5FjlDbZWWDTiD3NUntBHFuQ4sFrp1VsMH2kKIDB2I
+id: bixal_uswds_content
+theme: bixal_uswds
+region: content
+weight: -6
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,70 @@
+{% set identifier_data = [
+  {'link_title':'About'},
+  {'link_title':'Accessibility support'},
+  {'link_title':'FOIA requests'},
+  {'link_title':'No FEAR Act data'},
+  {'link_title':'Office of the Inspector General'},
+  {'link_title':'Privacy policy'},
+  {'link_title':' Performance reports'},
+] %}
+
+<div class="usa-identifier">
+  <section
+    class="usa-identifier__section usa-identifier__section--masthead"
+    aria-label="{{ 'Agency identifier' | t }}">
+
+    <div class="usa-identifier__container grid-container-widescreen">
+      <div class="usa-identifier__logos">
+
+        <a href="" class="usa-identifier__logo">
+          <img
+            class="usa-identifier__logo-img"
+            src="/{{ directory }}/logo.svg"
+            alt="{{ 'Parent agency logo' | t }}"
+            role="img"/>
+        </a>
+      </div>
+
+      <section
+        class="usa-identifier__identity"
+        aria-label="{{ 'Agency description' | t }}">
+
+        <p class="usa-identifier__identity-domain">{{ 'domain.gov' | t }}</p>
+        <p class="usa-identifier__identity-disclaimer">
+          {{ 'An official website of the' | t }}
+          <a href="javascript:void(0)">
+            {{ drupal_token('site:name') }}
+          </a>
+        </p>
+      </section>
+    </div>
+  </section>
+
+  <nav class="usa-identifier__section usa-identifier__section--required-links"
+       aria-label="{{ 'Important links'|t }}">
+    <div class="usa-identifier__container grid-container-widescreen">
+
+      {# @todo sub the real menu in here. #}
+      {{ drupal_entity('block', 'identifier_menu') }}
+    </div>
+  </nav>
+
+  <section
+    class="usa-identifier__section usa-identifier__section--usagov"
+    aria-label="{{ 'U.S. government information and services' | t }}">
+
+    <div class="usa-identifier__container grid-container-widescreen">
+      <div class="usa-identifier__usagov-description">
+        {{ 'Looking for U.S. government information and services?' | t }}
+      </div>
+      <a href="https://www.usa.gov/"
+         class="usa-link"
+         rel="noreferrer noopener"
+         target="_blank"
+         title=" {{ 'Visit USA.gov' | t }}">
+        {{ 'Visit USA.gov' | t }}
+      </a>
+    </div>
+
+  </section>
+</div>

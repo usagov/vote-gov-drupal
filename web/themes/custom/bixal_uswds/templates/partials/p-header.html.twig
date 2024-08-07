@@ -1,0 +1,49 @@
+{# USWDS Header component partial file. #}
+<div class="usa-overlay"></div>
+<header class="usa-header usa-header--extended">
+  <div class="usa-navbar">
+    {# Use utility classes when possible. #}
+    <div class="usa-logo margin-bottom-105 margin-top-105" id="site-logo">
+      <div class="usa-logo__text">
+        <a href="/" title="{{ site_name }} {{ 'Home'|t }}">
+          <img
+            src="/{{ directory }}/logo.svg"
+            alt="{{ 'Logo for'|t }} {{ site_name }}"
+            width="90"
+            height="90"/>
+        </a>
+      </div>
+    </div>
+
+    {# Mobile menu button. #}
+    <button type="button" class="usa-menu-btn">{{ 'Menu'|t }}</button>
+  </div>
+
+  <nav aria-label="Primary navigation" class="usa-nav">
+    <div class="usa-nav__inner">
+
+      <button type="button" class="usa-nav__close">
+        <img src="/{{ directory }}{{ path_image }}/usa-icons/close.svg" role="img" alt="Close"/>
+      </button>
+
+      {# Main menu block. #}
+      {{ drupal_entity('block', 'main_navigation') }}
+
+      <div class="usa-nav__secondary usa-header--extended bottom-80">
+
+        {% if twig_tweak_enabled == true %}
+          {# Main menu block. #}
+          {{ drupal_entity('block', 'user_account_menu') }}
+        {% endif %}
+
+        <section aria-label="Search component">
+          {% if twig_tweak_enabled == true %}
+            {# Main menu block. #}
+            {{ drupal_entity('block', 'search_form') }}
+          {% endif %}
+        </section>
+      </div>
+
+    </div>
+  </nav>
+</header>
