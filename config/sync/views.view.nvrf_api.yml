@@ -36,6 +36,7 @@ dependencies:
     - field.storage.node.field_state_abbreviation
     - node.type.nvrf_page
     - node.type.state_territory
+    - user.role.anonymous
     - user.role.authenticated
   module:
     - datetime
@@ -161,6 +162,7 @@ display:
         type: role
         options:
           role:
+            anonymous: anonymous
             authenticated: authenticated
       cache:
         type: tag
