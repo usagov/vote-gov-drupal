@@ -74,6 +74,7 @@
     @include u-height('viewport');
     @include u-width('full');
     @include u-padding(2);
+    @include u-padding-bottom(6);
     @include u-z(500);
     @include vote-fill;
     overflow: auto;
