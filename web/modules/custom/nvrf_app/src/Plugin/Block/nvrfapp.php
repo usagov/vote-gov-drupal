@@ -16,25 +16,26 @@ use Drupal\Core\StringTranslation\TranslatableMarkup;
 /**
  * Provides a block with NVRF react app's root id.
  */
+
 #[Block(
   id: "nvrf_app",
-  admin_label: new TranslatableMarkup("NVRF app block label"),
-  category: new TranslatableMarkup("NVRF app example block")
+  admin_label: new TranslatableMarkup("NVRF App Embed"),
+  category: new TranslatableMarkup("Custom module")
 )]
 
 class nvrfapp extends BlockBase {
-
-  /**
-   * {@inheritdoc}
-   */
-  public function build() {
-    $build = [];
-    $build['nvrf_app'] = [
-      '#markup' => '<div id="react-app"></div>',
-      '#attached' => [
-        'library' => 'votegov/nvrf_app'
-      ],
-    ];
-    return $build;
+/**
+ * {@inheritdoc}
+ */
+public function build() {
+  $build = [];
+  $build['custom_plugin'] = [
+  '#markup' => '<div id="react-app"></div>',
+  '#attached' => [
+    'library' => 'nvrf_app/test_library'
+  ]
+  ];
+  return $build;
   }
 }
+

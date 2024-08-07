@@ -1,0 +1,4 @@
+test_library:
+  version: VERSION
+  js:
+    js/test-library.js: {}
