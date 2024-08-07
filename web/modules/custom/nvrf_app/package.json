@@ -1,0 +1,7 @@
+{
+  "name": "nvrf_app",
+  "version": "1.0.0",
+  "dependencies": {
+    "vote-gov-nvrf-app": "github:usagov/vote-gov-nvrf-app#v0.14.0"
+  }
+}
