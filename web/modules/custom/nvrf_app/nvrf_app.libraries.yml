@@ -2,7 +2,6 @@ nvrf_assets:
   version: VERSION
   js:
     dist/assets/index.js: {}
-
   css:
     theme:
       dist/assets/index.css: {}

@@ -1,4 +1,5 @@
 <?php
+
 namespace Drupal\nvrf_app\Plugin\Block;
 
 use Drupal\Core\Block\Attribute\Block;
@@ -26,6 +27,7 @@ class NVRFapp extends BlockBase {
   /**
    * {@inheritdoc}
    */
+
   public function build() {
     $build = [];
     $build['custom_plugin'] = [
@@ -33,9 +35,9 @@ class NVRFapp extends BlockBase {
       '#attached' => [
         'library' => [
           'nvrf_app/nvrf_assets'
-        ]
-      ]
-      ];
+        ],
+      ],
+    ];
     return $build;
   }
 
