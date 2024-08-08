@@ -2,9 +2,9 @@ nvrf_assets:
   version: VERSION
   js:
     dist/assets/index.js: {}
-    dist/theme/assets/scripts/login.js: {}
+
   css:
     theme:
-      dist/theme/assets/styles/*: {}
-      dist/assets/*: {}
-
+      dist/assets/index.css: {}
+      dist/assets/main.css: {}
+      dist/assets/nvrf.css: {}

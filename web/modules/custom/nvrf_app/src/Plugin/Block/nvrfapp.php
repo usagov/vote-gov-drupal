@@ -19,7 +19,7 @@ use Drupal\Core\StringTranslation\TranslatableMarkup;
 
 #[Block(
   id: "nvrf_app",
-  admin_label: new TranslatableMarkup("NVRF App Embed"),
+  admin_label: new TranslatableMarkup("NVRF Digital Form"),
   category: new TranslatableMarkup("Custom module")
 )]
 
@@ -30,7 +30,7 @@ class nvrfapp extends BlockBase {
 public function build() {
   $build = [];
   $build['custom_plugin'] = [
-  '#markup' => '<div id="root"></div>',
+  '#markup' => '<div id="root" class="nvrf-app-container"></div>',
   '#attached' => [
     'library' => [
       'nvrf_app/nvrf_assets'
