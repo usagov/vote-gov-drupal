@@ -27,8 +27,12 @@ cd ${app_path}
 echo "**************************************************"
 echo "Running 'drush cron' in '${environment}'..."
 echo "**************************************************"
-drush --uri=${ssg_endpoint} cron
-echo "'drush cron' task...completed!"
+if [ "$(ls -A $html_path)" ]; then
+  echo "Directory is not empty. Syncing aborted."
+else
+  aws s3 sync s3://${bucket} ${html_path} --delete --no-verify-ssl 2>/dev/null
+  echo "'drush cron' task...completed!"
+fi
 echo ""
 
 echo "**************************************************"
