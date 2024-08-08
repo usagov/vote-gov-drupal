@@ -23,7 +23,7 @@ use Drupal\Core\StringTranslation\TranslatableMarkup;
   category: new TranslatableMarkup("Custom module")
 )]
 
-class Nvrfapp extends BlockBase {
+class NVRFapp extends BlockBase {
 
   /**
    * {@inheritdoc}
