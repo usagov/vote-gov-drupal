@@ -15,6 +15,8 @@ rm -rf scheduled_backup/
 mkdir -p scheduled_backup
 cd scheduled_backup
 
+date
+
 echo "Downloading media files..."
 {
   cf target -s "${cf_space}"
@@ -39,6 +41,8 @@ echo "Downloading media files..."
 
   cf delete-service-key "${service}" "${service_key}" -f
 } >/dev/null 2>&1
+
+date
 
 echo "Downloading static files..."
 {
@@ -65,6 +69,8 @@ echo "Downloading static files..."
   cf delete-service-key "${service}" "${service_key}" -f
 } >/dev/null 2>&1
 
+date
+
 echo "Downloading terraform state..."
 {
   cf target -s "${backup_space}"
@@ -89,6 +95,8 @@ echo "Downloading terraform state..."
 
   cf delete-service-key "${service}" "${service_key}" -f
 } >/dev/null 2>&1
+
+date
 
 echo "Saving to backup bucket..."
 {
@@ -134,3 +142,5 @@ echo "Saving to backup bucket..."
 
   cf delete-service-key "${service}" "${service_key}" -f >/dev/null 2>&1
 }
+
+date
