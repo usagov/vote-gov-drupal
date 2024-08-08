@@ -6,5 +6,5 @@ nvrf_assets:
   css:
     theme:
       dist/theme/assets/styles/*: {}
-
+      dist/assets/*: {}
 
