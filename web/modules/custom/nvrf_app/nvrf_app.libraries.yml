@@ -1,4 +1,10 @@
-test_library:
+nvrf_assets:
   version: VERSION
   js:
-    js/test-library.js: {}
+    dist/assets/index.js: {}
+    dist/theme/assets/scripts/login.js: {}
+  css:
+    theme:
+      dist/theme/assets/styles/*: {}
+
+

@@ -30,12 +30,15 @@ class nvrfapp extends BlockBase {
 public function build() {
   $build = [];
   $build['custom_plugin'] = [
-  '#markup' => '<div id="react-app"></div>',
+  '#markup' => '<div id="root"></div>',
   '#attached' => [
-    'library' => 'nvrf_app/test_library'
+    'library' => [
+      'nvrf_app/nvrf_assets'
+    ]
   ]
-  ];
+    ];
   return $build;
-  }
+
+}
 }
 
