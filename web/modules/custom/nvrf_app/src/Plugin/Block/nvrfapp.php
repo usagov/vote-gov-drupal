@@ -7,7 +7,7 @@ use Drupal\Core\Block\BlockBase;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 
 /**
- * Provides a 'NVRFApp' block.
+ * Provides a 'NVRFapp' block.
  *
  * @Block(
  *  id = "nvrf_app",
@@ -27,14 +27,13 @@ class NVRFapp extends BlockBase {
   /**
    * {@inheritdoc}
    */
-
   public function build() {
     $build = [];
     $build['custom_plugin'] = [
       '#markup' => '<div id="root" class="nvrf-app-container"></div>',
       '#attached' => [
         'library' => [
-          'nvrf_app/nvrf_assets'
+          'nvrf_app/nvrf_assets',
         ],
       ],
     ];
