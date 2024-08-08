@@ -1,0 +1,20 @@
+uuid: 6b85f7b8-c7ec-47aa-b6be-2d0e3c3f4726
+langcode: en
+status: true
+dependencies:
+  module:
+    - nvrf_app
+  theme:
+    - votegov
+id: votegov_nvrfdigitalform
+theme: votegov
+region: content
+weight: 0
+provider: null
+plugin: nvrf_app
+settings:
+  id: nvrf_app
+  label: 'NVRF Digital Form'
+  label_display: '0'
+  provider: nvrf_app
+visibility: {  }
