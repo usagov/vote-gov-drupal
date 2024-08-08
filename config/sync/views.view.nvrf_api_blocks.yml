@@ -11,13 +11,14 @@ dependencies:
     - field.storage.block_content.field_messager_identifier
     - field.storage.block_content.field_touchpoints_id
     - field.storage.media.field_media_image
+    - user.role.anonymous
     - user.role.authenticated
   module:
     - block_content
-    - image
     - media
     - rest
     - serialization
+    - svg_image
     - text
     - user
 id: nvrf_api_blocks
@@ -514,6 +515,7 @@ display:
         type: role
         options:
           role:
+            anonymous: anonymous
             authenticated: authenticated
       cache:
         type: tag
