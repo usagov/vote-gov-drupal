@@ -24,6 +24,7 @@ use Drupal\Core\StringTranslation\TranslatableMarkup;
 )]
 
 class NVRFapp extends BlockBase {
+
   /**
    * {@inheritdoc}
    */
