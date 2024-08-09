@@ -1,0 +1,23 @@
+uuid: a92587e0-e01f-475a-8831-07a5299a1b7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.registration_form_selector
+    - field.storage.block_content.field_digital_form_link
+  module:
+    - link
+id: block_content.registration_form_selector.field_digital_form_link
+field_name: field_digital_form_link
+entity_type: block_content
+bundle: registration_form_selector
+label: 'Digital form link'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

@@ -14,9 +14,11 @@
   {{ title_prefix }}
   {{ title_suffix }}
 
-  <h2>{{ 'Other ways to register to vote' | t }}</h2>
-  <p>{{ 'We\'ll walk you through each step with state-specific instructions. When you\'ve finished filling out hte digital form, you\'ll be able to print, sign, and mail it to your state.' | t }}</p>
-  <a href="" class="usa-button" title="{{ 'Register by mail with the digital form filler' | t }}">Register by mail with the digital form filler</a>
+  <h2>{{ content.field_digital_form_heading | field_value }}</h2>
+  <p>{{ content.field_digital_form_paragraph | field_value }}</p>
+  <a href="" class="usa-button" title="{{ content.field_digital_form_button_label | field_value }}">
+    {{ content.field_digital_form_button_label | field_value }}
+  </a>
 
   <h2>{{ content.field_heading | field_value | render | replace({"@state_name": currentnode.getTitle()}) | raw }}</h2>
   <form class="usa-form" method="get" id="register_form_download" data-test="nvrfForm">

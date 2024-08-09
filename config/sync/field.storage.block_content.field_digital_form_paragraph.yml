@@ -1,0 +1,19 @@
+uuid: 6cceebbe-c775-4e4d-91cf-0eb950c04bbd
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_digital_form_paragraph
+field_name: field_digital_form_paragraph
+entity_type: block_content
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
