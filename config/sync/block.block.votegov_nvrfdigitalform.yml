@@ -1,9 +1,11 @@
-uuid: 6b85f7b8-c7ec-47aa-b6be-2d0e3c3f4726
+uuid: bb7f63de-b512-4093-9d4a-80beac48540e
 langcode: en
 status: true
 dependencies:
   module:
-    - nvrf_app
+    - system
+    - user
+    - vote_nvrf
   theme:
     - votegov
 id: votegov_nvrfdigitalform
@@ -16,5 +18,16 @@ settings:
   id: nvrf_app
   label: 'NVRF Digital Form'
   label_display: '0'
-  provider: nvrf_app
-visibility: {  }
+  provider: vote_nvrf
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/legacy\r\n/es/legacy"
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated

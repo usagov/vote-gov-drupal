@@ -1,5 +1,0 @@
-name: NVRF App
-type: module
-description: Creates a block and embeds NVRF React App.
-core_version_requirement: ^9 || ^10
-package: Custom

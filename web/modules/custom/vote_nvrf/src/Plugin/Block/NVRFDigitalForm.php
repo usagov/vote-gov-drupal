@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\nvrf_app\Plugin\Block;
+namespace Drupal\vote_nvrf\Plugin\Block;
 
 use Drupal\Core\Block\Attribute\Block;
 use Drupal\Core\Block\BlockBase;
@@ -32,10 +32,10 @@ class NVRFDigitalForm extends BlockBase {
   public function build() {
     $build = [];
     $build['custom_plugin'] = [
-      '#markup' => '<div id="root" class="nvrf-app-container"></div>',
+      '#markup' => '<div id="root" class="nvrf-app-container vote-block-margin-y"></div>',
       '#attached' => [
         'library' => [
-          'nvrf_app/nvrf_assets',
+          'vote_nvrf/nvrf_assets',
         ],
       ],
     ];
