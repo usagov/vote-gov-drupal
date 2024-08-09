@@ -1,0 +1,72 @@
+.nvrf-app-container .usa-button {
+    line-height: 1.2;
+}
+@media only screen and (max-width: 639px) {
+    .nvrf-app-container .mobile-width {
+        width: 100%;
+        max-width: 480px;
+    }
+}
+.nvrf-app-container .grid-container-tablet {
+    max-width: 720px;
+}
+.nvrf-app-container .usa-prose > hr,
+.nvrf-app-container hr {
+    border: 0;
+    border-top: 1px solid #adadad;
+    margin: 2rem 0;
+}
+.nvrf-app-container .usa-form .usa-input {
+    max-width: 480px;
+}
+.nvrf-app-container fieldset + .usa-hint {
+    margin-top: 0.5rem;
+}
+.nvrf-app-container .error-container {
+    border-left: 3px solid #b50909;
+    padding-left: 15px;
+}
+
+.nvrf-app-container .error-container .error-text {
+    display: block;
+}
+
+.nvrf-app-container .error-text {
+    color: #b50909;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.nvrf-app-container .usa-step-indicator__header {
+    @media (min-width: 640px) {
+        position: absolute;
+        text-indent: -9000px;
+        overflow: hidden;
+    }
+}
+
+.nvrf-app-container .usa-step-indicator__segment {
+    cursor: default;
+}
+
+.nvrf-app-container .usa-step-indicator__segment--complete {
+    cursor: pointer;
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+.nvrf-app-container .usa-alert__text {
+    > *:first-child {
+        margin-top: 0;
+    }
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+#touchpoints-form-embed .fba-modal-dialog {
+    margin: 0;
+}
