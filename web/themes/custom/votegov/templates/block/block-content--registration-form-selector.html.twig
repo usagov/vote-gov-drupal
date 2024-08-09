@@ -14,13 +14,18 @@
   {{ title_prefix }}
   {{ title_suffix }}
 
-  <h2>{{ content.field_digital_form_heading | field_value }}</h2>
-  <p>{{ content.field_digital_form_paragraph | field_value }}</p>
-  <a href="" class="usa-button" title="{{ content.field_digital_form_button_label | field_value }}">
-    {{ content.field_digital_form_button_label | field_value }}
-  </a>
-
   <h2>{{ content.field_heading | field_value | render | replace({"@state_name": currentnode.getTitle()}) | raw }}</h2>
+
+  {{ content.field_digital_form_paragraph | field_value }}
+  {% if content.field_digital_form_link | render %}
+    <p>
+      {% include '@votegov/component/button.html.twig' with {
+        'href': elements['#block_content'].field_digital_form_link.0.url,
+        'label': elements['#block_content'].field_digital_form_link.0.title
+      } %}
+    </p>
+  {% endif %}
+
   <form class="usa-form" method="get" id="register_form_download" data-test="nvrfForm">
     <p>{{ content.field_description | field_value }}</p>
     <div class="field">

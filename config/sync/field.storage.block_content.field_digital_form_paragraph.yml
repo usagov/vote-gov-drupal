@@ -1,16 +1,16 @@
-uuid: 6cceebbe-c775-4e4d-91cf-0eb950c04bbd
+uuid: da7d778b-3f42-4131-b985-2bc7a880f22d
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
+    - text
 id: block_content.field_digital_form_paragraph
 field_name: field_digital_form_paragraph
 entity_type: block_content
-type: string_long
-settings:
-  case_sensitive: false
-module: core
+type: text_long
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true

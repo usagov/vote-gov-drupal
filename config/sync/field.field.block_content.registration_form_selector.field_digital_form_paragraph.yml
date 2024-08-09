@@ -1,19 +1,24 @@
-uuid: c6aad25a-b285-4e43-846b-176cc5ee0f4e
+uuid: cb633190-ab29-4b6a-8798-506007d410db
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.registration_form_selector
     - field.storage.block_content.field_digital_form_paragraph
+    - filter.format.simple_html
+  module:
+    - text
 id: block_content.registration_form_selector.field_digital_form_paragraph
 field_name: field_digital_form_paragraph
 entity_type: block_content
 bundle: registration_form_selector
 label: 'Digital form paragraph'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: string_long
+settings:
+  allowed_formats:
+    - simple_html
+field_type: text_long
