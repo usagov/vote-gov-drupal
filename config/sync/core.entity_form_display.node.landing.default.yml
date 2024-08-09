@@ -4,14 +4,34 @@ status: true
 dependencies:
   config:
     - field.field.node.landing.body
+    - field.field.node.landing.field_content_version
     - field.field.node.landing.field_metatags
     - field.field.node.landing.field_paragraph_components
     - node.type.landing
   module:
     - content_moderation
+    - field_group
     - metatag
     - paragraphs
     - path
+third_party_settings:
+  field_group:
+    group_version_tracking:
+      children:
+        - field_content_version
+      label: 'Version tracking'
+      region: content
+      parent_name: ''
+      weight: 11
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: true
+        weight: 0
 id: node.landing.default
 targetEntityType: node
 bundle: landing
@@ -22,6 +42,14 @@ content:
     weight: 2
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_content_version:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
