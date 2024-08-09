@@ -26,12 +26,15 @@ export ssg_endpoint="https://ssg-${environment}.vote.gov"
 [ "${environment}" = "prod" ] && export ssg_endpoint="https://vote.gov"
 export ssg_sitemap_endpoint=ssg_endpoint
 
-cd ${html_path}
 echo "**************************************************"
 echo "Copying current static files from '${bucket_name}'..."
 echo "**************************************************"
-aws s3 sync s3://${bucket} . --delete --no-verify-ssl 2>/dev/null
-echo "Copy current static files from '${bucket_name}'...completed!"
+if [ "$(ls -A $html_path)" ]; then
+  echo "Static html directory is not empty. Syncing aborted."
+else
+  aws s3 sync s3://${bucket} ${html_path} --delete --no-verify-ssl 2>/dev/null
+  echo "Copying current static files from '${bucket_name}'...completed!"
+fi
 echo ""
 
 cd ${app_path}
