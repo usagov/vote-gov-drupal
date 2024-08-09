@@ -2,11 +2,10 @@
   "name": "nvrf_app",
   "version": "1.0.0",
   "scripts": {
-    "build": "npm run copy-dist & npm run copy-data",
-    "copy-dist": "npm run reset-dist && npm run copy-dist:js && npm run copy-dist:css && npm run copy-dist:files",
+    "build": "npm run reset-dist && npm run copy-dist:js && npm run copy-dist:css && npm run copy-dist:files",
     "reset-dist": "rm -rf ./dist && mkdir ./dist && mkdir ./dist/assets",
     "copy-dist:js": "cp -r ./node_modules/vote-gov-nvrf-app/dist/assets/index.js ./dist/assets/index.js",
-    "copy-dist:css": "cp -r ./node_modules/vote-gov-nvrf-app/dist/assets/index.css ./dist/assets/index.css & cp -r ./node_modules/vote-gov-nvrf-app/dist/theme/assets/styles/nvrf.css ./dist/assets/nvrf.css  & cp -r ./node_modules/vote-gov-nvrf-app/dist/theme/assets/styles/main.css ./dist/assets/main.css",
+    "copy-dist:css": "cp -r ./node_modules/vote-gov-nvrf-app/dist/theme/assets/styles/nvrf.css ./dist/assets/nvrf.css",
     "copy-dist:files": "cp -r ./node_modules/vote-gov-nvrf-app/dist/files ./dist/files",
     "copy-data": "rm -rf ../../../data && cp -r ./node_modules/vote-gov-nvrf-app/dist/data ../../../data"
   },

@@ -7,13 +7,14 @@ use Drupal\Core\Block\BlockBase;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 
 /**
- * Provides a 'NVRFDigitialForm' block.
+ * Provides a 'NVRFDigitalForm' block.
  *
  * @Block(
  *  id = "nvrf_app",
  *  admin_label = @Translation("NVRF app"),
  * )
  */
+
 /**
  * Provides a block with NVRF react app's root id.
  */
@@ -23,7 +24,7 @@ use Drupal\Core\StringTranslation\TranslatableMarkup;
   category: new TranslatableMarkup("Custom module")
 )]
 
-class NVRFDigitialForm extends BlockBase {
+class NVRFDigitalForm extends BlockBase {
 
   /**
    * {@inheritdoc}
