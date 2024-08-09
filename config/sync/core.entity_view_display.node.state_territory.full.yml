@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.state_territory.field_accepts_nvrf
     - field.field.node.state_territory.field_address_location_inst
     - field.field.node.state_territory.field_confirm_registration_link
+    - field.field.node.state_territory.field_content_version
     - field.field.node.state_territory.field_election_homepage_link
     - field.field.node.state_territory.field_g_in_person_deadline
     - field.field.node.state_territory.field_g_mail_postmarked_deadline
@@ -320,6 +321,7 @@ content:
 hidden:
   body: true
   field_address_location_inst: true
+  field_content_version: true
   field_identification_inst: true
   field_mail_registration_link: true
   field_mailing_address_inst: true

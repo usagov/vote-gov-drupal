@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.nvrf_page.body
+    - field.field.node.nvrf_page.field_content_version
     - field.field.node.nvrf_page.field_display_title
     - field.field.node.nvrf_page.field_general_instructions
     - field.field.node.nvrf_page.field_omb_number
@@ -11,8 +12,27 @@ dependencies:
     - workflows.workflow.publishing_content
   module:
     - content_moderation
+    - field_group
     - path
     - text
+third_party_settings:
+  field_group:
+    group_version_tracking:
+      children:
+        - field_content_version
+      label: 'Version tracking'
+      region: content
+      parent_name: ''
+      weight: 13
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: true
+        weight: 0
 id: node.nvrf_page.default
 targetEntityType: node
 bundle: nvrf_page
@@ -33,6 +53,14 @@ content:
     weight: 3
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_content_version:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_display_title:
     type: string_textfield

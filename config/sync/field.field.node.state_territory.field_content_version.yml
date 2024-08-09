@@ -1,0 +1,19 @@
+uuid: f4ef6d75-aeaf-489f-8512-61e356c90ff3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_version
+    - node.type.state_territory
+id: node.state_territory.field_content_version
+field_name: field_content_version
+entity_type: node
+bundle: state_territory
+label: 'Content Version'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
