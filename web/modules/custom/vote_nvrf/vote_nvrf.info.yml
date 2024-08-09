@@ -1,6 +1,6 @@
 name: 'Vote NVRF'
 type: module
-description: 'Provides custom functionality supporting NVRF. (includes NVRF compound field)'
+description: 'Provides custom functionality supporting NVRF.'
 core_version_requirement: ^9 || ^10
 package: Custom
 dependencies:

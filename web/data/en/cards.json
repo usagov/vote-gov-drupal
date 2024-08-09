@@ -1,0 +1,18 @@
+[
+  {
+    "uuid": "0ac52b5d-4381-4b4e-830e-38319f3a3757",
+    "lang": "en",
+    "heading": "I am already registered in @state_name and need to change my information.",
+    "body": "\u003Cp\u003EReport a change to registration information, such as name, address, or political party.\u003C\/p\u003E",
+    "button_label": "Change registration information",
+    "image_url": ""
+  },
+  {
+    "uuid": "3abd804c-2787-44f9-a06b-ad6d63ca797f",
+    "lang": "en",
+    "heading": "I am registering in @state_name for the first time.",
+    "body": "\u003Cp\u003ERegister for the first time in this state. We recommend having your driver\u2019s license or non-driver identification number available.\u003C\/p\u003E",
+    "button_label": "Begin new registration",
+    "image_url": ""
+  }
+]
