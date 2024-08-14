@@ -30,14 +30,17 @@ class NVRFDigitalForm extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
+    $return_path = \Drupal::request()->headers->get('referer');
+    $root_div = str_replace("%return_path%", $return_path, "<div id='root' data-returnPath='%return_path%' class='nvrf-app-container vote-block-margin-y'></div>");
     $build = [];
     $build['custom_plugin'] = [
-      '#markup' => '<div id="root" class="nvrf-app-container vote-block-margin-y"></div>',
+      '#markup' => $root_div,
       '#attached' => [
         'library' => [
           'vote_nvrf/nvrf_assets',
         ],
       ],
+      '#return_path' => \Drupal::request()->headers->get('referer'),
     ];
     return $build;
   }
