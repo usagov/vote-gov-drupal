@@ -40,7 +40,6 @@ class NVRFDigitalForm extends BlockBase {
           'vote_nvrf/nvrf_assets',
         ],
       ],
-      '#return_path' => \Drupal::request()->headers->get('referer'),
     ];
     return $build;
   }
