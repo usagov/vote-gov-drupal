@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 home="/home/vcap"
 app_path="${home}/app"
@@ -61,13 +62,6 @@ echo "**************************************************"
 mkdir -p ${html_path}/core/assets
 cp -rfp ${app_path}/web/core/assets/vendor ${html_path}/core/assets/
 echo "Missing Core assets files...completed!"
-echo ""
-
-echo "**************************************************"
-echo "Adding missing robots.txt file"
-echo "**************************************************"
-cp -f ${app_path}/web/robots.txt ${html_path}/
-echo "Adding missing robots.txt file....completed!"
 echo ""
 
 echo "**************************************************"

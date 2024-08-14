@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.landing.body
+    - field.field.node.landing.field_content_version
     - field.field.node.landing.field_metatags
     - field.field.node.landing.field_paragraph_components
     - node.type.landing
@@ -32,6 +33,7 @@ content:
     region: content
 hidden:
   body: true
+  field_content_version: true
   field_metatags: true
   langcode: true
   links: true

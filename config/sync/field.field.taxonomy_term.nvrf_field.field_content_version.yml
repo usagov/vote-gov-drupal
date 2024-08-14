@@ -1,0 +1,19 @@
+uuid: 841d7e60-5e47-4c7c-bf0c-b07ef29fb5af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_content_version
+    - taxonomy.vocabulary.nvrf_field
+id: taxonomy_term.nvrf_field.field_content_version
+field_name: field_content_version
+entity_type: taxonomy_term
+bundle: nvrf_field
+label: 'Content version'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

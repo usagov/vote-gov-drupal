@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.taxonomy_term.basics_modules.field_anchor_id
     - field.field.taxonomy_term.basics_modules.field_content
+    - field.field.taxonomy_term.basics_modules.field_content_version
     - field.field.taxonomy_term.basics_modules.field_heading
     - taxonomy.vocabulary.basics_modules
   module:
@@ -30,6 +31,14 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_content_version:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_heading:
     type: string_textfield
     weight: 1
@@ -40,7 +49,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 4
+    weight: 5
     region: content
     settings:
       include_locked: true
@@ -55,13 +64,13 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 6
+    weight: 7
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   translation:
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -5,16 +5,36 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_body
+    - field.field.node.page.field_content_version
     - field.field.node.page.field_media
     - field.field.node.page.field_metatags
     - node.type.page
     - workflows.workflow.publishing_content
   module:
     - content_moderation
+    - field_group
     - media_library
     - metatag
     - path
     - text
+third_party_settings:
+  field_group:
+    group_content_version:
+      children:
+        - field_content_version
+      label: 'Version tracking'
+      region: content
+      parent_name: ''
+      weight: 11
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: true
+        weight: 0
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -35,6 +55,14 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
+    third_party_settings: {  }
+  field_content_version:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_media:
     type: media_library_widget
