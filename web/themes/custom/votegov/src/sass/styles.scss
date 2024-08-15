@@ -36,6 +36,13 @@
 @forward "usa-input";
 @forward "usa-media-block";
 
+// NVRF
+@forward "usa-step-indicator";
+@forward "usa-checkbox";
+@forward "usa-icon-list";
+@forward "usa-memorable-date";
+@forward "usa-hint";
+
 // Custom styles
 @use "uswds-overrides";
 @use "base";

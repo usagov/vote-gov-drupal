@@ -1,0 +1,35 @@
+@use "uswds-core" as *;
+@use "mixins" as *;
+@use "variables" as *;
+
+.nvrf-app {
+  ol > li {
+      @include u-margin-top(0);
+  }
+
+  p {
+    @include u-margin-y(2);
+  }
+
+  .usa-form {
+    font-family: $theme-font-type-sans;
+  }
+
+  .usa-button {
+    @include u-margin-top(0);
+  }
+
+  .usa-card__container {
+    @include u-margin-x(1);
+  }
+
+  .usa-alert--no-icon {
+    .usa-alert__body {
+      @include u-padding-left(4);
+    }
+  }
+
+  .usa-input {
+    height: 40px;
+  }
+}
