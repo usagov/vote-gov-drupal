@@ -6,7 +6,7 @@
 .vote-theme-options {
   @include u-position('fixed');
   @include u-display('flex');
-  @include u-z(300);;
+  @include u-z(300);
 
   @include at-media('tablet') {
     @include u-flex-direction('column');
