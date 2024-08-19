@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.voter_guide.body
     - field.field.node.voter_guide.field_basics_block
+    - field.field.node.voter_guide.field_content_version
     - field.field.node.voter_guide.field_icon
     - field.field.node.voter_guide.field_media
     - field.field.node.voter_guide.field_metatags
@@ -13,11 +14,30 @@ dependencies:
     - workflows.workflow.publishing_content
   module:
     - content_moderation
+    - field_group
     - media_library
     - metatag
     - paragraphs
     - path
     - text
+third_party_settings:
+  field_group:
+    group_version_tracking:
+      children:
+        - field_content_version
+      label: 'Version tracking'
+      region: content
+      parent_name: ''
+      weight: 15
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: true
+        weight: 0
 id: node.voter_guide.default
 targetEntityType: node
 bundle: voter_guide
@@ -58,6 +78,14 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: '0'
     third_party_settings: {  }
+  field_content_version:
+    type: string_textfield
+    weight: 13
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_icon:
     type: media_library_widget
     weight: 5
@@ -97,7 +125,7 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 13
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }

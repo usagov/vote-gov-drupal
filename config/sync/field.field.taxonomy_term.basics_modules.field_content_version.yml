@@ -1,0 +1,19 @@
+uuid: 68b847ce-a8ac-43a1-a5fe-33dab0474672
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_content_version
+    - taxonomy.vocabulary.basics_modules
+id: taxonomy_term.basics_modules.field_content_version
+field_name: field_content_version
+entity_type: taxonomy_term
+bundle: basics_modules
+label: 'Content version'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -14,6 +14,7 @@ describe('Test User Role Access to Content Moderation', () => {
     })
     cy.get('[class="claro-details__summary claro-details__summary--accordion-item"]').then(dropdown => {
       cy.get(dropdown[1]).click()
+      cy.get('[data-drupal-selector="edit-path-0"]').click()
       cy.get('[data-drupal-selector="edit-path-0-pathauto"]').click()
       cy.get('[data-drupal-selector="edit-path-0-alias"]').type('/cypress-content-moderation-test')
     })
