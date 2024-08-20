@@ -30,7 +30,7 @@ class NvrfPageController extends ControllerBase {
       'type' => 'state_territory',
       'status' => 1,
       'field_accepts_nvrf' => TRUE,
-      'title' => $title
+      'title' => $title,
     ]);
 
     if (empty($node)) {
