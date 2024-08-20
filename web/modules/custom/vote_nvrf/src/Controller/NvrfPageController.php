@@ -2,8 +2,8 @@
 
 namespace Drupal\vote_nvrf\Controller;
 
+use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use \Drupal\Core\Controller\ControllerBase;
 
 /**
  * An NVRF page controller.
@@ -12,8 +12,6 @@ class NvrfPageController extends ControllerBase {
 
   /**
    * Returns a renderable array for the nvrf app.
-   *
-   * return []
    */
   public function content(string $state_name) {
     $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
@@ -29,7 +27,7 @@ class NvrfPageController extends ControllerBase {
     // Query the nodes to find a match.
     $node_storage = \Drupal::entityTypeManager()->getStorage('node');
     $node = $node_storage->loadByProperties([
-      'type' =>'state_territory',
+      'type' => 'state_territory',
       'status' => 1,
       'field_accepts_nvrf' => TRUE,
       'title' => $title
@@ -61,4 +59,5 @@ class NvrfPageController extends ControllerBase {
 
     return $build;
   }
+
 }
