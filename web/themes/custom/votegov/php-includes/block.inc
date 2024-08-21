@@ -9,5 +9,7 @@
  * Implements hook_preprocess_block().
  */
 function votegov_preprocess_block(&$variables) {
-  $variables['content']['#attributes']['block'] = $variables['attributes']['id'];
+  if (isset($variables['attributes']['id'])) {
+    $variables['content']['#attributes']['block'] = $variables['attributes']['id'];
+  }
 }

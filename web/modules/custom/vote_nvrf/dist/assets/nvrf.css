@@ -39,7 +39,7 @@
 }
 
 .nvrf-app-container .usa-step-indicator__header {
-    @media (min-width: 640px) {
+    @media (min-width: 641px) {
         position: absolute;
         text-indent: -9000px;
         overflow: hidden;
@@ -48,13 +48,30 @@
 
 .nvrf-app-container .usa-step-indicator__segment {
     cursor: default;
+    padding-bottom: .5rem;
 }
 
 .nvrf-app-container .usa-step-indicator__segment--complete {
     cursor: pointer;
+    background-color: transparent;
+    color: transparent;
+    transition: color .5s, background-color .5s;
     &:hover,
     &:focus {
         text-decoration: underline;
+        color: #005ea2;
+        background-color: #e7eff3;
+        transition: text-decoration .5s, color .5s, background-color .5s;
+        .usa-step-indicator__segment-label {
+            color: #005ea2;
+            transition: color .5s;
+        }
+    }
+}
+
+.nvrf-app-container .usa-step-indicator__segments {
+    @media (max-width: 640px) {
+        display: none;
     }
 }
 
