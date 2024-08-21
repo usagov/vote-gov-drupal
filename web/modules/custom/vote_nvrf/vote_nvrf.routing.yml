@@ -1,0 +1,7 @@
+vote_nvrf.nvrf_page:
+  path: '/register/{state_name}/form'
+  defaults:
+    _controller: '\Drupal\vote_nvrf\Controller\NvrfPageController::content'
+  requirements:
+    _permission: 'access content'
+    state_name: '[a-z-]+'
