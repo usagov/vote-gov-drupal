@@ -10,14 +10,16 @@
 
     {# Start temporary cards. #}
     {% if language != "es" %}
-      {% set fvap_link = "https://www.fvap.gov/" %}
+      {% set fvap_link_military = "https://www.fvap.gov/military-voter" %}
+      {% set fvap_link_overseas = "https://www.fvap.gov/citizen-voter" %}
     {% else %}
-      {% set fvap_link = "https://www.fvap.gov/translated-materials" %}
+      {% set fvap_link_military = "https://www.fvap.gov/translated-materials" %}
+      {% set fvap_link_overseas = "https://www.fvap.gov/translated-materials" %}
     {% endif %}
 
     {# Temporary card for military FVAP.gov #}
     <article class="node--voter-guide node--view-mode-teaser usa-card">
-      <a extlinkjs-ignore class="vote-card__link" href={{ fvap_link }} target="_blank" title={{"Voting as a military service member" | t }}>
+      <a extlinkjs-ignore class="vote-card__link" href={{ fvap_link_military }} target="_blank" title={{"Voting as a military service member" | t }}>
         <div class="usa-card__container">
           <div class="vote-feature-card__icon">
             {{ source( directory ~ '/img/svg/Military.svg' ) }}
@@ -35,7 +37,7 @@
     </article>
     {# Temporary card for overseas FVAP.gov #}
     <article class="node--voter-guide node--view-mode-teaser usa-card">
-      <a extlinkjs-ignore class="vote-card__link" href={{ fvap_link }} target="_blank" title={{"Voting as a U.S. citizenfrom outside the U.S." | t }}>
+      <a extlinkjs-ignore class="vote-card__link" href={{ fvap_link_overseas }} target="_blank" title={{"Voting as a U.S. citizenfrom outside the U.S." | t }}>
         <div class="usa-card__container">
           <div class="vote-feature-card__icon">
             {{ source( directory ~ '/img/svg/Overseas.svg' ) }}
