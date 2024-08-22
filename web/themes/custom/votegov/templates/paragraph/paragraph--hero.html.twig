@@ -4,8 +4,11 @@
  * Default theme implementation to display a paragraph: Hero.
  */
 #}
+{% set pageType = currentnode.bundle() %}
+
 {% set classes = [
   'vote-hero',
+  'vote-hero--' ~ pageType,
   'vote-hero--' ~ content.field_background_color | field_value | render
 ] %}
 
@@ -18,7 +21,7 @@
   {{ title_suffix }}
   <div class="vote-hero__container">
     <div class="vote-hero__callout">
-      {% if paragraph.field_background_color.value == 'dark' %}
+      {% if pageType != 'landing' %}
         {{ drupal_entity('block', 'votegov_breadcrumbs') }}
       {% endif %}
       <div class="vote-hero__content">
@@ -30,17 +33,19 @@
             {{ content.field_body | field_value }}
           </div>
         {% endif %}
-        {% include '@votegov/component/button.html.twig' with {
-          'href': paragraph.field_link.0.url,
-          'label': paragraph.field_link.0.title,
-          'secondary': true
-        } %}
+        {% if content.field_link | render  %}
+          {% include '@votegov/component/button.html.twig' with {
+            'href': paragraph.field_link.0.url,
+            'label': paragraph.field_link.0.title,
+            'secondary': true
+          } %}
+        {% endif %}
       </div>
     </div>
     {% if content.field_media | render %}
-    <div class="vote-hero__image">
-      {{ content.field_media | field_value }}
-    </div>
-  {% endif %}
+      <div class="vote-hero__image">
+        {{ content.field_media | field_value }}
+      </div>
+    {% endif %}
   </div>
 </section>
