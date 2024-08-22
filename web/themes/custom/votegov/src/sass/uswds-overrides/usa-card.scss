@@ -66,10 +66,13 @@
   @include at-media('tablet-lg') {
     @include u-padding-x(4);
     @include u-padding-y(5);
-    @include u-margin(0);
     border: 2px solid transparent;
     outline: 1px solid $base-dark;
     transition: 0.3s background-color;
+
+    .vote-feature-cards & {
+      @include u-margin(0);
+    }
 
     > * + * {
       @include u-margin-top(3);
@@ -77,11 +80,13 @@
   }
 
   @include at-media-max('tablet-lg') {
-    @include u-flex-direction('row');
-    @include u-margin(0);
-    @include u-padding-y(4);
-    border-radius: unset;
-    gap: 1.5rem;
+    .vote-feature-cards & {
+      @include u-flex-direction('row');
+      @include u-margin(0);
+      @include u-padding-y(4);
+      border-radius: unset;
+      gap: 1.5rem;
+    }
   }
 }
 
@@ -131,11 +136,5 @@
 
   svg {
     fill: var(--vote-feature-card-icon-fill);
-  }
-}
-
-.nvrf-app-container {
-  .usa-card__container {
-    @include u-margin-x(2);
   }
 }

@@ -18,10 +18,8 @@
       padding-right: 7rem;
     }
   }
-}
 
-.usa-alert--no-icon {
-  .usa-alert__body {
+  .usa-alert--no-icon & {
     @include u-padding-left(4);
   }
 }
