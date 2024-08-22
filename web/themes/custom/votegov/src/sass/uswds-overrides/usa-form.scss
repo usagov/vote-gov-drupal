@@ -16,6 +16,15 @@
   @include u-font-size('sans', 5);
 }
 
+.nvrf-app-container {
+  .usa-form {
+    .usa-input {
+      height: 40px !important;
+    }
+  }
+}
+
+
 ::placeholder {
   --input-placeholder--text: inherit;
   color: var(--input-placeholder--text);

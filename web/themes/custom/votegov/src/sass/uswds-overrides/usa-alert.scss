@@ -20,3 +20,9 @@
   }
 }
 
+.usa-alert--no-icon {
+  .usa-alert__body {
+    @include u-padding-left(4);
+  }
+}
+

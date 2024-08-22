@@ -134,4 +134,8 @@
   }
 }
 
-
+.nvrf-app-container {
+  .usa-card__container {
+    @include u-margin-x(2);
+  }
+}

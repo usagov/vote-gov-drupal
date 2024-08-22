@@ -110,3 +110,9 @@ hr, p + hr {
 .nonvfont * {
   @include u-font-family('sans');
 }
+
+.nvrf-app-container {
+  p {
+    @include u-margin-y(2);
+  }
+}
