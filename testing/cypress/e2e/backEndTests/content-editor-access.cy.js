@@ -35,14 +35,20 @@ describe('Test Content Editor Role Access', () => {
       })
   })
 
-  it('verify access to homepage accordion', () => {
-    cy.request('/node/63/edit').then((response) => {
-      expect(response.status).to.eq(200)
-        })
-    
-      cy.request('/node/add/landing').then((response) => {
-      expect(response.status).to.eq(200)
-        })
+  it('verify access to homepage', () => {
+        cy.request({
+          url: '/node/63/edit',
+          failOnStatusCode:false,
+      }).then((resp) => {
+          expect(resp.status).to.eq(403)
+      })
+
+        cy.request({
+          url: '/node/add/landing',
+          failOnStatusCode:false,
+      }).then((resp) => {
+          expect(resp.status).to.eq(403)
+      })
   })
 
   it('verify access to search function', () => {

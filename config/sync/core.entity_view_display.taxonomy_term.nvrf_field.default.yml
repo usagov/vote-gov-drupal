@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.nvrf_field.field_content_version
     - field.field.taxonomy_term.nvrf_field.field_display_label
     - field.field.taxonomy_term.nvrf_field.field_error_message
     - field.field.taxonomy_term.nvrf_field.field_help_text
@@ -26,6 +27,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_content_version:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
     region: content
   field_display_label:
     type: string

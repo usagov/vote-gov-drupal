@@ -1,0 +1,19 @@
+uuid: 1a1e59ac-0dea-4d94-91ca-237dd92b7362
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_version
+    - node.type.page
+id: node.page.field_content_version
+field_name: field_content_version
+entity_type: node
+bundle: page
+label: 'Content Version'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -79,9 +79,14 @@
     @include vote-fill;
     overflow: auto;
 
+    &[aria-hidden="true"]:not([hidden]) {
+      display: block;
+    }
+
     .usa-language__primary-item:last-of-type & {
       @include u-position('fixed');
     }
+
   }
 
   @include at-media('tablet') {

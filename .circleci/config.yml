@@ -160,6 +160,7 @@ jobs:
             cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/v1.1.3/cf-service-connect_linux_amd64
       - run:
           name: "Run downsync"
+          no_output_timeout: 30m
           command: |
             source ./scripts/pipeline/exports.sh "${BACKUP_ENV}"
             source ./scripts/pipeline/cloud-gov-login.sh
@@ -212,6 +213,7 @@ jobs:
             cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/v1.1.3/cf-service-connect_linux_amd64
       - run:
           name: "Run backup"
+          no_output_timeout: 30m
           command: |
             export BACKUP_ENV=${CIRCLE_BRANCH}
             source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
@@ -220,6 +222,7 @@ jobs:
             ./scripts/pipeline/scheduled_backup.sh "${prod_cf_space}"
       - run:
           name: "Run backup"
+          no_output_timeout: 30m
           command: |
             echo "I am the result of Run Backup failed job"
             export BACKUP_ENV=${CIRCLE_BRANCH}
@@ -315,6 +318,16 @@ workflows:
                 - stage
           requires:
             - deploy
+      - post-deploy-upkeep-approval:
+          filters:
+            branches:
+              only:
+                - test
+                - dev
+                - stage
+          type: approval
+          requires:
+            - post-deploy
       - post-deploy-upkeep:
           filters:
             branches:
@@ -323,14 +336,22 @@ workflows:
                 - dev
                 - stage
           requires:
-            - post-deploy
+            - post-deploy-upkeep-approval
+      - cypress-approval:
+          filters:
+            branches:
+              only:
+                - stage
+          type: approval
+          requires:
+            - post-deploy-upkeep
       - cypress:
           filters:
             branches:
               only:
                 - stage
           requires:
-            -  post-deploy-upkeep
+            - cypress-approval
   deploy-prod-workflow:
     when:
       and:
@@ -348,9 +369,13 @@ workflows:
       - post-deploy:
           requires:
             - deploy
-      - post-deploy-upkeep:
+      - post-deploy-upkeep-approval:
+          type: approval
           requires:
             - post-deploy
+      - post-deploy-upkeep:
+          requires:
+            - post-deploy-upkeep-approval
   upkeep-workflow:
     when:
       and:
@@ -390,4 +415,4 @@ workflows:
           - equal: [ test, << pipeline.parameters.restore >> ]
     jobs:
       - downsync
-      
+

@@ -17,11 +17,15 @@ wait_for_tunnel() {
   done
 }
 
+date
+
 ## Create a tunnel through the application to restore the database.
 echo "Creating tunnel to database..."
 cf connect-to-service --no-client ${project}-drupal-${RESTORE_ENV} ${project}-mysql-${RESTORE_ENV} > restore.txt &
 
 wait_for_tunnel
+
+date
 
 ## Create variables and credential file for MySQL login.
 echo "Restoring '${BACKUP_ENV}' database to '${RESTORE_ENV}'..."
@@ -48,6 +52,8 @@ echo "Restoring '${BACKUP_ENV}' database to '${RESTORE_ENV}'..."
 
 } >/dev/null 2>&1
 
+date
+
 ## Kill the backgrounded SSH tunnel.
 echo "Cleaning up old connections..."
 {
@@ -57,8 +63,12 @@ echo "Cleaning up old connections..."
 ## Clean up.
 rm -rf restore.txt ~/.mysql backup_${BACKUP_ENV}.sql
 
+date
+
 echo "Running 'drush cr' on '${RESTORE_ENV}' database..."
 source $(pwd $(dirname $0))/scripts/pipeline/cloud-gov-remote-command.sh "${project}-drupal-${RESTORE_ENV}" "drush cr"
+
+date
 
 # Upload media files.
 backup_media="cms/public/media"
@@ -85,5 +95,9 @@ echo "Uploading media files..."
   cf delete-service-key "${service}" "${service_key}" -f
 } >/dev/null 2>&1
 
+date
+
 echo "Running 'drush image-flush --all' on '${RESTORE_ENV}'..."
 source $(pwd $(dirname $0))/scripts/pipeline/cloud-gov-remote-command.sh "${project}-drupal-${RESTORE_ENV}" "drush image-flush --all"
+
+date
