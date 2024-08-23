@@ -9,11 +9,10 @@
 {% set savedCache = content | render %}
 
 {% include '@votegov/component/hero.html.twig' with {
-  'heading': content.field_heading,
-  'body': content.field_body,
+  'heading': content.field_heading | field_value,
+  'body': content.field_body | field_value,
   'link_href': paragraph.field_link.0.url,
   'link_label': paragraph.field_link.0.title,
-  'link_secondary': true,
-  'media': content.field_media,
+  'media': content.field_media | field_value,
   'variant': content.field_background_color | field_value | render
 } %}
