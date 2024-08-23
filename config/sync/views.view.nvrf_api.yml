@@ -803,7 +803,7 @@ display:
       display_description: ''
       rendering_language: '***LANGUAGE_language_interface***'
       display_extenders: {  }
-      path: api/nvrf/pages.json
+      path: nvrf/assets/pages.json
     cache_metadata:
       max-age: -1
       contexts:
@@ -2944,7 +2944,7 @@ display:
       display_description: ''
       rendering_language: '***LANGUAGE_language_interface***'
       display_extenders: {  }
-      path: api/nvrf/states.json
+      path: nvrf/assets/states.json
       auth: {  }
     cache_metadata:
       max-age: -1

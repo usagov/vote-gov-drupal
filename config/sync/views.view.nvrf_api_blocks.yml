@@ -1151,7 +1151,7 @@ display:
       display_description: ''
       rendering_language: '***LANGUAGE_language_interface***'
       display_extenders: {  }
-      path: api/nvrf/messages.json
+      path: nvrf/assets/messages.json
     cache_metadata:
       max-age: -1
       contexts:
@@ -1589,7 +1589,7 @@ display:
       display_description: ''
       rendering_language: '***LANGUAGE_language_interface***'
       display_extenders: {  }
-      path: api/nvrf/cards.json
+      path: nvrf/assets/cards.json
     cache_metadata:
       max-age: -1
       contexts:
