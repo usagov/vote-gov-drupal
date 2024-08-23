@@ -1,0 +1,62 @@
+{#
+/**
+ * @file
+ * Default theme implementation of hero component.
+ *
+ * Component template variables:
+ * - variant: string (required)
+ * - heading: string (required)
+ * - body: string
+ * - link_href: string
+ * - link_label: string
+ * - media: string (scaled_lg image variant or larger)
+ *
+ * Usage example:
+ * {% include '@votegov/component/hero.html.twig' with {
+ *   'variant': 'homepage',
+ *   'heading': var_title,
+ *   'body': var_body,
+ *   'link_href': var_link_url,
+ *   'link_label': var_link_label
+ *   'media': var_media
+ * } %}
+ *
+#}
+
+{% set usa_attributes = create_attribute() %}
+{% set usa_classes = [
+  'vote-hero',
+  'vote-hero--' ~ variant | default('dark')
+] %}
+
+<section{{ usa_attributes.addClass(usa_classes) }}>
+  <div class="vote-hero__container">
+    <div class="vote-hero__callout">
+      {% if variant == 'dark' %}
+        {{ drupal_entity('block', 'votegov_breadcrumbs') }}
+      {% endif %}
+      <div class="vote-hero__content">
+        <h1 class="vote-hero__heading">
+          {{ heading }}
+        </h1>
+        {% if body | render %}
+          <div class="vote-hero__text usa-intro">
+            {{ body }}
+          </div>
+        {% endif %}
+        {% if link_href %}
+          {% include '@votegov/component/button.html.twig' with {
+            'href': link_href,
+            'label': link_label,
+            'secondary': true
+          } %}
+        {% endif %}
+      </div>
+    </div>
+    {% if media | render %}
+      <div class="vote-hero__image">
+        {{ media }}
+      </div>
+    {% endif %}
+  </div>
+</section>
