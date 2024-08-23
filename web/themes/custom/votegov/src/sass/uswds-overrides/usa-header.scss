@@ -3,6 +3,14 @@
 @use "mixins" as *;
 
 .usa-header {
+  @include at-media('tablet-lg') {
+    &.usa-header--extended {
+      &:not(:has(nav)) {
+        border-bottom: 1px solid color('gray-cool-10');
+      }
+    }
+  }
+
   .usa-logo {
     @include u-margin(0);
     @include u-margin-top(1);
