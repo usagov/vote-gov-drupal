@@ -4,48 +4,16 @@
  * Default theme implementation to display a paragraph: Hero.
  */
 #}
-{% set pageType = currentnode.bundle() %}
-
-{% set classes = [
-  'vote-hero',
-  'vote-hero--' ~ pageType,
-  'vote-hero--' ~ content.field_background_color | field_value | render
-] %}
 
 {# Caching the data in content object #}
 {% set savedCache = content | render %}
 
-<section{{ attributes.addClass(classes) }}>
-  {# Hold these title_* placeholders for potential integration #}
-  {{ title_prefix }}
-  {{ title_suffix }}
-  <div class="vote-hero__container">
-    <div class="vote-hero__callout">
-      {% if pageType != 'landing' %}
-        {{ drupal_entity('block', 'votegov_breadcrumbs') }}
-      {% endif %}
-      <div class="vote-hero__content">
-        <h1 class="vote-hero__heading">
-          {{ content.field_heading | field_value }}
-        </h1>
-        {% if content.field_body | render %}
-          <div class="vote-hero__text usa-intro">
-            {{ content.field_body | field_value }}
-          </div>
-        {% endif %}
-        {% if content.field_link | render  %}
-          {% include '@votegov/component/button.html.twig' with {
-            'href': paragraph.field_link.0.url,
-            'label': paragraph.field_link.0.title,
-            'secondary': true
-          } %}
-        {% endif %}
-      </div>
-    </div>
-    {% if content.field_media | render %}
-      <div class="vote-hero__image">
-        {{ content.field_media | field_value }}
-      </div>
-    {% endif %}
-  </div>
-</section>
+{% include '@votegov/component/hero.html.twig' with {
+  'heading': content.field_heading,
+  'body': content.field_body,
+  'link_href': paragraph.field_link.0.url,
+  'link_label': paragraph.field_link.0.title,
+  'link_secondary': true,
+  'media': content.field_media,
+  'variant': content.field_background_color | field_value | render
+} %}

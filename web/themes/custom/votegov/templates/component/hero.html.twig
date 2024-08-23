@@ -1,0 +1,36 @@
+{% set classes = [
+  'vote-hero',
+  'vote-hero--' ~ variant | default('dark')
+] %}
+
+<section{{ attributes.addClass(classes) }}>
+  <div class="vote-hero__container">
+    <div class="vote-hero__callout">
+      {% if paragraph.field_background_color.value == 'dark' %}
+        {{ drupal_entity('block', 'votegov_breadcrumbs') }}
+      {% endif %}
+      <div class="vote-hero__content">
+        <h1 class="vote-hero__heading">
+          {{ heading }}
+        </h1>
+        {% if body %}
+          <div class="vote-hero__text usa-intro">
+            {{ body }}
+          </div>
+        {% endif %}
+        {% if link_href %}
+          {% include '@votegov/component/button.html.twig' with {
+            'href': link_href,
+            'label': link_label,
+            'secondary': link_secondary
+          } %}
+        {% endif %}
+      </div>
+    </div>
+    {% if media %}
+      <div class="vote-hero__image">
+        {{ media }}
+      </div>
+    {% endif %}
+  </div>
+</section>

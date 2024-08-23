@@ -3,6 +3,12 @@
 
 {% block main %}
   <main role="main" id="main-content">
+  {% include '@votegov/component/hero.html.twig' with {
+    'heading': title,
+    'body': node.field_subtitle.value  | check_markup(node.field_subtitle.format),
+    'media': drupal_field('field_media', 'node', node.id(), {type: 'media_thumbnail', settings: {image_style: 'scaled_lg' }}) | field_value,
+    'variant': 'dark'
+  } %}
     <section class="vote-hero vote-hero--dark">
       <div class="vote-hero__container">
         <div class="vote-hero__callout">
