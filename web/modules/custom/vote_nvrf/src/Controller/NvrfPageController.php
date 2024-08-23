@@ -41,13 +41,15 @@ class NvrfPageController extends ControllerBase {
       // Get the state abbreviation.
       $node = reset($node);
       $abbrev = $node->get('field_state_abbreviation')->value;
+      $return_path = $node->toUrl()->toString();
 
       // Render the app in a custom page if a match was found.
       $build = [
         '#type' => 'inline_template',
-        '#template' => '<div id="root" data-stateId="{{ abbrev }}" class="nvrf-app-container vote-block-margin-y"></div>',
+        '#template' => '<div id="root" data-returnPath="{{ return_path }}" data-stateId="{{ abbrev }}" class="nvrf-app-container vote-block-margin-y"></div>',
         '#context' => [
           'abbrev' => $abbrev,
+          'return_path' => $return_path,
         ],
         '#attached' => [
           'library' => [

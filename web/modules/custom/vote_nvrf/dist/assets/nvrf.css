@@ -51,7 +51,13 @@
     padding-bottom: .5rem;
 }
 
-.nvrf-app-container .usa-step-indicator__segment--complete {
+.nvrf-app-container .step-indicator-no-select {
+    &:focus {
+        outline: none;
+    }
+}
+
+.nvrf-app-container .step-indicator-select {
     cursor: pointer;
     background-color: transparent;
     color: transparent;
