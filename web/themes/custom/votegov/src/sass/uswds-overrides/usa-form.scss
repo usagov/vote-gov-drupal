@@ -4,7 +4,7 @@
 .usa-form {
   @include u-maxw('tablet');
 
-  main & {
+  .usa-sign-up & {
     @include u-font-family('serif');
   }
 }
