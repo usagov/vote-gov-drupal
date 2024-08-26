@@ -1,0 +1,10 @@
+uuid: 7817a2f5-f759-46a0-b3c7-c383e44e2f5a
+langcode: ja
+status: true
+dependencies: {  }
+third_party_settings: {  }
+id: ja
+label: Japanese
+direction: ltr
+weight: 0
+locked: false
