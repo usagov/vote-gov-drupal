@@ -1,1 +1,1 @@
-pattern: 'Y年F月d日'
+pattern: 'Y年Fd日'
