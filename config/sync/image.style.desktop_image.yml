@@ -1,0 +1,15 @@
+uuid: 7a3fb137-4908-42e1-9510-ae37ead283bb
+langcode: en
+status: true
+dependencies: {  }
+name: desktop_image
+label: desktop_image
+effects:
+  a8d892d5-1a95-4efe-8153-34a93deddf41:
+    uuid: a8d892d5-1a95-4efe-8153-34a93deddf41
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 2560
+      height: 1800
+      anchor: center-center

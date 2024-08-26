@@ -1,0 +1,11 @@
+uuid: 69f65bdc-997d-4bf4-8c35-f921519f2d53
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.tablet_image
+id: tablet_image
+label: 'Tablet Image'
+image_style_mappings: {  }
+breakpoint_group: responsive_image
+fallback_image_style: tablet_image
