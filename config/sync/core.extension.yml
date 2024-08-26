@@ -61,6 +61,7 @@ module:
   path_alias: 0
   redirect: 0
   remove_http_headers: 0
+  responsive_image: 0
   rest: 0
   rest_views: 0
   robotstxt: 0

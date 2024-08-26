@@ -8,11 +8,9 @@ dependencies:
     - field.field.paragraph.hero.field_heading
     - field.field.paragraph.hero.field_link
     - field.field.paragraph.hero.field_media
-    - image.style.scaled_xl
     - paragraphs.paragraphs_type.hero
   module:
     - link
-    - media
     - options
     - text
 id: paragraph.hero.default
@@ -55,13 +53,11 @@ content:
     weight: 2
     region: content
   field_media:
-    type: media_thumbnail
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: scaled_xl
-      image_loading:
-        attribute: lazy
+      view_mode: responsive_hero_image
+      link: false
     third_party_settings: {  }
     weight: 3
     region: content
