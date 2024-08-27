@@ -49,8 +49,23 @@
   {{ attach_library('votegov/navajo-font') }}
 {% endif %}
 
-{# set a variable if the node has a featured image #}
-{% set node_image = node.field_media.value | length %}
+{# set hero title #}
+{% set title = drupal_title() %}
+{% set node_type = currentnode.bundle() %}
+
+{% if node_type == "state_territory" %}
+  {% set title = title | render | striptags | trim %}
+  {% if language == 'ko' and currentnode.field_is_state.value %}
+    {% set korean_state_char = "state" | t %}
+    {% set title = title ~ " " ~ korean_state_char %}
+  {% endif %}
+
+  {% set in_state_name = currentnode.field_in_state_name.value | default("@state_name") | t({ "@state_name": title }) %}
+  {% set title = 'Register to vote in @state_name' | t ({
+    "@state_name": title,
+    "@in_state_name": in_state_name
+  }) %}
+{% endif %}
 
 {# Government banner component #}
   {{ drupal_entity('block_content', '1') }}
@@ -85,36 +100,31 @@
 {% block main %}
   {% if page.sidebar %}
     <section id="main-content" class="grid-container content-container">
-      <div class="page-masthead {{ node_image ? "page-masthead--image-offset" }}">
-        {# Breadcrumbs component. #}
-        {{ drupal_entity('block', 'votegov_breadcrumbs') }}
-        {# Page title component #}
-        {% include '@votegov/component/page-title.html.twig' %}
-        {% include '@votegov/component/page-subtitle.html.twig' %}
-      </div>
+    {% include '@votegov/component/hero.html.twig' with {
+      'heading': title,
+      'media': drupal_field('field_media', 'node', node.id(), {type: 'media_thumbnail', settings: {image_style: 'scaled_lg' }}) | field_value,
+      'variant': 'dark'
+    } %}
       <div class="vote-main-content-row">
         <aside id="sidebar" role="complementary">
           {{ page.sidebar }}
         </aside>
-        <main role="main" id="main" class="vote-page-content vote-page-content--sidebar {{ node_image ? "vote-page-content--image-offset" }}">
+        <main role="main" id="main" class="vote-page-content vote-page-content--sidebar">
           {{ page.content }}
         </main>
       </div>
     </section>
   {% else %}
-    <main role="main" id="main-content" class="grid-container content-container">
-      <div class="page-masthead {{ node_image ? "page-masthead--image-offset" }}">
-        {# Breadcrumbs component. #}
-        {{ drupal_entity('block', 'votegov_breadcrumbs') }}
-        {# Page title component #}
-        {% include '@votegov/component/page-title.html.twig' %}
-        {% include '@votegov/component/page-subtitle.html.twig' %}
-      </div>
-      <div class="vote-page-content {{ node_image ? "vote-page-content--image-offset" }}">
+    <main role="main" id="main-content">
+    {% include '@votegov/component/hero.html.twig' with {
+      'heading': title,
+      'media': drupal_field('field_media', 'node', node.id(), {type: 'media_thumbnail', settings: {image_style: 'scaled_lg' }}) | field_value,
+      'variant': 'dark'
+    } %}
+      <div class="vote-page-content">
         {{ page.content }}
       </div>
     </main>
-
   {% endif %}
 {% endblock %}
 
