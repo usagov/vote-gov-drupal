@@ -23,7 +23,9 @@
     <p>
       {% include '@votegov/component/button.html.twig' with {
         'href': 'internal:' ~ form_path,
-        'label': elements['#block_content'].field_digital_form_link.0.title
+        'label': elements['#block_content'].field_digital_form_link.0.title,
+        'data_label': 'data-state-ext',
+        'data': 'nvrf-pdf-tool-registration'
       } %}
     </p>
   {% endif %}
