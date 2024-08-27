@@ -1,0 +1,44 @@
+{#
+/**
+* @file
+* Theme override to display a single page: NVRF app page.
+*/
+#}
+{# Load utility libraries when logged in. #}
+{% if logged_in %}
+  {{ attach_library('bixaluswds/logged-in') }}
+{% endif %}
+
+{% include '@votegov/component/theme-switcher.html.twig' %}
+
+{# load navajo font #}
+{% if language == 'nv' %}
+  {{ attach_library('votegov/navajo-font') }}
+{% endif %}
+
+{# Government banner component #}
+  {{ drupal_entity('block_content', '1') }}
+
+{# Sitewide alert component #}
+  {{ drupal_view('sitewide_alert', 'block_1') }}
+
+<header class="usa-header usa-header--extended usa-header--minimal">
+  <div class="usa-navbar">
+
+    {# Site branding component #}
+    {{ drupal_entity('block', 'votegov_sitebranding') }}
+  </div>
+</header>
+
+{{ page.admin }}
+
+{% block main %}
+  <main role="main" id="main" class="grid-container">
+    {{ page.content }}
+  </main>
+{% endblock %}
+
+<footer class="usa-footer">
+  {% include '@votegov/component/eacgov-partner.html.twig' %}
+  {% include '@votegov/component/usa-identifier.html.twig' %}
+</footer>

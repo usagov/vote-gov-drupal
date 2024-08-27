@@ -16,13 +16,13 @@
     border-inline-start-width: 0;
     border-start-end-radius: 0.5rem;
     border-end-end-radius: 0.5rem;
-    top: calc(50% - 3.125rem);
+    top: 50%;
     inset-inline-start: 0;
   }
 
   @include at-media-max('tablet') {
     @include u-bottom(2.5);
-    inset-inline-start: calc(50% - 3.125rem);
+    inset-inline-start: 35%;
   }
 }
 
@@ -33,11 +33,12 @@
   --theme-options-button--border: #{$base-dark};
   @include button-unstyled;
   @include u-display('block');
-  @include u-width('full');
-  @include u-padding(2);
   border: 2px solid var(--theme-options-button--border);
   background-color: var(--theme-options-button--bg);
   cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding: 16px;
 
   @include at-media('tablet') {
     border-inline-start: 0;
@@ -90,6 +91,9 @@
     @include u-display('block');
     background-color: var(--theme-options-button--icon);
     background-size: contain;
+    max-width: 16px;
+    max-height: 16px;
+
 
     @include at-media-max('tablet') {
       --theme-options-button--icon: #{$base-white};

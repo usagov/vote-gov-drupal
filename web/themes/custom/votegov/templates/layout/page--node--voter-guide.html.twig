@@ -3,26 +3,12 @@
 
 {% block main %}
   <main role="main" id="main-content">
-    <section class="vote-hero vote-hero--dark">
-      <div class="vote-hero__container">
-        <div class="vote-hero__callout">
-          {{ drupal_entity('block', 'votegov_breadcrumbs') }}
-          <div class="vote-hero__content">
-            <h1 class="vote-hero__heading">
-              {{ title }}
-            </h1>
-            <div class="vote-hero__text usa-intro">
-              {{ node.field_subtitle.value  | check_markup(node.field_subtitle.format) }}
-            </div>
-          </div>
-        </div>
-        {% if node.field_media.value %}
-          <div class="vote-hero__image">
-            {{ drupal_field('field_media', 'node', node.id(), {type: 'media_thumbnail', settings: {image_style: 'scaled_lg'}}) | field_value }}
-          </div>
-        {% endif %}
-      </div>
-    </section>
+    {% include '@votegov/component/hero.html.twig' with {
+      'heading': title,
+      'body': node.field_subtitle.value  | check_markup(node.field_subtitle.format),
+      'media': drupal_field('field_media', 'node', node.id(), {type: 'media_thumbnail', settings: {image_style: 'scaled_lg' }}) | field_value,
+      'variant': 'dark'
+    } %}
     <div class="vote-main-content-row vote-block-margin-y--narrow grid-container usa-in-page-nav-container">
       <aside
         class="usa-in-page-nav"

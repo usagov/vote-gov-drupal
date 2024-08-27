@@ -18,5 +18,9 @@
       padding-right: 7rem;
     }
   }
+
+  .usa-alert--no-icon & {
+    @include u-padding-left(4);
+  }
 }
 

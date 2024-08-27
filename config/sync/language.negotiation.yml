@@ -25,6 +25,7 @@ url:
     fr: fr
     am: am
     so: so
+    ja: ja
   domains:
     en: ''
     es: ''
@@ -45,4 +46,5 @@ url:
     fr: ''
     am: ''
     so: ''
+    ja: ''
 selected_langcode: site_default
