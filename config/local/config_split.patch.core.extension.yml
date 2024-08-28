@@ -4,5 +4,6 @@ adding:
     devel: 0
     disable_language: 0
     field_ui: 0
+    responsive_image: 0
     views_ui: 0
 removing: {  }

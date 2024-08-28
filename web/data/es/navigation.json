@@ -1,0 +1,61 @@
+{
+    "back": {
+        "vote": "Go back to Vote.gov",
+        "select_state": "Go back to select your state",
+        "state_reg_options": "Go back to state registration options",
+        "eligibility_req": "Back to state eligibility requirements",
+        "reg_options": "Back to registration options",
+        "personal_info": "Back to personal information",
+        "address_location": "Back to address and location",
+        "identification": "Back to identification",
+        "edit_info": "Edit registration information"
+    },
+    "next": {
+        "next": "Next",
+        "start": "Continue to the digital form filler on vote.gov",
+        "reg_options": "Continue to view registration options",
+        "address_location": "Continue to address and location",
+        "identification": "Continue to identification",
+        "political_party": "Continue to political party",
+        "confirm_info": "Continue to review your information"
+    },
+    "step_label_1": "Personal information",
+    "step_label_2": "Address and location",
+    "step_label_3": "Identification",
+    "step_label_4": "Political party",
+    "step_label_5": "Confirm your information",
+    "step_label_6": "Print your completed form",
+    "confirmation": {
+        "current_name": {
+            "label": "Current name"
+        },
+        "previous_name": {
+            "label": "Previous name",
+            "alert": "You have not changed your name, so these fields are blank."
+        },
+        "other_info": {
+            "label": "Other information"
+        },
+        "current_address": {
+            "label": "Home address",
+            "alert": "You are not registering with a current address, so these fields are blank."
+        },
+        "previous_address": {
+            "label": "Previous address",
+            "alert": "You are not registering with a change of address, so these fields are blank."
+        },
+        "mailing_address": {
+            "label": "Mailing address",
+            "alert": "Your mailing address is the same as your home address, so these fields are left blank."
+        },
+        "id_label": {
+            "label": "ID number"
+        },
+        "political_party": {
+            "label": "Political party"
+        },
+        "edit": {
+            "label": "Edit"
+        }
+    }
+}

@@ -12,6 +12,7 @@ dependencies:
     - field.storage.taxonomy_term.field_section_alert
     - field.storage.taxonomy_term.field_section_description
     - taxonomy.vocabulary.nvrf_field
+    - user.role.anonymous
     - user.role.authenticated
   module:
     - rest
@@ -764,6 +765,7 @@ display:
         type: role
         options:
           role:
+            anonymous: anonymous
             authenticated: authenticated
       cache:
         type: tag
@@ -942,7 +944,7 @@ display:
       display_description: ''
       rendering_language: '***LANGUAGE_language_interface***'
       display_extenders: {  }
-      path: api/nvrf/fields.json
+      path: nvrf/assets/fields.json
     cache_metadata:
       max-age: -1
       contexts:

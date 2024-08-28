@@ -97,10 +97,6 @@
 .usa-language__submenu-item {
   @include u-padding(1);
   @include u-border(0);
-
-  * {
-    font-family: "Source Sans Pro Web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !important;
-  }
 }
 
 
