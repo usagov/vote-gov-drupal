@@ -1,12 +1,12 @@
 votegov.mobile:
-  label: mobile
-  mediaQuery: ''
-  weight: 0
+  label: 'Mobile'
+  mediaQuery: 'all and (min-width: 320px)'
+  weight: 1
 votegov.tablet:
-  label: tablet
+  label: 'Tablet'
   mediaQuery: 'all and (min-width: 640px)'
   weight: 2
 votegov.desktop:
-  label: desktop
+  label: 'Desktop'
   mediaQuery: 'all and (min-width: 1024px)'
-  weight: 2
+  weight: 3
