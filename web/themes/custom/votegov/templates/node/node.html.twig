@@ -82,6 +82,10 @@
   {{ title_prefix }}
   {{ title_suffix }}
   {% block content %}
+  {% if node.bundle|clean_class is same as('page') %}
+    {{ content.field_body }}
+  {% else %}
     {{ content }}
+  {% endif %}
   {% endblock %}
 </div>
