@@ -49,6 +49,12 @@
   {{ attach_library('votegov/navajo-font') }}
 {% endif %}
 
+{# set a variable if the node has a featured image #}
+{% set node_image = node.field_media.value | length %}
+{% if node_image %}
+ {% set media_field = drupal_field('field_media', 'node', node.id(), {type: 'media_thumbnail', settings: {image_style: 'scaled_lg' }}) | field_value %}
+{% endif %}
+
 {# set hero title #}
 {% set title = drupal_title() %}
 {% set node_type = currentnode.bundle() %}
@@ -102,7 +108,7 @@
     <section id="main-content" class="grid-container content-container">
     {% include '@votegov/component/hero.html.twig' with {
       'heading': title,
-      'media': drupal_field('field_media', 'node', node.id(), {type: 'media_thumbnail', settings: {image_style: 'scaled_lg' }}) | field_value,
+      'media': media_field,
       'variant': 'dark'
     } %}
       <div class="vote-main-content-row">
@@ -118,7 +124,7 @@
     <main role="main" id="main-content">
     {% include '@votegov/component/hero.html.twig' with {
       'heading': title,
-      'media': drupal_field('field_media', 'node', node.id(), {type: 'media_thumbnail', settings: {image_style: 'scaled_lg' }}) | field_value,
+      'media': media_field,
       'variant': 'dark'
     } %}
       <div class="vote-page-content grid-container">
