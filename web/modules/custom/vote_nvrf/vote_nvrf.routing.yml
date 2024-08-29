@@ -5,3 +5,11 @@ vote_nvrf.nvrf_page:
   requirements:
     _permission: 'access content'
     state_name: '[a-z-]+'
+
+vote_nvrf.test_state_name:
+  path: '/register/{state_name}/form/test'
+  defaults:
+    _controller: '\Drupal\vote_nvrf\Controller\NvrfPageController::getStateName'
+  requirements:
+    _permission: 'access content'
+    state_name: '[a-z-]+'
