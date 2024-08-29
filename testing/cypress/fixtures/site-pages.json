@@ -285,6 +285,61 @@
     "route": "/register/wy/"
   },
 
+  {
+    "name": "state register page",
+    "route": "/register"
+  },
+
+  {
+    "name": "guide to voting",
+    "route": "/guide-to-voting"
+  },
+
+  {
+    "name": "college student",
+    "route": "/guide-to-voting/college-student"
+  },
+
+  {
+    "name": "new citizen",
+    "route": "/guide-to-voting/new-united-states-citizen"
+  },
+
+  {
+    "name": "disability",
+    "route": "/guide-to-voting/disability"
+  },
+
+  {
+    "name": "unhoused",
+    "route": "/guide-to-voting/unhoused"
+  },
+
+  {
+    "name": "after felony",
+    "route": "/guide-to-voting/after-felony-conviction"
+  },
+
+  {
+    "name": "under 18",
+    "route": "/guide-to-voting/preparing-age-18-and-under"
+  },
+
+  {
+    "name": "vote is safe",
+    "route": "/your-vote-is-safe"
+  },
+
+  {
+    "name": "about",
+    "route": "/about-us"
+  },
+
+  {
+    "name": "accessibility",
+    "route": "/accessibility"
+  },
+
   
   {
     "name": "homePage",
@@ -569,5 +624,60 @@
   {
     "name": "Wyoming",
     "route": "/es/registrar/wy/"
+  },
+
+  {
+    "name": "state register page",
+    "route": "/es/registrar"
+  },
+
+  {
+    "name": "guide to voting",
+    "route": "/es/guide-to-voting"
+  },
+
+  {
+    "name": "college student",
+    "route": "/es/guide-to-voting/college-student"
+  },
+
+  {
+    "name": "new citizen",
+    "route": "/es/guide-to-voting/new-united-states-citizen"
+  },
+
+  {
+    "name": "disability",
+    "route": "/es/guide-to-voting/disability"
+  },
+
+  {
+    "name": "unhoused",
+    "route": "/es/guide-to-voting/college-student"
+  },
+
+  {
+    "name": "after felony",
+    "route": "/es/guide-to-voting/after-felony-conviction"
+  },
+
+  {
+    "name": "under 18",
+    "route": "/es/guide-to-voting/preparing-age-18-and-under"
+  },
+
+  {
+    "name": "vote is safe",
+    "route": "/es/your-vote-is-safe"
+  },
+
+  {
+    "name": "about",
+    "route": "/es/acerca-de-votegov"
+  },
+
+  {
+    "name": "accessibility",
+    "route": "/es/compromiso-con-la-accesibilidad"
   }
 ]

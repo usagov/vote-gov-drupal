@@ -4,7 +4,7 @@
 .usa-form {
   @include u-maxw('tablet');
 
-  main & {
+  .usa-sign-up & {
     @include u-font-family('serif');
   }
 }
@@ -15,6 +15,15 @@
   @include u-line-height('sans', 1);
   @include u-font-size('sans', 5);
 }
+
+.nvrf-app-container {
+  .usa-form {
+    .usa-input {
+      height: 40px !important;
+    }
+  }
+}
+
 
 ::placeholder {
   --input-placeholder--text: inherit;
