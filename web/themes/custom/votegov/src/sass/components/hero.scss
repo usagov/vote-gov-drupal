@@ -43,7 +43,7 @@
     @include at-media('tablet-lg') {
       @include u-height('full');
       margin-inline-start: auto;
-      width: calc(45% - (100%/12) + 22rem);
+      width: calc(45% - (100%/12) + 23rem);
 
         [data-theme="contrast"] & {
           object-position: center right;
@@ -56,10 +56,6 @@
         }
 
     }
-
-    // @include at-media('widescreen') {
-    //   width: calc(70% - 8rem);
-    // }
   }
 }
 
@@ -117,23 +113,6 @@
     --vote-hero-bg: #{$base-dark};
     --vote-hero-heading: #{$base-white};
     --vote-hero-text: #{$base-white};
-  }
-  
-  @include at-media('tablet-lg') {
-    // .vote-hero__image img {
-    //   width: 65%;
-      
-    //   [data-theme="contrast"] & {
-    //     width: calc(50% - (100%/12) + 15rem);
-    //     object-position: center right;
-    //     clip-path: rect(0 100% 100% 16rem);
-    //   }
-
-    //   // Needed to flip the image horizontal for rtl languages.
-    //   [dir="rtl"] & {
-    //     transform: scaleX(-1);
-    //   }
-    // }
   }
 }
 
