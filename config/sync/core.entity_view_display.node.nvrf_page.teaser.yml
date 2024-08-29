@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.nvrf_page.field_content_version
     - field.field.node.nvrf_page.field_display_title
     - field.field.node.nvrf_page.field_general_instructions
-    - field.field.node.nvrf_page.field_omb_number
     - node.type.nvrf_page
   module:
     - user
@@ -32,6 +31,5 @@ hidden:
   field_content_version: true
   field_display_title: true
   field_general_instructions: true
-  field_omb_number: true
   langcode: true
   published_at: true

@@ -6,14 +6,13 @@ dependencies:
     - block_content.type.registration_form_selector
     - field.field.block_content.registration_form_selector.field_default_option_label
     - field.field.block_content.registration_form_selector.field_description
-    - field.field.block_content.registration_form_selector.field_digital_form_link
+    - field.field.block_content.registration_form_selector.field_digital_form_link_label
     - field.field.block_content.registration_form_selector.field_digital_form_paragraph
     - field.field.block_content.registration_form_selector.field_heading
     - field.field.block_content.registration_form_selector.field_registration_form_link
     - field.field.block_content.registration_form_selector.field_submit_button_label
   module:
     - field_group
-    - link
     - link_attributes
     - text
 third_party_settings:
@@ -21,6 +20,7 @@ third_party_settings:
     group_digital_form:
       children:
         - field_digital_form_paragraph
+        - field_digital_form_link_label
         - field_digital_form_link
       label: 'Digital Form'
       region: content
@@ -55,13 +55,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_digital_form_link:
-    type: link_default
+  field_digital_form_link_label:
+    type: string_textfield
     weight: 10
     region: content
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_digital_form_paragraph:
     type: text_textarea

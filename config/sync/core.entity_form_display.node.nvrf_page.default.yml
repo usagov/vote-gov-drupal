@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.nvrf_page.field_content_version
     - field.field.node.nvrf_page.field_display_title
     - field.field.node.nvrf_page.field_general_instructions
-    - field.field.node.nvrf_page.field_omb_number
     - node.type.nvrf_page
     - workflows.workflow.publishing_content
   module:
@@ -76,14 +75,6 @@ content:
     region: content
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_omb_number:
-    type: string_textfield
-    weight: 10
-    region: content
-    settings:
-      size: 60
       placeholder: ''
     third_party_settings: {  }
   langcode:
