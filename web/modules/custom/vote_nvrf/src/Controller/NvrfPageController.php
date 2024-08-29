@@ -56,10 +56,22 @@ class NvrfPageController extends ControllerBase {
             'vote_nvrf/nvrf_assets',
           ],
         ],
+        //'#state_name' => $title,
+        //'#theme' => 'page__node__vote_nvrf_nvrf_page',
       ];
     }
 
     return $build;
   }
 
+  //Test function - Send varibales to template
+  public function getStateName(string $state_name) {
+    // Transform the state name string
+    $title = ucfirst(str_replace('-', ' ', $state_name));
+
+    return [
+      '#state_name' => $title,
+      '#theme' => 'pass_state_name_test'//'pass_state_name_test'
+    ];
+  }
 }

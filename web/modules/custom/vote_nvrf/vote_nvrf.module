@@ -16,3 +16,16 @@ function vote_nvrf_theme_suggestions_page_alter(array &$suggestions, array $vari
     $suggestions[] = "page__node__" . str_replace('.', '_', $current_route_name);
   }
 }
+
+/**
+ * Implements hook_theme().
+ */
+function vote_nvrf_theme($existing, $type, $theme, $path){
+  return [
+    'pass_state_name_test' => [
+      'variables' => [
+        'state_name' => NULL,
+      ],
+    ],
+  ];
+}
