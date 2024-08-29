@@ -10,4 +10,3 @@ votegov.desktop:
   label: 'Desktop'
   mediaQuery: 'all and (min-width: 1024px)'
   weight: 3
-  
