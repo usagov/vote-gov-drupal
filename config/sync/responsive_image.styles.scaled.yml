@@ -1,4 +1,4 @@
-uuid: 32cf04f8-332c-4845-a8ce-d6f15c2ba4f4
+uuid: 41865dd0-e521-4e76-bdd8-51ff0a8230bf
 langcode: en
 status: true
 dependencies:
@@ -6,10 +6,8 @@ dependencies:
     - image.style.scaled_lg
     - image.style.scaled_sm
     - image.style.scaled_xl
-  theme:
-    - votegov
-id: scaled_hero_image
-label: 'Scaled Hero Image'
+id: scaled
+label: Scaled
 image_style_mappings:
   -
     image_mapping_type: sizes
@@ -19,7 +17,7 @@ image_style_mappings:
         - scaled_lg
         - scaled_sm
         - scaled_xl
-    breakpoint_id: votegov.mobile
+    breakpoint_id: responsive_image.viewport_sizing
     multiplier: 1x
-breakpoint_group: votegov
+breakpoint_group: responsive_image
 fallback_image_style: scaled_sm

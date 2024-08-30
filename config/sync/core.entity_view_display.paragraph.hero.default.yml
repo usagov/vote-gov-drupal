@@ -56,7 +56,7 @@ content:
     type: entity_reference_entity_view
     label: hidden
     settings:
-      view_mode: responsive_hero_image
+      view_mode: scaled
       link: false
     third_party_settings: {  }
     weight: 3

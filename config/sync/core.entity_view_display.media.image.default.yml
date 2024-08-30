@@ -5,10 +5,10 @@ dependencies:
   config:
     - field.field.media.image.field_caption
     - field.field.media.image.field_media_image
+    - image.style.wide_standard_lg
     - media.type.image
-    - responsive_image.styles.scaled_hero_image
   module:
-    - responsive_image
+    - svg_image
     - text
 id: media.image.default
 targetEntityType: media
@@ -23,13 +23,17 @@ content:
     weight: 1
     region: content
   field_media_image:
-    type: responsive_image
+    type: image
     label: visually_hidden
     settings:
-      responsive_image_style: scaled_hero_image
       image_link: ''
+      image_style: wide_standard_lg
       image_loading:
         attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
     third_party_settings: {  }
     weight: 0
     region: content
