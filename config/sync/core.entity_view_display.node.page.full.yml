@@ -21,27 +21,19 @@ content:
   content_moderation_control:
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
   field_body:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
-    region: content
-  field_media:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: responsive_hero_image
-      link: false
-    third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
 hidden:
   body: true
   field_content_version: true
+  field_media: true
   field_metatags: true
   langcode: true
   links: true
