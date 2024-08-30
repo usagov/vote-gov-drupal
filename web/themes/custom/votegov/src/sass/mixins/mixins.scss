@@ -30,6 +30,24 @@
   }
 }
 
+@mixin vote-narrow-container-left-align {
+  @include at-media('tablet') {
+    @include grid-col(10);
+  }
+
+  @include at-media('tablet-lg') {
+    @include grid-col(8);
+  }
+
+  @include at-media('desktop-lg') {
+    @include grid-col(6);
+  }
+}
+
+.vote-narrow-container-left-align {
+  @include vote-narrow-container-left-align;
+}
+
 @mixin vote-block-margin-y {
   @include u-margin-y(6);
 
