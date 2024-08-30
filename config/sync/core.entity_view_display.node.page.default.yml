@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.page.field_metatags
     - node.type.page
   module:
-    - media
     - metatag
     - text
     - user
@@ -47,13 +46,11 @@ content:
     weight: 8
     region: content
   field_media:
-    type: media_thumbnail
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: lazy
+      view_mode: full
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content
