@@ -45,7 +45,7 @@ jobs:
             - project/web/themes/custom/votegov/dist
   cypress:
     docker:
-      - image: cypress/included:latest
+      - image: cypress-13.13.0-node-20.15.1-chrome-126.0.6478.114-1-ff-128.0-edge-126.0.2592.61-1
     environment:
       cypress_pipeline: 1
       cypress_cloudgov_application_name: "${project}-drupal-${CIRCLE_BRANCH}"
