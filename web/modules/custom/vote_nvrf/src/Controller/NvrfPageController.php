@@ -15,7 +15,7 @@ class NvrfPageController extends ControllerBase {
    */
   public function content(string $state_name) {
     $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
-    $enabled_languages = ['en'];
+    $enabled_languages = ['en', 'es'];
 
     // Return a 404 response if language is disabled.
     if (!in_array($language, $enabled_languages)) {

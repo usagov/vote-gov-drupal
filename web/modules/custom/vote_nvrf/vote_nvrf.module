@@ -10,9 +10,11 @@
  */
 function vote_nvrf_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   $current_route_name = \Drupal::routeMatch()->getRouteName();
+  $current_route_array = explode('.', $current_route_name);
 
   // Custom route.
-  if ($current_route_name == 'vote_nvrf.nvrf_page') {
+  if ($current_route_array[0] == 'vote_nvrf') {
+    $suggestions[] = "page__node__" . $current_route_array[0];
     $suggestions[] = "page__node__" . str_replace('.', '_', $current_route_name);
   }
 }
