@@ -5,6 +5,8 @@
  * Preprocess function for page.
  */
 
+use Drupal\Core\Url;
+
 /**
  * Implements hook_theme_suggestion_HOOK_alter().
  */
@@ -16,5 +18,33 @@ function vote_nvrf_theme_suggestions_page_alter(array &$suggestions, array $vari
   if ($current_route_array[0] == 'vote_nvrf') {
     $suggestions[] = "page__node__" . $current_route_array[0];
     $suggestions[] = "page__node__" . str_replace('.', '_', $current_route_name);
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function vote_nvrf_preprocess_block__votegov_languageswitcher(&$variables) {
+  $current_route_name = \Drupal::routeMatch()->getRouteName();
+  $vote_nvrf_page_routes = [
+    'default' => 'vote_nvrf.nvrf_page',
+    'es' => 'vote_nvrf.nvrf_page_es'
+  ];
+
+  if (in_array($current_route_name, $vote_nvrf_page_routes)) {
+    $enabled_languages = ['en', 'es'];
+    $links = $variables['content']['#links'];
+
+    foreach ($links as $i => $link) {
+      // Remove disabled links
+      if (!in_array($i, $enabled_languages)) {
+        unset($variables['content']['#links'][$i]);
+      }
+      else {
+        $route_name = $i == 'es' ? $vote_nvrf_page_routes[$i] : $vote_nvrf_page_routes['default'];
+        $route_params = $link['url']->getRouteParameters();
+        $variables['content']['#links'][$i]['url'] = Url::fromRoute($route_name, $route_params);
+      }
+    }
   }
 }
