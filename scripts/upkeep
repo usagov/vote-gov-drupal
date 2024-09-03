@@ -84,6 +84,13 @@ echo "Missing module files for Sitemap...completed!"
 echo ""
 
 echo "**************************************************"
+echo "Adding missing data files for NVRF..."
+echo "**************************************************"
+cp -rfp ${app_path}/web/data ${html_path}
+echo "Missing data files for NVRF...completed!"
+echo ""
+
+echo "**************************************************"
 echo "Adding Vote.gov custom theme assets..."
 echo "**************************************************"
 mkdir -p ${html_path}/themes/custom/votegov
