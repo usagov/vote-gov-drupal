@@ -32,7 +32,7 @@
   }
 
   .field--name-field-body {
-    @include vote-narrow-container;
+    @include vote-narrow-container-left-align;
   }
 
   @include at-media('tablet') {

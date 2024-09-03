@@ -1,0 +1,12 @@
+votegov.mobile:
+  label: 'Mobile'
+  mediaQuery: ''
+  weight: 1
+votegov.tablet:
+  label: 'Tablet'
+  mediaQuery: 'all and (min-width: 640px)'
+  weight: 2
+votegov.desktop:
+  label: 'Desktop'
+  mediaQuery: 'all and (min-width: 1024px)'
+  weight: 3

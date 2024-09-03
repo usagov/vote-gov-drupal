@@ -64,9 +64,8 @@
   {# Hold these title_* placeholders for potential integration #}
   {{ title_prefix }}
   {{ title_suffix }}
-  {{ content.field_media }}
 
-  <div class="vote-narrow-container">
+  <div class="vote-narrow-container-left-align">
   {% if drupal_view('inline_alert', 'embed_1') | render | striptags | trim %}
     {{ drupal_view('inline_alert', 'embed_1') }}
   {% endif %}

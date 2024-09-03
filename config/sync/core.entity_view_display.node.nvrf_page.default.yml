@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.nvrf_page.field_content_version
     - field.field.node.nvrf_page.field_display_title
     - field.field.node.nvrf_page.field_general_instructions
-    - field.field.node.nvrf_page.field_omb_number
     - node.type.nvrf_page
   module:
     - text
@@ -51,14 +50,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
-    region: content
-  field_omb_number:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 102
     region: content
   links:
     settings: {  }
