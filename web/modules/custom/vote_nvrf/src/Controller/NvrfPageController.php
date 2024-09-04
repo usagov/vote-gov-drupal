@@ -41,7 +41,7 @@ class NvrfPageController extends ControllerBase {
       // Get the state abbreviation.
       $node = reset($node);
       $abbrev = $node->get('field_state_abbreviation')->value;
-      $return_path = $node->toUrl()->toString();
+      $return_path = $node->getTranslation($language)->toUrl()->toString();
 
       // Render the app in a custom page if a match was found.
       $build = [
