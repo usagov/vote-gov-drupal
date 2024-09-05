@@ -24,6 +24,7 @@
   background-color: var(--vote-button-background);
   border: 2px solid var(--vote-button-border);
   border-radius: 50%;
+  outline: 1px solid $base-white;
   width: 48px;
   height: 48px;
   position: fixed;
