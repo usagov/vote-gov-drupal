@@ -1,0 +1,29 @@
+@use "uswds-core" as *;
+@use "mixins" as *;
+@use "variables" as *;
+
+
+.back-to-top {
+  background-color: black;
+  color: white;
+  width: 80px;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 1.25rem;
+  right: 2rem;
+  margin: auto;
+  transition: all 200ms;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+
+  @include at-media('tablet') {
+    bottom: 3.5rem;
+  }
+}
+
+.back-to-top.js-scrolled {
+  opacity: 1;
+  visibility: visible;
+}
