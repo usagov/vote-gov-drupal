@@ -26,17 +26,6 @@ export ssg_endpoint="https://ssg-${environment}.vote.gov"
 [ "${environment}" = "prod" ] && export ssg_endpoint="https://vote.gov"
 export ssg_sitemap_endpoint=ssg_endpoint
 
-echo "**************************************************"
-echo "Copying current static files from '${bucket_name}'..."
-echo "**************************************************"
-if [ "$(ls -A $html_path)" ]; then
-  echo "Static html directory is not empty. Syncing aborted."
-else
-  aws s3 sync s3://${bucket} ${html_path} --delete --no-verify-ssl 2>/dev/null
-  echo "Copying current static files from '${bucket_name}'...completed!"
-fi
-echo ""
-
 cd ${app_path}
 echo "**************************************************"
 echo "Running 'drush cron' in '${environment}'..."
@@ -81,6 +70,13 @@ echo "**************************************************"
 mkdir -p ${html_path}/modules/contrib/simple_sitemap/xsl
 cp -rfp ${app_path}/web/modules/contrib/simple_sitemap/xsl/* ${html_path}/modules/contrib/simple_sitemap/xsl/
 echo "Missing module files for Sitemap...completed!"
+echo ""
+
+echo "**************************************************"
+echo "Adding missing data files for NVRF..."
+echo "**************************************************"
+cp -rfp ${app_path}/web/data ${html_path}
+echo "Missing data files for NVRF...completed!"
 echo ""
 
 echo "**************************************************"
