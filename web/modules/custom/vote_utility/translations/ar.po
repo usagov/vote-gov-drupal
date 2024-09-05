@@ -149,8 +149,8 @@ msgstr "الموعد النهائي للتسجيل عبر الإنترنت:"
 msgid "In person registration deadline:"
 msgstr "الموعد النهائي للتسجيل الشخصي:"
 
-msgid "Voter registration deadlines for the @election_date election. @link"
-msgstr "المواعيد النهائية لتسجيل الناخبين لانتخابات @election_date"
+msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
+msgstr "المواعيد النهائية لتسجيل الناخبين هي لانتخابات 5 نوفمبر/تشرين الثاني 2024."
 
 msgid "Find state and local election dates."
 msgstr "البحث عن مواعيد الانتخابات على مستوى الولاية والمحليات."
@@ -361,9 +361,8 @@ msgstr "اختر ولايتك أو إقليمك"
 
 #state list aria label
 msgid "States and territories list"
-msgstr "قائمة مقترحة للولايات والأقاليم"
+msgstr "قائمة الولايات والأقاليم"
 
 #eac partner text
 msgid "Vote.gov is in partnership with"
 msgstr "تأسس موقع vote.gov بالشراكة مع "
-
