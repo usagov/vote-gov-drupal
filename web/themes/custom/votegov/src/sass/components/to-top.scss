@@ -2,13 +2,30 @@
 @use "mixins" as *;
 @use "variables" as *;
 
-
 .back-to-top {
-  background-color: black;
-  color: white;
-  width: 80px;
-  text-align: center;
-  padding: 10px;
+  --vote-button-background: #{$base-white};
+  --vote-button-border: #{$base-alt-hover};
+  --vote-button-arrow-icon: #{$ac-dark};
+
+  [data-theme="contrast"] & {
+    --vote-button-border: #{$link-high-contrast};
+  }
+
+  @include hover {
+    --vote-button-background: #{$base-alt-hover};
+    --vote-button-arrow-icon: #{$base-white};
+
+    [data-theme="contrast"] & {
+      --vote-button-background: #{$link-high-contrast};
+      --vote-button-arrow-icon: #{$base-white};
+    }
+  }
+
+  background-color: var(--vote-button-background);
+  border: 2px solid var(--vote-button-border);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
   position: fixed;
   bottom: 1.25rem;
   right: 2rem;
