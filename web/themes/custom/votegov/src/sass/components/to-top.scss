@@ -39,6 +39,16 @@
   @include at-media('tablet') {
     bottom: 3.5rem;
   }
+
+  &::before {
+    content: "";
+    @include u-display('inline-block');
+    mask: url('../../img/svg/arrow-upward.svg') no-repeat center;
+    mask-size: auto;
+    background-color: var(--vote-button-arrow-icon);
+    width: 45px;
+    height: 45px;
+  }
 }
 
 .back-to-top.js-scrolled {
