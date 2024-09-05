@@ -82,7 +82,7 @@ msgstr "روابط مهمة"
 
 # data.translations.footer.identifier_more_info_aria
 msgid "Government information and services"
-msgstr "المعلومات والخدمات الحكومية"
+msgstr "معلومات وخدمات حكومة الولايات المتحدة"
 
 # data.translations.footer.eac_text
 msgid "in partnership with"
@@ -362,3 +362,8 @@ msgstr "اختر ولايتك أو إقليمك"
 #state list aria label
 msgid "States and territories list"
 msgstr "قائمة مقترحة للولايات والأقاليم"
+
+#eac partner text
+msgid "Vote.gov is in partnership with"
+msgstr "تأسس موقع vote.gov بالشراكة مع "
+
