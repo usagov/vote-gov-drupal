@@ -46,7 +46,9 @@ class NvrfPageController extends ControllerBase {
       // Render the app in a custom page if a match was found.
       $build = [
         '#type' => 'inline_template',
-        '#template' => '<div id="root" data-returnPath="{{ return_path }}" data-stateId="{{ abbrev }}" class="nvrf-app-container vote-block-margin-y--narrow"></div>',
+        '#template' => '<div id="root" data-returnPath="{{ return_path }}" data-stateId="{{ abbrev }}" class="nvrf-app-container vote-block-margin-y--narrow">
+          <img src="/themes/custom/votegov/dist/assets/img/loader.svg" width="80px" width="80px" class="display-block margin-x-auto" />
+          </div>',
         '#context' => [
           'abbrev' => $abbrev,
           'return_path' => $return_path,
