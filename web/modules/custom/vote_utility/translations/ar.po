@@ -309,7 +309,7 @@ msgstr "السبت"
 
 #footer
 msgid "Visit our partner site to find more information about voting in the United States."
-msgstr "طالع الموقع الشريك USA.gov للحصول على مزيد من المعلومات حول التصويت في الولايات المتحدة."
+msgstr "(باللغة الإنجليزية) طالع الموقع الشريك USA.gov للحصول على مزيد من المعلومات حول التصويت في الولايات المتحدة."
 
 #main menu close button
 msgid "Close"
