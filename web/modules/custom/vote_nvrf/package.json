@@ -10,6 +10,6 @@
     "copy-data": "rm -rf ../../../data && cp -r ./node_modules/vote-gov-nvrf-app/data ../../../data"
   },
   "dependencies": {
-    "vote-gov-nvrf-app": "github:usagov/vote-gov-nvrf-app#v0.16.0"
+    "vote-gov-nvrf-app": "github:usagov/vote-gov-nvrf-app#v0.17.0"
   }
 }
