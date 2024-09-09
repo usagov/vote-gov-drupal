@@ -24,4 +24,19 @@ describe('Test language selector', () => {
       })
     })
   })
+
+  it.only('Verify active language options', () => {
+    cy.visit('/')
+    cy.fixture('language-options.json').then((expectedMenuItems) => {
+      cy.get('[data-test="languageButton"]').click().get('[data-test="languageSwitcher"]').find('li').then(($list) => {
+        const actualMenuItems = $list.map((index, item) => {
+          return Cypress.$(item).attr('data-lang');
+        }).get();
+        expectedMenuItems.forEach((expectedItem, index) => {
+          cy.wrap(actualMenuItems).should('contain', expectedItem, `Expected language option "${expectedItem}" to exist, but is missing`);
+        });
+      });
+    });
+  });
+  
 })
