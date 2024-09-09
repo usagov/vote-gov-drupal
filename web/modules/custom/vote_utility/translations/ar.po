@@ -153,7 +153,7 @@ msgid "Voter registration deadlines are for the November 05, 2024 election. @lin
 msgstr "المواعيد النهائية لتسجيل الناخبين هي لانتخابات 5 نوفمبر/تشرين الثاني 2024."
 
 msgid "Find state and local election dates."
-msgstr "البحث عن مواعيد الانتخابات على مستوى الولاية والمحليات."
+msgstr "تعرف على مواعيد الانتخابات على مستوى الولاية والمحليات."
 
 # data.translations.register.dates__heading (state phrase updates)
 msgid "Voter registration deadlines"
