@@ -17,11 +17,14 @@
   <h2>{{ content.field_heading | field_value | render | replace({"@state_name": currentnode.getTitle()}) | raw }}</h2>
 
   {{ content.field_digital_form_paragraph | field_value }}
-  {% set form_path = currentnode.id ? path('entity.node.canonical', {'node': currentnode.id}) ~ '/mail-in-form-filler' %}
+
   {% if content.field_digital_form_link_label | render %}
+    {# Set path to form dynamically using page route. #}
+    {% set form_route = language != 'es' ? 'vote_nvrf.nvrf_page' : 'vote_nvrf.nvrf_page_es' %}
+    {% set state_name = currentnode.label | lower | replace({' ': '-'}) %}
     <p>
       {% include '@votegov/component/button.html.twig' with {
-        'href': 'internal:' ~ form_path,
+        'href': 'internal:' ~ path(form_route, {'state_name': state_name}),
         'label': content.field_digital_form_link_label | field_value,
         'data_label': 'data-state-ext',
         'data': 'nvrf-pdf-tool-registration'

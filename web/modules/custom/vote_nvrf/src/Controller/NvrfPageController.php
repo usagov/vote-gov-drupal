@@ -15,7 +15,7 @@ class NvrfPageController extends ControllerBase {
    */
   public function content(string $state_name) {
     $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
-    $enabled_languages = ['en'];
+    $enabled_languages = ['en', 'es'];
 
     // Return a 404 response if language is disabled.
     if (!in_array($language, $enabled_languages)) {
@@ -41,12 +41,14 @@ class NvrfPageController extends ControllerBase {
       // Get the state abbreviation.
       $node = reset($node);
       $abbrev = $node->get('field_state_abbreviation')->value;
-      $return_path = $node->toUrl()->toString();
+      $return_path = $node->getTranslation($language)->toUrl()->toString();
 
       // Render the app in a custom page if a match was found.
       $build = [
         '#type' => 'inline_template',
-        '#template' => '<div id="root" data-returnPath="{{ return_path }}" data-stateId="{{ abbrev }}" class="nvrf-app-container vote-block-margin-y--narrow"></div>',
+        '#template' => '<div id="root" data-returnPath="{{ return_path }}" data-stateId="{{ abbrev }}" class="nvrf-app-container vote-block-margin-y--narrow">
+          <img src="/themes/custom/votegov/dist/assets/img/loader.svg" width="80px" width="80px" class="display-block margin-x-auto" />
+          </div>',
         '#context' => [
           'abbrev' => $abbrev,
           'return_path' => $return_path,

@@ -84,7 +84,7 @@ msgstr "ভোট দেওয়ার জন্য কীভাবে নি�
 msgid "Other ways to register to vote"
 msgstr "ভোট নিবন্ধন করার অন্যান্য উপায়"
 
-msgid "Voter registration deadlines for the @election_date election. @link"
+msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
 msgstr "@election_date নির্বাচনের জন্য ভোটার নিবন্ধনের সময়সীমা"
 
 msgid "Find state and local election dates."
