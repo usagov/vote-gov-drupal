@@ -20,10 +20,6 @@ msgstr "اختر اللغة"
 msgid "Home"
 msgstr "الصفحة الرئيسية"
 
-#breadcrumb
-msgid "Breadcrumb"
-msgstr "تتبع مسارك"
-
 # config.languages.params.Owner
 msgid "@sitename in language"
 msgstr "@sitename باللغة العربية"
@@ -82,7 +78,7 @@ msgstr "روابط مهمة"
 
 # data.translations.footer.identifier_more_info_aria
 msgid "Government information and services"
-msgstr "معلومات وخدمات حكومة الولايات المتحدة"
+msgstr "المعلومات والخدمات الحكومية"
 
 # data.translations.footer.eac_text
 msgid "in partnership with"
@@ -125,7 +121,7 @@ msgid "How to register to vote"
 msgstr "كيفية التسجيل للتصويت"
 
 msgid "How to register and update your registration"
-msgstr "كيف تُسجل وتُحدث سجلك الانتخابي"
+msgstr "كيفية التسجيل للتصويت"
 
 # data.translations.register.other_language_selection__heading (state phrase updates)
 msgid "Other ways to register to vote"
@@ -149,11 +145,11 @@ msgstr "الموعد النهائي للتسجيل عبر الإنترنت:"
 msgid "In person registration deadline:"
 msgstr "الموعد النهائي للتسجيل الشخصي:"
 
-msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
-msgstr "المواعيد النهائية لتسجيل الناخبين هي لانتخابات 5 نوفمبر/تشرين الثاني 2024."
+msgid "Voter registration deadlines for the @election_date election. @link"
+msgstr "المواعيد النهائية لتسجيل الناخبين لانتخابات @election_date"
 
 msgid "Find state and local election dates."
-msgstr "تعرف على مواعيد الانتخابات على مستوى الولاية والمحليات."
+msgstr ""
 
 # data.translations.register.dates__heading (state phrase updates)
 msgid "Voter registration deadlines"
@@ -306,63 +302,3 @@ msgstr "الجمعة"
 # data.translations.days.saturday
 msgid "Saturday"
 msgstr "السبت"
-
-#footer
-msgid "Visit our partner site to find more information about voting in the United States."
-msgstr "(باللغة الإنجليزية) طالع الموقع الشريك USA.gov للحصول على مزيد من المعلومات حول التصويت في الولايات المتحدة."
-
-#main menu close button
-msgid "Close"
-msgstr "إغلاق"
-
-#main menu button
-msgid "Menu"
-msgstr "القائمة"
-
-#U.S. flag alt text
-msgid "U.S. flag"
-msgstr "علم الولايات المتحدة"
-
-#eac partner text
-msgid "Vote.gov is in partnership with"
-msgstr "يشترك موقع vote.gov مع"
-
-#aria-label for election links
-msgid "External election resources"
-msgstr "روابط الانتخابات"
-
-#alt text for USA.gov logo
-msgid "USA.gov logo"
-msgstr "شعار USA.gov"
-
-msgid "Primary navigation"
-msgstr "التصفح الأساسي"
-
-#search aira-label
-msgid "Search component"
-msgstr "مكونات البحث"
-
-msgid "Primary tabs"
-msgstr "علامات التبويب الرئيسية"
-
-msgid "Secondary tabs"
-msgstr "علامات التبويب الثانوية"
-
-#state tool aria label
-msgid "Register to vote selector tool"
-msgstr "أداة اختيار التسجيل للتصويت"
-
-#state page
-msgid "Start or update your registration online"
-msgstr "ابدأ أو قُم بتحديث سجلك الانتخابي على الإنترنت"
-
-msgid "Select your state or territory"
-msgstr "اختر ولايتك أو إقليمك"
-
-#state list aria label
-msgid "States and territories list"
-msgstr "قائمة الولايات والأقاليم"
-
-#eac partner text
-msgid "Vote.gov is in partnership with"
-msgstr "تأسس موقع vote.gov بالشراكة مع "

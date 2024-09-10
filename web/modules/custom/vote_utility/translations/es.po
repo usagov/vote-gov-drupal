@@ -128,7 +128,7 @@ msgstr "Cómo registrarse y poner al día su registro"
 msgid "Other ways to register to vote"
 msgstr "Otras formas de registrarse para votar"
 
-msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
+msgid "Voter registration deadlines for the @election_date election. @link"
 msgstr "Los plazos para el registro de votantes son para las elecciones del @election_date. @link"
 
 msgid "Find state and local election dates."
