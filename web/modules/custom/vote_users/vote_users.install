@@ -1,0 +1,23 @@
+<?php
+use Drupal\user\Entity\User;
+
+
+/**
+ * Implements hook_install().
+ */
+function vote_users_install() {
+  // Get all users who have the site_builder role.
+  $users = \Drupal::entityQuery('user')
+  ->accessCheck(FALSE)
+  ->condition('roles', 'site_builder')
+  ->execute();
+
+  // Block all users who match the criteria above.
+  foreach ($users as $user_id) {
+    $user = User::load($user_id);
+    if ($user) {
+      $user->block();
+      $user->save();
+    }
+  }
+}
