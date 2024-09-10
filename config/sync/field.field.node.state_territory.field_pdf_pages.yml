@@ -12,7 +12,7 @@ bundle: state_territory
 label: 'NVRF PDF pages'
 description: 'List all required pages of the generated NVRF PDF for this state comma-separated.'
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: '0, 1, 2, 3, 4, 5'

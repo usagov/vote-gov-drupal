@@ -33,9 +33,3 @@ img {
     background-color: $bg-light-cool;
   }
 }
-
-// SVG
-svg {
-  @include u-maxw('full');
-  @include u-height('auto');
-}

@@ -127,7 +127,7 @@ msgstr "登録および登録の更新方法"
 msgid "Other ways to register to vote"
 msgstr "その他の有権者登録方法"
 
-msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
+msgid "Voter registration deadlines for the @election_date election. @link"
 msgstr "@election_dateの選挙における有権者登録の締切について @link"
 
 msgid "Find state and local election dates."

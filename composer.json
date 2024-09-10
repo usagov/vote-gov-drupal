@@ -70,7 +70,6 @@
         "drupal/s3fs": "^3.1",
         "drupal/samlauth": "^3.8",
         "drupal/simple_sitemap": "^4.1",
-        "drupal/stage_file_proxy": "^3.1",
         "drupal/svg_image": "^3.0",
         "drupal/tome": "^1.8",
         "drupal/translatable_menu_link_uri": "^2.0@dev",

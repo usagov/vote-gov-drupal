@@ -84,7 +84,7 @@ msgstr "Làm thế nào để đăng ký bỏ phiếu"
 msgid "Other ways to register to vote"
 msgstr "Các cách khác để đăng ký bỏ phiếu"
 
-msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
+msgid "Voter registration deadlines for the @election_date election. @link"
 msgstr "Thời hạn cuối cùng đăng ký cử tri cho cuộc bầu cử @election_date"
 
 msgid "Find state and local election dates."
