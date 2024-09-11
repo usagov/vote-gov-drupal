@@ -8,6 +8,21 @@
 use Drupal\Core\Form\FormStateInterface;
 
 /**
+ * Implements hook_form_alter().
+ */
+function vote_utility_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (isset($form['field_content_version'])) {
+    $current_user = \Drupal::service('current_user');
+    $roles = $current_user->getRoles();
+
+    if (in_array('content_editor', $roles)) {
+      // Hide content version field from content editors.
+      $form['field_content_version']['#access'] = FALSE;
+    }
+  }
+}
+
+/**
  * Implements hook_form_FORM_ID_alter().
  */
 function vote_utility_form_node_state_territory_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
@@ -19,18 +34,5 @@ function vote_utility_form_node_state_territory_edit_form_alter(&$form, FormStat
     $form['field_override_election_hp_link']['#access'] = FALSE;
     $form['field_override_more_info_link']['#access'] = FALSE;
     $form['field_override_registration_link']['#access'] = FALSE;
-  }
-}
-
-/**
- * Implements hook_form_FORM_ID_alter().
- */
-function vote_utility_form_user_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  // Check if the user has the "content_translator" role.
-  if (\Drupal::currentUser()->hasRole('content_translator')) {
-    // Disable access to alter user profile settings.
-    $form['language']['#disabled'] = TRUE;
-    $form['account']['#disabled'] = TRUE;
-    $form['actions']['#access'] = FALSE;
   }
 }

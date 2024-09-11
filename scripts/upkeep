@@ -22,10 +22,9 @@ export bucket=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | te
 export bucket_endpoint=$(echo $VCAP_SERVICES | jq -r '.s3[] | select(.name | strings | test("static")).credentials.endpoint')
 
 export ssg_endpoint="https://ssg-${environment}.vote.gov"
-[ "${environment}" = "prod" ] && export ssg_endpoint="https://beta.vote.gov"
-
+[ "${environment}" = "stage" ] && export ssg_endpoint="https://staging.vote.gov"
+[ "${environment}" = "prod" ] && export ssg_endpoint="https://vote.gov"
 export ssg_sitemap_endpoint=ssg_endpoint
-[ "${environment}" = "prod" ] && export ssg_sitemap_endpoint="https://vote.gov"
 
 cd ${app_path}
 echo "**************************************************"
@@ -66,18 +65,18 @@ echo "Missing Core assets files...completed!"
 echo ""
 
 echo "**************************************************"
-echo "Adding missing robots.txt file"
-echo "**************************************************"
-cp -f ${app_path}/web/robots.txt ${html_path}/
-echo "Adding missing robots.txt file....completed!"
-echo ""
-
-echo "**************************************************"
 echo "Adding missing module files for Sitemap..."
 echo "**************************************************"
 mkdir -p ${html_path}/modules/contrib/simple_sitemap/xsl
 cp -rfp ${app_path}/web/modules/contrib/simple_sitemap/xsl/* ${html_path}/modules/contrib/simple_sitemap/xsl/
 echo "Missing module files for Sitemap...completed!"
+echo ""
+
+echo "**************************************************"
+echo "Adding missing data files for NVRF..."
+echo "**************************************************"
+cp -rfp ${app_path}/web/data ${html_path}
+echo "Missing data files for NVRF...completed!"
 echo ""
 
 echo "**************************************************"

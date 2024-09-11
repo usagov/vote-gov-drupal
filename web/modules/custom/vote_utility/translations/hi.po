@@ -78,13 +78,13 @@ msgstr "@state_name में मतदान करने के लिए प�
 msgid "How to register to vote"
 msgstr "मतदान करने के लिए पंजीकरण कैसे करें"
 
-msgid "Start or update your online registration"
+msgid "How to register and update your registration"
 msgstr "मतदान करने के लिए पंजीकरण कैसे करें"
 
 msgid "Other ways to register to vote"
 msgstr "मतदान के लिए पंजीकरण करने के अन्य तरीके"
 
-msgid "Voter registration deadlines for the @election_date election. @link"
+msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
 msgstr "@election_date चुनाव के लिए मतदाता पंजीकरण की समय सीमा"
 
 msgid "Find state and local election dates."
@@ -138,7 +138,7 @@ msgstr "मतदान के बारे में अधिक जानक�
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
 msgstr "वर्जीनिया में मतदाता पंजीकरण की आवश्यकता नहीं है। @state_name राज्य की चुनाव वेबसाइट पर @link।"
 
-msgid "Complete your online registration"
+msgid "Start or update your registration"
 msgstr "अपना ऑनलाइन पंजीकरण शुरू करें"
 
 msgid "@link on @state_name’s election website."

@@ -1,0 +1,14 @@
+vote_nvrf.nvrf_page:
+  path: '/register/{state_name}/mail-in-form-filler'
+  defaults:
+    _controller: '\Drupal\vote_nvrf\Controller\NvrfPageController::content'
+  requirements:
+    _permission: 'access content'
+    state_name: '[a-z-]+'
+vote_nvrf.nvrf_page_es:
+  path: '/registrar/{state_name}/llenador-de-formulario-por-correo-postal'
+  defaults:
+    _controller: '\Drupal\vote_nvrf\Controller\NvrfPageController::content'
+  requirements:
+    _permission: 'access content'
+    state_name: '[a-z-]+'

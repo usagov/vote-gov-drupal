@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.full
     - field.field.node.voter_guide.body
     - field.field.node.voter_guide.field_basics_block
+    - field.field.node.voter_guide.field_content_version
     - field.field.node.voter_guide.field_icon
     - field.field.node.voter_guide.field_media
     - field.field.node.voter_guide.field_metatags
@@ -38,6 +39,7 @@ content:
     region: content
 hidden:
   content_moderation_control: true
+  field_content_version: true
   field_icon: true
   field_media: true
   field_metatags: true

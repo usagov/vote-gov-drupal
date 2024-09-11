@@ -3,12 +3,12 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
 reporter: 'cypress-mochawesome-reporter',
   e2e: {
-    baseUrl: 'https://ssg-stage.vote.gov/',
+    baseUrl: 'https://staging.vote.gov/',
     redirectionLimit: 100,
     video: false,
     viewportHeight: 800,
     viewportWidth: 1530,
-    chromeWebSecurity: false, 
+    chromeWebSecurity: false,
     "retries": {
       "runMode": 2,
     },
@@ -31,7 +31,7 @@ reporter: 'cypress-mochawesome-reporter',
                   "username": "editor_test",
                   "role": "content_editor"
             },
-            // info for content mananger role 
+            // info for content mananger role
             "content_manager": {
                   "username": "manager_test",
                   "role": "content_manager"
@@ -45,12 +45,12 @@ reporter: 'cypress-mochawesome-reporter',
       on('task', {
         log(message) {
           console.log(message)
-    
+
           return null
         },
         table(message) {
           console.table(message)
-    
+
           return null
         }
       })

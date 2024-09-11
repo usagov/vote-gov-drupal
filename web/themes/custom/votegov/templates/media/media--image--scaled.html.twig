@@ -1,0 +1,14 @@
+{% extends 'media.html.twig' %}
+{#
+/**
+ * @file
+ * Theme override to display a media item: image.
+ */
+#}
+
+{# Caching the data in content object #}
+{% set savedCache = content | render %}
+
+{% block content %}
+  {{ content.field_media_image | field_value }}
+{% endblock %}

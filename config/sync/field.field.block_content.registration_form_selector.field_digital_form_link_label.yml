@@ -1,0 +1,19 @@
+uuid: 015bc9c0-7cc7-4102-ab7a-be9b2b03410c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.registration_form_selector
+    - field.storage.block_content.field_digital_form_link_label
+id: block_content.registration_form_selector.field_digital_form_link_label
+field_name: field_digital_form_link_label
+entity_type: block_content
+bundle: registration_form_selector
+label: 'Digital form link label'
+description: 'Entering a value in this field triggers the digital form page to be generated on the public site.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -123,14 +123,14 @@ msgstr "Registrar-se para votar em @state_name"
 msgid "How to register to vote"
 msgstr "Como registrar-se para votar"
 
-msgid "Start or update your online registration"
+msgid "How to register and update your registration"
 msgstr "Como registrar-se para votar"
 
 # data.translations.register.other_language_selection__heading (state phrase updates)
 msgid "Other ways to register to vote"
 msgstr "Outras maneiras de registrar-se para votar"
 
-msgid "Voter registration deadlines for the @election_date election. @link"
+msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
 msgstr "Prazos para registro de eleitores para a eleição de @election_date"
 
 msgid "Find state and local election dates."
@@ -207,7 +207,7 @@ msgid "@link on @state_name’s election website."
 msgstr "@link na página web de eleição estadual do @state_name"
 
 # @link: data.translations.register.online__answer1 (see accessibility updates)
-msgid "Complete your online registration"
+msgid "Start or update your registration"
 msgstr "Comece o seu registro on-line"
 
 # data.translations.register.online__answer2 (see accessibility updates)

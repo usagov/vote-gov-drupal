@@ -5,6 +5,7 @@ dependencies:
   config:
     - media.type.audio
     - media.type.document
+    - media.type.icon
     - media.type.image
     - media.type.remote_video
     - node.type.landing
@@ -24,6 +25,7 @@ dependencies:
     - file
     - media
     - node
+    - override_node_options
     - paragraphs
     - system
     - taxonomy
@@ -43,45 +45,32 @@ permissions:
   - 'create audio media'
   - 'create content translations'
   - 'create document media'
+  - 'create icon media'
   - 'create image media'
-  - 'create landing content'
   - 'create media'
   - 'create page content'
   - 'create remote_video media'
-  - 'create state_territory content'
-  - 'create terms in basics_modules'
-  - 'create terms in nvrf_field'
   - 'create voter_guide content'
-  - 'edit any landing content'
-  - 'edit any nvrf_page content'
   - 'edit any page content'
-  - 'edit any state_territory content'
   - 'edit any voter_guide content'
   - 'edit own audio media'
   - 'edit own document media'
+  - 'edit own icon media'
   - 'edit own image media'
-  - 'edit own landing content'
-  - 'edit own nvrf_page content'
   - 'edit own page content'
   - 'edit own remote_video media'
-  - 'edit own state_territory content'
   - 'edit own voter_guide content'
-  - 'edit terms in basics_modules'
-  - 'edit terms in nvrf_field'
+  - 'enter all revision log entry'
   - 'mark as hidden in editoria11y'
-  - 'translate any entity'
   - 'translate audio media'
   - 'translate basics_modules taxonomy_term'
   - 'translate block_content'
   - 'translate document media'
   - 'translate image media'
-  - 'translate landing node'
   - 'translate nvrf_field taxonomy_term'
-  - 'translate nvrf_page node'
   - 'translate page node'
   - 'translate paragraph'
   - 'translate remote_video media'
-  - 'translate state_territory node'
   - 'translate voter_guide node'
   - 'update content translations'
   - 'update media'
@@ -100,6 +89,8 @@ permissions:
   - 'view own unpublished media'
   - 'view page revisions'
   - 'view state_territory revisions'
+  - 'view term revisions in basics_modules'
+  - 'view term revisions in nvrf_field'
   - 'view the administration theme'
   - 'view unpublished paragraphs'
   - 'view voter_guide revisions'

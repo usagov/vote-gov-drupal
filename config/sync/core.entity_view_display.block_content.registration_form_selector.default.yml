@@ -6,11 +6,14 @@ dependencies:
     - block_content.type.registration_form_selector
     - field.field.block_content.registration_form_selector.field_default_option_label
     - field.field.block_content.registration_form_selector.field_description
+    - field.field.block_content.registration_form_selector.field_digital_form_link_label
+    - field.field.block_content.registration_form_selector.field_digital_form_paragraph
     - field.field.block_content.registration_form_selector.field_heading
     - field.field.block_content.registration_form_selector.field_registration_form_link
     - field.field.block_content.registration_form_selector.field_submit_button_label
   module:
     - link
+    - text
 id: block_content.registration_form_selector.default
 targetEntityType: block_content
 bundle: registration_form_selector
@@ -31,6 +34,21 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_digital_form_link_label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_digital_form_paragraph:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
     region: content
   field_heading:
     type: string

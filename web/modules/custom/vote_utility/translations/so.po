@@ -120,14 +120,14 @@ msgstr "Is diiwaan geli si aad uga codeyso @state_name"
 msgid "How to register to vote"
 msgstr "Sida la isugu diiwaan geliyo si’ loo codeeyo"
 
-msgid "Start or update your online registration"
+msgid "How to register and update your registration"
 msgstr "Sida la isugu diiwaan geliyo si’ loo codeeyo"
 
 # data.translations.register.other_language_selection__heading (state phrase updates)
 msgid "Other ways to register to vote"
 msgstr "Siyaabo kale oo la isu diwaangeliyo si loo codeeyo."
 
-msgid "Voter registration deadlines for the @election_date election. @link"
+msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
 msgstr "Wakhtiyada kama dambaysta ah ee diiwaangelinta codbixiyaha ee doorashada @election_date"
 
 msgid "Find state and local election dates."
@@ -204,7 +204,7 @@ msgid "@link on @state_name’s election website."
 msgstr "@link bogga doorashada gobolka @state_name."
 
 # @link: data.translations.register.online__answer1 (see accessibility updates)
-msgid "Complete your online registration"
+msgid "Start or update your registration"
 msgstr "Bilow is diiwaangelintaada onlyanka ah"
 
 # data.translations.register.online__answer2 (see accessibility updates)

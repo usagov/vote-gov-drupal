@@ -120,14 +120,14 @@ msgstr "Enskri pou vote nan @state_name"
 msgid "How to register to vote"
 msgstr "Kijan pou enskri pou vote"
 
-msgid "Start or update your online registration"
+msgid "How to register and update your registration"
 msgstr "Kijan pou enskri pou vote"
 
 # data.translations.register.other_language_selection__heading (state phrase update)
 msgid "Other ways to register to vote"
 msgstr "Lòt fason pou enskri pou vote"
 
-msgid "Voter registration deadlines for the @election_date election. @link"
+msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
 msgstr "Dat limit enskripsyon votè pou eleksyon @election_date la"
 
 msgid "Find state and local election dates."
@@ -204,7 +204,7 @@ msgid "@link on @state_name’s election website."
 msgstr "@link sou sit wèb eleksyon Eta w la sou @state_name"
 
 # @link: data.translations.register.online__answer1 (see accessibility updates)
-msgid "Complete your online registration"
+msgid "Start or update your registration"
 msgstr "Kòmanse enskripsyon ou anliy"
 
 # data.translations.register.online__answer2 (see accessibility updates)
