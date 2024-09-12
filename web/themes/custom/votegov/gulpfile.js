@@ -13,11 +13,7 @@ const settings = {
     dest: './dist/js',
     minDest: './dist/js/min',
     minSrc: './src/js/**/*.js',
-    src: './src/js/**/*.js',
-    vendor: {
-      src: [],
-      dest: '',
-    }
+    src: './src/js/**/*.js'
   }
 }
 
@@ -26,16 +22,6 @@ function buildJS() {
   return src(settings.js.src)
     .pipe(uglify())
     .pipe(gulp.dest(settings.js.dest));
-}
-
-// Vendor JS copy function.
-function vendorJS(done) {
-  if (settings.js.vendor.src.length > 0) {
-    return src(settings.js.vendor.src)
-      .pipe(gulp.dest(settings.js.vendor.dest));
-  } else {
-    done();
-  }
 }
 
 
@@ -51,7 +37,6 @@ function watchJSTwigFiles() {
       ignoreInitial: false
     },
     series(
-      vendorJS,
       buildJS
     )
   );
@@ -83,6 +68,7 @@ function watchCompFiles() {
  */
 // Use version 3.
 uswds.settings.version = 3;
+uswds.settings.compile.sassSourcemaps = false;
 
 /**
  * Custom path settings
@@ -106,7 +92,7 @@ uswds.paths.src.projectSass = './src/sass';
 // exports.init = uswds.init;
 
 // Various compile functions.
-exports.build = series(uswds.copyAssets, vendorJS, buildJS, uswds.compile);
+exports.build = series(uswds.copyAssets, buildJS, uswds.compile);
 exports.compile = uswds.compile;
 exports.default = exports.watch = parallel(watchCompFiles, uswds.watch, watchJSTwigFiles);
 exports.update = uswds.updateUswds;
