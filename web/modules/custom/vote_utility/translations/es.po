@@ -111,6 +111,9 @@ msgstr "Componente de búsqueda"
 msgid "Register to vote in @state_name"
 msgstr "Regístrese para votar en @state_name"
 
+msgid "Start or update your registration online"
+msgstr "Empiece o ponga al día su registro en línea"
+
 #state tool aria label
 msgid "Register to vote selector tool"
 msgstr "Herramienta selector para registrarse para votar"
