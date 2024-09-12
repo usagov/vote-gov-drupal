@@ -64,9 +64,8 @@
   {# Hold these title_* placeholders for potential integration #}
   {{ title_prefix }}
   {{ title_suffix }}
-  {{ content.field_media }}
 
-  <div class="vote-narrow-container">
+  <div class="vote-narrow-container-left-align">
   {% if drupal_view('inline_alert', 'embed_1') | render | striptags | trim %}
     {{ drupal_view('inline_alert', 'embed_1') }}
   {% endif %}
@@ -79,7 +78,7 @@
     {# Registration deadlines #}
     <h2>{{ 'Voter registration deadlines' | t({ '@state_name': state_name }) }}</h2>
     <p>
-      {{ 'Voter registration deadlines are for the @election_date election. @link' | t({
+      {{ 'Voter registration deadlines are for the November 05, 2024 election. @link' | t({
         '@link': {'#markup': election_link} | render,
         '@election_date': {'#markup': election_date} | render }
       ) }}

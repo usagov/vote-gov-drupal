@@ -29,6 +29,8 @@
 .vote-double-deck-card__icon {
   @include u-margin-bottom(3);
   @include u-text-align('center');
+  min-width: 64px;
+  height: 64px;
 
   svg {
     fill: var(--vote-ddc-icon-fill);

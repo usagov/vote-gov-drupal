@@ -7,9 +7,7 @@ dependencies:
     - field.field.block_content.nvrf_card.body
     - field.field.block_content.nvrf_card.field_button_label
     - field.field.block_content.nvrf_card.field_heading
-    - field.field.block_content.nvrf_card.field_image
   module:
-    - media_library
     - text
 id: block_content.nvrf_card.default
 targetEntityType: block_content
@@ -41,13 +39,6 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  field_image:
-    type: media_library_widget
-    weight: 4
-    region: content
-    settings:
-      media_types: {  }
     third_party_settings: {  }
   info:
     type: string_textfield

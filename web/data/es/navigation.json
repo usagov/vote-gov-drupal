@@ -1,7 +1,5 @@
 {
     "back": {
-        "vote": "Go back to Vote.gov",
-        "select_state": "Go back to select your state",
         "state_reg_options": "Go back to state registration options",
         "eligibility_req": "Back to state eligibility requirements",
         "reg_options": "Back to registration options",
@@ -11,13 +9,13 @@
         "edit_info": "Edit registration information"
     },
     "next": {
-        "next": "Next",
         "start": "Continue to the digital form filler on vote.gov",
         "reg_options": "Continue to view registration options",
         "address_location": "Continue to address and location",
         "identification": "Continue to identification",
         "political_party": "Continue to political party",
-        "confirm_info": "Continue to review your information"
+        "confirm_info": "Continue to review your information",
+        "delivery": "Confirm and continue"
     },
     "step_label_1": "Personal information",
     "step_label_2": "Address and location",

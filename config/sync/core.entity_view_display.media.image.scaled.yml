@@ -6,10 +6,10 @@ dependencies:
     - core.entity_view_mode.media.scaled
     - field.field.media.image.field_caption
     - field.field.media.image.field_media_image
-    - image.style.scaled_lg
     - media.type.image
+    - responsive_image.styles.scaled
   module:
-    - svg_image
+    - responsive_image
     - text
 id: media.image.scaled
 targetEntityType: media
@@ -24,17 +24,13 @@ content:
     weight: 1
     region: content
   field_media_image:
-    type: image
+    type: responsive_image
     label: visually_hidden
     settings:
+      responsive_image_style: scaled
       image_link: ''
-      image_style: scaled_lg
       image_loading:
         attribute: lazy
-      svg_attributes:
-        width: null
-        height: null
-      svg_render_as_image: true
     third_party_settings: {  }
     weight: 0
     region: content
