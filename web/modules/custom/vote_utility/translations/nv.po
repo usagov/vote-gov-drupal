@@ -199,7 +199,7 @@ msgid "@link on @state_name’s election website."
 msgstr "@link h0tsaago hahoodzo i'ii'n77[ bi[ haz'32gi bi-website-gi @state_name."
 
 # @link: data.translations.register.online__answer1
-msgid "Start or update your registration"
+msgid "Start or update your registration online"
 msgstr "B44sh [ich7'ii nits7kees7 biyi'j8' hada'diln4h7g77 bee ha'd7l44h"
 
 # data.translations.register.online__answer2
