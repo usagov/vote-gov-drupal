@@ -7,7 +7,6 @@ dependencies:
     - field.field.block_content.nvrf_card.body
     - field.field.block_content.nvrf_card.field_button_label
     - field.field.block_content.nvrf_card.field_heading
-    - field.field.block_content.nvrf_card.field_image
   module:
     - text
 id: block_content.nvrf_card.default
@@ -37,15 +36,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 0
-    region: content
-  field_image:
-    type: entity_reference_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    weight: 2
     region: content
 hidden:
   langcode: true

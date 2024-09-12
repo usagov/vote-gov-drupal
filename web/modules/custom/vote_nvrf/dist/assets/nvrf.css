@@ -1,0 +1,95 @@
+.nvrf-app-container .usa-button {
+    line-height: 1.2;
+}
+@media only screen and (max-width: 639px) {
+    .nvrf-app-container .mobile-width {
+        width: 100%;
+        max-width: 480px;
+    }
+}
+.nvrf-app-container .grid-container-tablet {
+    max-width: 720px;
+}
+.nvrf-app-container .usa-prose > hr,
+.nvrf-app-container hr {
+    border: 0;
+    border-top: 1px solid #adadad;
+    margin: 2rem 0;
+}
+.nvrf-app-container .usa-form .usa-input {
+    max-width: 480px;
+}
+.nvrf-app-container fieldset + .usa-hint {
+    margin-top: 0.5rem;
+}
+.nvrf-app-container .error-container {
+    border-left: 3px solid #b50909;
+    padding-left: 15px;
+}
+
+.nvrf-app-container .error-container .error-text {
+    display: block;
+}
+
+.nvrf-app-container .error-text {
+    color: #b50909;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.nvrf-app-container .usa-step-indicator__header {
+    @media (min-width: 641px) {
+        position: absolute;
+        text-indent: -9000px;
+        overflow: hidden;
+    }
+}
+
+.nvrf-app-container .usa-step-indicator__segment {
+    cursor: default;
+    padding-bottom: .5rem;
+}
+
+.nvrf-app-container .step-indicator-no-select {
+    &:focus {
+        outline: none;
+    }
+}
+
+.nvrf-app-container .step-indicator-select {
+    cursor: pointer;
+    background-color: transparent;
+    color: transparent;
+    transition: color .5s, background-color .5s;
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+        color: #005ea2;
+        background-color: #e7eff3;
+        transition: text-decoration .5s, color .5s, background-color .5s;
+        .usa-step-indicator__segment-label {
+            color: #005ea2;
+            transition: color .5s;
+        }
+    }
+}
+
+.nvrf-app-container .usa-step-indicator__segments {
+    @media (max-width: 640px) {
+        display: none;
+    }
+}
+
+.nvrf-app-container .usa-alert__text {
+    > *:first-child {
+        margin-top: 0;
+    }
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+#touchpoints-form-embed .fba-modal-dialog {
+    margin: 0;
+}

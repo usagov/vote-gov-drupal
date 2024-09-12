@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.nvrf_field.field_content_version
     - field.field.taxonomy_term.nvrf_field.field_display_label
     - field.field.taxonomy_term.nvrf_field.field_error_message
     - field.field.taxonomy_term.nvrf_field.field_help_text
@@ -72,6 +73,14 @@ targetEntityType: taxonomy_term
 bundle: nvrf_field
 mode: default
 content:
+  field_content_version:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_display_label:
     type: string_textfield
     weight: 1

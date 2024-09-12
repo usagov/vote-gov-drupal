@@ -1,0 +1,5 @@
+@use "uswds-core" as *;
+
+.usa-step-indicator__segment {
+  @include u-margin-top(0);
+}

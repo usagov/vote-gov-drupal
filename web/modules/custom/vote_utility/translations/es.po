@@ -128,7 +128,7 @@ msgstr "Cómo registrarse y poner al día su registro"
 msgid "Other ways to register to vote"
 msgstr "Otras formas de registrarse para votar"
 
-msgid "Voter registration deadlines for the @election_date election. @link"
+msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
 msgstr "Los plazos para el registro de votantes son para las elecciones del @election_date. @link"
 
 msgid "Find state and local election dates."
@@ -321,7 +321,7 @@ msgid "Learn more from the Federal Voting Assistance Program (FVAP)."
 msgstr "Obtenga más información del Programa Federal de Asistencia para Votar (FVAP, sigla en inglés)."
 
 msgid "Voting as a U.S. citizen from outside the U.S."
-msgstr "Votar como ciudadano en el extrajero"
+msgstr "Votar como ciudadano en el extranjero"
 
 msgid "Secondary navigation"
 msgstr "navegación secundaria"

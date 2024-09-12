@@ -17,6 +17,8 @@ wait_for_tunnel() {
   done
 }
 
+date
+
 ## Create a tunnel through the application to pull the database.
 echo "Creating tunnel to database..."
 if [[ ${BACKUP_ENV} = "prod" ]]; then
@@ -26,6 +28,8 @@ fi
 cf connect-to-service --no-client ${project}-drupal-${BACKUP_ENV} ${project}-mysql-${BACKUP_ENV} > backup.txt &
 
 wait_for_tunnel
+
+date
 
 ## Create variables and credential file for MySQL login.
 echo "Backing up '${BACKUP_ENV}' database..."
@@ -97,6 +101,8 @@ echo "Backing up '${BACKUP_ENV}' database..."
 
 } >/dev/null 2>&1
 
+date
+
 ## Kill the backgrounded SSH tunnel.
 echo "Cleaning up old connections..."
 {
@@ -108,6 +114,8 @@ if [ ${BACKUP_ENV} = "prod" ]; then
   cf disable-ssh ${project}-drupal-${BACKUP_ENV}
 fi
 rm -rf backup.txt ~/.mysql
+
+date
 
 # Download media files.
 backup_media="cms/public/media"
@@ -134,3 +142,5 @@ echo "Downloading media files..."
 
   cf delete-service-key "${service}" "${service_key}" -f
 } >/dev/null 2>&1
+
+date

@@ -111,6 +111,7 @@ foreach ($cf_service_data as $service_list) {
 
 $settings['php_storage']['twig']['directory'] = '../storage/php';
 $settings['cache']['bins']['data'] = 'cache.backend.php';
+$settings['state_cache'] = TRUE;
 $settings['trusted_host_patterns'][] = $applicaiton_fqdn_regex;
 
 // SSO - SAML Auth Config.

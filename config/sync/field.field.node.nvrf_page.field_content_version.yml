@@ -1,18 +1,18 @@
-uuid: b6c6a747-2016-4a50-9531-52cba4d740d5
+uuid: 04c20672-4bf1-4630-831b-5ebf930ef083
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_omb_number
+    - field.storage.node.field_content_version
     - node.type.nvrf_page
-id: node.nvrf_page.field_omb_number
-field_name: field_omb_number
+id: node.nvrf_page.field_content_version
+field_name: field_content_version
 entity_type: node
 bundle: nvrf_page
-label: 'OMB Number'
+label: 'Content Version'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
