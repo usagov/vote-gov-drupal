@@ -1,0 +1,4 @@
+{% extends "form-element-label.html.twig" %}
+
+{# Overrides to adhere to USWDS code.#}
+{% set attributes = attributes.addClass(classes).setAttribute('id', element["#id"] ~ '-label') %}
