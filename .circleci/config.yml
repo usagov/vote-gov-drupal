@@ -45,7 +45,7 @@ jobs:
             - project/web/themes/custom/votegov/dist
   cypress:
     docker:
-      - image: 13.4.2
+      - image: cypress-13.14.2
     environment:
       cypress_pipeline: 1
       cypress_cloudgov_application_name: "${project}-drupal-${CIRCLE_BRANCH}"
@@ -56,7 +56,6 @@ jobs:
       - run:
           name: "Cypress - frontend tests"
           command: |
-            sleep 120    
             cd testing
             npm install
             npm run cy:pipeline:frontEnd
@@ -247,7 +246,7 @@ jobs:
             snyk test --org=${SNYK_ORG} --severity-threshold=$THRESHOLD
   link-validation:
     docker:
-      - image: 13.14.2
+      - image: cypress-13.13.0-node-20.15.1-chrome-126.0.6478.114-1-ff-128.0-edge-126.0.2592.61-1
     environment:
       cypress_pipeline: 1
       cypress_cloudgov_application_name: "${project}-drupal-${CIRCLE_BRANCH}"
@@ -342,7 +341,7 @@ workflows:
           filters:
             branches:
               only:
-                - test
+                - stage
           type: approval
           requires:
             - post-deploy-upkeep
@@ -350,7 +349,7 @@ workflows:
           filters:
             branches:
               only:
-                - test
+                - stage
           requires:
             - cypress-approval
   deploy-prod-workflow:
