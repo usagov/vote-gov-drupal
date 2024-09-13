@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Install and update hooks for Vote Users module.
+ */
+
 use Drupal\user\Entity\User;
 
 /**
@@ -8,9 +13,9 @@ use Drupal\user\Entity\User;
 function vote_users_install() {
   // Get all users who have the site_builder role.
   $users = \Drupal::entityQuery('user')
-  ->accessCheck(FALSE)
-  ->condition('roles', 'site_builder')
-  ->execute();
+    ->accessCheck(FALSE)
+    ->condition('roles', 'site_builder')
+    ->execute();
 
   // Block all users who match the criteria above.
   foreach ($users as $user_id) {
@@ -22,16 +27,15 @@ function vote_users_install() {
   }
 }
 
-
 /**
  * Implements hook_uninstall().
  */
 function vote_users_uninstall() {
   // Get all users who have the site_builder role.
   $users = \Drupal::entityQuery('user')
-  ->accessCheck(FALSE)
-  ->condition('roles', 'site_builder')
-  ->execute();
+    ->accessCheck(FALSE)
+    ->condition('roles', 'site_builder')
+    ->execute();
 
   // Enable all users who match the criteria above.
   foreach ($users as $user_id) {
