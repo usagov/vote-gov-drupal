@@ -341,7 +341,7 @@ workflows:
           filters:
             branches:
               only:
-                - stage
+                - test
           type: approval
           requires:
             - post-deploy-upkeep
@@ -349,7 +349,7 @@ workflows:
           filters:
             branches:
               only:
-                - stage
+                - test
           requires:
             - cypress-approval
   deploy-prod-workflow:
