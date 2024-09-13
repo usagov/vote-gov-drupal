@@ -6,5 +6,6 @@ adding:
     s3fs: 0
     samlauth: 0
     usagov_login: 0
+    vote_users: 0
     externalauth: 10
 removing: {  }
