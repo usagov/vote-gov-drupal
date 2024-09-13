@@ -19,6 +19,7 @@ theme: {  }
 complete_list:
   - dblog.settings
   - field_ui.settings
+  - stage_file_proxy.settings
   - views.view.watchdog
 partial_list:
   - autologout.settings
