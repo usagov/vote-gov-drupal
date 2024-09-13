@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
 
+import { pageObjects } from "../../support/pageObjects"
+
 describe('Verify NVRF download', () => {
   
   beforeEach('visit page', () => {
@@ -14,7 +16,9 @@ describe('Verify NVRF download', () => {
         return orig.call(this, url, '_self', features)
       }
     })
-    cy.get('[data-test="nvrfDownload"]').click();
+
+    pageObjects
+    .nvrfDownload().click()
     cy.url().invoke('toLowerCase').should('include', 'eng')
   })
 })
