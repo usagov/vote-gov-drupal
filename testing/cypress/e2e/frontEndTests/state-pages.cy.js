@@ -29,5 +29,4 @@ describe('test state pages', () => {
     pageObjects
     .registrationInfo().should('not.exist')
   })
-
 })

@@ -24,7 +24,7 @@ describe('Test language selector', () => {
     })
   })
 
-  it.only('Verify active language options', () => {
+  it('Verify active language options', () => {
     cy.visit('/')
     cy.fixture('language-options.json').then((expectedMenuItems) => {
       pageObjects.languageButton().click();

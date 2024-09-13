@@ -8,8 +8,6 @@ describe('check govt banner', () => {
   })
 
   it('verify that drop down works', () => {
-    cy.visit('/')
-
     pageObjects
     .headerLogo()
     .should('be.visible')

@@ -50,6 +50,5 @@ describe('Check main menu', () => {
 
     pageObjects
     cy.get('[data-test="mobileNav"]').should('not.be.visible')
-
   })
 })
