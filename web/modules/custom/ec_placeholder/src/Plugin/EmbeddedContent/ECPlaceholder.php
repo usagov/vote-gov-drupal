@@ -2,10 +2,10 @@
 
 namespace Drupal\ec_placeholder\Plugin\EmbeddedContent;
 
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\ckeditor5_embedded_content\EmbeddedContentInterface;
 use Drupal\ckeditor5_embedded_content\EmbeddedContentPluginBase;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 
 /**
  * Plugin iframes.
