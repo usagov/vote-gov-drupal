@@ -342,7 +342,7 @@ workflows:
           filters:
             branches:
               only:
-                - stage
+                - test
           type: approval
           requires:
             - post-deploy-upkeep
