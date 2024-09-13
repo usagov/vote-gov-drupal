@@ -1,6 +1,6 @@
 <?php
-use Drupal\user\Entity\User;
 
+use Drupal\user\Entity\User;
 
 /**
  * Implements hook_install().
