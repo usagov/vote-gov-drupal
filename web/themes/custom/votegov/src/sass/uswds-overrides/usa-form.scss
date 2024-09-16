@@ -22,7 +22,14 @@
       height: 40px !important;
     }
   }
+
+  a:where(:not(.usa-button)):active {
+    text-decoration: none;
+    background-color: var(--vote-link-hover--bg-color);
+    color: var(--vote-link-hover--color);
+  }
 }
+
 
 
 ::placeholder {
@@ -34,3 +41,9 @@
     opacity: 1; //override Firefox
   }
 }
+
+// .usa-form a:where(:not(.usa-button)):active {
+//   text-decoration: none;
+//   background-color: var(--vote-link-hover--bg-color);
+//   color: var(--vote-link-hover--color);
+// }
