@@ -1,20 +1,20 @@
 {
     "back": {
         "state_reg_options": "Regresar a las opciones de registro estatal",
-        "eligibility_req": "Volver a Requisitos de elegibilidad estatal",
-        "reg_options": "Volver a Opciones de registro estatal",
-        "personal_info": "Volver a Información personal",
-        "address_location": "Volver a Domicilio y ubicación",
-        "identification": "Volver a Identificación",
+        "eligibility_req": "Volver a requisitos de elegibilidad estatal",
+        "reg_options": "Volver a opciones de registro estatal",
+        "personal_info": "Volver a información personal",
+        "address_location": "Volver a domicilio y ubicación",
+        "identification": "Volver a identificación",
         "edit_info": "Editar información de registro"
     },
     "next": {
         "start": "Continúe con el llenado del formulario digital en vote.gov",
         "reg_options": "Continuar viendo las opciones de registro",
-        "address_location": "Continuar a Domicilio y ubicación",
-        "identification": "Continuar a Identificación",
-        "political_party": "Continuar a Partido político",
-        "confirm_info": "Continuar a Revisar su información",
+        "address_location": "Continuar a domicilio y ubicación",
+        "identification": "Continuar a identificación",
+        "political_party": "Continuar a partido político",
+        "confirm_info": "Revise su información",
         "delivery": "Confirmar y continuar"
     },
     "step_label_1": "Información personal",
@@ -22,10 +22,10 @@
     "step_label_3": "Identificación",
     "step_label_4": "Partido político",
     "step_label_5": "Confirmar su información",
-    "step_label_6": "Confirmar su información",
+    "step_label_6": "Imprimir su formulario",
     "confirmation": {
         "current_name": {
-            "label": "Nombre actual"
+            "label": "Nombre"
         },
         "previous_name": {
             "label": "Nombre anterior",
@@ -35,15 +35,15 @@
             "label": "Otra información"
         },
         "current_address": {
-            "label": "dirección de casa",
+            "label": "Domicilio particular",
             "alert": "No se está registrando con una dirección actual, por lo que estos campos están en blanco."
         },
         "previous_address": {
-            "label": "dirección anterior",
+            "label": "Domicilio anterior",
             "alert": "No se está registrando con un cambio de dirección, por lo que estos campos están en blanco."
         },
         "mailing_address": {
-            "label": "dirección postal",
+            "label": "Domicilio postal",
             "alert": "Su dirección de correo postal es la misma que su domicilio, por lo que estos campos se han dejado en blanco."
         },
         "id_label": {
