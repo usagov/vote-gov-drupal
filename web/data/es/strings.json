@@ -3,7 +3,7 @@
     "newTab": "Imprima el formulario en una nueva pestaña",
     "nameChange": "Cambié mi nombre legalmente después de la última vez que me registré para votar.",
     "month": "Mes",
-    "day": "Dia",
+    "day": "Día",
     "year": "Año",
     "backIcon": "back arrow icon",
     "forwardIcon": "forward arrow icon",
@@ -11,7 +11,7 @@
     "selectStateAriaLabel": "State selection dropdown menu",
     "lastUpdated": "@state_name información actualizada por última vez",
     "emailLabel": "Voter Contact",
-    "select": "- Seleccione -",
+    "select": "-Elija-",
     "download": "Descargue el formulario",
     "mailDeadlineLabel": "Plazo de registro por correo:",
     "idSelectionAriaLabel": "Choose identification type"
