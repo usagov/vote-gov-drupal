@@ -13,9 +13,9 @@ These are the workflow guidelines that are being used to develop and maintain th
 8. Meanwhile, automated tests run in the pipeline
 9. Code Reviewer approves PR or requests revisions
 10. QA Engineer approves PR or requests revisions
-11. If the PR is approved, the designated code maintainer merges the PR into the target branch
+11. If the PR is approved, the designated code maintainer merges the PR into the target branch using the appropriate [merge strategy](standards.md)
 12. Code is deployed to DEV for testing in the cloud.gov environment
-13. Approved code marked ready to release will be deployed to STAGE for any final UAT
+13. Approved code marked ready to release will be deployed to STAGE for final testing and approval
 15. Work in STAGE will be deployed to PROD in the next scheduled release as a [standard release](releases.md)
 
 ## Hotfix development task
@@ -29,9 +29,9 @@ These are the workflow guidelines that are being used to develop and maintain th
 8. Meanwhile, automated tests run in the pipeline
 9. Code Reviewer approves PR or requests revisions
 10. QA Engineer approves PR or requests revisions
-11. If the PR is approved, the designated code maintainer merges the PR into the target branch
-12. Approved code marked ready to release will be deployed to STAGE for any final UAT
-13. Designated code maintainer creates a PR from STAGE to DEV to sync changes down
+11. If the PR is approved, the designated code maintainer merges the PR into the target branch using the appropriate [merge strategy](standards.md)
+12. Approved code marked ready to release will be deployed to STAGE for final testing and approval
+13. Designated code maintainer creates a PR from STAGE to DEV to sync changes down using appropriate [merge strategy](standards.md)
 14. Work in STAGE is deployed to PROD as a [hotfix release](releases.md)
 
 ## Infrastructure development task
@@ -44,8 +44,8 @@ These are the workflow guidelines that are being used to develop and maintain th
 7. Meanwhile, automated tests run in the pipeline
 8. Code Reviewer approves PR or requests revisions
 9. QA Engineer approves PR or requests revisions
-10. If the PR is approved, the designated code maintainer merges the PR into the target branch
+10. If the PR is approved, the designated code maintainer merges the PR into the target branch using appropriate [merge strategy](standards.md)
 11. Code is deployed to DEVOPS for testing in the cloud.gov environment
-12. Approved code deemed ready to release will be deployed to STAGE for any final UAT
-13. Designated code maintainer creates a PR from STAGE to DEV to sync changes down
+12. Approved code deemed ready to release will be deployed to STAGE for final testing and approval
+13. Designated code maintainer creates a PR from STAGE to DEV to sync changes down using appropriate [merge strategy](standards.md)
 14. Work in STAGE will be deployed to PROD as a [infrastructure release](releases.md)
