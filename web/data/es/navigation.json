@@ -1,59 +1,59 @@
 {
     "back": {
-        "state_reg_options": "Go back to state registration options",
-        "eligibility_req": "Back to state eligibility requirements",
-        "reg_options": "Back to registration options",
-        "personal_info": "Back to personal information",
-        "address_location": "Back to address and location",
-        "identification": "Back to identification",
-        "edit_info": "Edit registration information"
+        "state_reg_options": "Regresar a las opciones de registro estatal",
+        "eligibility_req": "Volver a requisitos de elegibilidad estatal",
+        "reg_options": "Volver a opciones de registro estatal",
+        "personal_info": "Volver a información personal",
+        "address_location": "Volver a domicilio y ubicación",
+        "identification": "Volver a identificación",
+        "edit_info": "Editar información de registro"
     },
     "next": {
-        "start": "Continue to the digital form filler on vote.gov",
-        "reg_options": "Continue to view registration options",
-        "address_location": "Continue to address and location",
-        "identification": "Continue to identification",
-        "political_party": "Continue to political party",
-        "confirm_info": "Continue to review your information",
-        "delivery": "Confirm and continue"
+        "start": "Continúe con el llenado del formulario digital en vote.gov",
+        "reg_options": "Continuar viendo las opciones de registro",
+        "address_location": "Continuar a domicilio y ubicación",
+        "identification": "Continuar a identificación",
+        "political_party": "Continuar a partido político",
+        "confirm_info": "Revise su información",
+        "delivery": "Confirmar y continuar"
     },
-    "step_label_1": "Personal information",
-    "step_label_2": "Address and location",
-    "step_label_3": "Identification",
-    "step_label_4": "Political party",
-    "step_label_5": "Confirm your information",
-    "step_label_6": "Print your completed form",
+    "step_label_1": "Información personal",
+    "step_label_2": "Domicilio y ubicación",
+    "step_label_3": "Identificación",
+    "step_label_4": "Partido político",
+    "step_label_5": "Confirmar su información",
+    "step_label_6": "Imprimir su formulario",
     "confirmation": {
         "current_name": {
-            "label": "Current name"
+            "label": "Nombre"
         },
         "previous_name": {
-            "label": "Previous name",
-            "alert": "You have not changed your name, so these fields are blank."
+            "label": "Nombre anterior",
+            "alert": "Usted no ha cambiado su nombre, por lo que estos campos se encuentran en blanco."
         },
         "other_info": {
-            "label": "Other information"
+            "label": "Otra información"
         },
         "current_address": {
-            "label": "Home address",
-            "alert": "You are not registering with a current address, so these fields are blank."
+            "label": "Domicilio particular",
+            "alert": "No se está registrando con una dirección actual, por lo que estos campos están en blanco."
         },
         "previous_address": {
-            "label": "Previous address",
-            "alert": "You are not registering with a change of address, so these fields are blank."
+            "label": "Domicilio anterior",
+            "alert": "No se está registrando con un cambio de dirección, por lo que estos campos están en blanco."
         },
         "mailing_address": {
-            "label": "Mailing address",
-            "alert": "Your mailing address is the same as your home address, so these fields are left blank."
+            "label": "Domicilio postal",
+            "alert": "Su dirección de correo postal es la misma que su domicilio, por lo que estos campos se han dejado en blanco."
         },
         "id_label": {
-            "label": "ID number"
+            "label": "Número de identificación"
         },
         "political_party": {
-            "label": "Political party"
+            "label": "Partido político"
         },
         "edit": {
-            "label": "Edit"
+            "label": "Editar"
         }
     }
 }
