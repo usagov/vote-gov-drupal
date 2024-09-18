@@ -73,17 +73,11 @@ A CKEditor5 Embedded Content plugin that provides a means for embedding a Touchp
 #### USAgov login
 Adds the ability to disable the default Drupal login form and replace with a button to log in via SSO.
 
-#### Vote migrate
-Migration scripts to run to import translations from GitHub pages.cloud.gov site.
-
 #### Vote utility
 Provides custom token for use in pathauto settings. Adds the ability to limit the storage of block content revisions. Stores the source po files for importing string translations in the system.
 
 ## Module Patches
 Review the details in composer.json file under `extra.patches` additionally look at the `/patches/` directory at the root. These patches need to be re-evaluated when the original module gets updated to determine if the work has been included in the latest release or if the patch needs to be rerolled.
-
-## Migration
-Instructions for updating and running migration scripts.
 
 ## Database - Mysql
 The site utilizes Mysql for its database.
