@@ -97,6 +97,11 @@ class NvrfPageController extends ControllerBase {
 
       foreach ($languages as $langcode => $route) {
         $url = Url::fromRoute($route, ['state_name' => $state_name])->toString();
+        // Add language code to url for non-english pages.
+        if ('en' !== $langcode) {
+          $url = "/$langcode" . $url;
+        }
+
         $output .= '<li><a href="' . $url . '">' . $title . '(' . $langcode . ')' . '</a></li>';
       }
     }
