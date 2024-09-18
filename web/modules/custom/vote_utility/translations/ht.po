@@ -18,11 +18,18 @@ msgstr "Chwazi lang"
 
 #breadcrumb
 msgid "Home"
-msgstr "Paj dakèy"
+msgstr "Kwout pen"
+
+msgid "Breadcrumb"
+msgstr "Ruta de navegación"
 
 # config.languages.params.Owner
 msgid "@sitename in language"
 msgstr "@sitename an Kreyòl Ayisyen"
+
+#main menu close button
+msgid "Close"
+msgstr "Fèmen"
 
 # config.languages.params.go_back
 msgid "Go back"
@@ -78,7 +85,7 @@ msgstr "Lyen enpòtan yo"
 
 # data.translations.footer.identifier_more_info_aria
 msgid "Government information and services"
-msgstr "Enfòmasyon ak sèvis gouvènman an"
+msgstr "enfòmasyon ak sèvis gouvènman Etazini"
 
 # data.translations.footer.eac_text
 msgid "in partnership with"
@@ -121,17 +128,20 @@ msgid "How to register to vote"
 msgstr "Kijan pou enskri pou vote"
 
 msgid "How to register and update your registration"
-msgstr "Kijan pou enskri pou vote"
+msgstr "Kijan pou enskri epi mete enskripsyon w ajou"
+
+msgid "Start or update your online registration"
+msgstr "Demare oswa mete enskripsyon anliy ou ajou"
 
 # data.translations.register.other_language_selection__heading (state phrase update)
 msgid "Other ways to register to vote"
 msgstr "Lòt fason pou enskri pou vote"
 
 msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
-msgstr "Dat limit enskripsyon votè pou eleksyon @election_date la"
+msgstr "Dat limit pou enskripsyon votè se pou eleksyon 5 novanm 2024 la."
 
 msgid "Find state and local election dates."
-msgstr ""
+msgstr "Jwenn dat eleksyon Eta ak lokal yo."
 
 # data.translations.register.dates__bymail_deadline
 msgid "Register by mail deadline:"
@@ -302,3 +312,59 @@ msgstr "Samdi"
 # data.translations.days.sunday
 msgid "Sunday"
 msgstr "Dimanch"
+
+# Temporary military and overseas voter cards
+msgid "Voting as a military service member"
+msgstr "Vote kòm yon manm sèvis militè
+
+msgid "Learn more from the Federal Voting Assistance Program (FVAP)."
+msgstr "Jwenn plis enfòmasyon nan Pwogram Asistans Federal pou Vote (Federal Voting Assistance Program)."
+
+msgid "Voting as a U.S. citizen from outside the U.S."
+msgstr "Vote kòm sitwayen ameriken andeyò peyi Etazini"
+
+#alt text for USA.gov logo
+msgid "USA.gov logo"
+msgstr "logo USA.gov"
+
+#U.S. flag alt text
+msgid "U.S. flag"
+msgstr "Drapo Etazini"
+
+#footer
+msgid "Visit our partner site to find more information about voting in the United States."
+msgstr "Al gade sit patnè nou an, USA.gov, pou jwenn plis enfòmasyon sou pwosesis vote Ozetazini."
+
+#eac partner text
+msgid "Vote.gov is in partnership with"
+msgstr "Vote.gov se yon patenarya ak"
+
+#main menu button
+msgid "Menu"
+msgstr "Meni"
+
+msgid "Primary navigation"
+msgstr "Navigasyon primè"
+
+msgid "Primary tabs"
+msgstr "Kategori primè yo"
+
+msgid "Secondary tabs"
+msgstr "Kategori segondè yo"
+
+#search aira-label
+msgid "Search component"
+msgstr "Motè rechèch"
+
+#state tool aria label
+msgid "Register to vote selector tool"
+msgstr "Zouti seleksyon pou enskri pou vote"
+
+msgid "Select your state or territory"
+msgstr "Chwazi Eta oswa teritwa w"
+
+msgid "States and territories list"
+msgstr "Lis Eta ak teritwa yo"
+
+msgid "States and territories suggestion list"
+msgstr "Lis sijesyon Eta ak teritwa yo"
