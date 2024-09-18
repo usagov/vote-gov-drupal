@@ -3,6 +3,8 @@
 namespace Drupal\vote_nvrf\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Url;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /**
@@ -24,12 +26,12 @@ class NvrfPageController extends ControllerBase {
 
     // Transform the state name string for comparison.
     $title = str_replace('-', ' ', $state_name);
+    $title = preg_replace('/^us /', 'u.s. ', $title);
     // Query the nodes to find a match.
     $node_storage = \Drupal::entityTypeManager()->getStorage('node');
     $node = $node_storage->loadByProperties([
       'type' => 'state_territory',
       'status' => 1,
-      'field_accepts_nvrf' => TRUE,
       'title' => $title,
     ]);
 
@@ -43,25 +45,69 @@ class NvrfPageController extends ControllerBase {
       $abbrev = $node->get('field_state_abbreviation')->value;
       $return_path = $node->getTranslation($language)->toUrl()->toString();
 
-      // Render the app in a custom page if a match was found.
-      $build = [
-        '#type' => 'inline_template',
-        '#template' => '<div id="root" data-returnPath="{{ return_path }}" data-stateId="{{ abbrev }}" class="nvrf-app-container vote-block-margin-y--narrow">
-          <img src="/themes/custom/votegov/dist/assets/img/loader.svg" width="80px" width="80px" class="display-block margin-x-auto" />
-          </div>',
-        '#context' => [
-          'abbrev' => $abbrev,
-          'return_path' => $return_path,
-        ],
-        '#attached' => [
-          'library' => [
-            'vote_nvrf/nvrf_assets',
+      if ($node->get('field_accepts_nvrf')->value) {
+        // Render the app in a custom page if a match was found.
+        $build = [
+          '#type' => 'inline_template',
+          '#template' => '<div id="root" data-returnPath="{{ return_path }}" data-stateId="{{ abbrev }}" class="nvrf-app-container vote-block-margin-y--narrow">
+            <img src="/themes/custom/votegov/dist/assets/img/loader.svg" width="80px" width="80px" class="display-block margin-x-auto" />
+            </div>',
+          '#context' => [
+            'abbrev' => $abbrev,
+            'return_path' => $return_path,
           ],
-        ],
-      ];
+          '#attached' => [
+            'library' => [
+              'vote_nvrf/nvrf_assets',
+            ],
+          ],
+        ];
+      }
+      else {
+        // Redirect to the state page if the NVRF app isn't accepted.
+        $build = new RedirectResponse($return_path);
+      }
     }
 
     return $build;
+  }
+
+  /**
+   * NVRF Page Controller which outputs disabled nvrf app state links.
+   */
+  public function disabledStateFormsContent() {
+    $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+    $nodes = $node_storage->loadByProperties([
+      'type' => 'state_territory',
+      'status' => 1,
+      'field_accepts_nvrf' => FALSE,
+    ]);
+
+    $output = '<ul>';
+
+    foreach ($nodes as $node) {
+      $languages = [
+        'en' => 'vote_nvrf.nvrf_page',
+        'es' => 'vote_nvrf.nvrf_page_es',
+      ];
+      $title = $node->get('title')->value;
+      $state_name = strtolower($title);
+      $state_name = str_replace('.', '', $state_name);
+      $state_name = str_replace(' ', '-', $state_name);
+
+      foreach ($languages as $langcode => $route) {
+        $url = Url::fromRoute($route, ['state_name' => $state_name])->toString();
+        $output .= '<li><a href="' . $url . '">' . $title . '(' . $langcode . ')' . '</a></li>';
+      }
+    }
+
+    $output .= '</ul>';
+
+    return [
+      '#markup' => $output,
+      '#attached' => ['library' => []],
+      '#cache' => ['max-age' => 0],
+    ];
   }
 
 }
