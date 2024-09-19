@@ -18,10 +18,10 @@ msgstr "Chwazi lang"
 
 #breadcrumb
 msgid "Home"
-msgstr "Kwout pen"
+msgstr "Paj dakèy"
 
 msgid "Breadcrumb"
-msgstr "Ruta de navegación"
+msgstr "Kwout pen"
 
 # config.languages.params.Owner
 msgid "@sitename in language"
@@ -65,7 +65,7 @@ msgstr "Administrasyon Sèvis Jeneral (ann Anglè)"
 
 # data.translations.footer.identifier_more_info
 msgid "Looking for U.S. government information and services? @link."
-msgstr "Èske w ap chèche enfòmasyon ak sèvis gouvènman ameriken lofri? @link"
+msgstr "enfòmasyon ak sèvis gouvènman Etazini? @link"
 
 # data.translations.footer.identifier_more_info__1
 msgid "Visit USA.gov"
@@ -138,7 +138,7 @@ msgid "Other ways to register to vote"
 msgstr "Lòt fason pou enskri pou vote"
 
 msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
-msgstr "Dat limit pou enskripsyon votè se pou eleksyon 5 novanm 2024 la."
+msgstr "Dat limit pou enskripsyon votè se pou eleksyon la @election_date. @link"
 
 msgid "Find state and local election dates."
 msgstr "Jwenn dat eleksyon Eta ak lokal yo."
@@ -315,10 +315,10 @@ msgstr "Dimanch"
 
 # Temporary military and overseas voter cards
 msgid "Voting as a military service member"
-msgstr "Vote kòm yon manm sèvis militè
+msgstr "Vote kòm yon manm sèvis militè"
 
 msgid "Learn more from the Federal Voting Assistance Program (FVAP)."
-msgstr "Jwenn plis enfòmasyon nan Pwogram Asistans Federal pou Vote (Federal Voting Assistance Program)."
+msgstr "Jwenn plis enfòmasyon nan Pwogram Asistans Federal pou Vote (FVAP ann Anglè)."
 
 msgid "Voting as a U.S. citizen from outside the U.S."
 msgstr "Vote kòm sitwayen ameriken andeyò peyi Etazini"
@@ -331,9 +331,13 @@ msgstr "logo USA.gov"
 msgid "U.S. flag"
 msgstr "Drapo Etazini"
 
+# data.translations.aria_label_for_election_links
+msgid "External election resources"
+msgstr "Lyen eleksyon yo"
+
 #footer
 msgid "Visit our partner site to find more information about voting in the United States."
-msgstr "Al gade sit patnè nou an, USA.gov, pou jwenn plis enfòmasyon sou pwosesis vote Ozetazini."
+msgstr "Al gade sit patnè nou an pou jwenn plis enfòmasyon sou pwosesis vòt Ozetazini."
 
 #eac partner text
 msgid "Vote.gov is in partnership with"
