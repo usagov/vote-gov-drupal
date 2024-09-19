@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
 
+import { pageObjects } from '../../support/pageObjects.js'
+
 // the function below allows for axe to put the failer message into a table that is locted in the terminal after the test is run
 
 function terminalLog(violations) {
@@ -50,7 +52,10 @@ describe("Run AXE core on site pages", () => {
         cy.visit({
           url: page.route,
         });
-        cy.get('[class="usa-banner__button-text"]').click()
+
+        pageObjects
+        .headerButton()
+        .click()
         cy.injectAxe()
         cy.configureAxe({
             runOnly: {
@@ -62,5 +67,4 @@ describe("Run AXE core on site pages", () => {
       }
     );
   });
-
 
