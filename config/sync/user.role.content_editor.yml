@@ -89,6 +89,8 @@ permissions:
   - 'view own unpublished media'
   - 'view page revisions'
   - 'view state_territory revisions'
+  - 'view term revisions in basics_modules'
+  - 'view term revisions in nvrf_field'
   - 'view the administration theme'
   - 'view unpublished paragraphs'
   - 'view voter_guide revisions'
