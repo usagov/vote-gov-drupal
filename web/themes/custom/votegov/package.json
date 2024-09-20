@@ -6,15 +6,26 @@
   "scripts": {
     "gulp": "gulp watch",
     "dev": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
+    "@storybook/addon-essentials": "^8.3.2",
+    "@storybook/addon-interactions": "^8.3.2",
+    "@storybook/addon-links": "^8.3.2",
+    "@storybook/blocks": "^8.3.2",
+    "@storybook/html": "^8.3.2",
+    "@storybook/html-vite": "^8.3.2",
+    "@storybook/test": "^8.3.2",
     "@uswds/compile": "^1.2.0",
     "@uswds/uswds": "^3.8.2",
     "gulp": "^5.0.0",
     "gulp-uglify": "^3.0.2",
+    "storybook": "^8.3.2",
     "uglify-es": "^3.3.9"
   },
   "overrides": {
