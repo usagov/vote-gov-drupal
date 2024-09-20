@@ -43,7 +43,7 @@
   &::before {
     content: "";
     @include u-display('inline-block');
-    mask: url('../../img/svg/arrow-upward.svg') no-repeat center;
+    mask: url('../../img/svg/arrow-default.svg') no-repeat center;
     mask-size: auto;
     background-color: var(--vote-button-arrow-icon);
     width: 45px;
