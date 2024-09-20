@@ -23,7 +23,7 @@
     }
   }
 
-  a:where(:not(.usa-button)):active {
+  a:where(:not(.usa-button)):is(:active, :focus) {
     text-decoration: none;
     background-color: var(--vote-link-hover--bg-color);
     color: var(--vote-link-hover--color);
