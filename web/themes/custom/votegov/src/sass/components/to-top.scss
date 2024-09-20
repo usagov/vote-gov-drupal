@@ -21,16 +21,18 @@
     }
   }
 
+  @include u-radius-top('pill');
+  @include u-radius-bottom('pill');
+  @include u-width(6);
+  @include u-height(6);
+  @include u-position('fixed');
+  @include u-margin('auto');
   background-color: var(--vote-button-background);
   border: 2px solid var(--vote-button-border);
   border-radius: 50%;
   outline: 1px solid $base-white;
-  width: 48px;
-  height: 48px;
-  position: fixed;
   bottom: 1.25rem;
   right: 2rem;
-  margin: auto;
   transition: all 200ms;
   opacity: 0;
   visibility: hidden;
