@@ -2,31 +2,31 @@
   "name": "votegov",
   "version": "3.3.0",
   "description": "",
-  "main": "gulpfile.js",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "gulp": "gulp watch",
-    "dev": "gulp",
-    "build": "gulp build",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 4040",
+    "build-storybook": "storybook build",
+    "start": "npm run storybook"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@chromatic-com/storybook": "^1.9.0",
-    "@storybook/addon-essentials": "^8.3.2",
-    "@storybook/addon-interactions": "^8.3.2",
-    "@storybook/addon-links": "^8.3.2",
-    "@storybook/blocks": "^8.3.2",
-    "@storybook/html": "^8.3.2",
-    "@storybook/html-vite": "^8.3.2",
-    "@storybook/test": "^8.3.2",
-    "@uswds/compile": "^1.2.0",
-    "@uswds/uswds": "^3.8.2",
-    "gulp": "^5.0.0",
-    "gulp-uglify": "^3.0.2",
-    "storybook": "^8.3.2",
-    "uglify-es": "^3.3.9"
+    "@chromatic-com/storybook": "^1.7.0",
+    "@storybook/addon-essentials": "^8.2.9",
+    "@storybook/addon-interactions": "^8.2.9",
+    "@storybook/addon-links": "^8.2.9",
+    "@storybook/blocks": "^8.2.9",
+    "@storybook/html": "^8.2.9",
+    "@storybook/html-vite": "^8.2.9",
+    "@storybook/test": "^8.2.9",
+    "sass": "^1.77.6",
+    "storybook": "^8.2.9",
+    "vite-plugin-twig-drupal": "^1.4.0"
+  },
+  "dependencies": {
+    "@uswds/uswds": "^3.8.2"
   },
   "overrides": {
     "glob-parent": "6.0.2",
