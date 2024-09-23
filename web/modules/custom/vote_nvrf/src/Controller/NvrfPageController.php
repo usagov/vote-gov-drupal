@@ -76,6 +76,18 @@ class NvrfPageController extends ControllerBase {
    * NVRF Page Controller which outputs disabled nvrf app state links.
    */
   public function disabledStateFormsContent() {
+    // Get the current language.
+    $current_language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+
+    // Get the default language.
+    $default_language = \Drupal::languageManager()->getDefaultLanguage()->getId();
+
+    // Check if the current language is not the default.
+    if ($current_language !== $default_language) {
+      // Return a 404 response if no matches are found.
+      throw new NotFoundHttpException();
+    }
+
     $node_storage = \Drupal::entityTypeManager()->getStorage('node');
     $nodes = $node_storage->loadByProperties([
       'type' => 'state_territory',
