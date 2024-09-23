@@ -277,6 +277,16 @@ msgstr "Vous pouvez aussi @link au site Web électoral @of_state_name."
 msgid "register to vote by mail or in person"
 msgstr "vous inscrire pour voter par courrier ou en personne"
 
+# Temporary military and overseas voter cards
+msgid "Voting as a military service member"
+msgstr "Voter en tant que membre de militaire"
+
+msgid "Learn more from the Federal Voting Assistance Program (FVAP)."
+msgstr "En savoir plus grâce au Federal Voting Assistance Program (FVAP, en anglais)."
+
+msgid "Voting as a U.S. citizen from outside the U.S."
+msgstr "Voter en tant que citoyen américain à l'extérieur des États-Unis"
+
 # data.translations.months.january
 msgctxt "Long month name"
 msgid "January"
