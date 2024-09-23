@@ -1,0 +1,21 @@
+uuid: 80bba785-4d9a-4cc8-a72e-4e4ad6f57735
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_registration_info
+    - node.type.state_territory
+  module:
+    - vote_fields
+id: node.state_territory.field_registration_info
+field_name: field_registration_info
+entity_type: node
+bundle: state_territory
+label: 'Registration info'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: vote_fields_state_content

@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.state_territory.body
     - field.field.node.state_territory.field_accepts_nvrf
     - field.field.node.state_territory.field_address_location_inst
+    - field.field.node.state_territory.field_check_registration
     - field.field.node.state_territory.field_confirm_registration_link
     - field.field.node.state_territory.field_content_version
     - field.field.node.state_territory.field_election_homepage_link
@@ -15,19 +16,23 @@ dependencies:
     - field.field.node.state_territory.field_g_online_deadline
     - field.field.node.state_territory.field_identification_inst
     - field.field.node.state_territory.field_in_person_deadline
+    - field.field.node.state_territory.field_in_person_registration
     - field.field.node.state_territory.field_in_state_name
     - field.field.node.state_territory.field_is_state
     - field.field.node.state_territory.field_mail_postmarked_deadline
     - field.field.node.state_territory.field_mail_received_deadline
+    - field.field.node.state_territory.field_mail_registration
     - field.field.node.state_territory.field_mail_registration_link
     - field.field.node.state_territory.field_mailing_address_inst
     - field.field.node.state_territory.field_media
     - field.field.node.state_territory.field_metatags
+    - field.field.node.state_territory.field_military_and_overseas_regi
     - field.field.node.state_territory.field_more_info_link
     - field.field.node.state_territory.field_nvrf_fields
     - field.field.node.state_territory.field_nvrf_last_updated_date
     - field.field.node.state_territory.field_of_state_name
     - field.field.node.state_territory.field_online_deadline
+    - field.field.node.state_territory.field_online_registration
     - field.field.node.state_territory.field_override_confirm_reg_link
     - field.field.node.state_territory.field_override_election_hp_link
     - field.field.node.state_territory.field_override_mail_reg_link
@@ -37,7 +42,9 @@ dependencies:
     - field.field.node.state_territory.field_personal_information_inst
     - field.field.node.state_territory.field_political_party_inst
     - field.field.node.state_territory.field_reg_eligibility_desc
+    - field.field.node.state_territory.field_registration_info
     - field.field.node.state_territory.field_registration_link
+    - field.field.node.state_territory.field_registration_not_needed
     - field.field.node.state_territory.field_registration_type
     - field.field.node.state_territory.field_state_abbreviation
     - field.field.node.state_territory.field_updated_date
@@ -52,6 +59,7 @@ dependencies:
     - media_library
     - metatag
     - text
+    - vote_fields
     - vote_nvrf
 third_party_settings:
   field_group:
@@ -103,6 +111,7 @@ third_party_settings:
         - group_deadlines
         - group_form_links
         - group_nvrf
+        - group_state_display_content
       label: Tabs
       region: content
       parent_name: ''
@@ -203,7 +212,7 @@ third_party_settings:
       label: 'Version tracking'
       region: content
       parent_name: ''
-      weight: 10
+      weight: 11
       format_type: details_sidebar
       format_settings:
         classes: ''
@@ -213,6 +222,28 @@ third_party_settings:
         description: ''
         required_fields: true
         weight: 0
+    group_state_display_content:
+      children:
+        - field_check_registration
+        - field_registration_info
+        - field_online_registration
+        - field_mail_registration
+        - field_in_person_registration
+        - field_military_and_overseas_regi
+        - field_registration_not_needed
+      label: 'State display Content'
+      region: content
+      parent_name: group_form_tabs
+      weight: 24
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
 id: node.state_territory.default
 targetEntityType: node
 bundle: state_territory
@@ -220,7 +251,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -242,6 +273,12 @@ content:
       allowed_formats:
         hide_help: '0'
         hide_guidelines: '0'
+  field_check_registration:
+    type: vote_fields_state_content
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_confirm_registration_link:
     type: link_default
     weight: 9
@@ -329,6 +366,12 @@ content:
         rows: 5
       inline: true
     third_party_settings: {  }
+  field_in_person_registration:
+    type: vote_fields_state_content
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_in_state_name:
     type: string_textfield
     weight: 8
@@ -356,6 +399,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_mail_registration:
+    type: vote_fields_state_content
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_mail_registration_link:
     type: link_default
     weight: 10
@@ -366,7 +415,7 @@ content:
     third_party_settings: {  }
   field_mailing_address_inst:
     type: text_textarea
-    weight: 22
+    weight: 21
     region: content
     settings:
       rows: 5
@@ -381,11 +430,17 @@ content:
     third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
-    weight: 8
+    weight: 9
     region: content
     settings:
       sidebar: true
       use_details: true
+    third_party_settings: {  }
+  field_military_and_overseas_regi:
+    type: vote_fields_state_content
+    weight: 17
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_more_info_link:
     type: link_default
@@ -397,13 +452,13 @@ content:
     third_party_settings: {  }
   field_nvrf_fields:
     type: field_nvrf_fields
-    weight: 23
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }
   field_nvrf_last_updated_date:
     type: datetime_default
-    weight: 24
+    weight: 23
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -437,6 +492,12 @@ content:
         cols: 10
         rows: 5
       inline: true
+    third_party_settings: {  }
+  field_online_registration:
+    type: vote_fields_state_content
+    weight: 14
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_override_confirm_reg_link:
     type: link_default
@@ -480,7 +541,7 @@ content:
     third_party_settings: {  }
   field_pdf_pages:
     type: string_textfield
-    weight: 25
+    weight: 24
     region: content
     settings:
       size: 60
@@ -510,6 +571,12 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_registration_info:
+    type: vote_fields_state_content
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_registration_link:
     type: link_default
     weight: 6
@@ -517,6 +584,12 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_registration_not_needed:
+    type: vote_fields_state_content
+    weight: 18
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_registration_type:
     type: options_buttons
@@ -534,26 +607,26 @@ content:
     third_party_settings: {  }
   field_updated_date:
     type: datetime_default
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 7
+    weight: 8
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 6
+    weight: 7
     region: content
     settings:
       display_label: true
@@ -568,7 +641,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 3
     region: content
     settings:
       match_operator: CONTAINS
@@ -577,7 +650,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }

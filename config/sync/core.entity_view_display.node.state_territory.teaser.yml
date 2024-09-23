@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.state_territory.body
     - field.field.node.state_territory.field_accepts_nvrf
     - field.field.node.state_territory.field_address_location_inst
+    - field.field.node.state_territory.field_check_registration
     - field.field.node.state_territory.field_confirm_registration_link
     - field.field.node.state_territory.field_content_version
     - field.field.node.state_territory.field_election_homepage_link
@@ -16,19 +17,23 @@ dependencies:
     - field.field.node.state_territory.field_g_online_deadline
     - field.field.node.state_territory.field_identification_inst
     - field.field.node.state_territory.field_in_person_deadline
+    - field.field.node.state_territory.field_in_person_registration
     - field.field.node.state_territory.field_in_state_name
     - field.field.node.state_territory.field_is_state
     - field.field.node.state_territory.field_mail_postmarked_deadline
     - field.field.node.state_territory.field_mail_received_deadline
+    - field.field.node.state_territory.field_mail_registration
     - field.field.node.state_territory.field_mail_registration_link
     - field.field.node.state_territory.field_mailing_address_inst
     - field.field.node.state_territory.field_media
     - field.field.node.state_territory.field_metatags
+    - field.field.node.state_territory.field_military_and_overseas_regi
     - field.field.node.state_territory.field_more_info_link
     - field.field.node.state_territory.field_nvrf_fields
     - field.field.node.state_territory.field_nvrf_last_updated_date
     - field.field.node.state_territory.field_of_state_name
     - field.field.node.state_territory.field_online_deadline
+    - field.field.node.state_territory.field_online_registration
     - field.field.node.state_territory.field_override_confirm_reg_link
     - field.field.node.state_territory.field_override_election_hp_link
     - field.field.node.state_territory.field_override_mail_reg_link
@@ -38,7 +43,9 @@ dependencies:
     - field.field.node.state_territory.field_personal_information_inst
     - field.field.node.state_territory.field_political_party_inst
     - field.field.node.state_territory.field_reg_eligibility_desc
+    - field.field.node.state_territory.field_registration_info
     - field.field.node.state_territory.field_registration_link
+    - field.field.node.state_territory.field_registration_not_needed
     - field.field.node.state_territory.field_registration_type
     - field.field.node.state_territory.field_state_abbreviation
     - field.field.node.state_territory.field_updated_date
@@ -64,6 +71,7 @@ hidden:
   body: true
   field_accepts_nvrf: true
   field_address_location_inst: true
+  field_check_registration: true
   field_confirm_registration_link: true
   field_content_version: true
   field_election_homepage_link: true
@@ -73,19 +81,23 @@ hidden:
   field_g_online_deadline: true
   field_identification_inst: true
   field_in_person_deadline: true
+  field_in_person_registration: true
   field_in_state_name: true
   field_is_state: true
   field_mail_postmarked_deadline: true
   field_mail_received_deadline: true
+  field_mail_registration: true
   field_mail_registration_link: true
   field_mailing_address_inst: true
   field_media: true
   field_metatags: true
+  field_military_and_overseas_regi: true
   field_more_info_link: true
   field_nvrf_fields: true
   field_nvrf_last_updated_date: true
   field_of_state_name: true
   field_online_deadline: true
+  field_online_registration: true
   field_override_confirm_reg_link: true
   field_override_election_hp_link: true
   field_override_mail_reg_link: true
@@ -95,7 +107,9 @@ hidden:
   field_personal_information_inst: true
   field_political_party_inst: true
   field_reg_eligibility_desc: true
+  field_registration_info: true
   field_registration_link: true
+  field_registration_not_needed: true
   field_registration_type: true
   field_state_abbreviation: true
   field_updated_date: true

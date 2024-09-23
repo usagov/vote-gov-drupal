@@ -83,6 +83,7 @@ module:
   user: 0
   uswds_templates: 0
   views_data_export: 0
+  vote_fields: 0
   vote_nvrf: 0
   vote_utility: 0
   workflows: 0

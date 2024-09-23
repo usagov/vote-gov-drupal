@@ -1,0 +1,21 @@
+uuid: f92303b1-c6e9-4c50-b148-2b8a8d0b4e69
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_military_and_overseas_regi
+    - node.type.state_territory
+  module:
+    - vote_fields
+id: node.state_territory.field_military_and_overseas_regi
+field_name: field_military_and_overseas_regi
+entity_type: node
+bundle: state_territory
+label: 'Military and overseas registration'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: vote_fields_state_content

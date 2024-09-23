@@ -1,0 +1,21 @@
+uuid: 721cb62e-d1e2-4aa8-ad24-cff1f35be94a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.state_display_content
+    - field.storage.block_content.field_mail_registration
+  module:
+    - vote_fields
+id: block_content.state_display_content.field_mail_registration
+field_name: field_mail_registration
+entity_type: block_content
+bundle: state_display_content
+label: 'Mail registration'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: vote_fields_state_content

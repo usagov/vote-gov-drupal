@@ -1,0 +1,19 @@
+uuid: 1e0dc7ce-6e35-4cef-a4d8-0e7500e3c386
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - vote_fields
+id: node.field_registration_info
+field_name: field_registration_info
+entity_type: node
+type: vote_fields_state_content
+settings: {  }
+module: vote_fields
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

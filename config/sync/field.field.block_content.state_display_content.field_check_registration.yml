@@ -1,0 +1,21 @@
+uuid: ece92ac7-dfb9-4fdc-87f6-2ed5f62a547f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.state_display_content
+    - field.storage.block_content.field_check_registration
+  module:
+    - vote_fields
+id: block_content.state_display_content.field_check_registration
+field_name: field_check_registration
+entity_type: block_content
+bundle: state_display_content
+label: 'Check registration'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: vote_fields_state_content

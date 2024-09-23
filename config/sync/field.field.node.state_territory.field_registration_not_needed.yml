@@ -1,0 +1,21 @@
+uuid: 229db619-0718-4ff2-96d2-9f2f916cabd1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_registration_not_needed
+    - node.type.state_territory
+  module:
+    - vote_fields
+id: node.state_territory.field_registration_not_needed
+field_name: field_registration_not_needed
+entity_type: node
+bundle: state_territory
+label: 'Registration not needed'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: vote_fields_state_content

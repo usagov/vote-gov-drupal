@@ -1,0 +1,21 @@
+uuid: 6e4058ae-1e1e-4a2f-8ca9-cc1772cb12b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.state_display_content
+    - field.storage.block_content.field_registration_intro
+  module:
+    - vote_fields
+id: block_content.state_display_content.field_registration_intro
+field_name: field_registration_intro
+entity_type: block_content
+bundle: state_display_content
+label: 'Registration intro'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: vote_fields_state_content

@@ -1,0 +1,21 @@
+uuid: fea36257-6fba-44a4-b3dc-7f303516591b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_online_registration
+    - node.type.state_territory
+  module:
+    - vote_fields
+id: node.state_territory.field_online_registration
+field_name: field_online_registration
+entity_type: node
+bundle: state_territory
+label: 'Online registration'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: vote_fields_state_content

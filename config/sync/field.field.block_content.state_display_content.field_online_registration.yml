@@ -1,0 +1,21 @@
+uuid: 4b9e0b2b-1d9e-4778-a635-fd2c9ed5e1fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.state_display_content
+    - field.storage.block_content.field_online_registration
+  module:
+    - vote_fields
+id: block_content.state_display_content.field_online_registration
+field_name: field_online_registration
+entity_type: block_content
+bundle: state_display_content
+label: 'Online registration'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: vote_fields_state_content
