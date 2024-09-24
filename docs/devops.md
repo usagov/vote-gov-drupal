@@ -230,7 +230,7 @@ It may be helpful to pause the `upkeep-workflow` if doing other tasks in a space
 1. Select `Triggers` from the left hand column
 1. Click the edit pencil beside the trigger for the space to pause
 1. In the `Repeats on these days*` section, uncheck the box for the current day
-  * Note: de-selecting multiple days may be required if operating near midnight UTC
+    * Note: de-selecting multiple days may be required if operating near midnight UTC
 1. Click the `Save Trigger` button at the bottom of the edit box
 1. Perform the task needed to prevent memory conflicts during
 1. Return to the Triggers edit page for the space previously paused
