@@ -4,15 +4,15 @@
 
 .back-to-top {
   --vote-button-background: #{$base-white};
-  --vote-button-border: #{$base-alt-hover};
-  --vote-button-arrow-icon: #{$ac-dark};
+  --vote-button-border: #{$base-primary};
+  --vote-button-arrow-icon: #{$base-dark};
 
   [data-theme="contrast"] & {
     --vote-button-border: #{$link-high-contrast};
   }
 
   @include hover {
-    --vote-button-background: #{$base-alt-hover};
+    --vote-button-background: #{$base-primary};
     --vote-button-arrow-icon: #{$base-white};
 
     [data-theme="contrast"] & {
@@ -21,18 +21,17 @@
     }
   }
 
-  @include u-radius-top('pill');
-  @include u-radius-bottom('pill');
+  @include u-radius('pill');
   @include u-width(6);
   @include u-height(6);
   @include u-position('fixed');
+  @include u-radius('pill');
+  bottom: 1.25rem;
+  right: 2rem;
   margin: auto;
   background-color: var(--vote-button-background);
   border: 2px solid var(--vote-button-border);
-  border-radius: 50%;
   outline: 1px solid $base-white;
-  bottom: 1.25rem;
-  right: 2rem;
   transition: all 200ms;
   opacity: 0;
   visibility: hidden;
@@ -42,18 +41,17 @@
     bottom: 3.5rem;
   }
 
-  &::before {
-    content: "";
+  @include before {
     @include u-display('inline-block');
+    @include u-width('full');
+    @include u-height('full');
     mask: url('../../img/svg/arrow-default.svg') no-repeat center;
     mask-size: auto;
     background-color: var(--vote-button-arrow-icon);
-    width: 45px;
-    height: 45px;
   }
-}
 
-.back-to-top.js-scrolled {
-  opacity: 1;
-  visibility: visible;
+  &.js-scrolled {
+    opacity: 1;
+    visibility: visible;
+  }
 }

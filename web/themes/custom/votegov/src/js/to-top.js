@@ -1,30 +1,26 @@
-const btt = document.querySelector('.back-to-top');
-
+const backToTop = document.querySelector('.back-to-top');
+const topOffset = 60;
 let lastKnownScrollPosition = 0;
+let ticking = false;
 
-function doSomething() {
-  scrollCompare = window.scrollY - lastKnownScrollPosition;
-  lastKnownScrollPosition = window.scrollY;
-  scrollComp = scrollCompare < 0 && window.scrollY > 60;
-
-  if (scrollComp) {
-      btt.classList.add('js-scrolled');
+const scrollFunction = (inverted) => {
+  if (inverted) {
+    backToTop.classList.add('js-scrolled');
   } else {
-    btt.classList.remove('js-scrolled');
+    backToTop.classList.remove('js-scrolled');
   }
 }
 
-const throttle = (func, timeFrame) => {
-  let lastTime = 0;
-  return function () {
-    const now = new Date();
-    if (now - lastTime >= timeFrame) {
-      func();
-      lastTime = now;
-    }
+document.addEventListener('scroll', (e) => {
+  scrollCompare = window.scrollY <= lastKnownScrollPosition;
+  lastKnownScrollPosition = window.scrollY;
+
+  if (!ticking) {
+    window.requestAnimationFrame(function() {
+      scrollFunction(scrollCompare && window.scrollY > topOffset);
+      ticking = false;
+    });
+
+    ticking = true;
   }
-}
-
-const throttledFunction = throttle(doSomething, 500);
-
-document.addEventListener('scroll', throttledFunction);
+});
