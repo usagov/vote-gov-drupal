@@ -26,7 +26,7 @@
   @include u-width(6);
   @include u-height(6);
   @include u-position('fixed');
-  @include u-margin('auto');
+  margin: auto;
   background-color: var(--vote-button-background);
   border: 2px solid var(--vote-button-border);
   border-radius: 50%;
