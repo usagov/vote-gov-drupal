@@ -1,0 +1,21 @@
+uuid: de568db6-d383-421a-801a-886cc5ba331a
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.registration_form_selector
+    - field.storage.block_content.field_enable_digital_form_link
+id: block_content.registration_form_selector.field_enable_digital_form_link
+field_name: field_enable_digital_form_link
+entity_type: block_content
+bundle: registration_form_selector
+label: 'Enable digital form link'
+description: 'Selecting this option launches the digital form to the public.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

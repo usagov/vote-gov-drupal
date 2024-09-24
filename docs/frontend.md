@@ -5,8 +5,8 @@ This site is built using Drupal and Tome with a USWDS theme.
 These commands should be run inside web/themes/custom/votegov
 | **Command**      | **Use case**                                                                      |
 |------------------|-----------------------------------------------------------------------------------|
-| `npm run build`  | Aggregates, compiles and minifies frontend assets into the dist directory                                                            |
-| `npm run dev`    | Starts browsersync, watches for scss/js/twig file changes and compiles frontend assets into the dist directory                                                                   |
+| `npm run build`  | Aggregates, compiles and minifies frontend assets into the dist directory for deployment                                                            |
+| `npm run dev`    | Starts watching for changes to scss/js/twig files and compiles frontend assets into the dist directory                                                                   |
 
 ## Theme file structure
 ```
@@ -21,9 +21,11 @@ web/
             ├── dist
             ├── fonts
             ├── img
+            ├── json
             ├── php-includes
-            ├── js
-            ├── sass
+            └── src/
+                ├── js
+                └── sass
             └── templates
 ```
 
@@ -33,11 +35,13 @@ web/
 
 **img** - All favicons and logos that compile into dist
 
+**json** - Number translation mapping json for frontend utility replacement
+
 **php-includes** - Preprocess and theme functions organized by use type
 
-**js** - Javascript files that compile into dist
+**src/js** - Javascript files that compile into dist
 
-**sass** - SCSS files that compile into dist
+**src/sass** - SCSS files that compile into dist
 
 **templates** - Vote.gov theme templates and template overrides. Templates inside the /templates/partial directory are being included or extended by other templates.
 

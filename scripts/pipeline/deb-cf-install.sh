@@ -2,15 +2,10 @@
 
 echo "Installing CloudFoundry repository..."
 {
+  curl -L "https://packages.cloudfoundry.org/stable?release=linux64-binary&version=v8&source=github" | tar -zx
   if [ "$(whoami)" != "root" ]; then
-    wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
-    echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-    sudo apt-get update
-    sudo apt-get install -y cf8-cli
+    sudo mv cf cf8 /usr/local/bin
   else
-    wget -U "" -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add -
-    echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-    apt-get update
-    apt-get install -y cf8-cli
+    mv cf cf8 /usr/local/bin
   fi
 } >/dev/null 2>&1

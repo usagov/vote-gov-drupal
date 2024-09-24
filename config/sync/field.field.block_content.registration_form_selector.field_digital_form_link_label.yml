@@ -10,7 +10,7 @@ field_name: field_digital_form_link_label
 entity_type: block_content
 bundle: registration_form_selector
 label: 'Digital form link label'
-description: 'Entering a value in this field triggers the digital form page to be generated on the public site.'
+description: ''
 required: false
 translatable: true
 default_value: {  }

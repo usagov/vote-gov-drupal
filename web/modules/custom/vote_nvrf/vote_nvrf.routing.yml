@@ -12,3 +12,9 @@ vote_nvrf.nvrf_page_es:
   requirements:
     _permission: 'access content'
     state_name: '[a-z-]+'
+vote_nvrf.disabled_nvrf_pages:
+  path: '/disabled-state-mail-in-forms'
+  defaults:
+    _controller: '\Drupal\vote_nvrf\Controller\NvrfPageController::disabledStateFormsContent'
+  requirements:
+    _permission: 'access content'

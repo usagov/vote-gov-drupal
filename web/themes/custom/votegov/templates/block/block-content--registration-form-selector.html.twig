@@ -16,6 +16,7 @@
 
   <h2>{{ content.field_heading | field_value | render | replace({"@state_name": currentnode.getTitle()}) | raw }}</h2>
 
+  {% if (elements['#block_content'].field_enable_digital_form_link.value == 1) %}
   {{ content.field_digital_form_paragraph | field_value }}
 
   {% if content.field_digital_form_link_label | render %}
@@ -30,6 +31,7 @@
         'data': 'nvrf-pdf-tool-registration'
       } %}
     </p>
+  {% endif %}
   {% endif %}
 
   <form class="usa-form" method="get" id="register_form_download" data-test="nvrfForm">
