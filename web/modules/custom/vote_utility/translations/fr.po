@@ -370,3 +370,6 @@ msgstr "vendredi"
 # data.translations.days.saturday
 msgid "Saturday"
 msgstr "samedi"
+
+msgid "Know your voting rights"
+msgstr "Connaissez vos droits de vote"
