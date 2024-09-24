@@ -220,17 +220,27 @@ This workflow is trigger after PR merges to the `prod` branch requires authorize
 
 #### Scheduled Pipelines
 
-`build-static-workflow`
+`upkeep-workflow`
 
-This workflow will build the static site and copy it to the `static` site S3 bucket. It currently runs twice an hour.
+This workflow will run the [upkeep script](../scripts/upkeep) which will run the `drush cron` command followed by a build of the static site and copy it to the `static` site S3 bucket. It currently runs twice an hour in the stage and prod environments.
 
-`drush-cron-workflow`
+It may be helpful to pause the `upkeep-workflow` if doing other tasks in a space. To do this:
+1. Navigate to the `vote-gov-drupal` project in CircleCI
+1. Go to `Project Settings`
+1. Select `Triggers` from the left hand column
+1. Click the edit pencil beside the trigger for the space to pause
+1. In the `Repeats on these days*` section, uncheck the box for the current day
+  * Note: de-selecting multiple days may be required if operating near midnight UTC
+1. Click the `Save Trigger` button at the bottom of the edit box
+1. Perform the task needed to prevent memory conflicts during
+1. Return to the Triggers edit page for the space previously paused
+1. Re-check the box for the days unchecked previously
+1. Click the `Save Trigger` button at the bottom of the edit box
 
-This workflow will run the command `drush cron`. It current runs once an hour.
 
 `scheduled-backup-workflow`
 
-This work flow runs [scheduled-backup.sh](#scheduled-backupsh). This currently runs once an hour.
+This work flow runs [scheduled-backup.sh](#scheduled-backupsh). This currently runs twice a day outside of business hours for the stage and prod environments.
 
 `link-validation-workflow`
 
