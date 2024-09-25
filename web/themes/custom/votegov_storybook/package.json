@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "storybook dev -p 4040",
+    "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "start": "npm run storybook"
   },
