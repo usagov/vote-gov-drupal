@@ -11,12 +11,6 @@ msgstr ""
 msgid "Primary navigation"
 msgstr "Navegación principal"
 
-msgid "Primary tabs"
-msgstr "Pestañas principales"
-
-msgid "Secondary tabs"
-msgstr "Pestañas secundarias"
-
 #language selector
 msgid "Spanish"
 msgstr "Español"

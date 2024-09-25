@@ -12,12 +12,6 @@ msgstr ""
 msgid "Primary navigation"
 msgstr "Navigation principale"
 
-msgid "Primary tabs"
-msgstr "Onglets principaux"
-
-msgid "Secondary tabs"
-msgstr "Onglets secondaires"
-
 # config.languages.languageName
 msgid "French"
 msgstr "Français"
