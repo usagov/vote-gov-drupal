@@ -204,7 +204,7 @@ msgid "@link on @state_name’s election website."
 msgstr "@link は@state_name（州名）の州選挙のウェブサイトをご覧ください。"
 
 # @link: data.translations.register.online__answer1 (see accessibility updates)
-msgid "Start or update your registration"
+msgid "Start or update your registration online"
 msgstr "登録を開始または更新する"
 
 # data.translations.register.online__answer2 (see accessibility updates)

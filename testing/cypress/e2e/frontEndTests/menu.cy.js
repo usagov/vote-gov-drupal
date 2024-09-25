@@ -1,30 +1,54 @@
 // <reference types="cypress" />
 
+import { pageObjects } from "../../support/pageObjects"
+
 describe('Check main menu', () => {
   beforeEach('visit page', () => {
     cy.visit('/')
   })
 
   it('main menu - desktop', () => {
-    cy.get('[data-test="mainNav"]').find('li').then(li => {
-      cy.get(li[1]).realClick()
-      cy.get('[data-test="subMenu"]').should('be.visible')
-    })
+    pageObjects
+    .mainNav()
+    .find('li')
+    .then(li => {
+      cy.wrap(li[1]).click()
+      .then(() => {
+        pageObjects
+        .subMenu().should('be.visible');
+      });
+    });
   })
 
   it('main menu - mobile', () => {
     // set viewport to mobile
     cy.viewport('iphone-6')
-    cy.get('[data-test="mobileBtn"]').click()
-    cy.get('[data-test="mobileNav"]').should('be.visible')
-    cy.get('[data-test="mobileNav"]').find('li').then(li => {
-      cy.get(li[1]).click()
-      cy.get('[data-test="subMenu"]').should('be.visible')
-    })
-    cy.get('[data-test="searchBox"]').should('be.visible')
-    // close menu
-    cy.get('[data-test="mainCloseBtn"]').click()
-    cy.get('[data-test="mobileNav"]').should('not.be.visible')
 
+    pageObjects
+    .mobileBtn().click()
+
+    pageObjects
+    .mobileNav().should('be.visible')
+
+    pageObjects
+    .mobileNav()
+    .find('li')
+    .then(li => {
+      cy.wrap(li[1]).click()
+      .then(() => {
+        pageObjects
+        .subMenu().should('be.visible');
+      });
+    });
+
+    pageObjects
+    .searchBox().should('be.visible')
+    
+    // close menu
+    pageObjects
+    .mainCloseBtn().click()
+
+    pageObjects
+    cy.get('[data-test="mobileNav"]').should('not.be.visible')
   })
 })

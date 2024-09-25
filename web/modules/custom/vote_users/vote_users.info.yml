@@ -1,0 +1,5 @@
+name: 'Vote Users'
+type: module
+description: 'Provides custom handling of user accounts.'
+core_version_requirement: ^10 || ^11
+package: Custom

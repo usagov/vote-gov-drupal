@@ -25,6 +25,7 @@ There are multiple custom commands that will both create a user and also delete 
 
 Here are the following users/role
 - site admin
+- site builder
 - content manager
 - content editor
 
