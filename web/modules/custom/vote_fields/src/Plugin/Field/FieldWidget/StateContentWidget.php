@@ -35,6 +35,7 @@ final class StateContentWidget extends WidgetBase {
       '#type' => 'text_format',
       '#title' => $this->t('Text'),
       '#default_value' => $items[$delta]->text ?? NULL,
+      '#format' => 'simple_html',
       '#allowed_formats' => ['simple_html'],
     ];
 
@@ -76,6 +77,11 @@ final class StateContentWidget extends WidgetBase {
       }
       if ($value['link_text'] === '') {
         $values[$delta]['link_text'] = NULL;
+      }
+
+      // Prepare the data for the Text field before saving.
+      if (isset($value['text'])) {
+        $values[$delta]['text'] = $value['text']['value'];
       }
     }
     return $values;
