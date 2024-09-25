@@ -42,7 +42,7 @@ dependencies:
     - field.field.node.state_territory.field_personal_information_inst
     - field.field.node.state_territory.field_political_party_inst
     - field.field.node.state_territory.field_reg_eligibility_desc
-    - field.field.node.state_territory.field_registration_info
+    - field.field.node.state_territory.field_registration_intro
     - field.field.node.state_territory.field_registration_link
     - field.field.node.state_territory.field_registration_not_needed
     - field.field.node.state_territory.field_registration_type
@@ -225,7 +225,7 @@ third_party_settings:
     group_state_display_content:
       children:
         - field_check_registration
-        - field_registration_info
+        - field_registration_intro
         - field_online_registration
         - field_mail_registration
         - field_in_person_registration
@@ -251,7 +251,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -571,7 +571,7 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_registration_info:
+  field_registration_intro:
     type: vote_fields_state_content
     weight: 13
     region: content
@@ -641,7 +641,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 2
     region: content
     settings:
       match_operator: CONTAINS

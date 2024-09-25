@@ -1,20 +1,20 @@
-uuid: 80bba785-4d9a-4cc8-a72e-4e4ad6f57735
-langcode: fr
+uuid: 02278e3c-56da-44b8-a453-f1059178d6af
+langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_registration_info
+    - field.storage.node.field_registration_intro
     - node.type.state_territory
   module:
     - vote_fields
-id: node.state_territory.field_registration_info
-field_name: field_registration_info
+id: node.state_territory.field_registration_intro
+field_name: field_registration_intro
 entity_type: node
 bundle: state_territory
-label: 'Registration info'
+label: 'Registration intro'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
