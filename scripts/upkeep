@@ -75,7 +75,8 @@ echo ""
 echo "**************************************************"
 echo "Adding missing data files for NVRF..."
 echo "**************************************************"
-cp -rfp ${app_path}/web/data ${html_path}
+cp -rfp ${app_path}/web/es/nvrf/data ${html_path}
+cp -rfp ${app_path}/web/nvrf/data ${html_path}
 echo "Missing data files for NVRF...completed!"
 echo ""
 
