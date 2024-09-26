@@ -11,7 +11,7 @@ id: node.state_territory.field_mail_registration
 field_name: field_mail_registration
 entity_type: node
 bundle: state_territory
-label: 'Mail registration'
+label: 'Mail registration (override)'
 description: ''
 required: false
 translatable: true

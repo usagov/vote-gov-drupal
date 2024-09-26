@@ -12,7 +12,7 @@ field_name: field_registration_not_needed
 entity_type: node
 bundle: state_territory
 label: 'Registration not needed'
-description: ''
+description: 'Entering content into these fields overrides the default state display content for this state/territory.'
 required: false
 translatable: true
 default_value: {  }

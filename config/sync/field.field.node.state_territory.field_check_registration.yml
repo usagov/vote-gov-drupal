@@ -11,7 +11,7 @@ id: node.state_territory.field_check_registration
 field_name: field_check_registration
 entity_type: node
 bundle: state_territory
-label: 'Check registration'
+label: 'Check registration (override)'
 description: ''
 required: false
 translatable: true

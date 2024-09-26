@@ -242,7 +242,7 @@ third_party_settings:
         id: ''
         label_as_html: false
         formatter: closed
-        description: ''
+        description: 'Entering content into these fields overrides the default state display content for this state/territory.'
         required_fields: true
 id: node.state_territory.default
 targetEntityType: node

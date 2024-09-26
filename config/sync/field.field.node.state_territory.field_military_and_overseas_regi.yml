@@ -11,7 +11,7 @@ id: node.state_territory.field_military_and_overseas_regi
 field_name: field_military_and_overseas_regi
 entity_type: node
 bundle: state_territory
-label: 'Military and overseas registration'
+label: 'Military and overseas registration (override)'
 description: ''
 required: false
 translatable: true

@@ -11,7 +11,7 @@ id: node.state_territory.field_in_person_registration
 field_name: field_in_person_registration
 entity_type: node
 bundle: state_territory
-label: 'In person registration'
+label: 'In person registration (override)'
 description: ''
 required: false
 translatable: true

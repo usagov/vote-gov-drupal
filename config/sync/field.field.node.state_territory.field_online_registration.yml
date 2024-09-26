@@ -11,7 +11,7 @@ id: node.state_territory.field_online_registration
 field_name: field_online_registration
 entity_type: node
 bundle: state_territory
-label: 'Online registration'
+label: 'Online registration (override)'
 description: ''
 required: false
 translatable: true
