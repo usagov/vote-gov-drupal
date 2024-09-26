@@ -231,19 +231,6 @@ jobs:
             source ./scripts/pipeline/downsync-backup.sh
             ./scripts/pipeline/scheduled_backup.sh "${prod_cf_space}"
           when: on_fail
-  snyk:
-    docker:
-      - image: snyk/snyk:php
-    # environment:
-    #   SNYK_TOKEN: ${SNYK_TOKEN }
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/
-      - run:
-          name: "Snyk"
-          command: |
-            snyk test --org=${SNYK_ORG} --severity-threshold=$THRESHOLD
   link-validation:
     docker:
       - image: cypress/included:cypress-13.14.2-node-20.17.0-chrome-128.0.6613.119-1-ff-130.0-edge-128.0.2739.63-1
@@ -292,7 +279,6 @@ workflows:
             equal: [ prod, << pipeline.git.branch >> ]
     jobs:
       - php-lint
-      - snyk
       - build-theme:
           filters:
             branches:
