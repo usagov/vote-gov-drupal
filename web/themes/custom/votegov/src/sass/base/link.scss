@@ -2,7 +2,9 @@
 @use "mixins" as *;
 
 a {
-  main & {
+  main &,
+  // targeting links within NVRF form
+  .usa-form & {
     @include vote-link-bg;
   }
 }
