@@ -45,7 +45,7 @@ final class StateContentWidget extends WidgetBase {
       '#default_value' => $items[$delta]->link_text ?? NULL,
     ];
 
-    $element['#theme_wrappers'] = ['container', 'form_element'];
+    $element['#theme_wrappers'] = ['fieldset'];
     $element['#attributes']['class'][] = 'vote-fields-state-content-elements';
     $element['#attached']['library'][] = 'vote_fields/vote_fields_state_content';
 

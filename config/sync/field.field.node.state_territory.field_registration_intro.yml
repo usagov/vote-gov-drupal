@@ -11,7 +11,7 @@ id: node.state_territory.field_registration_intro
 field_name: field_registration_intro
 entity_type: node
 bundle: state_territory
-label: 'Registration intro'
+label: 'Registration intro (override)'
 description: ''
 required: false
 translatable: true
