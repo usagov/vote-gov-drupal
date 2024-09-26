@@ -305,3 +305,81 @@ msgstr "sexta-feira"
 # data.translations.days.saturday
 msgid "Saturday"
 msgstr "sábado"
+
+#footer
+msgid "Visit our partner site to find more information about voting in the United States."
+msgstr "Visite nosso site de parceiros para encontrar mais informações sobre como votar nos Estados Unidos."
+
+msgid "Close"
+msgstr "Fechar"
+
+msgid "U.S. flag"
+msgstr "Bandeira dos EUA"
+
+msgid "Menu"
+msgstr "Menu"
+
+msgid "Breadcrumb"
+msgstr "Trilha de navegação"
+
+msgid "Search component"
+msgstr "Componente de pesquisa"
+
+msgid "Primary navigation"
+msgstr "Navegação primária"
+
+msgid "Introduction"
+msgstr "Introdução"
+
+msgid "Find state and local election dates."
+msgstr "Encontre as datas das eleições estaduais e locais."
+
+msgid "Register to vote selector tool"
+msgstr "Registre-se na ferramenta de seleção de votos"
+
+msgid "States and territories list"
+msgstr "Lista de estados e territóriosF"
+
+#voter guide cards
+msgid "Learn more from the Federal Voting Assistance Program (FVAP)."
+msgstr "Saiba mais sobre o Programa Federal de Assistência ao Voto."
+
+#eac partner text
+msgid "Vote.gov is in partnership with"
+msgstr "Vote.gov está em parceria com os"
+
+msgid "U.S. government information and services"
+msgstr "Informações e serviços do governo dos EUA"
+
+#aria-label for election links
+msgid "External election resources"
+msgstr "Links eleitorais"
+
+#alt text for USA.gov logo
+msgid "USA.gov logo"
+msgstr "USA.gov logotipo"
+
+#footer
+msgid "Visit our partner site to find more information about voting in the United States."
+msgstr "Visite nosso site parceiro, USA.gov, para encontrar mais informações sobre como votar nos Estados Unidos."
+
+msgid "How to register and update your registration"
+msgstr "Como se cadastrar e atualizar seu cadastro"
+
+msgid "Start or update your online registration"
+msgstr "Iniciar ou atualizar seu registro online"
+
+msgid "Voter registration deadlines are for the November 05, 2024 election."
+msgstr "Os prazos de registro de eleitores são para a eleição de 05 de novembro de 2024."
+
+msgid "Find state and local election dates."
+msgstr "Encontre as datas das eleições estaduais e locais."
+
+msgid "Register to vote selector tool"
+msgstr "Registre-se na ferramenta de seleção de votos"
+
+msgid "Select your state or territory"
+msgstr "Selecione seu estado ou território"
+
+msgid "States and territories suggestion list"
+msgstr "Lista de sugestões de estados e territórios"
