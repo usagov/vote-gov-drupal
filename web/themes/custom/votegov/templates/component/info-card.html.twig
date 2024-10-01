@@ -1,0 +1,23 @@
+<div class="vote-info-card">
+  <h2 class="vote-info-card__header">
+    {{ heading }}
+  </h2>
+  {% if body %}
+    <div class="vote-info-card__body">
+      {{ body }}
+    </div>
+  {% endif %}
+  {% if link %}
+    <div class="vote-info-card__button">
+      {% include '@votegov/component/button.html.twig' with {
+        'href': link.url,
+        'label': link.title
+      } %}
+    </div>
+  {% endif %}
+  {% if footer %}
+    <div class="vote-info-card__footer">
+      {{ footer }}
+    </div>
+  {% endif %}
+</div>
