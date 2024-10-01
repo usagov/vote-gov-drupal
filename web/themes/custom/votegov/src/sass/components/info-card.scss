@@ -5,18 +5,17 @@
 .vote-info-card {
   @include u-border(1px, 'gray-cool-20', 'solid');
   @include u-radius('lg');
-  @include u-margin-y(4);
+  @include u-padding(4);
 
-  @include at-media('tablet') {
-    @include u-margin-y(6);
+  .vote-info-card + & {
+    @include u-margin-top(4);
+
+    @include at-media('tablet') {
+      @include u-margin-top(6);
+    }
   }
 
-  &__container {
-    @include u-padding(4);
-  }
-
-  &__body {
-    margin-top: 28px;
-    margin-bottom: 28px;
+  > * + * {
+    @include u-margin-top(3);
   }
 }
