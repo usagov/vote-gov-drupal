@@ -70,6 +70,9 @@
     {{ drupal_view('inline_alert', 'embed_1') }}
   {% endif %}
 
+  {# State display content block #}
+  {{ drupal_entity('block_content', '22') }}
+
   {% block content %}
     {{ content }}
   {% endblock %}

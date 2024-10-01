@@ -1,0 +1,4 @@
+<div{{ attributes.addClass(classes) }}>
+  {% set election_date = ('Voter registration deadlines are for the <strong>@date</strong> election.' | raw) | t({'@date': content.field_election_date.0 | render }) %}
+  {{ election_date }}
+</div>
