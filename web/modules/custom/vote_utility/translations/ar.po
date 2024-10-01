@@ -149,8 +149,8 @@ msgstr "الموعد النهائي للتسجيل عبر الإنترنت:"
 msgid "In person registration deadline:"
 msgstr "الموعد النهائي للتسجيل الشخصي:"
 
-msgid "Voter registration deadlines are for the @election_date election."
-msgstr "المواعيد النهائية لتسجيل الناخبين هي لانتخابات 5 نوفمبر/تشرين الثاني 2024."
+msgid "Voter registration deadlines are for the <strong>@election_date</strong> election."
+msgstr "المواعيد النهائية لتسجيل الناخبين هي لانتخابات <strong>@election_date</strong>"
 
 msgid "Find state and local election dates."
 msgstr "تعرف على مواعيد الانتخابات على مستوى الولاية والمحليات."

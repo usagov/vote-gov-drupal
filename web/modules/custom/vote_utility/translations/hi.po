@@ -84,8 +84,8 @@ msgstr "मतदान करने के लिए पंजीकरण क�
 msgid "Other ways to register to vote"
 msgstr "मतदान के लिए पंजीकरण करने के अन्य तरीके"
 
-msgid "Voter registration deadlines are for the @election_date election."
-msgstr "@election_date चुनाव के लिए मतदाता पंजीकरण की समय सीमा"
+msgid "Voter registration deadlines are for the <strong>@election_date</strong> election."
+msgstr "<strong>@election_date</strong> चुनाव के लिए मतदाता पंजीकरण की समय सीमा"
 
 msgid "Find state and local election dates."
 msgstr ""

@@ -137,8 +137,8 @@ msgstr "Demare oswa mete enskripsyon anliy ou ajou"
 msgid "Other ways to register to vote"
 msgstr "Lòt fason pou enskri pou vote"
 
-msgid "Voter registration deadlines are for the @election_date election."
-msgstr "Dat limit pou enskripsyon votè se pou eleksyon la @election_date. @link"
+msgid "Voter registration deadlines are for the <strong>@election_date</strong> election."
+msgstr "Dat limit pou enskripsyon votè se pou eleksyon la <strong>@election_date</strong>."
 
 msgid "Find state and local election dates."
 msgstr "Jwenn dat eleksyon Eta ak lokal yo."

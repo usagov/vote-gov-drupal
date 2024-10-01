@@ -170,8 +170,8 @@ msgstr "Comment vous inscrire et mettre à jour votre inscription"
 msgid "Other ways to register to vote"
 msgstr "Autres façons de vous inscrire au vote"
 
-msgid "Voter registration deadlines are for the @election_date election."
-msgstr "Les dates limites d'inscription de vote sont pour l'élection du @election_date. @link"
+msgid "Voter registration deadlines are for the <strong>@election_date</strong> election."
+msgstr "Les dates limites d'inscription de vote sont pour l'élection du <strong>@election_date</strong>."
 
 msgid "Find state and local election dates."
 msgstr "Trouvez les dates des élections étatiques et locales"

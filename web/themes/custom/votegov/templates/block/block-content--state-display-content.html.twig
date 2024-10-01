@@ -2,7 +2,7 @@
   {# Check Registration #}
 
   {# Election Date #}
-  {% set election_date = ('Voter registration deadlines are for the <strong>@election_date</strong> election.' | raw) | t({'@election_date': content.field_election_date.0 | render }) %}
+  {% set election_date = "Voter registration deadlines are for the <strong>@election_date</strong> election." | t({'@election_date': content.field_election_date.0 | render }) %}
   {{ election_date }}
 
   {# Online Registration #}

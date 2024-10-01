@@ -84,8 +84,8 @@ msgstr "Làm thế nào để đăng ký bỏ phiếu"
 msgid "Other ways to register to vote"
 msgstr "Các cách khác để đăng ký bỏ phiếu"
 
-msgid "Voter registration deadlines are for the @election_date election."
-msgstr "Thời hạn cuối cùng đăng ký cử tri cho cuộc bầu cử @election_date"
+msgid "Voter registration deadlines are for the <strong>@election_date</strong> election."
+msgstr "Thời hạn cuối cùng đăng ký cử tri cho cuộc bầu cử <strong>@election_date</strong>"
 
 msgid "Find state and local election dates."
 msgstr ""
