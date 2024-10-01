@@ -1,4 +1,15 @@
 <div{{ attributes.addClass(classes) }}>
-  {% set election_date = ('Voter registration deadlines are for the <strong>@date</strong> election.' | raw) | t({'@date': content.field_election_date.0 | render }) %}
+  {# Check Registration #}
+
+  {# Election Date #}
+  {% set election_date = ('Voter registration deadlines are for the <strong>@election_date</strong> election.' | raw) | t({'@election_date': content.field_election_date.0 | render }) %}
   {{ election_date }}
+
+  {# Online Registration #}
+
+  {# Mail Registration #}
+
+  {# In Person Registration #}
+
+  {# Outside the U.S. #}
 </div>
