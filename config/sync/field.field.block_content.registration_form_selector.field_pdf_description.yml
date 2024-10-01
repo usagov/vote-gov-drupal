@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.registration_form_selector
     - field.storage.block_content.field_pdf_description
+    - filter.format.simple_html
   module:
     - text
 id: block_content.registration_form_selector.field_pdf_description
@@ -18,5 +19,6 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  allowed_formats: {  }
+  allowed_formats:
+    - simple_html
 field_type: text_long
