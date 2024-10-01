@@ -61,7 +61,7 @@ msgstr "Administração dos Serviços Gerais (em inglês)"
 
 # data.translations.footer.identifier_more_info
 msgid "Looking for U.S. government information and services? @link."
-msgstr "Você procura informação e serviços do governo dos EUA? @link"
+msgstr "Informações e serviços do governo dos EUA? @link"
 
 # data.translations.footer.identifier_more_info__1
 msgid "Visit USA.gov"
@@ -331,12 +331,6 @@ msgstr "Navegação primária"
 msgid "Introduction"
 msgstr "Introdução"
 
-msgid "Find state and local election dates."
-msgstr "Encontre as datas das eleições estaduais e locais."
-
-msgid "Register to vote selector tool"
-msgstr "Registre-se na ferramenta de seleção de votos"
-
 msgid "States and territories list"
 msgstr "Lista de estados e territóriosF"
 
@@ -348,9 +342,6 @@ msgstr "Saiba mais sobre o Programa Federal de Assistência ao Voto."
 msgid "Vote.gov is in partnership with"
 msgstr "Vote.gov está em parceria com os"
 
-msgid "U.S. government information and services"
-msgstr "Informações e serviços do governo dos EUA"
-
 #aria-label for election links
 msgid "External election resources"
 msgstr "Links eleitorais"
@@ -358,10 +349,6 @@ msgstr "Links eleitorais"
 #alt text for USA.gov logo
 msgid "USA.gov logo"
 msgstr "USA.gov logotipo"
-
-#footer
-msgid "Visit our partner site to find more information about voting in the United States."
-msgstr "Visite nosso site parceiro, USA.gov, para encontrar mais informações sobre como votar nos Estados Unidos."
 
 msgid "How to register and update your registration"
 msgstr "Como se cadastrar e atualizar seu cadastro"
