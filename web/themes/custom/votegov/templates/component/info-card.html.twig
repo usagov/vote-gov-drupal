@@ -1,3 +1,26 @@
+{#
+/**
+ * @file
+ * Default theme implementation of info card component.
+ *
+ * Component template variables:
+ * - heading: string (required)
+ * - body: string
+ * - link.url: string
+ * - link.title: string
+ * - footer: string
+ *
+ * Usage example:
+ * {% include '@votegov/component/info-card.html.twig' with {
+ *   'heading': var_title,
+ *   'body': var_body,
+ *   'link': {
+ *     'url': 'var_url',
+ *     'title': 'var_text',
+ *   }
+ * } %}
+ *
+#}
 <div class="vote-info-card">
   <h2 class="vote-info-card__header">
     {{ heading }}
