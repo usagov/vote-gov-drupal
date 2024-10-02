@@ -76,8 +76,16 @@
     {% endif %}
 
     {% if inperson_registration is not empty %}
-      {{ inperson_registration }}
-      {{ inperson_deadline }}
+      {% set body = inperson_registration.text['#markup'] | t({'@state_in-person_deadline': inperson_deadline | render }) %}
+      {% set link_title = inperson_registration.link_text['#markup'] | t({'@state_name': title_english }) %}
+      {% include '@votegov/component/info-card.html.twig' with {
+        'heading': inperson_registration.heading,
+        'body': body,
+          'link': {
+            'url': more_info_link,
+            'title': link_title,
+          }
+      } %}
     {% endif %}
 
     {% if military_overseas_registration is not empty %}
