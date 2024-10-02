@@ -7,23 +7,19 @@
 #}
 
 {% block content %}
-  {# More info #}
-  {% if content.field_more_info_link | render %}
-    <h2>{{ 'How to register to vote' | t({ '@state_name': state_name }) }}</h2>
-    {% set more_info_link = content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ) %}
-    {% set more_info_link_text = "Learn more about voting" | t({'@state_name': state_name}) %}
+  {% if registration_not_needed is not empty %}
+    <h2>{{ registration_not_needed.heading }}</h2>
 
-    {% if language != "en" and not content.field_override_more_info_link | render %}
-      {% set more_info_link_text = more_info_link_text ~ ' ' ~ in_english %}
+    {{ registration_not_needed.text }}
+
+    {% if more_info_link and registration_not_needed.link_text %}
+      <p>
+        {% include '@votegov/component/button.html.twig' with {
+          'label': registration_not_needed.link_text,
+          'href': more_info_link
+        } %}
+      </p>
     {% endif %}
-
-    <p>{{ 'Voter registration is not required in @state_name. @link on @state_name’s election website.' | t({
-        '@link': { "#markup": "<a href=\"#{more_info_link}\">#{more_info_link_text}</a>"} | render,
-        '@state_name': state_name,
-        '@of_state_name': of_state_name,
-        '@in_state_name': in_state_name
-      }) }}
-    </p>
   {% endif %}
 
   {# JSON Schema #}
@@ -47,12 +43,4 @@
 {#    }{{ end }}]#}
 {#  }#}
 {#</script>#}
-{% endblock %}
-
-{% block deadlines %}
-  {# No deadline info. #}
-{% endblock %}
-
-{% block confirm %}
-  {# No confirmation info. #}
 {% endblock %}
