@@ -3,7 +3,8 @@
 
   {# Election Date #}
   {% if content.field_election_date | render %}
-    {% set election_date = "Voter registration deadlines are for the <strong>@election_date</strong> election." | t({'@election_date': content.field_election_date.0 | render }) %}
+    {% set text = content.field_election_text.0['#text'] %}
+    {% set election_date = text | t({'@date': content.field_election_date.0 | render }) %}
     {{ election_date }}
   {% endif %}
 
