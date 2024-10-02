@@ -10,6 +10,7 @@ dependencies:
     - field.field.block_content.registration_form_selector.field_digital_form_paragraph
     - field.field.block_content.registration_form_selector.field_enable_digital_form_link
     - field.field.block_content.registration_form_selector.field_heading
+    - field.field.block_content.registration_form_selector.field_pdf_description
     - field.field.block_content.registration_form_selector.field_registration_form_link
     - field.field.block_content.registration_form_selector.field_submit_button_label
   module:
@@ -26,7 +27,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_description:
     type: string
@@ -34,7 +35,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_digital_form_link_label:
     type: string
@@ -42,14 +43,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 9
+    weight: 7
     region: content
   field_digital_form_paragraph:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 8
+    weight: 6
     region: content
   field_enable_digital_form_link:
     type: boolean
@@ -59,7 +60,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 10
+    weight: 8
     region: content
   field_heading:
     type: string
@@ -68,6 +69,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_pdf_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
     region: content
   field_registration_form_link:
     type: link_separate
@@ -79,7 +87,7 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_submit_button_label:
     type: string
@@ -87,7 +95,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
 hidden:
   langcode: true
