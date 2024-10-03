@@ -26,17 +26,6 @@ export ssg_endpoint="https://ssg-${environment}.vote.gov"
 [ "${environment}" = "prod" ] && export ssg_endpoint="https://vote.gov"
 export ssg_sitemap_endpoint=ssg_endpoint
 
-echo "**************************************************"
-echo "Copying current static files from '${bucket_name}'..."
-echo "**************************************************"
-if [ "$(ls -A $html_path)" ]; then
-  echo "Static html directory is not empty. Syncing aborted."
-else
-  aws s3 sync s3://${bucket} ${html_path} --delete --no-verify-ssl 2>/dev/null
-  echo "Copying current static files from '${bucket_name}'...completed!"
-fi
-echo ""
-
 cd ${app_path}
 echo "**************************************************"
 echo "Running 'drush cron' in '${environment}'..."
@@ -116,6 +105,13 @@ echo "Deleting taxonomy directories..."
 echo "**************************************************"
 rm -rf ${html_path}/taxonomy 2>/dev/null
 echo "Deleting taxonomy directories...completed!"
+echo ""
+
+echo "**************************************************"
+echo "Removing miscellaneous files..."
+echo "**************************************************"
+rm -rf ${html_path}/disabled-state-mail-in-forms 2>/dev/null
+echo "Removing miscellaneous files...completed!"
 echo ""
 
 echo "**************************************************"

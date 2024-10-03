@@ -42,3 +42,9 @@ Please ensure you have addressed all concerns below before marking a PR "ready f
 - Check basic logic of the code.
 - Check for coding best practices (to the best of your ability).
 - Check for insufficiently commented code.
+
+## Merge strategy guidance
+- PRs merged into `dev` branch should use the "Squash and merge" method, ensuring that every commit starts with a ticket number followed by a brief description of changes.
+  - **Special case**: A merge from the `stage` branch to the `dev` branch needs to maintain history and should use the "Create a merge commit" method instead.
+- PRs merged into `stage` branch should use the "Create a merge commit" method, this is critical for maintaining commit history and ids in all environment branches.
+- PRs merged into `prod` branch should also use the "Create a merge commit" method.

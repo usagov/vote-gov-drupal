@@ -12,12 +12,6 @@ msgstr ""
 msgid "Primary navigation"
 msgstr "Navigation principale"
 
-msgid "Primary tabs"
-msgstr "Onglets principaux"
-
-msgid "Secondary tabs"
-msgstr "Onglets secondaires"
-
 # config.languages.languageName
 msgid "French"
 msgstr "Français"
@@ -265,10 +259,6 @@ msgstr "En savoir plus sur le vote"
 msgid "@link on @state_name’s election website."
 msgstr "@link au site Web électoral @of_state_name."
 
-# @link: data.translations.register.online__answer1 (see accessibility updates)
-msgid "Start or update your registration"
-msgstr "Commencez votre inscription en ligne"
-
 # data.translations.register.online__answer2 (see accessibility updates)
 msgid "You can also @link on @state_name’s election website."
 msgstr "Vous pouvez aussi @link au site Web électoral @of_state_name."
@@ -276,6 +266,16 @@ msgstr "Vous pouvez aussi @link au site Web électoral @of_state_name."
 # @link: data.translations.register.online__answer2 (see accessibility updates)
 msgid "register to vote by mail or in person"
 msgstr "vous inscrire pour voter par courrier ou en personne"
+
+# Temporary military and overseas voter cards
+msgid "Voting as a military service member"
+msgstr "Voter en tant que membre de militaire"
+
+msgid "Learn more from the Federal Voting Assistance Program (FVAP)."
+msgstr "En savoir plus grâce au Federal Voting Assistance Program (FVAP, en anglais)."
+
+msgid "Voting as a U.S. citizen from outside the U.S."
+msgstr "Voter en tant que citoyen américain à l'extérieur des États-Unis"
 
 # data.translations.months.january
 msgctxt "Long month name"
@@ -364,3 +364,6 @@ msgstr "vendredi"
 # data.translations.days.saturday
 msgid "Saturday"
 msgstr "samedi"
+
+msgid "Know your voting rights"
+msgstr "Connaissez vos droits de vote"
