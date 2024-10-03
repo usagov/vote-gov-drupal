@@ -23,6 +23,7 @@
 {#{% set election_homepage_link = content.field_override_election_hp_link | field_value | default(content.field_election_homepage_link | field_value) | render | trim %}#}
 {% set registration_link = content.field_override_registration_link | field_value | default(content.field_registration_link | field_value) | render | trim %}
 {% set state_mail_pdf_link = content.field_override_mail_reg_link | field_value | default(content.field_mail_registration_link | field_value) | render | trim %}
+{% set military_overseas_registration_link = content.field_override_military_overseas | field_value | default(content.field_military_overseas_registra | field_value) | render | trim %}
 
 {# Deadlines with fallbacks. #}
 {% set online_deadline = content.field_online_deadline | field_value | default(content.field_g_online_deadline | field_value) %}
@@ -81,7 +82,15 @@
     {% endif %}
 
     {% if military_overseas_registration is not empty %}
-      {{ military_overseas_registration }}
+
+      {% include '@votegov/component/info-card.html.twig' with {
+        'heading': military_overseas_registration.heading,
+        'body': military_overseas_registration.text,
+        'link': {
+          'url': military_overseas_registration_link,
+          'title': military_overseas_registration.link_text,
+        }
+      } %}
     {% endif %}
   {% endblock %}
 </div>
