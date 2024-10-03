@@ -6,6 +6,10 @@
  */
 #}
 
+{% block aside %}
+{# keep empty for not needed #}
+{% endblock %}
+
 {% block content %}
   {% if registration_not_needed is not empty %}
     <h2>{{ registration_not_needed.heading }}</h2>
