@@ -1,0 +1,19 @@
+uuid: fe7cc426-5af2-4a96-92a2-5d3007f8eb0d
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_override_military_link
+field_name: field_override_military_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

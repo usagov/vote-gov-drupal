@@ -27,6 +27,7 @@ dependencies:
     - field.field.node.state_territory.field_media
     - field.field.node.state_territory.field_metatags
     - field.field.node.state_territory.field_military_and_overseas_regi
+    - field.field.node.state_territory.field_military_overseas_registra
     - field.field.node.state_territory.field_more_info_link
     - field.field.node.state_territory.field_nvrf_fields
     - field.field.node.state_territory.field_nvrf_last_updated_date
@@ -36,6 +37,7 @@ dependencies:
     - field.field.node.state_territory.field_override_confirm_reg_link
     - field.field.node.state_territory.field_override_election_hp_link
     - field.field.node.state_territory.field_override_mail_reg_link
+    - field.field.node.state_territory.field_override_military_link
     - field.field.node.state_territory.field_override_more_info_link
     - field.field.node.state_territory.field_override_registration_link
     - field.field.node.state_territory.field_pdf_pages
@@ -267,6 +269,18 @@ content:
     third_party_settings: {  }
     weight: 44
     region: content
+  field_military_overseas_registra:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 47
+    region: content
   field_more_info_link:
     type: link
     label: hidden
@@ -367,6 +381,18 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 37
+    region: content
+  field_override_military_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 48
     region: content
   field_override_more_info_link:
     type: link

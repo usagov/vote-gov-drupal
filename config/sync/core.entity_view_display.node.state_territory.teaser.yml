@@ -28,6 +28,7 @@ dependencies:
     - field.field.node.state_territory.field_media
     - field.field.node.state_territory.field_metatags
     - field.field.node.state_territory.field_military_and_overseas_regi
+    - field.field.node.state_territory.field_military_overseas_registra
     - field.field.node.state_territory.field_more_info_link
     - field.field.node.state_territory.field_nvrf_fields
     - field.field.node.state_territory.field_nvrf_last_updated_date
@@ -37,6 +38,7 @@ dependencies:
     - field.field.node.state_territory.field_override_confirm_reg_link
     - field.field.node.state_territory.field_override_election_hp_link
     - field.field.node.state_territory.field_override_mail_reg_link
+    - field.field.node.state_territory.field_override_military_link
     - field.field.node.state_territory.field_override_more_info_link
     - field.field.node.state_territory.field_override_registration_link
     - field.field.node.state_territory.field_pdf_pages
@@ -92,6 +94,7 @@ hidden:
   field_media: true
   field_metatags: true
   field_military_and_overseas_regi: true
+  field_military_overseas_registra: true
   field_more_info_link: true
   field_nvrf_fields: true
   field_nvrf_last_updated_date: true
@@ -101,6 +104,7 @@ hidden:
   field_override_confirm_reg_link: true
   field_override_election_hp_link: true
   field_override_mail_reg_link: true
+  field_override_military_link: true
   field_override_more_info_link: true
   field_override_registration_link: true
   field_pdf_pages: true

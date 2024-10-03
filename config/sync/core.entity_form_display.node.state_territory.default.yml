@@ -27,6 +27,7 @@ dependencies:
     - field.field.node.state_territory.field_media
     - field.field.node.state_territory.field_metatags
     - field.field.node.state_territory.field_military_and_overseas_regi
+    - field.field.node.state_territory.field_military_overseas_registra
     - field.field.node.state_territory.field_more_info_link
     - field.field.node.state_territory.field_nvrf_fields
     - field.field.node.state_territory.field_nvrf_last_updated_date
@@ -36,6 +37,7 @@ dependencies:
     - field.field.node.state_territory.field_override_confirm_reg_link
     - field.field.node.state_territory.field_override_election_hp_link
     - field.field.node.state_territory.field_override_mail_reg_link
+    - field.field.node.state_territory.field_override_military_link
     - field.field.node.state_territory.field_override_more_info_link
     - field.field.node.state_territory.field_override_registration_link
     - field.field.node.state_territory.field_pdf_pages
@@ -92,12 +94,13 @@ third_party_settings:
         - field_override_registration_link
         - field_override_election_hp_link
         - field_override_more_info_link
+        - field_override_military_link
         - field_override_confirm_reg_link
         - field_override_mail_reg_link
       label: 'Link overrides (for translations)'
       region: content
       parent_name: group_form_links
-      weight: 11
+      weight: 12
       format_type: fieldset
       format_settings:
         classes: ''
@@ -169,6 +172,7 @@ third_party_settings:
         - field_election_homepage_link
         - field_more_info_link
         - field_confirm_registration_link
+        - field_military_overseas_registra
         - field_mail_registration_link
         - group_link_overrides
       label: Links
@@ -407,7 +411,7 @@ content:
     third_party_settings: {  }
   field_mail_registration_link:
     type: link_default
-    weight: 10
+    weight: 11
     region: content
     settings:
       placeholder_url: ''
@@ -441,6 +445,14 @@ content:
     weight: 17
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_military_overseas_registra:
+    type: link_default
+    weight: 10
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   field_more_info_link:
     type: link_default
@@ -501,7 +513,7 @@ content:
     third_party_settings: {  }
   field_override_confirm_reg_link:
     type: link_default
-    weight: 10
+    weight: 11
     region: content
     settings:
       placeholder_url: ''
@@ -518,6 +530,14 @@ content:
   field_override_mail_reg_link:
     type: link_default
     weight: 12
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_override_military_link:
+    type: link_default
+    weight: 10
     region: content
     settings:
       placeholder_url: ''
