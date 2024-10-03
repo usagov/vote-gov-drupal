@@ -271,7 +271,11 @@
   }
 }
 
+
 .usa-nav__secondary {
+  // setting bottom as a variable to help with spacing for larger text sizes from a11y bar
+  $nav-bottom: 5.5rem;
+
   @include at-media-max('tablet-lg') {
     @include u-margin(0);
     @include grid-container;
@@ -281,15 +285,23 @@
       border-top: 1px solid $bg-light-medium;
     }
   }
-
+  
   @include at-media('tablet-lg') {
     [dir="rtl"] & {
       right: unset;
     }
-
+    
     @include u-right(0);
-    bottom: 5.5rem;
+    bottom: $nav-bottom;
     inset-inline-end: 5rem;
+
+    [data-scale="large"] & {
+      bottom: $nav-bottom - 0.25rem;
+    }
+
+    [data-scale="x-large"] & {
+      bottom: $nav-bottom - 0.5rem;
+    }
   }
 }
 
