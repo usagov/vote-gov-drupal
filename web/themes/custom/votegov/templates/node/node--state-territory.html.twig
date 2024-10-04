@@ -40,6 +40,8 @@
 {% set mail_registration = state_display_content.field_mail_registration.0 | default([]) | merge(content.field_mail_registration.0 | default([])) %}
 {% set inperson_registration = state_display_content.field_in_person_registration.0 | default([]) | merge(content.field_in_person_registration.0 | default([])) %}
 {% set check_registration = state_display_content.field_check_registration.0 | default([]) | merge(content.field_check_registration.0 | default([])) %}
+{% set election_date = state_display_content.field_election_date.0 | default([]) | merge(content.field_election_date.0 | default([])) %}
+{% set election_text = state_display_content.field_election_text.0 | default([]) | merge(content.field_election_text.0 | default([])) %}
 
 {# Registration types #}
 {% set registration_types = content.field_registration_type | field_value | column('#markup') %}
@@ -61,6 +63,12 @@
     {% if check_registration is not empty %}
       {{ check_registration }}
       {{ confirm_registration_link }}
+    {% endif %}
+
+     {# Election Date #}
+    {% if (election_date is not empty) and (election_text is not empty) %}
+      {% set election_date_text = election_text['#text'] | t({'@date': election_date | render }) %}
+      {{ election_date_text }}
     {% endif %}
 
     {% if registration_intro is not empty %}
