@@ -301,3 +301,6 @@ msgstr "选择您所在州或属地"
 
 msgid "States and territories suggestion list"
 msgstr "州和属地建议清单"
+
+msgid "Voting as a U.S. citizen from outside the U.S."
+msgstr "从Federal Voting Assistance Program了解更多信息。"
