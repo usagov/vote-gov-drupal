@@ -140,6 +140,9 @@ echo "Saving to backup bucket..."
   aws s3 cp ./latest.tar.gz s3://${bucket}/${BACKUP_ENV}/  --no-verify-ssl >/dev/null 2>&1 && echo "Successfully copied latest.tar.gz to S3!" || echo "Failed to copy latest.tar.gz to S3!"
   aws s3 cp ./latest.tar.gz s3://${bucket}/${BACKUP_ENV}/${today}.tar.gz  --no-verify-ssl >/dev/null 2>&1 && echo "Successfully copied ${today}.tar.gz to S3!" || echo "Failed to copy ${today}.tar.gz to S3!"
 
+  # copy latest database to top level
+  aws s3 cp ./backup_${now}.sql.gz s3://${bucket}/${BACKUP_ENV}/latest.sql.gz  --no-verify-ssl >/dev/null 2>&1 && echo "Successfully copied latest.sql.gz to S3!" || echo "Failed to copy latest.sql.gz to S3!"
+
   cf delete-service-key "${service}" "${service_key}" -f >/dev/null 2>&1
 }
 
