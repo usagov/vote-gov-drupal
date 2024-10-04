@@ -294,8 +294,10 @@ msgid "Register to vote selector tool"
 msgstr "登记投票选择器工具"
 
 msgid "States and territories list"
-msgstr "州和属地建议清单"
+msgstr "州和属地清单"
 
 msgid "Select your state or territory"
-msgstr "州和属地建议清单"
+msgstr "选择您所在州或属地"
 
+msgid "States and territories suggestion list"
+msgstr "州和属地建议清单"
