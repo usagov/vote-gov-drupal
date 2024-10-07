@@ -6,11 +6,11 @@
     "build": "npm run reset-dist && npm run copy-dist:js && npm run copy-dist:css && npm run copy-data && npm run copy-data-es",
     "reset-dist": "mkdir -p ./dist/assets",
     "copy-dist:js": "cp -r ./node_modules/vote-gov-nvrf-app/dist/assets/index.js ./dist/assets/index.js",
-    "copy-dist:css": "cp -r ./node_modules/vote-gov-nvrf-app/dist/theme/assets/styles/nvrf.css ./dist/assets/nvrf.css",
+    "copy-dist:css": "cp -r ./node_modules/vote-gov-nvrf-app/dist/assets/index.css ./dist/assets/index.css",
     "copy-data": "mkdir -p ../../../nvrf && rm -rf ../../../nvrf/data && cp -r ./node_modules/vote-gov-nvrf-app/dist/nvrf/data ../../../nvrf/data",
     "copy-data-es": "mkdir -p ../../../es/nvrf && rm -rf ../../../es/nvrf/data && cp -r ./node_modules/vote-gov-nvrf-app/dist/es/nvrf/data ../../../es/nvrf/data"
   },
   "dependencies": {
-    "vote-gov-nvrf-app": "github:usagov/vote-gov-nvrf-app#stage"
+    "vote-gov-nvrf-app": "github:usagov/vote-gov-nvrf-app#v0.18.0"
   }
 }
