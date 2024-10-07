@@ -23,12 +23,49 @@ final class StateContentWidget extends WidgetBase {
   /**
    * {@inheritdoc}
    */
+  public static function defaultSettings(): array {
+    $settings['form_subfield_display'] = [
+      'heading',
+      'text',
+      'link_text'
+    ];
+
+    return $settings + parent::defaultSettings();
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function settingsForm(array $form, FormStateInterface $form_state): array {
+    $settings = $this->getSettings();
+
+    $element['form_subfield_display'] = [
+      '#type' => 'checkboxes',
+      '#title' => t('Fields to display in the form'),
+      '#options' => [
+        'heading' => 'Heading',
+        'text' => 'Text',
+        'link_text' => 'Link text',
+      ],
+      '#required' => TRUE,
+      '#default_value' => $settings['form_subfield_display'],
+      '#description' => t('Select all subfields that you want to display in the form.'),
+    ];
+
+    return $element;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state): array {
+    $settings = $this->getSettings();
 
     $element['heading'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Heading'),
       '#default_value' => $items[$delta]->heading ?? NULL,
+      '#access' => in_array('heading', $settings['form_subfield_display'])
     ];
 
     $element['text'] = [
@@ -37,12 +74,14 @@ final class StateContentWidget extends WidgetBase {
       '#default_value' => $items[$delta]->text ?? NULL,
       '#format' => 'simple_html',
       '#allowed_formats' => ['simple_html'],
+      '#access' => in_array('text', $settings['form_subfield_display'])
     ];
 
     $element['link_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Link text'),
       '#default_value' => $items[$delta]->link_text ?? NULL,
+      '#access' => in_array('link_text', $settings['form_subfield_display'])
     ];
 
     $element['#theme_wrappers'] = ['fieldset'];
