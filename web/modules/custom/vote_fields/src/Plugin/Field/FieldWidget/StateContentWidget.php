@@ -27,7 +27,7 @@ final class StateContentWidget extends WidgetBase {
     $settings['form_subfield_display'] = [
       'heading',
       'text',
-      'link_text'
+      'link_text',
     ];
 
     return $settings + parent::defaultSettings();
@@ -65,7 +65,7 @@ final class StateContentWidget extends WidgetBase {
       '#type' => 'textfield',
       '#title' => $this->t('Heading'),
       '#default_value' => $items[$delta]->heading ?? NULL,
-      '#access' => in_array('heading', $settings['form_subfield_display'])
+      '#access' => in_array('heading', $settings['form_subfield_display']),
     ];
 
     $element['text'] = [
@@ -74,14 +74,14 @@ final class StateContentWidget extends WidgetBase {
       '#default_value' => $items[$delta]->text ?? NULL,
       '#format' => 'simple_html',
       '#allowed_formats' => ['simple_html'],
-      '#access' => in_array('text', $settings['form_subfield_display'])
+      '#access' => in_array('text', $settings['form_subfield_display']),
     ];
 
     $element['link_text'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Link text'),
       '#default_value' => $items[$delta]->link_text ?? NULL,
-      '#access' => in_array('link_text', $settings['form_subfield_display'])
+      '#access' => in_array('link_text', $settings['form_subfield_display']),
     ];
 
     $element['#theme_wrappers'] = ['fieldset'];
