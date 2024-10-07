@@ -29,7 +29,11 @@ content:
     type: vote_fields_state_content
     weight: 3
     region: content
-    settings: {  }
+    settings:
+      form_subfield_display:
+        - heading
+        - text
+        - link_text
     third_party_settings: {  }
   field_display_title:
     type: string_textfield
@@ -60,43 +64,71 @@ content:
     type: vote_fields_state_content
     weight: 7
     region: content
-    settings: {  }
+    settings:
+      form_subfield_display:
+        - heading
+        - text
+        - link_text
     third_party_settings: {  }
   field_mail_registration:
     type: vote_fields_state_content
     weight: 5
     region: content
-    settings: {  }
+    settings:
+      form_subfield_display:
+        - heading
+        - text
+        - link_text
     third_party_settings: {  }
   field_military_and_overseas_regi:
     type: vote_fields_state_content
     weight: 8
     region: content
-    settings: {  }
+    settings:
+      form_subfield_display:
+        heading: heading
+        text: text
+        link_text: 0
     third_party_settings: {  }
   field_nvrf_details:
     type: vote_fields_state_content
     weight: 6
     region: content
-    settings: {  }
+    settings:
+      form_subfield_display:
+        - heading
+        - text
+        - link_text
     third_party_settings: {  }
   field_online_registration:
     type: vote_fields_state_content
     weight: 4
     region: content
-    settings: {  }
+    settings:
+      form_subfield_display:
+        - heading
+        - text
+        - link_text
     third_party_settings: {  }
   field_registration_intro:
     type: vote_fields_state_content
     weight: 2
     region: content
-    settings: {  }
+    settings:
+      form_subfield_display:
+        heading: heading
+        text: text
+        link_text: 0
     third_party_settings: {  }
   field_registration_not_needed:
     type: vote_fields_state_content
     weight: 9
     region: content
-    settings: {  }
+    settings:
+      form_subfield_display:
+        - heading
+        - text
+        - link_text
     third_party_settings: {  }
   info:
     type: string_textfield
