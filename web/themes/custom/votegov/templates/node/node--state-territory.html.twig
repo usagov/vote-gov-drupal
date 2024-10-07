@@ -50,6 +50,13 @@
 {% set has_online = "online" in registration_types %}
 {% set not_needed = "not-needed" in registration_types %}
 
+{# Registration types #}
+{% set registration_types = content.field_registration_type | field_value | column('#markup') %}
+{% set has_in_person = "in-person" in registration_types %}
+{% set has_mail = "by-mail" in registration_types %}
+{% set has_online = "online" in registration_types %}
+{% set not_needed = "not-needed" in registration_types %}
+
 <div{{ attributes.addClass(classes) }}>
   {# Hold these title_* placeholders for potential integration #}
   {{ title_prefix }}
@@ -76,10 +83,20 @@
       {{ registration_intro.text }}
     {% endif %}
 
-    {% if online_registration is not empty %}
+    {% if has_online and (online_registration is not empty) %}
       {{ online_registration }}
       {{ online_deadline }}
       {{ registration_link }}
+      {% set body = online_registration.text['#markup'] | t({'@state_online_deadline': online_deadline | render, '@state_name': title_english}) %}
+      {% set link_title = online_registration.link_text['#markup'] | t({'@state_name': title_english }) %}
+      {% include '@votegov/component/info-card.html.twig' with {
+        'heading': online_registration.heading,
+        'body': body,
+          'link': {
+            'url': registration_link,
+            'title': link_title,
+          }
+      } %}
     {% endif %}
 
     {% if mail_registration is not empty %}
