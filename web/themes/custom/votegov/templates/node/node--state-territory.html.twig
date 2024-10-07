@@ -19,6 +19,11 @@
   'usa-in-page-nav-container'
 ] %}
 
+{% set state_name = label | field_value | render %}
+{% set accepts_nvrf = node.field_accepts_nvrf.value == 1 %}
+
+{% set has_mail = "by-mail" in (content.field_registration_type | field_value | column('#markup')) %}
+
 {# Links with fallbacks. #}
 {% set more_info_link = content.field_override_more_info_link | field_value | default(content.field_more_info_link | field_value) | render | trim %}
 {% set confirm_registration_link = content.field_override_confirm_reg_link | field_value | default(content.field_confirm_registration_link | field_value) | render | trim %}
@@ -29,8 +34,22 @@
 {# Deadlines with fallbacks. #}
 {% set online_deadline = content.field_online_deadline | field_value | default(content.field_g_online_deadline | field_value) %}
 {% set inperson_deadline = content.field_in_person_deadline | field_value | default(content.field_g_in_person_deadline | field_value) %}
-{% set postmarked_deadline = content.field_mail_postmarked_deadline | field_value | default(content.field_g_mail_postmarked_deadline | field_value) %}
-{% set received_deadline = content.field_mail_received_deadline | field_value | default(content.field_g_mail_received_deadline | field_value) %}
+{# Set postmarked deadline with fallback #}
+{% if content.field_mail_postmarked_deadline | render %}
+  {% set postmarked_deadline = 'Must be postmarked by @date' | t({'@date': content.field_mail_postmarked_deadline.0 | render}) %}
+{% else %}
+  {% set postmarked_deadline = content.field_g_mail_postmarked_deadline | field_value %}
+{% endif %}
+
+{# Set received deadline with fallback #}
+{% if content.field_mail_received_deadline | render %}
+  {% set received_deadline = 'Must be received by @date' | t({'@date': content.field_mail_received_deadline.0 | render}) %}
+{% else %}
+  {% set received_deadline = content.field_g_mail_received_deadline | field_value %}
+{% endif %}
+
+{# Set the deadline with fallback, prioritizing postmarked deadline. #}
+{% set bymail_deadline = postmarked_deadline | default(received_deadline) %}
 
 {# State content with fallbacks. #}
 {# Get default state display content from the block type. #}
@@ -40,6 +59,7 @@
 {% set online_registration = state_display_content.field_online_registration.0 | default([]) | merge(content.field_online_registration.0 | default([])) %}
 {% set military_overseas_registration = state_display_content.field_military_and_overseas_regi.0 | default([]) | merge(content.field_military_and_overseas_regi.0 | default([])) %}
 {% set mail_registration = state_display_content.field_mail_registration.0 | default([]) | merge(content.field_mail_registration.0 | default([])) %}
+{% set nvrf_details = state_display_content.field_nvrf_details.0 | default([]) | merge(content.field_nvrf_details.0 | default([])) %}
 {% set inperson_registration = state_display_content.field_in_person_registration.0 | default([]) | merge(content.field_in_person_registration.0 | default([])) %}
 {% set check_registration = state_display_content.field_check_registration.0 | default([]) | merge(content.field_check_registration.0 | default([])) %}
 {% set election_date = state_display_content.field_election_date.0 | default([]) | merge(content.field_election_date.0 | default([])) %}
@@ -114,11 +134,45 @@
       } %}
     {% endif %}
 
-    {% if mail_registration is not empty %}
-      {{ mail_registration }}
-      {{ postmarked_deadline }}
-      {{ received_deadline }}
-      {{ state_mail_pdf_link }}
+    {% if has_mail and mail_registration is not empty %}
+      {% set mail_body %}
+        <p><strong>{{ 'Mail-in registration deadline:' | t }}</strong> {{ bymail_deadline }}</p>
+        {{ mail_registration.text }}
+
+        {% if state_mail_pdf_link and mail_registration.link_text %}
+          <p>{{ link(mail_registration.link_text, state_mail_pdf_link) }}</p>
+        {% endif %}
+      {% endset %}
+
+      {% if accepts_nvrf and nvrf_details is not empty %}
+        {% set mail_footer %}
+          <hr>
+          {% if nvrf_details.heading %}
+            <h3>{{ nvrf_details.heading }}</h3>
+          {% endif %}
+
+          {{ nvrf_details.text }}
+
+          {% if nvrf_details.link_text %}
+            {# Set path to form dynamically using page route. #}
+            {% set form_route = language != 'es' ? 'vote_nvrf.nvrf_page' : 'vote_nvrf.nvrf_page_es' %}
+            {% set state_name = currentnode.label | lower | replace({' ': '-'}) %}
+
+            {% include '@votegov/component/button.html.twig' with {
+              'href': 'internal:' ~ path(form_route, {'state_name': state_name}),
+              'label': nvrf_details.link_text,
+              'data_label': 'data-state-ext',
+              'data': 'nvrf-pdf-tool-registration'
+            } %}
+          {% endif %}
+        {% endset %}
+      {% endif %}
+
+      {% include '@votegov/component/info-card.html.twig' with {
+        'heading': mail_registration.heading,
+        'body': mail_body | render | trim | t({'@state_name': state_name}),
+        'footer': mail_footer
+      } %}
     {% endif %}
 
     {% if has_in_person and (inperson_registration is not empty) %}
