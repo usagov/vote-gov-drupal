@@ -6,7 +6,7 @@ parameters:
   restore:
     type: string
     default: "none"
-  scheduled_backup:
+  scheduled-backup:
     type: boolean
     default: false
   upkeep:
@@ -15,7 +15,7 @@ parameters:
 jobs:
   upkeep:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/base:current-22.04
     steps:
       - checkout
       - run:
@@ -88,7 +88,7 @@ jobs:
           path: testing/cypress/screenshots
   deploy:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/base:current-22.04
     steps:
       - checkout
       - attach_workspace:
@@ -106,7 +106,7 @@ jobs:
             source ./scripts/pipeline/cloud-gov-deploy.sh
   post-deploy:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/base:current-22.04
     steps:
       - checkout
       - attach_workspace:
@@ -124,7 +124,7 @@ jobs:
             source ./scripts/pipeline/cloud-gov-post-deploy.sh
   post-deploy-upkeep:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/base:current-22.04
     steps:
       - checkout
       - attach_workspace:
@@ -141,11 +141,32 @@ jobs:
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
             source ./scripts/pipeline/cloud-gov-post-deploy-upkeep.sh
-  downsync:
+  downsync-backup:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/base:current-22.04
+    steps:
+      - checkout
+      - run:
+          name: "Install cloudfoundry & dependencies"
+          command: |
+            source ./scripts/pipeline/deb-basic-deps.sh
+            source ./scripts/pipeline/deb-cf-install.sh
+            source ./scripts/pipeline/deb-mysql-client-install.sh
+            source ./scripts/pipeline/deb-awscli.sh
+
+            cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/v1.1.4/cf-service-connect_linux_amd64
+      - run:
+          name: "Run downsync-backup"
+          no_output_timeout: 30m
+          command: |
+            source ./scripts/pipeline/exports.sh "prod"
+            source ./scripts/pipeline/cloud-gov-login.sh
+            source ./scripts/pipeline/prod-db-backup.sh
+            cf logout
+  downsync-restore:
+    docker:
+      - image: cimg/base:current-22.04
     environment:
-      BACKUP_ENV: << pipeline.parameters.backup>>
       RESTORE_ENV: << pipeline.parameters.restore>>
     steps:
       - checkout
@@ -157,19 +178,14 @@ jobs:
             source ./scripts/pipeline/deb-mysql-client-install.sh
             source ./scripts/pipeline/deb-awscli.sh
 
-            cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/v1.1.3/cf-service-connect_linux_amd64
+            cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/v1.1.4/cf-service-connect_linux_amd64
       - run:
           name: "Run downsync"
           no_output_timeout: 30m
           command: |
-            source ./scripts/pipeline/exports.sh "${BACKUP_ENV}"
-            source ./scripts/pipeline/cloud-gov-login.sh
-            source ./scripts/pipeline/downsync-backup.sh
-            cf logout
-
             source ./scripts/pipeline/exports.sh "${RESTORE_ENV}"
             source ./scripts/pipeline/cloud-gov-login.sh
-            source ./scripts/pipeline/downsync-restore.sh
+            source ./scripts/pipeline/downsync-preprod.sh
   php-lint:
     docker:
       - image: php:8.3-alpine
@@ -199,7 +215,7 @@ jobs:
           destination: phpcs_<<pipeline.number>>.csv
   scheduled-backup:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/base:current-22.04
     steps:
       - checkout
       - run:
@@ -210,7 +226,7 @@ jobs:
             source ./scripts/pipeline/deb-mysql-client-install.sh
             source ./scripts/pipeline/deb-awscli.sh
 
-            cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/v1.1.3/cf-service-connect_linux_amd64
+            cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/v1.1.4/cf-service-connect_linux_amd64
       - run:
           name: "Run backup"
           no_output_timeout: 30m
@@ -218,8 +234,8 @@ jobs:
             export BACKUP_ENV=${CIRCLE_BRANCH}
             source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
             source ./scripts/pipeline/cloud-gov-login.sh
-            source ./scripts/pipeline/downsync-backup.sh
-            ./scripts/pipeline/scheduled_backup.sh "${prod_cf_space}"
+            source ./scripts/pipeline/app-backup.sh
+            ./scripts/pipeline/scheduled-backup.sh "${prod_cf_space}"
       - run:
           name: "Run backup"
           no_output_timeout: 30m
@@ -228,8 +244,8 @@ jobs:
             export BACKUP_ENV=${CIRCLE_BRANCH}
             source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
             source ./scripts/pipeline/cloud-gov-login.sh
-            source ./scripts/pipeline/downsync-backup.sh
-            ./scripts/pipeline/scheduled_backup.sh "${prod_cf_space}"
+            source ./scripts/pipeline/app-backup.sh
+            ./scripts/pipeline/scheduled-backup.sh "${prod_cf_space}"
           when: on_fail
   link-validation:
     docker:
@@ -383,22 +399,24 @@ workflows:
     when:
       and:
         - equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]
-        - equal: [ true, << pipeline.parameters.scheduled_backup >> ]
+        - equal: [ true, << pipeline.parameters.scheduled-backup >> ]
     jobs:
       - scheduled-backup
-  downsync-workflow:
+  downsync-backup:
     when:
       and:
         - equal:  [api, << pipeline.trigger_source >> ]
         - or:
-          - equal: [ dev, << pipeline.parameters.backup >> ]
           - equal: [ prod, << pipeline.parameters.backup >> ]
-          - equal:  [stage, << pipeline.parameters.backup >> ]
-          - equal: [ test, << pipeline.parameters.backup >> ]
+    jobs:
+      - downsync-backup
+  downsync-restore:
+    when:
+      and:
+        - equal:  [api, << pipeline.trigger_source >> ]
         - or:
           - equal: [ dev, << pipeline.parameters.restore >> ]
           - equal: [ stage, << pipeline.parameters.restore >> ]
           - equal: [ test, << pipeline.parameters.restore >> ]
     jobs:
-      - downsync
-
+      - downsync-restore
