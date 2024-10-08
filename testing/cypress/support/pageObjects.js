@@ -1,5 +1,5 @@
 class PageObjects {
-  // frontend test page objects 
+  // frontend test page objects
 
   // * accessability tool bar
   themeSwitcher() {
@@ -14,7 +14,7 @@ class PageObjects {
     return  cy.get('[data-test="themeText"]')
   }
 
-  // * email signup 
+  // * email signup
   emailSignup() {
     return cy.get('[data-test="emailSignup"]')
   }
@@ -33,7 +33,7 @@ class PageObjects {
     return cy.get('[data-test="headerButton"]')
   }
 
-  headerBanner() { 
+  headerBanner() {
     return cy.get('[data-test="headerBanner"]')
   }
 
@@ -109,6 +109,37 @@ class PageObjects {
 
   stateList() {
     return cy.get('[data-test="stateList"]')
+  }
+
+  // Backend Tests
+
+  // * Basic Page
+  pageTitle() {
+    return cy.get('[data-drupal-selector="edit-title-0-value"]')
+  }
+
+  pageContent() {
+    return cy.get('[class="ck-blurred ck ck-content ck-editor__editable ck-rounded-corners ck-editor__editable_inline"]')
+  }
+
+  pageDetails() {
+    return cy.get('[class="claro-details__summary claro-details__summary--accordion-item"]')
+  }
+
+  urlAlias() {
+    return cy.get('[data-drupal-selector="edit-path-0"]')
+  }
+
+  urlAuto() {
+    return cy.get('[data-drupal-selector="edit-path-0-pathauto"]')
+  }
+
+  setAlias() {
+    return cy.get('[data-drupal-selector="edit-path-0-alias"]')
+  }
+
+  submitBtn() {
+    return cy.get('[data-drupal-selector="edit-submit"]')
   }
 
 }
