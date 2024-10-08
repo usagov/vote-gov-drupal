@@ -5,14 +5,13 @@
     "month": "Mes",
     "day": "Día",
     "year": "Año",
-    "backIcon": "back arrow icon",
-    "forwardIcon": "forward arrow icon",
-    "selectState": "Select your state or territory",
-    "selectStateAriaLabel": "State selection dropdown menu",
+    "backIcon": "icono de flecha hacia atrás",
+    "forwardIcon": "icono de flecha hacia adelante",
+    "selectState": "Seleccione su estado o territorio",
+    "selectStateAriaLabel": "Lista de sugerencias de estados y territorios",
     "lastUpdated": "@state_name información actualizada por última vez",
-    "emailLabel": "Voter Contact",
     "select": "-Elija-",
     "download": "Descargue el formulario",
     "mailDeadlineLabel": "Plazo de registro por correo:",
-    "idSelectionAriaLabel": "Choose identification type"
+    "idSelectionAriaLabel": "Seleccione el tipo de identificación"
 }
