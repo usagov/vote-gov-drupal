@@ -4,12 +4,23 @@ This site is built using Drupal and combination of modules and themes.
 ## Drupal
 As of the writing of this document the foundation of the site is built using Drupal + Symphony + Composer. Drupal documentation can be found here: https://www.drupal.org/docs. This site follows Drupal coding standards and best practices.
 
+### Drupal & Module Discovering Available Updates via Composer
+Part of managing Drupal is keeping Drupal Core and Modules updated with latest versions to help alleviate potential security issues as well as providing users with the best experience offered.
+
+To perform a simple audit of available updates you can use `composer outdated` to see what updates are available by referring to the section, "Direct dependencies required in composer.json" located at the top of the output from the issued command. These are modules/pakages which we have specifically required as part of our project. The other listings under the section, "Transitive dependencies not required in composer.json" are dependencies added via our required modules.
+
+If you ever need to track where a "Transitive dependency" is coming from you can issue the command `composer why {project/package}`. From there you will be given the package(s) which require this dependency.
+
 ### Updating Drupal via Composer
 Drupal projects managed through Composer typically use `drupal/core-recommended`, which ensures that Drupal core and its dependencies are installed with secure and tested versions.
 
-For ongoing updates we use the following command `composer update drupal/core-* -W` which will take care of both updating Drupal core any any dependencies that it may require. This will result in an updated `composer.lock` file which will be committed to the repository once the update has been tested locally.
+For ongoing updates we use the following command `composer update drupal/core-* -W` which will take care of both updating Drupal core and any dependencies that it may require. This will result in an updated `composer.lock` file which will be committed to the repository once the update has been tested locally.
 
 Once updated, the following drush command should be issued, `drush updatedb && drush cr`. This will check for any pending database updates followed up by a clearing of the cache.
+
+Run `drush cex`, to export and review any related configuration changes that is related to the update. Updates could affect other configurations such as field settings or other aspects of the site, so review carefully, test, and verify that the changes are valid.
+
+Finally, use `git status` and `git diff {file_name}` to reveal and review both file and configuration changes before comitting them to your branch.
 
 ## Modules
 Modules are located in `/web/modules/` directory. Each module has an module page located on https://www.drupal.org/project/project_module. The modules page include documentation, versions, change details and an issue queue. Also most modules contain additional details in a README file in the module root.
@@ -27,6 +38,12 @@ To update a specific module, for example, **Admin Toolbar**:
 `composer update drupal/admin_toolbar`
 
 This ensures that both the module and its dependencies are updated according to Drupal's compatibility guidelines.
+
+Once updated, the following drush command should be issued, `drush updatedb && drush cr`. This will check for any pending database updates followed up by a clearing of the cache.
+
+Run `drush cex`, to export and review any related configuration changes that is related to the module. Updates could affect other configurations such as field settings or other aspects of the site, so review carefully, test, and verify that the changes are valid.
+
+Finally, use `git status` and `git diff {config_file.yml}` to reveal and review configuration changes that are located in `config/...` directory before comitting them to your branch.
 
 ### Contrib
 I've included some of the non-standard Drupal contrib modules and their use below. To see all the modules in the system review the modules dashboard page located at `/admin/modules`. These modules are maintained by the Drupal community and have regular updates for enhancements and security patches.
