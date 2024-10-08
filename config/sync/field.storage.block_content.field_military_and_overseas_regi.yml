@@ -1,0 +1,19 @@
+uuid: 8dac1cb7-22e4-4be9-991b-2123a76c6671
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - vote_fields
+id: block_content.field_military_and_overseas_regi
+field_name: field_military_and_overseas_regi
+entity_type: block_content
+type: vote_fields_state_content
+settings: {  }
+module: vote_fields
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

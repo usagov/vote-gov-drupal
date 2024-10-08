@@ -1,0 +1,19 @@
+uuid: a017f18d-4a52-4d9f-ac5f-3eeb00d4b7db
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.search
+    - field.storage.block_content.field_section_identifier
+id: block_content.search.field_section_identifier
+field_name: field_section_identifier
+entity_type: block_content
+bundle: search
+label: 'Section Identifier'
+description: 'This field value is used to identify this section for screen readers.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

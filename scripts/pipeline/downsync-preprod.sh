@@ -1,4 +1,8 @@
 #!/bin/bash
+if [ ${RESTORE_ENV} = 'prod' ]; then
+  echo "Restoring to prod is not allowed."
+  exit 1
+fi
 
 kill_pids() {
   app=$1
@@ -19,8 +23,40 @@ wait_for_tunnel() {
 
 date
 
+## Download latest prod backup.
+echo "Downloading latest prod database backup..."
+{
+  cf target -s "${project}-prod" >/dev/null 2>&1
+
+  export service="${project}-backup"
+  export service_key="${service}-key"
+  cf delete-service-key "${service}" "${service_key}" -f >/dev/null 2>&1
+  cf create-service-key "${service}" "${service_key}" >/dev/null 2>&1
+  sleep 2
+
+  export s3_credentials=$(cf service-key "${service}" "${service_key}" | tail -n +2)
+
+  export AWS_ACCESS_KEY_ID=$(echo "${s3_credentials}" | jq -r '.credentials.access_key_id')
+  export bucket=$(echo "${s3_credentials}" | jq -r '.credentials.bucket')
+  export AWS_DEFAULT_REGION=$(echo "${s3_credentials}" | jq -r '.credentials.region')
+  export AWS_SECRET_ACCESS_KEY=$(echo "${s3_credentials}" | jq -r '.credentials.secret_access_key')
+
+  # copy latest database from top level
+  aws s3 cp s3://${bucket}/prod/latest.sql.gz ./latest.sql.gz --no-verify-ssl >/dev/null 2>&1 && echo "Successfully copied latest.sql.gz from S3!" || echo "Failed to copy latest.sql.gz from S3!"
+  gunzip latest.sql.gz
+
+  cf delete-service-key "${service}" "${service_key}" -f >/dev/null 2>&1
+}
+
+date
+
 ## Create a tunnel through the application to restore the database.
 echo "Creating tunnel to database..."
+if [ ${RESTORE_ENV} = 'test' ]; then
+  cf target -s "${project}-dev" >/dev/null 2>&1
+else
+  cf target -s "${project}-${RESTORE_ENV}" >/dev/null 2>&1
+fi
 cf connect-to-service --no-client ${project}-drupal-${RESTORE_ENV} ${project}-mysql-${RESTORE_ENV} > restore.txt &
 
 wait_for_tunnel
@@ -28,7 +64,7 @@ wait_for_tunnel
 date
 
 ## Create variables and credential file for MySQL login.
-echo "Restoring '${BACKUP_ENV}' database to '${RESTORE_ENV}'..."
+echo "Restoring 'prod' database to '${RESTORE_ENV}'..."
 {
   host=$(cat restore.txt | grep -i host | awk '{print $2}')
   port=$(cat restore.txt | grep -i port | awk '{print $2}')
@@ -48,7 +84,7 @@ echo "Restoring '${BACKUP_ENV}' database to '${RESTORE_ENV}'..."
   --host=${host} \
   --port=${port} \
   --protocol=TCP \
-  --database=${dbname} < backup_${BACKUP_ENV}.sql
+  --database=${dbname} < latest.sql
 
 } >/dev/null 2>&1
 
@@ -61,39 +97,12 @@ echo "Cleaning up old connections..."
 } >/dev/null 2>&1
 
 ## Clean up.
-rm -rf restore.txt ~/.mysql backup_${BACKUP_ENV}.sql
+rm -rf restore.txt ~/.mysql latest.sql
 
 date
 
 echo "Running 'drush cr' on '${RESTORE_ENV}' database..."
 source $(pwd $(dirname $0))/scripts/pipeline/cloud-gov-remote-command.sh "${project}-drupal-${RESTORE_ENV}" "drush cr"
-
-date
-
-# Upload media files.
-backup_media="cms/public/media"
-
-echo "Uploading media files..."
-{
-  cf target -s "${cf_space}"
-
-  service="${project}-storage-${RESTORE_ENV}"
-  service_key="${service}-key"
-  cf delete-service-key "${service}" "${service_key}" -f
-  cf create-service-key "${service}" "${service_key}"
-  sleep 2
-  s3_credentials=$(cf service-key "${service}" "${service_key}" | tail -n +2)
-
-  export AWS_ACCESS_KEY_ID=$(echo "${s3_credentials}" | jq -r '.credentials.access_key_id')
-  export bucket=$(echo "${s3_credentials}" | jq -r '.credentials.bucket')
-  export AWS_DEFAULT_REGION=$(echo "${s3_credentials}" | jq -r '.credentials.region')
-  export AWS_SECRET_ACCESS_KEY=$(echo "${s3_credentials}" | jq -r '.credentials.secret_access_key')
-
-  # Sync files to restore env, deleting those not found in backup env.
-  aws s3 sync --no-verify-ssl --delete ${backup_media}/ s3://${bucket}/${backup_media} 2>/dev/null
-
-  cf delete-service-key "${service}" "${service_key}" -f
-} >/dev/null 2>&1
 
 date
 
