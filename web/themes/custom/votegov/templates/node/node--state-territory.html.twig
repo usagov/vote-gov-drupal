@@ -14,7 +14,9 @@
   node.isSticky() ? 'node--sticky',
   not node.isPublished() ? 'node--unpublished',
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  'vote-state-territory-content'
+  'vote-main-content-row',
+  'vote-block-margin-y--narrow',
+  'usa-in-page-nav-container'
 ] %}
 
 {# Links with fallbacks. #}
@@ -61,11 +63,24 @@
   {# Hold these title_* placeholders for potential integration #}
   {{ title_prefix }}
   {{ title_suffix }}
-  <div class="vote-narrow-container-left-align">
+
   {% if drupal_view('inline_alert', 'embed_1') | render | striptags | trim %}
-    {{ drupal_view('inline_alert', 'embed_1') }}
+  {{ drupal_view('inline_alert', 'embed_1') }}
   {% endif %}
 
+  {% block aside %}
+  <aside
+    class="usa-in-page-nav"
+    data-main-content-selector=".usa-in-page-nav-container"
+    data-title-text="{{ 'Jump to registration options' | t }}"
+    data-title-heading-level="h2"
+    data-scroll-offset="-600"
+    data-root-margin="48px 0px -90% 0px"
+    data-threshold="1"
+  ></aside>
+{% endblock %}
+
+  <div class="vote-page-content vote-page-content--alt">
   {% block content %}
     {% if check_registration is not empty %}
       {{ check_registration }}
@@ -123,4 +138,5 @@
       {{ military_overseas_registration }}
     {% endif %}
   {% endblock %}
+</div>
 </div>
