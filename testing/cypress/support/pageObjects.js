@@ -142,6 +142,20 @@ class PageObjects {
     return cy.get('[data-drupal-selector="edit-submit"]')
   }
 
+  // Content Editor, Manager Access
+    publishState() {
+      return cy.get('[data-drupal-selector="edit-moderation-state-0-state"]')
+    }
+
+  // Footer Menu
+    linkTitle() {
+      return cy.get('[data-drupal-selector="edit-title-0-value"]')
+    }
+
+    linkUrl() {
+      return cy.get('[data-drupal-selector="edit-link-0-uri"]')
+    }
+
 }
 
 export const pageObjects = new PageObjects()

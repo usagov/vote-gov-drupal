@@ -1,5 +1,5 @@
-// <reference types="cypress" />
-
+/// <reference types="cypress" />
+import { pageObjects } from '../../support/pageObjects.js'
 
 describe('Footer Menu Function', () => {
 
@@ -9,9 +9,9 @@ describe('Footer Menu Function', () => {
     cy.signin(Cypress.env('roles').site_admin.username, Cypress.env('test_pass'))
 
     cy.visit('/admin/structure/menu/manage/footer/add')
-
-    cy.get('[data-drupal-selector="edit-title-0-value"]').type('Cypress Test Link')
-    cy.get('[data-drupal-selector="edit-link-0-uri"]').type('https://www.bixal.com/')
+    pageObjects
+    .linkTitle().type('Cypress Test Link')
+    .linkUrl().type('https://www.bixal.com/')
     cy.get('[data-drupal-selector="edit-menu-link-display-settings"]').click().get('[data-drupal-selector="edit-weight-0-value"]').clear().type('-99')
 
 
@@ -32,7 +32,7 @@ describe('Footer Menu Function', () => {
     cy.get('[class="edit dropbutton__item dropbutton-action"]').then(dropDown => {
       cy.get(dropDown[0]).click()
       cy.get('[data-drupal-selector="edit-delete"]').click()
-      
+
       cy.get('[class="ui-dialog-buttonset form-actions"]').find('button').then(btn => {
         cy.get(btn[0]).click()
       })

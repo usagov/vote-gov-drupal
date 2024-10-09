@@ -17,20 +17,24 @@ describe('test for basic page', () => {
       .pageTitle()
       .type('Test Page')
 
-      // pageObjects
-      pageContent()
+      pageObjects
+      .pageContent()
       .then(field => {
         cy.get(field[0]).clear().realType('test page')
       })
 
-      // pageObjects
-      pageDetails().then(dropdown => {
+      pageObjects
+      .pageDetails().then(dropdown => {
         cy.get(dropdown[1]).click()
-        urlAlias().click()
-        urlAuto().click()
-        setAlias().type('/cypress-url-alias-test')
+        pageObjects
+        .urlAlias().click()
+        pageObjects
+        .urlAuto().click()
+        pageObjects
+        .setAlias().type('/cypress-url-alias-test')
       })
-      submitBtn().click()
+      pageObjects
+      .submitBtn().click()
       cy.url().should('contain', 'cypress-url-alias-test')
 
     cy.logout()
