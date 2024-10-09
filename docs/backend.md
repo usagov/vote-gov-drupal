@@ -7,7 +7,7 @@ As of the writing of this document the foundation of the site is built using Dru
 ### Drupal & Module Discovering Available Updates via Composer
 Part of managing Drupal is keeping Drupal Core and Modules updated with latest versions to help alleviate potential security issues as well as providing users with the best experience offered.
 
-To perform a simple audit of available updates you can use `composer outdated` to see what updates are available by referring to the section, "Direct dependencies required in composer.json" located at the top of the output from the issued command. These are modules/pakages which we have specifically required as part of our project. The other listings under the section, "Transitive dependencies not required in composer.json" are dependencies added via our required modules.
+To perform a simple audit of available updates you can use `composer outdated "drupal/*"` to see what updates are available by referring to the section, "Direct dependencies required in composer.json" located at the top of the output from the issued command. These are modules/pakages which we have specifically required as part of our project. The other listings under the section, "Transitive dependencies not required in composer.json" are dependencies added via our required modules.
 
 If you ever need to track where a "Transitive dependency" is coming from you can issue the command `composer why {project/package}`. From there you will be given the package(s) which require this dependency.
 
