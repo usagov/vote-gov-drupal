@@ -30,7 +30,7 @@
       {{ body }}
     </div>
   {% endif %}
-  {% if link %}
+  {% if link.url and link.title %}
     <div class="vote-info-card__button">
       {% include '@votegov/component/button.html.twig' with {
         'href': link.url,
