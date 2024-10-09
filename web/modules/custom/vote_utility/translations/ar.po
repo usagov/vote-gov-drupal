@@ -339,12 +339,6 @@ msgstr "التصفح الأساسي"
 msgid "Search component"
 msgstr "مكونات البحث"
 
-msgid "Primary tabs"
-msgstr "علامات التبويب الرئيسية"
-
-msgid "Secondary tabs"
-msgstr "علامات التبويب الثانوية"
-
 #state tool aria label
 msgid "Register to vote selector tool"
 msgstr "أداة اختيار التسجيل للتصويت"

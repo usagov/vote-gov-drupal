@@ -4,4 +4,4 @@ nvrf_assets:
     dist/assets/index.js: {}
   css:
     theme:
-      dist/assets/nvrf.css: {}
+      dist/assets/index.css: {}

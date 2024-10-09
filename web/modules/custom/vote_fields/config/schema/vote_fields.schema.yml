@@ -1,0 +1,15 @@
+
+# Default value.
+field.value.vote_fields_state_content:
+  type: mapping
+  label: Default value
+  mapping:
+    heading:
+      type: string
+      label: Heading
+    text:
+      type: text
+      label: Text
+    link_text:
+      type: string
+      label: Link text

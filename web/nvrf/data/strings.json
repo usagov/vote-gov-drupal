@@ -10,7 +10,6 @@
     "selectState": "Select your state or territory",
     "selectStateAriaLabel": "State selection dropdown menu",
     "lastUpdated": "@state_name information last updated ",
-    "emailLabel": "Voter Contact",
     "select": "- Select -",
     "download": "Download your mail-in form",
     "mailDeadlineLabel": "Mail-in registration deadline:",

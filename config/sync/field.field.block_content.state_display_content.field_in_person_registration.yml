@@ -1,0 +1,21 @@
+uuid: 5dc38cb7-9e11-4ed7-93ac-2937362167d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.state_display_content
+    - field.storage.block_content.field_in_person_registration
+  module:
+    - vote_fields
+id: block_content.state_display_content.field_in_person_registration
+field_name: field_in_person_registration
+entity_type: block_content
+bundle: state_display_content
+label: 'In person registration'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: vote_fields_state_content

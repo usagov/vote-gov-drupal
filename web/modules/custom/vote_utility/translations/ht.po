@@ -350,12 +350,6 @@ msgstr "Meni"
 msgid "Primary navigation"
 msgstr "Navigasyon primè"
 
-msgid "Primary tabs"
-msgstr "Kategori primè yo"
-
-msgid "Secondary tabs"
-msgstr "Kategori segondè yo"
-
 #search aira-label
 msgid "Search component"
 msgstr "Motè rechèch"

@@ -12,12 +12,6 @@ msgstr ""
 msgid "Primary navigation"
 msgstr "Navigation principale"
 
-msgid "Primary tabs"
-msgstr "Onglets principaux"
-
-msgid "Secondary tabs"
-msgstr "Onglets secondaires"
-
 # config.languages.languageName
 msgid "French"
 msgstr "Français"
@@ -370,3 +364,6 @@ msgstr "vendredi"
 # data.translations.days.saturday
 msgid "Saturday"
 msgstr "samedi"
+
+msgid "Know your voting rights"
+msgstr "Connaissez vos droits de vote"
