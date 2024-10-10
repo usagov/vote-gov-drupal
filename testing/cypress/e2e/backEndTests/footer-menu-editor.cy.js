@@ -11,16 +11,23 @@ describe('Footer Menu Function', () => {
     cy.visit('/admin/structure/menu/manage/footer/add')
     pageObjects
     .linkTitle().type('Cypress Test Link')
+    pageObjects
     .linkUrl().type('https://www.bixal.com/')
-    cy.get('[data-drupal-selector="edit-menu-link-display-settings"]').click().get('[data-drupal-selector="edit-weight-0-value"]').clear().type('-99')
+    pageObjects
+    .displaySettings().click()
+    pageObjects
+    .linkWeight().clear().type('-99')
 
-
-    cy.get('[data-drupal-selector="edit-submit"]').click()
+    pageObjects
+    .submitBtn().click()
 
     // check that the link is working as expected
     cy.visit('/')
 
-    cy.get('[data-test="footer"]').find('[data-test="footerLinks"]').then(link => {
+    pageObjects
+    .footer()
+    pageObjects
+    .footerLinks().then(link => {
       cy.get(link[0]).find('a').should('contain', 'Cypress Test Link')
       .should('have.attr', 'href').and('contain', 'bixal.com')
     })
@@ -29,11 +36,16 @@ describe('Footer Menu Function', () => {
 
     cy.visit('/admin/structure/menu/manage/footer')
 
-    cy.get('[class="edit dropbutton__item dropbutton-action"]').then(dropDown => {
+    pageObjects
+    .editDropdown()
+    .then(dropDown => {
       cy.get(dropDown[0]).click()
-      cy.get('[data-drupal-selector="edit-delete"]').click()
+      pageObjects
+      .deleteBtn().click()
 
-      cy.get('[class="ui-dialog-buttonset form-actions"]').find('button').then(btn => {
+      pageObjects
+      .confirmDelete()
+      .find('button').then(btn => {
         cy.get(btn[0]).click()
       })
     })
