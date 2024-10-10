@@ -189,7 +189,10 @@
     {% endif %}
 
     {% if military_overseas_registration is not empty %}
-      {{ military_overseas_registration }}
+      {% include '@votegov/component/info-card.html.twig' with {
+        'heading': military_overseas_registration.heading,
+        'body': military_overseas_registration.text,
+      } %}
     {% endif %}
   {% endblock %}
 </div>
