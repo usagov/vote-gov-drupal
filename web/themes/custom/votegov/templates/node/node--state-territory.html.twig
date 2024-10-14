@@ -64,6 +64,8 @@
 {% set check_registration = state_display_content.field_check_registration.0 | default([]) | merge(content.field_check_registration.0 | default([])) %}
 {% set election_date = state_display_content.field_election_date.0 | default([]) | merge(content.field_election_date.0 | default([])) %}
 {% set election_text = state_display_content.field_election_text.0 | default([]) | merge(content.field_election_text.0 | default([])) %}
+{# this is for no online registration #}
+{% set registration_intro = state_display_content.field_registration_intro.0 | default([]) | merge(content.field_registration_intro.0 | default([])) %}
 
 {# Registration types #}
 {% set registration_types = content.field_registration_type | field_value | column('#markup') %}
@@ -119,9 +121,6 @@
     {% endif %}
 
     {% if has_online and (online_registration is not empty) %}
-      {{ online_registration }}
-      {{ online_deadline }}
-      {{ registration_link }}
       {% set body = online_registration.text['#markup'] | t({'@state_online_deadline': online_deadline | render, '@state_name': title_english}) %}
       {% set link_title = online_registration.link_text['#markup'] | t({'@state_name': title_english }) %}
       {% include '@votegov/component/info-card.html.twig' with {
