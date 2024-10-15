@@ -1,0 +1,21 @@
+uuid: 526fae57-1fb0-4ad0-ab3d-39f560634e67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nvrf_details
+    - node.type.state_territory
+  module:
+    - vote_fields
+id: node.state_territory.field_nvrf_details
+field_name: field_nvrf_details
+entity_type: node
+bundle: state_territory
+label: 'NVRF details (override)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: vote_fields_state_content
