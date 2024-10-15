@@ -8,17 +8,6 @@
 {# Caching the data in content object #}
 {% set savedCache = content | render %}
 
-{% set classes = [
-  'node--' ~ node.bundle|clean_class,
-  node.isPromoted() ? 'node--promoted',
-  node.isSticky() ? 'node--sticky',
-  not node.isPublished() ? 'node--unpublished',
-  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  'vote-main-content-row',
-  'vote-block-margin-y--narrow',
-  'usa-in-page-nav-container'
-] %}
-
 {% set state_name = label | field_value | render %}
 {% set accepts_nvrf = node.field_accepts_nvrf.value == 1 %}
 
@@ -79,6 +68,18 @@
 {% set has_online = "online" in registration_types %}
 {% set not_needed = "not-needed" in registration_types %}
 
+{% set classes = [
+  'node--' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  'vote-main-content-row',
+  'vote-block-margin-y--narrow',
+  'usa-in-page-nav-container',
+  confirm_registration_link ? 'vote-call-out-box-offset'
+] %}
+
 <div{{ attributes.addClass(classes) }}>
   {# Hold these title_* placeholders for potential integration #}
   {{ title_prefix }}
@@ -101,10 +102,14 @@
 {% endblock %}
 
   <div class="vote-page-content vote-page-content--alt">
-  {% block content %}
-    {% if check_registration is not empty %}
-      {{ check_registration }}
-      {{ confirm_registration_link }}
+   {% block content %}
+    {% if confirm_registration_link %}
+      {% include '@votegov/component/call-out-box.html.twig' with {
+        'heading': check_registration.heading,
+        'text': check_registration.text['#markup'] | t({'@state_name': title_english}),
+        'link_text': check_registration.link_text,
+        'confirm_link': confirm_registration_link
+      } %}
     {% endif %}
 
      {# Election Date #}
@@ -134,7 +139,7 @@
       } %}
     {% endif %}
 
-    {% if has_mail and mail_registration is not empty %}
+     {% if has_mail and mail_registration is not empty %}
       {% set mail_body %}
         <p><strong>{{ 'Mail-in registration deadline:' | t }}</strong> {{ bymail_deadline }}</p>
         {{ mail_registration.text }}
