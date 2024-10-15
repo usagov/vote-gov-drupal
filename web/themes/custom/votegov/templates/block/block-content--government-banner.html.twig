@@ -8,7 +8,7 @@
 {# Caching the data in content object #}
 {% set savedCache = content | render %}
 
-<section{{ attributes.addClass('usa-banner').setAttribute('aria-label', 'Official government website' | t) }} data-test="govBanner">
+<section{{ attributes.addClass('usa-banner').setAttribute('aria-label', content.field_section_identifier | field_value | render) }} data-test="govBanner">
   {# Hold these title_* placeholders for potential integration #}
   {{ title_prefix }}
   {{ title_suffix }}
