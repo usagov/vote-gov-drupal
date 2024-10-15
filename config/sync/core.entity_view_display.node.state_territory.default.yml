@@ -42,7 +42,6 @@ dependencies:
     - field.field.node.state_territory.field_personal_information_inst
     - field.field.node.state_territory.field_political_party_inst
     - field.field.node.state_territory.field_reg_eligibility_desc
-    - field.field.node.state_territory.field_registration_intro
     - field.field.node.state_territory.field_registration_link
     - field.field.node.state_territory.field_registration_not_needed
     - field.field.node.state_territory.field_registration_type
@@ -420,13 +419,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 32
-    region: content
-  field_registration_intro:
-    type: vote_fields_state_content_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 46
     region: content
   field_registration_link:
     type: link
