@@ -8,12 +8,6 @@
         top: -8.5rem;
       }
   }
-
-  @include at-media-max('tablet') {
-    // .vote-block-margin-y--narrow, .vote-page-content {
-    //   margin-top: 0;
-    // }
-  }
 }
 
 .vote-call-out-box {
