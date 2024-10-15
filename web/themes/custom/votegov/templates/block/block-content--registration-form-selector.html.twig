@@ -35,7 +35,7 @@
   {% endif %}
 
   <form class="usa-form" method="get" id="register_form_download" data-test="nvrfForm">
-    <p>{{ content.field_pdf_description | field_value | default(content.field_description | field_value) }}</p>
+    <p>{{ content.field_pdf_description | field_value }}</p>
     <div class="field">
       <label class="usa-sr-only" for="js-user-selection">{{ content.field_default_option_label }}</label>
       {# NVRF language selector #}

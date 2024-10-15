@@ -5,7 +5,6 @@ dependencies:
   config:
     - block_content.type.registration_form_selector
     - field.field.block_content.registration_form_selector.field_default_option_label
-    - field.field.block_content.registration_form_selector.field_description
     - field.field.block_content.registration_form_selector.field_digital_form_link_label
     - field.field.block_content.registration_form_selector.field_digital_form_paragraph
     - field.field.block_content.registration_form_selector.field_enable_digital_form_link
@@ -65,14 +64,6 @@ content:
   field_default_option_label:
     type: string_textfield
     weight: 29
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_description:
-    type: string_textfield
-    weight: 27
     region: content
     settings:
       size: 60
