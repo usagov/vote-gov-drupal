@@ -11,8 +11,6 @@
 {% set state_name = label | field_value | render %}
 {% set accepts_nvrf = node.field_accepts_nvrf.value == 1 %}
 
-{% set has_mail = "by-mail" in (content.field_registration_type | field_value | column('#markup')) %}
-
 {# Links with fallbacks. #}
 {% set more_info_link = content.field_override_more_info_link | field_value | default(content.field_more_info_link | field_value) | render | trim %}
 {% set confirm_registration_link = content.field_override_confirm_reg_link | field_value | default(content.field_confirm_registration_link | field_value) | render | trim %}
