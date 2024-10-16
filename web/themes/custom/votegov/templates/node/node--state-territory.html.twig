@@ -40,7 +40,7 @@
 
 {# State content with fallbacks. #}
 {# Get default state display content from the block type. #}
-{% set state_display_content = drupal_entity('block_content', 22) | children %}
+{% set state_display_content = drupal_entity('block_content', 23) | children %}
 {% set registration_not_needed = state_display_content.field_registration_not_needed.0 | default([]) | merge(content.field_registration_not_needed.0 | default([])) %}
 {% set registration_intro = state_display_content.field_registration_intro.0 | default([]) | merge(content.field_registration_intro.0 | default([])) %}
 {% set online_registration = state_display_content.field_online_registration.0 | default([]) | merge(content.field_online_registration.0 | default([])) %}
@@ -123,9 +123,6 @@
     {% endif %}
 
     {% if has_online and (online_registration is not empty) %}
-      {{ online_registration }}
-      {{ online_deadline }}
-      {{ registration_link }}
       {% set body = online_registration.text['#markup'] | t({'@state_online_deadline': online_deadline | render, '@state_name': title_english}) %}
       {% set link_title = online_registration.link_text['#markup'] | t({'@state_name': title_english }) %}
       {% include '@votegov/component/info-card.html.twig' with {
