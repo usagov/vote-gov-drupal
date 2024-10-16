@@ -10,7 +10,7 @@
 
 {{ attach_library('votegov/registration_tool') }}
 
-<section{{ attributes.addClass('vote-registration-tool').setAttribute('role', 'region').setAttribute('aria-label', 'Register to vote selector tool' | t) }}>
+<section{{ attributes.addClass('vote-registration-tool').setAttribute('role', 'region').setAttribute('aria-label', content.field_section_identifier | field_value | render) }}>
   {# Hold these title_* placeholders for potential integration #}
   {{ title_prefix }}
   {{ title_suffix }}
@@ -39,7 +39,7 @@
             aria-controls="vote-registration-tool__results" data-test="stateInput">
       <div class="vote-registration-tool__list-container">
         <div id="vote-registration-tool__results" class="vote-registration-tool__nav">
-          <ul class="vote-registration-tool__list" aria-label="{{ 'States and territories list' | t }}" data-test="stateList">
+          <ul class="vote-registration-tool__list" aria-label="{{ content.field_state_list_identifier | field_value }}" data-test="stateList">
             {% set results = drupal_view_result('state_territory', 'block') %}
             {% for result in results %}
               {% set nodeID = result._entity.id() %}
