@@ -102,11 +102,12 @@
   <div class="vote-page-content vote-page-content--alt">
    {% block content %}
     {% if confirm_registration_link %}
+      {% set check_registration_link_text = check_registration.link_text['#markup'] | t({'@state_name': title_english}) %}
       {% include '@votegov/component/call-out-box.html.twig' with {
         'heading': check_registration.heading,
-        'text': check_registration.text['#markup'] | t({'@state_name': title_english}),
-        'link_text': check_registration.link_text,
-        'confirm_link': confirm_registration_link
+        'text': check_registration.text['#markup'],
+        'link_text': check_registration_link_text,
+        'link_url': confirm_registration_link
       } %}
     {% endif %}
 
