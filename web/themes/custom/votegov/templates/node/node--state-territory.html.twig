@@ -62,13 +62,8 @@
 {% set check_registration = state_display_content.field_check_registration.0 | default([]) | merge(content.field_check_registration.0 | default([])) %}
 {% set election_date = state_display_content.field_election_date.0 | default([]) | merge(content.field_election_date.0 | default([])) %}
 {% set election_text = state_display_content.field_election_text.0 | default([]) | merge(content.field_election_text.0 | default([])) %}
+{% set no_online_registration = state_display_content.field_no_online_registration.0 | default([]) | merge(content.field_no_online_registration.0 | default([])) %}
 
-{# Registration types #}
-{% set registration_types = content.field_registration_type | field_value | column('#markup') %}
-{% set has_in_person = "in-person" in registration_types %}
-{% set has_mail = "by-mail" in registration_types %}
-{% set has_online = "online" in registration_types %}
-{% set not_needed = "not-needed" in registration_types %}
 
 <div{{ attributes.addClass(classes) }}>
   {# Hold these title_* placeholders for potential integration #}
@@ -109,21 +104,22 @@
       {{ registration_intro.text }}
     {% endif %}
 
-    {% if has_online and (online_registration is not empty) %}
-      {{ online_registration }}
-      {{ online_deadline }}
-      {{ registration_link }}
-      {% set body = online_registration.text['#markup'] | t({'@state_online_deadline': online_deadline | render, '@state_name': title_english}) %}
-      {% set link_title = online_registration.link_text['#markup'] | t({'@state_name': title_english }) %}
-      {% include '@votegov/component/info-card.html.twig' with {
-        'heading': online_registration.heading,
-        'body': body,
-          'link': {
-            'url': registration_link,
-            'title': link_title,
-          }
-      } %}
-    {% endif %}
+{# setting online registration variables #}
+{% set online_registration_vars = has_online ? online_registration : no_online_registration %}
+{% set body_vars = has_online ? {'@state_online_deadline': online_deadline | render, '@state_name': title_english} : {'@state_name': title_english} %}
+
+{% if online_registration_vars is not empty %}
+  {% set body = online_registration_vars.text['#markup'] | t(body_vars) %}
+  {% set link_title = online_registration_vars.link_text['#markup'] | t({'@state_name': title_english}) %}
+  {% include '@votegov/component/info-card.html.twig' with {
+    'heading': online_registration_vars.heading,
+    'body': body,
+    'link': {
+      'url': registration_link,
+      'title': link_title,
+    }
+  } %}
+{% endif %}
 
     {% if has_mail and mail_registration is not empty %}
       {% set mail_body %}
