@@ -12,6 +12,7 @@ dependencies:
     - field.field.block_content.state_display_content.field_mail_registration
     - field.field.block_content.state_display_content.field_military_and_overseas_regi
     - field.field.block_content.state_display_content.field_no_online_registration
+    - field.field.block_content.state_display_content.field_no_mail_registration
     - field.field.block_content.state_display_content.field_nvrf_details
     - field.field.block_content.state_display_content.field_online_registration
     - field.field.block_content.state_display_content.field_registration_not_needed
@@ -90,9 +91,9 @@ content:
         text: text
         link_text: 0
     third_party_settings: {  }
-  field_no_online_registration:
+  field_nvrf_details:
     type: vote_fields_state_content
-    weight: 5
+    weight: 7
     region: content
     settings:
       form_subfield_display:
