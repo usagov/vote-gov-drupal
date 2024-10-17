@@ -1,0 +1,64 @@
+uuid: 39505d86-3771-43a7-b66d-1d96559cf94b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.partnership
+    - core.entity_form_mode.block_content.landing_page_component
+    - field.field.block_content.partnership.field_display_social_link
+    - field.field.block_content.partnership.field_eac_logo
+    - field.field.block_content.partnership.field_eac_logo_link
+    - field.field.block_content.partnership.field_eac_logo_text
+    - field.field.block_content.partnership.field_election_resources
+    - field.field.block_content.partnership.field_heading
+    - field.field.block_content.partnership.field_section_identifier
+    - field.field.block_content.partnership.field_social_link
+    - field.field.block_content.partnership.field_social_logo
+    - field.field.block_content.partnership.field_usagov_logo
+    - field.field.block_content.partnership.field_usagov_logo_link
+    - field.field.block_content.partnership.field_usagov_logo_text
+id: block_content.partnership.landing_page_component
+targetEntityType: block_content
+bundle: partnership
+mode: landing_page_component
+content:
+  field_heading:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_display_social_link: true
+  field_eac_logo: true
+  field_eac_logo_link: true
+  field_eac_logo_text: true
+  field_election_resources: true
+  field_section_identifier: true
+  field_social_link: true
+  field_social_logo: true
+  field_usagov_logo: true
+  field_usagov_logo_link: true
+  field_usagov_logo_text: true
