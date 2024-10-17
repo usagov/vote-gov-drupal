@@ -57,6 +57,7 @@
 {% set online_registration = state_display_content.field_online_registration.0 | default([]) | merge(content.field_online_registration.0 | default([])) %}
 {% set military_overseas_registration = state_display_content.field_military_and_overseas_regi.0 | default([]) | merge(content.field_military_and_overseas_regi.0 | default([])) %}
 {% set mail_registration = state_display_content.field_mail_registration.0 | default([]) | merge(content.field_mail_registration.0 | default([])) %}
+{% set no_mail_registration = state_display_content.field_no_mail_registration.0 | default([]) | merge(content.field_no_mail_registration.0 | default([])) %}
 {% set nvrf_details = state_display_content.field_nvrf_details.0 | default([]) | merge(content.field_nvrf_details.0 | default([])) %}
 {% set inperson_registration = state_display_content.field_in_person_registration.0 | default([]) | merge(content.field_in_person_registration.0 | default([])) %}
 {% set check_registration = state_display_content.field_check_registration.0 | default([]) | merge(content.field_check_registration.0 | default([])) %}
@@ -125,46 +126,61 @@
       } %}
     {% endif %}
 
-    {% if has_mail and mail_registration is not empty %}
-      {% set mail_body %}
-        <p><strong>{{ 'Mail-in registration deadline:' | t }}</strong> {{ bymail_deadline }}</p>
-        {{ mail_registration.text }}
 
-        {% if state_mail_pdf_link and mail_registration.link_text %}
-          <p>{{ link(mail_registration.link_text, state_mail_pdf_link) }}</p>
-        {% endif %}
-      {% endset %}
+    {% if has_mail and (mail_registration is not empty) %}
+  {% set mail_body %}
+    <p><strong>{{ 'Mail-in registration deadline:' | t }}</strong> {{ bymail_deadline }}</p>
+    {{ mail_registration.text }}
 
-      {% if accepts_nvrf and nvrf_details is not empty %}
-        {% set mail_footer %}
-          <hr>
-          {% if nvrf_details.heading %}
-            <h3>{{ nvrf_details.heading }}</h3>
-          {% endif %}
+    {% if state_mail_pdf_link and mail_registration.link_text %}
+      <p>{{ link(mail_registration.link_text, state_mail_pdf_link) }}</p>
+    {% endif %}
+  {% endset %}
 
-          {{ nvrf_details.text }}
-
-          {% if nvrf_details.link_text %}
-            {# Set path to form dynamically using page route. #}
-            {% set form_route = language != 'es' ? 'vote_nvrf.nvrf_page' : 'vote_nvrf.nvrf_page_es' %}
-            {% set state_name = currentnode.label | lower | replace({' ': '-'}) %}
-
-            {% include '@votegov/component/button.html.twig' with {
-              'href': 'internal:' ~ path(form_route, {'state_name': state_name}),
-              'label': nvrf_details.link_text,
-              'data_label': 'data-state-ext',
-              'data': 'nvrf-pdf-tool-registration'
-            } %}
-          {% endif %}
-        {% endset %}
+  {% set mail_footer %}
+    {% if accepts_nvrf and nvrf_details is not empty %}
+      <hr>
+      {% if nvrf_details.heading %}
+        <h3>{{ nvrf_details.heading }}</h3>
       {% endif %}
 
-      {% include '@votegov/component/info-card.html.twig' with {
-        'heading': mail_registration.heading,
-        'body': mail_body | render | trim | t({'@state_name': state_name}),
-        'footer': mail_footer
-      } %}
+      {{ nvrf_details.text }}
+
+      {% if nvrf_details.link_text %}
+        {# Set path to form dynamically using page route. #}
+        {% set form_route = language!= 'es'? 'vote_nvrf.nvrf_page' : 'vote_nvrf.nvrf_page_es' %}
+        {% set state_name = currentnode.label | lower | replace({' ': '-'}) %}
+
+        {% include '@votegov/component/button.html.twig' with {
+          'href': 'internal:' ~ path(form_route, {'state_name': state_name}),
+          'label': nvrf_details.link_text,
+          'data_label': 'data-state-ext',
+          'data': 'nvrf-pdf-tool-registration'
+        } %}
+      {% endif %}
     {% endif %}
+  {% endset %}
+
+  {% include '@votegov/component/info-card.html.twig' with {
+    'heading': mail_registration.heading,
+    'body': mail_body | render | trim | t({'@state_name': state_name}),
+    'footer': mail_footer
+  } %}
+{% else %}
+  {% if not has_mail and (no_mail_registration is not empty) %}
+    {% set body = no_mail_registration.text['#markup'] | t({'@state_name': title_english}) %}
+    {% set link_title = no_mail_registration.link_text['#markup'] | t({'@state_name': title_english }) %}
+
+    {% include '@votegov/component/info-card.html.twig' with {
+      'heading': no_mail_registration.heading,
+      'body': body,
+      'link': {
+        'url': registration_link,
+        'title': link_title,
+      }
+    } %}
+  {% endif %}
+{% endif %}
 
     {% if has_in_person and (inperson_registration is not empty) %}
       {% set body = inperson_registration.text['#markup'] | t({'@state_in-person_deadline': inperson_deadline | render }) %}
