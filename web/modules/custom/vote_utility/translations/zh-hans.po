@@ -306,12 +306,15 @@ msgstr "选择您所在州或属地"
 msgid "States and territories suggestion list"
 msgstr "州和属地建议清单"
 
-msgid "Voting as a U.S. citizen from outside the U.S."
-msgstr "从联邦投票协助计划（Federal Voting Assistance Program - FVAP）了解更多信息"
-
 # Temporary military and overseas voter cards
 msgid "Voting as a military service member"
-msgstr "从联邦投票协助计划（Federal Voting Assistance Program - FVAP）了解更多信息"
+msgstr "军人投票"
+
+msgid "Learn more from the Federal Voting Assistance Program (FVAP)."
+msgstr "从联邦投票协助计划（Federal Voting Assistance Program - FVAP）了解更多信息 (英语)"
+
+msgid "Voting as a U.S. citizen from outside the U.S."
+msgstr "美国公民从海外投票"
 
 msgid "Know your voting rights"
 msgstr "了解您的投票权"
