@@ -1,0 +1,16 @@
+uuid: da135a10-e6fd-4adc-a40f-b706451752d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_identifier
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.contact_identifier
+target_entity_type_id: block_content
+target_bundle: contact_identifier
+default_langcode: site_default
+language_alterable: false
