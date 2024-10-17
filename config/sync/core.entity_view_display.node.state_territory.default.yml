@@ -28,6 +28,7 @@ dependencies:
     - field.field.node.state_territory.field_metatags
     - field.field.node.state_territory.field_military_and_overseas_regi
     - field.field.node.state_territory.field_more_info_link
+    - field.field.node.state_territory.field_nvrf_details
     - field.field.node.state_territory.field_nvrf_fields
     - field.field.node.state_territory.field_nvrf_last_updated_date
     - field.field.node.state_territory.field_of_state_name
@@ -278,6 +279,13 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 7
+    region: content
+  field_nvrf_details:
+    type: vote_fields_state_content_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 47
     region: content
   field_nvrf_fields:
     type: field_nvrf_fields_default

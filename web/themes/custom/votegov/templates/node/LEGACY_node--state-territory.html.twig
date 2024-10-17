@@ -1,0 +1,142 @@
+{#
+/**
+ * @file
+ *  Bixal USWDS Theme override to display a node: State/Territory.
+ */
+#}
+
+{# Caching the data in content object #}
+{% set savedCache = content | render %}
+
+{% set classes = [
+  'node--' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  'vote-state-territory-content'
+] %}
+
+{% set state_name = label | field_value | render %}
+{% set in_state_name = node.field_in_state_name.value | default("@state_name") | t({ "@state_name": state_name}) %}
+{% set of_state_name = node.field_of_state_name.value | default("@state_name") | t({ "@state_name": state_name}) %}
+{% set state_abrev = content.field_state_abbreviation | field_value | render %}
+{% set in_english = "(in English)" | t %}
+{% set election_date = "11/05/2024"  | date('U') | format_date('long_date') | replace(t_numbers[language].numbers | default([])) %}
+{% set election_link_text = 'Find state and local election dates.' | t %}
+{% if language != "en" %}
+  {% set election_link_text = election_link_text ~ ' ' ~ in_english %}
+{% endif %}
+{% set election_link %}
+  <a href="https://www.eac.gov/voters/register-and-vote-in-your-state">{{ election_link_text }}</a>
+{% endset %}
+
+{# Set postmarked deadline with fallback #}
+{% if content.field_mail_postmarked_deadline | render %}
+{% set postmarked_deadline = 'Must be postmarked by @date' | t({'@date': content.field_mail_postmarked_deadline.0 | render}) %}
+{% else %}
+{% set postmarked_deadline = content.field_g_mail_postmarked_deadline | field_value %}
+{% endif %}
+
+{# Set received deadline with fallback #}
+{% if content.field_mail_received_deadline | render %}
+{% set received_deadline = 'Must be received by @date' | t({'@date': content.field_mail_received_deadline.0 | render}) %}
+{% else %}
+{% set received_deadline = content.field_g_mail_received_deadline | field_value %}
+{% endif %}
+
+{# Set the deadline with fallback, prioritizing postmarked deadline. #}
+{% set deadline_bymail = postmarked_deadline | default(received_deadline) %}
+
+{# Set in person deadline #}
+{% set deadline_inperson = content.field_in_person_deadline | field_value | default(content.field_g_in_person_deadline | field_value) %}
+
+{# Set online deadline #}
+{% set deadline_online = content.field_online_deadline | field_value | default(content.field_g_online_deadline | field_value) %}
+
+{# Korean 'state' character logic #}
+{% if language == 'ko' and node.field_is_state.value %}
+  {% set korean_state_char = "state" | t %}
+  {% set state_name = state_name ~ " " ~ korean_state_char %}
+{% endif %}
+
+<div{{ attributes.addClass(classes) }}>
+  {# Hold these title_* placeholders for potential integration #}
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  <div class="vote-narrow-container-left-align">
+  {% if drupal_view('inline_alert', 'embed_1') | render | striptags | trim %}
+    {{ drupal_view('inline_alert', 'embed_1') }}
+  {% endif %}
+
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+
+  {% block deadlines %}
+    {# Registration deadlines #}
+    <h2>{{ 'Voter registration deadlines' | t({ '@state_name': state_name }) }}</h2>
+    <p>
+      {{ 'Voter registration deadlines are for the November 05, 2024 election. @link' | t({
+        '@link': {'#markup': election_link} | render,
+        '@election_date': {'#markup': election_date} | render }
+      ) }}
+    </p>
+    <ul data-test="registrationInfo">
+      {% if deadline_online %}
+        <li><strong>{{ 'Online registration deadline:' | t }}</strong> {{ deadline_online }}</li>
+      {% endif %}
+
+      {% if deadline_bymail %}
+        <li><strong>{{ 'Register by mail deadline:' | t }}</strong> {{ deadline_bymail }}</li>
+      {% endif %}
+
+      {% if deadline_inperson %}
+        <li><strong>{{ 'In person registration deadline:' | t }}</strong> {{ deadline_inperson }}</li>
+      {% endif %}
+    </ul>
+  {% endblock %}
+
+  {% block confirm %}
+    {# Check voter registration #}
+    {% if content.field_confirm_registration_link | render %}
+      {% set confirm_reg_link = content.field_override_confirm_reg_link | field_value | render | default( content.field_confirm_registration_link | field_value | render ) %}
+      {% set confirm_reg_link_text = "confirm your voter registration status" | t %}
+
+      {% if language != "en" and not content.field_override_confirm_reg_link  | render %}
+        {% set confirm_reg_link_text = confirm_reg_link_text ~ ' ' ~ in_english %}
+      {% endif %}
+
+      <h2>{{ 'How to check your voter registration' | t({ '@state_name': state_name }) }}</h2>
+      {% if state_abrev != 'wy' %}
+        <p>{{ 'You can @link on @state_name’s election website.' | t({
+            '@link': { "#markup": "<a href=\"#{confirm_reg_link}\" data-state-ext=\"confirm-registration\">#{confirm_reg_link_text}</a>" } | render,
+            '@state_name': state_name,
+            '@of_state_name': of_state_name,
+            '@in_state_name': in_state_name
+          }) }}
+        </p>
+      {% else %} {# Wyoming alt text #}
+        {% set alt_confirm_reg_link_text = "Click here to view Wyoming's county clerk contact information (PDF)" | t %}
+        <p>{{ 'You can confirm your voter registration status by contacting your local registration office. @link.' | t({
+            '@link': { "#markup": "<a href=\"#{confirm_reg_link}\">#{alt_confirm_reg_link_text}</a>" } | render
+          }) }}
+        </p>
+      {% endif %}
+    {% endif %}
+  {% endblock %}
+
+  {% if node.field_accepts_nvrf.value == 1 %}
+    {{ drupal_entity('block_content', '3') }}
+  {% endif %}
+
+  {# Checking if updated date is set and then render the field #}
+  {% if content.field_updated_date | field_value is not empty %}
+  <p class="vote-date--updated">
+    {# Striptags and raw filters were added to accomodate Navajo date formats. #}
+    {{'Last updated:' | t }} {{ content.field_updated_date | render | replace(t_numbers[language].numbers | default([])) | striptags('<span>') | raw }}
+  </p>
+  {% endif %}
+  </div>
+</div>
