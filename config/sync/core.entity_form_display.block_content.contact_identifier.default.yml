@@ -1,0 +1,67 @@
+uuid: 6785a1bb-a57d-441c-bfae-eedc0498a241
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_identifier
+    - field.field.block_content.contact_identifier.field_agency_domain
+    - field.field.block_content.contact_identifier.field_gsa_link
+    - field.field.block_content.contact_identifier.field_logo
+    - field.field.block_content.contact_identifier.field_usagov_link
+  module:
+    - allowed_formats
+    - media_library
+    - text
+id: block_content.contact_identifier.default
+targetEntityType: block_content
+bundle: contact_identifier
+mode: default
+content:
+  field_agency_domain:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gsa_link:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '0'
+        hide_guidelines: '0'
+  field_logo:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_usagov_link:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '0'
+        hide_guidelines: '0'
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  translation: true

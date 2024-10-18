@@ -1,0 +1,19 @@
+uuid: 61169168-9e04-4d57-ba07-a0d258d253e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.partnership
+    - field.storage.block_content.field_eac_logo_text
+id: block_content.partnership.field_eac_logo_text
+field_name: field_eac_logo_text
+entity_type: block_content
+bundle: partnership
+label: 'EAC logo text'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,147 @@
+uuid: 56f6d002-69a6-4fe4-b09d-04c70985314c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.partnership
+    - field.field.block_content.partnership.field_display_social_link
+    - field.field.block_content.partnership.field_eac_logo
+    - field.field.block_content.partnership.field_eac_logo_link
+    - field.field.block_content.partnership.field_eac_logo_text
+    - field.field.block_content.partnership.field_election_resources
+    - field.field.block_content.partnership.field_heading
+    - field.field.block_content.partnership.field_section_identifier
+    - field.field.block_content.partnership.field_social_link
+    - field.field.block_content.partnership.field_social_logo
+    - field.field.block_content.partnership.field_usagov_logo
+    - field.field.block_content.partnership.field_usagov_logo_link
+    - field.field.block_content.partnership.field_usagov_logo_text
+  module:
+    - link
+    - media
+    - text
+id: block_content.partnership.default
+targetEntityType: block_content
+bundle: partnership
+mode: default
+content:
+  field_display_social_link:
+    type: boolean
+    label: above
+    settings:
+      format: true-false
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_eac_logo:
+    type: media_thumbnail
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_eac_logo_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_eac_logo_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_election_resources:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_section_identifier:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_social_link:
+    type: link_separate
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_social_logo:
+    type: media_thumbnail
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_usagov_logo:
+    type: media_thumbnail
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_usagov_logo_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_usagov_logo_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  langcode: true
