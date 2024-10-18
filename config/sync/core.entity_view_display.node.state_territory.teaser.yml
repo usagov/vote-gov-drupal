@@ -44,7 +44,6 @@ dependencies:
     - field.field.node.state_territory.field_personal_information_inst
     - field.field.node.state_territory.field_political_party_inst
     - field.field.node.state_territory.field_reg_eligibility_desc
-    - field.field.node.state_territory.field_registration_intro
     - field.field.node.state_territory.field_registration_link
     - field.field.node.state_territory.field_registration_not_needed
     - field.field.node.state_territory.field_registration_type
@@ -109,7 +108,6 @@ hidden:
   field_personal_information_inst: true
   field_political_party_inst: true
   field_reg_eligibility_desc: true
-  field_registration_intro: true
   field_registration_link: true
   field_registration_not_needed: true
   field_registration_type: true
