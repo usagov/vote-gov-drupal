@@ -14,7 +14,6 @@ dependencies:
     - field.field.block_content.state_display_content.field_no_online_registration
     - field.field.block_content.state_display_content.field_nvrf_details
     - field.field.block_content.state_display_content.field_online_registration
-    - field.field.block_content.state_display_content.field_registration_intro
     - field.field.block_content.state_display_content.field_registration_not_needed
   module:
     - datetime
@@ -97,13 +96,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 4
-    region: content
-  field_registration_intro:
-    type: vote_fields_state_content_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 3
     region: content
   field_registration_not_needed:
     type: vote_fields_state_content_default

@@ -14,7 +14,6 @@ dependencies:
     - field.field.block_content.state_display_content.field_no_online_registration
     - field.field.block_content.state_display_content.field_nvrf_details
     - field.field.block_content.state_display_content.field_online_registration
-    - field.field.block_content.state_display_content.field_registration_intro
     - field.field.block_content.state_display_content.field_registration_not_needed
   module:
     - allowed_formats
@@ -120,16 +119,6 @@ content:
         - heading
         - text
         - link_text
-    third_party_settings: {  }
-  field_registration_intro:
-    type: vote_fields_state_content
-    weight: 2
-    region: content
-    settings:
-      form_subfield_display:
-        heading: heading
-        text: text
-        link_text: 0
     third_party_settings: {  }
   field_registration_not_needed:
     type: vote_fields_state_content
