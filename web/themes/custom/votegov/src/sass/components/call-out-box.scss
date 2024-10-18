@@ -13,6 +13,7 @@
 .vote-call-out-box {
   @include u-radius('lg');
   @include u-padding(4);
+  @include u-margin-bottom(6);
   background-color: #E7F6F8;
 
   @include at-media-max('tablet') {
@@ -20,6 +21,5 @@
     @include u-radius(0);
     @include u-margin-top(-4);
     @include u-margin-x(-3);
-    @include u-margin-bottom(0);
   }
 }
