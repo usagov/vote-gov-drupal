@@ -1,0 +1,14 @@
+{% if link_url %}
+  {% set link_markup %}
+    <a href={{link_url}}>{{ link_text }}</a>
+  {% endset %}
+  {% set text_full = text | t({'@link': {'#markup': link_markup } | render }) %}
+{% else %}
+  {% set text_full = text %}
+{% endif %}
+<div class="vote-call-out-box">
+  <h2>{{ heading }}</h2>
+  <p>
+    {{ text_full }}
+  </p>
+</div>
