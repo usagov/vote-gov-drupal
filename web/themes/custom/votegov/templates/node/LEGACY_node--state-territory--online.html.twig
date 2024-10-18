@@ -7,6 +7,12 @@
 #}
 
 {% block content %}
+  {% set registration_intro = state_display_content.field_registration_intro.0 | merge(content.field_registration_intro.0 | default([]))  %}
+  {% if registration_intro is not empty %}
+    <h2>{{ registration_intro.heading }}</h2>
+    {{ registration_intro.text }}
+  {% endif %}
+
   {# How to register to vote #}
   <h2>{{ 'How to register and update your registration' | t({ '@state_name': state_name }) }}</h2>
   {# registration link, more info link #}

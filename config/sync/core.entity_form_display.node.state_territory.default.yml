@@ -28,6 +28,7 @@ dependencies:
     - field.field.node.state_territory.field_metatags
     - field.field.node.state_territory.field_military_and_overseas_regi
     - field.field.node.state_territory.field_more_info_link
+    - field.field.node.state_territory.field_nvrf_details
     - field.field.node.state_territory.field_nvrf_fields
     - field.field.node.state_territory.field_nvrf_last_updated_date
     - field.field.node.state_territory.field_of_state_name
@@ -42,7 +43,6 @@ dependencies:
     - field.field.node.state_territory.field_personal_information_inst
     - field.field.node.state_territory.field_political_party_inst
     - field.field.node.state_territory.field_reg_eligibility_desc
-    - field.field.node.state_territory.field_registration_intro
     - field.field.node.state_territory.field_registration_link
     - field.field.node.state_territory.field_registration_not_needed
     - field.field.node.state_territory.field_registration_type
@@ -228,6 +228,7 @@ third_party_settings:
         - field_registration_intro
         - field_online_registration
         - field_mail_registration
+        - field_nvrf_details
         - field_in_person_registration
         - field_military_and_overseas_regi
         - field_registration_not_needed
@@ -277,7 +278,11 @@ content:
     type: vote_fields_state_content
     weight: 12
     region: content
-    settings: {  }
+    settings:
+      form_subfield_display:
+        - heading
+        - text
+        - link_text
     third_party_settings: {  }
   field_confirm_registration_link:
     type: link_default
@@ -368,9 +373,13 @@ content:
     third_party_settings: {  }
   field_in_person_registration:
     type: vote_fields_state_content
-    weight: 16
+    weight: 17
     region: content
-    settings: {  }
+    settings:
+      form_subfield_display:
+        - heading
+        - text
+        - link_text
     third_party_settings: {  }
   field_in_state_name:
     type: string_textfield
@@ -403,7 +412,11 @@ content:
     type: vote_fields_state_content
     weight: 15
     region: content
-    settings: {  }
+    settings:
+      form_subfield_display:
+        - heading
+        - text
+        - link_text
     third_party_settings: {  }
   field_mail_registration_link:
     type: link_default
@@ -438,9 +451,13 @@ content:
     third_party_settings: {  }
   field_military_and_overseas_regi:
     type: vote_fields_state_content
-    weight: 17
+    weight: 18
     region: content
-    settings: {  }
+    settings:
+      form_subfield_display:
+        - heading
+        - text
+        - link_text
     third_party_settings: {  }
   field_more_info_link:
     type: link_default
@@ -449,6 +466,16 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_nvrf_details:
+    type: vote_fields_state_content
+    weight: 16
+    region: content
+    settings:
+      form_subfield_display:
+        - heading
+        - text
+        - link_text
     third_party_settings: {  }
   field_nvrf_fields:
     type: field_nvrf_fields
@@ -497,7 +524,11 @@ content:
     type: vote_fields_state_content
     weight: 14
     region: content
-    settings: {  }
+    settings:
+      form_subfield_display:
+        - heading
+        - text
+        - link_text
     third_party_settings: {  }
   field_override_confirm_reg_link:
     type: link_default
@@ -571,12 +602,6 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_registration_intro:
-    type: vote_fields_state_content
-    weight: 13
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_registration_link:
     type: link_default
     weight: 6
@@ -587,9 +612,13 @@ content:
     third_party_settings: {  }
   field_registration_not_needed:
     type: vote_fields_state_content
-    weight: 18
+    weight: 19
     region: content
-    settings: {  }
+    settings:
+      form_subfield_display:
+        - heading
+        - text
+        - link_text
     third_party_settings: {  }
   field_registration_type:
     type: options_buttons

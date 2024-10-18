@@ -1,13 +1,13 @@
-uuid: 1398a67d-49c9-405e-ab74-55a62270a1fa
+uuid: 5da4a342-22fe-449e-8edb-0d68fcd6db60
 langcode: en
 status: true
 dependencies:
   module:
-    - block_content
+    - node
     - vote_fields
-id: block_content.field_registration_intro
-field_name: field_registration_intro
-entity_type: block_content
+id: node.field_nvrf_details
+field_name: field_nvrf_details
+entity_type: node
 type: vote_fields_state_content
 settings: {  }
 module: vote_fields

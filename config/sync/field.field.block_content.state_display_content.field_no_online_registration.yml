@@ -1,17 +1,17 @@
-uuid: 6e4058ae-1e1e-4a2f-8ca9-cc1772cb12b7
+uuid: 398183c8-0c7a-4960-aaf6-d3bb2caa3f9c
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.state_display_content
-    - field.storage.block_content.field_registration_intro
+    - field.storage.block_content.field_no_online_registration
   module:
     - vote_fields
-id: block_content.state_display_content.field_registration_intro
-field_name: field_registration_intro
+id: block_content.state_display_content.field_no_online_registration
+field_name: field_no_online_registration
 entity_type: block_content
 bundle: state_display_content
-label: 'Registration intro'
+label: 'No Online registration'
 description: ''
 required: false
 translatable: true
