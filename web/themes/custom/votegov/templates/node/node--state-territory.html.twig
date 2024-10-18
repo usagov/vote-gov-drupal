@@ -53,7 +53,6 @@
 {# Get default state display content from the block type. #}
 {% set state_display_content = drupal_entity('block_content', 22) | children %}
 {% set registration_not_needed = state_display_content.field_registration_not_needed.0 | default([]) | merge(content.field_registration_not_needed.0 | default([])) %}
-{% set registration_intro = state_display_content.field_registration_intro.0 | default([]) | merge(content.field_registration_intro.0 | default([])) %}
 {% set online_registration = state_display_content.field_online_registration.0 | default([]) | merge(content.field_online_registration.0 | default([])) %}
 {% set military_overseas_registration = state_display_content.field_military_and_overseas_regi.0 | default([]) | merge(content.field_military_and_overseas_regi.0 | default([])) %}
 {% set mail_registration = state_display_content.field_mail_registration.0 | default([]) | merge(content.field_mail_registration.0 | default([])) %}
@@ -97,11 +96,6 @@
     {% if (election_date is not empty) and (election_text is not empty) %}
       {% set election_date_text = election_text['#text'] | t({'@date': election_date | render }) %}
       {{ election_date_text }}
-    {% endif %}
-
-    {% if registration_intro is not empty %}
-      <h2>{{ registration_intro.heading }}</h2>
-      {{ registration_intro.text }}
     {% endif %}
 
 {# setting online registration variables #}
