@@ -74,8 +74,7 @@
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   'vote-main-content-row',
   'vote-block-margin-y--narrow',
-  'usa-in-page-nav-container',
-  confirm_registration_link ? 'vote-call-out-box-offset'
+  'usa-in-page-nav-container'
 ] %}
 
 <div{{ attributes.addClass(classes) }}>
@@ -88,25 +87,24 @@
   {% endif %}
 
   {% block aside %}
-  <aside
-    class="usa-in-page-nav"
-    data-main-content-selector=".usa-in-page-nav-container"
-    data-title-text="{{ 'Jump to registration options' | t }}"
-    data-title-heading-level="h2"
-    data-scroll-offset="-600"
-    data-root-margin="48px 0px -90% 0px"
-    data-threshold="1"
-  ></aside>
-{% endblock %}
+    <aside
+      class="usa-in-page-nav"
+      data-main-content-selector=".usa-in-page-nav-container"
+      data-title-text="{{ 'Jump to registration options' | t }}"
+      data-title-heading-level="h2"
+      data-scroll-offset="-600"
+      data-root-margin="48px 0px -90% 0px"
+      data-threshold="1"
+    ></aside>
+  {% endblock %}
 
   <div class="vote-page-content vote-page-content--alt">
    {% block content %}
-    {% if confirm_registration_link %}
-      {% set check_registration_link_text = check_registration.link_text['#markup'] | t({'@state_name': title_english}) %}
+    {% if check_registration is not empty %}
       {% include '@votegov/component/call-out-box.html.twig' with {
         'heading': check_registration.heading,
-        'text': check_registration.text['#markup'],
-        'link_text': check_registration_link_text,
+        'text': check_registration.text | render | trim,
+        'link_text': check_registration.link_text | render | trim | t({'@state_name': title_english}),
         'link_url': confirm_registration_link
       } %}
     {% endif %}
