@@ -1,0 +1,26 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+@use "mixins" as *;
+
+.vote-call-out-box {
+  @include u-padding(4);
+  @include u-margin-bottom(6);
+  background-color: $bg-light-cool;
+
+  @include at-media('tablet') {
+    @include u-radius('lg');
+  }
+
+  @include at-media-max('tablet') {
+    @include u-padding-x(3);
+    @include u-margin-x(-3);
+  }
+}
+
+.vote-call-out-box--offset {
+  @include u-margin-top(-4);
+
+  @include at-media('tablet') {
+    margin-top: -6rem;
+  }
+}

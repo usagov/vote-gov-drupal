@@ -8,17 +8,6 @@
 {# Caching the data in content object #}
 {% set savedCache = content | render %}
 
-{% set classes = [
-  'node--' ~ node.bundle|clean_class,
-  node.isPromoted() ? 'node--promoted',
-  node.isSticky() ? 'node--sticky',
-  not node.isPublished() ? 'node--unpublished',
-  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  'vote-main-content-row',
-  'vote-block-margin-y--narrow',
-  'usa-in-page-nav-container'
-] %}
-
 {% set state_name = label | field_value | render %}
 {% set accepts_nvrf = node.field_accepts_nvrf.value == 1 %}
 
@@ -51,7 +40,7 @@
 
 {# State content with fallbacks. #}
 {# Get default state display content from the block type. #}
-{% set state_display_content = drupal_entity('block_content', 22) | children %}
+{% set state_display_content = drupal_entity('block_content', 23) | children %}
 {% set registration_not_needed = state_display_content.field_registration_not_needed.0 | default([]) | merge(content.field_registration_not_needed.0 | default([])) %}
 {% set online_registration = state_display_content.field_online_registration.0 | default([]) | merge(content.field_online_registration.0 | default([])) %}
 {% set military_overseas_registration = state_display_content.field_military_and_overseas_regi.0 | default([]) | merge(content.field_military_and_overseas_regi.0 | default([])) %}
@@ -70,6 +59,17 @@
 {% set has_online = "online" in registration_types %}
 {% set not_needed = "not-needed" in registration_types %}
 
+{% set classes = [
+  'node--' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  'vote-main-content-row',
+  'vote-block-margin-y--narrow',
+  'usa-in-page-nav-container'
+] %}
+
 <div{{ attributes.addClass(classes) }}>
   {# Hold these title_* placeholders for potential integration #}
   {{ title_prefix }}
@@ -80,22 +80,26 @@
   {% endif %}
 
   {% block aside %}
-  <aside
-    class="usa-in-page-nav"
-    data-main-content-selector=".usa-in-page-nav-container"
-    data-title-text="{{ 'Jump to registration options' | t }}"
-    data-title-heading-level="h2"
-    data-scroll-offset="-600"
-    data-root-margin="48px 0px -90% 0px"
-    data-threshold="1"
-  ></aside>
-{% endblock %}
+    <aside
+      class="usa-in-page-nav"
+      data-main-content-selector=".usa-in-page-nav-container"
+      data-title-text="{{ 'Jump to registration options' | t }}"
+      data-title-heading-level="h2"
+      data-scroll-offset="-600"
+      data-root-margin="48px 0px -90% 0px"
+      data-threshold="1"
+    ></aside>
+  {% endblock %}
 
   <div class="vote-page-content vote-page-content--alt">
-  {% block content %}
+   {% block content %}
     {% if check_registration is not empty %}
-      {{ check_registration }}
-      {{ confirm_registration_link }}
+      {% include '@votegov/component/call-out-box.html.twig' with {
+        'heading': check_registration.heading,
+        'text': check_registration.text | render | trim,
+        'link_text': check_registration.link_text | render | trim | t({'@state_name': title_english}),
+        'link_url': confirm_registration_link
+      } %}
     {% endif %}
 
      {# Election Date #}
@@ -121,7 +125,7 @@
   } %}
 {% endif %}
 
-    {% if has_mail and mail_registration is not empty %}
+     {% if has_mail and mail_registration is not empty %}
       {% set mail_body %}
         <p><strong>{{ 'Mail-in registration deadline:' | t }}</strong> {{ bymail_deadline }}</p>
         {{ mail_registration.text }}
