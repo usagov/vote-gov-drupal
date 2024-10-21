@@ -16,9 +16,10 @@
     @include u-margin-x(-3);
   }
 
-  aside > & {
+  .vote-side-nav-container > & {
     @include u-padding(3);
     @include u-margin(0);
+
     h2 {
       @include u-font('sans','sm');
     }

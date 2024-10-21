@@ -2,15 +2,28 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-.usa-in-page-nav {
-  @include grid-offset(1);
-  margin-inline-start: calc(100% / 12);
-  padding-inline-start: 2rem;
-  max-width: 18rem;
+.vote-side-nav-container {
+  margin-left: 64px;
+  margin-top: units($theme-in-page-nav-margin-top);
+  padding-left: 64px;
+  max-width: 20rem;
+  order: 2;
+  position: sticky;
+  top: units($theme-in-page-nav-top);
+  width: 100%;
 
   @include at-media-max('tablet-lg') {
     @include u-display('none');
   }
+}
+
+.usa-in-page-nav {
+  @include grid-offset(1);
+  margin-inline-start: calc(100% / 12);
+  padding-inline-start: 2rem;
+  margin-left: 0px;
+  padding: 0px;
+  max-width: inherit;
 }
 
 .usa-in-page-nav__list {
