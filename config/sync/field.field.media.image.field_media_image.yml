@@ -28,7 +28,7 @@ settings:
   handler: 'default:file'
   handler_settings: {  }
   file_directory: 'media/image/[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'png jpg webp'
+  file_extensions: 'png jpg webp svg'
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''
