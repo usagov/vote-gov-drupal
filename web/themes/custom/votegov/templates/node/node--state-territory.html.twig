@@ -88,7 +88,16 @@
       data-scroll-offset="-600"
       data-root-margin="48px 0px -90% 0px"
       data-threshold="1"
-    ></aside>
+    >
+     {% if check_registration is not empty %}
+      {% include '@votegov/component/call-out-box.html.twig' with {
+        'heading': check_registration.heading,
+        'text': check_registration.text | render | trim,
+        'link_text': check_registration.link_text | render | trim | t({'@state_name': title_english}),
+        'link_url': confirm_registration_link
+      } %}
+    </aside>
+    {% endif %}
   {% endblock %}
 
   <div class="vote-page-content vote-page-content--alt">

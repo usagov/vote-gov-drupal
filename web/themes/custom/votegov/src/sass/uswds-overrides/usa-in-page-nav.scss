@@ -6,6 +6,7 @@
   @include grid-offset(1);
   margin-inline-start: calc(100% / 12);
   padding-inline-start: 2rem;
+  max-width: 18rem;
 
   @include at-media-max('tablet-lg') {
     @include u-display('none');

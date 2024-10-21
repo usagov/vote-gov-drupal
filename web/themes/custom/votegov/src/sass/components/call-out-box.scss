@@ -15,6 +15,14 @@
     @include u-padding-x(3);
     @include u-margin-x(-3);
   }
+
+  aside > & {
+    @include u-padding(3);
+    @include u-margin(0);
+    h2 {
+      @include u-font('sans','sm');
+    }
+  }
 }
 
 .vote-call-out-box--offset {
