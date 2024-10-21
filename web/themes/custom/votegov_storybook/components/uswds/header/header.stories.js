@@ -1,8 +1,9 @@
 import Header from "./header.html.twig";
+import data from './header.data.yml';
 
 export default {
-  title: "Components/Header",
-  args: {},
+  title: "USWDS/Header",
+  args: { ...data },
   component: Header,
 };
 

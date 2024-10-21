@@ -1,8 +1,8 @@
 /** @type { import('@storybook/html-vite').StorybookConfig } */
 const config = {
   stories: [
-    "../stories/**/*.mdx",
-    "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+    "../components/**/*.mdx",
+    "../components/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
   addons: [
     "@storybook/addon-links",
@@ -13,6 +13,9 @@ const config = {
   framework: {
     name: "@storybook/html-vite",
     options: {},
+  },
+  docs: {
+    autodocs: "tag",
   },
 };
 export default config;
