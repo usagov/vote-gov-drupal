@@ -83,7 +83,7 @@
     <aside class="vote-side-nav-container">
       <div
         class="usa-in-page-nav"
-        data-main-content-selector=".usa-in-page-nav-container"
+        data-main-content-selector="#main-content-state-page"
         data-title-text="{{ 'Jump to registration options' | t }}"
         data-title-heading-level="h2"
         data-scroll-offset="-600"
@@ -102,7 +102,7 @@
     </aside>
   {% endblock %}
 
-  <div class="vote-page-content vote-page-content--alt">
+  <div id="main-content-state-page" class="vote-page-content vote-page-content--alt">
    {% block content %}
     {% if check_registration is not empty %}
       {% include '@votegov/component/call-out-box.html.twig' with {

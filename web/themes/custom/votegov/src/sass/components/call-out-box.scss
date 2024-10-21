@@ -18,7 +18,8 @@
 
   .vote-side-nav-container > & {
     @include u-padding(3);
-    @include u-margin(0);
+    @include u-margin-x(0);
+    @include u-margin-y(3);
 
     h2 {
       @include u-font('sans','sm');
