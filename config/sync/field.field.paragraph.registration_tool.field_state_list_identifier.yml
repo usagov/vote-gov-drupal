@@ -1,0 +1,19 @@
+uuid: 966046d6-26e5-4508-a1f7-9e179b902383
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_state_list_identifier
+    - paragraphs.paragraphs_type.registration_tool
+id: paragraph.registration_tool.field_state_list_identifier
+field_name: field_state_list_identifier
+entity_type: paragraph
+bundle: registration_tool
+label: 'State list identifier'
+description: 'This field value is used to identify the state list for screen readers.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

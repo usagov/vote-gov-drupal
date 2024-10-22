@@ -1,0 +1,29 @@
+uuid: 996c44cb-30b3-40d7-9d15-40346ae7fa19
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_identifier
+    - field.storage.block_content.field_logo
+    - media.type.image
+id: block_content.contact_identifier.field_logo
+field_name: field_logo
+entity_type: block_content
+bundle: contact_identifier
+label: Logo
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: icon
+field_type: entity_reference

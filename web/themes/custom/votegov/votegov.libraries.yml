@@ -62,3 +62,11 @@ theme_switcher:
       minified: true
       attributes:
         defer: true
+
+to_top:
+  version: VERSION
+  js:
+    dist/js/to-top.js:
+      minified: true
+      attributes:
+        defer: true

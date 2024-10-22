@@ -1,0 +1,29 @@
+uuid: 34bde4fb-d4d7-4f38-9836-7619b4a8130c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.partnership
+    - field.storage.block_content.field_eac_logo
+    - media.type.image
+id: block_content.partnership.field_eac_logo
+field_name: field_eac_logo
+entity_type: block_content
+bundle: partnership
+label: 'EAC logo'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

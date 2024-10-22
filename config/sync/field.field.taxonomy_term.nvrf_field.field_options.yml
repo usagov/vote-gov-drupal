@@ -12,14 +12,14 @@ field_name: field_options
 entity_type: taxonomy_term
 bundle: nvrf_field
 label: Options
-description: ''
+description: '<em>Labels</em> are displayed in the NVRF digital form to the user. <em>Values</em> are mapped to the NVRF PDF.'
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   first:
-    label: Key
+    label: Label
     list: false
     allowed_values: {  }
     max: null

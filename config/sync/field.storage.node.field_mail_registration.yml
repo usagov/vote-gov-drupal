@@ -1,0 +1,19 @@
+uuid: 1f20adfd-fefe-4510-a07f-77df363f2c74
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - vote_fields
+id: node.field_mail_registration
+field_name: field_mail_registration
+entity_type: node
+type: vote_fields_state_content
+settings: {  }
+module: vote_fields
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

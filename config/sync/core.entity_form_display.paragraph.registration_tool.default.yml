@@ -8,6 +8,8 @@ dependencies:
     - field.field.paragraph.registration_tool.field_heading
     - field.field.paragraph.registration_tool.field_no_results_message
     - field.field.paragraph.registration_tool.field_placeholder
+    - field.field.paragraph.registration_tool.field_section_identifier
+    - field.field.paragraph.registration_tool.field_state_list_identifier
     - paragraphs.paragraphs_type.registration_tool
   module:
     - text
@@ -51,6 +53,22 @@ content:
   field_placeholder:
     type: string_textfield
     weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_section_identifier:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_state_list_identifier:
+    type: string_textfield
+    weight: 6
     region: content
     settings:
       size: 60

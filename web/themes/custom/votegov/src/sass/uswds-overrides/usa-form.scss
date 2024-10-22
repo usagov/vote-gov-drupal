@@ -1,5 +1,6 @@
 @use "uswds-core" as *;
 @use "variables" as *;
+@use "mixins" as *;
 
 .usa-form {
   @include u-maxw('tablet');
@@ -18,12 +19,14 @@
 
 .nvrf-app-container {
   .usa-form {
+    a {
+      @include vote-link-bg;
+    }
     .usa-input {
       height: 40px !important;
     }
   }
 }
-
 
 ::placeholder {
   --input-placeholder--text: inherit;

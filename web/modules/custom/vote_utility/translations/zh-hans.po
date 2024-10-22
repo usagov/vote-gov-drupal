@@ -19,6 +19,10 @@ msgstr "选择语言"
 msgid "Home"
 msgstr "主页"
 
+#in-page nav
+msgid "On this page"
+msgstr "本页内容"
+
 #main
 msgid "@sitename in language"
 msgstr "@sitename 中文"
@@ -34,16 +38,16 @@ msgstr "插有已勾选选票的选票箱图样，表示投票动作"
 
 #identifier
 msgid "An official website of the @link."
-msgstr "@link官方网站"
+msgstr "@link的官方网站"
 
 msgid "General Services Administration"
 msgstr "总务管理局 (英语)"
 
 msgid "Looking for U.S. government information and services? @link."
-msgstr "寻找美国政府信息和服务？ @link"
+msgstr "寻找美国政府提供的信息和服务？@link"
 
 msgid "Visit USA.gov"
-msgstr "訪問 USA.gov (英语)"
+msgstr "访问USA.gov。 (英语)"
 
 msgid "Agency identifier"
 msgstr "机构标识符"
@@ -79,16 +83,19 @@ msgid "How to register to vote"
 msgstr "如何登记投票"
 
 msgid "How to register and update your registration"
-msgstr "如何登记投票"
+msgstr "如何登记和更新您的登记信息"
+
+msgid "Start or update your online registration"
+msgstr "开始在网上登记或者更新登记信息"
 
 msgid "Other ways to register to vote"
 msgstr "登记投票的其他方式"
 
 msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
-msgstr "@election_date选举的选民登记截止日期"
+msgstr "2024年11月5日选举的选民登记截止日期。"
 
 msgid "Find state and local election dates."
-msgstr ""
+msgstr "寻找州和地方选举日期。"
 
 msgid "Register by mail deadline:"
 msgstr "邮寄报名截止日期："
@@ -138,7 +145,7 @@ msgstr "详细了解如何注册"
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
 msgstr "弗吉尼亚州不要求选民注册。 @link @state_name 州的选举网站"
 
-msgid "Start or update your registration"
+msgid "Start or update your registration online"
 msgstr "开始在线注册"
 
 msgid "@link on @state_name’s election website."
@@ -248,3 +255,66 @@ msgstr "sábado"
 
 msgid "Sunday"
 msgstr "星期日"
+
+msgid "U.S. government information and services"
+msgstr "美国政府提供的信息和服务"
+
+#aria-label for election links
+msgid "External election resources"
+msgstr "选举链接"
+
+#footer
+msgid "Visit our partner site to find more information about voting in the United States."
+msgstr "访问我们合作伙伴的网站 —— USA.gov——来了解在美国投票的更多信息。"
+
+msgid "Close"
+msgstr "关闭"
+
+msgid "U.S. flag"
+msgstr "美国国旗"
+
+msgid "Vote.gov is made possible in partnership with "
+msgstr "Vote.gov的创建得益于 "
+
+msgid "USA.gov logo"
+msgstr "USA.gov标识"
+
+msgid "Menu"
+msgstr "菜单"
+
+msgid "Breadcrumb"
+msgstr "面包屑导航"
+
+msgid "Primary navigation"
+msgstr "主导航"
+
+msgid "Search component"
+msgstr "搜索组件"
+
+msgid "Introduction"
+msgstr "简介"
+
+msgid "Register to vote selector tool"
+msgstr "登记投票选择器工具"
+
+msgid "States and territories list"
+msgstr "州和属地清单"
+
+msgid "Select your state or territory"
+msgstr "选择您所在州或属地"
+
+msgid "States and territories suggestion list"
+msgstr "州和属地建议清单"
+
+# Temporary military and overseas voter cards
+msgid "Voting as a military service member"
+msgstr "军人投票"
+
+msgid "Learn more from the Federal Voting Assistance Program (FVAP)."
+msgstr "从联邦投票协助计划（Federal Voting Assistance Program - FVAP）了解更多信息 (英语)"
+
+msgid "Voting as a U.S. citizen from outside the U.S."
+msgstr "美国公民从海外投票"
+
+msgid "Know your voting rights"
+msgstr "了解您的投票权"

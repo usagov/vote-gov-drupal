@@ -1,0 +1,21 @@
+uuid: 923d3fc5-3d89-4ba8-8707-c5be224a31e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.partnership
+    - field.storage.block_content.field_display_social_link
+id: block_content.partnership.field_display_social_link
+field_name: field_display_social_link
+entity_type: block_content
+bundle: partnership
+label: 'Display social link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

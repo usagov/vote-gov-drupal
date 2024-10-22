@@ -10,6 +10,7 @@ dependencies:
     - field.field.block_content.government_banner.field_gov_text
     - field.field.block_content.government_banner.field_https_heading
     - field.field.block_content.government_banner.field_https_text
+    - field.field.block_content.government_banner.field_section_identifier
 id: block_content.government_banner.default
 targetEntityType: block_content
 bundle: government_banner
@@ -58,6 +59,14 @@ content:
   field_https_text:
     type: string_textfield
     weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_section_identifier:
+    type: string_textfield
+    weight: 26
     region: content
     settings:
       size: 60

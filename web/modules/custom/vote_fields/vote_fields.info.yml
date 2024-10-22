@@ -1,0 +1,5 @@
+name: 'Vote Fields'
+type: module
+description: 'Custom module to provide custom fields for Vote.gov.'
+package: Custom
+core_version_requirement: ^10 || ^11

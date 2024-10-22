@@ -7,6 +7,7 @@ dependencies:
     - field.field.block_content.email_signup.field_email_field_label
     - field.field.block_content.email_signup.field_heading
     - field.field.block_content.email_signup.field_link
+    - field.field.block_content.email_signup.field_section_identifier
     - field.field.block_content.email_signup.field_signup_button_label
   module:
     - link
@@ -38,6 +39,14 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_section_identifier:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_signup_button_label:
     type: string_textfield

@@ -15,6 +15,6 @@
  * @see template_preprocess_menu_local_task()
  */
 #}
-<li{{ attributes.addClass('usa-button-group__item') }}>
+<li{{ attributes.addClass('usa-button-group__item') }} data-test="editMenu">
   <a href="{{ link['#url'] }}" class="usa-button {{ is_active ? 'usa-button--active' }}">{{ link['#title'] }}</a>
 </li>

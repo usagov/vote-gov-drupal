@@ -132,7 +132,7 @@ msgstr "ভোটিং সম্পর্কে আরও জানুন"
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
 msgstr "ভার্জিনিয়ায় ভোটার নিবন্ধনের প্রয়োজন নেই। @link রাজ্য নির্বাচনের ওয়েবসাইটে"
 
-msgid "Start or update your registration"
+msgid "Start or update your registration online"
 msgstr "আপনার অনলাইন নিবন্ধন শুরু করুন"
 
 msgid "@link on @state_name’s election website."

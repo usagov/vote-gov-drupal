@@ -1,0 +1,4 @@
+vote_fields_state_content:
+  css:
+    component:
+      css/vote-fields-state-content-widget.css: {}

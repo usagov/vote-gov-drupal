@@ -1,0 +1,19 @@
+uuid: 4df90b72-4d94-46cb-868a-1540b0dafba3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.partnership
+    - field.storage.block_content.field_usagov_logo_text
+id: block_content.partnership.field_usagov_logo_text
+field_name: field_usagov_logo_text
+entity_type: block_content
+bundle: partnership
+label: 'USAgov logo text'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

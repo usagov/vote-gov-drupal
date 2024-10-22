@@ -1,0 +1,21 @@
+uuid: 544d455c-88ce-4636-bbbb-f8f1b8fa0007
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mail_registration
+    - node.type.state_territory
+  module:
+    - vote_fields
+id: node.state_territory.field_mail_registration
+field_name: field_mail_registration
+entity_type: node
+bundle: state_territory
+label: 'Mail registration (override)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: vote_fields_state_content

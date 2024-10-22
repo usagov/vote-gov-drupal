@@ -2,14 +2,19 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-.vote-main-content-row {
-  display: flex;
+.vote-main-content-row, .usa-in-page-nav-container {
+  @include u-display('block');
+
+  @include at-media('tablet-lg') {
+    @include u-display('flex');
+  }
 }
 
 .vote-page-content {
   @include u-margin-top(4);
   @include u-margin-bottom(6);
   @include u-position('relative');
+  word-wrap: break-word;
 
   .field--name-field-media {
     @include at-media('desktop') {

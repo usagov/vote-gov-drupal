@@ -1,0 +1,19 @@
+uuid: a66e1bdc-8a36-40f2-b3ad-a495172a3c42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_identifier
+    - paragraphs.paragraphs_type.registration_tool
+id: paragraph.registration_tool.field_section_identifier
+field_name: field_section_identifier
+entity_type: paragraph
+bundle: registration_tool
+label: 'Section Identifier'
+description: 'This field value is used to identify this section for screen readers.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

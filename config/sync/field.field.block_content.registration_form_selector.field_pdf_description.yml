@@ -1,0 +1,24 @@
+uuid: 29cfbab3-1a6c-41f0-b476-51c1c8c4f9bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.registration_form_selector
+    - field.storage.block_content.field_pdf_description
+    - filter.format.simple_html
+  module:
+    - text
+id: block_content.registration_form_selector.field_pdf_description
+field_name: field_pdf_description
+entity_type: block_content
+bundle: registration_form_selector
+label: Description
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - simple_html
+field_type: text_long

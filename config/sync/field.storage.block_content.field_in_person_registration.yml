@@ -1,0 +1,19 @@
+uuid: a16bce60-f467-48cf-91f7-180b15af7f70
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - vote_fields
+id: block_content.field_in_person_registration
+field_name: field_in_person_registration
+entity_type: block_content
+type: vote_fields_state_content
+settings: {  }
+module: vote_fields
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

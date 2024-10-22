@@ -1,0 +1,19 @@
+uuid: 90507e04-cb95-4b57-990b-0a0fb0de5650
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - vote_fields
+id: block_content.field_online_registration
+field_name: field_online_registration
+entity_type: block_content
+type: vote_fields_state_content
+settings: {  }
+module: vote_fields
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
