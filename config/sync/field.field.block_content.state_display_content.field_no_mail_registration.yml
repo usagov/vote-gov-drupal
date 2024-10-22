@@ -1,0 +1,21 @@
+uuid: e83b3278-b739-423f-bf0a-c0b06adae44c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.state_display_content
+    - field.storage.block_content.field_no_mail_registration
+  module:
+    - vote_fields
+id: block_content.state_display_content.field_no_mail_registration
+field_name: field_no_mail_registration
+entity_type: block_content
+bundle: state_display_content
+label: 'No Mail Registration'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: vote_fields_state_content
