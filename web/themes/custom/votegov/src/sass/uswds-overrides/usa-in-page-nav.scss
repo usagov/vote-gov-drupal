@@ -21,8 +21,6 @@
   @include grid-offset(1);
   @include u-margin-left(0);
   @include u-padding(0);
-  margin-inline-start: calc(100% / 12);
-  padding-inline-start: 2rem;
   max-width: inherit;
   position: unset;
 }
