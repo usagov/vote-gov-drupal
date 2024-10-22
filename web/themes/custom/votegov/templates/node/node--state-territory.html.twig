@@ -163,7 +163,7 @@
 
   {% include '@votegov/component/info-card.html.twig' with {
     'heading': mail_registration.heading,
-    'body': mail_body | render | trim | t({'@state_mail_deadline': bymail_deadline ,'@state_name': state_name}),
+    'body': mail_body | render | trim | t({'@state_mail_deadline': bymail_deadline ,'@state_name': title_english}),
     'footer': mail_footer
   } %}
   {# No mail registration content #}
