@@ -1,0 +1,8 @@
+uuid: 848f2010-0520-4c2f-8967-a3d8263623cf
+langcode: en
+status: true
+dependencies: {  }
+id: partnership
+label: Partnership
+revision: false
+description: null
