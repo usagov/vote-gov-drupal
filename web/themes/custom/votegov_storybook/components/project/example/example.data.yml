@@ -1,0 +1,7 @@
+---
+heading: 'Welcome to your new Project UI Library with Storybook!'
+text: '<p>Check out the example component:</p>'
+bullets:
+  0: '<strong>example.stories.js:</strong> initializes and configures your component.'
+  1: '<strong>example.html.twig:</strong> the template for rendering your component.'
+  2: '<strong>example.data.yml:</strong> defines the default data used in rendering the component.'
