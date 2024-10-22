@@ -167,7 +167,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 27
+    weight: 26
     region: content
   field_in_state_name:
     type: string
@@ -210,7 +210,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 28
+    weight: 27
     region: content
   field_mail_registration_link:
     type: link
@@ -222,7 +222,7 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    weight: 32
+    weight: 31
     region: content
   field_media:
     type: entity_reference_entity_view
@@ -238,7 +238,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 29
+    weight: 28
     region: content
   field_more_info_link:
     type: link
@@ -251,6 +251,13 @@ content:
       target: '0'
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_nvrf_details:
+    type: vote_fields_state_content_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 32
     region: content
   field_of_state_name:
     type: string
@@ -287,7 +294,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 30
+    weight: 29
     region: content
   field_override_confirm_reg_link:
     type: link
@@ -354,7 +361,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 31
+    weight: 30
     region: content
   field_registration_type:
     type: list_key
@@ -387,7 +394,6 @@ hidden:
   field_identification_inst: true
   field_mailing_address_inst: true
   field_metatags: true
-  field_nvrf_details: true
   field_nvrf_fields: true
   field_nvrf_last_updated_date: true
   field_override_mail_reg_link: true
