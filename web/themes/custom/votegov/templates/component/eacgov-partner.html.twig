@@ -1,32 +1,34 @@
-{% set GSAlink = link('General Services Administration' | t, 'https://www.gsa.gov/') %}
-
+{% if partner %}
 <div class="vote-eac-partner vote-block-padding-y-narrow" data-test="footerContact">
   <div class="vote-eac-partner__container">
     <div class="vote-eac-partner__logo">
       {# EAC Text #}
       <div class="vote-eac-partner__text">
-        <p>{{ 'Vote.gov is in partnership with' | t }}</p>
+        {{ partner.field_eac_logo_text | field_value }}
       </div>
       {# EAC logo #}
       <div class="vote-eac-partner__logo-img">
         <a extlinkjs-ignore
-           href="{{ language == 'es' ? 'https://www.eac.gov/translations/spanish' : 'https://www.eac.gov/' }}"
+           href="{{ partner.field_eac_logo_link | field_value }}"
            target="_blank"
            class="vote-eac-partner__logo-link">
-          <img width="64" height="64" src="{{ theme_path }}/img/eac-logo.webp"
-               alt="{{ 'U.S. Election Assistance Commission logo which indicates a partnership with vote.gov' | t }}"/>
+          {{ partner.field_eac_logo | field_value }}
             <span>{{ 'U.S. ELECTION ASSISTANCE COMMISSION' | t }}</span>
         </a>
       </div>
     </div>
 
     {# The social links are left commented out in the template in case this feature needs to be reenabled at a later date #}
-    {# <div class="vote-eac-partner__social-links">
-      <a class="vote-eac-partner__social-link" extlinkjs-ignore href="https://twitter.com/votegov">
-        <p> {{ 'Follow vote.gov on' | t }} </p>
-        <img src="{{ theme_path }}/img/x-logo.svg" width="34" height="32" alt="X"/>
+    {% if partner['#block_content'].field_display_social_link.value == 1 %}
+    <div class="vote-eac-partner__social-links">
+      {% set social_link = partner.field_social_link | field_value %}
+      <a class="vote-eac-partner__social-link" extlinkjs-ignore href="{{ social_link.0['#url_title'] }}">
+        <p>{{ social_link.0['#title'] }}</p>
+        {{ partner.field_social_logo | field_value }}
       </a>
-    </div> #}
-    
+    </div>
+    {% endif %}
+
   </div>
 </div>
+{% endif %}
