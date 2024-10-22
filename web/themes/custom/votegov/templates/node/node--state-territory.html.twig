@@ -154,7 +154,6 @@
 {# Mail registration content #}
 {% if has_mail and (mail_registration is not empty) %}
   {% set mail_body %}
-    <p><strong>{{ 'Mail-in registration deadline:' | t }}</strong> {{ bymail_deadline }}</p>
     {{ mail_registration.text }}
 
     {% if state_mail_pdf_link %}
@@ -164,7 +163,7 @@
 
   {% include '@votegov/component/info-card.html.twig' with {
     'heading': mail_registration.heading,
-    'body': mail_body | render | trim | t({'@state_name': state_name}),
+    'body': mail_body | render | trim | t({'@state_mail_deadline': bymail_deadline ,'@state_name': state_name}),
     'footer': mail_footer
   } %}
   {# No mail registration content #}
