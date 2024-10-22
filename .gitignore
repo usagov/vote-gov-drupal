@@ -87,5 +87,3 @@ node_modules
 scheduled_backup/*
 env:/
 cms/
-
-*storybook.log
