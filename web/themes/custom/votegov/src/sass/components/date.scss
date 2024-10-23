@@ -7,3 +7,7 @@
     @include u-margin-top(4);
   }
 }
+
+.vote-election-date {
+  @include u-font('sans', 'md');
+}
