@@ -39,3 +39,13 @@
     }
   }
 }
+
+.usa-site-alert--emergency .usa-alert__body {
+  a {
+    color: $base-white;
+
+    &:hover {
+      @include u-color('gray-10')
+    }
+  }
+}
