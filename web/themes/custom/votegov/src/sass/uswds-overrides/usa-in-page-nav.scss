@@ -2,15 +2,15 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-.vote-side-nav-container {
+.vote-side-nav__container {
   @include u-padding-left(8);
   @include u-margin-left(8);
+  @include u-width('full');
+  @include u-position('sticky');
+  @include u-order(2);
   margin-top: units($theme-in-page-nav-margin-top);
   max-width: 20rem;
-  order: 2;
-  position: sticky;
   top: units($theme-in-page-nav-top);
-  width: 100%;
 
   @include at-media-max('tablet-lg') {
     @include u-display('none');
