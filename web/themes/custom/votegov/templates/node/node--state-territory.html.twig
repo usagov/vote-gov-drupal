@@ -40,7 +40,7 @@
 
 {# State content with fallbacks. #}
 {# Get default state display content from the block type. #}
-{% set state_display_content = drupal_entity('block_content', 22) | children %}
+{% set state_display_content = drupal_entity('block_content', 23) | children %}
 {% set registration_not_needed = state_display_content.field_registration_not_needed.0 | default([]) | merge(content.field_registration_not_needed.0 | default([])) %}
 {% set online_registration = state_display_content.field_online_registration.0 | default([]) | merge(content.field_online_registration.0 | default([])) %}
 {% set military_overseas_registration = state_display_content.field_military_and_overseas_regi.0 | default([]) | merge(content.field_military_and_overseas_regi.0 | default([])) %}
@@ -81,18 +81,29 @@
   {% endif %}
 
   {% block aside %}
-    <aside
-      class="usa-in-page-nav"
-      data-main-content-selector=".usa-in-page-nav-container"
-      data-title-text="{{ 'Jump to registration options' | t }}"
-      data-title-heading-level="h2"
-      data-scroll-offset="-600"
-      data-root-margin="48px 0px -90% 0px"
-      data-threshold="1"
-    ></aside>
+    <aside class="vote-side-nav__container">
+      <div
+        class="usa-in-page-nav"
+        data-main-content-selector="#main-content-state-page"
+        data-title-text="{{ 'Jump to registration options' | t }}"
+        data-title-heading-level="h2"
+        data-scroll-offset="-600"
+        data-root-margin="48px 0px -90% 0px"
+        data-threshold="1"
+      >
+      </div>
+      {% if check_registration is not empty %}
+      {% include '@votegov/component/call-out-box.html.twig' with {
+        'heading': check_registration.heading,
+        'text': check_registration.text | render | trim,
+        'link_text': check_registration.link_text | render | trim | t({'@state_name': title_english}),
+        'link_url': confirm_registration_link
+      } %}
+      {% endif %}
+    </aside>
   {% endblock %}
 
-  <div class="vote-page-content vote-page-content--alt">
+  <div id="main-content-state-page" class="vote-page-content vote-page-content--alt">
    {% block content %}
     {% if check_registration is not empty %}
       {% include '@votegov/component/call-out-box.html.twig' with {
