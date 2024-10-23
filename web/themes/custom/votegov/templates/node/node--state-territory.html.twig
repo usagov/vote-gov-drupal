@@ -40,7 +40,7 @@
 
 {# State content with fallbacks. #}
 {# Get default state display content from the block type. #}
-{% set state_display_content = drupal_entity('block_content', 22) | children %}
+{% set state_display_content = drupal_entity('block_content', 23) | children %}
 {% set registration_not_needed = state_display_content.field_registration_not_needed.0 | default([]) | merge(content.field_registration_not_needed.0 | default([])) %}
 {% set online_registration = state_display_content.field_online_registration.0 | default([]) | merge(content.field_online_registration.0 | default([])) %}
 {% set military_overseas_registration = state_display_content.field_military_and_overseas_regi.0 | default([]) | merge(content.field_military_and_overseas_regi.0 | default([])) %}
@@ -115,7 +115,9 @@
 
 {% if online_registration_vars is not empty %}
   {% set body = online_registration_vars.text['#markup'] | t(body_vars) %}
-  {% set link_title = online_registration_vars.link_text['#markup'] | t({'@state_name': title_english}) %}
+  {% if online_registration_vars.link_text %}
+    {% set link_title = online_registration_vars.link_text['#markup'] | t({'@state_name': title_english}) %}
+  {% endif %}
   {% include '@votegov/component/info-card.html.twig' with {
     'heading': online_registration_vars.heading,
     'body': body,
@@ -156,7 +158,7 @@
   {% set mail_body %}
     {{ mail_registration.text }}
 
-    {% if state_mail_pdf_link %}
+    {% if state_mail_pdf_link and mail_registration.link_text %}
       <p>{{ link(mail_registration.link_text, state_mail_pdf_link) }}</p>
     {% endif %}
   {% endset %}
@@ -166,11 +168,13 @@
     'body': mail_body | render | trim | t({'@state_mail_deadline': bymail_deadline ,'@state_name': title_english}),
     'footer': mail_footer
   } %}
-  {# No mail registration content #}
+{# No mail registration content #}
 {% else %}
   {% if not has_mail and (no_mail_registration is not empty) %}
     {% set no_mail_body = no_mail_registration.text['#markup'] | t({'@state_name': title_english}) %}
-    {% set no_mail_link_title = no_mail_registration.link_text['#markup'] | t({'@state_name': title_english }) %}
+    {% if no_mail_registration.link_text %}
+      {% set no_mail_link_title = no_mail_registration.link_text['#markup'] | t({'@state_name': title_english }) %}
+    {% endif %}
 
     {% include '@votegov/component/info-card.html.twig' with {
       'heading': no_mail_registration.heading,
@@ -186,7 +190,9 @@
 
     {% if has_in_person and (inperson_registration is not empty) %}
       {% set body = inperson_registration.text['#markup'] | t({'@state_in-person_deadline': inperson_deadline | render }) %}
-      {% set link_title = inperson_registration.link_text['#markup'] | t({'@state_name': title_english }) %}
+      {% if inperson_registration.link_text %}
+        {% set link_title = inperson_registration.link_text['#markup'] | t({'@state_name': title_english }) %}
+      {% endif %}
       {% include '@votegov/component/info-card.html.twig' with {
         'heading': inperson_registration.heading,
         'body': body,
