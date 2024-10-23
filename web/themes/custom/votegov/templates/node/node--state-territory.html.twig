@@ -40,7 +40,7 @@
 
 {# State content with fallbacks. #}
 {# Get default state display content from the block type. #}
-{% set state_display_content = drupal_entity('block_content', 22) | children %}
+{% set state_display_content = drupal_entity('block_content', 23) | children %}
 {% set registration_not_needed = state_display_content.field_registration_not_needed.0 | default([]) | merge(content.field_registration_not_needed.0 | default([])) %}
 {% set online_registration = state_display_content.field_online_registration.0 | default([]) | merge(content.field_online_registration.0 | default([])) %}
 {% set military_overseas_registration = state_display_content.field_military_and_overseas_regi.0 | default([]) | merge(content.field_military_and_overseas_regi.0 | default([])) %}
@@ -81,7 +81,7 @@
   {% endif %}
 
   {% block aside %}
-    <aside class="vote-side-nav-container">
+    <aside class="vote-side-nav__container">
       <div
         class="usa-in-page-nav"
         data-main-content-selector="#main-content-state-page"
