@@ -136,7 +136,7 @@
       <h3>{{ nvrf_details.heading }}</h3>
     {% endif %}
 
-    {{ nvrf_details.text }}
+    {{ nvrf_details.text['#markup'] | t({'@state_name': title_english}) }}
 
     {% if nvrf_details.link_text %}
       {# Set path to form dynamically using page route. #}
