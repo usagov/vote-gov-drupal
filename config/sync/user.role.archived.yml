@@ -1,0 +1,9 @@
+uuid: 5578dead-49c6-4fc9-80c6-44a46cdbea12
+langcode: en
+status: true
+dependencies: {  }
+id: archived
+label: '[ARCHIVED]'
+weight: -3
+is_admin: null
+permissions: {  }

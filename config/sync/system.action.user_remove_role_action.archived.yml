@@ -1,0 +1,14 @@
+uuid: b05b7792-08a4-40df-87f3-03b270414c04
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.archived
+  module:
+    - user
+id: user_remove_role_action.archived
+label: 'Remove the ARCHIVED role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: archived
