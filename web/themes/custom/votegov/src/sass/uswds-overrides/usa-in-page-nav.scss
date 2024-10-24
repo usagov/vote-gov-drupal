@@ -2,14 +2,27 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-.usa-in-page-nav {
-  @include grid-offset(1);
-  margin-inline-start: calc(100% / 12);
-  padding-inline-start: 2rem;
+.vote-side-nav__container {
+  @include u-padding-left(8);
+  @include u-margin-left(8);
+  @include u-width('full');
+  @include u-position('sticky');
+  @include u-order(2);
+  margin-top: units($theme-in-page-nav-margin-top);
+  max-width: 20rem;
+  top: units($theme-in-page-nav-top);
 
   @include at-media-max('tablet-lg') {
     @include u-display('none');
   }
+}
+
+.usa-in-page-nav {
+  @include grid-offset(1);
+  @include u-margin-left(0);
+  @include u-padding(0);
+  max-width: inherit;
+  position: unset;
 }
 
 .usa-in-page-nav__list {

@@ -29,6 +29,7 @@ dependencies:
     - field.field.node.state_territory.field_metatags
     - field.field.node.state_territory.field_military_and_overseas_regi
     - field.field.node.state_territory.field_more_info_link
+    - field.field.node.state_territory.field_nvrf_details
     - field.field.node.state_territory.field_nvrf_fields
     - field.field.node.state_territory.field_nvrf_last_updated_date
     - field.field.node.state_territory.field_of_state_name
@@ -43,7 +44,6 @@ dependencies:
     - field.field.node.state_territory.field_personal_information_inst
     - field.field.node.state_territory.field_political_party_inst
     - field.field.node.state_territory.field_reg_eligibility_desc
-    - field.field.node.state_territory.field_registration_intro
     - field.field.node.state_territory.field_registration_link
     - field.field.node.state_territory.field_registration_not_needed
     - field.field.node.state_territory.field_registration_type
@@ -56,6 +56,7 @@ dependencies:
     - link
     - options
     - user
+    - vote_fields
 id: node.state_territory.full
 targetEntityType: node
 bundle: state_territory
@@ -64,7 +65,7 @@ content:
   content_moderation_control:
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_accepts_nvrf:
     type: boolean
@@ -74,7 +75,14 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 20
+    weight: 21
+    region: content
+  field_check_registration:
+    type: vote_fields_state_content_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 25
     region: content
   field_confirm_registration_link:
     type: link
@@ -86,7 +94,7 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    weight: 14
+    weight: 15
     region: content
   field_election_homepage_link:
     type: link
@@ -98,7 +106,7 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_g_in_person_deadline:
     type: string
@@ -106,7 +114,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 13
+    weight: 14
     region: content
   field_g_mail_postmarked_deadline:
     type: string
@@ -114,7 +122,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 9
+    weight: 10
     region: content
   field_g_mail_received_deadline:
     type: string
@@ -122,7 +130,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 11
+    weight: 12
     region: content
   field_g_online_deadline:
     type: string
@@ -130,7 +138,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 7
+    weight: 8
     region: content
   field_in_person_deadline:
     type: double_field_unformatted_list
@@ -152,7 +160,14 @@ content:
         scale: 2
       inline: true
     third_party_settings: {  }
-    weight: 12
+    weight: 13
+    region: content
+  field_in_person_registration:
+    type: vote_fields_state_content_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 26
     region: content
   field_in_state_name:
     type: string
@@ -160,7 +175,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 21
+    weight: 22
     region: content
   field_is_state:
     type: boolean
@@ -170,7 +185,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 18
+    weight: 19
     region: content
   field_mail_postmarked_deadline:
     type: datetime_default
@@ -179,7 +194,7 @@ content:
       timezone_override: ''
       format_type: long_date
     third_party_settings: {  }
-    weight: 8
+    weight: 9
     region: content
   field_mail_received_deadline:
     type: datetime_default
@@ -188,7 +203,26 @@ content:
       timezone_override: ''
       format_type: long_date
     third_party_settings: {  }
-    weight: 10
+    weight: 11
+    region: content
+  field_mail_registration:
+    type: vote_fields_state_content_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_mail_registration_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 31
     region: content
   field_media:
     type: entity_reference_entity_view
@@ -198,6 +232,13 @@ content:
       link: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_military_and_overseas_regi:
+    type: vote_fields_state_content_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 28
     region: content
   field_more_info_link:
     type: link
@@ -209,7 +250,14 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    weight: 5
+    weight: 6
+    region: content
+  field_nvrf_details:
+    type: vote_fields_state_content_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 32
     region: content
   field_of_state_name:
     type: string
@@ -217,7 +265,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 22
+    weight: 23
     region: content
   field_online_deadline:
     type: double_field_unformatted_list
@@ -239,7 +287,14 @@ content:
         scale: 2
       inline: true
     third_party_settings: {  }
-    weight: 6
+    weight: 7
+    region: content
+  field_online_registration:
+    type: vote_fields_state_content_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 29
     region: content
   field_override_confirm_reg_link:
     type: link
@@ -251,7 +306,7 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    weight: 15
+    weight: 16
     region: content
   field_override_election_hp_link:
     type: link
@@ -263,7 +318,7 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_override_more_info_link:
     type: link
@@ -275,7 +330,7 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    weight: 16
+    weight: 17
     region: content
   field_override_registration_link:
     type: link
@@ -287,7 +342,7 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_registration_link:
     type: link
@@ -299,14 +354,21 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    weight: 3
+    weight: 4
+    region: content
+  field_registration_not_needed:
+    type: vote_fields_state_content_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 30
     region: content
   field_registration_type:
     type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 17
+    weight: 18
     region: content
   field_state_abbreviation:
     type: string
@@ -314,7 +376,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 19
+    weight: 20
     region: content
   field_updated_date:
     type: datetime_default
@@ -323,30 +385,22 @@ content:
       timezone_override: ''
       format_type: revision_date
     third_party_settings: {  }
-    weight: 23
+    weight: 24
     region: content
 hidden:
   body: true
   field_address_location_inst: true
-  field_check_registration: true
   field_content_version: true
   field_identification_inst: true
-  field_in_person_registration: true
-  field_mail_registration: true
-  field_mail_registration_link: true
   field_mailing_address_inst: true
   field_metatags: true
-  field_military_and_overseas_regi: true
   field_nvrf_fields: true
   field_nvrf_last_updated_date: true
-  field_online_registration: true
   field_override_mail_reg_link: true
   field_pdf_pages: true
   field_personal_information_inst: true
   field_political_party_inst: true
   field_reg_eligibility_desc: true
-  field_registration_intro: true
-  field_registration_not_needed: true
   langcode: true
   links: true
   published_at: true

@@ -11,7 +11,7 @@ id: node.state_territory.field_registration_not_needed
 field_name: field_registration_not_needed
 entity_type: node
 bundle: state_territory
-label: 'Registration not needed'
+label: 'Registration not needed (override)'
 description: ''
 required: false
 translatable: true

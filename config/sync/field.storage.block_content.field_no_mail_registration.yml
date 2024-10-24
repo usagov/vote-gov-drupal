@@ -1,13 +1,13 @@
-uuid: 5309c8a7-fa8f-440e-ac41-681a0d227be0
+uuid: a507f1aa-1dc8-47f6-84d4-9ce4cf1ef11b
 langcode: en
 status: true
 dependencies:
   module:
-    - node
+    - block_content
     - vote_fields
-id: node.field_registration_intro
-field_name: field_registration_intro
-entity_type: node
+id: block_content.field_no_mail_registration
+field_name: field_no_mail_registration
+entity_type: block_content
 type: vote_fields_state_content
 settings: {  }
 module: vote_fields

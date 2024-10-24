@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Default theme implementation to Call out box component.
+ *
+ * Template variables:
+ * - heading: string
+ * - text: string
+ * - link_url: string
+ * - link_text: string or uri
+ *
+ * Usage example:
+ * {% include '@votegov/component/call-out-box.html.twig' with {
+ *   'heading': var_heading,
+ *   'text': var_text,
+ *   'link_url': var_uri,
+ *   'link_text': var_link_text
+ * } %}
+ *
+#}
+
+{% if link_url %}
+  {% set link_markup %}
+    <a href={{ link_url }}>{{ link_text }}</a>
+  {% endset %}
+{% endif %}
+
+<div class="vote-call-out-box vote-call-out-box--offset">
+  <h2>{{ heading }}</h2>
+  {{ text | t({'@link': {'#markup': link_markup } | render }) }}
+</div>

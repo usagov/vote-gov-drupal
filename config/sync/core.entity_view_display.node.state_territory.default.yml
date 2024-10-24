@@ -28,6 +28,7 @@ dependencies:
     - field.field.node.state_territory.field_metatags
     - field.field.node.state_territory.field_military_and_overseas_regi
     - field.field.node.state_territory.field_more_info_link
+    - field.field.node.state_territory.field_nvrf_details
     - field.field.node.state_territory.field_nvrf_fields
     - field.field.node.state_territory.field_nvrf_last_updated_date
     - field.field.node.state_territory.field_of_state_name
@@ -42,7 +43,6 @@ dependencies:
     - field.field.node.state_territory.field_personal_information_inst
     - field.field.node.state_territory.field_political_party_inst
     - field.field.node.state_territory.field_reg_eligibility_desc
-    - field.field.node.state_territory.field_registration_intro
     - field.field.node.state_territory.field_registration_link
     - field.field.node.state_territory.field_registration_not_needed
     - field.field.node.state_territory.field_registration_type
@@ -279,6 +279,13 @@ content:
     third_party_settings: {  }
     weight: 7
     region: content
+  field_nvrf_details:
+    type: vote_fields_state_content_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 47
+    region: content
   field_nvrf_fields:
     type: field_nvrf_fields_default
     label: above
@@ -420,13 +427,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 32
-    region: content
-  field_registration_intro:
-    type: vote_fields_state_content_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 46
     region: content
   field_registration_link:
     type: link
