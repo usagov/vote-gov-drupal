@@ -111,6 +111,7 @@ echo "**************************************************"
 echo "Removing miscellaneous files..."
 echo "**************************************************"
 rm -rf ${html_path}/disabled-state-mail-in-forms 2>/dev/null
+rm -rf ${html_path}/state-data-points-index 2>/dev/null
 echo "Removing miscellaneous files...completed!"
 echo ""
 
