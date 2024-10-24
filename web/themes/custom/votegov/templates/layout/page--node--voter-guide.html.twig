@@ -10,15 +10,17 @@
       'variant': 'dark'
     } %}
     <div class="vote-main-content-row vote-block-margin-y--narrow grid-container usa-in-page-nav-container">
-      <aside
-        class="usa-in-page-nav"
-        data-main-content-selector=".usa-in-page-nav-container"
-        data-title-text="{{ 'On this page' | t }}"
-        data-title-heading-level="h2"
-        data-scroll-offset="-600"
-        data-root-margin="48px 0px -90% 0px"
-        data-threshold="1"
-      ></aside>
+      <aside class="vote-side-nav__container">
+        <div
+          class="usa-in-page-nav"
+          data-main-content-selector=".usa-in-page-nav-container"
+          data-title-text="{{ 'On this page' | t }}"
+          data-title-heading-level="h2"
+          data-scroll-offset="-600"
+          data-root-margin="48px 0px -90% 0px"
+          data-threshold="1"
+        ></div>
+      </aside>
       <div class="vote-page-content vote-page-content--alt">
         {{ page.content }}
       </div>
