@@ -12,23 +12,23 @@
 
 {% block content %}
   {% if registration_not_needed is not empty %}
-    <h2>{{ registration_not_needed.heading }}</h2>
-
-    {{ registration_not_needed.text }}
-
-    {% if more_info_link and registration_not_needed.link_text %}
-      <p>
-        {% include '@votegov/component/button.html.twig' with {
-          'label': registration_not_needed.link_text,
-          'href': more_info_link
-        } %}
-      </p>
+      {% set body = registration_not_needed.text['#markup'] | t({'@state_name': title_english | render }) %}
+      {% set link_title = registration_not_needed.link_text['#markup'] | t({'@state_name': title_english }) %}
+      {% include '@votegov/component/info-card.html.twig' with {
+        'heading': registration_not_needed.heading,
+        'body': body,
+          'link': {
+            'url': more_info_link,
+            'title': link_title,
+          }
+      } %}
     {% endif %}
-
-    {% if military_overseas_registration is not empty %}
-      {{ military_overseas_registration }}
+      {% if military_overseas_registration is not empty %}
+      {% include '@votegov/component/info-card.html.twig' with {
+        'heading': military_overseas_registration.heading,
+        'body': military_overseas_registration.text,
+      } %}
     {% endif %}
-  {% endif %}
 
   {# JSON Schema #}
   {# Commenting this out until we have a chance to review and improve #}
