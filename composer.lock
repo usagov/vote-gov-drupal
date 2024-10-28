@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4587a25628a22f28e39f72a7c7bd7df0",
+    "content-hash": "0280faada8f7c50c24d997cddee67462",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4191,26 +4191,26 @@
         },
         {
             "name": "drupal/remove_http_headers",
-            "version": "2.1.0",
+            "version": "2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/remove_http_headers.git",
-                "reference": "2.1.0"
+                "reference": "2.1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/remove_http_headers-2.1.0.zip",
-                "reference": "2.1.0",
-                "shasum": "622b4446ce1e07915f5889a5d7d0f10721f73000"
+                "url": "https://ftp.drupal.org/files/projects/remove_http_headers-2.1.2.zip",
+                "reference": "2.1.2",
+                "shasum": "1dde47df9ed6565c817af9eaaf8fd4dcc4eaf170"
             },
             "require": {
-                "drupal/core": "^10"
+                "drupal/core": "^10.3 || ^11"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.1.0",
-                    "datestamp": "1701249847",
+                    "version": "2.1.2",
+                    "datestamp": "1728551290",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4224,9 +4224,17 @@
             "authors": [
                 {
                     "name": "Orlando Thöny",
-                    "homepage": "https://www.drupal.org/user/3636010",
+                    "homepage": "https://www.drupal.org/user/291091",
                     "email": "orlando.thoeny@gmail.com",
                     "role": "Maintainer"
+                },
+                {
+                    "name": "grevil",
+                    "homepage": "https://www.drupal.org/user/3668491"
+                },
+                {
+                    "name": "guilherme-lima-almeida",
+                    "homepage": "https://www.drupal.org/user/3636010"
                 },
                 {
                     "name": "marco-s",
@@ -4581,17 +4589,17 @@
         },
         {
             "name": "drupal/stage_file_proxy",
-            "version": "3.1.2",
+            "version": "3.1.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/stage_file_proxy.git",
-                "reference": "3.1.2"
+                "reference": "3.1.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/stage_file_proxy-3.1.2.zip",
-                "reference": "3.1.2",
-                "shasum": "1aba8488efc193db71a991e8f8f76825af219079"
+                "url": "https://ftp.drupal.org/files/projects/stage_file_proxy-3.1.3.zip",
+                "reference": "3.1.3",
+                "shasum": "33fe8bf9cf0978a9e370627302b80340c972abd5"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11",
@@ -4607,8 +4615,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.1.2",
-                    "datestamp": "1724012934",
+                    "version": "3.1.3",
+                    "datestamp": "1728406824",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5040,17 +5048,17 @@
         },
         {
             "name": "drupal/twig_field_value",
-            "version": "2.0.4",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/twig_field_value.git",
-                "reference": "2.0.4"
+                "reference": "2.0.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/twig_field_value-2.0.4.zip",
-                "reference": "2.0.4",
-                "shasum": "0b607167a188fb7aafe8607a68a083bf431ec223"
+                "url": "https://ftp.drupal.org/files/projects/twig_field_value-2.0.5.zip",
+                "reference": "2.0.5",
+                "shasum": "9a13925fc1f9788db65044b179871139da8a7cfd"
             },
             "require": {
                 "drupal/core": "^9 || ^10 || ^11"
@@ -5058,8 +5066,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.4",
-                    "datestamp": "1725019150",
+                    "version": "2.0.5",
+                    "datestamp": "1728385526",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -15787,7 +15795,7 @@
     },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
