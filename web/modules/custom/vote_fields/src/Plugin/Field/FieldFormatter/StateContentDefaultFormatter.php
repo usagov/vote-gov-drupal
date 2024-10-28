@@ -28,24 +28,18 @@ final class StateContentDefaultFormatter extends FormatterBase {
 
       if ($item->heading) {
         $element[$delta]['heading'] = [
-          '#type' => 'item',
-          '#title' => $this->t('Heading'),
           '#markup' => $item->heading,
         ];
       }
 
       if ($item->text) {
         $element[$delta]['text'] = [
-          '#type' => 'item',
-          '#title' => $this->t('Text'),
           '#markup' => $item->text,
         ];
       }
 
       if ($item->link_text) {
         $element[$delta]['link_text'] = [
-          '#type' => 'item',
-          '#title' => $this->t('Link text'),
           '#markup' => $item->link_text,
         ];
       }
