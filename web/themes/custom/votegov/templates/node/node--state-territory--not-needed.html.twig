@@ -7,48 +7,31 @@
 #}
 
 {% block aside %}
-{# keep empty for not needed #}
+	{# keep empty for not needed #}
 {% endblock %}
 
 {% block content %}
-  {% if registration_not_needed is not empty %}
-    <h2>{{ registration_not_needed.heading }}</h2>
+	{% if registration_not_needed is not empty %}
+		{# setting link text to be in inline hyper link #}
+		{% if registration_not_needed.link_text %}
+			{% set link_markup %}
+			<a href="{{ more_info_link }}">{{ registration_not_needed.link_text | render | trim | t({'@state_name': title_english}) }}</a>
+			{% endset %}
+		{% endif %}
+		{# setting body text to have palceholder for both state name and link #}
+		{% set body = registration_not_needed.text['#markup']| t({'@state_name': title_english, '@link': {'#markup': link_markup } | render}) %}
 
-    {{ registration_not_needed.text }}
+		{% include '@votegov/component/info-card.html.twig' with {
+          'heading': registration_not_needed.heading,
+          'body': body,
+      } %}
 
-    {% if more_info_link and registration_not_needed.link_text %}
-      <p>
-        {% include '@votegov/component/button.html.twig' with {
-          'label': registration_not_needed.link_text,
-          'href': more_info_link
-        } %}
-      </p>
-    {% endif %}
+	{% endif %}
+	{% if military_overseas_registration is not empty %}
+		{% include '@votegov/component/info-card.html.twig' with {
+        'heading': military_overseas_registration.heading,
+        'body': military_overseas_registration.text,
+      } %}
+	{% endif %}
 
-    {% if military_overseas_registration is not empty %}
-      {{ military_overseas_registration }}
-    {% endif %}
-  {% endif %}
-
-  {# JSON Schema #}
-  {# Commenting this out until we have a chance to review and improve #}
-{#  <script type="application/ld+json">#}
-{#  {#}
-{#    "@context": "https://schema.org",#}
-{#    "@type": "FAQPage",#}
-{#    "mainEntity": [{#}
-{#      "@type": "Question",#}
-{#      "name": "{{ 'How to register to vote' | t({ '@state_name': state_name }) }}",#}
-{#      "acceptedAnswer": {#}
-{#        "@type": "Answer",#}
-{#        "text": "{{ 'Voter registration is not required in @state_name. @link on @state_name’s election website.' | t({#}
-{#      '@link': { "#markup": "<a href=\"#{more_info_link}\">#{more_info_link_text}</a>"} | render | replace({'"': "\""}),#}
-{#      '@state_name': state_name,#}
-{#      '@of_state_name': of_state_name,#}
-{#      '@in_state_name': in_state_name#}
-{#    }) }}"#}
-{#    }#}
-{#    }{{ end }}]#}
-{#  }#}
-{#</script>#}
 {% endblock %}

@@ -221,5 +221,13 @@
       } %}
     {% endif %}
   {% endblock %}
+
+    {# Checking if updated date is set and then render the field #}
+  {% if content.field_updated_date | field_value is not empty %}
+  <p class="vote-date--updated">
+    {# Striptags and raw filters were added to accomodate Navajo date formats. #}
+    {{'Last updated:' | t }} {{ content.field_updated_date | render | replace(t_numbers[language].numbers | default([])) | striptags('<span>') | raw }}
+  </p>
+  {% endif %}
 </div>
 </div>
