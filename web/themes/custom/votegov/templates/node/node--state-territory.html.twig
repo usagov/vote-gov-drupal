@@ -117,7 +117,7 @@
      {# Election Date #}
     {% if (election_date is not empty) and (election_text is not empty) %}
       {% set election_date_text = election_text['#text'] | t({'@date': election_date | render }) %}
-      {{ election_date_text }}
+      <div class="vote-date--election">{{ election_date_text }}</div>
     {% endif %}
 
 {# setting online registration variables #}
@@ -126,7 +126,9 @@
 
 {% if online_registration_vars is not empty %}
   {% set body = online_registration_vars.text['#markup'] | t(body_vars) %}
-  {% set link_title = online_registration_vars.link_text['#markup'] | t({'@state_name': title_english}) %}
+  {% if online_registration_vars.link_text %}
+    {% set link_title = online_registration_vars.link_text['#markup'] | t({'@state_name': title_english}) %}
+  {% endif %}
   {% include '@votegov/component/info-card.html.twig' with {
     'heading': online_registration_vars.heading,
     'body': body,
@@ -145,7 +147,7 @@
       <h3>{{ nvrf_details.heading }}</h3>
     {% endif %}
 
-    {{ nvrf_details.text }}
+    {{ nvrf_details.text['#markup'] | t({'@state_name': title_english}) }}
 
     {% if nvrf_details.link_text %}
       {# Set path to form dynamically using page route. #}
@@ -167,7 +169,7 @@
   {% set mail_body %}
     {{ mail_registration.text }}
 
-    {% if state_mail_pdf_link %}
+    {% if state_mail_pdf_link and mail_registration.link_text %}
       <p>{{ link(mail_registration.link_text, state_mail_pdf_link) }}</p>
     {% endif %}
   {% endset %}
@@ -177,11 +179,13 @@
     'body': mail_body | render | trim | t({'@state_mail_deadline': bymail_deadline ,'@state_name': title_english}),
     'footer': mail_footer
   } %}
-  {# No mail registration content #}
+{# No mail registration content #}
 {% else %}
   {% if not has_mail and (no_mail_registration is not empty) %}
     {% set no_mail_body = no_mail_registration.text['#markup'] | t({'@state_name': title_english}) %}
-    {% set no_mail_link_title = no_mail_registration.link_text['#markup'] | t({'@state_name': title_english }) %}
+    {% if no_mail_registration.link_text %}
+      {% set no_mail_link_title = no_mail_registration.link_text['#markup'] | t({'@state_name': title_english }) %}
+    {% endif %}
 
     {% include '@votegov/component/info-card.html.twig' with {
       'heading': no_mail_registration.heading,
@@ -197,7 +201,9 @@
 
     {% if has_in_person and (inperson_registration is not empty) %}
       {% set body = inperson_registration.text['#markup'] | t({'@state_in-person_deadline': inperson_deadline | render }) %}
-      {% set link_title = inperson_registration.link_text['#markup'] | t({'@state_name': title_english }) %}
+      {% if inperson_registration.link_text %}
+        {% set link_title = inperson_registration.link_text['#markup'] | t({'@state_name': title_english }) %}
+      {% endif %}
       {% include '@votegov/component/info-card.html.twig' with {
         'heading': inperson_registration.heading,
         'body': body,
@@ -215,5 +221,13 @@
       } %}
     {% endif %}
   {% endblock %}
+
+    {# Checking if updated date is set and then render the field #}
+  {% if content.field_updated_date | field_value is not empty %}
+  <p class="vote-date--updated">
+    {# Striptags and raw filters were added to accomodate Navajo date formats. #}
+    {{'Last updated:' | t }} {{ content.field_updated_date | render | replace(t_numbers[language].numbers | default([])) | striptags('<span>') | raw }}
+  </p>
+  {% endif %}
 </div>
 </div>

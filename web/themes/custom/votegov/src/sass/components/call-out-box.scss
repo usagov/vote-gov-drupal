@@ -4,7 +4,7 @@
 
 .vote-call-out-box {
   @include u-padding(4);
-  @include u-margin-bottom(6);
+  @include u-margin-bottom(5);
   background-color: $bg-light-cool;
 
   @include at-media('tablet') {
