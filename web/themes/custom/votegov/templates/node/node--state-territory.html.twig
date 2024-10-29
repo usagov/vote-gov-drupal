@@ -117,7 +117,7 @@
      {# Election Date #}
     {% if (election_date is not empty) and (election_text is not empty) %}
       {% set election_date_text = election_text['#text'] | t({'@date': election_date | render }) %}
-      <div class="vote-election-date">{{ election_date_text }}</div>
+      <div class="vote-date--election">{{ election_date_text }}</div>
     {% endif %}
 
 {# setting online registration variables #}
