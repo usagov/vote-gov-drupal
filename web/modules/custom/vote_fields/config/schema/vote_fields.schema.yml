@@ -13,3 +13,13 @@ field.value.vote_fields_state_content:
     link_text:
       type: string
       label: Link text
+
+field.field_settings.vote_fields_state_content:
+  type: mapping
+  label: Field settings
+  mapping:
+    form_subfield_display:
+      type: list
+      label: Fields to display in the form
+      sequence:
+        type: string

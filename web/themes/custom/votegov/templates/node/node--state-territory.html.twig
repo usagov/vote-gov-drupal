@@ -8,135 +8,212 @@
 {# Caching the data in content object #}
 {% set savedCache = content | render %}
 
+{% set state_name = label | field_value | render %}
+{% set accepts_nvrf = node.field_accepts_nvrf.value == 1 %}
+
+{# Links with fallbacks. #}
+{% set more_info_link = content.field_override_more_info_link | field_value | default(content.field_more_info_link | field_value) | render | trim %}
+{% set confirm_registration_link = content.field_override_confirm_reg_link | field_value | default(content.field_confirm_registration_link | field_value) | render | trim %}
+{#{% set election_homepage_link = content.field_override_election_hp_link | field_value | default(content.field_election_homepage_link | field_value) | render | trim %}#}
+{% set registration_link = content.field_override_registration_link | field_value | default(content.field_registration_link | field_value) | render | trim %}
+{% set state_mail_pdf_link = content.field_override_mail_reg_link | field_value | default(content.field_mail_registration_link | field_value) | render | trim %}
+
+{# Deadlines with fallbacks. #}
+{% set online_deadline = content.field_online_deadline | field_value | default(content.field_g_online_deadline | field_value) %}
+{% set inperson_deadline = content.field_in_person_deadline | field_value | default(content.field_g_in_person_deadline | field_value) %}
+{# Set postmarked deadline with fallback #}
+{% if content.field_mail_postmarked_deadline | render %}
+  {% set postmarked_deadline = 'Must be postmarked by @date' | t({'@date': content.field_mail_postmarked_deadline.0 | render}) %}
+{% else %}
+  {% set postmarked_deadline = content.field_g_mail_postmarked_deadline | field_value %}
+{% endif %}
+
+{# Set received deadline with fallback #}
+{% if content.field_mail_received_deadline | render %}
+  {% set received_deadline = 'Must be received by @date' | t({'@date': content.field_mail_received_deadline.0 | render}) %}
+{% else %}
+  {% set received_deadline = content.field_g_mail_received_deadline | field_value %}
+{% endif %}
+
+{# Set the deadline with fallback, prioritizing postmarked deadline. #}
+{% set bymail_deadline = postmarked_deadline | default(received_deadline) %}
+
+{# State content with fallbacks. #}
+{# Get default state display content from the block type. #}
+{% set state_display_content = drupal_entity('block_content', 23) | children %}
+{% set registration_not_needed = state_display_content.field_registration_not_needed.0 | default([]) | merge(content.field_registration_not_needed.0 | default([])) %}
+{% set online_registration = state_display_content.field_online_registration.0 | default([]) | merge(content.field_online_registration.0 | default([])) %}
+{% set military_overseas_registration = state_display_content.field_military_and_overseas_regi.0 | default([]) | merge(content.field_military_and_overseas_regi.0 | default([])) %}
+{% set mail_registration = state_display_content.field_mail_registration.0 | default([]) | merge(content.field_mail_registration.0 | default([])) %}
+{% set no_mail_registration = state_display_content.field_no_mail_registration.0 | default([]) | merge(content.field_no_mail_registration.0 | default([])) %}
+{% set nvrf_details = state_display_content.field_nvrf_details.0 | default([]) | merge(content.field_nvrf_details.0 | default([])) %}
+{% set inperson_registration = state_display_content.field_in_person_registration.0 | default([]) | merge(content.field_in_person_registration.0 | default([])) %}
+{% set check_registration = state_display_content.field_check_registration.0 | default([]) | merge(content.field_check_registration.0 | default([])) %}
+{% set election_date = state_display_content.field_election_date.0 | default([]) | merge(content.field_election_date.0 | default([])) %}
+{% set election_text = state_display_content.field_election_text.0 | default([]) | merge(content.field_election_text.0 | default([])) %}
+{% set no_online_registration = state_display_content.field_no_online_registration.0 | default([]) | merge(content.field_no_online_registration.0 | default([])) %}
+
+{# Registration types #}
+{% set registration_types = content.field_registration_type | field_value | column('#markup') %}
+{% set has_in_person = "in-person" in registration_types %}
+{% set has_mail = "by-mail" in registration_types %}
+{% set has_online = "online" in registration_types %}
+{% set not_needed = "not-needed" in registration_types %}
+
 {% set classes = [
   'node--' ~ node.bundle|clean_class,
   node.isPromoted() ? 'node--promoted',
   node.isSticky() ? 'node--sticky',
   not node.isPublished() ? 'node--unpublished',
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  'vote-state-territory-content'
+  'vote-main-content-row',
+  'vote-block-margin-y--narrow',
+  'usa-in-page-nav-container'
 ] %}
-
-{% set state_name = label | field_value | render %}
-{% set in_state_name = node.field_in_state_name.value | default("@state_name") | t({ "@state_name": state_name}) %}
-{% set of_state_name = node.field_of_state_name.value | default("@state_name") | t({ "@state_name": state_name}) %}
-{% set state_abrev = content.field_state_abbreviation | field_value | render %}
-{% set in_english = "(in English)" | t %}
-{% set election_date = "11/05/2024"  | date('U') | format_date('long_date') | replace(t_numbers[language].numbers | default([])) %}
-{% set election_link_text = 'Find state and local election dates.' | t %}
-{% if language != "en" %}
-  {% set election_link_text = election_link_text ~ ' ' ~ in_english %}
-{% endif %}
-{% set election_link %}
-  <a href="https://www.eac.gov/voters/register-and-vote-in-your-state">{{ election_link_text }}</a>
-{% endset %}
-
-{# Set postmarked deadline with fallback #}
-{% if content.field_mail_postmarked_deadline | render %}
-{% set postmarked_deadline = 'Must be postmarked by @date' | t({'@date': content.field_mail_postmarked_deadline.0 | render}) %}
-{% else %}
-{% set postmarked_deadline = content.field_g_mail_postmarked_deadline | field_value %}
-{% endif %}
-
-{# Set received deadline with fallback #}
-{% if content.field_mail_received_deadline | render %}
-{% set received_deadline = 'Must be received by @date' | t({'@date': content.field_mail_received_deadline.0 | render}) %}
-{% else %}
-{% set received_deadline = content.field_g_mail_received_deadline | field_value %}
-{% endif %}
-
-{# Set the deadline with fallback, prioritizing postmarked deadline. #}
-{% set deadline_bymail = postmarked_deadline | default(received_deadline) %}
-
-{# Set in person deadline #}
-{% set deadline_inperson = content.field_in_person_deadline | field_value | default(content.field_g_in_person_deadline | field_value) %}
-
-{# Set online deadline #}
-{% set deadline_online = content.field_online_deadline | field_value | default(content.field_g_online_deadline | field_value) %}
-
-{# Korean 'state' character logic #}
-{% if language == 'ko' and node.field_is_state.value %}
-  {% set korean_state_char = "state" | t %}
-  {% set state_name = state_name ~ " " ~ korean_state_char %}
-{% endif %}
 
 <div{{ attributes.addClass(classes) }}>
   {# Hold these title_* placeholders for potential integration #}
   {{ title_prefix }}
   {{ title_suffix }}
 
-  <div class="vote-narrow-container-left-align">
   {% if drupal_view('inline_alert', 'embed_1') | render | striptags | trim %}
-    {{ drupal_view('inline_alert', 'embed_1') }}
+  {{ drupal_view('inline_alert', 'embed_1') }}
   {% endif %}
 
-  {% block content %}
-    {{ content }}
+  {% block aside %}
+    <aside class="vote-side-nav__container">
+      <div
+        class="usa-in-page-nav"
+        data-main-content-selector="#main-content-state-page"
+        data-title-text="{{ 'Jump to registration options' | t }}"
+        data-title-heading-level="h2"
+        data-scroll-offset="-600"
+        data-root-margin="48px 0px -90% 0px"
+        data-threshold="1"
+      >
+      </div>
+      {% if check_registration is not empty %}
+      {% include '@votegov/component/call-out-box.html.twig' with {
+        'heading': check_registration.heading,
+        'text': check_registration.text | render | trim,
+        'link_text': check_registration.link_text | render | trim | t({'@state_name': title_english}),
+        'link_url': confirm_registration_link
+      } %}
+      {% endif %}
+    </aside>
   {% endblock %}
 
-  {% block deadlines %}
-    {# Registration deadlines #}
-    <h2>{{ 'Voter registration deadlines' | t({ '@state_name': state_name }) }}</h2>
-    <p>
-      {{ 'Voter registration deadlines are for the November 05, 2024 election. @link' | t({
-        '@link': {'#markup': election_link} | render,
-        '@election_date': {'#markup': election_date} | render }
-      ) }}
-    </p>
-    <ul data-test="registrationInfo">
-      {% if deadline_online %}
-        <li><strong>{{ 'Online registration deadline:' | t }}</strong> {{ deadline_online }}</li>
-      {% endif %}
+  <div id="main-content-state-page" class="vote-page-content vote-page-content--alt">
+   {% block content %}
+    {% if check_registration is not empty %}
+      {% include '@votegov/component/call-out-box.html.twig' with {
+        'heading': check_registration.heading,
+        'text': check_registration.text | render | trim,
+        'link_text': check_registration.link_text | render | trim | t({'@state_name': title_english}),
+        'link_url': confirm_registration_link
+      } %}
+    {% endif %}
 
-      {% if deadline_bymail %}
-        <li><strong>{{ 'Register by mail deadline:' | t }}</strong> {{ deadline_bymail }}</li>
-      {% endif %}
+     {# Election Date #}
+    {% if (election_date is not empty) and (election_text is not empty) %}
+      {% set election_date_text = election_text['#text'] | t({'@date': election_date | render }) %}
+      {{ election_date_text }}
+    {% endif %}
 
-      {% if deadline_inperson %}
-        <li><strong>{{ 'In person registration deadline:' | t }}</strong> {{ deadline_inperson }}</li>
-      {% endif %}
-    </ul>
-  {% endblock %}
+{# setting online registration variables #}
+{% set online_registration_vars = has_online ? online_registration : no_online_registration %}
+{% set body_vars = has_online ? {'@state_online_deadline': online_deadline | render, '@state_name': title_english} : {'@state_name': title_english} %}
 
-  {% block confirm %}
-    {# Check voter registration #}
-    {% if content.field_confirm_registration_link | render %}
-      {% set confirm_reg_link = content.field_override_confirm_reg_link | field_value | render | default( content.field_confirm_registration_link | field_value | render ) %}
-      {% set confirm_reg_link_text = "confirm your voter registration status" | t %}
+{% if online_registration_vars is not empty %}
+  {% set body = online_registration_vars.text['#markup'] | t(body_vars) %}
+  {% set link_title = online_registration_vars.link_text['#markup'] | t({'@state_name': title_english}) %}
+  {% include '@votegov/component/info-card.html.twig' with {
+    'heading': online_registration_vars.heading,
+    'body': body,
+    'link': {
+      'url': registration_link,
+      'title': link_title,
+    }
+  } %}
+{% endif %}
 
-      {% if language != "en" and not content.field_override_confirm_reg_link  | render %}
-        {% set confirm_reg_link_text = confirm_reg_link_text ~ ' ' ~ in_english %}
-      {% endif %}
+{# NVRF details and logic to be used in the mail registration footer #}
+{% set mail_footer %}
+  {% if accepts_nvrf and nvrf_details is not empty %}
+    <hr>
+    {% if nvrf_details.heading %}
+      <h3>{{ nvrf_details.heading }}</h3>
+    {% endif %}
 
-      <h2>{{ 'How to check your voter registration' | t({ '@state_name': state_name }) }}</h2>
-      {% if state_abrev != 'wy' %}
-        <p>{{ 'You can @link on @state_name’s election website.' | t({
-            '@link': { "#markup": "<a href=\"#{confirm_reg_link}\" data-state-ext=\"confirm-registration\">#{confirm_reg_link_text}</a>" } | render,
-            '@state_name': state_name,
-            '@of_state_name': of_state_name,
-            '@in_state_name': in_state_name
-          }) }}
-        </p>
-      {% else %} {# Wyoming alt text #}
-        {% set alt_confirm_reg_link_text = "Click here to view Wyoming's county clerk contact information (PDF)" | t %}
-        <p>{{ 'You can confirm your voter registration status by contacting your local registration office. @link.' | t({
-            '@link': { "#markup": "<a href=\"#{confirm_reg_link}\">#{alt_confirm_reg_link_text}</a>" } | render
-          }) }}
-        </p>
-      {% endif %}
+    {{ nvrf_details.text }}
+
+    {% if nvrf_details.link_text %}
+      {# Set path to form dynamically using page route. #}
+      {% set form_route = language!= 'es'? 'vote_nvrf.nvrf_page' : 'vote_nvrf.nvrf_page_es' %}
+      {% set state_name = currentnode.label | lower | replace({' ': '-'}) %}
+
+      {% include '@votegov/component/button.html.twig' with {
+        'href': 'internal:' ~ path(form_route, {'state_name': state_name}),
+        'label': nvrf_details.link_text,
+        'data_label': 'data-state-ext',
+        'data': 'nvrf-pdf-tool-registration'
+      } %}
+    {% endif %}
+  {% endif %}
+{% endset %}
+
+{# Mail registration content #}
+{% if has_mail and (mail_registration is not empty) %}
+  {% set mail_body %}
+    {{ mail_registration.text }}
+
+    {% if state_mail_pdf_link %}
+      <p>{{ link(mail_registration.link_text, state_mail_pdf_link) }}</p>
+    {% endif %}
+  {% endset %}
+
+  {% include '@votegov/component/info-card.html.twig' with {
+    'heading': mail_registration.heading,
+    'body': mail_body | render | trim | t({'@state_mail_deadline': bymail_deadline ,'@state_name': title_english}),
+    'footer': mail_footer
+  } %}
+  {# No mail registration content #}
+{% else %}
+  {% if not has_mail and (no_mail_registration is not empty) %}
+    {% set no_mail_body = no_mail_registration.text['#markup'] | t({'@state_name': title_english}) %}
+    {% set no_mail_link_title = no_mail_registration.link_text['#markup'] | t({'@state_name': title_english }) %}
+
+    {% include '@votegov/component/info-card.html.twig' with {
+      'heading': no_mail_registration.heading,
+      'body': no_mail_body,
+      'link': {
+        'url':  more_info_link,
+        'title': no_mail_link_title,
+      },
+      'footer': mail_footer
+    } %}
+  {% endif %}
+{% endif %}
+
+    {% if has_in_person and (inperson_registration is not empty) %}
+      {% set body = inperson_registration.text['#markup'] | t({'@state_in-person_deadline': inperson_deadline | render }) %}
+      {% set link_title = inperson_registration.link_text['#markup'] | t({'@state_name': title_english }) %}
+      {% include '@votegov/component/info-card.html.twig' with {
+        'heading': inperson_registration.heading,
+        'body': body,
+          'link': {
+            'url': more_info_link,
+            'title': link_title,
+          }
+      } %}
+    {% endif %}
+
+    {% if military_overseas_registration is not empty %}
+      {% include '@votegov/component/info-card.html.twig' with {
+        'heading': military_overseas_registration.heading,
+        'body': military_overseas_registration.text,
+      } %}
     {% endif %}
   {% endblock %}
-
-  {% if node.field_accepts_nvrf.value == 1 %}
-    {{ drupal_entity('block_content', '3') }}
-  {% endif %}
-
-  {# Checking if updated date is set and then render the field #}
-  {% if content.field_updated_date | field_value is not empty %}
-  <p class="vote-date--updated">
-    {# Striptags and raw filters were added to accomodate Navajo date formats. #}
-    {{'Last updated:' | t }} {{ content.field_updated_date | render | replace(t_numbers[language].numbers | default([])) | striptags('<span>') | raw }}
-  </p>
-  {% endif %}
-  </div>
+</div>
 </div>
