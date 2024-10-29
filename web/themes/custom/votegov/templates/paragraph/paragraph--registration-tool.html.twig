@@ -28,6 +28,8 @@
         {% endif %}
       </div>
     </div>
+    {% set results = drupal_view_result('state_territory', 'block') %}
+    {% if results | length %}
     <form id="vote-registration-tool__form" class="vote-registration-tool__form">
       <label class="{{ not content.field_body | render ? 'usa-sr-only' }} vote-registration-tool__label"
             for="vote-registration-tool__input">
@@ -40,7 +42,6 @@
       <div class="vote-registration-tool__list-container">
         <div id="vote-registration-tool__results" class="vote-registration-tool__nav">
           <ul class="vote-registration-tool__list" aria-label="{{ content.field_state_list_identifier | field_value }}" data-test="stateList">
-            {% set results = drupal_view_result('state_territory', 'block') %}
             {% for result in results %}
               {% set nodeID = result._entity.id() %}
               {% set node_path = path('entity.node.canonical', {'node': nodeID}) %}
@@ -56,5 +57,6 @@
         </div>
       </div>
     </form>
+    {% endif %}
   </div>
 </section>
