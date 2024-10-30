@@ -19,6 +19,10 @@ msgstr "भाषा चुनें"
 msgid "Home"
 msgstr "मुख्य पृष्ठ"
 
+#in-page nav
+msgid "On this page"
+msgstr "इस पेज पर"
+
 #main
 msgid "@sitename in language"
 msgstr "@sitename हिन्दी में"
@@ -63,6 +67,10 @@ msgstr "के साथ साझेदारी में"
 
 msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
 msgstr "U.S. Election Assistance Commission के साथ साझेदारी में"
+
+#footer
+msgid "Visit our partner site to find more information about voting in the United States."
+msgstr "संयुक्त राज्य अमेरिका में मतदान के बारे में अधिक जानकारी प्राप्त करने के लिए हमारी साझेदार साइट पर जाएँ।"
 
 msgid "Follow vote.gov on"
 msgstr "Vote.gov को X पर फ़ॉलो करें (अंग्रेज़ी में)"
@@ -135,6 +143,7 @@ msgstr "अपने स्थानीय चुनाव कार्याल
 msgid "Learn more about voting"
 msgstr "मतदान के बारे में अधिक जानकारी प्राप्त करें"
 
+
 msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
 msgstr "वर्जीनिया में मतदाता पंजीकरण की आवश्यकता नहीं है। @state_name राज्य की चुनाव वेबसाइट पर @link।"
 
@@ -172,6 +181,10 @@ msgstr "आधिकारिक सरकारी वेबसाइट"
 #footer
 msgid "Email sign-up"
 msgstr "ईमेल के लिए साइन-अप करें"
+
+#eac partner text
+msgid "Vote.gov is in partnership with"
+msgstr "Vote.gov अमेरिकी चुनाव सहायता आयोग के साथ साझेदारी में है"
 
 msgid "Contact"
 msgstr "संपर्क करें"
@@ -248,3 +261,6 @@ msgstr "शनिवार"
 
 msgid "Sunday"
 msgstr "रविवार"
+
+msgid "Know your voting rights"
+msgstr "अपने मतदान अधिकारों को जानें"

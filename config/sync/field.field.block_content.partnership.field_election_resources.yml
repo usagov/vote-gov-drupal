@@ -1,0 +1,24 @@
+uuid: c37cea24-11bc-43a5-9797-fa6b840e12fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.partnership
+    - field.storage.block_content.field_election_resources
+    - filter.format.simple_html
+  module:
+    - text
+id: block_content.partnership.field_election_resources
+field_name: field_election_resources
+entity_type: block_content
+bundle: partnership
+label: 'Election resources'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - simple_html
+field_type: text_long
