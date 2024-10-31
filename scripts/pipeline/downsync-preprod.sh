@@ -102,26 +102,26 @@ rm -rf restore.txt ~/.mysql latest.sql
 date
 
 echo "Running 'drush updb -y --no-cache-clear' on '${RESTORE_ENV}' database..."
-source $(pwd $(dirname $0))/scripts/pipeline/cloud-gov-remote-command.sh "${project}-drupal-${RESTORE_ENV}" "drush updb -y --no-cache-clear"
+source ./scripts/pipeline/cloud-gov-remote-command.sh "${project}-drupal-${RESTORE_ENV}" "drush updb -y --no-cache-clear"
 
 date
 
 echo "Running 'drush cr' on '${RESTORE_ENV}' database..."
-source $(pwd $(dirname $0))/scripts/pipeline/cloud-gov-remote-command.sh "${project}-drupal-${RESTORE_ENV}" "drush cr"
+source ./scripts/pipeline/cloud-gov-remote-command.sh "${project}-drupal-${RESTORE_ENV}" "drush cr"
 
 date
 
 echo "Running 'drush cim -y' on '${RESTORE_ENV}' database..."
-source $(pwd $(dirname $0))/scripts/pipeline/cloud-gov-remote-command.sh "${project}-drupal-${RESTORE_ENV}" "drush cim -y"
+source ./scripts/pipeline/cloud-gov-remote-command.sh "${project}-drupal-${RESTORE_ENV}" "drush cim -y"
 
 date
 
 echo "Running 'drush cr' on '${RESTORE_ENV}' database..."
-source $(pwd $(dirname $0))/scripts/pipeline/cloud-gov-remote-command.sh "${project}-drupal-${RESTORE_ENV}" "drush cr"
+source ./scripts/pipeline/cloud-gov-remote-command.sh "${project}-drupal-${RESTORE_ENV}" "drush cr"
 
 date
 
 echo "Running 'drush image-flush --all' on '${RESTORE_ENV}'..."
-source $(pwd $(dirname $0))/scripts/pipeline/cloud-gov-remote-command.sh "${project}-drupal-${RESTORE_ENV}" "drush image-flush --all"
+source ./scripts/pipeline/cloud-gov-remote-command.sh "${project}-drupal-${RESTORE_ENV}" "drush image-flush --all"
 
 date
