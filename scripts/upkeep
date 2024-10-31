@@ -28,6 +28,13 @@ export ssg_sitemap_endpoint=ssg_endpoint
 
 cd ${app_path}
 echo "**************************************************"
+echo "Running 'drush cr' in '${environment}'..."
+echo "**************************************************"
+drush cr
+echo "'drush cr' task...completed!"
+echo ""
+
+echo "**************************************************"
 echo "Running 'drush cron' in '${environment}'..."
 echo "**************************************************"
 drush --uri=${ssg_endpoint} cron
