@@ -342,6 +342,11 @@ workflows:
                 - stage
           requires:
             - post-deploy-upkeep-approval
+      - link-validation-workflow:
+          filters:
+            branches:
+              only:
+              - test
       - cypress-approval:
           filters:
             branches:
