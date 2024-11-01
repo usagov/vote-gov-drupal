@@ -388,16 +388,14 @@ workflows:
         - equal: [ true, << pipeline.parameters.upkeep >> ]
     jobs:
       - upkeep
-  link-validation-workflow:
-    triggers:
-      - schedule:
-          cron: '0 10 * * 1,4'
-          filters:
-            branches:
-              only:
-                - prod
-    jobs:
-      - link-validation
+link-validation-workflow:
+  triggers:
+    - push:
+        branches:
+          only:
+            - test
+  jobs:
+    - link-validation
   scheduled-backup-workflow:
     when:
       and:
