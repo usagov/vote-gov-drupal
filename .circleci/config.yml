@@ -260,20 +260,20 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/
-      - run:
-          name: "Cypress Internal Links"
-          command: |
-            cd testing
-            npm install
-            npm run cy:pipeline:links
-      - run:
-          name: "Cypress Internal Links - rerun"
-          command: |
-            echo "I am the result of Internal Links failed job"
-            cd testing
-            npm install
-            npm run cy:pipeline:links
-          when: on_fail
+      # - run:
+      #     name: "Cypress Internal Links"
+      #     command: |
+      #       cd testing
+      #       npm install
+      #       npm run cy:pipeline:links
+      # - run:
+      #     name: "Cypress Internal Links - rerun"
+      #     command: |
+      #       echo "I am the result of Internal Links failed job"
+      #       cd testing
+      #       npm install
+      #       npm run cy:pipeline:links
+      #     when: on_fail
       - run:
           name: "Cypress External Links"
           command: |

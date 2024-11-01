@@ -37,7 +37,7 @@ describe("External Link Validator Test", () => {
             cy.request({
               url: linkUrl,
               failOnStatusCode: false,
-              timeout: 180000 // 3 minutes
+              timeout: 300000 // 5 minutes
             }).then((response) => {
               if (response.status === 200) {
                 expect(response.status).to.eq(200);
