@@ -394,6 +394,8 @@ link-validation-workflow:
         branches:
           only:
             - test
+          requires:
+            - post-deploy-upkeep-approval
   jobs:
     - link-validation
   scheduled-backup-workflow:
