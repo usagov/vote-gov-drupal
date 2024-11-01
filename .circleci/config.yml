@@ -342,7 +342,7 @@ workflows:
                 - stage
           requires:
             - post-deploy-upkeep-approval
-      - link-validation-workflow:
+      - link-validation:
           filters:
             branches:
               only:
