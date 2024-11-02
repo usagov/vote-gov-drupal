@@ -8,30 +8,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
-#language selector
-
-msgid "Tagalog"
-msgstr ""
-
 msgid "Select language"
 msgstr "Pumili ng wika"
 
-#breadcrumb
-msgid "Home"
-msgstr "Homepage"
-
-#main
-msgid "@sitename in language"
-msgstr "@sitename sa Tagalog"
-
-msgid "Go back"
-msgstr "Bumalik"
-
 msgid "Last updated:"
 msgstr "Huling Na-update:"
-
-msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgstr "Ilustrasyon ng kahon ng botante na may naka-tsek na balota na inilalagay upang ipahiwatig ang aksyon sa pagboto"
 
 #identifier
 msgid "An official website of the @link."
@@ -46,31 +27,11 @@ msgstr "Naghahanap ng impormasyon at mga serbisyo ng gobyerno ng U.S.? @link"
 msgid "Visit USA.gov"
 msgstr "Bisitahin ang USA.gov (sa Ingles)"
 
-msgid "Agency identifier"
-msgstr "Tagatukoy ng Ahensya"
-
-msgid "Agency description"
-msgstr "Paglalarawan ng Ahensya"
-
-msgid "Important links"
-msgstr "Importanteng mga Links"
-
-msgid "Government information and services"
-msgstr "Impormasyon at mga serbisyo ng gobyerno"
-
-#contact
-msgid "in partnership with"
-msgstr "sa pakikipagtulungan sa"
-
 msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
 msgstr "sa pakikipagtulungan sa Election Assistance Commission"
 
 msgid "Follow vote.gov on"
 msgstr "I-follow ang vote.gov sa X (sa Ingles)"
-
-#search
-msgid "Search vote.gov"
-msgstr "I-search ang vote.gov"
 
 #state
 msgid "Register to vote in @state_name"
@@ -173,9 +134,6 @@ msgstr "Opisyal na website ng gobyerno"
 #footer
 msgid "Email sign-up"
 msgstr "sign-up sa EMAIL"
-
-msgid "Contact"
-msgstr "Kontak"
 
 msgid "GSA logo"
 msgstr "Logo ng GSA"

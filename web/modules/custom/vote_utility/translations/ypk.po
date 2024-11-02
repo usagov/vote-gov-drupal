@@ -8,29 +8,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
-#language selector
-msgid "Yupʼik"
-msgstr ""
-
 msgid "Select language"
 msgstr "Ulu nakmiighhu"
 
-#breadcrumb
-msgid "Home"
-msgstr "Nem pinga"
-
-#main
-msgid "@sitename in language"
-msgstr "@sitename Akuzipigestun"
-
-msgid "Go back"
-msgstr "Uteghten"
-
 msgid "Last updated:"
 msgstr "Kingulighmi Nutaghtekat:"
-
-msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgstr "Teruwiiq nakmikellghem salngaganeng igaq apeghiiqaq kananghtekanga kelgutilghii nakmikilleghmeng"
 
 #identifier
 msgid "An official website of the @link."
@@ -45,31 +27,11 @@ msgstr "Ivaghiiqsin U.S.-em kavemengan sameng pillghillu qepghaghvigillu? @link"
 msgid "Visit USA.gov"
 msgstr "Takugu USA.gov (Laluramkestun)"
 
-msgid "Agency identifier"
-msgstr "Qepghaghvigem nalluniighusii"
-
-msgid "Agency description"
-msgstr "Qepghaghvigem apellgha"
-
-msgid "Important links"
-msgstr "Megnunalghiit kelgutisit"
-
-msgid "Government information and services"
-msgstr "Kavemem ungipiillu salqumsugillu"
-
-#contact
-msgid "in partnership with"
-msgstr "ilalkiilluteng"
-
 msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
 msgstr "ilalkiilluteng U.S. Election Assistance Commission"
 
 msgid "Follow vote.gov on"
 msgstr "Maligtigu vote.gov X-ekun (Laluramkestun)"
-
-#search
-msgid "Search vote.gov"
-msgstr "Ivaghivikigu vote.gov"
 
 #state
 msgid "Register to vote in @state_name"
@@ -166,9 +128,6 @@ msgstr "Kavemem website-eghpigaa"
 #footer
 msgid "Email sign-up"
 msgstr "Email-kun ilatusiq"
-
-msgid "Contact"
-msgstr "Aleghqughqut"
 
 msgid "GSA logo"
 msgstr "GSA-m igaa"

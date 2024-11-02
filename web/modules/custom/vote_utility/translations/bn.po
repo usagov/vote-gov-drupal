@@ -8,29 +8,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
-#language selector
-msgid "Bengali"
-msgstr "বাংলা"
-
 msgid "Select language"
 msgstr "ভাষা নির্বাচন করুন"
 
-#breadcrumb
-msgid "Home"
-msgstr "হোমপেজ"
-
-#main
-msgid "@sitename in language"
-msgstr "বাংলায় @sitename"
-
-msgid "Go back"
-msgstr "ফিরে যাও"
-
 msgid "Last updated:"
 msgstr "সর্বশেষ সংষ্করণ"
-
-msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgstr "চেক করা ব্যালট ঢোকানো হচ্ছে সহ ভোটার বাক্সের চিত্র ভোটিং কার্যক্রম নির্দেশ করে"
 
 #identifier
 msgid "An official website of the @link."
@@ -45,31 +27,11 @@ msgstr "মার্কিন সরকারের তথ্য এবং প�
 msgid "Visit USA.gov"
 msgstr "USA.gov দেখুন (ইংরেজীতে)"
 
-msgid "Agency identifier"
-msgstr "সংস্থা শনাক্তকারী"
-
-msgid "Agency description"
-msgstr "সংস্থার বিবরণ"
-
-msgid "Important links"
-msgstr "গুরুত্বপূর্ণ লিঙ্ক"
-
-msgid "Government information and services"
-msgstr "সরকারি তথ্য ও সেবা"
-
-#contact
-msgid "in partnership with"
-msgstr "এর সাথে অংশীদারিত্বে"
-
 msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
 msgstr "এর সাথে অংশীদারিত্বে U.S. Election Assistance Commission"
 
 msgid "Follow vote.gov on"
 msgstr "টুইটারে vote.gov অনুসরণ করুন (ইংরেজীতে)"
-
-#search
-msgid "Search vote.gov"
-msgstr "Vote.gov অনুসন্ধান করুন"
 
 #state
 msgid "Register to vote in @state_name"
@@ -172,9 +134,6 @@ msgstr "দাপ্তরিক সরকারী ওয়েবসাইট"
 #footer
 msgid "Email sign-up"
 msgstr "ইমেল নিবন্ধন করুন"
-
-msgid "Contact"
-msgstr "যোগাযোগ"
 
 msgid "GSA logo"
 msgstr "জিএসএ লোগো"

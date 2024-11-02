@@ -8,29 +8,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
-#language selector
-msgid "Khmer"
-msgstr "ភាសាខ្មែរ"
-
 msgid "Select language"
 msgstr "ជ្រើសរើសភាសា"
 
-#breadcrumb
-msgid "Home"
-msgstr "ទំព័រដើម"
-
-#main
-msgid "@sitename in language"
-msgstr "@sitename ជាភាសាខ្មែរ"
-
-msgid "Go back"
-msgstr "ត្រឡប់ក្រោយ"
-
 msgid "Last updated:"
 msgstr "បានធ្វើបច្ចុប្បន្នភាពលើកចុងក្រោយ៖"
-
-msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgstr "រូបភាពនៃប្រអប់អ្នកបោះឆ្នោតដែលមានសន្លឹកឆ្នោតបានគូសធីកត្រូវបានបញ្ចូល ដើម្បីបង្ហាញពីសកម្មភាពបោះឆ្នោត"
 
 #identifier
 msgid "an official website of the @link."
@@ -45,31 +27,11 @@ msgstr "កំពុងស្វែងរកព័ត៌មាននិងសេ
 msgid "Visit USA.gov"
 msgstr "ចូលមើល​ USA.gov (ជាភាសាអង់គ្លេស)"
 
-msgid "Agency identifier"
-msgstr "អ្នកស្វែងរកភ្នាក់ងារ"
-
-msgid "Agency description"
-msgstr "ការពិពណ៌នាពីភ្នាក់ងារ"
-
-msgid "Important links"
-msgstr "តំណសំខាន់ៗ"
-
-msgid "Government information and services"
-msgstr "ព័ត៌មាននិងសេវាកម្មរដ្ឋាភិបាល"
-
-#contact
-msgid "in partnership with"
-msgstr "ក្នុងភាពជាដៃគូជាមួយ"
-
 msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
 msgstr "ក្នុងភាពជាដៃគូជាមួយ U.S. Election Assistance Commission"
 
 msgid "Follow vote.gov on"
 msgstr "តាមដាន vote.gov នៅលើ X (ជាភាសាអង់គ្លេស)"
-
-#search
-msgid "Search vote.gov"
-msgstr "ស្រាវជ្រាវរក vote.gov"
 
 #state
 msgid "Register to vote in @state_name"
@@ -172,9 +134,6 @@ msgstr "គេហទំព័រផ្លូវការរបស់រដ្ឋ
 #footer
 msgid "Email sign-up"
 msgstr "ការចុះឈ្មោះដើម្បីទទួលសារឣ៊ីមែល"
-
-msgid "Contact"
-msgstr "លេខទំនាក់ទំនង"
 
 msgid "GSA logo"
 msgstr "និមិត្តសញ្ញារបស់ GSA"

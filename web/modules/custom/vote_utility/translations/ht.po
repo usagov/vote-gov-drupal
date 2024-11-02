@@ -8,32 +8,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
-# config.languages.languageName
-msgid "Haitian Creole"
-msgstr "Kreyòl Ayisyen"
-
 # config.languages.params.select_language
 msgid "Select language"
 msgstr "Chwazi lang"
 
-#breadcrumb
-msgid "Home"
-msgstr "Paj dakèy"
-
 msgid "Breadcrumb"
 msgstr "Kwout pen"
-
-# config.languages.params.Owner
-msgid "@sitename in language"
-msgstr "@sitename an Kreyòl Ayisyen"
 
 #main menu close button
 msgid "Close"
 msgstr "Fèmen"
-
-# config.languages.params.go_back
-msgid "Go back"
-msgstr "Retounen"
 
 # config.languages.params.last_updated
 msgid "Last updated:"
@@ -51,10 +35,6 @@ msgstr "Ale nan kontni prensipal la"
 msgid "(in English)"
 msgstr "(ann Anglè)"
 
-# data.translations.footer.vote_logo_alt_text
-msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgstr "Ilistrasyon sou bwat votè montre bilten vòt ki gen tchèk pou endike aksyon pou vote"
-
 # data.translations.footer.identifier_gsa_txt
 msgid "An official website of the @link."
 msgstr "Sitwèb ofisyèl @link la"
@@ -71,26 +51,6 @@ msgstr "enfòmasyon ak sèvis gouvènman Etazini? @link"
 msgid "Visit USA.gov"
 msgstr "Vizite USA.gov (ann Anglè)"
 
-# data.translations.footer.identifier_aria
-msgid "Agency identifier"
-msgstr "Idantifikasyon Ajans lan"
-
-# data.translations.footer.identifier_gsa_txt_aria
-msgid "Agency description"
-msgstr "Deskripsyon ajans lan"
-
-# data.translations.footer.identifier_link_aria
-msgid "Important links"
-msgstr "Lyen enpòtan yo"
-
-# data.translations.footer.identifier_more_info_aria
-msgid "Government information and services"
-msgstr "enfòmasyon ak sèvis gouvènman Etazini"
-
-# data.translations.footer.eac_text
-msgid "in partnership with"
-msgstr "an patenarya ak"
-
 # data.translations.footer.eac_logo_alt_text
 msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
 msgstr "Logo Komisyon Etazini Asistans pou Eleksyon (US Election Assistance Commission) ki endike patenarya ak vote.gov"
@@ -103,17 +63,9 @@ msgstr "Swiv vote.gov sou X (ann Anglè)"
 msgid "Email sign-up"
 msgstr "Enskripsyon imèl"
 
-# data.translations.footer.section_contact
-msgid "Contact"
-msgstr "Kontak"
-
 # data.translations.footer.gsa_logo_alt
 msgid "GSA logo"
 msgstr "Logo GSA a"
-
-# data.translations.homepage.search_placeholder
-msgid "Search vote.gov"
-msgstr "Fè rechèch sou vote.gov"
 
 # data.translations.homepage.section_banner
 msgid "Official government website"
@@ -357,9 +309,6 @@ msgstr "Motè rechèch"
 #state tool aria label
 msgid "Register to vote selector tool"
 msgstr "Zouti seleksyon pou enskri pou vote"
-
-msgid "Select your state or territory"
-msgstr "Chwazi Eta oswa teritwa w"
 
 msgid "States and territories list"
 msgstr "Lis Eta ak teritwa yo"

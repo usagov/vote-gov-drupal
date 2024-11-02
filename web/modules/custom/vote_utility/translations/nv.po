@@ -8,25 +8,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
-# config.languages.languageName
-msgid "Navajo"
-msgstr "Diné"
-
 # config.languages.params.select_language
 msgid "Select language"
 msgstr "Saad choid77['88[7g77"
-
-#breadcrumb
-msgid "Home"
-msgstr "Hooghangi naaltsoos"
-
-# config.languages.params.Owner
-msgid "@sitename in language"
-msgstr "@sitename Diné"
-
-# config.languages.params.go_back
-msgid "Go back"
-msgstr "N1t'33'"
 
 # config.languages.params.last_updated
 msgid "Last updated:"
@@ -44,10 +28,6 @@ msgstr "&yis77 baa hane'7gi nin7[keed"
 msgid "(in English)"
 msgstr "&lt;Bilag1ana k'ehj7&gt;"
 
-# data.translations.footer.vote_logo_alt_text
-msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgstr "Sitsaa y1zh7 biyi' asdzogo naashch'22'go e'et'11d biih yilts0osgo bik11'"
-
 # data.translations.footer.identifier_gsa_txt
 msgid "An official website of the @link."
 msgstr "!l32j8' han1lki'7g77 website kod00 @link"
@@ -64,26 +44,6 @@ msgstr "W1ashindoon da'7n77shj77sh hane' d00 bee 1k1 an7da'awo' han7t1h? @link"
 msgid "Visit USA.gov"
 msgstr "USA.gov d7n77['88[ &lt;Bilag1ana k'ehj7&gt;"
 
-# data.translations.footer.identifier_aria
-msgid "Agency identifier"
-msgstr "Da'7n77sh bee 44h0zin7g77"
-
-# data.translations.footer.identifier_gsa_txt_aria
-msgid "Agency description"
-msgstr "Da'7n77sh baa hane'"
-
-# data.translations.footer.identifier_link_aria
-msgid "Important links"
-msgstr "Da'7l98go dahane'gi"
-
-# data.translations.footer.identifier_more_info_aria
-msgid "Government information and services"
-msgstr "W1ashindoonj7 dahane' d00 bee 1k1 an7da'awo'"
-
-# data.translations.footer.eac_text
-msgid "in partnership with"
-msgstr "yi[ nidaalnish"
-
 # data.translations.footer.eac_logo_alt_text
 msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
 msgstr "US Election Assistance Commission bi-logo bik1'7g77 vote.gov yi[ naazhnish biniy4"
@@ -96,17 +56,9 @@ msgstr "Vote.gov bik44' nanin1 X biyi' &lt;Bilag1ana k'ehj7&gt"
 msgid "Email sign-up"
 msgstr "Email b7k1 hash'dil4h7g77"
 
-# data.translations.footer.section_contact
-msgid "Contact"
-msgstr "Contact"
-
 # data.translations.footer.gsa_logo_alt
 msgid "GSA logo"
 msgstr "GSA bi-logo"
-
-# data.translations.homepage.search_placeholder
-msgid "Search vote.gov"
-msgstr "Vote.gov hanit1h"
 
 # data.translations.homepage.section_banner
 msgid "Official government website"

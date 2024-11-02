@@ -8,32 +8,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
-# config.languages.languageName
-msgid "Portuguese"
-msgstr "Português"
-
-msgid "Home"
-msgstr ""
-
 # config.languages.params.select_language
 msgid "Select language"
 msgstr "Selecionar a língua"
 
-#breadcrumb
-msgid "Home"
-msgstr "Página inicial"
-
 #in-page nav
 msgid "On this page"
 msgstr "Nesta página"
-
-# config.languages.params.Owner
-msgid "@sitename in language"
-msgstr "@sitename em Português"
-
-# config.languages.params.go_back
-msgid "Go back"
-msgstr "Voltar"
 
 # config.languages.params.last_updated
 msgid "Last updated:"
@@ -51,10 +32,6 @@ msgstr "Saltar para o conteúdo principal"
 msgid "(in English)"
 msgstr "(em inglês)"
 
-# data.translations.footer.vote_logo_alt_text (see accessibility updates)
-msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgstr "Ilustração da caixa do eleitor com voto marcado ao ser inserido para indicar ação de votação"
-
 # data.translations.footer.identifier_gsa_txt
 msgid "An official website of the @link."
 msgstr "Uma página web oficial da @link"
@@ -71,26 +48,6 @@ msgstr "Informações e serviços do governo dos EUA? @link"
 msgid "Visit USA.gov"
 msgstr "Visite USA.gov (em inglês)"
 
-# data.translations.footer.identifier_aria
-msgid "Agency identifier"
-msgstr "Identificador da agência"
-
-# data.translations.footer.identifier_gsa_txt_aria
-msgid "Agency description"
-msgstr "Descrição da agência"
-
-# data.translations.footer.identifier_link_aria
-msgid "Important links"
-msgstr "Links importantes"
-
-# data.translations.footer.identifier_more_info_aria
-msgid "Government information and services"
-msgstr "Informação e serviços do governo"
-
-# data.translations.footer.eac_text
-msgid "in partnership with"
-msgstr "em parceria com"
-
 # data.translations.footer.eac_logo_alt_text (see accessibility updates)
 msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
 msgstr "Logomarca da Comissão de Assistência das Eleições dos EUA que indica uma parceria com vote.gov"
@@ -103,17 +60,9 @@ msgstr "Siga vote.gov no X (em inglês)"
 msgid "Email sign-up"
 msgstr "Inscrição por e-mail"
 
-# data.translations.footer.section_contact
-msgid "Contact"
-msgstr "Contato"
-
 # data.translations.footer.gsa_logo_alt
 msgid "GSA logo"
 msgstr "Logotipo do GSA"
-
-# data.translations.homepage.search_placeholder
-msgid "Search vote.gov"
-msgstr "Pesquisar vote.gov"
 
 # data.translations.homepage.section_banner
 msgid "Official government website"
@@ -368,9 +317,6 @@ msgstr "Encontre as datas das eleições estaduais e locais."
 
 msgid "Register to vote selector tool"
 msgstr "Registre-se na ferramenta de seleção de votos"
-
-msgid "Select your state or territory"
-msgstr "Selecione seu estado ou território"
 
 msgid "States and territories suggestion list"
 msgstr "Lista de sugestões de estados e territórios"
