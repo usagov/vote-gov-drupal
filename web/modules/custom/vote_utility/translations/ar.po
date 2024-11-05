@@ -32,42 +32,6 @@ msgstr "تخطي إلى المحتوى الرئيسي"
 msgid "(in English)"
 msgstr "(باللغة الإنجليزية)"
 
-# data.translations.footer.identifier_gsa_txt
-msgid "An official website of the @link."
-msgstr "موقع الكتروني رسمي لـ @link"
-
-# data.translations.footer.identifier_gsa_txt__1
-msgid "General Services Administration"
-msgstr "إدارة الخدمات العامة (باللغة الإنجليزية)"
-
-# data.translations.footer.identifier_more_info
-msgid "Looking for U.S. government information and services? @link."
-msgstr "هل تبحث عن معلومات وخدمات حكومية أمريكية؟ @link"
-
-# data.translations.footer.identifier_more_info__1
-msgid "Visit USA.gov"
-msgstr "قم بزيارة USA.gov (باللغة الإنجليزية)"
-
-# data.translations.footer.eac_logo_alt_text (see accessibility updates)
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
-msgstr "شعار لجنة المساعدة الانتخابية الأمريكية الذي يشير إلى التعاون  مع vote.gov"
-
-# data.translations.footer.twitter_text
-msgid "Follow vote.gov on"
-msgstr "تابع vote.gov على تويتر (باللغة الإنجليزية)"
-
-# data.translations.footer.section_sign_up
-msgid "Email sign-up"
-msgstr "الاشتراك في البريد الإلكتروني"
-
-# data.translations.footer.gsa_logo_alt
-msgid "GSA logo"
-msgstr "شعار GSA"
-
-# data.translations.homepage.section_banner
-msgid "Official government website"
-msgstr "الموقع الالكتروني الرسمي للحكومة"
-
 # data.translations.register.heading
 msgid "Register to vote in @state_name"
 msgstr "سجل للتصويت في @state_name"
@@ -256,10 +220,6 @@ msgstr "الجمعة"
 msgid "Saturday"
 msgstr "السبت"
 
-#footer
-msgid "Visit our partner site to find more information about voting in the United States."
-msgstr "(باللغة الإنجليزية) طالع الموقع الشريك USA.gov للحصول على مزيد من المعلومات حول التصويت في الولايات المتحدة."
-
 #main menu close button
 msgid "Close"
 msgstr "إغلاق"
@@ -272,37 +232,9 @@ msgstr "القائمة"
 msgid "U.S. flag"
 msgstr "علم الولايات المتحدة"
 
-#eac partner text
-msgid "Vote.gov is in partnership with"
-msgstr "يشترك موقع vote.gov مع"
-
-#aria-label for election links
-msgid "External election resources"
-msgstr "روابط الانتخابات"
-
-#alt text for USA.gov logo
-msgid "USA.gov logo"
-msgstr "شعار USA.gov"
-
 msgid "Primary navigation"
 msgstr "التصفح الأساسي"
-
-#search aira-label
-msgid "Search component"
-msgstr "مكونات البحث"
-
-#state tool aria label
-msgid "Register to vote selector tool"
-msgstr "أداة اختيار التسجيل للتصويت"
 
 #state page
 msgid "Start or update your registration online"
 msgstr "ابدأ أو قُم بتحديث سجلك الانتخابي على الإنترنت"
-
-#state list aria label
-msgid "States and territories list"
-msgstr "قائمة الولايات والأقاليم"
-
-#eac partner text
-msgid "Vote.gov is in partnership with"
-msgstr "تأسس موقع vote.gov بالشراكة مع "

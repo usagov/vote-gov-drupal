@@ -14,25 +14,6 @@ msgstr "ভাষা নির্বাচন করুন"
 msgid "Last updated:"
 msgstr "সর্বশেষ সংষ্করণ"
 
-#identifier
-msgid "An official website of the @link."
-msgstr "@link এর একটি দাপ্তরিক ওয়েবসাইট"
-
-msgid "General Services Administration"
-msgstr "সাধারণ পরিষেবা প্রশাসন (ইংরেজীতে)"
-
-msgid "Looking for U.S. government information and services? @link."
-msgstr "মার্কিন সরকারের তথ্য এবং পরিষেবা খুঁজছেন? @link"
-
-msgid "Visit USA.gov"
-msgstr "USA.gov দেখুন (ইংরেজীতে)"
-
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
-msgstr "এর সাথে অংশীদারিত্বে U.S. Election Assistance Commission"
-
-msgid "Follow vote.gov on"
-msgstr "টুইটারে vote.gov অনুসরণ করুন (ইংরেজীতে)"
-
 #state
 msgid "Register to vote in @state_name"
 msgstr "@state_name এ ভোট দিতে নিবন্ধন করুন"
@@ -126,17 +107,6 @@ msgstr "স্কিপ করে মূল কন্টেন্ট এ যা�
 
 msgid "(in English)"
 msgstr "(ইংরেজীতে)"
-
-#banner
-msgid "Official government website"
-msgstr "দাপ্তরিক সরকারী ওয়েবসাইট"
-
-#footer
-msgid "Email sign-up"
-msgstr "ইমেল নিবন্ধন করুন"
-
-msgid "GSA logo"
-msgstr "জিএসএ লোগো"
 
 #month and day names
 msgctxt "Long month name"

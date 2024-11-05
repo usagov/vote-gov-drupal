@@ -14,25 +14,6 @@ msgstr "選擇語言"
 msgid "Last updated:"
 msgstr "最近更新時間："
 
-#identifier
-msgid "an official website of the @link."
-msgstr "@link官方網站"
-
-msgid "General Services Administration"
-msgstr "總管理局 (英語)"
-
-msgid "Looking for U.S. government information and services? @link."
-msgstr "尋找美國政府資訊與服務？@link"
-
-msgid "Visit USA.gov"
-msgstr "访问 USA.gov (英語)"
-
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
-msgstr "與 U.S. Election Assistance Commission合作 "
-
-msgid "Follow vote.gov on"
-msgstr "在 X 上追蹤 vote.gov (英語)"
-
 #state
 msgid "Register to vote in @state_name"
 msgstr "在 @state_name 登記投票"
@@ -126,17 +107,6 @@ msgstr "跳到主要內容"
 
 msgid "(in English)"
 msgstr "(英語)"
-
-#banner
-msgid "Official government website"
-msgstr "官方政府網站"
-
-#footer
-msgid "Email sign-up"
-msgstr "電郵註冊"
-
-msgid "GSA logo"
-msgstr "GSA 標誌"
 
 #month and day names
 msgctxt "Long month name"

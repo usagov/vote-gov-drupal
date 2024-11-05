@@ -14,25 +14,6 @@ msgstr "Lựa chọn ngôn ngữ"
 msgid "Last updated:"
 msgstr "Cập nhật lần cuối:"
 
-#identifier
-msgid "An official website of the @link."
-msgstr "Một trang web chính thức của @link"
-
-msgid "General Services Administration"
-msgstr "Cơ quan Quản lý Dịch vụ Tổng hợp (bằng Tiếng Anh)"
-
-msgid "Looking for U.S. government information and services? @link."
-msgstr "Tìm kiếm thông tin và dịch vụ của chính phủ Hoa Kỳ @link"
-
-msgid "Visit USA.gov"
-msgstr "Vào trang USA.gov (bằng Tiếng Anh)"
-
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
-msgstr "hợp tác với U.S. Election Assistance Commission"
-
-msgid "Follow vote.gov on"
-msgstr "Theo dõi vote.gov trên X (bằng Tiếng Anh)"
-
 #state
 msgid "Register to vote in @state_name"
 msgstr "Đăng ký bỏ phiếu bầu ở @state_name"
@@ -126,17 +107,6 @@ msgstr "Bỏ qua để đi thẳng vào nội dung chính"
 
 msgid "(in English)"
 msgstr "(bằng Tiếng Anh)"
-
-#banner
-msgid "Official government website"
-msgstr "Trang web chính thức của chính phủ"
-
-#footer
-msgid "Email sign-up"
-msgstr "Đăng ký thư điện tử email"
-
-msgid "GSA logo"
-msgstr "Biểu trưng GSA"
 
 #month and day names
 msgctxt "Long month name"

@@ -14,25 +14,6 @@ msgstr "Pumili ng wika"
 msgid "Last updated:"
 msgstr "Huling Na-update:"
 
-#identifier
-msgid "An official website of the @link."
-msgstr "Isang opisyal na website ng @link"
-
-msgid "General Services Administration"
-msgstr "Administrasyon ng Pangkalahatang Serbisyo (sa Ingles)"
-
-msgid "Looking for U.S. government information and services? @link."
-msgstr "Naghahanap ng impormasyon at mga serbisyo ng gobyerno ng U.S.? @link"
-
-msgid "Visit USA.gov"
-msgstr "Bisitahin ang USA.gov (sa Ingles)"
-
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
-msgstr "sa pakikipagtulungan sa Election Assistance Commission"
-
-msgid "Follow vote.gov on"
-msgstr "I-follow ang vote.gov sa X (sa Ingles)"
-
 #state
 msgid "Register to vote in @state_name"
 msgstr "Magparehistro para bumoto sa @state_name"
@@ -126,17 +107,6 @@ msgstr "Lumaktaw sa pangunahing nilalaman"
 
 msgid "(in English)"
 msgstr "(sa Ingles)"
-
-#banner
-msgid "Official government website"
-msgstr "Opisyal na website ng gobyerno"
-
-#footer
-msgid "Email sign-up"
-msgstr "sign-up sa EMAIL"
-
-msgid "GSA logo"
-msgstr "Logo ng GSA"
 
 #month and day names
 msgctxt "Long month name"

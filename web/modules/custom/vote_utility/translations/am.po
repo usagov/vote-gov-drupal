@@ -14,25 +14,6 @@ msgstr "ቋንቋ ይምረጡ"
 msgid "Last updated:"
 msgstr "መጨረሻ የተሻሻለው፦"
 
-#identifier
-msgid "An official website of the @link."
-msgstr "ኦፊሲያል ድህረ ገጽ @link"
-
-msgid "General Services Administration"
-msgstr "አጠቃላይ አገልግሎቶች አስተዳደር (በእንግሊዝኛ)"
-
-msgid "Looking for U.S. government information and services? @link."
-msgstr "የU.S. መንግስት መረጃ እና አገልግሎቶችን ይፈልጋሉ? @link."
-
-msgid "Visit USA.gov"
-msgstr "USA.govን ይጎብኙ (በእንግሊዘኛ)"
-
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
-msgstr "ከvote.gov ጋር አጋርነትን የሚያመለክት የU.S. ምርጫ እርዳታ ሰጪ ኮሚሽን አርማ"
-
-msgid "Follow vote.gov on"
-msgstr "Vote.govን በትዊተር ላይ ይከተሉ (በእንግሊዘኛ)"
-
 #state
 msgid "Register to vote in @state_name"
 msgstr "ለመምረጥ ይመዝገቡ @state_name"
@@ -126,17 +107,6 @@ msgstr "ወደ ዋናው ይዘት ይለፉ"
 
 msgid "(in English)"
 msgstr "(በእንግሊዘኛ)"
-
-#banner
-msgid "Official government website"
-msgstr "ኦፊሴላዊ የመንግስት ድህረ ገጽ"
-
-#footer
-msgid "Email sign-up"
-msgstr "የኢሜል ምዝገባ (በእንግሊዘኛ)"
-
-msgid "GSA logo"
-msgstr "GSA አርማ"
 
 #month and day names
 msgctxt "Long month name"

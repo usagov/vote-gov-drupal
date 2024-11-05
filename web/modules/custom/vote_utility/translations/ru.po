@@ -28,42 +28,6 @@ msgstr "Перейдите к основному содержанию"
 msgid "(in English)"
 msgstr "(по-английски)"
 
-# data.translations.footer.identifier_gsa_txt
-msgid "An official website of the @link."
-msgstr "Официальный веб-сайт @link"
-
-# data.translations.footer.identifier_gsa_txt__1
-msgid "General Services Administration"
-msgstr "Администрации обслуживания (по-английски)"
-
-# data.translations.footer.identifier_more_info
-msgid "Looking for U.S. government information and services? @link."
-msgstr "Ищете информацию и услуги правительства США? @link"
-
-# data.translations.footer.identifier_more_info__1
-msgid "Visit USA.gov"
-msgstr "Посетите USA.gov (по-английски)"
-
-# data.translations.footer.eac_logo_alt_text
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
-msgstr "Логотип Комиссии США по содействию выборам, который указывает на партнёрство с vote.gov"
-
-# data.translations.footer.twitter_text
-msgid "Follow vote.gov on"
-msgstr "Следите за новостями vote.gov в Твиттере (по-английски)"
-
-# data.translations.footer.section_sign_up
-msgid "Email sign-up"
-msgstr "Регистрация по электронной почте (по-английски)"
-
-# data.translations.footer.gsa_logo_alt
-msgid "GSA logo"
-msgstr "Логотип GSA (Администрации общего обслуживания)"
-
-# data.translations.homepage.section_banner
-msgid "Official government website"
-msgstr "Официальный правительственный сайт"
-
 # data.translations.register.heading
 msgid "Register to vote in @state_name"
 msgstr "Зарегистрируйтесь для голосования в @state_name"

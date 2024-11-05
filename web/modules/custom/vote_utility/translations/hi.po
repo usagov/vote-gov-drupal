@@ -18,29 +18,6 @@ msgstr "इस पेज पर"
 msgid "Last updated:"
 msgstr "नवीनतम अपडेट:"
 
-#identifier
-msgid "An official website of the @link."
-msgstr "@link की आधिकारिक वेबसाइट"
-
-msgid "General Services Administration"
-msgstr "सामान्य सेवा प्रशासन/जनरल सर्विसेज़ एडमिनिस्ट्रेशन (अंग्रेज़ी में)"
-
-msgid "Looking for U.S. government information and services? @link."
-msgstr "यू.एस. सरकार की जानकारी और सेवाएं खोज रहे हैं? @link"
-
-msgid "Visit USA.gov"
-msgstr "USA.gov पर जाएं (अंग्रेज़ी में)"
-
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
-msgstr "U.S. Election Assistance Commission के साथ साझेदारी में"
-
-#footer
-msgid "Visit our partner site to find more information about voting in the United States."
-msgstr "संयुक्त राज्य अमेरिका में मतदान के बारे में अधिक जानकारी प्राप्त करने के लिए हमारी साझेदार साइट पर जाएँ।"
-
-msgid "Follow vote.gov on"
-msgstr "Vote.gov को X पर फ़ॉलो करें (अंग्रेज़ी में)"
-
 #state
 msgid "Register to vote in @state_name"
 msgstr "@state_name में मतदान करने के लिए पंजीकरण करें"
@@ -135,21 +112,6 @@ msgstr "सीधे मुख्य विषयवस्तु (मेन क�
 
 msgid "(in English)"
 msgstr "(अंग्रेज़ी में)"
-
-#banner
-msgid "Official government website"
-msgstr "आधिकारिक सरकारी वेबसाइट"
-
-#footer
-msgid "Email sign-up"
-msgstr "ईमेल के लिए साइन-अप करें"
-
-#eac partner text
-msgid "Vote.gov is in partnership with"
-msgstr "Vote.gov अमेरिकी चुनाव सहायता आयोग के साथ साझेदारी में है"
-
-msgid "GSA logo"
-msgstr "GSA का लोगो (प्रतीक चिन्ह)"
 
 #month and day names
 msgctxt "Long month name"

@@ -14,25 +14,6 @@ msgstr "ជ្រើសរើសភាសា"
 msgid "Last updated:"
 msgstr "បានធ្វើបច្ចុប្បន្នភាពលើកចុងក្រោយ៖"
 
-#identifier
-msgid "an official website of the @link."
-msgstr "គេហទំព័រផ្លូវការនៃ @link"
-
-msgid "General Services Administration"
-msgstr "រដ្ឋបាលសេវាកម្មទូទៅ (ជាភាសាអង់គ្លេស)"
-
-msgid "Looking for U.S. government information and services? @link."
-msgstr "កំពុងស្វែងរកព័ត៌មាននិងសេវាកម្មរដ្ឋាភិបាលអាមេរិចមែនទេ? @link"
-
-msgid "Visit USA.gov"
-msgstr "ចូលមើល​ USA.gov (ជាភាសាអង់គ្លេស)"
-
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
-msgstr "ក្នុងភាពជាដៃគូជាមួយ U.S. Election Assistance Commission"
-
-msgid "Follow vote.gov on"
-msgstr "តាមដាន vote.gov នៅលើ X (ជាភាសាអង់គ្លេស)"
-
 #state
 msgid "Register to vote in @state_name"
 msgstr "ចុះឈ្មោះដើម្បីបោះឆ្នោតនៅរដ្ឋ @state_name"
@@ -126,17 +107,6 @@ msgstr "រំលងចូលទៅមាតិកាសំខាន់"
 
 msgid "(in English)"
 msgstr "(ជាភាសាអង់គ្លេស)"
-
-#banner
-msgid "Official government website"
-msgstr "គេហទំព័រផ្លូវការរបស់រដ្ឋាភិបាល"
-
-#footer
-msgid "Email sign-up"
-msgstr "ការចុះឈ្មោះដើម្បីទទួលសារឣ៊ីមែល"
-
-msgid "GSA logo"
-msgstr "និមិត្តសញ្ញារបស់ GSA"
 
 #month and day names
 msgctxt "Long month name"
