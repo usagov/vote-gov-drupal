@@ -18,3 +18,9 @@ vote_nvrf.disabled_nvrf_pages:
     _controller: '\Drupal\vote_nvrf\Controller\NvrfPageController::disabledStateFormsContent'
   requirements:
     _permission: 'access content'
+vote_nvrf.state_data_points_index:
+  path: '/state-data-points-index'
+  defaults:
+    _controller: '\Drupal\vote_nvrf\Controller\NvrfPageController::stateDataPointsIndex'
+  requirements:
+    _permission: 'access content'

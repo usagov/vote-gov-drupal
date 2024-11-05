@@ -5,11 +5,11 @@
     "postinstall": "npm run build",
     "build": "npm run reset-dist && npm run copy-dist:js && npm run copy-dist:css && npm run copy-dist:data",
     "reset-dist": "mkdir -p ./dist/assets",
-    "copy-dist:js": "cp -r ./node_modules/vote-gov-nvrf-app/dist/assets/index.js ./dist/assets/index.js",
-    "copy-dist:css": "cp -r ./node_modules/vote-gov-nvrf-app/dist/assets/index.css ./dist/assets/index.css",
+    "copy-dist:js": "cp -r ./node_modules/vote-gov-nvrf-app/dist/assets/main.js ./dist/assets/main.js",
+    "copy-dist:css": "cp -r ./node_modules/vote-gov-nvrf-app/dist/assets/main.css ./dist/assets/main.css",
     "copy-dist:data": "rm -rf ../../../data && cp -r ./node_modules/vote-gov-nvrf-app/dist/data ../../../data"
   },
   "dependencies": {
-    "vote-gov-nvrf-app": "github:usagov/vote-gov-nvrf-app#v0.18.2"
+    "vote-gov-nvrf-app": "github:usagov/vote-gov-nvrf-app#v0.20.0"
   }
 }
