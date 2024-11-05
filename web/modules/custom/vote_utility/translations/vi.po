@@ -8,6 +8,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
+msgid "Primary navigation"
+msgstr "Điều hướng chính"
+
 #language selector
 msgid "Vietnamese"
 msgstr "Tiếng Việt"
@@ -19,12 +22,19 @@ msgstr "Lựa chọn ngôn ngữ"
 msgid "Home"
 msgstr "Trang chủ"
 
+msgid "Breadcrumb"
+msgstr "Đường dẫn điều hướng"
+
 #main
 msgid "@sitename in language"
 msgstr "@sitename bằng Tiếng Việt"
 
 msgid "Go back"
 msgstr "Quay lại"
+
+#main menu close button
+msgid "Close"
+msgstr "Đóng cửa"
 
 msgid "Last updated:"
 msgstr "Cập nhật lần cuối:"
@@ -79,7 +89,7 @@ msgid "How to register to vote"
 msgstr "Làm thế nào để đăng ký bỏ phiếu"
 
 msgid "How to register and update your registration"
-msgstr "Làm thế nào để đăng ký bỏ phiếu"
+msgstr " Ghi danh và cập nhật ghi danh như thế nào"
 
 msgid "Other ways to register to vote"
 msgstr "Các cách khác để đăng ký bỏ phiếu"
@@ -88,7 +98,7 @@ msgid "Voter registration deadlines are for the November 05, 2024 election. @lin
 msgstr "Thời hạn cuối cùng đăng ký cử tri cho cuộc bầu cử @election_date"
 
 msgid "Find state and local election dates."
-msgstr ""
+msgstr "Tìm ngày bầu cử của tiểu bang và địa phương."
 
 msgid "Register by mail deadline:"
 msgstr "Thời hạn đăng ký qua đường bưu điện: "
@@ -139,7 +149,7 @@ msgid "Voter registration is not required in @state_name. @link on @state_name�
 msgstr "Ở tiểu bang @state_name không yêu cầu bắt buộc phải đăng ký bầu cử. @link tại trang website bầu cử cấp tiểu bang của @state_name."
 
 msgid "Start or update your registration online"
-msgstr "Hãy bắt đầu đăng ký bầu cử trực tuyến"
+msgstr "Bắt đầu hoặc cập nhật ghi danh trực tuyến"
 
 msgid "@link on @state_name’s election website."
 msgstr "@link trên trang website bầu cử cấp tiểu bang của @state_name."
@@ -168,6 +178,10 @@ msgstr "(bằng Tiếng Anh)"
 #banner
 msgid "Official government website"
 msgstr "Trang web chính thức của chính phủ"
+
+#U.S. flag alt text
+msgid "U.S. flag"
+msgstr "Quốc kỳ Hoa Kỳ"
 
 #footer
 msgid "Email sign-up"
@@ -248,3 +262,6 @@ msgstr "Thứ Bảy"
 
 msgid "Sunday"
 msgstr "Chủ Nhật"
+
+msgid "Learn more from the Federal Voting Assistance Program (FVAP)."
+msgstr "Tìm hiểu thêm từ Federal Voting Assistance Program. (FVAP)."
