@@ -138,10 +138,10 @@ msgid "Register by mail deadline:"
 msgstr "郵送での登録締切："
 
 msgid "Must be postmarked by @date"
-msgstr "2022年5月28日 @date 消印有効"
+msgstr "@date 消印有効"
 
 msgid "Must be received by @date"
-msgstr "2022年5月28日 @date 必着"
+msgstr "@date 必着"
 
 # data.translations.register.dates__byonline_deadline
 msgid "Online registration deadline:"

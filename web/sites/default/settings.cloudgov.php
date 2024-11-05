@@ -121,7 +121,7 @@ switch ($application_environment) {
   case "dev":
     $config['config_split.config_split.non_production']['status'] = TRUE;
     $config['samlauth.authentication']['sp_entity_id'] = 'dev.vote.gov';
-    $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://secureauth.dev.gsa.gov/SecureAuth592';
+    $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://auth-preprod.gsa.gov/app/gsauth-preprod_devvotegov_1/exkcups2fwc3wTcTO4h7/sso/saml';
     break;
 
   case "prod":
@@ -133,12 +133,12 @@ switch ($application_environment) {
   case "stage":
     $config['config_split.config_split.non_production']['status'] = TRUE;
     $config['samlauth.authentication']['sp_entity_id'] = 'cms-stage.vote.gov';
-    $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://secureauth.dev.gsa.gov/SecureAuth616';
+    $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://auth-preprod.gsa.gov/app/gsauth-preprod_cmsstagevotegov_1/exkcupw8ddWb0oqaP4h7/sso/saml';
     break;
 
   case "test":
     $config['config_split.config_split.non_production']['status'] = TRUE;
     $config['samlauth.authentication']['sp_entity_id'] = 'cms-test.vote.gov';
-    $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://secureauth.dev.gsa.gov/SecureAuth615';
+    $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://auth-preprod.gsa.gov/app/gsauth-preprod_cmstestvotegov_1/exkcuoyewsWHvYili4h7/sso/saml';
     break;
 }
