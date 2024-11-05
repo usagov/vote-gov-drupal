@@ -137,8 +137,8 @@
 {% include '@votegov/component/to-top.html.twig' %}
 
 <footer class="usa-footer">
-  {% set partnership = drupal_entity('block_content', 24) %}
-  {% include '@votegov/component/usagov-partner.html.twig' with {partner: partnership} %}
-  {% include '@votegov/component/eacgov-partner.html.twig' with {partner: partnership} %}
-  {% include '@votegov/component/usa-identifier.html.twig' %}
+  {# Partnerships component #}
+  {{ drupal_entity('block_content', 24) }}
+  {# Identifier component #}
+  {{ drupal_entity('block_content', 25) }}
 </footer>

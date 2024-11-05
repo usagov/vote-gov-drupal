@@ -1,24 +1,29 @@
-{% set identifier = drupal_entity('block_content', 25) %}
+{#
+/**
+ * @file
+ * Default theme implementation to display a block content: contact identifier.
+ */
+#}
 
 {# USWDS Default #}
 <div class="usa-identifier vote-block-padding-y-narrow">
   {# GSA logo #}
   <section class="usa-identifier__section usa-identifier__section--masthead padding-top-0">
     <div class="usa-identifier__container">
-      {% if identifier.field_logo | render %}
+      {% if content.field_logo | render %}
         <div class="usa-identifier__logos">
           <span class="usa-identifier__logo">
-            {% set logo_attributes = identifier.field_logo.0['#item_attributes'] | merge({'class': 'usa-identifier__logo-img'}) %}
-            {{ identifier.field_logo | field_value | first | merge({'#item_attributes' : logo_attributes}) }}
+            {% set logo_attributes = content.field_logo.0['#item_attributes'] | merge({'class': 'usa-identifier__logo-img'}) %}
+            {{ content.field_logo | field_value | first | merge({'#item_attributes' : logo_attributes}) }}
           </span>
         </div>
       {% endif %}
       <section class="usa-identifier__identity">
         <p class="usa-identifier__identity-domain">
-          {{ identifier.field_agency_domain | field_value }}
+          {{ content.field_agency_domain | field_value }}
         </p>
         <div class="usa-identifier__identity-disclaimer">
-          {{ identifier.field_gsa_link | field_value }}
+          {{ content.field_gsa_link | field_value }}
         </div>
       </section>
     </div>
@@ -28,7 +33,7 @@
   {# USAgov identifier #}
   <section class="usa-identifier__section usa-identifier__section--usagov">
     <div class="usa-identifier__container">
-      {{ identifier.field_usagov_link | field_value }}
+      {{ content.field_usagov_link | field_value }}
     </div>
   </section>
 
