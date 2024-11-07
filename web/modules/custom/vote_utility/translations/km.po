@@ -71,90 +71,11 @@ msgstr "តាមដាន vote.gov នៅលើ X (ជាភាសាអង់�
 msgid "Search vote.gov"
 msgstr "ស្រាវជ្រាវរក vote.gov"
 
-#state
-msgid "Register to vote in @state_name"
-msgstr "ចុះឈ្មោះដើម្បីបោះឆ្នោតនៅរដ្ឋ @state_name"
-
-msgid "How to register to vote"
-msgstr "របៀបចុះឈ្មោះដើម្បីបោះឆ្នោត"
-
-msgid "How to register and update your registration"
-msgstr "របៀបចុះឈ្មោះដើម្បីបោះឆ្នោត"
-
-msgid "Other ways to register to vote"
-msgstr "វិធីផ្សេងៗទៀតដើម្បីចុះឈ្មោះបោះឆ្នោត"
-
-msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
-msgstr "ថ្ងៃផុតកំណត់នៃការចុះឈ្មោះឣ្នកបោះឆ្នោតសម្រាប់ការបោះឆ្នោត @election_date"
-
-msgid "Find state and local election dates."
-msgstr ""
-
-msgid "Register by mail deadline:"
-msgstr "ថ្ងៃផុតកំណត់ចុះឈ្មោះតាមសំបុត្រ៖"
-
 msgid "Must be postmarked by @date"
 msgstr "ត្រូវតែបានបិទតែមប្រៃសណីយ៍ត្រឹមថ្ @date"
 
 msgid "Must be received by @date"
 msgstr "ត្រូវតែបានទទួលត្រឹមថ្ @date"
-
-msgid "Online registration deadline:"
-msgstr "ថ្ងៃផុតកំណត់ការចុះឈ្មោះអនឡាញ៖"
-
-msgid "Voter registration deadlines"
-msgstr "កាលបរិច្ឆេទផុតកំណត់ការចុះឈ្មោះឣ្នកបោះឆ្នោត"
-
-msgid "In person registration deadline:"
-msgstr "ថ្ងៃផុតកំណត់ការចុះឈ្មោះដោយមកផ្ទាល់៖"
-
-msgid "How to check your voter registration"
-msgstr "ររបៀបពិនិត្យមើលការចុះឈ្មោះឣ្នកបោះឆ្នោតរបស់ឣ្នក"
-
-msgid "You can confirm your voter registration status on @link."
-msgstr "អ្នកអាចបញ្ជាក់ស្ថានភាពការចុះឈ្មោះអ្នកបោះឆ្នោតរបស់អ្នកនៅលើ @link"
-
-msgid "You can confirm your voter registration status by contacting your local registration office. @link."
-msgstr "អ្នកអាចបញ្ជាក់ស្ថានភាពការចុះឈ្មោះបោះឆ្នោតរបស់អ្នកដោយទំនាក់ទំនងទៅការិយាល័យផ្នែកចុឈ្មោះក្នុងមូលដ្ឋានរបស់អ្នក។ @link។"
-
-msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr " ចុចទីនេះដើម្បីមើលព័ត៌មានទំនាក់ទំនងទៅស្មៀនប្រចាំខោនធីរបស់រដ្ឋ Wyoming (PDF) (ជាភាសាអង់គ្លេស)"
-
-msgid "Find out ways to register"
-msgstr "ស្វែងរកវិធីនានាដើម្បីចុះឈ្មោះ"
-
-msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
-msgstr "ការចុះឈ្មោះតាមអ៊ីនធឺណិតបច្ចុប្បន្នមិនមានទេ។ @link ដើម្បីបោះឆ្នោតនៅលើគេហទំព័របោះឆ្នោតរដ្ឋរបស់ @state_name។"
-
-msgid "Learn more about how to register"
-msgstr "ស្វែងយល់បន្ថែមអំពីរបៀបចុះឈ្មោះ"
-
-msgid "Register in person at your local election office. @link on @state_name’s election website."
-msgstr "ចុះឈ្មោះដោយផ្ទាល់នៅការិយាល័យបោះឆ្នោតក្នុងតំបន់របស់អ្នក។ @link នៅលើគេហទំព័របោះឆ្នោតរដ្ឋរបស់ @state_name។"
-
-msgid "Learn more about voting"
-msgstr "ស្វែងយល់បន្ថែមអំពីការបោះឆ្នោត"
-
-msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
-msgstr "ការចុះឈ្មោះបោះឆ្នោតមិនត្រូវបានទាមទារនៅក្នុងរដ្ឋ @state_name ទេ។ @link នៅលើគេហទំព័របោះឆ្នោតរដ្ឋរបស់ @state_name"
-
-msgid "Start or update your registration online"
-msgstr "ចាប់ផ្តើមការចុះឈ្មោះតាមអ៊ីនធឺណិតរបស់អ្នក"
-
-msgid "@link on @state_name’s election website."
-msgstr "@link នៅលើគេហទំព័របោះឆ្នោតរដ្ឋរបស់ @state_name"
-
-msgid "register to vote by mail or in person"
-msgstr "ចុះឈ្មោះបោះឆ្នោតតាមសំបុត្រ ឬដោយផ្ទាល់"
-
-msgid "You can also @link on @state_name’s election website."
-msgstr "អ្នកក៏អាច @link នៅលើគេហទំព័របោះឆ្នោតរដ្ឋរបស់ @state_name"
-
-msgid "confirm your voter registration status"
-msgstr "បញ្ជាក់ស្ថានភាពចុះឈ្មោះអ្នកបោះឆ្នោតរបស់អ្នក"
-
-msgid "You can @link on @state_name’s election website."
-msgstr "អ្នកអាច @link នៅលើគេហទំព័របោះឆ្នោតរដ្ឋរបស់ @state_name"
 
 msgid "External link opens in new window"
 msgstr "តំណខាងក្រៅបើកផ្ទាំងបង្ឣួចថ្មី"

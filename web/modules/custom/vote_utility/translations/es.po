@@ -101,10 +101,6 @@ msgstr "Busque en vote.gov"
 msgid "Search component"
 msgstr "Componente de búsqueda"
 
-#state
-msgid "Register to vote in @state_name"
-msgstr "Regístrese para votar en @state_name"
-
 #state tool aria label
 msgid "Register to vote selector tool"
 msgstr "Herramienta selector para registrarse para votar"
@@ -113,86 +109,11 @@ msgstr "Herramienta selector para registrarse para votar"
 msgid "States and territories list"
 msgstr "Lista de estados y territorios"
 
-msgid "How to register to vote"
-msgstr "Cómo registrarse para votar"
-
-msgid "How to register and update your registration"
-msgstr "Cómo registrarse y poner al día su registro"
-
-msgid "Other ways to register to vote"
-msgstr "Otras formas de registrarse para votar"
-
-msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
-msgstr "Los plazos para el registro de votantes son para las elecciones del @election_date. @link"
-
-msgid "Find state and local election dates."
-msgstr "Encuentre las fechas de las elecciones locales y estatales."
-
-msgid "Register by mail deadline:"
-msgstr "Registrarse por correo postal:"
-
 msgid "Must be postmarked by @date"
 msgstr "Debe tener el sello postal a más tardar el @date"
 
 msgid "Must be received by @date"
 msgstr "Debe ser recibido a más tardar el @date"
-
-msgid "Online registration deadline:"
-msgstr "Inscripción por internet:"
-
-msgid "Voter registration deadlines"
-msgstr "Plazos para el registro de votantes"
-
-msgid "In person registration deadline:"
-msgstr "Registrarse en persona:"
-
-msgid "How to check your voter registration"
-msgstr "Cómo comprobar su registro de votante"
-
-msgid "You can confirm your voter registration status on @link."
-msgstr "Usted puede comprobar el estado de su registro de votante en @link."
-
-msgid "You can confirm your voter registration status by contacting your local registration office. @link."
-msgstr "Usted puede confirmar el estado de su inscripción de votante comunicándose con su oficina de registro local. @link."
-
-msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr "Haga clic aquí para ver la información de contacto de los secretarios de los condados de Wyoming"
-
-msgid "Find out ways to register"
-msgstr "Encuentre cómo inscribirse"
-
-msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
-msgstr "La inscripción en línea no está disponible actualmente. @link para votar, visitando el sitio web de elecciones estatales de @state_name."
-
-msgid "Learn more about how to register"
-msgstr "Para más información sobre cómo inscribirse"
-
-msgid "Register in person at your local election office. @link on @state_name’s election website."
-msgstr "Inscríbase en persona en su oficina electoral local. @link, visite el sitio web de elecciones estatales de @state_name."
-
-msgid "Learn more about voting"
-msgstr "Para más información sobre la votación"
-
-msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
-msgstr "En @state_name no es obligatorio inscribirse para votar. @link, visite el sitio web de elecciones estatales de @state_name."
-
-msgid "Start or update your registration online"
-msgstr "Empiece o ponga al día su registro en línea"
-
-msgid "@link on @state_name’s election website."
-msgstr "@link en el sitio web de elecciones estatales de @state_name."
-
-msgid "register to vote by mail or in person"
-msgstr "inscribirse para votar por correo o en persona"
-
-msgid "You can also @link on @state_name’s election website."
-msgstr "Usted también puede @link en el sitio web de elecciones estatales de @state_name."
-
-msgid "confirm your voter registration status"
-msgstr "verificar el estado de su inscripción en el registro electoral"
-
-msgid "You can @link on @state_name’s election website."
-msgstr "Usted puede @link en el sitio web de elecciones estatales de @state_name."
 
 msgid "External link opens in new window"
 msgstr "El enlace externo se abre en una nueva ventana"
@@ -202,15 +123,6 @@ msgstr "Ir al contenido principal"
 
 msgid "(in English)"
 msgstr "(en inglés)"
-
-msgid "Register to vote selector tool"
-msgstr "Herramienta selector para registrarse para votar"
-
-msgid "Select your state or territory"
-msgstr "Seleccione su estado o territorio"
-
-msgid "States and territories list"
-msgstr "Lista de sugerencias de estados y territorios"
 
 #banner
 msgid "Official government website"

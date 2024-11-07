@@ -112,108 +112,11 @@ msgstr "Baar vote.gov"
 msgid "Official government website"
 msgstr "Bogga rasmiga ah ee dawladda"
 
-# data.translations.register.heading
-msgid "Register to vote in @state_name"
-msgstr "Is diiwaan geli si aad uga codeyso @state_name"
-
-# data.translations.register.heading2 (state phrase updates)
-msgid "How to register to vote"
-msgstr "Sida la isugu diiwaan geliyo si’ loo codeeyo"
-
-msgid "How to register and update your registration"
-msgstr "Sida la isugu diiwaan geliyo si’ loo codeeyo"
-
-# data.translations.register.other_language_selection__heading (state phrase updates)
-msgid "Other ways to register to vote"
-msgstr "Siyaabo kale oo la isu diwaangeliyo si loo codeeyo."
-
-msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
-msgstr "Wakhtiyada kama dambaysta ah ee diiwaangelinta codbixiyaha ee doorashada @election_date"
-
-msgid "Find state and local election dates."
-msgstr ""
-
-# data.translations.register.dates__bymail_deadline
-msgid "Register by mail deadline:"
-msgstr "Is-diwaangeli wakhtiga kama dambaysta ah ee boostada:"
-
 msgid "Must be postmarked by @date"
 msgstr "Waa in boostadu qabataa @date"
 
 msgid "Must be received by @date"
 msgstr "Waa in la helaa ugu dambayn @date"
-
-# data.translations.register.dates__byonline_deadline
-msgid "Online registration deadline:"
-msgstr "Is diiwaangelinta online-ka ee kama dambaysta ah:"
-
-# data.translations.register.dates__inperson_deadline
-msgid "In person registration deadline:"
-msgstr "Isdiiwaangelinta qof-ahaaneed ee kama dambaysta ah:"
-
-# data.translations.register.dates__heading (state phrase updates)
-msgid "Voter registration deadlines"
-msgstr "Wakhtiyada kama dambaysta ah ee diiwaangelinta codbixiyayaasha"
-
-# data.translations.register.confirm_registration__heading
-msgid "How to check your voter registration"
-msgstr "Sida loo hubiyo isdiiwaangelintaada cod-bixiyaha"
-
-# data.translations.register.confirm_registration__intro_WY
-msgid "You can confirm your voter registration status by contacting your local registration office. @link."
-msgstr "Waxaad ka xaqiijin kartaa halka uu maraayo diiwaangelinta codbixintaada adiga oo la xiriiraya xafiiska diiwaangelinta ee degaankaaga. @link."
-
-# @link: data.translations.register.confirm_registration__link_WY
-msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr "Riix halkan si aad u daawato macluumaadka xiriirka karraaniga degmada Wyoming (PDF) (oo af Ingiriis ah)"
-
-# data.translations.register.confirm_registration__intro (see accessibility updates)
-msgid "You can @link on @state_name’s election website."
-msgstr "Waxaad @link bogga doorashada gobolka @state_name."
-
-# @link: data.translations.register.confirm_registration__intro (see accessibility updates)
-msgid "confirm your voter registration status"
-msgstr "sugi kartaa xaaladda diiwaangelinta codbixintaada"
-
-# data.translations.register.by_mail__intro (see accessibility updates)
-msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
-msgstr "Diiwaangelinta onlaynka hadda lama heli karo. @link si aad uga codayso bogga gobolka @state_name."
-
-# @link: data.translations.register.by_mail__intro (see accessibility updates)
-msgid "Find out ways to register"
-msgstr "Soo ogow siyaabo la isu diwaangeliyo"
-
-# data.translations.register.in_person__intro (see accessibility updates)
-msgid "Register in person at your local election office. @link on @state_name’s election website."
-msgstr "Toos isaga diiwaan geli xafiiska maxalliga ah ee doorashada deegaankaaga. @link bogga doorashada gobolka @state_name."
-
-# @link: data.translations.register.in_person__intro (see accessibility updates)
-msgid "Learn more about how to register"
-msgstr "Ka baro wax dheeraad ah oo ku saabsan sida la isaga diiwaan geliyo"
-
-# data.translations.register.not_needed__intro (see accessibility updates)
-msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
-msgstr "Diiwaangelinta codbixiyaha looma baahna @state_name. @link bogga doorashada gobolka @state_name."
-
-# @link: data.translations.register.not_needed__intro (see accessibility updates)
-msgid "Learn more about voting"
-msgstr "Wax dheeraad ah ka baro xagga cod bixinta"
-
-# data.translations.register.online__answer1 (see accessibility updates)
-msgid "@link on @state_name’s election website."
-msgstr "@link bogga doorashada gobolka @state_name."
-
-# @link: data.translations.register.online__answer1 (see accessibility updates)
-msgid "Start or update your registration online"
-msgstr "Bilow is diiwaangelintaada onlyanka ah"
-
-# data.translations.register.online__answer2 (see accessibility updates)
-msgid "You can also @link on @state_name’s election website."
-msgstr "Waxaad sidoo kale @link bogga doorashada gobolka @state_name."
-
-# @link: data.translations.register.online__answer2 (see accessibility updates)
-msgid "register to vote by mail or in person"
-msgstr "isku diiwaangelin kartaa inaad ku codayso boostada ama qof ahaan"
 
 # data.translations.months.january
 msgctxt "Long month name"
