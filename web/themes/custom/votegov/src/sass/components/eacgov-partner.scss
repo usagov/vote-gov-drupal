@@ -48,6 +48,8 @@ $eacgov-partner-breakpoint: 'tablet-lg';
 
 .vote-eac-partner__logo-img img {
   @include u-maxw('none');
+  @include u-width(8);
+  @include u-height(8);
 }
 
 .vote-eac-partner__logo-link {
