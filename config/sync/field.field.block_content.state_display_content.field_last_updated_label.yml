@@ -1,0 +1,19 @@
+uuid: 0b24ffb5-0c11-477e-a9ed-3f8b0f3b442c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.state_display_content
+    - field.storage.block_content.field_last_updated_label
+id: block_content.state_display_content.field_last_updated_label
+field_name: field_last_updated_label
+entity_type: block_content
+bundle: state_display_content
+label: 'Last updated label'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
