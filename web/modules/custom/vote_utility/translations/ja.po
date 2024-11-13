@@ -112,108 +112,11 @@ msgstr "vote.gov (英語）検索"
 msgid "Official government website"
 msgstr "政府の公式ウェブサイト"
 
-# data.translations.register.heading
-msgid "Register to vote in @state_name"
-msgstr "@state_name（州名)で投票登録"
-
-# data.translations.register.heading2 (state phrase updates)
-msgid "How to register to vote"
-msgstr "有権者登録の方法"
-
-msgid "How to register and update your registration"
-msgstr "登録および登録の更新方法"
-
-# data.translations.register.other_language_selection__heading (state phrase updates)
-msgid "Other ways to register to vote"
-msgstr "その他の有権者登録方法"
-
-msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
-msgstr "@election_dateの選挙における有権者登録の締切について @link"
-
-msgid "Find state and local election dates."
-msgstr "州および地方選挙の日程を調べる"
-
-# data.translations.register.dates__bymail_deadline
-msgid "Register by mail deadline:"
-msgstr "郵送での登録締切："
-
 msgid "Must be postmarked by @date"
 msgstr "@date 消印有効"
 
 msgid "Must be received by @date"
 msgstr "@date 必着"
-
-# data.translations.register.dates__byonline_deadline
-msgid "Online registration deadline:"
-msgstr "オンライン登録の締め切り："
-
-# data.translations.register.dates__inperson_deadline
-msgid "In person registration deadline:"
-msgstr "来場登録の締め切り："
-
-# data.translations.register.dates__heading (state phrase updates)
-msgid "Voter registration deadlines"
-msgstr "有権者登録の締め切り"
-
-# data.translations.register.confirm_registration__heading
-msgid "How to check your voter registration"
-msgstr "有権者登録を確認する方法"
-
-# data.translations.register.confirm_registration__intro_WY
-msgid "You can confirm your voter registration status by contacting your local registration office. @link."
-msgstr "あなたの有権者登録状況は、最寄りの登録事務所に問い合わせることで確認できます。@link。"
-
-# @link: data.translations.register.confirm_registration__link_WY
-msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr "Wyoming州郡庁の連絡先(PDF)はこちらをクリックしてください"
-
-# data.translations.register.confirm_registration__intro (see accessibility updates)
-msgid "You can @link on @state_name’s election website."
-msgstr "@state_name（州名）の州選挙ウェブサイトで @link を行うことができます。"
-
-# @link: data.translations.register.confirm_registration__intro (see accessibility updates)
-msgid "confirm your voter registration status"
-msgstr "有権者登録の確認は"
-
-# data.translations.register.by_mail__intro (see accessibility updates)
-msgid "Online registration is currently not available. @link を使用して @state_name の選挙ウェブサイトで投票してください"
-msgstr "オンライン登録は現在ご利用いただけません。投票登録の方法については、(state_name（州名）の選挙ウェブサイト)(英語)をご覧ください。"
-
-# @link: data.translations.register.by_mail__intro (see accessibility updates)
-msgid "Find out ways to register"
-msgstr "選挙人登録する方法を見つけるには"
-
-# data.translations.register.in_person__intro (see accessibility updates)
-msgid "Register in person at your local election office. @link on @state_name’s election website."
-msgstr "最寄りの選挙事務所に直接来場して登録しましょう。@link は@state_name （州名）の州選挙ウェブサイトをご覧ください。"
-
-# @link: data.translations.register.in_person__intro (see accessibility updates)
-msgid "Learn more about how to register"
-msgstr "登録方法については"
-
-# data.translations.register.not_needed__intro (see accessibility updates)
-msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
-msgstr "@state_nameでは有権者登録は必要ありません。@link は@state_name（州名）の州選挙のウェブサイトをご覧ください。"
-
-# @link: data.translations.register.not_needed__intro (see accessibility updates)
-msgid "Learn more about voting"
-msgstr "投票についての詳細は"
-
-# data.translations.register.online__answer1 (see accessibility updates)
-msgid "@link on @state_name’s election website."
-msgstr "@link は@state_name（州名）の州選挙のウェブサイトをご覧ください。"
-
-# @link: data.translations.register.online__answer1 (see accessibility updates)
-msgid "Start or update your registration online"
-msgstr "登録を開始または更新する"
-
-# data.translations.register.online__answer2 (see accessibility updates)
-msgid "You can also @link on @state_name’s election website."
-msgstr "また、@link は@state_name（州名）の州選挙ウェブサイトからでもできます。"
-
-# @link: data.translations.register.online__answer2 (see accessibility updates)
-msgid "register to vote by mail or in person"
-msgstr "郵送または直接来場して投票登録"
 
 # data.translations.months.january
 msgctxt "Long month name"

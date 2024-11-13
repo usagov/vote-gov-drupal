@@ -119,108 +119,11 @@ msgstr "Pesquisar vote.gov"
 msgid "Official government website"
 msgstr "Página web oficial do governo"
 
-# data.translations.register.heading
-msgid "Register to vote in @state_name"
-msgstr "Registrar-se para votar em @state_name"
-
-# data.translations.register.heading2 (state phrase updates)
-msgid "How to register to vote"
-msgstr "Como registrar-se para votar"
-
-msgid "How to register and update your registration"
-msgstr "Como registrar-se para votar"
-
-# data.translations.register.other_language_selection__heading (state phrase updates)
-msgid "Other ways to register to vote"
-msgstr "Outras maneiras de registrar-se para votar"
-
-msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
-msgstr "Prazos para registro de eleitores para a eleição de @election_date"
-
-msgid "Find state and local election dates."
-msgstr ""
-
-# data.translations.register.dates__bymail_deadline
-msgid "Register by mail deadline:"
-msgstr "Prazo final para registrar-se por correspondência:"
-
 msgid "Must be postmarked by @date"
 msgstr "Deve estar carimbado até o @date"
 
 msgid "Must be received by @date"
 msgstr "Deve ser recebido até o @date"
-
-# data.translations.register.dates__byonline_deadline
-msgid "Online registration deadline:"
-msgstr "Prazo final para registrar-se on-line:"
-
-# data.translations.register.dates__inperson_deadline
-msgid "In person registration deadline:"
-msgstr "Prazo final de registro em pessoa:"
-
-# data.translations.register.dates__heading (state phrase updates)
-msgid "Voter registration deadlines"
-msgstr "Os prazos de registro de eleitores"
-
-# data.translations.register.confirm_registration__heading
-msgid "How to check your voter registration"
-msgstr "Como você pode verificar seu registro de eleitor"
-
-# data.translations.register.confirm_registration__intro_WY
-msgid "You can confirm your voter registration status by contacting your local registration office. @link."
-msgstr "Você pode confirmar seu status de registro de eleitor entrando em contato com o cartório de registro local. @link."
-
-# @link: data.translations.register.confirm_registration__link_WY
-msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr "Clique aqui para ver as informações de contato do secretário do condado de Wyoming (PDF) (em inglês)"
-
-# data.translations.register.confirm_registration__intro (see accessibility updates)
-msgid "You can @link on @state_name’s election website."
-msgstr "Também pode @link na página web de eleição estadual do @state_name"
-
-# @link: data.translations.register.confirm_registration__intro (see accessibility updates)
-msgid "confirm your voter registration status"
-msgstr "confirmar o status do seu registro de eleitor"
-
-# data.translations.register.by_mail__intro (see accessibility updates)
-msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
-msgstr "O registro on-line não está disponível no momento. @link para votar na página web de eleição estadual do @state_name."
-
-# @link: data.translations.register.by_mail__intro (see accessibility updates)
-msgid "Find out ways to register"
-msgstr "Descubra maneiras de registrar-se"
-
-# data.translations.register.in_person__intro (see accessibility updates)
-msgid "Register in person at your local election office. @link on @state_name’s election website."
-msgstr "Registre-se em pessoa no seu escritório de eleições local. @link na página web de eleição estadual do @state_name."
-
-# @link: data.translations.register.in_person__intro (see accessibility updates)
-msgid "Learn more about how to register"
-msgstr "Aprenda mais sobre como registrar-se"
-
-# data.translations.register.not_needed__intro (see accessibility updates)
-msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
-msgstr "O registro de eleitores não é mandatório em @state_name. @link na página web de eleição estadual de @state_name."
-
-# @link: data.translations.register.not_needed__intro (see accessibility updates)
-msgid "Learn more about voting"
-msgstr "Aprenda mais sobre a votação"
-
-# data.translations.register.online__answer1 (see accessibility updates)
-msgid "@link on @state_name’s election website."
-msgstr "@link na página web de eleição estadual do @state_name"
-
-# @link: data.translations.register.online__answer1 (see accessibility updates)
-msgid "Start or update your registration online"
-msgstr "Comece o seu registro on-line"
-
-# data.translations.register.online__answer2 (see accessibility updates)
-msgid "You can also @link on @state_name’s election website."
-msgstr "Também pode @link na página web de eleição estadual do @state_name"
-
-# @link: data.translations.register.online__answer2 (see accessibility updates)
-msgid "register to vote by mail or in person"
-msgstr "registrar-se para votar por correspondência ou em pessoa"
 
 # data.translations.months.january
 msgctxt "Long month name"

@@ -116,105 +116,11 @@ msgstr "ابحث عن vote.gov"
 msgid "Official government website"
 msgstr "الموقع الالكتروني الرسمي للحكومة"
 
-# data.translations.register.heading
-msgid "Register to vote in @state_name"
-msgstr "سجل للتصويت في @state_name"
-
-# data.translations.register.heading2 (state phrase updates)
-msgid "How to register to vote"
-msgstr "كيفية التسجيل للتصويت"
-
-msgid "How to register and update your registration"
-msgstr "كيف تُسجل وتُحدث سجلك الانتخابي"
-
-# data.translations.register.other_language_selection__heading (state phrase updates)
-msgid "Other ways to register to vote"
-msgstr "طرق أخرى للتسجيل للتصويت"
-
-# data.translations.register.dates__bymail_deadline
-msgid "Register by mail deadline:"
-msgstr "التسجيل عن طريق البريد الموعد النهائي:"
-
 msgid "Must be postmarked by @date"
 msgstr "يجب ختمه بالبريد بحلول @date"
 
 msgid "Must be received by @date"
 msgstr "يجب أن يتم استلامه بحلول @date"
-
-# data.translations.register.dates__byonline_deadline
-msgid "Online registration deadline:"
-msgstr "الموعد النهائي للتسجيل عبر الإنترنت:"
-
-# data.translations.register.dates__inperson_deadline
-msgid "In person registration deadline:"
-msgstr "الموعد النهائي للتسجيل الشخصي:"
-
-msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
-msgstr "المواعيد النهائية لتسجيل الناخبين هي لانتخابات 5 نوفمبر/تشرين الثاني 2024."
-
-msgid "Find state and local election dates."
-msgstr "تعرف على مواعيد الانتخابات على مستوى الولاية والمحليات."
-
-# data.translations.register.dates__heading (state phrase updates)
-msgid "Voter registration deadlines"
-msgstr "المواعيد النهائية لتسجيل الناخبين"
-
-# data.translations.register.confirm_registration__heading
-msgid "How to check your voter registration"
-msgstr "كيفية التحقق من تسجيل الناخبين الخاص بك"
-
-# data.translations.register.confirm_registration__intro_WY
-msgid "You can confirm your voter registration status by contacting your local registration office. @link."
-msgstr "يمكنك تأكيد حالة تسجيل الناخب الخاص بك عن طريق الاتصال بمكتب التسجيل المحلي. @link."
-
-# @link: data.translations.register.confirm_registration__link_WY
-msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr "انقر هنا لعرض معلومات الاتصال بموظف مقاطعة وايومنغ (PDF) (باللغة الإنجليزية)"
-
-# data.translations.register.confirm_registration__intro (see accessibility updates)
-msgid "You can @link on @state_name’s election website."
-msgstr "يمكنك @link على @state_name موقع انتخابات الولاية"
-
-# @link: data.translations.register.confirm_registration__intro (see accessibility updates)
-msgid "confirm your voter registration status"
-msgstr "تأكيد حالة تسجيل الناخب"
-
-# data.translations.register.by_mail__intro (see accessibility updates)
-msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
-msgstr "التسجيل عبر الإنترنت غير متاح حاليا. @link للتصويت على @state_name موقع انتخابات الولاية."
-
-# @link: data.translations.register.by_mail__intro (see accessibility updates)
-msgid "Find out ways to register"
-msgstr "اكتشف طرق التسجيل"
-
-# data.translations.register.in_person__intro (see accessibility updates)
-msgid "Register in person at your local election office. @link on @state_name’s election website."
-msgstr "سجل شخصيًا في مكتب الانتخابات المحلي. @link على @state_name  موقع انتخابات الولاية."
-
-# @link: data.translations.register.in_person__intro (see accessibility updates)
-msgid "Learn more about how to register"
-msgstr "تعرف على المزيد حول كيفية التسجيل"
-
-# data.translations.register.not_needed__intro (see accessibility updates)
-msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
-msgstr "تسجيل الناخبين غير مطلوب في ولاية @state_name. @link على @state_name موقع انتخابات الولاية"
-
-# @link: data.translations.register.not_needed__intro (see accessibility updates)
-msgid "Learn more about voting"
-msgstr "تعرف على المزيد حول التصويت"
-
-# data.translations.register.online__answer1 (see accessibility updates)
-msgid "@link on @state_name’s election website."
-msgstr "@link على @state_name موقع انتخابات الولاية"
-
-
-# data.translations.register.online__answer2 (see accessibility updates)
-msgid "You can also @link on @state_name’s election website."
-msgstr "يمكنك أيضًا @link على @state_name موقع انتخابات الولاية"
-
-# @link: data.translations.register.online__answer2 (see accessibility updates)
-msgid "register to vote by mail or in person"
-msgstr "التسجيل للتصويت عن طريق البريد أو شخصيًا"
 
 # data.translations.months.january
 msgctxt "Long month name"

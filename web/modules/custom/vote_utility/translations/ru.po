@@ -112,108 +112,11 @@ msgstr "Поиск vote.gov"
 msgid "Official government website"
 msgstr "Официальный правительственный сайт"
 
-# data.translations.register.heading
-msgid "Register to vote in @state_name"
-msgstr "Зарегистрируйтесь для голосования в @state_name"
-
-# data.translations.register.heading2 (state phrase updates)
-msgid "How to register to vote"
-msgstr "Как зарегистрироваться для голосования"
-
-msgid "How to register and update your registration"
-msgstr "Как зарегистрироваться для голосования"
-
-# data.translations.register.other_language_selection__heading (state phrase updates)
-msgid "Other ways to register to vote"
-msgstr "Другие способы зарегистрироваться для голосования"
-
-msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
-msgstr "Крайние сроки регистрации избирателей на выборы @election_date"
-
-msgid "Find state and local election dates."
-msgstr ""
-
-# data.translations.register.dates__bymail_deadline
-msgid "Register by mail deadline:"
-msgstr "Крайний срок регистрации по почте:"
-
 msgid "Must be postmarked by @date"
 msgstr "Должен иметь почтовый штемпель до @date"
 
 msgid "Must be received by @date"
 msgstr "Должен быть получен до @date"
-
-# data.translations.register.dates__byonline_deadline
-msgid "Online registration deadline:"
-msgstr "Крайний срок регистрации он-лайн:"
-
-# data.translations.register.dates__inperson_deadline
-msgid "In person registration deadline:"
-msgstr "Крайний срок личной регистрации:"
-
-# data.translations.register.dates__heading (state phrase updates)
-msgid "Voter registration deadlines"
-msgstr "Крайние сроки регистрации избирателей"
-
-# data.translations.register.confirm_registration__heading
-msgid "How to check your voter registration"
-msgstr "Как проверить вашу регистрацию избирателя"
-
-# data.translations.register.confirm_registration__intro_WY
-msgid "You can confirm your voter registration status by contacting your local registration office. @link."
-msgstr "Вы можете подтвердить свой статус регистрации избирателя, связавшись с местным регистрационным офисом. @link."
-
-# @link: data.translations.register.confirm_registration__link_WY
-msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr "Нажмите здесь, чтобы просмотреть контактную информацию клерка округа Вайоминг (PDF) (по-английски)"
-
-# data.translations.register.confirm_registration__intro (see accessibility updates)
-msgid "You can @link on @state_name’s election website."
-msgstr "Вы можете @link на веб-сайте выборов штата @state_name"
-
-# @link: data.translations.register.confirm_registration__intro (see accessibility updates)
-msgid "confirm your voter registration status"
-msgstr "подтвердить свой статус регистрации избирателя"
-
-# data.translations.register.by_mail__intro (see accessibility updates)
-msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
-msgstr "Онлайн-регистрация в настоящее время недоступна. @link для голосования на веб-сайте выборов штата @state_name."
-
-# @link: data.translations.register.by_mail__intro (see accessibility updates)
-msgid "Find out ways to register"
-msgstr "Узнайте, как зарегистрироваться"
-
-# data.translations.register.in_person__intro (see accessibility updates)
-msgid "Register in person at your local election office. @link on @state_name’s election website."
-msgstr "Зарегистрируйтесь лично в своём местном избирательном участке. @link на веб-сайте выборов в штате @state_name."
-
-# @link: data.translations.register.in_person__intro (see accessibility updates)
-msgid "Learn more about how to register"
-msgstr "Узнайте больше о том, как зарегистрироваться"
-
-# data.translations.register.not_needed__intro (see accessibility updates)
-msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
-msgstr "Регистрация избирателей в @state_name не требуется. @link на веб-сайте штата @state_name"
-
-# @link: data.translations.register.not_needed__intro (see accessibility updates)
-msgid "Learn more about voting"
-msgstr "Подробнее о голосовании"
-
-# data.translations.register.online__answer1 (see accessibility updates)
-msgid "@link on @state_name’s election website."
-msgstr "@link на веб-сайте выборов штата @state_name"
-
-# @link: data.translations.register.online__answer1 (see accessibility updates)
-msgid "Start or update your registration online"
-msgstr "Начните онлайн-регистрацию"
-
-# data.translations.register.online__answer2 (see accessibility updates)
-msgid "You can also @link on @state_name’s election website."
-msgstr "Вы также можете @link на веб-сайте выборов штата @state_name"
-
-# @link: data.translations.register.online__answer2 (see accessibility updates)
-msgid "register to vote by mail or in person"
-msgstr "зарегистрироваться для голосования по почте или лично"
 
 # data.translations.months.january
 msgctxt "Long month name"
