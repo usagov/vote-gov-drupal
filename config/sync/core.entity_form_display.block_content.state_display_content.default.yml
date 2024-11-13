@@ -10,6 +10,7 @@ dependencies:
     - field.field.block_content.state_display_content.field_election_text
     - field.field.block_content.state_display_content.field_enable_digital_form_link
     - field.field.block_content.state_display_content.field_in_person_registration
+    - field.field.block_content.state_display_content.field_last_updated_label
     - field.field.block_content.state_display_content.field_mail_reg_deadline_label
     - field.field.block_content.state_display_content.field_mail_registration
     - field.field.block_content.state_display_content.field_military_and_overseas_regi
@@ -19,6 +20,8 @@ dependencies:
     - field.field.block_content.state_display_content.field_online_reg_deadline_label
     - field.field.block_content.state_display_content.field_online_registration
     - field.field.block_content.state_display_content.field_person_reg_deadline_label
+    - field.field.block_content.state_display_content.field_postmarked_mail_text
+    - field.field.block_content.state_display_content.field_received_mail_text
     - field.field.block_content.state_display_content.field_registration_not_needed
   module:
     - allowed_formats
@@ -85,6 +88,14 @@ content:
         - link_text
       form_subfield_text_help_text: ''
       form_subfield_link_text_help_text: ''
+    third_party_settings: {  }
+  field_last_updated_label:
+    type: string_textfield
+    weight: 17
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_mail_reg_deadline_label:
     type: string_textfield
@@ -182,6 +193,22 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_postmarked_mail_text:
+    type: string_textfield
+    weight: 18
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_received_mail_text:
+    type: string_textfield
+    weight: 19
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_registration_not_needed:
     type: vote_fields_state_content
     weight: 14
@@ -204,13 +231,13 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 18
+    weight: 21
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   translation:
-    weight: 17
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }
