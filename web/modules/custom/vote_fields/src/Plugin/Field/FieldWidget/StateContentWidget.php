@@ -103,10 +103,10 @@ final class StateContentWidget extends WidgetBase {
     $element['#theme_wrappers'] = [
       'details' => [
         '#description' => [
-          '#markup' => 'Use the placeholder <strong>@state_name</strong> to dynamically add the state name on the state page.'
+          '#markup' => 'Use the placeholder <strong>@state_name</strong> to dynamically add the state name on the state page.',
         ],
-        '#summary_attributes' =>  []
-      ]
+        '#summary_attributes' => [],
+      ],
     ];
     $element['#attributes']['class'][] = 'vote-fields-state-content-elements';
     $element['#attached']['library'][] = 'vote_fields/vote_fields_state_content';
