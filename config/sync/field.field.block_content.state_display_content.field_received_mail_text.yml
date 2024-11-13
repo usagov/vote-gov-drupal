@@ -1,0 +1,19 @@
+uuid: 947b7637-8aa7-4b0d-8250-c44688868374
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.state_display_content
+    - field.storage.block_content.field_received_mail_text
+id: block_content.state_display_content.field_received_mail_text
+field_name: field_received_mail_text
+entity_type: block_content
+bundle: state_display_content
+label: 'Received mail deadline text'
+description: 'Use the placeholder <strong>@date</strong> to insert the mail deadline date on the state page.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
