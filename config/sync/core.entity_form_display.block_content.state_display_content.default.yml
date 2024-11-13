@@ -8,14 +8,18 @@ dependencies:
     - field.field.block_content.state_display_content.field_display_title
     - field.field.block_content.state_display_content.field_election_date
     - field.field.block_content.state_display_content.field_election_text
+    - field.field.block_content.state_display_content.field_enable_digital_form_link
     - field.field.block_content.state_display_content.field_in_person_registration
     - field.field.block_content.state_display_content.field_last_updated_label
+    - field.field.block_content.state_display_content.field_mail_reg_deadline_label
     - field.field.block_content.state_display_content.field_mail_registration
     - field.field.block_content.state_display_content.field_military_and_overseas_regi
     - field.field.block_content.state_display_content.field_no_mail_registration
     - field.field.block_content.state_display_content.field_no_online_registration
     - field.field.block_content.state_display_content.field_nvrf_details
+    - field.field.block_content.state_display_content.field_online_reg_deadline_label
     - field.field.block_content.state_display_content.field_online_registration
+    - field.field.block_content.state_display_content.field_person_reg_deadline_label
     - field.field.block_content.state_display_content.field_postmarked_mail_text
     - field.field.block_content.state_display_content.field_received_mail_text
     - field.field.block_content.state_display_content.field_registration_not_needed
@@ -31,13 +35,15 @@ mode: default
 content:
   field_check_registration:
     type: vote_fields_state_content
-    weight: 2
+    weight: 5
     region: content
     settings:
       form_subfield_display:
-        - heading
-        - text
-        - link_text
+        heading: heading
+        text: text
+        link_text: link_text
+      form_subfield_text_help_text: 'Use the placeholder <strong>@link</strong> to dynamically add a link using the link text below and the dynamic link url on the state page.'
+      form_subfield_link_text_help_text: 'This text will be inserted dynamically using the placeholder in the text above.'
     third_party_settings: {  }
   field_display_title:
     type: string_textfield
@@ -49,13 +55,13 @@ content:
     third_party_settings: {  }
   field_election_date:
     type: datetime_default
-    weight: 11
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
   field_election_text:
     type: text_textarea
-    weight: 12
+    weight: 16
     region: content
     settings:
       rows: 3
@@ -64,7 +70,42 @@ content:
       allowed_formats:
         hide_help: '0'
         hide_guidelines: '0'
+  field_enable_digital_form_link:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_in_person_registration:
+    type: vote_fields_state_content
+    weight: 12
+    region: content
+    settings:
+      form_subfield_display:
+        - heading
+        - text
+        - link_text
+      form_subfield_text_help_text: ''
+      form_subfield_link_text_help_text: ''
+    third_party_settings: {  }
+  field_last_updated_label:
+    type: string_textfield
+    weight: 17
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_mail_reg_deadline_label:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_mail_registration:
     type: vote_fields_state_content
     weight: 8
     region: content
@@ -73,26 +114,22 @@ content:
         - heading
         - text
         - link_text
+      form_subfield_text_help_text: ''
+      form_subfield_link_text_help_text: ''
     third_party_settings: {  }
-  field_last_updated_label:
-    type: string_textfield
+  field_military_and_overseas_regi:
+    type: vote_fields_state_content
     weight: 13
     region: content
     settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_mail_registration:
-    type: vote_fields_state_content
-    weight: 5
-    region: content
-    settings:
       form_subfield_display:
-        - heading
-        - text
-        - link_text
+        heading: heading
+        text: text
+        link_text: 0
+      form_subfield_text_help_text: ''
+      form_subfield_link_text_help_text: ''
     third_party_settings: {  }
-  field_military_and_overseas_regi:
+  field_no_mail_registration:
     type: vote_fields_state_content
     weight: 9
     region: content
@@ -101,8 +138,42 @@ content:
         heading: heading
         text: text
         link_text: 0
+      form_subfield_text_help_text: ''
+      form_subfield_link_text_help_text: ''
     third_party_settings: {  }
-  field_no_mail_registration:
+  field_no_online_registration:
+    type: vote_fields_state_content
+    weight: 7
+    region: content
+    settings:
+      form_subfield_display:
+        heading: heading
+        text: text
+        link_text: 0
+      form_subfield_text_help_text: ''
+      form_subfield_link_text_help_text: ''
+    third_party_settings: {  }
+  field_nvrf_details:
+    type: vote_fields_state_content
+    weight: 10
+    region: content
+    settings:
+      form_subfield_display:
+        text: text
+        link_text: link_text
+        heading: 0
+      form_subfield_text_help_text: ''
+      form_subfield_link_text_help_text: "This text will display as a button that launches Vote.gov's internal form filler tool."
+    third_party_settings: {  }
+  field_online_reg_deadline_label:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_online_registration:
     type: vote_fields_state_content
     weight: 6
     region: content
@@ -111,40 +182,20 @@ content:
         - heading
         - text
         - link_text
+      form_subfield_text_help_text: ''
+      form_subfield_link_text_help_text: ''
     third_party_settings: {  }
-  field_no_online_registration:
-    type: vote_fields_state_content
+  field_person_reg_deadline_label:
+    type: string_textfield
     weight: 4
     region: content
     settings:
-      form_subfield_display:
-        - heading
-        - text
-        - link_text
-    third_party_settings: {  }
-  field_nvrf_details:
-    type: vote_fields_state_content
-    weight: 7
-    region: content
-    settings:
-      form_subfield_display:
-        - heading
-        - text
-        - link_text
-    third_party_settings: {  }
-  field_online_registration:
-    type: vote_fields_state_content
-    weight: 3
-    region: content
-    settings:
-      form_subfield_display:
-        - heading
-        - text
-        - link_text
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_postmarked_mail_text:
     type: string_textfield
-    weight: 14
+    weight: 18
     region: content
     settings:
       size: 60
@@ -152,7 +203,7 @@ content:
     third_party_settings: {  }
   field_received_mail_text:
     type: string_textfield
-    weight: 15
+    weight: 19
     region: content
     settings:
       size: 60
@@ -160,13 +211,15 @@ content:
     third_party_settings: {  }
   field_registration_not_needed:
     type: vote_fields_state_content
-    weight: 10
+    weight: 14
     region: content
     settings:
       form_subfield_display:
-        - heading
-        - text
-        - link_text
+        heading: heading
+        text: text
+        link_text: link_text
+      form_subfield_text_help_text: 'Use the placeholder <strong>@link</strong> to dynamically add a link using the link text below and the dynamic link url on the state page.'
+      form_subfield_link_text_help_text: 'This text will be inserted dynamically using the placeholder in the text above.'
     third_party_settings: {  }
   info:
     type: string_textfield
@@ -178,13 +231,13 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 17
+    weight: 21
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   translation:
-    weight: 16
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }
