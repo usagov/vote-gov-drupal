@@ -12,8 +12,10 @@ default_config: &defaults
     no_proxy: ${no_proxy}
     PHP_INI_SCAN_DIR: /home/vcap/app/php/etc/:/home/vcap/app/php/etc/php.ini.d/
     sso_x509_cert: ${sso_x509_cert}
-    sso_assertion_cert: | ${sso_assertion_cert}
-    sso_assertion_key: | ${sso_assertion_key}
+    sso_assertion_cert: |
+      ${sso_assertion_cert}
+    sso_assertion_key: |
+      ${sso_assertion_key}
     waf_external_endpoint: ${waf_external_endpoint}
   timeout: 180
   routes:
