@@ -14,7 +14,7 @@ describe("Internal Link Validator Test", () => {
       : null;
   const pages = singlePage !== null ? singlePage : allPages;
   pages.forEach((page) => {
-    it( 
+    it(
       `${page.name === "" ? "home" : page.name}`,
       () =>
         Cypress.env("retries") === true
@@ -31,12 +31,13 @@ describe("Internal Link Validator Test", () => {
           cy.get("a[href^='/']").each(link => {
             cy.request({
               url: link.prop('href'),
-              failOnStatusCode: false
+              failOnStatusCode: false,
+              timeout: 180000 // 3 minutes
             }).then((response) => {
               expect(response.status).to.eq(200)
             })
         })
       }
     );
-  });    
+  });
 });
