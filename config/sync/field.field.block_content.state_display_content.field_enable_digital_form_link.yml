@@ -1,0 +1,21 @@
+uuid: 6129cbd8-9a60-4499-90f2-eaa5dadd5a24
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.state_display_content
+    - field.storage.block_content.field_enable_digital_form_link
+id: block_content.state_display_content.field_enable_digital_form_link
+field_name: field_enable_digital_form_link
+entity_type: block_content
+bundle: state_display_content
+label: 'Enable NVRF digital form link'
+description: 'Selecting this option launches the NVRF digital form to the public.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

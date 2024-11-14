@@ -8,78 +8,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
-msgid "Primary navigation"
-msgstr "Điều hướng chính"
-
-#language selector
-msgid "Vietnamese"
-msgstr "Tiếng Việt"
-
 msgid "Select language"
 msgstr "Lựa chọn ngôn ngữ"
 
-#breadcrumb
-msgid "Home"
-msgstr "Trang chủ"
-
-msgid "Breadcrumb"
-msgstr "Đường dẫn điều hướng"
-
-#main
-msgid "@sitename in language"
-msgstr "@sitename bằng Tiếng Việt"
-
-msgid "Go back"
-msgstr "Quay lại"
-
-#main menu close button
-msgid "Close"
-msgstr "Đóng cửa"
-
 msgid "Last updated:"
 msgstr "Cập nhật lần cuối:"
-
-msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgstr "Hình minh họa của ô bỏ phiếu với lá phiếu đã đánh dấu được chèn vào để biểu thị hành động bỏ phiếu"
-
-#identifier
-msgid "An official website of the @link."
-msgstr "Một trang web chính thức của @link"
-
-msgid "General Services Administration"
-msgstr "Cơ quan Quản lý Dịch vụ Tổng hợp (bằng Tiếng Anh)"
-
-msgid "Looking for U.S. government information and services? @link."
-msgstr "Tìm kiếm thông tin và dịch vụ của chính phủ Hoa Kỳ @link"
-
-msgid "Visit USA.gov"
-msgstr "Vào trang USA.gov (bằng Tiếng Anh)"
-
-msgid "Agency identifier"
-msgstr "Mã xác định cơ quan"
-
-msgid "Agency description"
-msgstr "Các điểm nhận diên của cơ quan"
-
-msgid "Important links"
-msgstr "Các đường truyền quan trọng"
-
-msgid "Government information and services"
-msgstr "Những thông tin và dịch vụ của chính phủ"
-
-#contact
-msgid "in partnership with"
-msgstr "hợp tác với"
-
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
-msgstr "hợp tác với U.S. Election Assistance Commission"
-
-msgid "Follow vote.gov on"
-msgstr "Theo dõi vote.gov trên X (bằng Tiếng Anh)"
-
-#search
-msgid "Search vote.gov"
-msgstr "Tìm kiếm vote.gov"
 
 #state
 msgid "Register to vote in @state_name"
@@ -174,24 +107,6 @@ msgstr "Bỏ qua để đi thẳng vào nội dung chính"
 
 msgid "(in English)"
 msgstr "(bằng Tiếng Anh)"
-
-#banner
-msgid "Official government website"
-msgstr "Trang web chính thức của chính phủ"
-
-#U.S. flag alt text
-msgid "U.S. flag"
-msgstr "Quốc kỳ Hoa Kỳ"
-
-#footer
-msgid "Email sign-up"
-msgstr "Đăng ký thư điện tử email"
-
-msgid "Contact"
-msgstr "Liên hệ"
-
-msgid "GSA logo"
-msgstr "Biểu trưng GSA"
 
 #month and day names
 msgctxt "Long month name"

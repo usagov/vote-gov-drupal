@@ -1,0 +1,19 @@
+uuid: 49e5680b-fdf2-4544-86ee-c3738af83881
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.state_display_content
+    - field.storage.block_content.field_person_reg_deadline_label
+id: block_content.state_display_content.field_person_reg_deadline_label
+field_name: field_person_reg_deadline_label
+entity_type: block_content
+bundle: state_display_content
+label: 'In-person registration deadline label'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
