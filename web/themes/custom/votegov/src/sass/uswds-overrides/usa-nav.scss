@@ -40,6 +40,10 @@
   button[aria-expanded=false] span::after,
   button[aria-expanded=true] span::after {
     background-color: var(--usa-nav--primary-after);
+    inset-inline-end: 0;
+    :is([dir="rtl"]) & {
+      right: unset;
+    }
   }
 }
 
@@ -285,12 +289,10 @@
       border-top: 1px solid $bg-light-medium;
     }
   }
-  
   @include at-media('tablet-lg') {
     [dir="rtl"] & {
       right: unset;
     }
-    
     @include u-right(0);
     bottom: $nav-bottom;
     inset-inline-end: 5rem;
@@ -349,6 +351,9 @@
     mask: url('../../img/svg/arrow-white.svg') no-repeat;
     mask-size: contain;
     background-color: var(--usa-nav--parent-color);
+    :is([dir="rtl"]) & {
+      transform: scaleX(-1);
+    }
   }
 }
 
@@ -401,4 +406,8 @@
 
 body.usa-js-mobile-nav--active {
   @include u-padding-right(0, '!important');
+}
+
+.usa-nav__primary button{
+  text-align: start;
 }
