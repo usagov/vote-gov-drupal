@@ -28,6 +28,13 @@ export ssg_sitemap_endpoint=ssg_endpoint
 
 cd ${app_path}
 echo "**************************************************"
+echo "Running 'drush cr' in '${environment}'..."
+echo "**************************************************"
+drush cr
+echo "'drush cr' task...completed!"
+echo ""
+
+echo "**************************************************"
 echo "Running 'drush cron' in '${environment}'..."
 echo "**************************************************"
 drush --uri=${ssg_endpoint} cron
@@ -75,8 +82,7 @@ echo ""
 echo "**************************************************"
 echo "Adding missing data files for NVRF..."
 echo "**************************************************"
-cp -rfp ${app_path}/web/es/nvrf/data ${html_path}/es/nvrf
-cp -rfp ${app_path}/web/nvrf/data ${html_path}/nvrf
+cp -rfp ${app_path}/web/data ${html_path}/data
 echo "Missing data files for NVRF...completed!"
 echo ""
 
@@ -112,6 +118,7 @@ echo "**************************************************"
 echo "Removing miscellaneous files..."
 echo "**************************************************"
 rm -rf ${html_path}/disabled-state-mail-in-forms 2>/dev/null
+rm -rf ${html_path}/state-data-points-index 2>/dev/null
 echo "Removing miscellaneous files...completed!"
 echo ""
 

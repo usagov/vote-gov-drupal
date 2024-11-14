@@ -1,6 +1,6 @@
 _core:
   default_config_hash: 1Xz2Y9u-DpLPoXeM9FLMA1wBRRy36fMD8T7_Zga2SnY
 sso_login_path: /saml/login
-sso_login_text: 'Proceed to GSA SecureAuth login'
+sso_login_text: 'Proceed to GSA Auth login'
 sso_cancel_path: /
 sso_cancel_text: 'Cancel and return to Vote.gov'

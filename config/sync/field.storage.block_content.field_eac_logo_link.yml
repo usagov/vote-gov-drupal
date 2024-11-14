@@ -1,16 +1,16 @@
-uuid: 1398a67d-49c9-405e-ab74-55a62270a1fa
+uuid: 02f89ed6-eb3c-4131-8825-8ee19961d09a
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
-    - vote_fields
-id: block_content.field_registration_intro
-field_name: field_registration_intro
+    - link
+id: block_content.field_eac_logo_link
+field_name: field_eac_logo_link
 entity_type: block_content
-type: vote_fields_state_content
+type: link
 settings: {  }
-module: vote_fields
+module: link
 locked: false
 cardinality: 1
 translatable: true

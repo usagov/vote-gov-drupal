@@ -18,13 +18,12 @@
     --usa-alert-info-icon: #{$bg-high-contrast};
   }
 
-  .usa-alert__body {
+ .usa-alert__body {
     background-color: var(--usa-alert-info-bg);
     color: var(--usa-alert-info-text);
 
-    @include at-media-max('tablet') {
-      @include u-padding-left(0);
-      padding-inline-start: 3rem;
+    &.usa-alert--no-icon {
+      @include u-padding-left(4);
     }
 
     &:before {
@@ -36,6 +35,16 @@
       @include at-media('tablet') {
         inset-inline-start: 4.5rem;
       }
+    }
+  }
+}
+
+.usa-site-alert--emergency .usa-alert__body {
+  a {
+    color: $base-white;
+
+    &:hover {
+      @include u-color('gray-10')
     }
   }
 }

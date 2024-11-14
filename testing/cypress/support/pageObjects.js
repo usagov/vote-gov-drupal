@@ -1,7 +1,13 @@
 class PageObjects {
-  // frontend test page objects 
+  // frontend test page objects
+  footer() {
+    return cy.get('[data-test="footer"]')
+  }
 
-  // * accessability tool bar
+  footerLinks() {
+    return cy.get('[data-test="footerLinks"]')
+  }
+
   themeSwitcher() {
     return cy.get('[data-test="themeSwitcher"]')
   }
@@ -11,20 +17,17 @@ class PageObjects {
   }
 
   themeText() {
-    return  cy.get('[data-test="themeText"]')
+    return cy.get('[data-test="themeText"]')
   }
 
-  // * email signup 
   emailSignup() {
     return cy.get('[data-test="emailSignup"]')
   }
 
-  // * footer contact
   footerContact() {
     return cy.get('[data-test="footerContact"]')
   }
 
-  // * govt banner
   headerLogo() {
     return cy.get('[data-test="headerLogo"]')
   }
@@ -33,11 +36,10 @@ class PageObjects {
     return cy.get('[data-test="headerButton"]')
   }
 
-  headerBanner() { 
+  headerBanner() {
     return cy.get('[data-test="headerBanner"]')
   }
 
-  // * language selector
   languageButton() {
     return cy.get('[data-test="languageButton"]')
   }
@@ -50,7 +52,6 @@ class PageObjects {
     return cy.get('[ data-test="langItem"]')
   }
 
-  // * main menu
   mainNav() {
     return cy.get('[data-test="mainNav"]')
   }
@@ -79,12 +80,10 @@ class PageObjects {
     return cy.get('[data-test="mainCloseBtn"]')
   }
 
-  // * nvrf download
   nvrfDownload() {
     return cy.get('[data-test="nvrfDownload"]')
   }
 
-  // * search bar
   searchBox() {
     return cy.get('[data-test="searchBox"]')
   }
@@ -93,7 +92,6 @@ class PageObjects {
     return cy.get('[data-test="searchBtn"]')
   }
 
-  // * state pages
   registrationInfo() {
     return cy.get('[data-test="registrationInfo"]')
   }
@@ -102,7 +100,6 @@ class PageObjects {
     return cy.get('[data-test="nvrfForm"]')
   }
 
-  // * state registration
   stateInput() {
     return cy.get('[data-test="stateInput"]')
   }
@@ -111,6 +108,82 @@ class PageObjects {
     return cy.get('[data-test="stateList"]')
   }
 
+  // Backend Tests
+  pageTitle() {
+    return cy.get('[data-drupal-selector="edit-title-0-value"]')
+  }
+
+  pageContent() {
+    return cy.get('[class="ck-blurred ck ck-content ck-editor__editable ck-rounded-corners ck-editor__editable_inline"]')
+  }
+
+  pageDetails() {
+    return cy.get('[class="claro-details__summary claro-details__summary--accordion-item"]')
+  }
+
+  urlAlias() {
+    return cy.get('[data-drupal-selector="edit-path-0"]')
+  }
+
+  urlAuto() {
+    return cy.get('[data-drupal-selector="edit-path-0-pathauto"]')
+  }
+
+  setAlias() {
+    return cy.get('[data-drupal-selector="edit-path-0-alias"]')
+  }
+
+  submitBtn() {
+    return cy.get('[data-drupal-selector="edit-submit"]')
+  }
+
+  publishState() {
+    return cy.get('[data-drupal-selector="edit-moderation-state-0-state"]')
+  }
+
+  linkTitle() {
+    return cy.get('[data-drupal-selector="edit-title-0-value"]')
+  }
+
+  linkUrl() {
+    return cy.get('[data-drupal-selector="edit-link-0-uri"]')
+  }
+
+  displaySettings() {
+    return cy.get('[data-drupal-selector="edit-menu-link-display-settings"]')
+  }
+
+  linkWeight() {
+    return cy.get('[data-drupal-selector="edit-weight-0-value"]')
+  }
+
+  editDropdown() {
+    return cy.get('[class="edit dropbutton__item dropbutton-action"]')
+  }
+
+  deleteBtn() {
+    return cy.get('[data-drupal-selector="edit-delete"]')
+  }
+
+  confirmDelete() {
+    return cy.get('[class="ui-dialog-buttonset form-actions"]')
+  }
+
+  editBar() {
+    return cy.get('[data-test="editMenu"]')
+  }
+
+  publishOpt() {
+    return cy.get('[data-drupal-selector="edit-new-state"]')
+  }
+
+  editDropDown() {
+    return cy.get('[class="dropbutton__toggle"]')
+  }
+
+  editOpt() {
+    return cy.get('[class="translate dropbutton__item dropbutton-action"]')
+  }
 }
 
 export const pageObjects = new PageObjects()

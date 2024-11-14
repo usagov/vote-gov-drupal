@@ -1,0 +1,16 @@
+uuid: 248bc1d6-2784-4847-8b07-79c9971daa4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.partnership
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.partnership
+target_entity_type_id: block_content
+target_bundle: partnership
+default_langcode: site_default
+language_alterable: false

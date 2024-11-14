@@ -1,0 +1,19 @@
+uuid: 30e1e50b-1d0a-4f0e-9013-06671c510081
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+id: block_content.field_usagov_logo_link
+field_name: field_usagov_logo_link
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
