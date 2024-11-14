@@ -1,0 +1,19 @@
+uuid: 93510fc7-90e0-4149-86bb-3273e711c472
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.search
+    - field.storage.block_content.field_submit_button_label
+id: block_content.search.field_submit_button_label
+field_name: field_submit_button_label
+entity_type: block_content
+bundle: search
+label: 'Submit button label'
+description: 'This field value is used to identify the button label for screen readers.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
