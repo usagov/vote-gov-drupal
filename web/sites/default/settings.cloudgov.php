@@ -116,6 +116,8 @@ $settings['trusted_host_patterns'][] = $applicaiton_fqdn_regex;
 
 // SSO - SAML Auth Config.
 $config['samlauth.authentication']['idp_certs'][] = getenv('sso_x509_cert');
+$config['samlauth.authentication']['sp_private_key'] = getenv('sso_assertion_key');
+$config['samlauth.authentication']['sp_x509_certificate'] = getenv('sso_assertion_cert');
 // @todo DC - Move the following to config split for respective environments.
 switch ($application_environment) {
   case "dev":
