@@ -128,8 +128,8 @@ switch ($application_environment) {
 
   case "prod":
     $config['config_split.config_split.production']['status'] = TRUE;
-    $config['samlauth.authentication']['sp_entity_id'] = 'prod.vote.gov';
-    $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://secureauth.gsa.gov/SecureAuth404';
+    $config['samlauth.authentication']['sp_entity_id'] = 'cms.vote.gov';
+    $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://auth.gsa.gov/app/gsauth_cmsvotegov_1/exkd51oit40ss1AdT4h7/sso/saml';
     break;
 
   case "stage":

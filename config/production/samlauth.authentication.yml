@@ -20,7 +20,7 @@ sp_new_certificate: ''
 sp_private_key: ''
 metadata_valid_secs: 60
 metadata_cache_http: false
-idp_entity_id: GSASecAuth
+idp_entity_id: 'http://www.okta.com/exkd51oit40ss1AdT4h7'
 idp_single_sign_on_service: ''
 idp_single_log_out_service: ''
 idp_change_password_service: ''
