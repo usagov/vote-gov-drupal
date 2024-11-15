@@ -37,12 +37,16 @@
     }
   }
 
-  button[aria-expanded=false] span::after,
-  button[aria-expanded=true] span::after {
-    background-color: var(--usa-nav--primary-after);
-    inset-inline-end: 0;
-    :is([dir="rtl"]) & {
-      right: unset;
+  button[aria-expanded=false],
+  button[aria-expanded=true] {
+    span {
+      padding-right: unset;
+      padding-inline-end: 1rem;
+      &:after {
+        background-color: var(--usa-nav--primary-after);
+        right: unset;
+        inset-inline-end: 0.75rem;
+      }
     }
   }
 }
@@ -351,7 +355,8 @@
     mask: url('../../img/svg/arrow-white.svg') no-repeat;
     mask-size: contain;
     background-color: var(--usa-nav--parent-color);
-    :is([dir="rtl"]) & {
+
+    [dir="rtl"] & {
       transform: scaleX(-1);
     }
   }
