@@ -6,6 +6,7 @@ dependencies:
     - block_content.type.search
     - field.field.block_content.search.field_search_placeholder
     - field.field.block_content.search.field_section_identifier
+    - field.field.block_content.search.field_submit_button_label
     - field.field.block_content.search.field_translated_affiliate
 id: block_content.search.default
 targetEntityType: block_content
@@ -23,6 +24,14 @@ content:
   field_section_identifier:
     type: string_textfield
     weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_submit_button_label:
+    type: string_textfield
+    weight: 30
     region: content
     settings:
       size: 60

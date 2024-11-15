@@ -8,72 +8,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
-#language selector
-msgid "Chinese - simplified"
-msgstr "中文"
-
 msgid "Select language"
 msgstr "选择语言"
-
-#breadcrumb
-msgid "Home"
-msgstr "主页"
 
 #in-page nav
 msgid "On this page"
 msgstr "本页内容"
 
-#main
-msgid "@sitename in language"
-msgstr "@sitename 中文"
-
-msgid "Go back"
-msgstr "回去"
-
 msgid "Last updated:"
 msgstr "最近更新时间："
-
-msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgstr "插有已勾选选票的选票箱图样，表示投票动作"
-
-#identifier
-msgid "An official website of the @link."
-msgstr "@link的官方网站"
-
-msgid "General Services Administration"
-msgstr "总务管理局 (英语)"
-
-msgid "Looking for U.S. government information and services? @link."
-msgstr "寻找美国政府提供的信息和服务？@link"
-
-msgid "Visit USA.gov"
-msgstr "访问USA.gov。 (英语)"
-
-msgid "Agency identifier"
-msgstr "机构标识符"
-
-msgid "Agency description"
-msgstr "机构描述"
-
-msgid "Important links"
-msgstr "重要链接"
-
-msgid "Government information and services"
-msgstr "政府信息和服务"
-
-#contact
-msgid "in partnership with"
-msgstr "与合作"
-
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
-msgstr "与 U.S. Election Assistance Commission合作"
-
-msgid "Follow vote.gov on"
-msgstr "在 X 上关注 vote.gov (英语)"
-
-#search
-msgid "Search vote.gov"
-msgstr "搜索 vote.gov"
 
 #state
 msgid "Register to vote in @state_name"
@@ -172,20 +115,6 @@ msgstr "跳到主要内容"
 msgid "(in English)"
 msgstr "(英语)"
 
-#banner
-msgid "Official government website"
-msgstr "官方政府网站"
-
-#footer
-msgid "Email sign-up"
-msgstr "电邮注册"
-
-msgid "Contact"
-msgstr "联系"
-
-msgid "GSA logo"
-msgstr "GSA 标志"
-
 #month and day names
 msgctxt "Long month name"
 msgid "January"
@@ -259,25 +188,11 @@ msgstr "星期日"
 msgid "U.S. government information and services"
 msgstr "美国政府提供的信息和服务"
 
-#aria-label for election links
-msgid "External election resources"
-msgstr "选举链接"
-
-#footer
-msgid "Visit our partner site to find more information about voting in the United States."
-msgstr "访问我们合作伙伴的网站 —— USA.gov——来了解在美国投票的更多信息。"
-
 msgid "Close"
 msgstr "关闭"
 
 msgid "U.S. flag"
 msgstr "美国国旗"
-
-msgid "Vote.gov is made possible in partnership with "
-msgstr "Vote.gov的创建得益于 "
-
-msgid "USA.gov logo"
-msgstr "USA.gov标识"
 
 msgid "Menu"
 msgstr "菜单"
@@ -288,23 +203,8 @@ msgstr "面包屑导航"
 msgid "Primary navigation"
 msgstr "主导航"
 
-msgid "Search component"
-msgstr "搜索组件"
-
 msgid "Introduction"
 msgstr "简介"
-
-msgid "Register to vote selector tool"
-msgstr "登记投票选择器工具"
-
-msgid "States and territories list"
-msgstr "州和属地清单"
-
-msgid "Select your state or territory"
-msgstr "选择您所在州或属地"
-
-msgid "States and territories suggestion list"
-msgstr "州和属地建议清单"
 
 # Temporary military and overseas voter cards
 msgid "Voting as a military service member"

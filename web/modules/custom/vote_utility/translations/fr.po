@@ -12,10 +12,6 @@ msgstr ""
 msgid "Primary navigation"
 msgstr "Navigation principale"
 
-# config.languages.languageName
-msgid "French"
-msgstr "Français"
-
 # config.languages.params.select_language
 msgid "Select language"
 msgstr "Sélectionner une langue"
@@ -24,24 +20,12 @@ msgstr "Sélectionner une langue"
 msgid "Close"
 msgstr "Fermer"
 
-# data.translations.breadcrumb
-msgid "Home"
-msgstr "Page d'accueil"
-
 # data.translations.in_page_nav
 msgid "On this page"
 msgstr "Sur cette page"
 
 msgid "Breadcrumb"
 msgstr "Ruta de navegación"
-
-# config.languages.params.Owner
-msgid "@sitename in language"
-msgstr "@sitename en Français"
-
-# config.languages.params.go_back
-msgid "Go back"
-msgstr "Retourner en arrière"
 
 # config.languages.params.last_updated
 msgid "Last updated:"
@@ -59,101 +43,9 @@ msgstr "Passer au contenu principal"
 msgid "(in English)"
 msgstr "(en anglais)"
 
-# data.translations.footer.partner__disclaimer
-msgid "Visit our partner site to find more information about voting in the United States."
-msgstr "Visitez notre site partenaire pour trouver d'autres informations sur le vote aux États-Unis (en anglais)."
-
-# data.translations.footer.vote_logo_alt_text (see accessibility updates)
-msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgstr "Illustration d'une boîte de vote recevant un bulletin de vote rempli afin d'indiquer l'action de voter"
-
-# data.translations.footer.identifier_gsa_txt
-msgid "An official website of the @link."
-msgstr "Un site Web officiel de @link"
-
-# data.translations.footer.identifier_gsa_txt__1
-msgid "General Services Administration"
-msgstr "l'Administration des services généraux (en anglais)"
-
-# data.translations.footer.identifier_more_info
-msgid "Looking for U.S. government information and services? @link."
-msgstr "Vous recherchez des informations et des services du gouvernement américain? @link"
-
-# data.translations.footer.identifier_more_info__1
-msgid "Visit USA.gov"
-msgstr "Visitez USA.gov (en anglais)"
-
-# data.translations.alt_text_for_USA.gov_logo
-msgid "USA.gov logo"
-msgstr "Logo USA.gov"
-
-# data.translations_footer_contact
-msgid "Looking for U.S. government information and services? @link."
-msgstr "Les informations et services du gouvernement américain @link"
-
-# data.translations.footer.identifier_aria
-msgid "Agency identifier"
-msgstr "Identifiant de l'agence"
-
-# data.translations.footer.identifier_gsa_txt_aria
-msgid "Agency description"
-msgstr "Description de l'agence"
-
-# data.translations.footer.identifier_link_aria
-msgid "Important links"
-msgstr "Liens importants"
-
-# data.translations.footer.identifier_more_info_aria
-msgid "Government information and services"
-msgstr "Informations et services du gouvernement"
-
-# data.translations.footer.eac_text
-msgid "in partnership with"
-msgstr "en partenariat avec"
-
-# data.translations.footer.eac_logo_alt_text (see accessibility updates)
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
-msgstr "Le logo de la Commission d'assistance électorale des États-Unis qui indique le partenariat avec vote.gov"
-
-# data.translations.footer.twitter_text
-msgid "Follow vote.gov on"
-msgstr "Suivez vote.gov sur X (en anglais)"
-
-# data.translations.footer.section_sign_up
-msgid "Email sign-up"
-msgstr "Enskripsyon imèl"
-
-# data.translations.eac_partner_text
-msgid "Vote.gov is in partnership with"
-msgstr "Vote.gov est en partenariat avec la"
-
-# data.translations.footer.section_contact
-msgid "Contact"
-msgstr "Kontak"
-
-# data.translations.footer.gsa_logo_alt
-msgid "GSA logo"
-msgstr "Logo GSA a"
-
-# data.translations.homepage.search_placeholder
-msgid "Search vote.gov"
-msgstr "Rechercher vote.gov"
-
-#data.translations.search_aira_label
-msgid "Search component"
-msgstr "Composant recherche"
-
-# data.translations.homepage.section_banner
-msgid "Official government website"
-msgstr "Sit entènèt ofisyèl gouvènman an"
-
 # data.translations.U.S._flag_alt_text
 msgid "U.S. flag"
 msgstr "Drapeau américain"
-
-# data.translations.aria_label_for_election_links
-msgid "External election resources"
-msgstr "Liens électoraux"
 
 # data.translations.register.heading
 msgid "Register to vote in @state_name"
@@ -178,17 +70,6 @@ msgstr "Trouvez les dates des élections étatiques et locales"
 
 msgid "Start or update your registration online"
 msgstr "Commencez ou mettez à jour votre inscription"
-
-# data.translations.state_tool_aria_label
-msgid "Register to vote selector tool"
-msgstr "Outil de sélection pour l'inscription de vote"
-
-msgid "Select your state or territory"
-msgstr "Sélectionnez votre État ou territoire"
-
-# data.translations.state_list_aria_label
-msgid "States and territories list"
-msgstr "Liste de suggestions pour les États et territoires"
 
 msgid "Find state and local election dates."
 msgstr "Trouvez les dates des élections étatiques et locales."
