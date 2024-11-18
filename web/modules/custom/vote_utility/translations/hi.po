@@ -8,76 +8,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
-#language selector
-msgid "Hindi"
-msgstr "हिन्दी"
-
 msgid "Select language"
 msgstr "भाषा चुनें"
-
-#breadcrumb
-msgid "Home"
-msgstr "मुख्य पृष्ठ"
 
 #in-page nav
 msgid "On this page"
 msgstr "इस पेज पर"
 
-#main
-msgid "@sitename in language"
-msgstr "@sitename हिन्दी में"
-
-msgid "Go back"
-msgstr "वापस जाएं"
-
 msgid "Last updated:"
 msgstr "नवीनतम अपडेट:"
-
-msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgstr "मतदान क्रिया को इंगित करने के लिए मतदाता पेटी में चेक किए गए मतपत्र को डाले जाने का चित्रण"
-
-#identifier
-msgid "An official website of the @link."
-msgstr "@link की आधिकारिक वेबसाइट"
-
-msgid "General Services Administration"
-msgstr "सामान्य सेवा प्रशासन/जनरल सर्विसेज़ एडमिनिस्ट्रेशन (अंग्रेज़ी में)"
-
-msgid "Looking for U.S. government information and services? @link."
-msgstr "यू.एस. सरकार की जानकारी और सेवाएं खोज रहे हैं? @link"
-
-msgid "Visit USA.gov"
-msgstr "USA.gov पर जाएं (अंग्रेज़ी में)"
-
-msgid "Agency identifier"
-msgstr "एजेंसी पहचानकर्ता"
-
-msgid "Agency description"
-msgstr "एजेंसी का विवरण"
-
-msgid "Important links"
-msgstr "महत्वपूर्ण लिंक"
-
-msgid "Government information and services"
-msgstr "सरकारी सूचना और सेवाएं"
-
-#contact
-msgid "in partnership with"
-msgstr "के साथ साझेदारी में"
-
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
-msgstr "U.S. Election Assistance Commission के साथ साझेदारी में"
-
-#footer
-msgid "Visit our partner site to find more information about voting in the United States."
-msgstr "संयुक्त राज्य अमेरिका में मतदान के बारे में अधिक जानकारी प्राप्त करने के लिए हमारी साझेदार साइट पर जाएँ।"
-
-msgid "Follow vote.gov on"
-msgstr "Vote.gov को X पर फ़ॉलो करें (अंग्रेज़ी में)"
-
-#search
-msgid "Search vote.gov"
-msgstr "Vote.gov पर खोजें"
 
 #state
 msgid "Register to vote in @state_name"
@@ -173,24 +112,6 @@ msgstr "सीधे मुख्य विषयवस्तु (मेन क�
 
 msgid "(in English)"
 msgstr "(अंग्रेज़ी में)"
-
-#banner
-msgid "Official government website"
-msgstr "आधिकारिक सरकारी वेबसाइट"
-
-#footer
-msgid "Email sign-up"
-msgstr "ईमेल के लिए साइन-अप करें"
-
-#eac partner text
-msgid "Vote.gov is in partnership with"
-msgstr "Vote.gov अमेरिकी चुनाव सहायता आयोग के साथ साझेदारी में है"
-
-msgid "Contact"
-msgstr "संपर्क करें"
-
-msgid "GSA logo"
-msgstr "GSA का लोगो (प्रतीक चिन्ह)"
 
 #month and day names
 msgctxt "Long month name"

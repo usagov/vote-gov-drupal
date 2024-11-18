@@ -13,7 +13,7 @@ field_name: field_election_text
 entity_type: block_content
 bundle: state_display_content
 label: 'Election Text'
-description: ''
+description: 'Use the placeholder <strong>@date</strong> to dynamically add the election date on the state page.'
 required: false
 translatable: true
 default_value: {  }
