@@ -259,20 +259,3 @@
   inset-inline-start: 1px;
   inset-inline-end: 1px;
 }
-
-@mixin rtl-alert-styles {
-  border-left: none;
-  .usa-alert__body {
-    &:before {
-      @include u-left('auto');
-      inset-inline-start: 0.5rem;
-
-      @include at-media('tablet') {
-        inset-inline-start: 1rem;
-      }
-    }
-  }
-  .usa-alert__heading {
-    padding-inline-start: 2.5rem;
-  }
-}

@@ -3,18 +3,27 @@
 @use "mixins" as *;
 
 // targeting inline alerts and individually setting the border color
+.usa-alert {
+  border-left: none;
 
-.usa-alert.usa-alert--warning {
-  [dir="rtl"] & {
-  border-inline-start: 0.5rem  color('gold-20v')solid;
-    @include rtl-alert-styles;
+  &.usa-alert--warning {
+    border-inline-start: 0.5rem  color('gold-20v') solid;
+  }
+
+  &.usa-alert--info {
+    border-inline-start: 0.5rem color('accent-cool') solid;
   }
 }
 
-.usa-alert.usa-alert--info {
-  [dir="rtl"] & {
-    border-inline-start: 0.5rem color('accent-cool') solid;
-    @include rtl-alert-styles;
-  }
+.usa-alert--info,
+.usa-alert__body > * {
+  margin-left: unset;
+  margin-inline-start: 2.5rem;
+}
 
+.usa-alert .usa-alert__body {
+  &:before {
+    left: unset;
+    inset-inline-start: 1rem;
+  }
 }
