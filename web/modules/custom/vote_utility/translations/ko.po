@@ -25,16 +25,16 @@ msgid "How to register to vote"
 msgstr "유권자 등록 방법"
 
 msgid "How to register and update your registration"
-msgstr "유권자 등록 방법"
+msgstr "등록 및 갱신하는 방법"
 
 msgid "Other ways to register to vote"
 msgstr "기타 유권자 등록 방법"
 
 msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
-msgstr "@election_date 선거 유권자 등록 마감일"
+msgstr "2024년 11월 5일 선거 유권자 등록 마감일."
 
 msgid "Find state and local election dates."
-msgstr ""
+msgstr "주와 지방 선거 날짜를 확인하세요."
 
 msgid "Register by mail deadline:"
 msgstr "우편 투표자 등록 마감일:"
@@ -85,7 +85,7 @@ msgid "Voter registration is not required in @state_name. @link on @state_name�
 msgstr "@state_name 는 유권자 등록이 필요하지 않습니다. @state_name 선거국 웹사이트에서 @link를 이용하시기 바랍니다."
 
 msgid "Start or update your registration online"
-msgstr "온라인 등록 시작하기"
+msgstr "귀하의 온라인 등록을 시작하거나 갱신하세요"
 
 msgid "@link on @state_name’s election website."
 msgstr " @state_name 선거국 웹사이트에서 @link를 이용하시기 바랍니다."
