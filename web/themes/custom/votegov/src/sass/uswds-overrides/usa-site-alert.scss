@@ -18,7 +18,7 @@
     --usa-alert-info-icon: #{$bg-high-contrast};
   }
 
- .usa-alert__body {
+.usa-alert__body {
     background-color: var(--usa-alert-info-bg);
     color: var(--usa-alert-info-text);
 
@@ -39,12 +39,30 @@
   }
 }
 
-.usa-site-alert--emergency .usa-alert__body {
-  a {
-    color: $base-white;
+.usa-site-alert--emergency .usa-alert {
+  border-inline-start: 0.5rem color('red-warm-60v') solid;
+  .usa-alert__body {
+    @include u-border-left(0);
+    border-inline-start: 0.5rem;
+    a {
+      color: $base-white;
 
-    &:hover {
-      @include u-color('gray-10')
+      &:hover {
+        @include u-color('gray-10')
+      }
+    }
+
+    &:before {
+      @include u-left('auto');
+      inset-inline-start: 0.5rem;
+
+      @include at-media('tablet') {
+        inset-inline-start: 4.5rem;
+      }
     }
   }
+}
+
+.usa-alert__text{
+  margin-inline-start: 2.5rem;
 }
