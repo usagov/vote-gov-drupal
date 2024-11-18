@@ -9,6 +9,8 @@ dependencies:
     - field.field.node.state_territory.field_check_registration
     - field.field.node.state_territory.field_confirm_registration_link
     - field.field.node.state_territory.field_content_version
+    - field.field.node.state_territory.field_date_in_person_deadline
+    - field.field.node.state_territory.field_date_online_deadline
     - field.field.node.state_territory.field_election_homepage_link
     - field.field.node.state_territory.field_g_in_person_deadline
     - field.field.node.state_territory.field_g_mail_postmarked_deadline
@@ -72,7 +74,7 @@ third_party_settings:
       label: 'Generic registration deadlines'
       region: content
       parent_name: group_deadlines
-      weight: 21
+      weight: 10
       format_type: fieldset
       format_settings:
         classes: ''
@@ -146,6 +148,8 @@ third_party_settings:
         required_fields: true
     group_deadlines:
       children:
+        - field_date_in_person_deadline
+        - field_date_online_deadline
         - field_in_person_deadline
         - field_online_deadline
         - field_mail_postmarked_deadline
@@ -212,7 +216,7 @@ third_party_settings:
       label: 'Version tracking'
       region: content
       parent_name: ''
-      weight: 11
+      weight: 12
       format_type: details_sidebar
       format_settings:
         classes: ''
@@ -301,6 +305,18 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_date_in_person_deadline:
+    type: datetime_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date_online_deadline:
+    type: datetime_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_election_homepage_link:
     type: link_default
     weight: 7
@@ -351,7 +367,7 @@ content:
     third_party_settings: {  }
   field_in_person_deadline:
     type: double_field
-    weight: 16
+    weight: 6
     region: content
     settings:
       first:
@@ -401,13 +417,13 @@ content:
     third_party_settings: {  }
   field_mail_postmarked_deadline:
     type: datetime_default
-    weight: 18
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   field_mail_received_deadline:
     type: datetime_default
-    weight: 19
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -448,7 +464,7 @@ content:
     third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
-    weight: 9
+    weight: 10
     region: content
     settings:
       sidebar: true
@@ -508,7 +524,7 @@ content:
     third_party_settings: {  }
   field_online_deadline:
     type: double_field
-    weight: 17
+    weight: 7
     region: content
     settings:
       first:
@@ -649,26 +665,26 @@ content:
     third_party_settings: {  }
   field_updated_date:
     type: datetime_default
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 8
+    weight: 9
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 7
+    weight: 8
     region: content
     settings:
       display_label: true
@@ -692,7 +708,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }

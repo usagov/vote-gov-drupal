@@ -124,23 +124,27 @@ switch ($application_environment) {
     $config['config_split.config_split.non_production']['status'] = TRUE;
     $config['samlauth.authentication']['sp_entity_id'] = 'dev.vote.gov';
     $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://auth-preprod.gsa.gov/app/gsauth-preprod_devvotegov_1/exkcups2fwc3wTcTO4h7/sso/saml';
+    $config['samlauth.authentication']['idp_entity_id'] = 'http://www.okta.com/exkcups2fwc3wTcTO4h7';
     break;
 
   case "prod":
     $config['config_split.config_split.production']['status'] = TRUE;
-    $config['samlauth.authentication']['sp_entity_id'] = 'prod.vote.gov';
-    $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://secureauth.gsa.gov/SecureAuth404';
+    $config['samlauth.authentication']['sp_entity_id'] = 'cms.vote.gov';
+    $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://auth.gsa.gov/app/gsauth_cmsvotegov_1/exkd51oit40ss1AdT4h7/sso/saml';
+    $config['samlauth.authentication']['idp_entity_id'] = 'http://www.okta.com/exkd51oit40ss1AdT4h7';
     break;
 
   case "stage":
     $config['config_split.config_split.non_production']['status'] = TRUE;
     $config['samlauth.authentication']['sp_entity_id'] = 'cms-stage.vote.gov';
     $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://auth-preprod.gsa.gov/app/gsauth-preprod_cmsstagevotegov_1/exkcupw8ddWb0oqaP4h7/sso/saml';
+    $config['samlauth.authentication']['idp_entity_id'] = 'http://www.okta.com/exkcupw8ddWb0oqaP4h7';
     break;
 
   case "test":
     $config['config_split.config_split.non_production']['status'] = TRUE;
     $config['samlauth.authentication']['sp_entity_id'] = 'cms-test.vote.gov';
     $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://auth-preprod.gsa.gov/app/gsauth-preprod_cmstestvotegov_1/exkcuoyewsWHvYili4h7/sso/saml';
+    $config['samlauth.authentication']['idp_entity_id'] = 'http://www.okta.com/exkcuoyewsWHvYili4h7';
     break;
 }
