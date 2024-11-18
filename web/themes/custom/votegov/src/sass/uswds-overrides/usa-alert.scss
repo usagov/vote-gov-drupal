@@ -1,0 +1,20 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+@use "mixins" as *;
+
+// targeting inline alerts and individually setting the border color
+
+.usa-alert.usa-alert--warning {
+  [dir="rtl"] & {
+  border-inline-start: 0.5rem  color('gold-20v')solid;
+    @include rtl-alert-styles;
+  }
+}
+
+.usa-alert.usa-alert--info {
+  [dir="rtl"] & {
+    border-inline-start: 0.5rem color('accent-cool') solid;
+    @include rtl-alert-styles;
+  }
+
+}

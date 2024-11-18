@@ -40,7 +40,7 @@
 }
 
 .usa-site-alert--emergency .usa-alert {
-  border-inline-start: 0.5rem #9c3d10 solid;
+  border-inline-start: 0.5rem color('red-warm-60v') solid;
   .usa-alert__body {
     @include u-border-left(0);
     border-inline-start: 0.5rem;
@@ -65,27 +65,4 @@
 
 .usa-alert__text{
   margin-inline-start: 2.5rem;
-}
-
-.usa-alert.usa-alert--warning {
-  // targeting the warning banner that is only used at the time on login. Setting up styles to just affect RTL languages
-  [dir="rtl"] & {
-    border-left: none;
-    border-inline-start: 0.5rem #ffbe2e solid;
-    .usa-alert__body {
-
-      p {
-        margin-inline-start: 2.5rem;
-      }
-
-      &:before {
-        @include u-left('auto');
-        inset-inline-start: 0.5rem;
-
-        @include at-media('tablet') {
-          inset-inline-start: 1rem;
-        }
-      }
-    }
-  }
 }
