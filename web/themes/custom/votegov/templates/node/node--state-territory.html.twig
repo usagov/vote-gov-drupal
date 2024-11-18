@@ -41,17 +41,17 @@
 {# State content with fallbacks. #}
 {# Get default state display content from the block type. #}
 {% set state_display_content = drupal_entity('block_content', 23) | children %}
-{% set registration_not_needed = state_display_content.field_registration_not_needed.0 | default([]) | merge(content.field_registration_not_needed.0 | default([])) %}
-{% set online_registration = state_display_content.field_online_registration.0 | default([]) | merge(content.field_online_registration.0 | default([])) %}
-{% set military_overseas_registration = state_display_content.field_military_and_overseas_regi.0 | default([]) | merge(content.field_military_and_overseas_regi.0 | default([])) %}
-{% set mail_registration = state_display_content.field_mail_registration.0 | default([]) | merge(content.field_mail_registration.0 | default([])) %}
-{% set no_mail_registration = state_display_content.field_no_mail_registration.0 | default([]) | merge(content.field_no_mail_registration.0 | default([])) %}
-{% set nvrf_details = state_display_content.field_nvrf_details.0 | default([]) | merge(content.field_nvrf_details.0 | default([])) %}
-{% set inperson_registration = state_display_content.field_in_person_registration.0 | default([]) | merge(content.field_in_person_registration.0 | default([])) %}
-{% set check_registration = state_display_content.field_check_registration.0 | default([]) | merge(content.field_check_registration.0 | default([])) %}
-{% set election_date = state_display_content.field_election_date.0 | default([]) | merge(content.field_election_date.0 | default([])) %}
-{% set election_text = state_display_content.field_election_text.0 | default([]) | merge(content.field_election_text.0 | default([])) %}
-{% set no_online_registration = state_display_content.field_no_online_registration.0 | default([]) | merge(content.field_no_online_registration.0 | default([])) %}
+{% set registration_not_needed = content.field_registration_not_needed.0 | default(state_display_content.field_registration_not_needed.0) %}
+{% set online_registration = content.field_online_registration.0 | default(state_display_content.field_online_registration.0) %}
+{% set military_overseas_registration = content.field_military_and_overseas_regi.0 | default(state_display_content.field_military_and_overseas_regi.0) %}
+{% set mail_registration = content.field_mail_registration.0 | default(state_display_content.field_mail_registration.0) %}
+{% set no_mail_registration = content.field_no_mail_registration.0 | default(state_display_content.field_no_mail_registration.0) %}
+{% set nvrf_details = content.field_nvrf_details.0 | default(state_display_content.field_nvrf_details.0) %}
+{% set inperson_registration = content.field_in_person_registration.0 | default(state_display_content.field_in_person_registration.0) %}
+{% set check_registration = content.field_check_registration.0 | default(state_display_content.field_check_registration.0) %}
+{% set election_date = content.field_election_date.0 | default(state_display_content.field_election_date.0) %}
+{% set election_text = content.field_election_text.0 | default(state_display_content.field_election_text.0) %}
+{% set no_online_registration = content.field_no_online_registration.0 | default(state_display_content.field_no_online_registration.0) %}
 
 {# Registration types #}
 {% set registration_types = content.field_registration_type | field_value | column('#markup') %}
