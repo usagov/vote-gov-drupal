@@ -1,0 +1,19 @@
+uuid: e8b3b9a9-49d0-4985-9355-44a1d6ba1c3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.state_display_content
+    - field.storage.block_content.field_online_reg_deadline_label
+id: block_content.state_display_content.field_online_reg_deadline_label
+field_name: field_online_reg_deadline_label
+entity_type: block_content
+bundle: state_display_content
+label: 'Online registration deadline label'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

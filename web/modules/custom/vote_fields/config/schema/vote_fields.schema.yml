@@ -23,3 +23,9 @@ field.field_settings.vote_fields_state_content:
       label: Fields to display in the form
       sequence:
         type: string
+    form_subfield_text_help_text:
+      type: string
+      label: Text subfield help text
+    form_subfield_link_text_help_text:
+      type: string
+      label: Link text subfield help text

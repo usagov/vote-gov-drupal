@@ -8,68 +8,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
-#language selector
-msgid "Vietnamese"
-msgstr "Tiếng Việt"
-
 msgid "Select language"
 msgstr "Lựa chọn ngôn ngữ"
 
-#breadcrumb
-msgid "Home"
-msgstr "Trang chủ"
-
-#main
-msgid "@sitename in language"
-msgstr "@sitename bằng Tiếng Việt"
-
-msgid "Go back"
-msgstr "Quay lại"
-
 msgid "Last updated:"
 msgstr "Cập nhật lần cuối:"
-
-msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgstr "Hình minh họa của ô bỏ phiếu với lá phiếu đã đánh dấu được chèn vào để biểu thị hành động bỏ phiếu"
-
-#identifier
-msgid "An official website of the @link."
-msgstr "Một trang web chính thức của @link"
-
-msgid "General Services Administration"
-msgstr "Cơ quan Quản lý Dịch vụ Tổng hợp (bằng Tiếng Anh)"
-
-msgid "Looking for U.S. government information and services? @link."
-msgstr "Tìm kiếm thông tin và dịch vụ của chính phủ Hoa Kỳ @link"
-
-msgid "Visit USA.gov"
-msgstr "Vào trang USA.gov (bằng Tiếng Anh)"
-
-msgid "Agency identifier"
-msgstr "Mã xác định cơ quan"
-
-msgid "Agency description"
-msgstr "Các điểm nhận diên của cơ quan"
-
-msgid "Important links"
-msgstr "Các đường truyền quan trọng"
-
-msgid "Government information and services"
-msgstr "Những thông tin và dịch vụ của chính phủ"
-
-#contact
-msgid "in partnership with"
-msgstr "hợp tác với"
-
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
-msgstr "hợp tác với U.S. Election Assistance Commission"
-
-msgid "Follow vote.gov on"
-msgstr "Theo dõi vote.gov trên X (bằng Tiếng Anh)"
-
-#search
-msgid "Search vote.gov"
-msgstr "Tìm kiếm vote.gov"
 
 #state
 msgid "Register to vote in @state_name"
@@ -79,16 +22,16 @@ msgid "How to register to vote"
 msgstr "Làm thế nào để đăng ký bỏ phiếu"
 
 msgid "How to register and update your registration"
-msgstr "Làm thế nào để đăng ký bỏ phiếu"
+msgstr " Ghi danh và cập nhật ghi danh như thế nào"
 
 msgid "Other ways to register to vote"
 msgstr "Các cách khác để đăng ký bỏ phiếu"
 
 msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
-msgstr "Thời hạn cuối cùng đăng ký cử tri cho cuộc bầu cử @election_date"
+msgstr "Hạn chót ghi danh cử tri là cho cuộc bầu cử ngày @election_date"
 
 msgid "Find state and local election dates."
-msgstr ""
+msgstr "Tìm ngày bầu cử của tiểu bang và địa phương."
 
 msgid "Register by mail deadline:"
 msgstr "Thời hạn đăng ký qua đường bưu điện: "
@@ -139,7 +82,7 @@ msgid "Voter registration is not required in @state_name. @link on @state_name�
 msgstr "Ở tiểu bang @state_name không yêu cầu bắt buộc phải đăng ký bầu cử. @link tại trang website bầu cử cấp tiểu bang của @state_name."
 
 msgid "Start or update your registration online"
-msgstr "Hãy bắt đầu đăng ký bầu cử trực tuyến"
+msgstr "Bắt đầu hoặc cập nhật ghi danh trực tuyến"
 
 msgid "@link on @state_name’s election website."
 msgstr "@link trên trang website bầu cử cấp tiểu bang của @state_name."
@@ -164,20 +107,6 @@ msgstr "Bỏ qua để đi thẳng vào nội dung chính"
 
 msgid "(in English)"
 msgstr "(bằng Tiếng Anh)"
-
-#banner
-msgid "Official government website"
-msgstr "Trang web chính thức của chính phủ"
-
-#footer
-msgid "Email sign-up"
-msgstr "Đăng ký thư điện tử email"
-
-msgid "Contact"
-msgstr "Liên hệ"
-
-msgid "GSA logo"
-msgstr "Biểu trưng GSA"
 
 #month and day names
 msgctxt "Long month name"
@@ -248,3 +177,6 @@ msgstr "Thứ Bảy"
 
 msgid "Sunday"
 msgstr "Chủ Nhật"
+
+msgid "Learn more from the Federal Voting Assistance Program (FVAP)."
+msgstr "Tìm hiểu thêm từ Federal Voting Assistance Program. (FVAP)."

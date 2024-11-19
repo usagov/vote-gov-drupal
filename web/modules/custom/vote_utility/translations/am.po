@@ -8,68 +8,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
-#language selector
-msgid "Amharic"
-msgstr "አማርኛ"
-
 msgid "Select language"
 msgstr "ቋንቋ ይምረጡ"
 
-#breadcrumb
-msgid "Home"
-msgstr "መነሻ ገጽ"
-
-#main
-msgid "@sitename in language"
-msgstr "@sitename በአማርኛ"
-
-msgid "Go back"
-msgstr "ተመለስ"
-
 msgid "Last updated:"
 msgstr "መጨረሻ የተሻሻለው፦"
-
-msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgstr "የድምጽ አሰጣጥ እንዴት እንደሚተገበር ለማመልከት ምልክት የተደረገበት ድምጽ መስጫ ወረቀት በምሳሌነት የገባበት የመራጮች ሳጥን "
-
-#identifier
-msgid "An official website of the @link."
-msgstr "ኦፊሲያል ድህረ ገጽ @link"
-
-msgid "General Services Administration"
-msgstr "አጠቃላይ አገልግሎቶች አስተዳደር (በእንግሊዝኛ)"
-
-msgid "Looking for U.S. government information and services? @link."
-msgstr "የU.S. መንግስት መረጃ እና አገልግሎቶችን ይፈልጋሉ? @link."
-
-msgid "Visit USA.gov"
-msgstr "USA.govን ይጎብኙ (በእንግሊዘኛ)"
-
-msgid "Agency identifier"
-msgstr "የኤጀንሲ መለያ"
-
-msgid "Agency description"
-msgstr "የኤጄንሲ መግለጫ"
-
-msgid "Important links"
-msgstr "ጠቃሚ አገናኞች"
-
-msgid "Government information and services"
-msgstr "የመንግስት መረጃ እና አገልግሎቶች"
-
-#contact
-msgid "in partnership with"
-msgstr "ጋር በመተባበር"
-
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
-msgstr "ከvote.gov ጋር አጋርነትን የሚያመለክት የU.S. ምርጫ እርዳታ ሰጪ ኮሚሽን አርማ"
-
-msgid "Follow vote.gov on"
-msgstr "Vote.govን በትዊተር ላይ ይከተሉ (በእንግሊዘኛ)"
-
-#search
-msgid "Search vote.gov"
-msgstr "Vote.gov ን ይፈልጉ"
 
 #state
 msgid "Register to vote in @state_name"
@@ -164,20 +107,6 @@ msgstr "ወደ ዋናው ይዘት ይለፉ"
 
 msgid "(in English)"
 msgstr "(በእንግሊዘኛ)"
-
-#banner
-msgid "Official government website"
-msgstr "ኦፊሴላዊ የመንግስት ድህረ ገጽ"
-
-#footer
-msgid "Email sign-up"
-msgstr "የኢሜል ምዝገባ (በእንግሊዘኛ)"
-
-msgid "Contact"
-msgstr "ተገናኝ"
-
-msgid "GSA logo"
-msgstr "GSA አርማ"
 
 #month and day names
 msgctxt "Long month name"

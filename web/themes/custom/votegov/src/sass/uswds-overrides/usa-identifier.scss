@@ -30,6 +30,11 @@
   margin-inline-end: 1rem;
 }
 
+.usa-identifier__logo {
+  @include u-width(6);
+  @include u-height(6);
+}
+
 .usa-identifier__required-links-list {
   padding-inline-start: 0;
 }
