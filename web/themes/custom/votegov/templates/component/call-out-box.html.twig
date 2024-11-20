@@ -19,12 +19,13 @@
  *
 #}
 
-{% if link_url %}
-  {% set link_markup ="<a href=\"#{link_url}\" data-state-ext=\"confirm-registration\">#{link_text}</a>"%}
+{% if link.url and link.title %}
+  {% set link_markup %}
+    {{ link(link.title, link.url, create_attribute().setAttribute(data.label, data.value)) }}
+  {% endset %}
 {% endif %}
 
 <div class="vote-call-out-box vote-call-out-box--offset">
   <h2>{{ heading }}</h2>
   {{ text | t({'@link': {'#markup': link_markup } | render }) }}
-  {{ data_label }}
 </div>

@@ -96,10 +96,14 @@
       {% include '@votegov/component/call-out-box.html.twig' with {
         'heading': check_registration.heading,
         'text': check_registration.text | render | trim,
-        'link_text': check_registration.link_text | render | trim | t({'@state_name': title_english}),
-        'link_url': confirm_registration_link,
-        'data_label' :  'data-state-ext',
-        'data_value': 'confirm-registration',
+        'link': {
+          'url': confirm_registration_link,
+          'title': check_registration.link_text | render | trim | t({'@state_name': title_english}),
+        },
+        'data': {
+          'label' :  'data-state-ext',
+          'value': 'confirm-registration',
+        },
       } %}
       {% endif %}
     </aside>
@@ -111,8 +115,14 @@
       {% include '@votegov/component/call-out-box.html.twig' with {
         'heading': check_registration.heading,
         'text': check_registration.text | render | trim,
-        'link_text': check_registration.link_text | render | trim | t({'@state_name': title_english}),
-        'link_url': confirm_registration_link
+        'link': {
+          'url': confirm_registration_link,
+          'title': check_registration.link_text | render | trim | t({'@state_name': title_english}),
+        },
+        'data': {
+          'label' :  'data-state-ext',
+          'value': 'confirm-registration',
+        },
       } %}
     {% endif %}
 
