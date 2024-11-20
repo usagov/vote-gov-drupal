@@ -34,7 +34,9 @@
     <div class="vote-info-card__button">
       {% include '@votegov/component/button.html.twig' with {
         'href': link.url,
-        'label': link.title
+        'label': link.title,
+        'data_label': data.label,
+        'data': data.value,
       } %}
     </div>
   {% endif %}

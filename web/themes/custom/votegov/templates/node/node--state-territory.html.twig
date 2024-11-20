@@ -97,7 +97,9 @@
         'heading': check_registration.heading,
         'text': check_registration.text | render | trim,
         'link_text': check_registration.link_text | render | trim | t({'@state_name': title_english}),
-        'link_url': confirm_registration_link
+        'link_url': confirm_registration_link,
+        'data_label' :  'data-state-ext',
+        'data_value': 'confirm-registration',
       } %}
       {% endif %}
     </aside>
@@ -135,6 +137,10 @@
     'link': {
       'url': registration_link,
       'title': link_title,
+    },
+    'data' : {
+      'label': 'data-state-ext',
+      'value': 'online-registration'
     }
   } %}
 {% endif %}
@@ -170,7 +176,7 @@
     {{ mail_registration.text }}
 
     {% if state_mail_pdf_link and mail_registration.link_text %}
-      <p>{{ link(mail_registration.link_text, state_mail_pdf_link) }}</p>
+      <p>{{ link(mail_registration.link_text, state_mail_pdf_link, create_attribute().setAttribute('data-state-ext', 'state-mail-registration')) }}</p>
     {% endif %}
   {% endset %}
 
