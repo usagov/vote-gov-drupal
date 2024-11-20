@@ -13,7 +13,6 @@ settings:
     items:
       - bold
       - italic
-      - underline
       - heading
       - style
       - removeFormat
@@ -22,7 +21,6 @@ settings:
       - numberedList
       - indent
       - outdent
-      - alignment
       - '|'
       - horizontalLine
       - link

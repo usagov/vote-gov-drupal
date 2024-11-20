@@ -8,25 +8,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
-# config.languages.languageName
-msgid "Russian"
-msgstr "Русский"
-
 # config.languages.params.select_language
 msgid "Select language"
 msgstr "Выберите Язык"
-
-#breadcrumb
-msgid "Home"
-msgstr "Главная страница"
-
-# config.languages.params.Owner
-msgid "@sitename in language"
-msgstr "@sitename по-русски"
-
-# config.languages.params.go_back
-msgid "Go back"
-msgstr "Вернитесь назад"
 
 # config.languages.params.last_updated
 msgid "Last updated:"
@@ -43,74 +27,6 @@ msgstr "Перейдите к основному содержанию"
 # config.languages.params.english_only
 msgid "(in English)"
 msgstr "(по-английски)"
-
-# data.translations.footer.vote_logo_alt_text
-msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgstr "Иллюстрация ящика для голосования, в который вставляется отмеченный галочкой бюллетень для обозначения действия при голосовании"
-
-# data.translations.footer.identifier_gsa_txt
-msgid "An official website of the @link."
-msgstr "Официальный веб-сайт @link"
-
-# data.translations.footer.identifier_gsa_txt__1
-msgid "General Services Administration"
-msgstr "Администрации обслуживания (по-английски)"
-
-# data.translations.footer.identifier_more_info
-msgid "Looking for U.S. government information and services? @link."
-msgstr "Ищете информацию и услуги правительства США? @link"
-
-# data.translations.footer.identifier_more_info__1
-msgid "Visit USA.gov"
-msgstr "Посетите USA.gov (по-английски)"
-
-# data.translations.footer.identifier_aria
-msgid "Agency identifier"
-msgstr "Идентификатор агенства"
-
-# data.translations.footer.identifier_gsa_txt_aria
-msgid "Agency description"
-msgstr "Описание агентства"
-
-# data.translations.footer.identifier_link_aria
-msgid "Important links"
-msgstr "Важные ссылки"
-
-# data.translations.footer.identifier_more_info_aria
-msgid "Government information and services"
-msgstr "Правительственная информация и услуги"
-
-# data.translations.footer.eac_text
-msgid "in partnership with"
-msgstr "в партнерстве с"
-
-# data.translations.footer.eac_logo_alt_text
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
-msgstr "Логотип Комиссии США по содействию выборам, который указывает на партнёрство с vote.gov"
-
-# data.translations.footer.twitter_text
-msgid "Follow vote.gov on"
-msgstr "Следите за новостями vote.gov в Твиттере (по-английски)"
-
-# data.translations.footer.section_sign_up
-msgid "Email sign-up"
-msgstr "Регистрация по электронной почте (по-английски)"
-
-# data.translations.footer.section_contact
-msgid "Contact"
-msgstr "Контакт"
-
-# data.translations.footer.gsa_logo_alt
-msgid "GSA logo"
-msgstr "Логотип GSA (Администрации общего обслуживания)"
-
-# data.translations.homepage.search_placeholder
-msgid "Search vote.gov"
-msgstr "Поиск vote.gov"
-
-# data.translations.homepage.section_banner
-msgid "Official government website"
-msgstr "Официальный правительственный сайт"
 
 # data.translations.register.heading
 msgid "Register to vote in @state_name"

@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: state_display_content
 label: 'State Display Content'
-revision: false
+revision: true
 description: null

@@ -73,6 +73,8 @@ $usagov-partner-breakpoint: 'tablet-lg';
 
   img {
     @include u-maxw('none');
+    @include u-width(6);
+    @include u-height(6);
   }
 }
 
