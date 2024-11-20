@@ -5,6 +5,7 @@
  */
 #}
 
+{% if view_mode != 'teaser' %}
 {# USAgov partnership component #}
 <div class="vote-usagov-partner">
   {# USA.gov Links #}
@@ -36,6 +37,7 @@
     </div>
   </div>
 </div>
+{% endif %}
 
 {# EAC Partnership component #}
 <div class="vote-eac-partner vote-block-padding-y-narrow" data-test="footerContact">
