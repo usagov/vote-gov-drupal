@@ -9,6 +9,8 @@ dependencies:
     - field.field.node.state_territory.field_check_registration
     - field.field.node.state_territory.field_confirm_registration_link
     - field.field.node.state_territory.field_content_version
+    - field.field.node.state_territory.field_date_in_person_deadline
+    - field.field.node.state_territory.field_date_online_deadline
     - field.field.node.state_territory.field_election_homepage_link
     - field.field.node.state_territory.field_g_in_person_deadline
     - field.field.node.state_territory.field_g_mail_postmarked_deadline
@@ -72,7 +74,7 @@ third_party_settings:
       label: 'Generic registration deadlines'
       region: content
       parent_name: group_deadlines
-      weight: 21
+      weight: 10
       format_type: fieldset
       format_settings:
         classes: ''
@@ -146,6 +148,8 @@ third_party_settings:
         required_fields: true
     group_deadlines:
       children:
+        - field_date_in_person_deadline
+        - field_date_online_deadline
         - field_in_person_deadline
         - field_online_deadline
         - field_mail_postmarked_deadline
@@ -212,7 +216,7 @@ third_party_settings:
       label: 'Version tracking'
       region: content
       parent_name: ''
-      weight: 11
+      weight: 12
       format_type: details_sidebar
       format_settings:
         classes: ''
@@ -242,7 +246,7 @@ third_party_settings:
         id: ''
         label_as_html: false
         formatter: closed
-        description: 'Entering content into these fields overrides the default state display content for this state/territory.'
+        description: "Entering content into these fields overrides the <strong>default state display content</strong> for this state/territory.\r\nIf you are looking to update the content that is shared across all states you can <a href=\"/admin/content/block/23\" target=\"_blank\">edit the default state display content</a>."
         required_fields: true
 id: node.state_territory.default
 targetEntityType: node
@@ -279,9 +283,11 @@ content:
     region: content
     settings:
       form_subfield_display:
-        - heading
-        - text
-        - link_text
+        heading: heading
+        text: text
+        link_text: link_text
+      form_subfield_text_help_text: 'Use the placeholder <strong>@link</strong> to dynamically add a link using the link text below and the dynamic link url on the state page.'
+      form_subfield_link_text_help_text: 'This text will be inserted dynamically using the placeholder in the text above.'
     third_party_settings: {  }
   field_confirm_registration_link:
     type: link_default
@@ -298,6 +304,18 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_date_in_person_deadline:
+    type: datetime_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date_online_deadline:
+    type: datetime_default
+    weight: 5
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_election_homepage_link:
     type: link_default
@@ -349,7 +367,7 @@ content:
     third_party_settings: {  }
   field_in_person_deadline:
     type: double_field
-    weight: 16
+    weight: 6
     region: content
     settings:
       first:
@@ -379,6 +397,8 @@ content:
         - heading
         - text
         - link_text
+      form_subfield_text_help_text: ''
+      form_subfield_link_text_help_text: ''
     third_party_settings: {  }
   field_in_state_name:
     type: string_textfield
@@ -397,13 +417,13 @@ content:
     third_party_settings: {  }
   field_mail_postmarked_deadline:
     type: datetime_default
-    weight: 18
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   field_mail_received_deadline:
     type: datetime_default
-    weight: 19
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -416,6 +436,8 @@ content:
         - heading
         - text
         - link_text
+      form_subfield_text_help_text: ''
+      form_subfield_link_text_help_text: ''
     third_party_settings: {  }
   field_mail_registration_link:
     type: link_default
@@ -442,7 +464,7 @@ content:
     third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
-    weight: 9
+    weight: 10
     region: content
     settings:
       sidebar: true
@@ -454,9 +476,11 @@ content:
     region: content
     settings:
       form_subfield_display:
-        - heading
-        - text
-        - link_text
+        heading: heading
+        text: text
+        link_text: 0
+      form_subfield_text_help_text: ''
+      form_subfield_link_text_help_text: ''
     third_party_settings: {  }
   field_more_info_link:
     type: link_default
@@ -472,9 +496,11 @@ content:
     region: content
     settings:
       form_subfield_display:
-        - heading
-        - text
-        - link_text
+        text: text
+        link_text: link_text
+        heading: 0
+      form_subfield_text_help_text: ''
+      form_subfield_link_text_help_text: "This text will display as a button that launches Vote.gov's internal form filler tool."
     third_party_settings: {  }
   field_nvrf_fields:
     type: field_nvrf_fields
@@ -498,7 +524,7 @@ content:
     third_party_settings: {  }
   field_online_deadline:
     type: double_field
-    weight: 17
+    weight: 7
     region: content
     settings:
       first:
@@ -528,6 +554,8 @@ content:
         - heading
         - text
         - link_text
+      form_subfield_text_help_text: ''
+      form_subfield_link_text_help_text: ''
     third_party_settings: {  }
   field_override_confirm_reg_link:
     type: link_default
@@ -615,9 +643,11 @@ content:
     region: content
     settings:
       form_subfield_display:
-        - heading
-        - text
-        - link_text
+        heading: heading
+        text: text
+        link_text: link_text
+      form_subfield_text_help_text: 'Use the placeholder <strong>@link</strong> to dynamically add a link using the link text below and the dynamic link url on the state page.'
+      form_subfield_link_text_help_text: 'This text will be inserted dynamically using the placeholder in the text above.'
     third_party_settings: {  }
   field_registration_type:
     type: options_buttons
@@ -635,26 +665,26 @@ content:
     third_party_settings: {  }
   field_updated_date:
     type: datetime_default
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 8
+    weight: 9
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 7
+    weight: 8
     region: content
     settings:
       display_label: true
@@ -678,7 +708,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }

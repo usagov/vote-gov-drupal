@@ -11,16 +11,8 @@ msgstr ""
 msgid "Primary navigation"
 msgstr "Navegación principal"
 
-#language selector
-msgid "Spanish"
-msgstr "Español"
-
 msgid "Select language"
 msgstr "Seleccione el idioma"
-
-#breadcrumb
-msgid "Home"
-msgstr "Página principal"
 
 msgid "Breadcrumb"
 msgstr "Ruta de navegación"
@@ -37,77 +29,8 @@ msgstr "Menú"
 msgid "Close"
 msgstr "Cerrar"
 
-#main
-msgid "@sitename in language"
-msgstr "@sitename en Español"
-
-msgid "Go back"
-msgstr "Volver"
-
 msgid "Last updated:"
 msgstr "Última actualización:"
-
-msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgstr "Ilustración del acto del voto donde una boleta marcada está siendo insertada en una urna"
-
-#identifier
-msgid "An official website of the @link."
-msgstr "Un sitio web oficial de la @link"
-
-msgid "General Services Administration"
-msgstr "Administración General de Servicios (GSA, en inglés)"
-
-msgid "Looking for U.S. government information and services? @link."
-msgstr "Información y servicios del gobierno de EE. UU. @link"
-
-msgid "Visit USA.gov"
-msgstr "USAGov en Español"
-
-#alt text for USA.gov logo
-msgid "USA.gov logo"
-msgstr "Logotipo de USA.gov"
-
-#aria-label for election links
-msgid "External election resources"
-msgstr "Recursos electorales externos"
-
-msgid "Agency identifier"
-msgstr "Identificador de la agencia"
-
-msgid "Agency description"
-msgstr "Descripción de la agencia"
-
-msgid "Important links"
-msgstr "Enlaces importantes"
-
-msgid "Government information and services"
-msgstr "Información y servicios del gobierno"
-
-#contact
-msgid "in partnership with"
-msgstr "en colaboración con"
-
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
-msgstr "En colaboración con la U.S. Election Assistance Commission"
-
-msgid "Follow vote.gov on"
-msgstr "Siga a vote.gov en X (en inglés)"
-
-#search
-msgid "Search vote.gov"
-msgstr "Busque en vote.gov"
-
-#search aira-label
-msgid "Search component"
-msgstr "Componente de búsqueda"
-
-#state tool aria label
-msgid "Register to vote selector tool"
-msgstr "Herramienta selector para registrarse para votar"
-
-#state list aria label
-msgid "States and territories list"
-msgstr "Lista de estados y territorios"
 
 msgid "Must be postmarked by @date"
 msgstr "Debe tener el sello postal a más tardar el @date"
@@ -124,30 +47,9 @@ msgstr "Ir al contenido principal"
 msgid "(in English)"
 msgstr "(en inglés)"
 
-#banner
-msgid "Official government website"
-msgstr "Sitio web oficial del gobierno"
-
 #U.S. flag alt text
 msgid "U.S. flag"
 msgstr "Bandera de Estados Unidos"
-
-#footer
-msgid "Visit our partner site to find more information about voting in the United States."
-msgstr "Visite el sitio web de nuestro colaborador para encontrar más información sobre las elecciones en Estados Unidos."
-
-msgid "Email sign-up"
-msgstr "Email para inscripción"
-
-#eac partner text
-msgid "Vote.gov is in partnership with"
-msgstr "Vote.gov es posible gracias a la colaboración de"
-
-msgid "Contact"
-msgstr "Contacto"
-
-msgid "GSA logo"
-msgstr "Logotipo de la GSA (Administración General de Servicios)"
 
 #month and day names
 msgctxt "Long month name"

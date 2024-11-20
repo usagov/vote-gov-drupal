@@ -8,71 +8,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
-#language selector
-msgid "Korean"
-msgstr "한국어"
-
 msgid "Select language"
 msgstr "언어 선택"
-
-#breadcrumb
-msgid "Home"
-msgstr "홈페이지"
-
-#main
-msgid "@sitename in language"
-msgstr "@sitename 한국어 "
-
-msgid "Go back"
-msgstr "이전 화면"
 
 msgid "Last updated:"
 msgstr "마지막 업데이트일자:"
 
-msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgstr "표시한 투표 용지를 유권자 투표 상자에 삽입하는 투표 과정을 보여주는 그림"
-
 msgid "state"
 msgstr "주"
 
-#identifier
-msgid "an official website of the @link."
-msgstr "@link의 공식 웹사이트"
-
-msgid "General Services Administration"
-msgstr "미국 연방 조달청 (영어로 제공)"
-
-msgid "Looking for U.S. government information and services? @link."
-msgstr "미국 정부 정보 및 서비스를 검색하고 싶으신가요? @link"
-
-msgid "Visit USA.gov"
-msgstr "USA.gov 사이트로 가기 (영어로 제공)"
-
-msgid "Agency identifier"
-msgstr "기관 식별자"
-
-msgid "Agency description"
-msgstr "기관 설명"
-
-msgid "Important links"
-msgstr "주요 사이트 링크"
-
-msgid "Government information and services"
-msgstr "정부 관련 정보 및 제공 서비스"
-
-#contact
-msgid "in partnership with"
-msgstr "협력 제공 기관"
-
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
-msgstr "협력 제공 기관: U.S. Election Assistance Commission"
-
-msgid "Follow vote.gov on"
-msgstr "vote.gov 사이트 트위터 팔로우하기 (영어로 제공)"
-
-#search
-msgid "Search vote.gov"
-msgstr "vote.gov 사이트 검색"
 
 msgid "Must be postmarked by @date"
 msgstr "반드시 @date 까지 소인이 찍혀야 합니다."
@@ -88,20 +32,6 @@ msgstr "메인 화면 바로 가기"
 
 msgid "(in English)"
 msgstr "(영어로 제공)"
-
-#banner
-msgid "Official government website"
-msgstr "공식 정부 웹사이트"
-
-#footer
-msgid "Email sign-up"
-msgstr "이메일 등록"
-
-msgid "Contact"
-msgstr "연락처"
-
-msgid "GSA logo"
-msgstr "GSA 로고"
 
 #month and day names
 msgctxt "Long month name"

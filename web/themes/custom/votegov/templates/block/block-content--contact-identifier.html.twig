@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block content: contact identifier.
+ */
+#}
+
+{# USWDS Default #}
+<div class="usa-identifier vote-block-padding-y-narrow">
+  {# GSA logo #}
+  <section class="usa-identifier__section usa-identifier__section--masthead padding-top-0">
+    <div class="usa-identifier__container">
+      {% if content.field_logo | render %}
+        <div class="usa-identifier__logos">
+          <span class="usa-identifier__logo">
+            {% set logo_attributes = content.field_logo.0['#item_attributes'] | merge({'class': 'usa-identifier__logo-img'}) %}
+            {{ content.field_logo | field_value | first | merge({'#item_attributes' : logo_attributes}) }}
+          </span>
+        </div>
+      {% endif %}
+      <section class="usa-identifier__identity">
+        <p class="usa-identifier__identity-domain">
+          {{ content.field_agency_domain | field_value }}
+        </p>
+        <div class="usa-identifier__identity-disclaimer">
+          {{ content.field_gsa_link | field_value }}
+        </div>
+      </section>
+    </div>
+  </section>
+  {# footer links #}
+  {{ drupal_entity('block', 'votegov_footernavigation') }}
+  {# USAgov identifier #}
+  <section class="usa-identifier__section usa-identifier__section--usagov">
+    <div class="usa-identifier__container">
+      {{ content.field_usagov_link | field_value }}
+    </div>
+  </section>
+
+  {% if language == 'en' %}
+    <a class="usa-button vote-touchpoints--button" target="_blank" title="{{ 'External link opens in new window' | t }}"
+       href="https://touchpoints.app.cloud.gov/touchpoints/c169d3b2/submit"
+       extlinkjs-ignore>{{ 'How can we improve vote.gov?' | t }}</a>
+  {% endif %}
+</div>

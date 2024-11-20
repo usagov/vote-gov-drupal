@@ -10,6 +10,8 @@ dependencies:
     - field.field.node.state_territory.field_check_registration
     - field.field.node.state_territory.field_confirm_registration_link
     - field.field.node.state_territory.field_content_version
+    - field.field.node.state_territory.field_date_in_person_deadline
+    - field.field.node.state_territory.field_date_online_deadline
     - field.field.node.state_territory.field_election_homepage_link
     - field.field.node.state_territory.field_g_in_person_deadline
     - field.field.node.state_territory.field_g_mail_postmarked_deadline
@@ -74,6 +76,8 @@ hidden:
   field_check_registration: true
   field_confirm_registration_link: true
   field_content_version: true
+  field_date_in_person_deadline: true
+  field_date_online_deadline: true
   field_election_homepage_link: true
   field_g_in_person_deadline: true
   field_g_mail_postmarked_deadline: true

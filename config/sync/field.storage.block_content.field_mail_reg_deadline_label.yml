@@ -1,11 +1,11 @@
-uuid: 14e9c77d-7da0-40a9-8e2d-9c849de56a8c
+uuid: 7ce748eb-d002-4143-b5db-f7c3ecbda2a5
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
-id: block_content.field_description
-field_name: field_description
+id: block_content.field_mail_reg_deadline_label
+field_name: field_mail_reg_deadline_label
 entity_type: block_content
 type: string
 settings:
