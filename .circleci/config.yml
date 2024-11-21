@@ -75,7 +75,7 @@ jobs:
             cd testing
             npm install
             npm run cy:pipeline:axe
-          when: true
+          when: always
       - run:
           name: "Cypress - axe tests - rerun"
           command: |
@@ -280,7 +280,7 @@ jobs:
             cd testing
             npm install
             npm run cy:pipeline:proofer
-          when: true
+          when: always
       - run:
           name: "Cypress External Links - rerun"
           command: |
