@@ -126,7 +126,7 @@
       } %}
     {% endif %}
 
-     {# Election Date #}
+    {# Election Date #}
     {% if (election_date is not empty) and (election_text is not empty) %}
       {% set election_date_text = election_text['#text'] | t({'@date': election_date | render }) %}
       <div class="vote-date--election">{{ election_date_text }}</div>
@@ -192,7 +192,7 @@
 
   {% include '@votegov/component/info-card.html.twig' with {
     'heading': mail_registration.heading,
-    'body': mail_body | render | trim | t({'@state_mail_deadline': bymail_deadline ,'@state_name': title_english}),
+    'body': mail_body | render | t({'@state_mail_deadline': bymail_deadline | render ,'@state_name': title_english}),
     'footer': mail_footer
   } %}
 {# No mail registration content #}
