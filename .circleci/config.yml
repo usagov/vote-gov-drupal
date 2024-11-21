@@ -75,7 +75,7 @@ jobs:
             cd testing
             npm install
             npm run cy:pipeline:axe
-          when: always
+          when: true
       - run:
           name: "Cypress - axe tests - rerun"
           command: |
@@ -280,7 +280,7 @@ jobs:
             cd testing
             npm install
             npm run cy:pipeline:proofer
-          when: always
+          when: true
       - run:
           name: "Cypress External Links - rerun"
           command: |
@@ -351,7 +351,7 @@ workflows:
           filters:
             branches:
               only:
-                - stage
+                - test
           type: approval
           requires:
             - post-deploy-upkeep
@@ -359,7 +359,7 @@ workflows:
           filters:
             branches:
               only:
-                - stage
+                - test
           requires:
             - cypress-approval
   deploy-prod-workflow:
