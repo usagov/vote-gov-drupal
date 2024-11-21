@@ -25,14 +25,14 @@
 {% if content.field_mail_postmarked_deadline | render %}
   {% set postmarked_deadline = 'Must be postmarked by @date' | t({'@date': content.field_mail_postmarked_deadline.0 | render}) %}
 {% else %}
-  {% set postmarked_deadline = content.field_g_mail_postmarked_deadline | field_value %}
+  {% set postmarked_deadline = content.field_g_mail_postmarked_deadline | field_value | render %}
 {% endif %}
 
 {# Set received deadline with fallback #}
 {% if content.field_mail_received_deadline | render %}
   {% set received_deadline = 'Must be received by @date' | t({'@date': content.field_mail_received_deadline.0 | render}) %}
 {% else %}
-  {% set received_deadline = content.field_g_mail_received_deadline | field_value %}
+  {% set received_deadline = content.field_g_mail_received_deadline | field_value | render %}
 {% endif %}
 
 {# Set the deadline with fallback, prioritizing postmarked deadline. #}
@@ -192,7 +192,7 @@
 
   {% include '@votegov/component/info-card.html.twig' with {
     'heading': mail_registration.heading,
-    'body': mail_body | render | t({'@state_mail_deadline': bymail_deadline | render ,'@state_name': title_english}),
+    'body': mail_body | render | trim | t({'@state_mail_deadline': bymail_deadline,'@state_name': title_english}),
     'footer': mail_footer
   } %}
 {# No mail registration content #}
