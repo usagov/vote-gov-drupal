@@ -15,12 +15,16 @@ settings:
       - italic
       - link
       - bulletedList
+      - sourceEditing
   plugins:
     ckeditor5_list:
       properties:
         reversed: false
         startIndex: false
       multiBlock: true
+    ckeditor5_sourceEditing:
+      allowed_tags:
+        - '<a data-state-ext>'
     editor_advanced_link_link:
       enabled_attributes:
         - aria-label
