@@ -15,7 +15,7 @@
 		{# setting link text to be in inline hyper link #}
 		{% if registration_not_needed.link_text %}
 			{% set link_markup %}
-			<a href="{{ more_info_link }}">{{ registration_not_needed.link_text | render | trim | t({'@state_name': title_english}) }}</a>
+			<a href="{{ more_info_link }}" data-state-ext="state-website-no-registration">{{ registration_not_needed.link_text | render | trim | t({'@state_name': title_english}) }}</a>
 			{% endset %}
 		{% endif %}
 		{# setting body text to have palceholder for both state name and link #}
