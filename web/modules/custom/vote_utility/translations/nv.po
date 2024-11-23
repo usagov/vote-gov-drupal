@@ -12,10 +12,6 @@ msgstr ""
 msgid "Select language"
 msgstr "Saad choid77['88[7g77"
 
-# config.languages.params.last_updated
-msgid "Last updated:"
-msgstr "Ak44'di n1zk'33z:"
-
 # config.languages.params.ext_link_title
 msgid "External link opens in new window"
 msgstr "T['00'd66' link-7g77 ts4ts-' 1niid7g77 22'1n11yiil'88h"
@@ -27,12 +23,6 @@ msgstr "&yis77 baa hane'7gi nin7[keed"
 # config.languages.params.english_only
 msgid "(in English)"
 msgstr "&lt;Bilag1ana k'ehj7&gt;"
-
-msgid "Must be postmarked by @date"
-msgstr "Naaltsoos nin1h1jeehd00 bik'ini'7t'32 doolee[ @date"
-
-msgid "Must be received by @date"
-msgstr "Kwe'4 yoo[k11[go n7didooltsos @date"
 
 # data.translations.months.january
 msgctxt "Long month name"

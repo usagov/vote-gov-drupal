@@ -11,15 +11,6 @@ msgstr ""
 msgid "Select language"
 msgstr "Ulu nakmiighhu"
 
-msgid "Last updated:"
-msgstr "Kingulighmi Nutaghtekat:"
-
-msgid "Must be postmarked by @date"
-msgstr "Tuyumayaghqaguq @date"
-
-msgid "Must be received by @date"
-msgstr "Kaasimayaghqaguq @date"
-
 msgid "Skip to main content"
 msgstr "Naghughaghten pighpigaghmun"
 

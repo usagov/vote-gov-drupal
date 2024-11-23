@@ -16,10 +16,6 @@ msgstr "Selecionar a língua"
 msgid "On this page"
 msgstr "Nesta página"
 
-# config.languages.params.last_updated
-msgid "Last updated:"
-msgstr "Última Atualização:"
-
 # config.languages.params.ext_link_title
 msgid "External link opens in new window"
 msgstr "Links externos abrem novas páginas web"
@@ -31,12 +27,6 @@ msgstr "Saltar para o conteúdo principal"
 # config.languages.params.english_only
 msgid "(in English)"
 msgstr "(em inglês)"
-
-msgid "Must be postmarked by @date"
-msgstr "Deve estar carimbado até o @date"
-
-msgid "Must be received by @date"
-msgstr "Deve ser recebido até o @date"
 
 # data.translations.months.january
 msgctxt "Long month name"
@@ -129,9 +119,6 @@ msgstr "sábado"
 msgid "Close"
 msgstr "Fechar"
 
-msgid "U.S. flag"
-msgstr "Bandeira dos EUA"
-
 msgid "Menu"
 msgstr "Menu"
 
@@ -141,24 +128,9 @@ msgstr "Trilha de navegação"
 msgid "Primary navigation"
 msgstr "Navegação primária"
 
-msgid "Introduction"
-msgstr "Introdução"
-
 #voter guide cards
 msgid "Learn more from the Federal Voting Assistance Program (FVAP)."
 msgstr "Saiba mais sobre o Programa Federal de Assistência ao Voto."
-
-msgid "How to register and update your registration"
-msgstr "Como se cadastrar e atualizar seu cadastro"
-
-msgid "Start or update your online registration"
-msgstr "Iniciar ou atualizar seu registro online"
-
-msgid "Voter registration deadlines are for the November 05, 2024 election."
-msgstr "Os prazos de registro de eleitores são para a eleição de 05 de novembro de 2024."
-
-msgid "Find state and local election dates."
-msgstr "Encontre as datas das eleições estaduais e locais."
 
 msgid "Know your voting rights"
 msgstr "Conheça seus direitos de voto"

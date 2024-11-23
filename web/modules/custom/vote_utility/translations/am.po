@@ -11,15 +11,6 @@ msgstr ""
 msgid "Select language"
 msgstr "ቋንቋ ይምረጡ"
 
-msgid "Last updated:"
-msgstr "መጨረሻ የተሻሻለው፦"
-
-msgid "Must be postmarked by @date"
-msgstr "@date የፓስታ ማህተም ያረፈበት መሆን አለበት"
-
-msgid "Must be received by @date"
-msgstr "@date መድረስ አለበት"
-
 msgid "External link opens in new window"
 msgstr "የውጭ አገናኙ አዲስ ድህረ ገጽ ይከፍታል"
 

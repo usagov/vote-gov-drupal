@@ -11,15 +11,6 @@ msgstr ""
 msgid "Select language"
 msgstr "Lựa chọn ngôn ngữ"
 
-msgid "Last updated:"
-msgstr "Cập nhật lần cuối:"
-
-msgid "Must be postmarked by @date"
-msgstr "Cần được đánh dấu bưu điện trước @date"
-
-msgid "Must be received by @date"
-msgstr "Phải được nhận trước @date"
-
 msgid "External link opens in new window"
 msgstr "Liên kết bên ngoài mở cửa sổ mới"
 

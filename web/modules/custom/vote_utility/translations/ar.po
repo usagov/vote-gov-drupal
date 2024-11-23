@@ -16,10 +16,6 @@ msgstr "اختر اللغة"
 msgid "Breadcrumb"
 msgstr "تتبع مسارك"
 
-# config.languages.params.last_updated
-msgid "Last updated:"
-msgstr "آخر تحديث:"
-
 # config.languages.params.ext_link_title
 msgid "External link opens in new window"
 msgstr "رابط خارجي يفتح نافذة جديدة"
@@ -31,12 +27,6 @@ msgstr "تخطي إلى المحتوى الرئيسي"
 # config.languages.params.english_only
 msgid "(in English)"
 msgstr "(باللغة الإنجليزية)"
-
-msgid "Must be postmarked by @date"
-msgstr "يجب ختمه بالبريد بحلول @date"
-
-msgid "Must be received by @date"
-msgstr "يجب أن يتم استلامه بحلول @date"
 
 # data.translations.months.january
 msgctxt "Long month name"
@@ -134,13 +124,5 @@ msgstr "إغلاق"
 msgid "Menu"
 msgstr "القائمة"
 
-#U.S. flag alt text
-msgid "U.S. flag"
-msgstr "علم الولايات المتحدة"
-
 msgid "Primary navigation"
 msgstr "التصفح الأساسي"
-
-#state page
-msgid "Start or update your registration online"
-msgstr "ابدأ أو قُم بتحديث سجلك الانتخابي على الإنترنت"

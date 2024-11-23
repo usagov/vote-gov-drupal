@@ -15,15 +15,6 @@ msgstr "选择语言"
 msgid "On this page"
 msgstr "本页内容"
 
-msgid "Last updated:"
-msgstr "最近更新时间："
-
-msgid "Must be postmarked by @date"
-msgstr "必须在 @date 星期六之前加盖邮戳"
-
-msgid "Must be received by @date"
-msgstr "必须在 @date 之前收到"
-
 msgid "External link opens in new window"
 msgstr "外部链接打开新窗口"
 
@@ -103,14 +94,8 @@ msgstr "sábado"
 msgid "Sunday"
 msgstr "星期日"
 
-msgid "U.S. government information and services"
-msgstr "美国政府提供的信息和服务"
-
 msgid "Close"
 msgstr "关闭"
-
-msgid "U.S. flag"
-msgstr "美国国旗"
 
 msgid "Menu"
 msgstr "菜单"
@@ -120,9 +105,6 @@ msgstr "面包屑导航"
 
 msgid "Primary navigation"
 msgstr "主导航"
-
-msgid "Introduction"
-msgstr "简介"
 
 # Temporary military and overseas voter cards
 msgid "Voting as a military service member"

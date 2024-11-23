@@ -12,10 +12,6 @@ msgstr ""
 msgid "Select language"
 msgstr "言語を選択"
 
-# config.languages.params.last_updated
-msgid "Last updated:"
-msgstr "最終更新日："
-
 # config.languages.params.ext_link_title
 msgid "External link opens in new window"
 msgstr "外部リンクは新しいウィンドウで開かれます。"
@@ -27,12 +23,6 @@ msgstr "本文へジャンプ"
 # config.languages.params.english_only
 msgid "(in English)"
 msgstr "（英語）"
-
-msgid "Must be postmarked by @date"
-msgstr "@date 消印有効"
-
-msgid "Must be received by @date"
-msgstr "@date 必着"
 
 # data.translations.months.january
 msgctxt "Long month name"

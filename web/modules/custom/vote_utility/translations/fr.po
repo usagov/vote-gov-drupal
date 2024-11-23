@@ -27,10 +27,6 @@ msgstr "Sur cette page"
 msgid "Breadcrumb"
 msgstr "Ruta de navegación"
 
-# config.languages.params.last_updated
-msgid "Last updated:"
-msgstr "Dernière mise à jour:"
-
 # config.languages.params.ext_link_title
 msgid "External link opens in new window"
 msgstr "Lyen ekstèn lan ap louvri yon nouvo fenèt"
@@ -42,16 +38,6 @@ msgstr "Passer au contenu principal"
 # config.languages.params.english_only
 msgid "(in English)"
 msgstr "(en anglais)"
-
-# data.translations.U.S._flag_alt_text
-msgid "U.S. flag"
-msgstr "Drapeau américain"
-
-msgid "Must be postmarked by @date"
-msgstr "Au plus tard @date avec un cachet de la poste faisant foi"
-
-msgid "Must be received by @date"
-msgstr "Doit être reçu au plus tard @date"
 
 # Temporary military and overseas voter cards
 msgid "Voting as a military service member"
