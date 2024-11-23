@@ -21,22 +21,6 @@
 {# Deadlines with fallbacks. #}
 {% set online_deadline = content.field_online_deadline | field_value | default(content.field_g_online_deadline | field_value) %}
 {% set inperson_deadline = content.field_in_person_deadline | field_value | default(content.field_g_in_person_deadline | field_value) %}
-{# Set postmarked deadline with fallback #}
-{% if content.field_mail_postmarked_deadline | render %}
-  {% set postmarked_deadline = 'Must be postmarked by @date' | t({'@date': content.field_mail_postmarked_deadline.0 | render}) %}
-{% else %}
-  {% set postmarked_deadline = content.field_g_mail_postmarked_deadline | field_value | render %}
-{% endif %}
-
-{# Set received deadline with fallback #}
-{% if content.field_mail_received_deadline | render %}
-  {% set received_deadline = 'Must be received by @date' | t({'@date': content.field_mail_received_deadline.0 | render}) %}
-{% else %}
-  {% set received_deadline = content.field_g_mail_received_deadline | field_value | render %}
-{% endif %}
-
-{# Set the deadline with fallback, prioritizing postmarked deadline. #}
-{% set bymail_deadline = postmarked_deadline | default(received_deadline) %}
 
 {# State content with fallbacks. #}
 {# Get default state display content from the block type. #}
@@ -52,6 +36,30 @@
 {% set election_date = content.field_election_date.0 | default(state_display_content.field_election_date.0) %}
 {% set election_text = content.field_election_text.0 | default(state_display_content.field_election_text.0) %}
 {% set no_online_registration = content.field_no_online_registration.0 | default(state_display_content.field_no_online_registration.0) %}
+{% set last_updated_label = state_display_content.field_last_updated_label | field_value %}
+{% set postmarked_mail_text = state_display_content.field_postmarked_mail_text | field_value | render | trim %}
+{% set received_mail_text = state_display_content.field_received_mail_text | field_value | render | trim %}
+{% set online_deadline_label = state_display_content.field_online_reg_deadline_label | field_value %}
+{% set mail_deadline_label = state_display_content.field_mail_reg_deadline_label | field_value %}
+{% set inperson_deadline_label = state_display_content.field_person_reg_deadline_label | field_value %}
+{% set show_digital_form_link = state_display_content.field_enable_digital_form_link | field_value | render | trim == '1' %}
+
+{# Set postmarked deadline with fallback #}
+{% if content.field_mail_postmarked_deadline | render %}
+  {% set postmarked_deadline = postmarked_mail_text | t({'@date': content.field_mail_postmarked_deadline.0 | render}) %}
+{% else %}
+  {% set postmarked_deadline = content.field_g_mail_postmarked_deadline | field_value | render %}
+{% endif %}
+
+{# Set received deadline with fallback #}
+{% if content.field_mail_received_deadline | render %}
+  {% set received_deadline = received_mail_text | t({'@date': content.field_mail_received_deadline.0 | render}) %}
+{% else %}
+  {% set received_deadline = content.field_g_mail_received_deadline | field_value | render %}
+{% endif %}
+
+{# Set the deadline with fallback, prioritizing postmarked deadline. #}
+{% set bymail_deadline = postmarked_deadline | default(received_deadline) %}
 
 {# Registration types #}
 {% set registration_types = content.field_registration_type | field_value | column('#markup') %}
@@ -122,16 +130,21 @@
 
 {# setting online registration variables #}
 {% set online_registration_vars = has_online ? online_registration : no_online_registration %}
-{% set body_vars = has_online ? {'@state_online_deadline': online_deadline | render, '@state_name': title_english} : {'@state_name': title_english} %}
 
 {% if online_registration_vars is not empty %}
-  {% set body = online_registration_vars.text['#markup'] | t(body_vars) %}
+  {% set online_body %}
+    {% if online_deadline %}
+      <p><strong>{{ online_deadline_label }}</strong> {{ online_deadline }}</p>
+    {% endif %}
+
+    {{ online_registration_vars.text }}
+  {% endset %}
   {% if online_registration_vars.link_text %}
     {% set link_title = online_registration_vars.link_text['#markup'] | t({'@state_name': title_english}) %}
   {% endif %}
   {% include '@votegov/component/info-card.html.twig' with {
     'heading': online_registration_vars.heading,
-    'body': body,
+    'body': online_body | render | trim | t({'@state_name': title_english}),
     'link': {
       'url': registration_link,
       'title': link_title,
@@ -149,7 +162,7 @@
 
     {{ nvrf_details.text['#markup'] | t({'@state_name': title_english}) }}
 
-    {% if nvrf_details.link_text %}
+    {% if nvrf_details.link_text and show_digital_form_link %}
       {# Set path to form dynamically using page route. #}
       {% set form_route = language!= 'es'? 'vote_nvrf.nvrf_page' : 'vote_nvrf.nvrf_page_es' %}
       {% set state_name = currentnode.label | lower | replace({' ': '-'}) %}
@@ -167,6 +180,10 @@
 {# Mail registration content #}
 {% if has_mail and (mail_registration is not empty) %}
   {% set mail_body %}
+    {% if bymail_deadline %}
+      <p><strong>{{ mail_deadline_label }}</strong> {{ bymail_deadline }}</p>
+    {% endif %}
+
     {{ mail_registration.text }}
 
     {% if state_mail_pdf_link and mail_registration.link_text %}
@@ -176,7 +193,7 @@
 
   {% include '@votegov/component/info-card.html.twig' with {
     'heading': mail_registration.heading,
-    'body': mail_body | render | trim | t({'@state_mail_deadline': bymail_deadline,'@state_name': title_english}),
+    'body': mail_body | render | trim | t({'@state_name': title_english}),
     'footer': mail_footer
   } %}
 {# No mail registration content #}
@@ -200,13 +217,18 @@
 {% endif %}
 
     {% if has_in_person and (inperson_registration is not empty) %}
-      {% set body = inperson_registration.text['#markup'] | t({'@state_in-person_deadline': inperson_deadline | render }) %}
+      {% set inperson_body %}
+        {% if inperson_deadline %}
+          <p><strong>{{ inperson_deadline_label }}</strong> {{ inperson_deadline }}</p>
+        {% endif %}
+        {{ inperson_registration.text }}
+      {% endset %}
       {% if inperson_registration.link_text %}
         {% set link_title = inperson_registration.link_text['#markup'] | t({'@state_name': title_english }) %}
       {% endif %}
       {% include '@votegov/component/info-card.html.twig' with {
         'heading': inperson_registration.heading,
-        'body': body,
+        'body': inperson_body | render | trim | t({'@state_name': title_english}),
           'link': {
             'url': more_info_link,
             'title': link_title,
@@ -226,7 +248,7 @@
   {% if content.field_updated_date | field_value is not empty %}
   <p class="vote-date--updated">
     {# Striptags and raw filters were added to accomodate Navajo date formats. #}
-    {{'Last updated:' | t }} {{ content.field_updated_date | render | replace(t_numbers[language].numbers | default([])) | striptags('<span>') | raw }}
+    {{ last_updated_label }} {{ content.field_updated_date | render | replace(t_numbers[language].numbers | default([])) | striptags('<span>') | raw }}
   </p>
   {% endif %}
 </div>
