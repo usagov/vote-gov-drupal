@@ -27,6 +27,7 @@
 {% set no_online_registration = content.field_no_online_registration.0 | default(state_display_content.field_no_online_registration.0) %}
 {% set postmarked_text = state_display_content.field_postmarked_mail_text.0 %}
 {% set received_text = state_display_content.field_received_mail_text.0 %}
+{% set last_updated_text = state_display_content.field_last_updated_label.0 %}
 
 {# Links with fallbacks. #}
 {% set more_info_link = content.field_override_more_info_link | field_value | default(content.field_more_info_link | field_value) | render | trim %}
@@ -228,7 +229,7 @@
   {% if content.field_updated_date | field_value is not empty %}
   <p class="vote-date--updated">
     {# Striptags and raw filters were added to accomodate Navajo date formats. #}
-    {{'Last updated:' | t }} {{ content.field_updated_date | render | replace(t_numbers[language].numbers | default([])) | striptags('<span>') | raw }}
+    {{ last_updated_text }} {{ content.field_updated_date | render | replace(t_numbers[language].numbers | default([])) | striptags('<span>') | raw }}
   </p>
   {% endif %}
 </div>
