@@ -19,8 +19,8 @@
 {% set state_mail_pdf_link = content.field_override_mail_reg_link | field_value | default(content.field_mail_registration_link | field_value) | render | trim %}
 
 {# Deadlines with fallbacks. #}
-{% set online_deadline = content.field_online_deadline | field_value | default(content.field_g_online_deadline | field_value) %}
-{% set inperson_deadline = content.field_in_person_deadline | field_value | default(content.field_g_in_person_deadline | field_value) %}
+{% set online_deadline = content.field_date_online_deadline | field_value | default(content.field_g_online_deadline | field_value) %}
+{% set inperson_deadline = content.field_date_in_person_deadline | field_value | default(content.field_g_in_person_deadline | field_value) %}
 {# Set postmarked deadline with fallback #}
 {% if content.field_mail_postmarked_deadline | render %}
   {% set postmarked_deadline = 'Must be postmarked by @date' | t({'@date': content.field_mail_postmarked_deadline.0 | render}) %}

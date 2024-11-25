@@ -98,6 +98,24 @@ content:
     third_party_settings: {  }
     weight: 15
     region: content
+  field_date_in_person_deadline:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: long_date
+    third_party_settings: {  }
+    weight: 33
+    region: content
+  field_date_online_deadline:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: long_date
+    third_party_settings: {  }
+    weight: 34
+    region: content
   field_election_homepage_link:
     type: link
     label: hidden
@@ -393,8 +411,6 @@ hidden:
   body: true
   field_address_location_inst: true
   field_content_version: true
-  field_date_in_person_deadline: true
-  field_date_online_deadline: true
   field_identification_inst: true
   field_mailing_address_inst: true
   field_metatags: true
