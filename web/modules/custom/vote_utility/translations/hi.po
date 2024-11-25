@@ -15,15 +15,6 @@ msgstr "भाषा चुनें"
 msgid "On this page"
 msgstr "इस पेज पर"
 
-msgid "Last updated:"
-msgstr "नवीनतम अपडेट:"
-
-msgid "Must be postmarked by @date"
-msgstr "@date तक पोस्टमार्क होना चाहिए"
-
-msgid "Must be received by @date"
-msgstr "@date तक पहुँच जाना चाहिए"
-
 msgid "External link opens in new window"
 msgstr "बाहरी लिंक नई विंडो खोलता है"
 

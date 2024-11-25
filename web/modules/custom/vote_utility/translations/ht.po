@@ -19,10 +19,6 @@ msgstr "Kwout pen"
 msgid "Close"
 msgstr "Fèmen"
 
-# config.languages.params.last_updated
-msgid "Last updated:"
-msgstr "Dènye mizajou:"
-
 # config.languages.params.ext_link_title
 msgid "External link opens in new window"
 msgstr "Lyen ekstèn lan ap louvri yon nouvo fenèt"
@@ -34,12 +30,6 @@ msgstr "Ale nan kontni prensipal la"
 # config.languages.params.english_only
 msgid "(in English)"
 msgstr "(ann Anglè)"
-
-msgid "Must be postmarked by @date"
-msgstr "Dwe gen so lapòs pou pita nan dat k ap @date"
-
-msgid "Must be received by @date"
-msgstr "Dwe rive pou pita @date"
 
 # data.translations.months.january
 msgctxt "Long month name"
@@ -138,10 +128,6 @@ msgstr "Jwenn plis enfòmasyon nan Pwogram Asistans Federal pou Vote (FVAP ann A
 
 msgid "Voting as a U.S. citizen from outside the U.S."
 msgstr "Vote kòm sitwayen ameriken andeyò peyi Etazini"
-
-#U.S. flag alt text
-msgid "U.S. flag"
-msgstr "Drapo Etazini"
 
 #main menu button
 msgid "Menu"

@@ -11,15 +11,6 @@ msgstr ""
 msgid "Select language"
 msgstr "Pumili ng wika"
 
-msgid "Last updated:"
-msgstr "Huling Na-update:"
-
-msgid "Must be postmarked by @date"
-msgstr "Dapat na naka-postmark ng @date"
-
-msgid "Must be received by @date"
-msgstr "Dapat matanggap ng @date"
-
 msgid "External link opens in new window"
 msgstr "Ang panlabas na link ay magbubukas ng bagong window"
 
