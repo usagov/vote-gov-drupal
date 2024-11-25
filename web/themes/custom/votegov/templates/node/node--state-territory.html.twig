@@ -11,6 +11,23 @@
 {% set state_name = label | field_value | render %}
 {% set accepts_nvrf = node.field_accepts_nvrf.value == 1 %}
 
+{# Get default state display content from the block type. #}
+{% set state_display_content = drupal_entity('block_content', 23) | children %}
+{# State content with fallbacks. #}
+{% set registration_not_needed = content.field_registration_not_needed.0 | default(state_display_content.field_registration_not_needed.0) %}
+{% set online_registration = content.field_online_registration.0 | default(state_display_content.field_online_registration.0) %}
+{% set military_overseas_registration = content.field_military_and_overseas_regi.0 | default(state_display_content.field_military_and_overseas_regi.0) %}
+{% set mail_registration = content.field_mail_registration.0 | default(state_display_content.field_mail_registration.0) %}
+{% set no_mail_registration = content.field_no_mail_registration.0 | default(state_display_content.field_no_mail_registration.0) %}
+{% set nvrf_details = content.field_nvrf_details.0 | default(state_display_content.field_nvrf_details.0) %}
+{% set inperson_registration = content.field_in_person_registration.0 | default(state_display_content.field_in_person_registration.0) %}
+{% set check_registration = content.field_check_registration.0 | default(state_display_content.field_check_registration.0) %}
+{% set election_date = content.field_election_date.0 | default(state_display_content.field_election_date.0) %}
+{% set election_text = content.field_election_text.0 | default(state_display_content.field_election_text.0) %}
+{% set no_online_registration = content.field_no_online_registration.0 | default(state_display_content.field_no_online_registration.0) %}
+{% set postmarked_text = state_display_content.field_postmarked_mail_text.0 %}
+{% set received_text = state_display_content.field_received_mail_text.0 %}
+
 {# Links with fallbacks. #}
 {% set more_info_link = content.field_override_more_info_link | field_value | default(content.field_more_info_link | field_value) | render | trim %}
 {% set confirm_registration_link = content.field_override_confirm_reg_link | field_value | default(content.field_confirm_registration_link | field_value) | render | trim %}
@@ -23,35 +40,20 @@
 {% set inperson_deadline = content.field_in_person_deadline | field_value | default(content.field_g_in_person_deadline | field_value) %}
 {# Set postmarked deadline with fallback #}
 {% if content.field_mail_postmarked_deadline | render %}
-  {% set postmarked_deadline = 'Must be postmarked by @date' | t({'@date': content.field_mail_postmarked_deadline.0 | render}) %}
+  {% set postmarked_deadline = postmarked_text['#context'].value | t({'@date': content.field_mail_postmarked_deadline.0 | render}) %}
 {% else %}
   {% set postmarked_deadline = content.field_g_mail_postmarked_deadline | field_value | render %}
 {% endif %}
 
 {# Set received deadline with fallback #}
 {% if content.field_mail_received_deadline | render %}
-  {% set received_deadline = 'Must be received by @date' | t({'@date': content.field_mail_received_deadline.0 | render}) %}
+  {% set received_deadline = received_text['#context'].value | t({'@date': content.field_mail_received_deadline.0 | render}) %}
 {% else %}
   {% set received_deadline = content.field_g_mail_received_deadline | field_value | render %}
 {% endif %}
 
 {# Set the deadline with fallback, prioritizing postmarked deadline. #}
 {% set bymail_deadline = postmarked_deadline | default(received_deadline) %}
-
-{# State content with fallbacks. #}
-{# Get default state display content from the block type. #}
-{% set state_display_content = drupal_entity('block_content', 23) | children %}
-{% set registration_not_needed = content.field_registration_not_needed.0 | default(state_display_content.field_registration_not_needed.0) %}
-{% set online_registration = content.field_online_registration.0 | default(state_display_content.field_online_registration.0) %}
-{% set military_overseas_registration = content.field_military_and_overseas_regi.0 | default(state_display_content.field_military_and_overseas_regi.0) %}
-{% set mail_registration = content.field_mail_registration.0 | default(state_display_content.field_mail_registration.0) %}
-{% set no_mail_registration = content.field_no_mail_registration.0 | default(state_display_content.field_no_mail_registration.0) %}
-{% set nvrf_details = content.field_nvrf_details.0 | default(state_display_content.field_nvrf_details.0) %}
-{% set inperson_registration = content.field_in_person_registration.0 | default(state_display_content.field_in_person_registration.0) %}
-{% set check_registration = content.field_check_registration.0 | default(state_display_content.field_check_registration.0) %}
-{% set election_date = content.field_election_date.0 | default(state_display_content.field_election_date.0) %}
-{% set election_text = content.field_election_text.0 | default(state_display_content.field_election_text.0) %}
-{% set no_online_registration = content.field_no_online_registration.0 | default(state_display_content.field_no_online_registration.0) %}
 
 {# Registration types #}
 {% set registration_types = content.field_registration_type | field_value | column('#markup') %}
