@@ -17,7 +17,6 @@ dependencies:
     - field.field.node.state_territory.field_g_mail_received_deadline
     - field.field.node.state_territory.field_g_online_deadline
     - field.field.node.state_territory.field_identification_inst
-    - field.field.node.state_territory.field_in_person_deadline
     - field.field.node.state_territory.field_in_person_registration
     - field.field.node.state_territory.field_in_state_name
     - field.field.node.state_territory.field_is_state
@@ -34,7 +33,6 @@ dependencies:
     - field.field.node.state_territory.field_nvrf_fields
     - field.field.node.state_territory.field_nvrf_last_updated_date
     - field.field.node.state_territory.field_of_state_name
-    - field.field.node.state_territory.field_online_deadline
     - field.field.node.state_territory.field_online_registration
     - field.field.node.state_territory.field_override_confirm_reg_link
     - field.field.node.state_territory.field_override_election_hp_link
@@ -53,7 +51,6 @@ dependencies:
     - node.type.state_territory
   module:
     - datetime
-    - double_field
     - link
     - metatag
     - text
@@ -183,28 +180,6 @@ content:
     third_party_settings: {  }
     weight: 25
     region: content
-  field_in_person_deadline:
-    type: double_field_unformatted_list
-    label: hidden
-    settings:
-      first:
-        format_type: long_date
-        link: false
-        hidden: false
-        decimal_separator: .
-        thousand_separator: ''
-        scale: 2
-      second:
-        format_type: medium
-        link: false
-        hidden: false
-        decimal_separator: .
-        thousand_separator: ''
-        scale: 2
-      inline: true
-    third_party_settings: {  }
-    weight: 14
-    region: content
   field_in_person_registration:
     type: vote_fields_state_content_default
     label: above
@@ -329,28 +304,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 22
-    region: content
-  field_online_deadline:
-    type: double_field_unformatted_list
-    label: hidden
-    settings:
-      first:
-        format_type: long_date
-        link: false
-        hidden: false
-        decimal_separator: .
-        thousand_separator: ''
-        scale: 2
-      second:
-        format_type: medium
-        link: false
-        hidden: false
-        decimal_separator: .
-        thousand_separator: ''
-        scale: 2
-      inline: true
-    third_party_settings: {  }
-    weight: 8
     region: content
   field_online_registration:
     type: vote_fields_state_content_default
