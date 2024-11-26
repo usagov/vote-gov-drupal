@@ -11,15 +11,6 @@ msgstr ""
 msgid "Select language"
 msgstr "ជ្រើសរើសភាសា"
 
-msgid "Last updated:"
-msgstr "បានធ្វើបច្ចុប្បន្នភាពលើកចុងក្រោយ៖"
-
-msgid "Must be postmarked by @date"
-msgstr "ត្រូវតែបានបិទតែមប្រៃសណីយ៍ត្រឹមថ្ @date"
-
-msgid "Must be received by @date"
-msgstr "ត្រូវតែបានទទួលត្រឹមថ្ @date"
-
 msgid "External link opens in new window"
 msgstr "តំណខាងក្រៅបើកផ្ទាំងបង្ឣួចថ្មី"
 

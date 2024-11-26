@@ -11,18 +11,8 @@ msgstr ""
 msgid "Select language"
 msgstr "언어 선택"
 
-msgid "Last updated:"
-msgstr "마지막 업데이트일자:"
-
 msgid "state"
 msgstr "주"
-
-
-msgid "Must be postmarked by @date"
-msgstr "반드시 @date 까지 소인이 찍혀야 합니다."
-
-msgid "Must be received by @date"
-msgstr "반드시 @date 까지 접수되어야 합니다."
 
 msgid "External link opens in new window"
 msgstr "외부 링크 사이트는 새 창에서 연결됩니다"

@@ -11,15 +11,6 @@ msgstr ""
 msgid "Select language"
 msgstr "ভাষা নির্বাচন করুন"
 
-msgid "Last updated:"
-msgstr "সর্বশেষ সংষ্করণ"
-
-msgid "Must be postmarked by @date"
-msgstr "পোস্ট চিহ্ন করা আবশ্যক @date"
-
-msgid "Must be received by @date"
-msgstr "@date এর মধ্যে অবশ্যই গ্রহণ করতে হবে"
-
 msgid "External link opens in new window"
 msgstr "বাহ্যিক লিঙ্ক নতুন উইন্ডো খোলে"
 

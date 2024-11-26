@@ -12,10 +12,6 @@ msgstr ""
 msgid "Select language"
 msgstr "Выберите Язык"
 
-# config.languages.params.last_updated
-msgid "Last updated:"
-msgstr "Последнее обновление:"
-
 # config.languages.params.ext_link_title
 msgid "External link opens in new window"
 msgstr "Внешняя ссылка открывает новое окно"
@@ -27,12 +23,6 @@ msgstr "Перейдите к основному содержанию"
 # config.languages.params.english_only
 msgid "(in English)"
 msgstr "(по-английски)"
-
-msgid "Must be postmarked by @date"
-msgstr "Должен иметь почтовый штемпель до @date"
-
-msgid "Must be received by @date"
-msgstr "Должен быть получен до @date"
 
 # data.translations.months.january
 msgctxt "Long month name"

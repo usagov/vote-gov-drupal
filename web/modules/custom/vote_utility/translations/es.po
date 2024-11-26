@@ -29,15 +29,6 @@ msgstr "Menú"
 msgid "Close"
 msgstr "Cerrar"
 
-msgid "Last updated:"
-msgstr "Última actualización:"
-
-msgid "Must be postmarked by @date"
-msgstr "Debe tener el sello postal a más tardar el @date"
-
-msgid "Must be received by @date"
-msgstr "Debe ser recibido a más tardar el @date"
-
 msgid "External link opens in new window"
 msgstr "El enlace externo se abre en una nueva ventana"
 
@@ -46,10 +37,6 @@ msgstr "Ir al contenido principal"
 
 msgid "(in English)"
 msgstr "(en inglés)"
-
-#U.S. flag alt text
-msgid "U.S. flag"
-msgstr "Bandera de Estados Unidos"
 
 #month and day names
 msgctxt "Long month name"
@@ -130,9 +117,6 @@ msgstr "Obtenga más información del Programa Federal de Asistencia para Votar 
 
 msgid "Voting as a U.S. citizen from outside the U.S."
 msgstr "Votar como ciudadano en el extranjero"
-
-msgid "Secondary navigation"
-msgstr "navegación secundaria"
 
 msgid "Know your voting rights"
 msgstr "Conozca su derecho al voto"

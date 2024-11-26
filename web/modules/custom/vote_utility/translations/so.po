@@ -12,10 +12,6 @@ msgstr ""
 msgid "Select language"
 msgstr "Ka dooro luuqadda"
 
-# config.languages.params.last_updated
-msgid "Last updated:"
-msgstr "waqtiga lala socodsiiyay:"
-
 # config.languages.params.ext_link_title
 msgid "External link opens in new window"
 msgstr "Xiriirka dibadda ayaa furaya daaqad cusub"
@@ -27,12 +23,6 @@ msgstr "u gudub dulucda"
 # config.languages.params.english_only
 msgid "(in English)"
 msgstr "(oo af Ingiriis ah)"
-
-msgid "Must be postmarked by @date"
-msgstr "Waa in boostadu qabataa @date"
-
-msgid "Must be received by @date"
-msgstr "Waa in la helaa ugu dambayn @date"
 
 # data.translations.months.january
 msgctxt "Long month name"
