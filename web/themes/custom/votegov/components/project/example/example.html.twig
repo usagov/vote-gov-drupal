@@ -1,0 +1,24 @@
+{#
+/**
+  * Example
+  *
+  * Available variables:
+  * - heading: String value.
+  * - text: String value.
+  * - bullets: Array of string values.
+**/
+#}
+
+{{ attach_library('project/example') }}
+
+<h2 class="example-heading">{{ heading }}</h2>
+
+{{ text }}
+
+{% if bullets | length %}
+  <ul>
+    {% for bullet in bullets %}
+      <li>{{ bullet }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
