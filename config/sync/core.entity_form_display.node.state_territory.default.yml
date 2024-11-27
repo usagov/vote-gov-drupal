@@ -17,7 +17,6 @@ dependencies:
     - field.field.node.state_territory.field_g_mail_received_deadline
     - field.field.node.state_territory.field_g_online_deadline
     - field.field.node.state_territory.field_identification_inst
-    - field.field.node.state_territory.field_in_person_deadline
     - field.field.node.state_territory.field_in_person_registration
     - field.field.node.state_territory.field_in_state_name
     - field.field.node.state_territory.field_is_state
@@ -34,7 +33,6 @@ dependencies:
     - field.field.node.state_territory.field_nvrf_fields
     - field.field.node.state_territory.field_nvrf_last_updated_date
     - field.field.node.state_territory.field_of_state_name
-    - field.field.node.state_territory.field_online_deadline
     - field.field.node.state_territory.field_online_registration
     - field.field.node.state_territory.field_override_confirm_reg_link
     - field.field.node.state_territory.field_override_election_hp_link
@@ -55,7 +53,6 @@ dependencies:
   module:
     - content_moderation
     - datetime
-    - double_field
     - field_group
     - link
     - media_library
@@ -365,29 +362,6 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_in_person_deadline:
-    type: double_field
-    weight: 6
-    region: content
-    settings:
-      first:
-        type: datetime
-        label_display: block
-        size: 30
-        placeholder: ''
-        label: Ok
-        cols: 10
-        rows: 5
-      second:
-        type: textfield
-        label_display: block
-        size: 8
-        placeholder: '11:59 PM'
-        label: Ok
-        cols: 10
-        rows: 5
-      inline: true
-    third_party_settings: {  }
   field_in_person_registration:
     type: vote_fields_state_content
     weight: 17
@@ -521,29 +495,6 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  field_online_deadline:
-    type: double_field
-    weight: 7
-    region: content
-    settings:
-      first:
-        type: datetime
-        label_display: block
-        size: 30
-        placeholder: ''
-        label: Ok
-        cols: 10
-        rows: 5
-      second:
-        type: textfield
-        label_display: block
-        size: 8
-        placeholder: '11:59 PM'
-        label: Ok
-        cols: 10
-        rows: 5
-      inline: true
     third_party_settings: {  }
   field_online_registration:
     type: vote_fields_state_content
