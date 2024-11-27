@@ -418,8 +418,8 @@ link-validation-workflow:
   downsync-restore:
     when:
       and:
-        - equal: [ test, << pipeline.parameters.restore >> ]
-        - equal: [ test, << pipeline.git.branch>> ]
+        - equal: [ 'test', << pipeline.parameters.restore >> ]
+        - equal: [ 'test', << pipeline.git.branch>> ]
       #matches:
         #pattern: "^test|dev|stage$"
         #value: << pipeline.parameters.restore >>
