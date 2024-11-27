@@ -43,7 +43,7 @@ function vote_utility_form_node_form_alter(&$form, FormStateInterface $form_stat
   if (!in_array($form_id, $non_content_bundles)) {
     if (isset($form['title']) && $form['title']['#access']) {
       $form['title']['widget'][0]['value']['#description'] = [
-        '#markup' => 'This field value will display on the page as a heading level 1. <a href="https://www.w3.org/WAI/tutorials/page-structure/headings/" target="_blank">WCAG heading level guide</a>'
+        '#markup' => 'This field value will display on the page as a heading level 1. <a href="https://www.w3.org/WAI/tutorials/page-structure/headings/" target="_blank">WCAG heading level guide</a>',
       ];
 
       // Provide alternative help for a landing page.
