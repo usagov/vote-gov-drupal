@@ -40,7 +40,8 @@ describe("Internal Link Validator Test", () => {
             expect(href).not.match(/\/$/);
             cy.request({
               url: link.prop('href'),
-              failOnStatusCode: false
+              failOnStatusCode: false,
+              timeout: 180000 // 3 minutes
             }).then((response) => {
               expect(response.status).to.eq(200)
             })

@@ -10,4 +10,4 @@ PATH=$PATH:/home/vcap/app/php/bin:/home/vcap/app/vendor/drush/drush
 echo "Running command: '$(echo ${command} | cut -d' ' -f1,2)'..."
 {
   cf ssh ${application} -c "PATH=${PATH}; ${command}"
-} >/dev/null 2>&1
+}

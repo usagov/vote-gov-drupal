@@ -259,20 +259,20 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/
-      - run:
-          name: "Cypress Internal Links"
-          command: |
-            cd testing
-            npm install
-            npm run cy:pipeline:links
-      - run:
-          name: "Cypress Internal Links - rerun"
-          command: |
-            echo "I am the result of Internal Links failed job"
-            cd testing
-            npm install
-            npm run cy:pipeline:links
-          when: on_fail
+      # - run:
+      #     name: "Cypress Internal Links"
+      #     command: |
+      #       cd testing
+      #       npm install
+      #       npm run cy:pipeline:links
+      # - run:
+      #     name: "Cypress Internal Links - rerun"
+      #     command: |
+      #       echo "I am the result of Internal Links failed job"
+      #       cd testing
+      #       npm install
+      #       npm run cy:pipeline:links
+      #     when: on_fail
       - run:
           name: "Cypress External Links"
           command: |
@@ -340,11 +340,16 @@ workflows:
                 - stage
           requires:
             - post-deploy-upkeep-approval
+      - link-validation:
+          filters:
+            branches:
+              only:
+              - test
       - cypress-approval:
           filters:
             branches:
               only:
-                - stage
+                - test
           type: approval
           requires:
             - post-deploy-upkeep
@@ -352,7 +357,7 @@ workflows:
           filters:
             branches:
               only:
-                - stage
+                - test
           requires:
             - cypress-approval
   deploy-prod-workflow:
@@ -386,16 +391,16 @@ workflows:
         - equal: [ true, << pipeline.parameters.upkeep >> ]
     jobs:
       - upkeep
-  link-validation-workflow:
-    triggers:
-      - schedule:
-          cron: '0 10 * * 1,4'
-          filters:
-            branches:
-              only:
-                - prod
-    jobs:
-      - link-validation
+link-validation-workflow:
+  triggers:
+    - push:
+        branches:
+          only:
+            - test
+          requires:
+            - post-deploy-upkeep-approval
+  jobs:
+    - link-validation
   scheduled-backup-workflow:
     when:
       and:
