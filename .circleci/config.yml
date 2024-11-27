@@ -411,18 +411,20 @@ link-validation-workflow:
   downsync-backup:
     when:
       and:
-        - equal:  [api, << pipeline.trigger_source >> ]
-        - or:
-          - equal: [ prod, << pipeline.parameters.backup >> ]
+        - equal: [ prod, << pipeline.parameters.backup >> ]
+        - equal: [ prod, << pipeline.git.branch >> ]
     jobs:
       - downsync-backup
   downsync-restore:
     when:
       and:
-        - equal:  [api, << pipeline.trigger_source >> ]
         - or:
           - equal: [ dev, << pipeline.parameters.restore >> ]
           - equal: [ stage, << pipeline.parameters.restore >> ]
           - equal: [ test, << pipeline.parameters.restore >> ]
+        - not:
+          - or:
+            - equal: [ prod, << pipeline.parameters.restore >> ]
+            - equal: [ prod, << pipeline.git.branch >> ]
     jobs:
       - downsync-restore

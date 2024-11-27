@@ -1,6 +1,14 @@
 /// <reference types="Cypress" />
 
 const allPages = require("../../fixtures/site-pages.json");
+// ! IMPORTANT: When testing locally, comment out the LIVE_URL and use the LOCAL_URL listed below for testing purposes. This is necessary because our pipeline testing targets the live site. Remember to revert this change before committing, ensuring the LIVE_URL is set as the base.
+// const baseUrl = "http://vote-gov.lndo.site/";
+
+const baseUrl = "https://vote.gov";
+const excludedLinks = [
+  'http://vote-gov.lndo.site/',
+  'https://vote.gov'
+];
 
 describe("Internal Link Validator Test", () => {
   const singlePage =
@@ -25,10 +33,11 @@ describe("Internal Link Validator Test", () => {
             }
           : {},
       () => {
-        cy.visit({
-          url: page.route,
-        });
+        cy.visit(`${baseUrl}${page.route}`);
           cy.get("a[href^='/']").each(link => {
+            const href = link.prop("href");
+            if (excludedLinks.indexOf(href) === -1) {
+            expect(href).not.match(/\/$/);
             cy.request({
               url: link.prop('href'),
               failOnStatusCode: false,
@@ -36,6 +45,7 @@ describe("Internal Link Validator Test", () => {
             }).then((response) => {
               expect(response.status).to.eq(200)
             })
+          }
         })
       }
     );
