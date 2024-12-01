@@ -6,7 +6,6 @@
   --usa-banner-body-text: #{color('base-darkest')};
   --usa-banner-text: #{color('base-darkest')};
   @include u-position('relative');
-  @include u-z(300);
   background-color: $bg-light;
 
   [data-theme="contrast"] & {
@@ -48,6 +47,9 @@
 
 .usa-banner__header-text {
   color: var(--usa-banner-text);
+  a::before{
+    display: none;
+      }
 }
 
 .usa-banner__button-text {
