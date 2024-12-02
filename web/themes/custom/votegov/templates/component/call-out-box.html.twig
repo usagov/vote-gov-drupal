@@ -19,9 +19,9 @@
  *
 #}
 
-{% if link_url %}
+{% if link.url and link.title %}
   {% set link_markup %}
-    <a href={{ link_url }}>{{ link_text }}</a>
+    {{ link(link.title, link.url, create_attribute().setAttribute(data.label, data.value)) }}
   {% endset %}
 {% endif %}
 
