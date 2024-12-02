@@ -11,11 +11,6 @@
 
 {% include '@votegov/component/theme-switcher.html.twig' %}
 
-{# load navajo font #}
-{% if language == 'nv' %}
-  {{ attach_library('votegov/navajo-font') }}
-{% endif %}
-
 {# Government banner component #}
   {{ drupal_entity('block_content', '1') }}
 
