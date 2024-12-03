@@ -29,3 +29,4 @@ tag_trim_maxlength:
   metatag_maxlength_twitter_cards_description: null
   metatag_maxlength_twitter_cards_title: null
 tag_scroll_max_height: ''
+tag_trim_end: '|.,-:;/+&([{"'''

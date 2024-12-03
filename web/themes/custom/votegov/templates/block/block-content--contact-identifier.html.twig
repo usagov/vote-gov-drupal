@@ -38,8 +38,7 @@
   </section>
 
   {% if language == 'en' %}
-    <a class="usa-button vote-touchpoints--button" target="_blank" title="{{ 'External link opens in new window' | t }}"
-       href="https://touchpoints.app.cloud.gov/touchpoints/c169d3b2/submit"
-       extlinkjs-ignore>{{ 'How can we improve vote.gov?' | t }}</a>
+      <button class="usa-button vote-touchpoints--button" id="vote-touchpoints--button" title="{{ 'How can we improve vote.gov?' | t }}" data-test="touchpointsBtn">{{ 'How can we improve vote.gov?' | t }}</button>
+      <script src="https://touchpoints.app.cloud.gov/touchpoints/c169d3b2.js" async></script>
   {% endif %}
 </div>
