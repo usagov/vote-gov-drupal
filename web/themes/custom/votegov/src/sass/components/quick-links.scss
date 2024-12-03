@@ -49,11 +49,15 @@
 
     @include after {
       padding-inline-start: 1rem;
-      background: url('../../img/svg/arrow-white.svg') no-repeat right center;
+      background: url('../../img/svg/arrow-white.svg') no-repeat center center;
+      width: 1rem;
+      height: 1rem;
+      display: inline-block;
+
       [dir="rtl"] & {
-      background: url('../../img/svg/arrow-white-rtl.svg') no-repeat left center;
-      padding-inline-start: 1rem;
+      transform: scaleX(-1);
       }
+
     }
   }
 
