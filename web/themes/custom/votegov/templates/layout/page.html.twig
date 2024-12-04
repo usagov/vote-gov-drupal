@@ -44,11 +44,6 @@
 
 {% include '@votegov/component/theme-switcher.html.twig' %}
 
-{# load navajo font #}
-{% if language == 'nv' %}
-  {{ attach_library('votegov/navajo-font') }}
-{% endif %}
-
 {# set a variable if the node has a featured image #}
 {% set node_image = node.field_media.value | length %}
 {% if node_image %}
