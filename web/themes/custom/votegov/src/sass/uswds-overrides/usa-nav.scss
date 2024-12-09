@@ -289,8 +289,12 @@
     @include grid-container;
 
     > section {
-      @include u-padding-bottom(4);
+      @include u-padding-bottom(2);
       border-top: 1px solid $bg-light-medium;
+    }
+
+    #vote-touchpoints--button {
+      @include u-margin-bottom(2);
     }
   }
   @include at-media('tablet-lg') {
