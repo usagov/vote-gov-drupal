@@ -44,11 +44,6 @@
 
 {% include '@votegov/component/theme-switcher.html.twig' %}
 
-{# load navajo font #}
-{% if language == 'nv' %}
-  {{ attach_library('votegov/navajo-font') }}
-{% endif %}
-
 {# set a variable if the node has a featured image #}
 {% set node_image = node.field_media.value | length %}
 {% if node_image %}
@@ -75,11 +70,6 @@
 
 {# Government banner component #}
   {{ drupal_entity('block_content', '1') }}
-
-{# If the current page has been marked as outdated and it's the front page #}
-{% if is_front and node.content_translation_outdated.value == 1 %}
-  {{ drupal_entity('block_content', '20') }}
-{% endif %}
 
 {# Sitewide alert component #}
   {{ drupal_view('sitewide_alert', 'block_1') }}
