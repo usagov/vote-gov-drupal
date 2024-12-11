@@ -48,8 +48,14 @@
     @include u-text('no-underline');
 
     @include after {
-      @include u-padding-left(2);
-      background: url('../../img/svg/arrow-white.svg') no-repeat right center;
+      padding-inline-start: 0.75rem;
+      background: url('../../img/svg/arrow-white.svg') no-repeat center center;
+      margin-inline-start: 0.25rem;
+
+      [dir="rtl"] & {
+        background-image: url('../../img/svg/arrow-white-rtl.svg');
+      }
+
     }
   }
 
