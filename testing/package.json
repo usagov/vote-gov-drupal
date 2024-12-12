@@ -24,7 +24,8 @@
     "cy:pipeline:frontEnd": "cypress run --spec 'cypress/e2e/frontEndTests/**/*' --config-file pipeline.config.js",
     "cy:pipeline:axe": "cypress run --spec 'cypress/e2e/accessibility/**/*' --config-file pipeline.config.js",
     "cy:pipeline:links": "cypress run --spec 'cypress/e2e/internalLinks/**/*' --config-file pipeline.config.js",
-    "cy:pipeline:proofer": "cypress run --spec 'cypress/e2e/externalLinks/**/*' --config-file pipeline.config.js"
+    "cy:pipeline:proofer": "cypress run --spec 'cypress/e2e/externalLinks/**/*' --config-file pipeline.config.js",
+    "cy:pipeline:hpRedirect": "cypress run --spec 'cypress/e2e/redirect/**/*' --config-file pipeline.config.js"
   },
   "repository": {
     "type": "git",
