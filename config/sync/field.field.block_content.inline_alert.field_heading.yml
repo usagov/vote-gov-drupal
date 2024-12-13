@@ -10,7 +10,7 @@ field_name: field_heading
 entity_type: block_content
 bundle: inline_alert
 label: Heading
-description: ''
+description: 'Write clear, succinct, and helpful headings that describe the content coming immediately after it. <a href="https://www.w3.org/WAI/tutorials/page-structure/headings/" target="_blank">WCAG heading level guide</a>'
 required: false
 translatable: true
 default_value: {  }

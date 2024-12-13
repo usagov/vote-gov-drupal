@@ -80,6 +80,7 @@ final class StateContentWidget extends WidgetBase {
       '#title' => $this->t('Heading'),
       '#default_value' => $items[$delta]->heading ?? NULL,
       '#access' => in_array('heading', $settings['form_subfield_display']),
+      '#description' => $this->t('Write clear, succinct, and helpful headings that describe the content coming immediately after it. <a href="https://www.w3.org/WAI/tutorials/page-structure/headings/" target="_blank">WCAG heading level guide</a>'),
     ];
 
     $element['text'] = [
