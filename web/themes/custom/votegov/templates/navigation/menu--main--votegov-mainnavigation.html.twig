@@ -35,13 +35,11 @@ We call a macro which calls itself to render the full tree.
   {{ menus.menu_links(items, attributes, 0, 'basic-mega-nav-section-') }}
   <div class="usa-nav__secondary">
     {{ drupal_entity('block_content', 2) }}
-  </div>
-  {% if language == 'en' %}
-      <div class="usa-nav__secondary">
+     {% if language == 'en' %}
         <button class="usa-button" id="vote-touchpoints--button" title="{{ 'How can we improve vote.gov?' | t }}" data-test="touchpointsBtn">{{ 'How can we improve vote.gov?' | t }}</button>
         <script src="https://touchpoints.app.cloud.gov/touchpoints/c169d3b2.js" async></script>
-      </div>
-  {% endif %}
+    {% endif %}
+  </div>
 </div>
 </nav>
 

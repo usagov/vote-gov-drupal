@@ -312,6 +312,10 @@
     [data-scale="x-large"] & {
       bottom: $nav-bottom - 0.5rem;
     }
+
+    #vote-touchpoints--button {
+      @include u-display('none');
+    }
   }
 }
 
