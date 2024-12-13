@@ -12,7 +12,7 @@ field_name: field_link
 entity_type: paragraph
 bundle: quicklinks
 label: Link
-description: ''
+description: "Use clear, descriptive text for links that explain their purpose, avoiding generic phrases like 'click here' or 'read more."
 required: false
 translatable: true
 default_value: {  }

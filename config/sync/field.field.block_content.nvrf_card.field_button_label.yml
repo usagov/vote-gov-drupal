@@ -10,7 +10,7 @@ field_name: field_button_label
 entity_type: block_content
 bundle: nvrf_card
 label: 'Button Label'
-description: ''
+description: "Use clear, descriptive text for links that explain their purpose, avoiding generic phrases like 'click here' or 'read more."
 required: false
 translatable: true
 default_value: {  }
