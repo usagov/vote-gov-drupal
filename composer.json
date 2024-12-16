@@ -106,6 +106,9 @@
         "patches": {
             "drupal/double_field": {
                 "Support input filters on text formats (original issue: https://www.drupal.org/node/2091587)": "patches/double_field/2091587-text_long-60_2.patch"
+            },
+            "drupal/tome": {
+              "Paths are exported multiple times with path counts > 1: https://www.drupal.org/project/tome/issues/3478842": "patches/tome/tomePathCountFixes.patch"
             }
         },
         "drupal-scaffold": {
