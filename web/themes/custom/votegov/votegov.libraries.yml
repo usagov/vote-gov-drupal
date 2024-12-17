@@ -64,3 +64,11 @@ to_top:
       minified: true
       attributes:
         defer: true
+
+touchpoints_click:
+  version: VERSION
+  js:
+    dist/js/touchpoints-click.js:
+      minified: true
+      attributes:
+        defer: true
