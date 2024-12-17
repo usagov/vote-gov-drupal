@@ -19,12 +19,6 @@ uswdsjs:
       attributes:
         defer: true
 
-navajo-font:
-  version: VERSION
-  css:
-    theme:
-      fonts/navajo-font/stylesheet.css: { minified: true }
-
 roboto:
   version: VERSION
   css:
