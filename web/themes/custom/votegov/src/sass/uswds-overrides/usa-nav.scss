@@ -293,7 +293,7 @@
       border-top: 1px solid $bg-light-medium;
     }
 
-    #vote-touchpoints--button {
+    #vote-touchpoints-mobile--button {
       @include u-margin-bottom(2);
     }
   }
@@ -313,7 +313,7 @@
       bottom: $nav-bottom - 0.5rem;
     }
 
-    #vote-touchpoints--button {
+    #vote-touchpoints-mobile--button {
       @include u-display('none');
     }
   }
