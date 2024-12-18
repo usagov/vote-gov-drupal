@@ -12,8 +12,8 @@
   @include u-margin(0);
 
   @include at-media-max('tablet') {
-    @include u-radius(0);
-    @include u-width('full');
+    @include u-margin(3);
+    width: calc(100% - 3rem);
   }
 
   @include at-media('tablet') {
@@ -40,4 +40,10 @@
 
 .fba-modal-dialog {
   overflow: hidden;
+}
+
+#vote-touchpoints-mobile--button {
+  @include at-media('tablet-lg') {
+    @include u-display('none');
+  }
 }

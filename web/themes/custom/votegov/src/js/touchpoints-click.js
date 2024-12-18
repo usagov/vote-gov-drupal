@@ -1,5 +1,11 @@
-const button = document.getElementById("vote-touchpoints-mobile--button");
+/*
+  Second button interaction for triggering Touchpoints modal.
+ */
 
-button.addEventListener("click", function() {
-  document.getElementById('vote-touchpoints--button').click();
-});
+(() => {
+  const button = document.getElementById("vote-touchpoints-mobile--button");
+
+  button.addEventListener("click", function () {
+    document.getElementById('vote-touchpoints--button').click();
+  });
+})();
