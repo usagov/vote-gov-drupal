@@ -288,11 +288,17 @@
     @include u-margin(0);
     @include grid-container;
 
-    > section {
-      @include u-padding-bottom(4);
+    @include before {
+      @include u-display('block');
       border-top: 1px solid $bg-light-medium;
     }
+
+    > * {
+      @include u-margin-y(3);
+      @include u-display('block');
+    }
   }
+
   @include at-media('tablet-lg') {
     [dir="rtl"] & {
       right: unset;

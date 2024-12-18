@@ -35,6 +35,10 @@ We call a macro which calls itself to render the full tree.
   {{ menus.menu_links(items, attributes, 0, 'basic-mega-nav-section-') }}
   <div class="usa-nav__secondary">
     {{ drupal_entity('block_content', 2) }}
+     {% if language == 'en' %}
+        <button class="usa-button" id="vote-touchpoints-mobile--button" title="{{ 'How can we improve vote.gov?' | t }}" data-test="touchpointsBtn">{{ 'How can we improve vote.gov?' | t }}</button>
+        {{ attach_library('votegov/touchpoints_click') }}
+    {% endif %}
   </div>
 </div>
 </nav>
