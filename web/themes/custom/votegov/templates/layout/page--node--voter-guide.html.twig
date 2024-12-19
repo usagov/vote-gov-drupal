@@ -1,5 +1,6 @@
 {% extends "page.html.twig" %}
 {% set title = drupal_title() %}
+{% set excludedLanguages = ['ar', 'am', 'bn', 'zh-hans', 'zh', 'hi', 'ja', 'km', 'ru'] %}
 
 {% block main %}
   <main role="main" id="main-content">
@@ -9,7 +10,8 @@
       'media': drupal_field('field_media', 'node', node.id(), {type: 'media_thumbnail', settings: {image_style: 'scaled_lg' }}) | field_value,
       'variant': 'dark'
     } %}
-    <div class="vote-main-content-row vote-block-margin-y--narrow grid-container usa-in-page-nav-container">
+    <div class="vote-main-content-row vote-block-margin-y--narrow grid-container {% if language not in excludedLanguages %} usa-in-page-nav-container {% endif %}">
+{% if language not in excludedLanguages %}
       <aside
         class="usa-in-page-nav"
         data-main-content-selector=".usa-in-page-nav-container"
@@ -19,6 +21,7 @@
         data-root-margin="48px 0px -90% 0px"
         data-threshold="1"
       ></aside>
+      {% endif %}
       <div class="vote-page-content vote-page-content--alt">
         {{ page.content }}
       </div>
