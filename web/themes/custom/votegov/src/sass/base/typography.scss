@@ -105,8 +105,3 @@ hr, p + hr {
   @include u-margin-y(3);
   border-bottom: 1px solid $bg-light-medium;
 }
-
-.nonvfont,
-.nonvfont * {
-  @include u-font-family('sans');
-}
