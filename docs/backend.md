@@ -48,6 +48,9 @@ Finally, use `git status` and `git diff {config_file.yml}` to reveal and review 
 ### Contrib
 I've included some of the non-standard Drupal contrib modules and their use below. To see all the modules in the system review the modules dashboard page located at `/admin/modules`. These modules are maintained by the Drupal community and have regular updates for enhancements and security patches.
 
+#### Admin Toolbar
+Enhances the default Drupal Toolbar by adding drop-down menus for quicker access.
+
 #### Allowed formats
 Adds the ability to restrict wysiwyg editor options per field.
 
@@ -55,10 +58,16 @@ Adds the ability to restrict wysiwyg editor options per field.
 Fulfills security requirement to log user out when inactive for a designated period of time.
 
 #### Block content template
-Adds a template hook for `block_content` entities
+Adds a template hook for `block_content` entities.
+
+#### CKEditor 5 Embedded Content
+Allows embedding external content using CKEditor 5.
 
 #### Config ignore & Config split
 Modules that allow organization/modification of application configuration per environment.
+
+#### Devel
+Offers developer tools, including debugging and performance utilities.
 
 #### Disable language
 Adds the ability to disable a language completely from anonymous users.
@@ -66,14 +75,29 @@ Adds the ability to disable a language completely from anonymous users.
 #### Double field
 Creates a two value field such as the accordion field on the Accordion group paragraph.
 
+#### Easy Breadcrumb
+Generates breadcrumbs automatically based on paths and page titles.
+
+#### Editor Advanced Link
+Extends the link dialog in the editor to allow additional attributes.
+
+#### Editoria11y
+Improves accessibility within the editorial interface.
+
+#### Entity Reference Revisions
+Enables revision support for entity reference fields.
+
 #### External auth & SAML auth
 Fulfills security requirement to provide SSO integration configuration.
 
-#### Migrate plus & Migrate tools
-Provides additional migration function for migration scripts.
+#### Field Group
+Groups fields together in forms and displays.
 
 #### File delete
 Adds the ability to delete files from the system.
+
+#### Focal Point
+Adds a focal point selector to image fields for better cropping.
 
 #### Language switcher extended
 Hide links for missing pages translations.
@@ -84,23 +108,74 @@ Adds attributes to link field such as on the Registration form selector block.
 #### Log stdout
 Fulfills security requirement to send Drupal log messages to the stdout for Cloud.gov.
 
+#### Menu Block
+Creates configurable blocks to display menu trees.
+
+#### Menu Multilingual
+Improves multilingual support for menus.
+
+#### Metatag
+Adds metadata tags for SEO and social sharing.
+
+#### Migrate plus & Migrate tools
+Provides additional migration function for migration scripts.
+
 #### New Relic RPM
 Adds configuration options for sending logs to New Relic.
 
 #### Node revision delete
 Adds a limit to store node revisions.
 
+#### Paragraphs
+Provides a field type for adding structured, reusable components.
+
+#### Pathauto
+Generates SEO-friendly paths automatically based on patterns.
+
+#### Redirect
+Manages URL redirects to improve SEO and user experience.
+
 #### Remove HTTP headers
 Fulfills security requirement to omit http headers identifying details of the application.
+
+#### Rest Views
+Exposes Drupal Views data as RESTful API endpoints.
+
+#### Robots.txt
+Manages and customizes the `robots.txt` file for search engine crawlers.
 
 #### S3 file system
 Adds connection to S3 file system in Cloud.gov.
 
+#### Simple Sitemap
+Generates XML sitemaps for search engines.
+
+#### Stage File Proxy
+Proxies missing files from a production environment for local development.
+
+#### SVG Image
+Provides a field type and display options for SVG images.
+
 #### Tome
 Provides static site generation for the Drupal site.
 
+#### Tome Drush
+Provides Drush commands for managing static sites with the Tome module.
+
 #### Translatable menu link uri
 Adds the ability to override a menu link per translation.
+
+#### Twig Field Value
+Provides helper Twig functions for rendering field values.
+
+#### Twig Tweak
+Offers additional Twig functions and filters for developers.
+
+#### USWDS Templates
+Integrates U.S. Web Design System (USWDS) templates with Drupal.
+
+#### Views Data Export
+Adds the ability to export Drupal Views data in various formats.
 
 ### Custom
 Below is a list of custom modules created for use on Vote.gov. These modules can be found in the codebase at `/web/modules/custom`. These modules are maintained by project developers and need to be re-evaulated for each Drupal upgrade.
