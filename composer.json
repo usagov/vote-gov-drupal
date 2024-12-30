@@ -44,7 +44,7 @@
         "drupal/core-recommended": "^10.3.1",
         "drupal/devel": "^5.1",
         "drupal/disable_language": "^1.0@beta",
-        "drupal/double_field": "^4.2",
+        "drupal/double_field": "^5.0",
         "drupal/easy_breadcrumb": "^2.0",
         "drupal/editor_advanced_link": "^2.2",
         "drupal/editoria11y": "^2.1",
@@ -104,7 +104,7 @@
         "enable-patching": true,
         "patches": {
             "drupal/double_field": {
-                "Support input filters on text formats (original issue: https://www.drupal.org/node/2091587)": "patches/double_field/2091587-text_long-60_2.patch"
+                "Support input filters on text formats (original issue: https://www.drupal.org/node/2091587)": "patches/double_field/2091587-text_long-60_3.patch"
             }
         },
         "drupal-scaffold": {
