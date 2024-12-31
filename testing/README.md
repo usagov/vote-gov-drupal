@@ -19,7 +19,9 @@ Before you can run any test please review the Project [README.md](../../README.m
 | Command     | Description |
 | ----------- | ----------- |
 | `npm run cy:open`| Opens Cypress Runner|
-| `npm run cy:test`   | ^ Run tests headless|
+| `npm run cy:fullTests`   | ^ Run frontend and backend tests headless|
+| `npm run cy:backEnd`   | Run backend tests headless|
+| `npm run cy:frontEnd`   | Run frontend tests headless|
 | `npm run cy:axe` | Run accessability testing with Cypress Axe Plugin|
 | `npm run cy:links`   | Run link validator testing for internal links |
 | `npm run cy:proofer`   | Run link validator testing for external links |
