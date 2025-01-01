@@ -1,0 +1,58 @@
+uuid: a5c42abd-b298-4e65-b67b-f737f9fd03b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.nvrf_display_content
+    - field.field.block_content.nvrf_display_content.field_download_button_label
+    - field.field.block_content.nvrf_display_content.field_edit_button_label
+    - field.field.block_content.nvrf_display_content.field_mail_deadline_label
+    - field.field.block_content.nvrf_display_content.field_not_required_label
+    - field.field.block_content.nvrf_display_content.field_print_button_label
+id: block_content.nvrf_display_content.default
+targetEntityType: block_content
+bundle: nvrf_display_content
+mode: default
+content:
+  field_download_button_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_edit_button_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_mail_deadline_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_not_required_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_print_button_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

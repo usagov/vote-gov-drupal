@@ -1,0 +1,19 @@
+uuid: 98e5dc56-5de6-42a8-9926-b54b5a0f80bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.nvrf_display_content
+    - field.storage.block_content.field_edit_button_label
+id: block_content.nvrf_display_content.field_edit_button_label
+field_name: field_edit_button_label
+entity_type: block_content
+bundle: nvrf_display_content
+label: 'Edit button label'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
