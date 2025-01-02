@@ -203,7 +203,9 @@
     {{ mail_registration.text }}
 
     {% if state_mail_pdf_link and mail_registration.link_text %}
-      <p>{{ link(mail_registration.link_text, state_mail_pdf_link, create_attribute().setAttribute('data-state-ext', 'state-mail-registration')) }}</p>
+      <p>{{ link(mail_registration.link_text, state_mail_pdf_link, create_attribute()
+            .setAttribute('data-state-ext', 'state-mail-registration')
+            .addClass('usa-link--external')) }}</p>
     {% endif %}
   {% endset %}
 
