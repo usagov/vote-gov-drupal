@@ -60,9 +60,6 @@ Fulfills security requirement to log user out when inactive for a designated per
 #### Block content template
 Adds a template hook for `block_content` entities.
 
-#### CKEditor 5 Embedded Content
-Allows embedding external content using CKEditor 5.
-
 #### Config ignore & Config split
 Modules that allow organization/modification of application configuration per environment.
 
@@ -84,6 +81,9 @@ Extends the link dialog in the editor to allow additional attributes.
 #### Editoria11y
 Improves accessibility within the editorial interface.
 
+#### Embedded Content
+Allows embedding external content using CKEditor 5.
+
 #### Entity Reference Revisions
 Enables revision support for entity reference fields.
 
@@ -92,9 +92,6 @@ Fulfills security requirement to provide SSO integration configuration.
 
 #### Field Group
 Groups fields together in forms and displays.
-
-#### File delete
-Adds the ability to delete files from the system.
 
 #### Focal Point
 Adds a focal point selector to image fields for better cropping.
@@ -116,9 +113,6 @@ Improves multilingual support for menus.
 
 #### Metatag
 Adds metadata tags for SEO and social sharing.
-
-#### Migrate plus & Migrate tools
-Provides additional migration function for migration scripts.
 
 #### New Relic RPM
 Adds configuration options for sending logs to New Relic.
