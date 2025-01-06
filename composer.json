@@ -51,7 +51,6 @@
         "drupal/embedded_content": "^2.0",
         "drupal/entity_reference_revisions": "^1.10",
         "drupal/field_group": "^4.0@alpha",
-        "drupal/file_delete": "^2.0",
         "drupal/focal_point": "^2.1",
         "drupal/language_switcher_extended": "^1.1",
         "drupal/link_attributes": "^2.1",

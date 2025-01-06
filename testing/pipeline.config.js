@@ -1,5 +1,7 @@
 const { defineConfig } = require("cypress");
 
+// This config file is set for the pipeline testing, both this and the cypress.config.js are the same outside of the baseurl. Any update here needs to be done in the cypress.config.js as well.
+
 module.exports = defineConfig({
 reporter: 'cypress-mochawesome-reporter',
   e2e: {
