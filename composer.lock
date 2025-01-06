@@ -1972,28 +1972,26 @@
         },
         {
             "name": "drupal/ckeditor5_embedded_content",
-            "version": "1.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ckeditor5_embedded_content.git",
-                "reference": "1.0.1"
+                "reference": "2.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ckeditor5_embedded_content-1.0.1.zip",
-                "reference": "1.0.1",
-                "shasum": "a30dba88b32630cec446c4117057de45c2d0e93e"
+                "url": "https://ftp.drupal.org/files/projects/ckeditor5_embedded_content-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "47c618b6e6e0bee2985056782b9c7dbc5748f6d7"
             },
             "require": {
-                "drupal/core": "^9 || ^10",
-                "symfony/css-selector": "^4 || ^5 || ^6",
-                "symfony/dom-crawler": "^4 || ^5 || ^6"
+                "drupal/core": "^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.1",
-                    "datestamp": "1688981490",
+                    "version": "2.0.2",
+                    "datestamp": "1728375849",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2010,8 +2008,8 @@
                     "homepage": "https://www.drupal.org/user/758020"
                 }
             ],
-            "description": "Provides a ckeditor5 and drupal plugin to embed styled content into ckeditor text areas.",
-            "homepage": "http://drupal.org/project/ckeditor5_embedded_content",
+            "description": "Provides an Embedded Content plugin and Ckeditor 5 plugin.",
+            "homepage": "https://www.drupal.org/project/ckeditor5_embedded_content",
             "support": {
                 "source": "https://git.drupalcode.org/project/ckeditor5_embedded_content"
             }
@@ -2837,30 +2835,30 @@
         },
         {
             "name": "drupal/double_field",
-            "version": "4.2.0",
+            "version": "5.0.0-beta1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/double_field.git",
-                "reference": "4.2.0"
+                "reference": "5.0.0-beta1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/double_field-4.2.0.zip",
-                "reference": "4.2.0",
-                "shasum": "63a5ff94cd6e605ee6c030562ed225d2f713cb59"
+                "url": "https://ftp.drupal.org/files/projects/double_field-5.0.0-beta1.zip",
+                "reference": "5.0.0-beta1",
+                "shasum": "1542ac0fdad7fb6ec06e3df858459e4213ae0c2e"
             },
             "require": {
-                "drupal/core": "^9 || ^10",
-                "php": ">=7.3"
+                "drupal/core": "^10.3 || ^11.0",
+                "php": ">=8.3"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.2.0",
-                    "datestamp": "1701624359",
+                    "version": "5.0.0-beta1",
+                    "datestamp": "1729017531",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -3094,6 +3092,52 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/editoria11y",
                 "issues": "https://drupal.org/project/issues/editoria11y"
+            }
+        },
+        {
+            "name": "drupal/embedded_content",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/embedded_content.git",
+                "reference": "2.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/embedded_content-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "373da1a262e28d289b59abcef7cab7c0ec49d2ad"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11",
+                "symfony/css-selector": "^6 || ^7",
+                "symfony/dom-crawler": "^6 || ^7"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.2",
+                    "datestamp": "1729321100",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "nuez",
+                    "homepage": "https://www.drupal.org/user/758020"
+                }
+            ],
+            "description": "Provides a way to embed rich content into ckeditor without having to grant html editing rights.",
+            "homepage": "http://drupal.org/project/embedded_content",
+            "support": {
+                "source": "https://git.drupalcode.org/project/embedded_content"
             }
         },
         {
@@ -5184,10 +5228,10 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/uswds_templates.git",
-                "reference": "eab141248b679e7ba744dd91329fb802cb35a0aa"
+                "reference": "f198ac1e951c3878c54489c5957691b02bb82936"
             },
             "require": {
-                "drupal/core": "^9.4 || ^10"
+                "drupal/core": "^9.4 || ^10 || ^11"
             },
             "type": "drupal-module",
             "extra": {
@@ -5196,7 +5240,7 @@
                 },
                 "drupal": {
                     "version": "3.0.x-dev",
-                    "datestamp": "1709344451",
+                    "datestamp": "1735575223",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
