@@ -25,7 +25,7 @@ settings:
       - horizontalLine
       - link
       - drupalMedia
-      - embeddedContent
+      - embeddedContent__default
       - '|'
       - sourceEditing
   plugins:

@@ -4,8 +4,8 @@ namespace Drupal\ec_uswds\Plugin\EmbeddedContent;
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
-use Drupal\ckeditor5_embedded_content\EmbeddedContentInterface;
-use Drupal\ckeditor5_embedded_content\EmbeddedContentPluginBase;
+use Drupal\embedded_content\EmbeddedContentInterface;
+use Drupal\embedded_content\EmbeddedContentPluginBase;
 
 /**
  * Plugin iframes.
@@ -70,7 +70,15 @@ class ECUsaAlert extends EmbeddedContentPluginBase implements EmbeddedContentInt
       '#default_value' => $this->configuration['text']['value'] ?? '',
       '#required' => TRUE,
     ];
+
     return $form;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function isInline(): bool {
+    return FALSE;
   }
 
 }
