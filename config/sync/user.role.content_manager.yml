@@ -29,10 +29,10 @@ dependencies:
     - workflows.workflow.publishing_content
   module:
     - block_content
-    - ckeditor5_embedded_content
     - content_moderation
     - content_translation
     - editoria11y
+    - embedded_content
     - file
     - locale
     - media
@@ -178,7 +178,7 @@ permissions:
   - 'update any media'
   - 'update content translations'
   - 'update media'
-  - 'use ckeditor5 embedded content'
+  - 'use default embedded content button'
   - 'use publishing_content transition archive'
   - 'use publishing_content transition create_new_draft'
   - 'use publishing_content transition publish'

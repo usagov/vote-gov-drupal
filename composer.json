@@ -32,35 +32,35 @@
         "composer/installers": "^2.2",
         "cweagans/composer-patches": "^1.7",
         "drupal-tome/tome_drush": "dev-master",
-        "drupal/admin_toolbar": "^3.3",
+        "drupal/admin_toolbar": "^3.5",
         "drupal/allowed_formats": "^3.0@alpha",
         "drupal/autologout": "^2.0",
-        "drupal/block_content_template": "^1.5",
-        "drupal/ckeditor5_embedded_content": "^1.0",
+        "drupal/block_content_template": "^1.7",
+        "drupal/ckeditor5_embedded_content": "^2.0",
         "drupal/config_ignore": "^3.0@beta",
         "drupal/config_split": "^2.0@RC",
-        "drupal/core-composer-scaffold": "^10.3.1",
-        "drupal/core-project-message": "^10.3.1",
-        "drupal/core-recommended": "^10.3.1",
+        "drupal/core-composer-scaffold": "^10.4.0",
+        "drupal/core-project-message": "^10.4.0",
+        "drupal/core-recommended": "^10.4.0",
         "drupal/devel": "^5.1",
         "drupal/disable_language": "^1.0@beta",
-        "drupal/double_field": "^4.2",
+        "drupal/double_field": "^5.0",
         "drupal/easy_breadcrumb": "^2.0",
         "drupal/editor_advanced_link": "^2.2",
-        "drupal/editoria11y": "^2.0",
+        "drupal/editoria11y": "^2.1",
+        "drupal/embedded_content": "^2.0",
         "drupal/entity_reference_revisions": "^1.10",
         "drupal/field_group": "^4.0@alpha",
-        "drupal/file_delete": "^2.0",
-        "drupal/focal_point": "^2.0",
+        "drupal/focal_point": "^2.1",
         "drupal/language_switcher_extended": "^1.1",
         "drupal/link_attributes": "^2.1",
         "drupal/log_stdout": "^1.5",
         "drupal/menu_block": "^1.10",
         "drupal/menu_multilingual": "^2.0",
-        "drupal/metatag": "^2.0",
+        "drupal/metatag": "^2.1",
         "drupal/new_relic_rpm": "^2.1",
         "drupal/node_revision_delete": "^2.0@alpha",
-        "drupal/override_node_options": "^2.8",
+        "drupal/override_node_options": "^2.9",
         "drupal/paragraphs": "^1.15",
         "drupal/pathauto": "^1.12",
         "drupal/redirect": "^1.8",
@@ -69,19 +69,19 @@
         "drupal/robotstxt": "^1.5",
         "drupal/s3fs": "^3.1",
         "drupal/samlauth": "^3.8",
-        "drupal/simple_sitemap": "^4.1",
+        "drupal/simple_sitemap": "^4.2",
         "drupal/stage_file_proxy": "^3.1",
         "drupal/svg_image": "^3.0",
-        "drupal/tome": "^1.8",
+        "drupal/tome": "^1.13",
         "drupal/translatable_menu_link_uri": "^2.0@dev",
         "drupal/twig_field_value": "^2.0",
         "drupal/twig_tweak": "^3.2",
         "drupal/uswds_templates": "^3.0@dev",
-        "drupal/views_data_export": "^1.4",
+        "drupal/views_data_export": "^1.5",
         "drush/drush": "^12.4"
     },
     "require-dev": {
-        "drupal/core-dev": "^10.3.1"
+        "drupal/core-dev": "^10.4.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -105,7 +105,10 @@
         "enable-patching": true,
         "patches": {
             "drupal/double_field": {
-                "Support input filters on text formats (original issue: https://www.drupal.org/node/2091587)": "patches/double_field/2091587-text_long-60_2.patch"
+                "Support input filters on text formats (original issue: https://www.drupal.org/node/2091587)": "patches/double_field/2091587-text_long-60_3.patch"
+            },
+            "drupal/embedded_content": {
+                "appendXML() does not allow &nbsp; or double commas in comments (original issue: https://www.drupal.org/node/3496686)": "patches/embedded_content/3496686-appendxml-does-not.patch"
             }
         },
         "drupal-scaffold": {

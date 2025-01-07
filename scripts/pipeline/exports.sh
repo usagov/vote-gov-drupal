@@ -36,7 +36,6 @@ elif [ "${cf_env}" == "test" ]; then
   export sso_assertion_key=${test_sso_assertion_key}
   export waf_name=${test_waf_name}
   export waf_external_endpoint=${test_waf_external_endpoint}
-  export composer_no_dev=0
 elif [ "${cf_env}" == "dev" ]; then
   export cf_space=${dev_cf_space}
   export cms_uri=${dev_cms_uri}
@@ -48,5 +47,4 @@ elif [ "${cf_env}" == "dev" ]; then
   export sso_assertion_key=${dev_sso_assertion_key}
   export waf_name=${dev_waf_name}
   export waf_external_endpoint=${dev_waf_external_endpoint}
-  export composer_no_dev=0
 fi

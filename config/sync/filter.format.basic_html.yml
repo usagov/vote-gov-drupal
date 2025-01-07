@@ -5,15 +5,15 @@ dependencies:
   config:
     - core.entity_view_mode.media.scaled
   module:
-    - ckeditor5_embedded_content
+    - embedded_content
     - media
 name: 'Basic HTML'
 format: basic_html
 weight: 0
 filters:
-  ckeditor5_embedded_content:
-    id: ckeditor5_embedded_content
-    provider: ckeditor5_embedded_content
+  embedded_content:
+    id: embedded_content
+    provider: embedded_content
     status: true
     weight: 100
     settings: {  }

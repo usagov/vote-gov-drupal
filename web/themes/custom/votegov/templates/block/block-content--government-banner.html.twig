@@ -46,7 +46,7 @@
             <p>
               <strong>{{ content.field_gov_heading | field_value }}</strong>
               <br>
-              {{ content.field_gov_text | field_value | render | replace({'%.gov%': '<strong>.gov</strong>'}) | raw }}
+              {{ content.field_gov_text | field_value | render | replace({'@gov': '<strong>.gov</strong>'}) | raw }}
             </p>
           </div>
         </div>
@@ -63,8 +63,8 @@
                     </path>
                   </svg></span>)' %}
               {{ content.field_https_text | field_value | render | replace({
-                '%lock_icon%': lock_icon,
-                '%https%': '<strong>https://</strong>'
+                '@lock_icon': lock_icon,
+                '@https': '<strong>https://</strong>'
               }) | raw }}
             </p>
           </div>
