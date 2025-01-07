@@ -4,8 +4,8 @@ namespace Drupal\ec_placeholder\Plugin\EmbeddedContent;
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
-use Drupal\ckeditor5_embedded_content\EmbeddedContentInterface;
-use Drupal\ckeditor5_embedded_content\EmbeddedContentPluginBase;
+use Drupal\embedded_content\EmbeddedContentInterface;
+use Drupal\embedded_content\EmbeddedContentPluginBase;
 
 /**
  * Plugin iframes.
@@ -51,6 +51,13 @@ class ECPlaceholder extends EmbeddedContentPluginBase implements EmbeddedContent
       '#description' => 'example: machine_name',
     ];
     return $form;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function isInline(): bool {
+    return FALSE;
   }
 
 }

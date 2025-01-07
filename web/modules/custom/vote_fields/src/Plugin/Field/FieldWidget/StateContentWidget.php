@@ -80,6 +80,7 @@ final class StateContentWidget extends WidgetBase {
       '#title' => $this->t('Heading'),
       '#default_value' => $items[$delta]->heading ?? NULL,
       '#access' => in_array('heading', $settings['form_subfield_display']),
+      '#description' => $this->t('Write clear, succinct, and helpful headings that describe the content coming immediately after it. <a href="https://www.w3.org/WAI/tutorials/page-structure/headings/" target="_blank">WCAG heading level guide</a>'),
     ];
 
     $element['text'] = [
@@ -97,7 +98,7 @@ final class StateContentWidget extends WidgetBase {
       '#title' => $this->t('Link text'),
       '#default_value' => $items[$delta]->link_text ?? NULL,
       '#access' => in_array('link_text', $settings['form_subfield_display']),
-      '#description' => $settings['form_subfield_link_text_help_text'],
+      '#description' => $this->t("Use clear, descriptive text for links that explain their purpose, avoiding generic phrases like 'click here' or 'read more.'") . ' ' . $settings['form_subfield_link_text_help_text'],
     ];
 
     $element['#theme_wrappers'] = [

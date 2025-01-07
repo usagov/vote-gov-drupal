@@ -12,7 +12,7 @@ field_name: field_metatags
 entity_type: node
 bundle: voter_guide
 label: Metatags
-description: ''
+description: "Resources for Page Title best practices:\r\n<ul>\r\n<li><a href=\"https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html\" target=\"_blank\">WCAG Page title guide</a></li>\r\n<li><a href=\"https://contentcreation.ai/writing-better-titles\" target=\"_blank\">Writing Better Page Titles for SEO</a></li>\r\n</ul>"
 required: false
 translatable: true
 default_value: {  }
