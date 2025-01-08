@@ -1,0 +1,21 @@
+uuid: 6fbb0480-cbd1-42b3-abc6-1bf999366513
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.nvrf_display_content
+    - field.storage.block_content.field_confirm_group
+  module:
+    - vote_fields
+id: block_content.nvrf_display_content.field_confirm_group
+field_name: field_confirm_group
+entity_type: block_content
+bundle: nvrf_display_content
+label: 'Confirm Group'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: confirm_group
