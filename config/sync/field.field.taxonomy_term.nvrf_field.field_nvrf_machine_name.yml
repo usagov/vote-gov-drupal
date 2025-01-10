@@ -10,7 +10,7 @@ field_name: field_nvrf_machine_name
 entity_type: taxonomy_term
 bundle: nvrf_field
 label: 'NVRF machine name'
-description: 'Enter "null" if this is a section.'
+description: 'Enter "null" if this is a section. This is not displayed in the form but is used to map fields programmatically.'
 required: true
 translatable: false
 default_value: {  }
