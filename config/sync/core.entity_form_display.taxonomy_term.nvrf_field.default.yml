@@ -49,8 +49,9 @@ third_party_settings:
         classes: ''
         show_empty_fields: false
         id: ''
+        label_as_html: false
         formatter: closed
-        description: ''
+        description: 'The following fields are used when displaying a field.'
         required_fields: true
     group_section_data:
       children:
@@ -65,8 +66,9 @@ third_party_settings:
         classes: ''
         show_empty_fields: false
         id: ''
+        label_as_html: false
         formatter: closed
-        description: ''
+        description: 'The following fields are used when displaying a section.'
         required_fields: true
 id: taxonomy_term.nvrf_field.default
 targetEntityType: taxonomy_term

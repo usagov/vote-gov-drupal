@@ -11,8 +11,8 @@ id: taxonomy_term.nvrf_field.field_options
 field_name: field_options
 entity_type: taxonomy_term
 bundle: nvrf_field
-label: Options
-description: '<em>Labels</em> are displayed in the NVRF digital form to the user. <em>Values</em> are mapped to the NVRF PDF.'
+label: 'Field options'
+description: "Options are only necessary for fields with multiple values to select from such as select lists. \r\n<br><em>Labels</em> are displayed in the NVRF digital form to the user. <em>Values</em> are mapped to the NVRF PDF."
 required: false
 translatable: true
 default_value: {  }

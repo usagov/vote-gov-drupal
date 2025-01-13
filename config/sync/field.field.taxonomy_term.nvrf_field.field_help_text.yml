@@ -9,7 +9,7 @@ id: taxonomy_term.nvrf_field.field_help_text
 field_name: field_help_text
 entity_type: taxonomy_term
 bundle: nvrf_field
-label: 'Help text'
+label: 'Field help text'
 description: ''
 required: false
 translatable: true
