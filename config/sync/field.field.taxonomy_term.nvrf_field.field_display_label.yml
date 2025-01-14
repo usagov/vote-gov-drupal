@@ -9,8 +9,8 @@ id: taxonomy_term.nvrf_field.field_display_label
 field_name: field_display_label
 entity_type: taxonomy_term
 bundle: nvrf_field
-label: 'Display Label'
-description: 'Use as a field label or a section heading.'
+label: 'Display label'
+description: 'Use as a field label or a section heading. This will be displayed in the form.'
 required: true
 translatable: true
 default_value: {  }

@@ -1,0 +1,8 @@
+uuid: ffd2a539-e65d-4dca-aa4e-1a97e3afd274
+langcode: en
+status: true
+dependencies: {  }
+id: nvrf_display_content
+label: 'NVRF display content'
+revision: false
+description: null
