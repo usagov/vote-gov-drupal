@@ -1,0 +1,19 @@
+uuid: 913a0670-6b4f-44df-91a4-346b2e7c2eb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.nvrf_display_content
+    - field.storage.block_content.field_mail_deadline_label
+id: block_content.nvrf_display_content.field_mail_deadline_label
+field_name: field_mail_deadline_label
+entity_type: block_content
+bundle: nvrf_display_content
+label: 'Mail deadline label'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

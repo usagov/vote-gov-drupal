@@ -25,6 +25,18 @@ function vote_utility_form_alter(&$form, FormStateInterface $form_state, $form_i
 /**
  * Implements hook_form_FORM_ID_alter().
  */
+function vote_utility_form_taxonomy_term_nvrf_field_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Change Name field label/description to improve editorial experience.
+  $form['name']['widget'][0]['value']['#title'] = t('Administrative label');
+  $form['name']['widget'][0]['value']['#description'] = t('This value is for identifying in Drupal and not used in the form display.');
+
+  // Hide relations options to improve editorial experience.
+  $form['relations']['#access'] = FALSE;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
 function vote_utility_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   // Content types that are not user facing content pages.
   $non_content_bundles = [

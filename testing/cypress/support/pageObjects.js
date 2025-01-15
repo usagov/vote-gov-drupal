@@ -112,6 +112,10 @@ class PageObjects {
     return cy.get('[data-test="touchpointsBtn"]')
   }
 
+  touchpointsBtnMobile() {
+    return cy.get('[data-test="touchpointsBtnMobile"]')
+  }
+
   // Backend Tests
   pageTitle() {
     return cy.get('[data-drupal-selector="edit-title-0-value"]')
