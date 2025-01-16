@@ -1,0 +1,21 @@
+uuid: 1eb9c66f-a6a3-479d-8b36-8dc558c506fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.nvrf_display_content
+    - field.storage.block_content.field_nvrf_step
+  module:
+    - vote_fields
+id: block_content.nvrf_display_content.field_nvrf_step
+field_name: field_nvrf_step
+entity_type: block_content
+bundle: nvrf_display_content
+label: 'NVRF step'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: nvrf_step

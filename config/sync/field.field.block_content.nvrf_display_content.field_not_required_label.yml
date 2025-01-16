@@ -1,0 +1,19 @@
+uuid: 19a13a1f-4cc3-4321-b419-821824928d57
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.nvrf_display_content
+    - field.storage.block_content.field_not_required_label
+id: block_content.nvrf_display_content.field_not_required_label
+field_name: field_not_required_label
+entity_type: block_content
+bundle: nvrf_display_content
+label: 'Not required label'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

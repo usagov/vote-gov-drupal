@@ -10,7 +10,7 @@ field_name: field_content_version
 entity_type: taxonomy_term
 bundle: nvrf_field
 label: 'Content version'
-description: ''
+description: 'This field will be used to track content versioning with external documents.'
 required: false
 translatable: true
 default_value: {  }

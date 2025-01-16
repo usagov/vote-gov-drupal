@@ -9,7 +9,7 @@ id: taxonomy_term.nvrf_field.field_error_message
 field_name: field_error_message
 entity_type: taxonomy_term
 bundle: nvrf_field
-label: 'Error message'
+label: 'Field error message'
 description: ''
 required: false
 translatable: true
