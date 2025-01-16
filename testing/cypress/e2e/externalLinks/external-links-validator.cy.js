@@ -9,7 +9,8 @@ const excludedLinks = [
   'https://voterregistration.ct.gov/OLVR/welcome.do?ref=voteusa_es',
   'https://voterregistration.ct.gov/OLVR/welcome.do',
   'https://www.ncsl.org/elections-and-campaigns/voter-id#toggleContent-15991',
-  'https://www.fcc.gov/trs'
+  'https://www.fcc.gov/trs',
+  'https://www.cisa.gov/topics/election-security'
 ];
 
 describe("External Link Validator Test", () => {
