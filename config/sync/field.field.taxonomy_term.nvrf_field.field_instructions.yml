@@ -12,8 +12,8 @@ id: taxonomy_term.nvrf_field.field_instructions
 field_name: field_instructions
 entity_type: taxonomy_term
 bundle: nvrf_field
-label: Instructions
-description: ''
+label: 'Field instructions'
+description: 'This value may have specific use cases per field. If you need to use this field for a specific purpose, work with a developer to ensure it displays correctly. Typically this field is used to display field-specific instructions.'
 required: false
 translatable: true
 default_value: {  }
