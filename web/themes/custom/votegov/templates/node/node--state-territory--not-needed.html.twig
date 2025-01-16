@@ -19,12 +19,12 @@
 			{% endset %}
 		{% endif %}
 		{# setting body text to have palceholder for both state name and link #}
-		{% set body = registration_not_needed.text['#markup']| t({'@state_name': title_english, '@link': {'#markup': link_markup } | render}) %}
-    {# setting heading text to have palceholder for state name #}
-    {% set heading = registration_not_needed.heading['#markup']| t({'@state_name': title_english | render}) %}
+		{% set body = registration_not_needed.text | render | trim | t({'@state_name': title_english, '@link': {'#markup': link_markup } | render}) %}
+    {# setting heading text to have placeholder for state name #}
+    {% set heading = registration_not_needed.heading | render | trim | t({'@state_name': title_english | render}) %}
 
 		{% include '@votegov/component/info-card.html.twig' with {
-          'heading': heading,
+          'heading': heading is not empty ? heading,
           'body': body,
       } %}
 
