@@ -7,7 +7,7 @@
     "reset-dist": "mkdir -p ./dist/assets",
     "copy-dist:js": "cp -r ./node_modules/vote-gov-nvrf-app/dist/assets/main.js ./dist/assets/main.js",
     "copy-dist:css": "cp -r ./node_modules/vote-gov-nvrf-app/dist/assets/main.css ./dist/assets/main.css",
-    "copy-dist:fonts": "cp -r ./node_modules/vote-gov-nvrf-app/dist/assets//*.woff2 ./dist/assets",
+    "copy-dist:fonts": "cp -r ./node_modules/vote-gov-nvrf-app/dist/assets/{4a1efbe82eaa84ff89ed.woff2,e7bccfa631a0017f31da.woff2} ./dist/assets",
     "copy-dist:data": "rm -rf ../../../data && cp -r ./node_modules/vote-gov-nvrf-app/dist/data ../../../data"
   },
   "dependencies": {
