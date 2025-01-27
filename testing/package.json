@@ -38,6 +38,6 @@
   },
   "homepage": "https://github.com/usagov/vote-gov-drupal#readme",
   "dependencies": {
-    "cypress-real-events": "^1.13.0"
+    "cypress-real-events": "^1.14.0"
   }
 }
