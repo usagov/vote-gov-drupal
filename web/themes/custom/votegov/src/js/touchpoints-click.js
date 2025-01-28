@@ -3,9 +3,12 @@
  */
 
 (() => {
-  const button = document.getElementById("vote-touchpoints-mobile--button");
+  const mobileModalButton = document.getElementById("vote-touchpoints-mobile--button");
+  const mainModalButton = document.getElementById('vote-touchpoints--button');
+  const closeButton = document.getElementsByClassName("usa-nav__close");
 
-  button.addEventListener("click", function () {
-    document.getElementById('vote-touchpoints--button').click();
+  mobileModalButton.addEventListener("click", function () {
+    closeButton[0].click();
+    mainModalButton.click();
   });
 })();
