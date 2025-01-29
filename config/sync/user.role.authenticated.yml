@@ -2,13 +2,8 @@ uuid: 3930b3a2-aaa3-4672-8b5f-aa4748ef5441
 langcode: en
 status: true
 dependencies:
-  config:
-    - filter.format.basic_html
-    - filter.format.simple_html
   module:
-    - filter
     - media
-    - paragraphs
     - system
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
@@ -18,7 +13,4 @@ weight: -9
 is_admin: false
 permissions:
   - 'access content'
-  - 'use text format basic_html'
-  - 'use text format simple_html'
   - 'view media'
-  - 'view unpublished paragraphs'
