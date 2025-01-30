@@ -13,6 +13,7 @@ drupal_login_roles:
   content_editor: '0'
   content_manager: '0'
   site_admin: '0'
+  site_builder: '0'
 sp_entity_id: ''
 sp_name_id_format: 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress'
 sp_x509_certificate: ''
@@ -34,6 +35,7 @@ map_users_roles:
   content_editor: content_editor
   content_manager: content_manager
   site_admin: site_admin
+  site_builder: site_builder
 create_users: false
 sync_name: false
 sync_mail: false
