@@ -13,6 +13,8 @@ function votegov_preprocess(&$variables) {
   $language = Drupal::languageManager()->getCurrentLanguage();
   $variables['language'] = $language->getId();
   $variables['languagename'] = $language->getName();
+
+  // Set global variable for path to uswds image directory.
   $variables['uswds_img_path'] = '/themes/custom/votegov/dist/assets/img';
 
   // Set global variable for theme directory.
@@ -29,12 +31,13 @@ function votegov_preprocess(&$variables) {
   $node = \Drupal::request()->attributes->get('node');
   if (!empty($node)) {
     $variables['currentnode'] = $node;
-    // Check if current page is designated an error page.
+    // Check if current page is configured as an error page.
     $system_errors = [
       404 => Drupal::config('system.site')->get('page.404'),
       403 => Drupal::config('system.site')->get('page.403'),
     ];
 
+    // Set a variable if the current node is configured as the error page.
     foreach ($system_errors as $system_error) {
       if ($system_error == '/node/' . $node->id()) {
         $variables['status_code'] = 'error';
@@ -49,7 +52,7 @@ function votegov_preprocess(&$variables) {
   // Set variable for frontpage.
   $variables['is_frontpage'] = \Drupal::service('path.matcher')->isFrontPage();
 
-  // Load bengali numbers array.
+  // Load Bengali numbers array.
   $path_to_file = __DIR__ . "/../json/translated-numbers.json";
   $variables['t_numbers'] = json_decode(file_get_contents($path_to_file), TRUE);
 }
@@ -58,7 +61,7 @@ function votegov_preprocess(&$variables) {
  * Implements hook_preprocess_HOOK().
  */
 function votegov_preprocess_links__language_block(&$variables) {
-  // Send the untranslated english language names to the template.
+  // Send the untranslated English language names to the template.
   $original_language = \Drupal::languageManager()->getConfigOverrideLanguage();
   $en = \Drupal::languageManager()->getLanguage('en');
   \Drupal::languageManager()->setConfigOverrideLanguage($en);
@@ -66,7 +69,7 @@ function votegov_preprocess_links__language_block(&$variables) {
   \Drupal::languageManager()->setConfigOverrideLanguage($original_language);
 
   foreach ($variables['links'] as $i => $link) {
-    // Append the english language name after the translated one
+    // Append the English language name after the translated one
     // if they are unique.
     if (isset($languages[$i])
       && $variables['links'][$i]['link']['#title'] != $languages[$i]->getName()) {
