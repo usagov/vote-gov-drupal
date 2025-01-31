@@ -1,0 +1,17 @@
+<?php
+
+use Drupal\Core\Database\Database;
+
+//function vote_fields_update_10001() {
+//  // Get the database connection
+//  $connection = Database::getConnection();
+//
+//  // Get the schema object
+//  $schema = $connection->schema();
+//
+//  // Define the new field
+//  $spec = [];
+//
+//  // Add the new field to the table
+//  $schema->addField('TABLE', 'FIELD', $spec);
+//}
