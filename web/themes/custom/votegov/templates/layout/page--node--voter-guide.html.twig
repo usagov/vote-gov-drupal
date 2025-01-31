@@ -10,17 +10,18 @@
       'media': drupal_field('field_media', 'node', node.id(), {type: 'media_thumbnail', settings: {image_style: 'scaled_lg' }}) | field_value,
       'variant': 'dark'
     } %}
-    <div class="vote-main-content-row vote-block-margin-y--narrow grid-container {% if language not in excludedLanguages %} usa-in-page-nav-container {% endif %}">
-{% if language not in excludedLanguages %}
-      <aside
-        class="usa-in-page-nav"
-        data-main-content-selector=".usa-in-page-nav-container"
-        data-title-text="{{ 'On this page' | t }}"
-        data-title-heading-level="h2"
-        data-scroll-offset="-600"
-        data-root-margin="48px 0px -90% 0px"
-        data-threshold="1"
-      ></aside>
+    <div
+      class="vote-main-content-row vote-block-margin-y--narrow grid-container {% if language not in excludedLanguages %} usa-in-page-nav-container {% endif %}">
+      {% if language not in excludedLanguages %}
+        <aside
+          class="usa-in-page-nav"
+          data-main-content-selector=".usa-in-page-nav-container"
+          data-title-text="{{ 'On this page' | t }}"
+          data-title-heading-level="h2"
+          data-scroll-offset="-600"
+          data-root-margin="48px 0px -90% 0px"
+          data-threshold="1"
+        ></aside>
       {% endif %}
       <div class="vote-page-content vote-page-content--alt">
         {{ page.content }}
@@ -28,7 +29,7 @@
     </div>
   </main>
   <div role="region" aria-label="{{ 'Know your voting rights' | t }}">
-  {# Voter guide listing #}
-  {{ drupal_view('voter_guides', 'embed_1') }}
+    {# Voter guide listing #}
+    {{ drupal_view('voter_guides', 'embed_1') }}
   </div>
 {% endblock %}

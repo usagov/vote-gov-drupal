@@ -16,7 +16,9 @@ function votegov_preprocess(&$variables) {
   $variables['uswds_img_path'] = '/themes/custom/votegov/dist/assets/img';
 
   // Set global variable for theme directory.
-  $theme_path = \Drupal::request()->getBasePath() . '/' . \Drupal::service('extension.list.theme')->getPath('votegov');
+  $theme_path = \Drupal::request()
+    ->getBasePath() . '/' . \Drupal::service('extension.list.theme')
+    ->getPath('votegov');
   $variables['theme_path'] = $theme_path;
 
   // Set global variable for site name.
@@ -56,7 +58,6 @@ function votegov_preprocess(&$variables) {
  * Implements hook_preprocess_HOOK().
  */
 function votegov_preprocess_links__language_block(&$variables) {
-
   // Send the untranslated english language names to the template.
   $original_language = \Drupal::languageManager()->getConfigOverrideLanguage();
   $en = \Drupal::languageManager()->getLanguage('en');

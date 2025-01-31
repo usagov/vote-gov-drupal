@@ -60,6 +60,7 @@ p {
 // Lists
 ul, ol {
   @include u-font-family('sans');
+
   main & {
     &:last-child {
       @include u-margin-bottom(0);

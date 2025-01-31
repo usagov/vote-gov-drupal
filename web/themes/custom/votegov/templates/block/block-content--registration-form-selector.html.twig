@@ -17,21 +17,21 @@
   <h2>{{ content.field_heading | field_value | render | replace({"@state_name": currentnode.getTitle()}) | raw }}</h2>
 
   {% if (elements['#block_content'].field_enable_digital_form_link.value == 1) %}
-  {{ content.field_digital_form_paragraph | field_value }}
+    {{ content.field_digital_form_paragraph | field_value }}
 
-  {% if content.field_digital_form_link_label | render %}
-    {# Set path to form dynamically using page route. #}
-    {% set form_route = language != 'es' ? 'vote_nvrf.nvrf_page' : 'vote_nvrf.nvrf_page_es' %}
-    {% set state_name = currentnode.label | lower | replace({' ': '-'}) %}
-    <p>
-      {% include '@votegov/component/button.html.twig' with {
-        'href': 'internal:' ~ path(form_route, {'state_name': state_name}),
-        'label': content.field_digital_form_link_label | field_value,
-        'data_label': 'data-state-ext',
-        'data': 'nvrf-pdf-tool-registration'
-      } %}
-    </p>
-  {% endif %}
+    {% if content.field_digital_form_link_label | render %}
+      {# Set path to form dynamically using page route. #}
+      {% set form_route = language != 'es' ? 'vote_nvrf.nvrf_page' : 'vote_nvrf.nvrf_page_es' %}
+      {% set state_name = currentnode.label | lower | replace({' ': '-'}) %}
+      <p>
+        {% include '@votegov/component/button.html.twig' with {
+          'href': 'internal:' ~ path(form_route, {'state_name': state_name}),
+          'label': content.field_digital_form_link_label | field_value,
+          'data_label': 'data-state-ext',
+          'data': 'nvrf-pdf-tool-registration'
+        } %}
+      </p>
+    {% endif %}
   {% endif %}
 
   <form class="usa-form" method="get" id="register_form_download" data-test="nvrfForm">
@@ -42,6 +42,7 @@
       {{ content.field_registration_form_link }}
       {# Download button #}
     </div>
-    <button class="usa-button" id="js-user-submit" type="submit" data-test="nvrfDownload">{{ content.field_submit_button_label | field_value }}</button>
+    <button class="usa-button" id="js-user-submit" type="submit"
+            data-test="nvrfDownload">{{ content.field_submit_button_label | field_value }}</button>
   </form>
 </div>

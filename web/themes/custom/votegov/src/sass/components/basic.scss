@@ -11,8 +11,8 @@
 
 .vote-basic__content {
   .vote-type-landing & {
-  @include at-media('tablet-lg') {
-    @include grid-col(6);
-  }
+    @include at-media('tablet-lg') {
+      @include grid-col(6);
+    }
   }
 }
