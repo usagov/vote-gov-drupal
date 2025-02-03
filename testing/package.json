@@ -6,7 +6,7 @@
   "devDependencies": {
     "axe-core": "^4.10.2",
     "cypress": "^13.16.0",
-    "cypress-axe": "^1.5.0",
+    "cypress-axe": "^1.6.0",
     "cypress-mochawesome-reporter": "^3.8.2"
   },
   "scripts": {
