@@ -64,7 +64,7 @@
     inset-inline-end: 0;
   }
 
-  ul{
+  ul {
     @include u-padding(0);
     @include u-margin-top(0);
     list-style: none;
@@ -121,7 +121,7 @@
   color: $base-white;
   padding-inline-end: 1.5rem;
   margin-inline-start: calc(100% - 90px);
-  background: transparent url( '../../img/svg/close-white.svg' ) no-repeat right 50%;
+  background: transparent url('../../img/svg/close-white.svg') no-repeat right 50%;
   cursor: pointer;
 
   [dir="rtl"] & {

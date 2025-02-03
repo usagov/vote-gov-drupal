@@ -93,6 +93,7 @@ mkdir -p ${html_path}/themes/custom/votegov
 cp -rfp ${app_path}/web/themes/custom/votegov/dist ${html_path}/themes/custom/votegov/
 cp -rfp ${app_path}/web/themes/custom/votegov/img ${html_path}/themes/custom/votegov/
 cp -rfp ${app_path}/web/themes/custom/votegov/json ${html_path}/themes/custom/votegov/
+cp -rfp ${app_path}/web/themes/custom/votegov/fonts ${html_path}/themes/custom/votegov/
 echo "Adding Vote.gov custom theme assets...completed!"
 echo ""
 

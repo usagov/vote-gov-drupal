@@ -1,3 +1,9 @@
+{#
+/**
+ * @file
+ * Vote.gov USWDS theme implementation for the html sitemap menu.
+ */
+#}
 {% import _self as menus %}
 
 {{ menus.menu_links(items, 0) }}
@@ -6,9 +12,9 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul class="usa-list usa-list--unstyled">
-    {% else %}
-      <ul>
+<ul class="usa-list usa-list--unstyled">
+  {% else %}
+  <ul>
     {% endif %}
     {% for item in items %}
       <li>{{ link(item.title, item.url) }}
@@ -19,4 +25,4 @@
     {% endfor %}
   </ul>
   {% endif %}
-{% endmacro %}
+  {% endmacro %}

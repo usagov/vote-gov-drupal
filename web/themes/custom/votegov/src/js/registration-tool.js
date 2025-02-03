@@ -56,8 +56,7 @@
       if (element === option) {
         if (index === 0) {
           stateInput.focus();
-        }
-        else {
+        } else {
           stateListResults[index - 1].focus();
         }
       }
@@ -70,8 +69,7 @@
       if (element === option) {
         if (index === stateListResults.length - 1) {
           stateListResults[0].focus();
-        }
-        else {
+        } else {
           stateListResults[index + 1].focus();
         }
       }
@@ -82,8 +80,7 @@
   function toggleDataFiltered(filter) {
     if (filter === '') {
       stateResultsContainer.removeAttribute('data-filtered');
-    }
-    else {
+    } else {
       stateResultsContainer.setAttribute('data-filtered', 'true');
     }
   }
