@@ -28,11 +28,11 @@
 
 {% if status_code != 'error' %}
   {% block content %}
-      {% if content['#links']|length == 2 %}
+    {% if content['#links']|length == 2 %}
       <div class="usa-language-container usa-language--big">
         {{ content }}
       </div>
-      {% elseif content['#links']|length > 2 %}
+    {% elseif content['#links']|length > 2 %}
       <div class="usa-language-container usa-language--big">
         <div class="usa-language__primary usa-accordion">
           <div class="usa-language__primary-item">
@@ -42,15 +42,15 @@
             </button>
 
             <div class="usa-language__submenu" id="language-options" hidden {{ attributes }}>
-            <button type="button" class="usa-language__close" data-test="langcloseBtn">{{ 'Close' | t }}</button>
-            {# Language menu items: links--language-block.html.twig #}
-            <ul data-test="languageSwitcher">
-              {{ content }}
-            </ul>
+              <button type="button" class="usa-language__close" data-test="langcloseBtn">{{ 'Close' | t }}</button>
+              {# Language menu items: links--language-block.html.twig #}
+              <ul data-test="languageSwitcher">
+                {{ content }}
+              </ul>
             </div>
           </div>
         </div>
       </div>
-      {% endif %}
+    {% endif %}
   {% endblock %}
 {% endif %}

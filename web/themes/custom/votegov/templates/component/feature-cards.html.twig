@@ -1,8 +1,26 @@
+{#
+/**
+ * @file
+ * Default theme implementation to Vote.gov feature cards component.
+ *
+ * Template variables:
+ * - heading: string
+ * - cards: renderable array of cards
+ *
+ * Usage example:
+ * {% include '@votegov/component/feature-cards.html.twig' with {
+ *   'heading': var_heading,
+ *   'cards': var_cards,
+ * } %}
+ *
+#}
+
 <div{{ attributes.addClass('vote-feature-cards') }}>
   {# Hold these title_* placeholders for potential integration #}
   {{ title_prefix }}
   {{ title_suffix }}
-  <h2 id="know-your-voting-rights" class="vote-feature-cards__header vote-heading--red-underline vote-heading--max-width">
+  <h2 id="know-your-voting-rights"
+      class="vote-feature-cards__header vote-heading--red-underline vote-heading--max-width">
     {{ heading }}
   </h2>
   <div class="vote-card-group">
@@ -19,17 +37,19 @@
 
     {# Temporary card for military FVAP.gov #}
     <article class="node--voter-guide node--view-mode-teaser usa-card">
-      <a extlinkjs-ignore class="vote-card__link" href={{ fvap_link_military }} target="_blank" title={{"Voting as a military service member" | t }}>
+      <a extlinkjs-ignore class="vote-card__link" href={{ fvap_link_military }} target="_blank"
+         title={{ "Voting as a military service member" | t }}>
         <div class="usa-card__container">
           <div class="vote-feature-card__icon">
             {{ source( directory ~ '/img/svg/Military.svg' ) }}
           </div>
           <div class="vote-feature-card__content">
             <h3 class="usa-card__heading">
-              <span>{{"Voting as a military service member" | t }}</span>
+              <span>{{ "Voting as a military service member" | t }}</span>
             </h3>
             <div class="usa-card__body">
-            <p class="usa-link--external">{{ "Learn more from the Federal Voting Assistance Program (FVAP)." | t }}</p>
+              <p
+                class="usa-link--external">{{ "Learn more from the Federal Voting Assistance Program (FVAP)." | t }}</p>
             </div>
           </div>
         </div>
@@ -37,23 +57,25 @@
     </article>
     {# Temporary card for overseas FVAP.gov #}
     <article class="node--voter-guide node--view-mode-teaser usa-card">
-      <a extlinkjs-ignore class="vote-card__link" href={{ fvap_link_overseas }} target="_blank" title={{"Voting as a U.S. citizen from outside the U.S." | t }}>
+      <a extlinkjs-ignore class="vote-card__link" href={{ fvap_link_overseas }} target="_blank"
+         title={{ "Voting as a U.S. citizen from outside the U.S." | t }}>
         <div class="usa-card__container">
           <div class="vote-feature-card__icon">
             {{ source( directory ~ '/img/svg/Overseas.svg' ) }}
           </div>
           <div class="vote-feature-card__content">
             <h3 class="usa-card__heading">
-              <span>{{"Voting as a U.S. citizen from outside the U.S." | t }}</span>
+              <span>{{ "Voting as a U.S. citizen from outside the U.S." | t }}</span>
             </h3>
             <div class="usa-card__body">
-            <p class="usa-link--external">{{ "Learn more from the Federal Voting Assistance Program (FVAP)." | t }}</p>
+              <p
+                class="usa-link--external">{{ "Learn more from the Federal Voting Assistance Program (FVAP)." | t }}</p>
             </div>
           </div>
         </div>
       </a>
     </article>
-   {# End temporary cards. #}
+    {# End temporary cards. #}
 
   </div>
 </div>

@@ -42,7 +42,7 @@
     @include at-media('tablet-lg') {
       @include u-height('full');
       margin-inline-start: auto;
-      width: calc(50% - (100%/12) - 1rem);
+      width: calc(50% - (100% / 12) - 1rem);
     }
 
     @include at-media('widescreen') {
@@ -112,7 +112,7 @@
       width: 65%;
 
       [data-theme="contrast"] & {
-        width: calc(50% - (100%/12) + 15rem);
+        width: calc(50% - (100% / 12) + 15rem);
         object-position: center right;
         clip-path: rect(0 100% 100% 16rem);
       }
