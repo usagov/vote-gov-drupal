@@ -11,13 +11,13 @@
 {% set attributes = attributes.addClass('usa-card') %}
 
 {% block content %}
-  <a class="vote-card__link" href="{{ url }}" title="{{ label | field_value }}">
+  <a class="vote-card__link" href="{{ url }}" aria-labelledby="vg-teaser-{{ node.id() }}">
     <div class="usa-card__container">
       <div class="vote-feature-card__icon">
         {{ content.field_icon | field_value }}
       </div>
       <div class="vote-feature-card__content">
-        <h3 class="usa-card__heading">{{ label }}</h3>
+        <h3 id="vg-teaser-{{ node.id() }}" class="usa-card__heading">{{ label }}</h3>
         <div class="usa-card__body">
           {{ content.body | render | striptags }}
         </div>
