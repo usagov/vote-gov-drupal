@@ -6,8 +6,7 @@
  */
 
 /**
- * Update tables for nvrf_step field instances.
- * Add subfields step_aria_label and edit_aria_label.
+ * Update tables for nvrf_step field instances to add new subfields.
  */
 function vote_fields_update_10001() {
   $field_storage = \Drupal::entityTypeManager()
