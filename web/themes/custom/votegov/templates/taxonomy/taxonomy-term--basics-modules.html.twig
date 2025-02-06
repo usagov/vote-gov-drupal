@@ -24,6 +24,6 @@
 {% endif %}
 
 {% block content %}
-  <{{heading_level | default('h2')}} {{ heading_level != 'h3' ? 'class="vote-heading--red-underline"' }}>{{ content.field_heading | field_value }}</{{heading_level}}>
+  <{{ heading_level | default('h2') }} {{ heading_level != 'h3' ? 'class="vote-heading--red-underline"' }}>{{ content.field_heading | field_value }}</{{ heading_level }}>
   {{ content.field_content | field_value }}
 {% endblock %}

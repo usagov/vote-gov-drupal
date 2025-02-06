@@ -1,3 +1,13 @@
+{#
+/**
+ * @file
+ * Default theme implementation to partial: theme switcher.
+ *
+ * Usage example:
+ * {% include '@votegov/component/theme-switcher.html.twig'} %}
+ *
+#}
+
 {{ attach_library('votegov/theme_switcher') }}
 <div class="vote-theme-options" data-test="themeSwitcher">
   <button
@@ -5,15 +15,15 @@
     data-ui-switch-id="scale"
     data-values="default,large,x-large"
     type="button"
-    title="Switch font size preset"
+    title="{{ 'Switch font size preset' | t }}"
     data-test="themeText"
-  ><span class="usa-sr-only">Switch font size preset</span></button>
+  ><span class="usa-sr-only">{{ 'Switch font size preset' | t }}</span></button>
   <button
     class="vote-theme-options__button vote-theme-options__button--theme"
     data-ui-switch-id="theme"
     data-values="default,contrast"
     type="button"
-    title="Switch display preset"
+    title="{{ 'Switch display preset' | t }}"
     data-test="themeContrast"
-  ><span class="usa-sr-only">Switch display preset</span></button>
+  ><span class="usa-sr-only">{{ 'Switch display preset' | t }}</span></button>
 </div>
