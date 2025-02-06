@@ -1,17 +1,23 @@
 <?php
 
 /**
- * Update tables for nvrf_step field instances with step_aria_label and
- * edit_aria_label fields.
+ * @file
+ * Custom module update hooks.
+ */
+
+/**
+ * Update tables for nvrf_step field instances.
+ * Add subfields step_aria_label and edit_aria_label.
  */
 function vote_fields_update_10001() {
-  $field_storage = \Drupal::entityTypeManager()->getStorage('field_storage_config');
+  $field_storage = \Drupal::entityTypeManager()
+    ->getStorage('field_storage_config');
   // Get field instances for field type, nvrf_step.
   $fields = $field_storage->loadByProperties([
     'type' => 'nvrf_step',
   ]);
 
-  //Loop through the field instances and update the tables that they are found in.
+  // Loop through field instances and update the tables that they are found in.
   foreach ($fields as $field) {
     $entity_type = $field->get('entity_type');
     $field_name = $field->getName();
@@ -30,7 +36,6 @@ function vote_fields_update_10001() {
  * Helper function to apply db table updates for update #10001.
  */
 function update_table_10001($table_name, $field_name) {
-
   $database = \Drupal::database();
 
   // Check if the fields already exist before adding them.
@@ -41,7 +46,8 @@ function update_table_10001($table_name, $field_name) {
     if (!$schema->fieldExists($table_name, $field_name_prefix . 'step_aria_label')) {
       $schema->addField($table_name,
         $field_name_prefix . 'step_aria_label',
-        ['type' => 'varchar',
+        [
+          'type' => 'varchar',
           'length' => 255,
           'binary' => FALSE,
           'not null' => FALSE,
@@ -49,12 +55,12 @@ function update_table_10001($table_name, $field_name) {
     }
     if (!$schema->fieldExists($table_name, $field_name_prefix . 'edit_aria_label')) {
       $schema->addField($table_name,
-      $field_name_prefix . 'edit_aria_label', [
-        'type' => 'varchar',
-        'length' => 255,
-        'binary' => FALSE,
-        'not null' => FALSE,
-      ]);
+        $field_name_prefix . 'edit_aria_label', [
+          'type' => 'varchar',
+          'length' => 255,
+          'binary' => FALSE,
+          'not null' => FALSE,
+        ]);
     }
   }
 }
@@ -62,7 +68,7 @@ function update_table_10001($table_name, $field_name) {
 /**
  * Utility function to retrieve the db field names for a given field.
  */
-function get_field_table_name($entity_type_id, $field, $revision=FALSE) {
+function get_field_table_name($entity_type_id, $field, $revision = FALSE) {
   $entity_type_manager = \Drupal::entityTypeManager();
   $storage = $entity_type_manager->getStorage($entity_type_id);
 
