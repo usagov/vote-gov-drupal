@@ -27,7 +27,7 @@ final class NvrfStepItem extends FieldItemBase {
    * {@inheritdoc}
    */
   public function isEmpty(): bool {
-    return $this->step_id === NULL && $this->step_label === NULL && $this->back_button_label === NULL && $this->next_button_label === NULL;
+    return $this->step_id === NULL && $this->step_label === NULL && $this->back_button_label === NULL && $this->next_button_label === NULL && $this->step_aria_label === NULL && $this->edit_aria_label === NULL;
   }
 
   /**
@@ -43,6 +43,10 @@ final class NvrfStepItem extends FieldItemBase {
       ->setLabel(t('Back button label'));
     $properties['next_button_label'] = DataDefinition::create('string')
       ->setLabel(t('Next button label'));
+    $properties['step_aria_label'] = DataDefinition::create('string')
+      ->setLabel(t('Step indicator aria label'));
+    $properties['edit_aria_label'] = DataDefinition::create('string')
+      ->setLabel(t('Edit button aria label'));
 
     return $properties;
   }
@@ -83,6 +87,14 @@ final class NvrfStepItem extends FieldItemBase {
         'type' => 'varchar',
         'length' => 255,
       ],
+      'step_aria_label' => [
+        'type' => 'varchar',
+        'length' => 255,
+      ],
+      'edit_aria_label' => [
+        'type' => 'varchar',
+        'length' => 255,
+      ],
     ];
 
     $schema = [
@@ -107,6 +119,10 @@ final class NvrfStepItem extends FieldItemBase {
     $values['back_button_label'] = $random->word(mt_rand(1, 255));
 
     $values['next_button_label'] = $random->word(mt_rand(1, 255));
+
+    $values['step_aria_label'] = $random->word(mt_rand(1, 255));
+
+    $values['edit_aria_label'] = $random->word(mt_rand(1, 255));
 
     return $values;
   }

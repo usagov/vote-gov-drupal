@@ -45,6 +45,14 @@ final class NvrfStepDefaultFormatter extends FormatterBase {
         $data_array['next_button_label'] = $item->next_button_label;
       }
 
+      if ($item->step_aria_label) {
+        $data_array['step_aria_label'] = $item->step_aria_label;
+      }
+
+      if ($item->edit_aria_label) {
+        $data_array['edit_aria_label'] = $item->edit_aria_label;
+      }
+
       $element[$delta] = [
         '#type' => 'data',
         '#data' => SerializedData::create($data_array),
