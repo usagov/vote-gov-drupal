@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "postinstall": "npm run build",
-    "build": "npm run reset-dist && npm run copy-dist:js && npm run copy-dist:css && npm run copy-dist:fonts && npm run copy-dist:data",
+    "build": "npm run reset-dist && npm run copy-dist:js && npm run build-dist:css && npm run copy-dist:css && npm run copy-dist:data",
     "reset-dist": "mkdir -p ./dist/assets",
     "copy-dist:js": "cp -r ./node_modules/vote-gov-nvrf-app/dist/assets/main.js ./dist/assets/main.js",
+    "build-dist:css": "rm -f ./node_modules/vote-gov-nvrf-app/dist/assets/main.css && cat ./node_modules/vote-gov-nvrf-app/dist/src/VoteError.css ./node_modules/vote-gov-nvrf-app/dist/src/VoteTouchpoints.css > ./node_modules/vote-gov-nvrf-app/dist/assets/main.css",
     "copy-dist:css": "cp -r ./node_modules/vote-gov-nvrf-app/dist/assets/main.css ./dist/assets/main.css",
-    "copy-dist:fonts": "cp -r ./node_modules/vote-gov-nvrf-app/dist/assets/{4a1efbe82eaa84ff89ed.woff2,e7bccfa631a0017f31da.woff2} ./dist/assets",
     "copy-dist:data": "rm -rf ../../../data && cp -r ./node_modules/vote-gov-nvrf-app/dist/data ../../../data"
   },
   "dependencies": {
