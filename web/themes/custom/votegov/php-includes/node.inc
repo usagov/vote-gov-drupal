@@ -11,7 +11,7 @@
 function votegov_theme_suggestions_node_alter(&$suggestions, array $vars) {
   $node = $vars['elements']['#node'];
 
-  // Node type: State/Territory.
+  // Add custom template suggestion based on state registration type.
   if ($node->bundle() === "state_territory") {
     $reg_type_array = $node->get('field_registration_type')->getValue();
     $reg_type = end($reg_type_array);

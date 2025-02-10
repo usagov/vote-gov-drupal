@@ -1,3 +1,13 @@
+{#
+/**
+ * @file
+ * Default theme implementation to partial: Page subtitle.
+ *
+ * Usage example:
+ * {% include '@votegov/component/page-subtitle.html.twig'} %}
+ *
+#}
+
 {% if node and node.field_subtitle.value %}
   <div class="page-subtitle usa-intro">
     {{ node.field_subtitle.value  | check_markup(node.field_subtitle.format) }}
