@@ -1,0 +1,13 @@
+diff --git a/src/Plugin/Filter/EmbeddedContent.php b/src/Plugin/Filter/EmbeddedContent.php
+index 826f616..b9dab59 100644
+--- a/src/Plugin/Filter/EmbeddedContent.php
++++ b/src/Plugin/Filter/EmbeddedContent.php
+@@ -88,6 +88,8 @@ class EmbeddedContent extends FilterBase implements ContainerFactoryPluginInterf
+         $replacement = $instance->build();
+         $context = new RenderContext();
+         $render = $this->renderer->executeInRenderContext($context, fn() => $this->renderer->render($replacement));
++        // Escape '&nbsp;' and '--' in template comments in the xml by replacing them with alternatives.
++        $render = preg_replace(['/&nbsp;/', '/--([a-zA-Z0-9_-]+)\.(html|twig)/i'], ['&#160;', '__$1'], $render);
+         if (!$context->isEmpty()) {
+           $bubbleable = $bubbleable->merge($context->pop());
+         }

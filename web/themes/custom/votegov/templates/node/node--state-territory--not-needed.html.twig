@@ -28,25 +28,25 @@
 
   {# JSON Schema #}
   {# Commenting this out until we have a chance to review and improve #}
-{#  <script type="application/ld+json">#}
-{#  {#}
-{#    "@context": "https://schema.org",#}
-{#    "@type": "FAQPage",#}
-{#    "mainEntity": [{#}
-{#      "@type": "Question",#}
-{#      "name": "{{ 'How to register to vote' | t({ '@state_name': state_name }) }}",#}
-{#      "acceptedAnswer": {#}
-{#        "@type": "Answer",#}
-{#        "text": "{{ 'Voter registration is not required in @state_name. @link on @state_name’s election website.' | t({#}
-{#      '@link': { "#markup": "<a href=\"#{more_info_link}\">#{more_info_link_text}</a>"} | render | replace({'"': "\""}),#}
-{#      '@state_name': state_name,#}
-{#      '@of_state_name': of_state_name,#}
-{#      '@in_state_name': in_state_name#}
-{#    }) }}"#}
-{#    }#}
-{#    }{{ end }}]#}
-{#  }#}
-{#</script>#}
+  {#  <script type="application/ld+json"> #}
+  {#  { #}
+  {#    "@context": "https://schema.org", #}
+  {#    "@type": "FAQPage", #}
+  {#    "mainEntity": [{ #}
+  {#      "@type": "Question", #}
+  {#      "name": "{{ 'How to register to vote' | t({ '@state_name': state_name }) }}", #}
+  {#      "acceptedAnswer": { #}
+  {#        "@type": "Answer", #}
+  {#        "text": "{{ 'Voter registration is not required in @state_name. @link on @state_name’s election website.' | t({ #}
+  {#      '@link': { "#markup": "<a href=\"#{more_info_link}\">#{more_info_link_text}</a>"} | render | replace({'"': "\""}), #}
+  {#      '@state_name': state_name, #}
+  {#      '@of_state_name': of_state_name, #}
+  {#      '@in_state_name': in_state_name #}
+  {#    }) }}" #}
+  {#    } #}
+  {#    }{{ end }}] #}
+  {#  } #}
+  {# </script> #}
 {% endblock %}
 
 {% block deadlines %}

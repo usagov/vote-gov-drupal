@@ -1,0 +1,16 @@
+uuid: 60389bb7-6232-4d5b-8c32-70b5322d1b3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.nvrf_display_content
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.nvrf_display_content
+target_entity_type_id: block_content
+target_bundle: nvrf_display_content
+default_langcode: site_default
+language_alterable: false

@@ -64,7 +64,8 @@
         {%- if item.link -%}
           {# Replace default title with combo of endonym and english versions #}
           {% set link_title %}
-            <strong lang="{{ key }}">{{ item.link['#title'] }}</strong> <span lang="en">{{ item.link['#english'] }}</span>
+            <strong lang="{{ key }}">{{ item.link['#title'] }}</strong> <span
+            lang="en">{{ item.link['#english'] }}</span>
           {% endset %}
           {# Merge modifications in the link output #}
           {{ item.link | merge({

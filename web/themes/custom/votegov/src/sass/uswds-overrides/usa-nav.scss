@@ -42,6 +42,7 @@
     span {
       padding-right: unset;
       padding-inline-end: 1rem;
+
       &:after {
         background-color: var(--usa-nav--primary-after);
         right: unset;
@@ -59,7 +60,7 @@
       @include u-border-top(0);
     }
 
-    >a.usa-nav__link, >button.usa-nav__link {
+    > a.usa-nav__link, > button.usa-nav__link {
       --usa-nav--primary-item-text: #{$base-dark};
       --usa-nav--primary-item-bg: transparent;
       --usa-nav--primary-item-bg--hover: #{$bg-light-cool};
@@ -91,7 +92,7 @@
         }
       }
 
-      >button {
+      > button {
         text-align: start;
 
         span:after {
@@ -103,7 +104,7 @@
   }
 
   @include at-media('tablet-lg') {
-    >a.usa-nav__link, >button.usa-nav__link {
+    > a.usa-nav__link, > button.usa-nav__link {
       --usa-nav--primary-item-text: #{$base-dark};
       --usa-nav--primary-item-bg: transparent;
       --usa-nav--primary-item-text-expanded: #{$base-white};
@@ -206,7 +207,7 @@
       @include u-border-top(0);
     }
 
-    >a {
+    > a {
       --usa-nav--submenu-item-text: #{$base-dark};
       --usa-nav--submenu-item-bg: #{$base-white};
 
@@ -240,7 +241,7 @@
       &.usa-nav__Link,
       &.usa-current,
       &:not(.usa-button):not(.usa-current),
-      >button.usa-nav__Link {
+      > button.usa-nav__Link {
         background-color: var(--usa-nav--submenu-item-bg) !important;
         color: var(--usa-nav--submenu-item-text) !important;
       }
@@ -248,7 +249,7 @@
   }
 
   @include at-media('tablet-lg') {
-    >a {
+    > a {
       --usa-nav--submenu-item-text: #{$base-white};
 
       @include hover {
@@ -265,7 +266,7 @@
 
       color: var(--usa-nav--submenu-item-text) !important;
 
-      >span {
+      > span {
         @include u-padding-x(2);
         @include u-padding-y(1);
         @include u-display('block');
@@ -288,11 +289,17 @@
     @include u-margin(0);
     @include grid-container;
 
-    > section {
-      @include u-padding-bottom(4);
+    @include before {
+      @include u-display('block');
       border-top: 1px solid $bg-light-medium;
     }
+
+    > * {
+      @include u-margin-y(3);
+      @include u-display('block');
+    }
   }
+
   @include at-media('tablet-lg') {
     [dir="rtl"] & {
       right: unset;
@@ -413,6 +420,6 @@ body.usa-js-mobile-nav--active {
   @include u-padding-right(0, '!important');
 }
 
-.usa-nav__primary button{
+.usa-nav__primary button {
   text-align: start;
 }

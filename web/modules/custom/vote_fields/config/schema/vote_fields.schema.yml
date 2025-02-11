@@ -29,3 +29,43 @@ field.field_settings.vote_fields_state_content:
     form_subfield_link_text_help_text:
       type: string
       label: Link text subfield help text
+
+
+# Default value.
+field.value.nvrf_step:
+  type: mapping
+  label: Nvrf step
+  mapping:
+    step_id:
+      type: string
+      label: Step Id
+    step_label:
+      type: string
+      label: Step label
+    back_button_label:
+      type: string
+      label: Back button label
+    next_button_label:
+      type: string
+      label: Next button label
+    step_aria_label:
+      type: string
+      label: Step indicator aria label
+    edit_aria_label:
+      type: string
+      label: Edit button aria label
+
+# Default value.
+field.value.confirm_group:
+  type: mapping
+  label: Confirm group
+  mapping:
+    confirm_group_id:
+      type: string
+      label: Confirm group Id
+    confirm_group_label:
+      type: string
+      label: Confirm group label
+    confirm_group_message:
+      type: string
+      label: Confirm group message

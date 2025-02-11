@@ -47,7 +47,7 @@
 {# set a variable if the node has a featured image #}
 {% set node_image = node.field_media.value | length %}
 {% if node_image %}
- {% set media_field = drupal_field('field_media', 'node', node.id(), {type: 'media_thumbnail', settings: {image_style: 'scaled_lg' }}) | field_value %}
+  {% set media_field = drupal_field('field_media', 'node', node.id(), {type: 'media_thumbnail', settings: {image_style: 'scaled_lg' }}) | field_value %}
 {% endif %}
 
 {# set hero title #}
@@ -71,11 +71,6 @@
 {# Government banner component #}
   {{ drupal_entity('block_content', '1') }}
 
-{# If the current page has been marked as outdated and it's the front page #}
-{% if is_front and node.content_translation_outdated.value == 1 %}
-  {{ drupal_entity('block_content', '20') }}
-{% endif %}
-
 {# Sitewide alert component #}
   {{ drupal_view('sitewide_alert', 'block_1') }}
 
@@ -87,7 +82,7 @@
     {{ drupal_entity('block', 'votegov_sitebranding') }}
 
     {% if mainmenu %}
-    <button type="button" class="usa-menu-btn" data-test="mobileBtn">{{ 'Menu' | t }}</button>
+      <button type="button" class="usa-menu-btn" data-test="mobileBtn">{{ 'Menu' | t }}</button>
     {% endif %}
 
   </div>
@@ -101,11 +96,11 @@
 {% block main %}
   {% if page.sidebar %}
     <section id="main-content" class="grid-container content-container">
-    {% include '@votegov/component/hero.html.twig' with {
-      'heading': title,
-      'media': media_field,
-      'variant': 'dark'
-    } %}
+      {% include '@votegov/component/hero.html.twig' with {
+        'heading': title,
+        'media': media_field,
+        'variant': 'dark'
+      } %}
       <div class="vote-main-content-row">
         <aside id="sidebar" role="complementary">
           {{ page.sidebar }}
@@ -117,11 +112,11 @@
     </section>
   {% else %}
     <main role="main" id="main-content">
-    {% include '@votegov/component/hero.html.twig' with {
-      'heading': title,
-      'media': media_field,
-      'variant': 'dark'
-    } %}
+      {% include '@votegov/component/hero.html.twig' with {
+        'heading': title,
+        'media': media_field,
+        'variant': 'dark'
+      } %}
       <div class="vote-page-content grid-container">
         {{ page.content }}
       </div>

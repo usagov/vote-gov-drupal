@@ -33,16 +33,16 @@
 
 {# Set postmarked deadline with fallback #}
 {% if content.field_mail_postmarked_deadline | render %}
-{% set postmarked_deadline = 'Must be postmarked by @date' | t({'@date': content.field_mail_postmarked_deadline.0 | render}) %}
+  {% set postmarked_deadline = 'Must be postmarked by @date' | t({'@date': content.field_mail_postmarked_deadline.0 | render}) %}
 {% else %}
-{% set postmarked_deadline = content.field_g_mail_postmarked_deadline | field_value %}
+  {% set postmarked_deadline = content.field_g_mail_postmarked_deadline | field_value %}
 {% endif %}
 
 {# Set received deadline with fallback #}
 {% if content.field_mail_received_deadline | render %}
-{% set received_deadline = 'Must be received by @date' | t({'@date': content.field_mail_received_deadline.0 | render}) %}
+  {% set received_deadline = 'Must be received by @date' | t({'@date': content.field_mail_received_deadline.0 | render}) %}
 {% else %}
-{% set received_deadline = content.field_g_mail_received_deadline | field_value %}
+  {% set received_deadline = content.field_g_mail_received_deadline | field_value %}
 {% endif %}
 
 {# Set the deadline with fallback, prioritizing postmarked deadline. #}
@@ -66,74 +66,74 @@
   {{ title_suffix }}
 
   <div class="vote-narrow-container-left-align">
-  {% if drupal_view('inline_alert', 'embed_1') | render | striptags | trim %}
-    {{ drupal_view('inline_alert', 'embed_1') }}
-  {% endif %}
-
-  {% block content %}
-    {{ content }}
-  {% endblock %}
-
-  {% block deadlines %}
-    {# Registration deadlines #}
-    <h2>{{ 'Voter registration deadlines' | t({ '@state_name': state_name }) }}</h2>
-    <p>
-      {{ election_link }}
-    </p>
-    <ul data-test="registrationInfo">
-      {% if deadline_online %}
-        <li><strong>{{ 'Online registration deadline:' | t }}</strong> {{ deadline_online }}</li>
-      {% endif %}
-
-      {% if deadline_bymail %}
-        <li><strong>{{ 'Register by mail deadline:' | t }}</strong> {{ deadline_bymail }}</li>
-      {% endif %}
-
-      {% if deadline_inperson %}
-        <li><strong>{{ 'In person registration deadline:' | t }}</strong> {{ deadline_inperson }}</li>
-      {% endif %}
-    </ul>
-  {% endblock %}
-
-  {% block confirm %}
-    {# Check voter registration #}
-    {% if content.field_confirm_registration_link | render %}
-      {% set confirm_reg_link = content.field_override_confirm_reg_link | field_value | render | default( content.field_confirm_registration_link | field_value | render ) %}
-      {% set confirm_reg_link_text = "confirm your voter registration status" | t %}
-
-      {% if language != "en" and not content.field_override_confirm_reg_link  | render %}
-        {% set confirm_reg_link_text = confirm_reg_link_text ~ ' ' ~ in_english %}
-      {% endif %}
-
-      <h2>{{ 'How to check your voter registration' | t({ '@state_name': state_name }) }}</h2>
-      {% if state_abrev != 'wy' %}
-        <p>{{ 'You can @link on @state_name’s election website.' | t({
-            '@link': { "#markup": "<a href=\"#{confirm_reg_link}\" data-state-ext=\"confirm-registration\">#{confirm_reg_link_text}</a>" } | render,
-            '@state_name': state_name,
-            '@of_state_name': of_state_name,
-            '@in_state_name': in_state_name
-          }) }}
-        </p>
-      {% else %} {# Wyoming alt text #}
-        {% set alt_confirm_reg_link_text = "Click here to view Wyoming's county clerk contact information (PDF)" | t %}
-        <p>{{ 'You can confirm your voter registration status by contacting your local registration office. @link.' | t({
-            '@link': { "#markup": "<a href=\"#{confirm_reg_link}\">#{alt_confirm_reg_link_text}</a>" } | render
-          }) }}
-        </p>
-      {% endif %}
+    {% if drupal_view('inline_alert', 'embed_1') | render | striptags | trim %}
+      {{ drupal_view('inline_alert', 'embed_1') }}
     {% endif %}
-  {% endblock %}
 
-  {% if node.field_accepts_nvrf.value == 1 %}
-    {{ drupal_entity('block_content', '3') }}
-  {% endif %}
+    {% block content %}
+      {{ content }}
+    {% endblock %}
 
-  {# Checking if updated date is set and then render the field #}
-  {% if content.field_updated_date | field_value is not empty %}
-  <p class="vote-date--updated">
-    {# Striptags and raw filters were added to accomodate date formats. #}
-    {{'Last updated:' | t }} {{ content.field_updated_date | render | replace(t_numbers[language].numbers | default([])) | striptags('<span>') | raw }}
-  </p>
-  {% endif %}
+    {% block deadlines %}
+      {# Registration deadlines #}
+      <h2>{{ 'Voter registration deadlines' | t({ '@state_name': state_name }) }}</h2>
+      <p>
+        {{ election_link }}
+      </p>
+      <ul data-test="registrationInfo">
+        {% if deadline_online %}
+          <li><strong>{{ 'Online registration deadline:' | t }}</strong> {{ deadline_online }}</li>
+        {% endif %}
+
+        {% if deadline_bymail %}
+          <li><strong>{{ 'Register by mail deadline:' | t }}</strong> {{ deadline_bymail }}</li>
+        {% endif %}
+
+        {% if deadline_inperson %}
+          <li><strong>{{ 'In person registration deadline:' | t }}</strong> {{ deadline_inperson }}</li>
+        {% endif %}
+      </ul>
+    {% endblock %}
+
+    {% block confirm %}
+      {# Check voter registration #}
+      {% if content.field_confirm_registration_link | render %}
+        {% set confirm_reg_link = content.field_override_confirm_reg_link | field_value | render | default( content.field_confirm_registration_link | field_value | render ) %}
+        {% set confirm_reg_link_text = "confirm your voter registration status" | t %}
+
+        {% if language != "en" and not content.field_override_confirm_reg_link  | render %}
+          {% set confirm_reg_link_text = confirm_reg_link_text ~ ' ' ~ in_english %}
+        {% endif %}
+
+        <h2>{{ 'How to check your voter registration' | t({ '@state_name': state_name }) }}</h2>
+        {% if state_abrev != 'wy' %}
+          <p>{{ 'You can @link on @state_name’s election website.' | t({
+              '@link': { "#markup": "<a href=\"#{confirm_reg_link}\" data-state-ext=\"confirm-registration\">#{confirm_reg_link_text}</a>" } | render,
+              '@state_name': state_name,
+              '@of_state_name': of_state_name,
+              '@in_state_name': in_state_name
+            }) }}
+          </p>
+        {% else %} {# Wyoming alt text #}
+          {% set alt_confirm_reg_link_text = "Click here to view Wyoming's county clerk contact information (PDF)" | t %}
+          <p>{{ 'You can confirm your voter registration status by contacting your local registration office. @link.' | t({
+              '@link': { "#markup": "<a href=\"#{confirm_reg_link}\">#{alt_confirm_reg_link_text}</a>" } | render
+            }) }}
+          </p>
+        {% endif %}
+      {% endif %}
+    {% endblock %}
+
+    {% if node.field_accepts_nvrf.value == 1 %}
+      {{ drupal_entity('block_content', '3') }}
+    {% endif %}
+
+    {# Checking if updated date is set and then render the field #}
+    {% if content.field_updated_date | field_value is not empty %}
+      <p class="vote-date--updated">
+        {# Striptags and raw filters were added to accomodate date formats. #}
+        {{ 'Last updated:' | t }} {{ content.field_updated_date | render | replace(t_numbers[language].numbers | default([])) | striptags('<span>') | raw }}
+      </p>
+    {% endif %}
   </div>
 </div>

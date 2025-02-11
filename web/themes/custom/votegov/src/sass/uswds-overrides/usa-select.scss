@@ -3,7 +3,7 @@
 // Custom usa-button overrides using USWDS mixins and other settings.
 .usa-select--maxw,
 .usa-form .usa-select--maxw {
-  
+
   @include at-media('mobile-lg') {
     @include u-maxw('mobile');
   }

@@ -38,7 +38,7 @@ describe('Test Content Editor Role Access', () => {
 
   it('verify access to homepage', () => {
         cy.request({
-          url: '/node/63/edit',
+          url: '/node/91/edit',
           failOnStatusCode:false,
       }).then((resp) => {
           expect(resp.status).to.eq(403)
@@ -85,7 +85,7 @@ describe('Test Content Editor Role Access', () => {
         })
 
     cy.request({
-      url: '/media/6/delete?',
+      url: '/media/33/delete?',
       failOnStatusCode:false,
       }).then((resp) => {
           expect(resp.status).to.eq(403)

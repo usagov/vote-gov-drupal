@@ -10,13 +10,17 @@ dependencies:
     - block_content.type.inline_alert
     - block_content.type.nvrf_a_b_message
     - block_content.type.nvrf_card
+    - block_content.type.nvrf_display_content
     - block_content.type.partnership
     - block_content.type.registration_form_selector
     - block_content.type.search
     - block_content.type.sitewide_alert
     - block_content.type.state_display_content
+    - filter.format.basic_html
+    - filter.format.simple_html
     - media.type.audio
     - media.type.document
+    - media.type.icon
     - media.type.image
     - media.type.remote_video
     - node.type.landing
@@ -29,13 +33,15 @@ dependencies:
     - workflows.workflow.publishing_content
   module:
     - block_content
-    - ckeditor5_embedded_content
     - content_moderation
     - content_translation
     - editoria11y
+    - embedded_content
     - file
+    - filter
     - locale
     - media
+    - menu_link_content
     - node
     - override_node_options
     - paragraphs
@@ -60,6 +66,7 @@ permissions:
   - 'create basic block content'
   - 'create content translations'
   - 'create document media'
+  - 'create icon media'
   - 'create image media'
   - 'create inline_alert block content'
   - 'create landing content'
@@ -69,40 +76,40 @@ permissions:
   - 'create page content'
   - 'create remote_video media'
   - 'create sitewide_alert block content'
-  - 'create state_territory content'
   - 'create terms in basics_modules'
   - 'create terms in nvrf_field'
   - 'create url aliases'
   - 'create voter_guide content'
   - 'delete all revisions'
-  - 'delete any audio media'
+  - 'delete any audio media revisions'
   - 'delete any basic block content'
-  - 'delete any document media'
-  - 'delete any image media'
+  - 'delete any basic block content revisions'
+  - 'delete any contact_identifier block content revisions'
+  - 'delete any document media revisions'
+  - 'delete any email_signup block content revisions'
+  - 'delete any government_banner block content revisions'
+  - 'delete any icon media revisions'
+  - 'delete any image media revisions'
   - 'delete any inline_alert block content'
-  - 'delete any landing content'
-  - 'delete any media'
+  - 'delete any inline_alert block content revisions'
   - 'delete any nvrf_a_b_message block content'
   - 'delete any nvrf_a_b_message block content revisions'
-  - 'delete any page content'
-  - 'delete any remote_video media'
+  - 'delete any nvrf_card block content revisions'
+  - 'delete any nvrf_display_content block content revisions'
+  - 'delete any partnership block content revisions'
+  - 'delete any registration_form_selector block content revisions'
+  - 'delete any remote_video media revisions'
+  - 'delete any search block content revisions'
   - 'delete any sitewide_alert block content'
-  - 'delete any voter_guide content'
+  - 'delete any sitewide_alert block content revisions'
+  - 'delete any state_display_content block content revisions'
   - 'delete content translations'
   - 'delete landing revisions'
-  - 'delete media'
   - 'delete nvrf_page revisions'
-  - 'delete own audio media'
-  - 'delete own document media'
-  - 'delete own image media'
-  - 'delete own landing content'
-  - 'delete own page content'
-  - 'delete own remote_video media'
-  - 'delete own voter_guide content'
   - 'delete page revisions'
   - 'delete state_territory revisions'
-  - 'delete terms in basics_modules'
-  - 'delete terms in nvrf_field'
+  - 'delete term revisions in basics_modules'
+  - 'delete term revisions in nvrf_field'
   - 'delete voter_guide revisions'
   - 'edit any audio media'
   - 'edit any basic block content'
@@ -110,11 +117,13 @@ permissions:
   - 'edit any document media'
   - 'edit any email_signup block content'
   - 'edit any government_banner block content'
+  - 'edit any icon media'
   - 'edit any image media'
   - 'edit any inline_alert block content'
   - 'edit any landing content'
   - 'edit any nvrf_a_b_message block content'
   - 'edit any nvrf_card block content'
+  - 'edit any nvrf_display_content block content'
   - 'edit any nvrf_page content'
   - 'edit any page content'
   - 'edit any partnership block content'
@@ -127,6 +136,7 @@ permissions:
   - 'edit any voter_guide content'
   - 'edit own audio media'
   - 'edit own document media'
+  - 'edit own icon media'
   - 'edit own image media'
   - 'edit own landing content'
   - 'edit own nvrf_page content'
@@ -147,6 +157,7 @@ permissions:
   - 'revert any inline_alert block content revisions'
   - 'revert any nvrf_a_b_message block content revisions'
   - 'revert any nvrf_card block content revisions'
+  - 'revert any nvrf_display_content block content revisions'
   - 'revert any partnership block content revisions'
   - 'revert any registration_form_selector block content revisions'
   - 'revert any search block content revisions'
@@ -168,6 +179,7 @@ permissions:
   - 'translate image media'
   - 'translate interface'
   - 'translate landing node'
+  - 'translate menu_link_content'
   - 'translate nvrf_field taxonomy_term'
   - 'translate nvrf_page node'
   - 'translate page node'
@@ -178,23 +190,31 @@ permissions:
   - 'update any media'
   - 'update content translations'
   - 'update media'
-  - 'use ckeditor5 embedded content'
+  - 'use default embedded content button'
   - 'use publishing_content transition archive'
   - 'use publishing_content transition create_new_draft'
   - 'use publishing_content transition publish'
   - 'use publishing_content transition restore'
   - 'use publishing_content transition restore_to_draft'
+  - 'use text format basic_html'
+  - 'use text format simple_html'
   - 'view all media revisions'
   - 'view all revisions'
+  - 'view any audio media revisions'
   - 'view any basic block content history'
   - 'view any contact_identifier block content history'
+  - 'view any document media revisions'
   - 'view any email_signup block content history'
   - 'view any government_banner block content history'
+  - 'view any icon media revisions'
+  - 'view any image media revisions'
   - 'view any inline_alert block content history'
   - 'view any nvrf_a_b_message block content history'
   - 'view any nvrf_card block content history'
+  - 'view any nvrf_display_content block content history'
   - 'view any partnership block content history'
   - 'view any registration_form_selector block content history'
+  - 'view any remote_video media revisions'
   - 'view any search block content history'
   - 'view any sitewide_alert block content history'
   - 'view any state_display_content block content history'

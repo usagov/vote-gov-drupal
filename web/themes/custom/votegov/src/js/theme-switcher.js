@@ -20,7 +20,7 @@
 
     if (id && values) {
       const storedSwitch = sessionStorage.getItem(id);
-      const attr =  `data-${id}`;
+      const attr = `data-${id}`;
       // Split the string value into an array of values
       values = values.trim().split(/,\s*/);
 

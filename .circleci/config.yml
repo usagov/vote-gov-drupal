@@ -46,7 +46,7 @@ jobs:
             - project/web/themes/custom/votegov/dist
   cypress:
     docker:
-      - image: cypress/included:cypress-13.14.2-node-20.17.0-chrome-128.0.6613.119-1-ff-130.0-edge-128.0.2739.63-1
+      - image: cypress/included:cypress-14.0.2-node-20.17.0-chrome-128.0.6613.119-1-ff-130.0-edge-128.0.2739.63-1
     environment:
       cypress_pipeline: 1
       cypress_cloudgov_application_name: "${project}-drupal-${CIRCLE_BRANCH}"
@@ -287,6 +287,22 @@ jobs:
             npm install
             npm run cy:pipeline:proofer
           when: on_fail
+  home-page-redirect:
+    docker:
+      - image: cypress/included:cypress-13.14.2-node-20.17.0-chrome-128.0.6613.119-1-ff-130.0-edge-128.0.2739.63-1
+    environment:
+      cypress_pipeline: 1
+      cypress_cloudgov_application_name: "${project}-drupal-${CIRCLE_BRANCH}"
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: "Home Page Redirect"
+          command: |
+            cd testing
+            npm install
+            npm run cy:pipeline:hpRedirect
 workflows:
   deploy-workflow:
     when:
@@ -396,6 +412,16 @@ workflows:
                 - prod
     jobs:
       - link-validation
+  home-page-redirect-workflow:
+    triggers:
+      - schedule:
+          cron: '0 9 * * 1-5'
+          filters:
+            branches:
+              only:
+                - prod
+    jobs:
+      - home-page-redirect
   scheduled-backup-workflow:
     when:
       and:
