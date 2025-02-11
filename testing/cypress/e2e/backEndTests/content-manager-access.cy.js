@@ -31,8 +31,8 @@ describe('Test Content Manager Role Access', () => {
       })
   })
 
-  it('verify access to homepage accordion', () => {
-    cy.request('/node/63/edit').then((response) => {
+  it('verify access to homepage', () => {
+    cy.request('/node/91/edit').then((response) => {
       expect(response.status).to.eq(200)
         })
 
@@ -67,7 +67,7 @@ describe('Test Content Manager Role Access', () => {
       expect(response.status).to.eq(200)
         })
 
-    cy.request('/media/6/delete?').then((response) => {
+    cy.request('/media/33/delete?').then((response) => {
       expect(response.status).to.eq(200)
         })
   })

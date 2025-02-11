@@ -48,6 +48,12 @@ field.value.nvrf_step:
     next_button_label:
       type: string
       label: Next button label
+    step_aria_label:
+      type: string
+      label: Step indicator aria label
+    edit_aria_label:
+      type: string
+      label: Edit button aria label
 
 # Default value.
 field.value.confirm_group:
