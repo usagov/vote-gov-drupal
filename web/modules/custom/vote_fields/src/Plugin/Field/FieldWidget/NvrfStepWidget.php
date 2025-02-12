@@ -54,6 +54,20 @@ final class NvrfStepWidget extends WidgetBase {
       '#size' => 60,
     ];
 
+    $element['step_aria_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Step indicator aria label'),
+      '#default_value' => $items[$delta]->step_aria_label ?? NULL,
+      '#size' => 60,
+    ];
+
+    $element['edit_aria_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Edit button aria label'),
+      '#default_value' => $items[$delta]->edit_aria_label ?? NULL,
+      '#size' => 60,
+    ];
+
     $element['#theme_wrappers'] = ['container', 'form_element'];
 
     return $element;
@@ -87,6 +101,12 @@ final class NvrfStepWidget extends WidgetBase {
       }
       if ($value['next_button_label'] === '') {
         $values[$delta]['next_button_label'] = NULL;
+      }
+      if ($value['step_aria_label'] === '') {
+        $values[$delta]['step_aria_label'] = NULL;
+      }
+      if ($value['edit_aria_label'] === '') {
+        $values[$delta]['edit_aria_label'] = NULL;
       }
     }
     return $values;
