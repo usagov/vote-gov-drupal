@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Default theme implementation: Feature cards.
+ *
+#}
+
+<div{{ attributes.addClass('vote-feature-cards') }}>
+    <h2 id="know-your-voting-rights"
+        class="vote-feature-cards__header vote-heading--red-underline vote-heading--max-width">
+        {{ heading }}
+    </h2>
+    <div class="vote-card-group">
+        {% for card in cards %}
+            <article class="usa-card">
+                <a class="vote-card__link" href="{{ card.url }}" aria-labelledby="card-teaser-{{ card.id }}">
+                    <div class="usa-card__container">
+                        <div class="vote-feature-card__icon">
+                            {{ source(card.icon) }}
+                        </div>
+                        <div class="vote-feature-card__content">
+                            <h3 id="card-teaser-{{ card.id }}" class="usa-card__heading">{{ card.label }}</h3>
+                            <div class="usa-card__body">
+                                {{ card.body }}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        {% endfor %}
+    </div>
+</div>

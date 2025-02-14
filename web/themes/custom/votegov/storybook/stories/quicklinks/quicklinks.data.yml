@@ -1,0 +1,13 @@
+---
+heading: Find answers to common questions about registering and voting,
+body: |-
+  <ul class="vote-columns--two">
+    <li><a href="/guide-to-voting#mail-absentee">Mail-in and absentee voting</a></li>
+    <li><a href="/guide-to-voting#earlyvoting">Early voting</a></li>
+    <li><a href="/guide-to-voting#voter-id">Voter ID requirements</a></li>
+    <li><a href="/register#checkreg">Check your registration status</a></li>
+    <li><a href="/register#address">Changing your address</a></li>
+    <li><a href="/register#party">Changing your political party</a></li>
+  </ul>
+link_href: https://vote.gov
+link_label: Go to Vote.gov

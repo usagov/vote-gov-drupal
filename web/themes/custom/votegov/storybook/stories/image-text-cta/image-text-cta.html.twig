@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Default theme implementation: Image + text CTA.
+ */
+#}
+
+{% set classes = [
+  'vote-cta',
+  align ? 'vote-cta__media-' ~ align : '',
+] %}
+
+<div{{ create_attribute().addClass(classes) }}>
+    <div class="vote-cta__media-container tablet:grid-col-4 tablet-lg:grid-col-7 desktop-lg:grid-col-6">
+        {{ media }}
+    </div>
+    <div class="vote-cta__content-container tablet:grid-col-7 tablet-lg:grid-col-5 desktop-lg:grid-col-6">
+        <div class="vote-cta__header vote-heading--red-underline">
+            <h2>{{ heading }}</h2>
+        </div>
+        {% if body %}
+            <div class="vote-cta__body">
+                {{ body }}
+            </div>
+        {% endif %}
+        {% if link_href and link_label %}
+            <p class="vote-cta__footer">
+                <span class="vote-link">{{ link(link_label, link_href) }}</span>
+            </p>
+        {% endif %}
+    </div>
+</div>
