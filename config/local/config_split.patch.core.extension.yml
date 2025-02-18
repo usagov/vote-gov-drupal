@@ -4,6 +4,7 @@ adding:
     devel: 0
     disable_language: 0
     field_ui: 0
+    linkit: 0
     stage_file_proxy: 0
     views_ui: 0
 removing: {  }
