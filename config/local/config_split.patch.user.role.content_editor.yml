@@ -2,7 +2,9 @@ adding:
   dependencies:
     module:
       - disable_language
+      - linkit
   permissions:
+    - 'administer linkit profiles'
     - 'create content in disabled language'
     - 'view disabled languages'
 removing: {  }
