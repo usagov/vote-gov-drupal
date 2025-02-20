@@ -109,6 +109,9 @@
             },
             "drupal/embedded_content": {
                 "appendXML() does not allow &nbsp; or double commas in comments (original issue: https://www.drupal.org/node/3496686)": "patches/embedded_content/3496686-appendxml-does-not.patch"
+            },
+            "drupal/tome": {
+              "Paths are exported multiple times with path counts > 1: https://www.drupal.org/project/tome/issues/3478842": "patches/tome/tomePathCountFixes.patch"
             }
         },
         "drupal-scaffold": {
