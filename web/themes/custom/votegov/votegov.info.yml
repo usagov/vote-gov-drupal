@@ -17,4 +17,3 @@ regions:
 
 ckeditor5-stylesheets:
   - dist/css/styles.css
-
