@@ -1,0 +1,27 @@
+{
+  "name": "votestorybook",
+  "version": "3.3.0",
+  "description": "",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build": "vite build",
+    "start": "npm run storybook"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.7.0",
+    "@modyfi/vite-plugin-yaml": "^1.1.0",
+    "@storybook/addon-essentials": "^8.2.9",
+    "@storybook/addon-interactions": "^8.2.9",
+    "@storybook/addon-links": "^8.2.9",
+    "@storybook/blocks": "^8.2.9",
+    "@storybook/html": "^8.2.9",
+    "@storybook/html-vite": "^8.2.9",
+    "drupal-twig-extensions": "^1.0.0-beta.5",
+    "storybook": "^8.2.9",
+    "vite-plugin-twig-drupal": "^1.4.0"
+  }
+}
