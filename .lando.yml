@@ -16,18 +16,6 @@ config:
 # Can setup proxy urls to your services.
 # https://docs.lando.dev/config/proxy.html
 services:
-  node:
-    type: "node:18"
-    scanner: false
-    ssl: true
-    sslExpose: false
-    build_as_root:
-      - apt update -y && apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb -y
-    build:
-      - npm install --prefix /app/testing && npm install -g cypress@12.9.0
-    overrides:
-      ports:
-        - "32654:32654"
   appserver:
     # Point to custom development php.ini
     config:
@@ -61,52 +49,7 @@ tooling:
   phplint:
     cmd: '/app/vendor/squizlabs/php_codesniffer/bin/phpcs --ignore=*/node_modules/* --standard=/app/vendor/drupal/coder/coder_sniffer/Drupal,vendor/drupal/coder/coder_sniffer/DrupalPractice --extensions=php,module,inc,theme,info,yml,twig --report=full /app/web/modules/custom /app/web/themes/custom -n'
     service: appserver
-  npm-testing:
-    service: node
-    description: Used for npm <commands>
-    cmd: npm --prefix  /app/testing
-  npm-theme:
-    service: node
-    description: Runs npm commands
-    cmd: npm --prefix  /app/web/themes/custom/votegov
-  gulp:
-    service: node
-    dir: "/app/web/themes/custom/votegov"
-    cmd: npm run gulp --prefix  /app/web/themes/custom/votegov
-  gulp-compile:
-    service: node
-    dir: "/app/web/themes/custom/votegov"
-    cmd: npm run build --prefix  /app/web/themes/custom/votegov
   # Custom lando command, to sync Drupal db with updates, config changes in codebase.
-  'cy:axe':
-    service: node
-    cmd: npm run cy:axe --prefix /app/testing
-    description: run cypress accessibility test - headless
-  'cy:links':
-    service: node
-    cmd: npm run cy:links --prefix /app/testing
-    description: run cypress internal links tess - headless
-  'cy:proofer':
-    service: node
-    cmd:  npm run cy:proofer --prefix /app/testing
-    description: run cypress external links test - headless
-# removing the follow script until further work can be done for cypress and cli commands to work together
-  # 'cy:createUser':
-  #   service: node
-  #   cmd:  npm run cy:createUser --prefix /app/testing
-  #   description: run cypress create user script - headless
-  # 'cy:deleteUser':
-  #   service: node
-  #   cmd:  npm run cy:deleteUser --prefix /app/testing
-  #   description: run cypress delete user script - headless
-  # 'cy:test':
-  #   service: node
-  #   cmd:  npm run cy:test --prefix /app/testing
-  #   description: run cypress functional tests - headless
-  # 'cy:testSuite':
-  #   service: node
-  #   cmd:  npm run cypress run --prefix /app/testing
-  #   description: run full testing suite, functional, internal links, external links and accessibility - headless
   retune:
     service: appserver
     description: Branch update (run composer / db updates / import config / clear caches).
