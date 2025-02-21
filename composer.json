@@ -54,6 +54,7 @@
         "drupal/focal_point": "^2.1",
         "drupal/language_switcher_extended": "^1.1",
         "drupal/link_attributes": "^2.1",
+        "drupal/linkit": "^7.0",
         "drupal/log_stdout": "^1.5",
         "drupal/menu_block": "^1.10",
         "drupal/menu_multilingual": "^2.0",
