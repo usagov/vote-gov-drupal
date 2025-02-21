@@ -16,4 +16,4 @@ regions:
   no_region: "Blocks for Twig Tweak, hidden, or other purposes"
 
 ckeditor5-stylesheets:
-  - dist/css/styles.css
+  - dist/css/ckeditor.css
