@@ -61,6 +61,7 @@ tooling:
       - drush locale-check
       - drush locale-update
       - drush cr
+      - drush uli
   import-translations:
     service: appserver
     description: Import string translations from vote_utility module
