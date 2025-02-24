@@ -4,9 +4,10 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
+    "ckeditor": "rm -rf dist/css/ckeditor.css && { cat src/ckeditor.css ; echo '{' ; cat dist/css/styles.css ; echo '}' ; } > dist/css/ckeditor.css",
     "gulp": "gulp watch",
     "dev": "gulp",
-    "build": "gulp build"
+    "build": "gulp build && npm run ckeditor"
   },
   "author": "",
   "license": "ISC",

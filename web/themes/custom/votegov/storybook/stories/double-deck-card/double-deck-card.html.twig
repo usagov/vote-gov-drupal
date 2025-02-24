@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Default theme implementation: Double deck card
+ */
+#}
+
+<div class="vote-double-deck-card maxw-tablet-lg">
+    <div class="vote-double-deck-card__primary">
+        <div class="vote-double-deck-card__icon">
+            {{ source('/svg/map-icon.svg') }}
+        </div>
+        <div class="vote-double-deck-card__text">
+            <h3 class="vote-double-deck-card__heading">{{ heading }}</h3>
+            <div class="vote-double-deck-card__body">{{ body }}</div>
+        </div>
+    </div>
+    <div class="vote-double-deck-card__body_secondary">{{ footer }}</div>
+</div>

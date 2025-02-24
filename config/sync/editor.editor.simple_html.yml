@@ -28,5 +28,8 @@ settings:
         - rel
         - target
         - title
+    linkit_extension:
+      linkit_enabled: true
+      linkit_profile: default
 image_upload:
   status: false

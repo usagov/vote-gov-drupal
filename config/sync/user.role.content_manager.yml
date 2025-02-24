@@ -39,6 +39,7 @@ dependencies:
     - embedded_content
     - file
     - filter
+    - linkit
     - locale
     - media
     - menu_link_content
@@ -61,6 +62,7 @@ permissions:
   - 'access media overview'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'administer linkit profiles'
   - 'administer menu'
   - 'create audio media'
   - 'create basic block content'
