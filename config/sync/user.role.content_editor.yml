@@ -26,6 +26,7 @@ dependencies:
     - embedded_content
     - file
     - filter
+    - linkit
     - media
     - node
     - override_node_options
@@ -45,6 +46,7 @@ permissions:
   - 'access media overview'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'administer linkit profiles'
   - 'create audio media'
   - 'create content translations'
   - 'create document media'
