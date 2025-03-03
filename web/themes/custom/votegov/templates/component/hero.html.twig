@@ -46,11 +46,11 @@
         {% endif %}
         {% if link_href %}
           <div>
-          {% include '@votegov/component/button.html.twig' with {
-            'href': link_href,
-            'label': link_label,
-            'secondary': true
-          } %}
+            {% include '@votegov/component/button.html.twig' with {
+              'href': link_href,
+              'label': link_label,
+              'secondary': true
+            } %}
           </div>
         {% endif %}
       </div>

@@ -1,4 +1,10 @@
 {% extends "page.html.twig" %}
+{#
+/**
+* @file
+* Theme override to display a single page: Voter guide.
+*/
+#}
 {% set title = drupal_title() %}
 {% set excludedLanguages = ['ar', 'am', 'bn', 'zh-hans', 'zh', 'hi', 'ja', 'km', 'ru', 'ko'] %}
 
@@ -11,18 +17,18 @@
       'variant': 'dark'
     } %}
     <div class="vote-main-content-row vote-block-margin-y--narrow grid-container {% if language not in excludedLanguages %} usa-in-page-nav-container {% endif %}">
-{% if language not in excludedLanguages %}
-  <aside class="vote-side-nav__container">
-    <div
-      class="usa-in-page-nav"
-      data-main-content-selector=".usa-in-page-nav-container"
-      data-title-text="{{ 'On this page' | t }}"
-      data-title-heading-level="h2"
-      data-scroll-offset="-600"
-      data-root-margin="48px 0px -90% 0px"
-      data-threshold="1"
-    ></div>
-  </aside>
+      {% if language not in excludedLanguages %}
+        <aside class="vote-side-nav__container">
+          <div
+            class="usa-in-page-nav"
+            data-main-content-selector=".usa-in-page-nav-container"
+            data-title-text="{{ 'On this page' | t }}"
+            data-title-heading-level="h2"
+            data-scroll-offset="-600"
+            data-root-margin="48px 0px -90% 0px"
+            data-threshold="1"
+          ></div>
+        </aside>
       {% endif %}
       <div class="vote-page-content vote-page-content--alt">
         {{ page.content }}
@@ -30,7 +36,7 @@
     </div>
   </main>
   <div role="region" aria-label="{{ 'Know your voting rights' | t }}">
-  {# Voter guide listing #}
-  {{ drupal_view('voter_guides', 'embed_1') }}
+    {# Voter guide listing #}
+    {{ drupal_view('voter_guides', 'embed_1') }}
   </div>
 {% endblock %}

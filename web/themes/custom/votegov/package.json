@@ -4,15 +4,16 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
+    "ckeditor": "rm -rf dist/css/ckeditor.css && { cat src/ckeditor.css ; echo '{' ; cat dist/css/styles.css ; echo '}' ; } > dist/css/ckeditor.css",
     "gulp": "gulp watch",
     "dev": "gulp",
-    "build": "gulp build"
+    "build": "gulp build && npm run ckeditor"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@uswds/compile": "^1.2.0",
-    "@uswds/uswds": "^3.10.0",
+    "@uswds/compile": "^1.2.1",
+    "@uswds/uswds": "^3.11.0",
     "gulp": "^5.0.0",
     "gulp-uglify": "^3.0.2",
     "uglify-es": "^3.3.9"

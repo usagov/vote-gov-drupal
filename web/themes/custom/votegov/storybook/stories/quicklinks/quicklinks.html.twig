@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Default theme implementation: Quick Links.
+ */
+#}
+
+<section class="vote-quicklinks">
+    <div class="vote-quicklinks__container">
+        <h2 class="vote-quicklinks__heading vote-heading--red-underline">
+            {{ heading }}
+        </h2>
+        <div class="vote-quicklinks__content">
+            {{ body }}
+            {% if link_href and link_label %}
+                <p>{{ link(link_label, link_href) }}</p>
+            {% endif %}
+        </div>
+    </div>
+</section>

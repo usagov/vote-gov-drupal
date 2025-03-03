@@ -14,3 +14,6 @@ regions:
   sidebar: "Sidebar"
   footer: "Footer"
   no_region: "Blocks for Twig Tweak, hidden, or other purposes"
+
+ckeditor5-stylesheets:
+  - dist/css/ckeditor.css

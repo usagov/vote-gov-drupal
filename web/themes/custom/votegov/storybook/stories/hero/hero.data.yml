@@ -1,0 +1,13 @@
+---
+variant: dark
+heading: Guide to voting
+body: One of the most important rights of American citizens is the right to vote. Voting gives you the opportunity to help shape your community.
+media: <img src="https://vote.gov/s3/files/styles/scaled_xl/public/media/image/2024-06/Guide_to_voting.jpg" alt="" />
+breadcrumbs: |-
+  <nav role="navigation" aria-labelledby="system-breadcrumb" class="usa-breadcrumb">
+    <h2 id="system-breadcrumb" class="usa-sr-only">Breadcrumb</h2>
+    <ol class="usa-breadcrumb__list">
+      <li class="usa-breadcrumb__list-item"><a class="usa-breadcrumb__link" href="/"><span>Home</span></a></li>
+      <li class="usa-breadcrumb__list-item">Guide to voting</li>
+    </ol>
+  </nav>

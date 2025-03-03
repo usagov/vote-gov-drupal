@@ -1,2 +1,2 @@
 {# Striptags and raw filters were added to accomodate date formats. #}
-<time{{ attributes }}>{{ text | replace(t_numbers[language].numbers | default([])) | striptags('<span>') | raw  }}</time>
+<time{{ attributes }}>{{ text | replace(t_numbers[language].numbers | default([])) | striptags('<span>') | raw }}</time>

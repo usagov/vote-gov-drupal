@@ -44,7 +44,7 @@ echo ""
 echo "**************************************************"
 echo "Running 'drush tome:static' in '${environment}'..."
 echo "**************************************************"
-drush tome:static --uri=${ssg_endpoint} --path-count=1 --retry-count=3 -y
+drush tome:static --uri=${ssg_endpoint} --retry-count=3 -y
 drush tome:static-export-path '/sitemap.xml,/sitemap_generator/default/sitemap.xsl' --uri=${ssg_sitemap_endpoint} --retry-count=3 -y
 drush cr
 echo "'drush tome:static' task...completed!"
@@ -93,6 +93,7 @@ mkdir -p ${html_path}/themes/custom/votegov
 cp -rfp ${app_path}/web/themes/custom/votegov/dist ${html_path}/themes/custom/votegov/
 cp -rfp ${app_path}/web/themes/custom/votegov/img ${html_path}/themes/custom/votegov/
 cp -rfp ${app_path}/web/themes/custom/votegov/json ${html_path}/themes/custom/votegov/
+cp -rfp ${app_path}/web/themes/custom/votegov/fonts ${html_path}/themes/custom/votegov/
 echo "Adding Vote.gov custom theme assets...completed!"
 echo ""
 
