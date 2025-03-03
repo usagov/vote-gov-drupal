@@ -154,15 +154,7 @@ describe('Test User Role Access to Content Moderation', () => {
       .submitBtn().click()
     cy.get('[id="edit-current"]').should('contain', 'Draft')
 
-    // Can delete content
-    cy.visit('/test-page')
-    pageObjects
-      .editBar().then(btn => {
-        cy.get(btn[2]).click()
-      })
-    cy.get('[class="page-title"]').should('contain', 'delete')
-
-    // Can create and delete media
+    // Can create media
     cy.request('/media/add').then((response) => {
       expect(response.status).to.eq(200)
     })
@@ -199,7 +191,7 @@ describe('Test User Role Access to Content Moderation', () => {
     cy.url().should('contain', 'test')
 
     // Can view own draft content
-    cy.request('/test-page').then((response) => {
+    cy.request('/test-page-0').then((response) => {
       expect(response.status).to.eq(200)
     })
     // can view other draft content

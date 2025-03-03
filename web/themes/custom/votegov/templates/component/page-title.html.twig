@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Default theme implementation to partial: Page title.
+ *
+ * Usage example:
+ * {% include '@votegov/component/page-title.html.twig'} %}
+ *
+#}
+
+{% set title = drupal_title() %}
+{% set node_type = currentnode.bundle() %}
+
+{% if node_type == "state_territory" %}
+  {% set title = title | render | striptags | trim %}
+  {% if language == 'ko' and currentnode.field_is_state.value %}
+    {% set korean_state_char = "state" | t %}
+    {% set title = title ~ " " ~ korean_state_char %}
+  {% endif %}
+
+  {% set in_state_name = currentnode.field_in_state_name.value | default("@state_name") | t({ "@state_name": title }) %}
+  {% set title = 'Register to vote in @state_name' | t ({
+    "@state_name": title,
+    "@in_state_name": in_state_name
+  }) %}
+{% endif %}
+
+
+{{ title_prefix }}
+{% if title %}
+  <h1{{ title_attributes.addClass('page-title').setAttribute('data-test', 'mainHeader') }}>{{ title }}</h1>
+{% endif %}
+{{ title_suffix }}

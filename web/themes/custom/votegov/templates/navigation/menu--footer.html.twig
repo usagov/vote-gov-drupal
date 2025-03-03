@@ -23,7 +23,8 @@
 {% import _self as menus %}
 
 {# footer links #}
-<nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="{{ 'Secondary navigation' | t }}" data-test="footer">
+<nav class="usa-identifier__section usa-identifier__section--required-links"
+     aria-label="{{ 'Secondary navigation' | t }}" data-test="footer">
   <div class="usa-identifier__container">
     {{ menus.menu_links(items, attributes, 0) }}
   </div>

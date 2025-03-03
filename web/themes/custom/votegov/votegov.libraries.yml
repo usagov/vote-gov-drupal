@@ -7,7 +7,6 @@ global:
     - core/drupal.active-link
     - votegov/uswdsjs
     - votegov/external_links
-    - votegov/roboto
 
 uswdsjs:
   js:
@@ -16,11 +15,6 @@ uswdsjs:
       minified: true
       attributes:
         defer: true
-
-roboto:
-  css:
-    theme:
-      https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap: { type: external }
 
 external_links:
   js:

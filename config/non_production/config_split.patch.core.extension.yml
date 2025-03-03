@@ -5,7 +5,6 @@ adding:
     field_ui: 0
     s3fs: 0
     samlauth: 0
-    stage_file_proxy: 0
     usagov_login: 0
     views_ui: 0
     externalauth: 10

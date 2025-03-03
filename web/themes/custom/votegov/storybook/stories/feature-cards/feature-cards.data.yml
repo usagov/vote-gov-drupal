@@ -1,0 +1,33 @@
+---
+heading: Know your voting rights
+cards:
+  0:
+    label: Voting as a college student
+    id: 0
+    body: You may have the option to register in your hometown or college town.
+    icon: /icons/Voting_as_a_college_student.svg
+  1:
+    label: Voting as a new U.S. citizen
+    id: 1
+    body: Find out what you need to know about voting and participating in American elections.
+    icon: /icons/Voting_new_citizen.svg
+  2:
+    label: Voting with a disability
+    id: 2
+    body: Know your rights and voting accommodations protected by law.
+    icon: /icons/Voting_with_disability-alt.svg
+  3:
+    label: Voting while unhoused
+    id: 3
+    body: You don’t need a home address to register and vote.
+    icon: /icons/Voting_while_unhoused_A.svg
+  4:
+    label: Voting after a felony conviction
+    id: 4
+    body: Your eligibility to vote after a conviction can be different from state to state.
+    icon: /icons/Voting_after_prison_A.svg
+  5:
+    label: "Preparing to vote: age 18 and under"
+    id: 5
+    body: Take steps now so you are ready to vote when you turn 18.
+    icon: /icons/Voting_path_to_18_A.svg

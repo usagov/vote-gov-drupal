@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.basic_html
+    - filter.format.simple_html
     - media.type.audio
     - media.type.document
     - media.type.icon
@@ -23,6 +25,8 @@ dependencies:
     - editoria11y
     - embedded_content
     - file
+    - filter
+    - linkit
     - media
     - node
     - override_node_options
@@ -42,6 +46,7 @@ permissions:
   - 'access media overview'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'administer linkit profiles'
   - 'create audio media'
   - 'create content translations'
   - 'create document media'
@@ -50,6 +55,8 @@ permissions:
   - 'create media'
   - 'create page content'
   - 'create remote_video media'
+  - 'create terms in basics_modules'
+  - 'create terms in nvrf_field'
   - 'create voter_guide content'
   - 'edit any page content'
   - 'edit any voter_guide content'
@@ -68,6 +75,7 @@ permissions:
   - 'translate document media'
   - 'translate image media'
   - 'translate nvrf_field taxonomy_term'
+  - 'translate nvrf_page node'
   - 'translate page node'
   - 'translate paragraph'
   - 'translate remote_video media'
@@ -77,6 +85,8 @@ permissions:
   - 'use default embedded content button'
   - 'use publishing_content transition create_new_draft'
   - 'use publishing_content transition restore_to_draft'
+  - 'use text format basic_html'
+  - 'use text format simple_html'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view any unpublished content'

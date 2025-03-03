@@ -32,15 +32,16 @@ We call a macro which calls itself to render the full tree.
     <div class="grid-container usa-nav__close-container">
       <button type="button" class="usa-nav__close" data-test="mainCloseBtn">{{ 'Close' | t }}</button>
     </div>
-  {{ menus.menu_links(items, attributes, 0, 'basic-mega-nav-section-') }}
-  <div class="usa-nav__secondary">
-    {{ drupal_entity('block_content', 2) }}
-     {% if language == 'en' %}
-        <button class="usa-button" id="vote-touchpoints-mobile--button" title="{{ 'How can we improve vote.gov?' | t }}" data-test="touchpointsBtnMobile">{{ 'How can we improve vote.gov?' | t }}</button>
+    {{ menus.menu_links(items, attributes, 0, 'basic-mega-nav-section-') }}
+    <div class="usa-nav__secondary">
+      {{ drupal_entity('block_content', 2) }}
+      {% if language == 'en' %}
+        <button class="usa-button" id="vote-touchpoints-mobile--button" title="{{ 'How can we improve vote.gov?' | t }}"
+                data-test="touchpointsBtnMobile">{{ 'How can we improve vote.gov?' | t }}</button>
         {{ attach_library('votegov/touchpoints_click') }}
-    {% endif %}
+      {% endif %}
+    </div>
   </div>
-</div>
 </nav>
 
 {% macro menu_links(items, attributes, menu_level, aria_id) %}
@@ -53,19 +54,19 @@ We call a macro which calls itself to render the full tree.
           {% set aria_id = aria_id ~ loop.index | clean_id %}
           <li class="usa-nav__primary-item">
             {% if item.below %}
-              <button
-                type="button"
-                class="usa-accordion__button usa-nav__link {{ item.in_active_trail ? 'usa-current' }}"
-                aria-expanded="false"
-                aria-controls="{{ aria_id }}"
-              >
-                <span>{{ item.title }}</span>
-              </button>
-              <div
-                id="{{ aria_id }}"
-                class="usa-nav__submenu"
-                hidden
-              >
+            <button
+              type="button"
+              class="usa-accordion__button usa-nav__link {{ item.in_active_trail ? 'usa-current' }}"
+              aria-expanded="false"
+              aria-controls="{{ aria_id }}"
+            >
+              <span>{{ item.title }}</span>
+            </button>
+            <div
+              id="{{ aria_id }}"
+              class="usa-nav__submenu"
+              hidden
+            >
               <ul class="usa-nav__submenu-list" data-test="subMenu">
                 {% set link_classes = [
                   'usa-nav__link',
@@ -78,43 +79,43 @@ We call a macro which calls itself to render the full tree.
                 </li>
                 {{ menus.menu_links(item.below, attributes, menu_level + 1, aria_id) }}
 
-            {% else %}
-              {% if item.url.isRouted() and item.url.routeName == '<nolink>' %}
-                  <button
-                    type="button"
-                    class="usa-nav__link"
-                  >
-                    <span>{{ item.title }}</span>
-                  </button>
-              {% else %}
-                {% set link_classes = [
-                  'usa-nav__link',
-                  item.in_active_trail ? 'usa-current'
-                ] %}
-                {% set link_attributes = item.in_active_trail ? {'aria-current': 'page'} : {} %}
-                {{ link(item.title, item.url, {'class': link_classes} | merge(link_attributes)) }}
-              {% endif %}
-            {% endif %}
+                {% else %}
+                  {% if item.url.isRouted() and item.url.routeName == '<nolink>' %}
+                    <button
+                      type="button"
+                      class="usa-nav__link"
+                    >
+                      <span>{{ item.title }}</span>
+                    </button>
+                  {% else %}
+                    {% set link_classes = [
+                      'usa-nav__link',
+                      item.in_active_trail ? 'usa-current'
+                    ] %}
+                    {% set link_attributes = item.in_active_trail ? {'aria-current': 'page'} : {} %}
+                    {{ link(item.title, item.url, {'class': link_classes} | merge(link_attributes)) }}
+                  {% endif %}
+                {% endif %}
           </li>
         {% endfor %}
       </ul>
-    {# Secondary level menu structure. #}
+      {# Secondary level menu structure. #}
     {% elseif menu_level == 1 %}
-        {% for item in items %}
-          <li class="usa-nav__submenu-item">
-            {% if item.url.routeName != '<nolink>' %}
-              {% set link_attributes = item.in_active_trail ? {'aria-current': 'page'} : {} %}
-              {{ link(item.title, item.url, link_attributes) }}
-            {% else %}
-              <span>{{ item.title }}</span>
-            {% endif %}
-            {% if item.below %}
-              {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-            {% endif %}
-          </li>
-        {% endfor %}
+      {% for item in items %}
+        <li class="usa-nav__submenu-item">
+          {% if item.url.routeName != '<nolink>' %}
+            {% set link_attributes = item.in_active_trail ? {'aria-current': 'page'} : {} %}
+            {{ link(item.title, item.url, link_attributes) }}
+          {% else %}
+            <span>{{ item.title }}</span>
+          {% endif %}
+          {% if item.below %}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          {% endif %}
+        </li>
+      {% endfor %}
       </ul>
-    </div>
+      </div>
     {% endif %}
   {% endif %}
 {% endmacro %}

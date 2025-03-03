@@ -38,6 +38,7 @@
   <css-placeholder token="{{ placeholder_token }}">
   <js-placeholder token="{{ placeholder_token }}">
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    {# Datalayer for tracking in google analytics. #}
     <!-- DataLayer -->
     <script id="taxonomy-data">
       dataLayer = [{
@@ -90,11 +91,13 @@
 <body{{ attributes.addClass(body_classes) }}>
 {% if not logged_in %}
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BKF7S7X"
-                    sandbox height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BKF7S7X"
+            sandbox height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
   <!-- End Google Tag Manager (noscript) -->
 {% endif %}
-{# Keyboard navigation/accessibility link to main content. #}
+  {# Keyboard navigation/accessibility link to main content. #}
   <a href="#main-content" class="usa-skipnav">
     {{ 'Skip to main content'|t }}
   </a>
