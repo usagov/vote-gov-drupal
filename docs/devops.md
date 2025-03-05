@@ -49,6 +49,7 @@
         1. [download_latest_backup.sh](#download_latest_backupsh)
 1. [Common Usage](#common-usage)
     1. [Downsync Process](#downsync-process)
+    1. [Running Upkeep](#running-upkeep)
 
 ## Prerequisites
 
@@ -422,3 +423,24 @@ The Downsync Process is one by which production data is synced into a preproduct
 1. The pipeline will be scheduled and retrieve the latest production database backup from the S3 backups bucket.
 
 Files are not downsynced as a part of this pipeline because preproduction environments leverage a file proxy against prod's files.
+
+### Running Upkeep
+
+As mentioned in [Upkeep](#upkeep) and [Scheduled Pipelines](#scheduled-pipelines) the upkeep script runs cron and generates the static site with Tome. Running Upkeep manually differs depending on the space and the amount of free memory it as as well as security configuration.
+
+#### Running Upkeep in Prod
+
+The production space requires and has enough memory to support spawning a task for upkeep and is done with the following CLI command:
+```bash
+cf run-task vote-drupal-prod --command "ENV=prod scripts/upkeep" --name "vote-prod-upkeep" -k "2G" -m "1024M"
+```
+Which is the same command the scheduled pipeline would run in prod.
+
+#### Running Upkeep in Preprod
+
+Preproduction environments do not have enough memory to spawn a new task to run upkeep. To manually run upkeep in preprod envs where memory is more limited, you must ssh into the application instance and run the script:
+```bash
+cf ssh vote-drupal-<env name>
+ENV=<env name> bash app/scripts/upkeep
+```
+Once this command completes, you can close your ssh session.
