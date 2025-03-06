@@ -426,7 +426,7 @@ Files are not downsynced as a part of this pipeline because preproduction enviro
 
 ### Running Upkeep
 
-As mentioned in [Upkeep](#upkeep) and [Scheduled Pipelines](#scheduled-pipelines) the upkeep script runs cron and generates the static site with Tome. Running Upkeep manually differs depending on the space and the amount of free memory it as as well as security configuration.
+As mentioned in [Upkeep](#upkeep) and [Scheduled Pipelines](#scheduled-pipelines) the upkeep script runs cron and generates the static site with Tome. Running Upkeep manually differs depending on the space and the amount of free memory it has as well as security configuration.
 
 #### Running Upkeep in Prod
 
