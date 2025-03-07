@@ -1,0 +1,5 @@
+vote_nvrf.nvrf_report:
+  title: 'NVRF reports'
+  description: ''
+  route_name: vote_nvrf.nvrf_report
+  parent: 'system.admin_reports'

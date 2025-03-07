@@ -24,3 +24,10 @@ vote_nvrf.state_data_points_index:
     _controller: '\Drupal\vote_nvrf\Controller\NvrfPageController::stateDataPointsIndex'
   requirements:
     _permission: 'access content'
+vote_nvrf.nvrf_report:
+  path: '/admin/reports/nvrf'
+  defaults:
+    _title: 'NVRF Reports'
+    _controller: '\Drupal\vote_nvrf\Controller\NvrfReportController'
+  requirements:
+    _permission: 'access administration pages'
