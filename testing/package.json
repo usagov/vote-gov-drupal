@@ -5,7 +5,7 @@
   "main": "index.js",
   "devDependencies": {
     "axe-core": "^4.10.2",
-    "cypress": "^14.0.3",
+    "cypress": "^14.1.0",
     "cypress-axe": "^1.6.0",
     "cypress-mochawesome-reporter": "^3.8.2"
   },
@@ -19,7 +19,7 @@
     "cy:proofer": "cypress run --spec 'cypress/e2e/externalLinks/**/*'",
     "cy:createUser": "cypress run --spec 'cypress/e2e/createUser/**/*'",
     "cy:deleteUser": "cypress run --spec 'cypress/e2e/deleteUser/**/*'",
-    "testSuite": "npm run cy:frontEnd && npm run cy:backEnd && npm run cy:links && npm run cy:proofer && npm run cy:axe",
+    "test": "npm run cy:frontEnd && npm run cy:backEnd && npm run cy:links && npm run cy:proofer && npm run cy:axe",
     "cypress": "cypress",
     "cy:pipeline:frontEnd": "cypress run --spec 'cypress/e2e/frontEndTests/**/*' --config-file pipeline.config.js",
     "cy:pipeline:axe": "cypress run --spec 'cypress/e2e/accessibility/**/*' --config-file pipeline.config.js",
