@@ -23,13 +23,15 @@
       color: #005ea2;
     }
   }
+  
+  .usa-step-indicator__segment-label {
+    text-decoration: underline;
+  }
 }
 
 .usa-step-indicator .usa-step-indicator__segment-label {
   padding: .5rem;
-}
-
-.vote-error-container {
+}.vote-error-container {
   border-left: 3px solid #b50909;
   padding-left: 1rem;
 }
@@ -43,8 +45,6 @@
   font-size: 1rem;
   margin-top: 0.5rem;
   display: none;
-}
-
-.fba-inline-container {
+}.fba-inline-container {
   margin: 3rem 0 0 0 !important;
 }
