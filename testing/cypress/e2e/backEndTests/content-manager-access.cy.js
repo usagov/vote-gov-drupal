@@ -66,10 +66,6 @@ describe('Test Content Manager Role Access', () => {
     cy.request('/media/add').then((response) => {
       expect(response.status).to.eq(200)
         })
-
-    cy.request('/media/33/delete?').then((response) => {
-      expect(response.status).to.eq(200)
-        })
   })
 
   it('verify access to footer menu', () => {

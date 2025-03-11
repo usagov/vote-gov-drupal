@@ -80,10 +80,10 @@ echo "Missing module files for Sitemap...completed!"
 echo ""
 
 echo "**************************************************"
-echo "Adding missing data files for NVRF..."
+echo "Adding missing files for NVRF..."
 echo "**************************************************"
-cp -rfp ${app_path}/web/data ${html_path}/data
-echo "Missing data files for NVRF...completed!"
+cp -rfp ${app_path}/web/files ${html_path}/files
+echo "Missing files for NVRF...completed!"
 echo ""
 
 echo "**************************************************"
