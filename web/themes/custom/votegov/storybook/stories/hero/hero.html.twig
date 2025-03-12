@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Default theme implementation: Hero.
+ *
+#}
+
+{% set usa_classes = [
+  'vote-hero',
+  'vote-hero--' ~ variant | default('dark')
+] %}
+
+<section{{ create_attribute().addClass(usa_classes) }}>
+    <div class="vote-hero__container">
+        <div class="vote-hero__callout">
+            {% if variant == 'dark' %}
+                {{ breadcrumbs }}
+            {% endif %}
+            <div class="vote-hero__content">
+                <h1 class="vote-hero__heading">
+                    {{ heading }}
+                </h1>
+                {% if body | render %}
+                    <div class="vote-hero__text usa-intro">
+                        {{ body }}
+                    </div>
+                {% endif %}
+                {% if link_href %}
+                    <div>
+                        {{ link(link_label, link_href, create_attribute().addClass(['usa-button', 'usa-button--secondary'])) }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        {% if media | render %}
+            <div class="vote-hero__image">
+                {{ media }}
+            </div>
+        {% endif %}
+    </div>
+</section>

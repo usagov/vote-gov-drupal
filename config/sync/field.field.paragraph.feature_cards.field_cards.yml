@@ -11,7 +11,7 @@ field_name: field_cards
 entity_type: paragraph
 bundle: feature_cards
 label: Cards
-description: ''
+description: "To add a new card, type the name of the content block into the empty text box to search for it. Select the block's name. Once you select a block's name, the block is added. Use the Change Order arrows to change the order the blocks are displayed."
 required: true
 translatable: false
 default_value: {  }

@@ -136,7 +136,6 @@
   }
 
   .vote-feature-card__content {
-    word-break: break-word;
     @include at-media-max('tablet-lg') {
       @include grid-col('auto');
     }

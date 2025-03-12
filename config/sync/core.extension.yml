@@ -39,6 +39,7 @@ module:
   language_switcher_extended: 0
   link: 0
   link_attributes: 0
+  linkit: 0
   locale: 0
   media: 0
   media_library: 0
