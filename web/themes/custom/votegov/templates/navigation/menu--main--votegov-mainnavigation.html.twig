@@ -69,8 +69,6 @@ We call a macro which calls itself to render the full tree.
             >
               <ul class="usa-nav__submenu-list" data-test="subMenu">
                 {% set link_classes = [
-                  'usa-nav__link',
-                  'usa-nav__link--parent',
                   item.in_active_trail ? 'usa-current'
                 ] %}
                 <li class="usa-nav__submenu-item">
