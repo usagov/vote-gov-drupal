@@ -70,7 +70,7 @@
   }
 
   @include at-media('desktop') {
-    min-height: 28rem;
+    min-height: 25rem;
   }
 
   @include at-media-max('tablet-lg') {
