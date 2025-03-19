@@ -31,6 +31,11 @@ npm run dev
 npm run build
 ```
 
+## Storybook component library
+The vote.gov theme includes a set of custom components based on USWDS principles. The files for the component library live in the `storybook` directory within this theme.
+
+[Follow instructions in the README to install and launch the app.](storybook/README.md)
+
 ## Resources
 
 - [USWDS](https://designsystem.digital.gov/)
