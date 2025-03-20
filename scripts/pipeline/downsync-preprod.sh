@@ -103,13 +103,7 @@ date
 
 echo "Checking if Dblog module's watchdog table should exist or not on '${RESTORE_ENV}' database..."
 source $(pwd $(dirname $0))/scripts/pipeline/cloud-gov-remote-command.sh "${project}-drupal-${RESTORE_ENV}" \
-'drush php:eval "
-if (!\Drupal::moduleHandler()->moduleExists(\"dblog\") && \Drupal::database()->schema()->tableExists(\"watchdog\")) {
-  \Drupal::database()->schema()->dropTable(\"watchdog\");
-  echo \"Dblog module not enabled - watchdog table dropped.\\n\";
-} else {
-  echo \"No action needed.\\n\";
-}"'
+"drush php:eval 'if (! \Drupal::moduleHandler()->moduleExists(\"dblog\") && \Drupal::database()->schema()->tableExists(\"watchdog\")) \Drupal::database()->schema()->dropTable(\"watchdog\");'"
 
 date
 
