@@ -101,13 +101,19 @@ rm -rf restore.txt ~/.mysql latest.sql
 
 date
 
-echo "Running 'drush updb -y --no-cache-clear' on '${RESTORE_ENV}' database..."
-source $(pwd $(dirname $0))/scripts/pipeline/cloud-gov-remote-command.sh "${project}-drupal-${RESTORE_ENV}" "drush updb -y --no-cache-clear"
+echo "Checking if Dblog module's watchdog table should exist or not on '${RESTORE_ENV}' database..."
+source $(pwd $(dirname $0))/scripts/pipeline/cloud-gov-remote-command.sh "${project}-drupal-${RESTORE_ENV}" \
+"drush php:eval 'if (! \Drupal::moduleHandler()->moduleExists(\"dblog\") && \Drupal::database()->schema()->tableExists(\"watchdog\")) \Drupal::database()->schema()->dropTable(\"watchdog\");'"
 
 date
 
 echo "Running 'drush cr' on '${RESTORE_ENV}' database..."
 source $(pwd $(dirname $0))/scripts/pipeline/cloud-gov-remote-command.sh "${project}-drupal-${RESTORE_ENV}" "drush cr"
+
+date
+
+echo "Running 'drush updb -y --no-cache-clear' on '${RESTORE_ENV}' database..."
+source $(pwd $(dirname $0))/scripts/pipeline/cloud-gov-remote-command.sh "${project}-drupal-${RESTORE_ENV}" "drush updb -y --no-cache-clear"
 
 date
 
