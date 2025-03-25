@@ -10,3 +10,4 @@ require_once dirname(__FILE__) . '/inc/token.inc';
 require_once dirname(__FILE__) . '/inc/form_alter.inc';
 require_once dirname(__FILE__) . '/inc/view_alter.inc';
 require_once dirname(__FILE__) . '/inc/access.inc';
+require_once dirname(__FILE__) . '/inc/preprocess.inc';
