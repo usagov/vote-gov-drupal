@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: state_display_content
-label: 'State Display Content'
+label: 'State display content'
 revision: true
 description: null

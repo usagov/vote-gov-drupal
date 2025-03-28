@@ -37,7 +37,6 @@ dependencies:
     - content_translation
     - editoria11y
     - embedded_content
-    - file
     - filter
     - linkit
     - locale
@@ -58,7 +57,6 @@ permissions:
   - 'access administration pages'
   - 'access block library'
   - 'access content overview'
-  - 'access files overview'
   - 'access media overview'
   - 'access taxonomy overview'
   - 'access toolbar'
