@@ -3,10 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block_content.type.basic
+    - block_content.type.contact_identifier
     - block_content.type.email_signup
     - block_content.type.government_banner
+    - block_content.type.nvrf_display_content
+    - block_content.type.partnership
     - block_content.type.registration_form_selector
     - block_content.type.search
+    - block_content.type.state_display_content
   module:
     - block_content
     - user
@@ -26,7 +31,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Global Blocks'
+      title: 'Global blocks'
       fields:
         info:
           id: info
@@ -486,8 +491,11 @@ display:
           plugin_id: bundle
           operator: in
           value:
+            basic: basic
+            contact_identifier: contact_identifier
             email_signup: email_signup
             government_banner: government_banner
+            partnership: partnership
             registration_form_selector: registration_form_selector
             search: search
           group: 1
@@ -509,7 +517,9 @@ display:
               anonymous: '0'
               content_editor: '0'
               content_manager: '0'
+              site_builder: '0'
               site_admin: '0'
+              archived: '0'
             reduce: true
           is_grouped: false
           group_info:
@@ -535,8 +545,11 @@ display:
           plugin_id: bundle
           operator: in
           value:
+            basic: basic
+            contact_identifier: contact_identifier
             email_signup: email_signup
             government_banner: government_banner
+            partnership: partnership
             registration_form_selector: registration_form_selector
             search: search
           group: 1
@@ -729,15 +742,272 @@ display:
       tags: {  }
   page_1:
     id: page_1
-    display_title: Page
+    display_title: 'Global blocks'
     display_plugin: page
     position: 1
     display_options:
+      display_description: ''
       display_extenders: {  }
       path: admin/content/blocks
       menu:
         type: tab
-        title: 'Global Blocks'
+        title: 'Global blocks'
+        description: ''
+        weight: 0
+        expanded: false
+        menu_name: admin
+        parent: block.admin_display
+        context: '0'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags: {  }
+  page_2:
+    id: page_2
+    display_title: 'Display content blocks'
+    display_plugin: page
+    position: 1
+    display_options:
+      title: 'Display content blocks'
+      filters:
+        info:
+          id: info
+          table: block_content_field_data
+          field: info
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: block_content
+          entity_field: info
+          plugin_id: string
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: info_op
+            label: 'Block description'
+            description: ''
+            use_operator: false
+            operator: info_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: info
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        type:
+          id: type
+          table: block_content_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: block_content
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            nvrf_display_content: nvrf_display_content
+            state_display_content: state_display_content
+          group: 1
+          exposed: true
+          expose:
+            operator_id: type_op
+            label: 'Block type'
+            description: ''
+            use_operator: false
+            operator: type_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              content_manager: '0'
+              site_builder: '0'
+              site_admin: '0'
+              archived: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        type_1:
+          id: type_1
+          table: block_content_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: block_content
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            nvrf_display_content: nvrf_display_content
+            state_display_content: state_display_content
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        reusable:
+          id: reusable
+          table: block_content_field_data
+          field: reusable
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: block_content
+          entity_field: reusable
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        langcode_1:
+          id: langcode_1
+          table: block_content_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: block_content
+          entity_field: langcode
+          plugin_id: language
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: langcode_1_op
+            label: Language
+            description: ''
+            use_operator: false
+            operator: langcode_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: langcode_1
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              content_manager: '0'
+              site_admin: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        title: false
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders: {  }
+      path: admin/content/blocks-content
+      menu:
+        type: tab
+        title: 'Display content blocks'
         description: ''
         weight: 0
         expanded: false
