@@ -64,7 +64,7 @@ __Functional Testing:__ To check the functionality of the site we have written a
 **Frontend Tests**
 
     File: frontEndTests/accessability-toolbar.cy.js
-    Description: check accessability tool bar
+    Description: Check accessability tool bar
     - verify that tool bar is present
     - verify page switches themes
     - verify text enlarges
@@ -72,17 +72,17 @@ __Functional Testing:__ To check the functionality of the site we have written a
 
 
     File: frontEndTests/email-signup.cy.js
-    Description: check email sign up function
+    Description: Check email sign up function
     - check that test is present once typed
 
 
     File: frontEndTests/footer-contact.cy.js
-    Check Homepage for vote.gov
+    Description: Check Homepage for vote.gov
     - Test Footer Contact on Home Page
 
 
     File: frontEndTests/government-banner.cy.js
-    Description: check govt banner
+    Description: Check govt banner
     - verify that drop down works
     - verify class is present
 
@@ -110,7 +110,7 @@ __Functional Testing:__ To check the functionality of the site we have written a
 
 
     File: frontEndTests/state-pages.cy.js
-    Description: test state pages
+    Description: Test state pages
     - test - online
     - test - in person
     - test - mail in
@@ -129,12 +129,12 @@ __Functional Testing:__ To check the functionality of the site we have written a
 **Backend Tests**
 
     File: backEndTests/createUser/createUser.cy.js
-    Description: create users
+    Description: Create users
       - Create Username, Password, Role
 
 
     File: backEndTests/basic-page.cy.js
-    Description: test for basic page
+    Description: Test for basic page
       - test url alias
 
 
