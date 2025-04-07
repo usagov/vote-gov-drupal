@@ -1,9 +1,9 @@
 const uswds = require("@uswds/compile");
 const {parallel, watch, series, src} = require('gulp');
 const gulp = require("gulp");
-const uglifyes = require('uglify-es');
+const uglifyjs = require('uglify-js');
 const composer = require('gulp-uglify/composer');
-const uglify = composer(uglifyes, console);
+const uglify = composer(uglifyjs, console);
 
 const settings = {
   sass: {
