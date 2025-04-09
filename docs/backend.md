@@ -215,3 +215,19 @@ Issue: The recommended database transaction isolation level is READ COMMITTED vs
 Description: In addition to being unable to configure Mysql, the alternate solution of setting the isolation level via the database configuration within the settings.php file is not a recommended approach as it sets the isolation level upon each page load which isn't optimal.
 Impact: Low
 Source: https://www.drupal.org/docs/getting-started/system-requirements/setting-the-mysql-transaction-isolation-level#s-other-methods-to-change-the-transaction-isolation-level
+
+## GSA Auth & SSO Information
+For GSA Auth & Single Sign On (SSO) solutions supported by GSA information will be required to facilitate the proper configuration of
+the choosen solution. Currently using SAML communication, below are related configurations in which you will need to know about and how the information is gathered to correctly set the configurations.
+
+### External auth & SAML auth module environment-based configuration
+For each environment which SSO is supported you will find the configuration for the SAML Auth
+module within /web/sites/default/settings.cloudgov.php.
+For each environment you will find configurations for:
+idp_certs - Defined and provided by GSA Auth service provider
+sp_private_key - Created by developer or system adminstrator and provided to GSA Auth service provider
+sp_x509_certificate - Created by developer or system adminstrator and provided to GSA Auth service provider
+sp_entity_id - Defined by developer and provided to GSA Auth service provider
+idp_single_sign_on_service - Defined adn provided by GSA Auth service provider
+
+Once the settings are configured you can review the metadata produced by the application by visiting {url}/saml/metadata. This will be useful when inquiries about current information used for a given environment is made when SSO updates or changes are being planned such as migrations to a new authentication system.

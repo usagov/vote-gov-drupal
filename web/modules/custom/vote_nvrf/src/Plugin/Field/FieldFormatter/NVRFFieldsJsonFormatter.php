@@ -27,19 +27,21 @@ class NVRFFieldsJsonFormatter extends FormatterBase {
 
       $nvrf_field_tid = $item->get('nvrf_field')->getValue();
       $required = $item->get('required')->getValue();
-      $term = Term::load($nvrf_field_tid)->hasTranslation($langcode) ? Term::load($nvrf_field_tid)->getTranslation($langcode) : Term::load($nvrf_field_tid);
 
-      $uuid = !empty($term->get('uuid')->getValue()) ? $term->get('uuid')->get(0)->getValue()['value'] : '';
+      if ($term = Term::load($nvrf_field_tid)->hasTranslation($langcode) ? Term::load($nvrf_field_tid)->getTranslation($langcode) : Term::load($nvrf_field_tid)) {
 
-      $term_data_array = [
-        'uuid' => $uuid,
-        'required' => $required,
-      ];
+        $uuid = !empty($term->get('uuid')->getValue()) ? $term->get('uuid')->get(0)->getValue()['value'] : '';
 
-      $elements[$delta] = [
-        '#type' => 'data',
-        '#data' => SerializedData::create($term_data_array),
-      ];
+        $term_data_array = [
+          'uuid' => $uuid,
+          'required' => $required,
+        ];
+
+        $elements[$delta] = [
+          '#type' => 'data',
+          '#data' => SerializedData::create($term_data_array),
+        ];
+      }
 
       // Unset just in case.
       unset($elements[$delta]['#plain_text']);
