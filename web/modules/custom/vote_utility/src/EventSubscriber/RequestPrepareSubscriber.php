@@ -16,6 +16,9 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
  */
 class RequestPrepareSubscriber implements EventSubscriberInterface {
 
+  /**
+   * Constructor.
+   */
   public function __construct(
     private AliasManager $alias_manager,
     private EntityTypeManagerInterface $entity_type_manager,
