@@ -16,7 +16,6 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
  *
  *  - During path collection, removes excluded directories -- allowing us to
  *    specify the omission of entire directories like jsonapi, node, etc.
- *  - During HTML modification, adds a trailing slash to links to the "/es" path.
  *
  * @internal
  */
@@ -55,9 +54,11 @@ class TomeEventSubscriber implements EventSubscriberInterface {
    * Excludes entire directories by deleting any paths that match the specified
    * string, or that start with the string and a /.
    *
-   * Such directories come from the setting usagov_tome_static_path_exclude_directories.
+   * Such directories come from the setting
+   * usagov_tome_static_path_exclude_directories.
    *
-   * (To exclude individual paths, set tome_static_path_exclude -- it's built in.)
+   * (To exclude individual paths, set tome_static_path_exclude -- it's
+   * built in.)
    *
    * @param \Drupal\tome_static\Event\CollectPathsEvent $event
    *   The collect paths event.
@@ -68,7 +69,8 @@ class TomeEventSubscriber implements EventSubscriberInterface {
     foreach ($paths as $path => $metadata) {
       /*
        * We are going to spend the time here to get the "real" paths for any
-       * placeholder-ed paths, so we can identify and exclude what we want to skip.
+       * placeholder-ed paths, so we can identify and exclude what we want to
+       * skip.
        * Tome would normally do this later in its process.
        */
       $path_parts = explode(':', $path);
@@ -78,7 +80,8 @@ class TomeEventSubscriber implements EventSubscriberInterface {
         $entity_id = $path_parts[3];
 
         $entity = $this->entityTypeManager->getStorage($entity_type)->load($entity_id);
-        // ContentEntityBase interface require the getTranslation()/hasTranslation() methods.
+        // ContentEntityBase interface require the
+        // getTranslation()/hasTranslation() methods.
         if (!$entity || (!$entity instanceof ContentEntityBase) || !$entity->hasTranslation($langcode)) {
           continue;
         }
@@ -105,7 +108,8 @@ class TomeEventSubscriber implements EventSubscriberInterface {
         // Create translated path pattern to exclude all translated paths for a
         // given path exclusion.
         $pattern = '/^(\/[a-z]+(-[a-z]+)?)?' . preg_quote($excluded_directory_path, '/') . '\//';
-        // Check if the path matches the excluded directory or its translated version.
+        // Check if the path matches the excluded directory or its translated
+        // version.
         if ((
           // Exact match with excluded path.
           $path == $excluded_directory_path) ||
