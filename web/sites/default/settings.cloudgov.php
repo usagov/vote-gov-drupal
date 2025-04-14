@@ -80,7 +80,9 @@ $settings['tome_static_path_exclude'] = [
 ];
 
 /**
- * Vote.gov addition to exclude entire directories. Don't include the trailing slash.
+ * Vote.gov addition to exclude entire directories.
+ *
+ * Don't include the trailing slash.
  */
 $settings['vote_tome_static_path_exclude_directories'] = [
   '/node',
