@@ -54,4 +54,5 @@ final class NvrfCardDefaultFormatter extends FormatterBase {
 
     return $element;
   }
+
 }
