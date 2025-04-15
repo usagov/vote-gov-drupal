@@ -13,6 +13,7 @@ use Drupal\Core\TypedData\DataDefinition;
  * @FieldType(
  *   id = "field_nvrf_fields",
  *   label = @Translation("NVRF Fields"),
+ *   description = @Translation("Custom: Stores NVRF field data."),
  *   category = @Translation("General"),
  *   default_widget = "field_nvrf_fields",
  *   default_formatter = "field_nvrf_fields_default"

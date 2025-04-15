@@ -9,6 +9,7 @@ dependencies:
     - field.field.block_content.nvrf_display_content.field_edit_button_label
     - field.field.block_content.nvrf_display_content.field_mail_deadline_label
     - field.field.block_content.nvrf_display_content.field_not_required_label
+    - field.field.block_content.nvrf_display_content.field_nvrf_card
     - field.field.block_content.nvrf_display_content.field_nvrf_step
     - field.field.block_content.nvrf_display_content.field_print_button_label
   module:
@@ -57,6 +58,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_nvrf_card:
+    type: nvrf_card_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
     region: content
   field_nvrf_step:
     type: nvrf_step_default
