@@ -1,0 +1,21 @@
+uuid: 37484597-a53a-4467-815e-b000bffae3b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.nvrf_display_content
+    - field.storage.block_content.field_nvrf_card
+  module:
+    - vote_fields
+id: block_content.nvrf_display_content.field_nvrf_card
+field_name: field_nvrf_card
+entity_type: block_content
+bundle: nvrf_display_content
+label: 'NVRF card'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: nvrf_card
