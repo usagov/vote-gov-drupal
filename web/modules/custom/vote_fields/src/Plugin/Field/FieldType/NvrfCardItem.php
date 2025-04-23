@@ -11,23 +11,23 @@ use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\Core\TypedData\DataDefinition;
 
 /**
- * Defines the 'confirm_group' field type.
+ * Defines the 'nvrf_card' field type.
  *
  * @FieldType(
- *   id = "confirm_group",
- *   label = @Translation("Confirm group"),
- *   description = @Translation("Custom: Stores NVRF confirm group data."),
- *   default_widget = "confirm_group",
- *   default_formatter = "confirm_group_default",
+ *   id = "nvrf_card",
+ *   label = @Translation("NVRF card"),
+ *   description = @Translation("Custom: Stores NVRF card data."),
+ *   default_widget = "nvrf_card",
+ *   default_formatter = "nvrf_card_default",
  * )
  */
-final class ConfirmGroupItem extends FieldItemBase {
+final class NvrfCardItem extends FieldItemBase {
 
   /**
    * {@inheritdoc}
    */
   public function isEmpty(): bool {
-    return $this->confirm_group_id === NULL && $this->confirm_group_label === NULL && $this->confirm_group_message === NULL;
+    return $this->nvrf_card_id === NULL && $this->nvrf_card_heading === NULL && $this->nvrf_card_text === NULL && $this->nvrf_card_button_label === NULL;
   }
 
   /**
@@ -35,12 +35,14 @@ final class ConfirmGroupItem extends FieldItemBase {
    */
   public static function propertyDefinitions(FieldStorageDefinitionInterface $field_definition): array {
 
-    $properties['confirm_group_id'] = DataDefinition::create('string')
-      ->setLabel(t('Confirm group id'));
-    $properties['confirm_group_label'] = DataDefinition::create('string')
-      ->setLabel(t('Confirm group label'));
-    $properties['confirm_group_message'] = DataDefinition::create('string')
-      ->setLabel(t('Confirm group message'));
+    $properties['nvrf_card_id'] = DataDefinition::create('string')
+      ->setLabel(t('NVRF Card ID'));
+    $properties['nvrf_card_heading'] = DataDefinition::create('string')
+      ->setLabel(t('NVRF card heading'));
+    $properties['nvrf_card_text'] = DataDefinition::create('string')
+      ->setLabel(t('NVRF Card text'));
+    $properties['nvrf_card_button_label'] = DataDefinition::create('string')
+      ->setLabel(t('NVRF Card Button label'));
 
     return $properties;
   }
@@ -51,13 +53,14 @@ final class ConfirmGroupItem extends FieldItemBase {
   public function getConstraints(): array {
     $constraints = parent::getConstraints();
 
-    $options['confirm_group_id']['NotBlank'] = [];
+    $options['nvrf_card_id']['NotBlank'] = [];
 
-    $options['confirm_group_label']['NotBlank'] = [];
+    $options['nvrf_card_heading']['NotBlank'] = [];
+
+    $options['nvrf_card_button_label']['NotBlank'] = [];
 
     $constraint_manager = \Drupal::typedDataManager()->getValidationConstraintManager();
     $constraints[] = $constraint_manager->create('ComplexData', $options);
-    // @todo Add more constraints here.
     return $constraints;
   }
 
@@ -67,15 +70,19 @@ final class ConfirmGroupItem extends FieldItemBase {
   public static function schema(FieldStorageDefinitionInterface $field_definition): array {
 
     $columns = [
-      'confirm_group_id' => [
+      'nvrf_card_id' => [
         'type' => 'varchar',
         'length' => 255,
       ],
-      'confirm_group_label' => [
+      'nvrf_card_heading' => [
         'type' => 'varchar',
         'length' => 255,
       ],
-      'confirm_group_message' => [
+      'nvrf_card_text' => [
+        'type' => 'text',
+        'size' => 'big',
+      ],
+      'nvrf_card_button_label' => [
         'type' => 'varchar',
         'length' => 255,
       ],
@@ -83,7 +90,6 @@ final class ConfirmGroupItem extends FieldItemBase {
 
     $schema = [
       'columns' => $columns,
-      // @DCG Add indexes here if necessary.
     ];
 
     return $schema;
@@ -96,11 +102,13 @@ final class ConfirmGroupItem extends FieldItemBase {
 
     $random = new Random();
 
-    $values['confirm_group_id'] = $random->word(mt_rand(1, 255));
+    $values['nvrf_card_id'] = $random->word(mt_rand(1, 255));
 
-    $values['confirm_group_label'] = $random->word(mt_rand(1, 255));
+    $values['nvrf_card_heading'] = $random->word(mt_rand(1, 255));
 
-    $values['confirm_group_message'] = $random->word(mt_rand(1, 255));
+    $values['nvrf_card_text'] = $random->paragraphs(2);
+
+    $values['nvrf_card_button_label'] = $random->word(mt_rand(1, 255));
 
     return $values;
   }
