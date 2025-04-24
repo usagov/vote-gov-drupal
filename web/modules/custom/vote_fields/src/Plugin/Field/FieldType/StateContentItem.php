@@ -16,7 +16,7 @@ use Drupal\Core\TypedData\DataDefinition;
  * @FieldType(
  *   id = "vote_fields_state_content",
  *   label = @Translation("State content"),
- *   description = @Translation("Some description."),
+ *   description = @Translation("Custom: Stores state registration content data."),
  *   default_widget = "vote_fields_state_content",
  *   default_formatter = "vote_fields_state_content_default",
  * )

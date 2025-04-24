@@ -4,6 +4,7 @@ module:
   admin_toolbar: 0
   allowed_formats: 0
   autologout: 0
+  automated_cron: 0
   block: 0
   block_content: 0
   block_content_template: 0
@@ -17,6 +18,7 @@ module:
   crop: 0
   csv_serialization: 0
   datetime: 0
+  diff: 0
   double_field: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0

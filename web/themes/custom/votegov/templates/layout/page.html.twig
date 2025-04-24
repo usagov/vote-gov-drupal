@@ -94,6 +94,10 @@
 
 {{ page.admin }}
 
+{% if not is_front %}
+  {{ drupal_entity('block', 'votegov_breadcrumbs') }}
+{% endif %}
+
 {% block main %}
   {% if page.sidebar %}
     <section id="main-content" class="grid-container content-container">

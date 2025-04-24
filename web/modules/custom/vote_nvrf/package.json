@@ -7,9 +7,9 @@
     "reset-dist": "mkdir -p ./dist/assets",
     "copy-dist:js": "cp -r ./node_modules/vote-gov-nvrf-app/dist/assets/main.js ./dist/assets/main.js",
     "build-dist:css": "rm -f ./dist/assets/main.css && cat ./node_modules/vote-gov-nvrf-app/src/Components/ProgressBar.css ./node_modules/vote-gov-nvrf-app/src/VoteError.css ./node_modules/vote-gov-nvrf-app/src/VoteTouchpoints.css > ./dist/assets/main.css",
-    "copy-dist:data": "rm -rf ../../../data && cp -r ./node_modules/vote-gov-nvrf-app/dist/data ../../../data"
+    "copy-dist:data": "rm -rf ../../../files && cp -r ./node_modules/vote-gov-nvrf-app/dist/files ../../../files"
   },
   "dependencies": {
-    "vote-gov-nvrf-app": "github:usagov/vote-gov-nvrf-app#v1.0.0"
+    "vote-gov-nvrf-app": "github:usagov/vote-gov-nvrf-app#v1.2.0"
   }
 }

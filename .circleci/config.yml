@@ -32,7 +32,7 @@ jobs:
             cf run-task ${project}-drupal-${CIRCLE_BRANCH} --command "ENV=${CIRCLE_BRANCH} scripts/upkeep" --name "${project}-${CIRCLE_BRANCH}-upkeep"  -k "2G" -m 1024M
   build-theme:
     docker:
-      - image: node:20-slim
+      - image: node:22-slim
     steps:
       - checkout
       - run:
@@ -46,7 +46,7 @@ jobs:
             - project/web/themes/custom/votegov/dist
   cypress:
     docker:
-      - image: cypress/included:cypress-13.14.2-node-20.17.0-chrome-128.0.6613.119-1-ff-130.0-edge-128.0.2739.63-1
+      - image: cypress/included:cypress-14.3.1-node-22.14.0-chrome-135.0.7049.95-1-ff-137.0.2-edge-135.0.3179.85-1
     environment:
       cypress_pipeline: 1
       cypress_cloudgov_application_name: "${project}-drupal-${CIRCLE_BRANCH}"
@@ -251,7 +251,7 @@ jobs:
           when: on_fail
   link-validation:
     docker:
-      - image: cypress/included:cypress-13.14.2-node-20.17.0-chrome-128.0.6613.119-1-ff-130.0-edge-128.0.2739.63-1
+      - image: cypress/included:cypress-14.3.1-node-22.14.0-chrome-135.0.7049.95-1-ff-137.0.2-edge-135.0.3179.85-1
     environment:
       cypress_pipeline: 1
       cypress_cloudgov_application_name: "${project}-drupal-${CIRCLE_BRANCH}"
@@ -289,7 +289,7 @@ jobs:
           when: on_fail
   home-page-redirect:
     docker:
-      - image: cypress/included:cypress-13.14.2-node-20.17.0-chrome-128.0.6613.119-1-ff-130.0-edge-128.0.2739.63-1
+      - image: cypress/included:cypress-14.3.1-node-22.14.0-chrome-135.0.7049.95-1-ff-137.0.2-edge-135.0.3179.85-1
     environment:
       cypress_pipeline: 1
       cypress_cloudgov_application_name: "${project}-drupal-${CIRCLE_BRANCH}"

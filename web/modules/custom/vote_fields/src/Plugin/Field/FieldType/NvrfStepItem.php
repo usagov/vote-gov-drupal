@@ -16,7 +16,7 @@ use Drupal\Core\TypedData\DataDefinition;
  * @FieldType(
  *   id = "nvrf_step",
  *   label = @Translation("NVRF step"),
- *   description = @Translation("Some description."),
+ *   description = @Translation("Custom: Stores NVRF step data."),
  *   default_widget = "nvrf_step",
  *   default_formatter = "nvrf_step_default",
  * )
