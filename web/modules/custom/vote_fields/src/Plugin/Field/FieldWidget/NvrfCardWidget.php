@@ -77,24 +77,24 @@ final class NvrfCardWidget extends WidgetBase {
    */
   public function massageFormValues(array $values, array $form, FormStateInterface $form_state): array {
     foreach ($values as $delta => $value) {
+
       if ($value['nvrf_card_id'] === '') {
         $values[$delta]['nvrf_card_id'] = NULL;
       }
       if ($value['nvrf_card_heading'] === '') {
         $values[$delta]['nvrf_card_heading'] = NULL;
       }
-      if ($value['nvrf_card_text'] === '') {
+      if ($value['nvrf_card_text']['value'] === '') {
         $values[$delta]['nvrf_card_text'] = NULL;
+      } else {
+        // Prepare the data for the Text field before saving.
+        $values[$delta]['nvrf_card_text'] = $value['nvrf_card_text']['value'];
       }
       if ($value['nvrf_card_button_label'] === '') {
         $values[$delta]['nvrf_card_button_label'] = NULL;
       }
-
-      // Prepare the data for the Text field before saving.
-      if (isset($value['nvrf_card_text'])) {
-        $values[$delta]['nvrf_card_text'] = $value['nvrf_card_text']['value'];
-      }
     }
+
     return $values;
   }
 
