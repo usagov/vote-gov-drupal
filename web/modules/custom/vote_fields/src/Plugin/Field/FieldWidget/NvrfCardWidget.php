@@ -37,6 +37,7 @@ final class NvrfCardWidget extends WidgetBase {
       '#type' => 'textfield',
       '#title' => $this->t('NVRF Card heading'),
       '#default_value' => $items[$delta]->nvrf_card_heading ?? NULL,
+      '#description' => $this->t("Use the placeholder <b>@state_name</b> to dynamically insert the state name."),
       '#size' => 60,
     ];
 
