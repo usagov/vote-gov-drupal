@@ -137,7 +137,8 @@ final class StateContentWidget extends WidgetBase {
       }
       if ($value['text']['value'] === '') {
         $values[$delta]['text'] = NULL;
-      } else {
+      }
+      else {
         // Prepare the data for the Text field before saving.
         $values[$delta]['text'] = $value['text']['value'];
       }

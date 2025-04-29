@@ -87,7 +87,8 @@ final class NvrfCardWidget extends WidgetBase {
       }
       if ($value['nvrf_card_text']['value'] === '') {
         $values[$delta]['nvrf_card_text'] = NULL;
-      } else {
+      }
+      else {
         // Prepare the data for the Text field before saving.
         $values[$delta]['nvrf_card_text'] = $value['nvrf_card_text']['value'];
       }
