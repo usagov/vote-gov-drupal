@@ -44,7 +44,11 @@ settings:
     ckeditor5_sourceEditing:
       allowed_tags:
         - '<div id class data-allow-multiple>'
+        - '<h2 id class>'
+        - '<h3 class>'
         - '<button type class aria-expanded aria-controls>'
+        - '<ul class>'
+        - '<li class>'
         - '<img src alt height width>'
     ckeditor5_style:
       styles:
