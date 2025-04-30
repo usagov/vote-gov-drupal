@@ -1,0 +1,24 @@
+uuid: 8c8c959e-94c9-4bac-ad10-8bcda6454e14
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.nvrf_display_content
+    - field.storage.block_content.field_nvrf_footer
+    - filter.format.simple_html
+  module:
+    - text
+id: block_content.nvrf_display_content.field_nvrf_footer
+field_name: field_nvrf_footer
+entity_type: block_content
+bundle: nvrf_display_content
+label: 'NVRF footer'
+description: "Use the placeholder <b>@state_name</b> to dynamically insert the state name.<br>\r\nUse the placeholder <b>@date</b> to dynamically insert the last updated date."
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - simple_html
+field_type: text_long
