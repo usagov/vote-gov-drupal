@@ -15,9 +15,13 @@ matchers:
     uuid: 556010a3-e317-48b3-b4ed-854c10f4b950
     settings:
       metadata: '[node:content-type:name] #[node:nid] | [node:created:medium] by [node:author]'
-      bundles: {  }
-      group_by_bundle: false
+      bundles:
+        landing: landing
+        page: page
+        state_territory: state_territory
+        voter_guide: voter_guide
+      group_by_bundle: true
       substitution_type: canonical
       limit: 100
-      include_unpublished: false
+      include_unpublished: true
     weight: 0
