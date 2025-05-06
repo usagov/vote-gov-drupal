@@ -135,16 +135,15 @@ final class StateContentWidget extends WidgetBase {
       if ($value['heading'] === '') {
         $values[$delta]['heading'] = NULL;
       }
-      if ($value['text'] === '') {
+      if ($value['text']['value'] === '') {
         $values[$delta]['text'] = NULL;
+      }
+      else {
+        // Prepare the data for the Text field before saving.
+        $values[$delta]['text'] = $value['text']['value'];
       }
       if ($value['link_text'] === '') {
         $values[$delta]['link_text'] = NULL;
-      }
-
-      // Prepare the data for the Text field before saving.
-      if (isset($value['text'])) {
-        $values[$delta]['text'] = $value['text']['value'];
       }
     }
     return $values;
