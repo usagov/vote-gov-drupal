@@ -228,12 +228,9 @@ describe('Test User Role Access to Content Moderation', () => {
 
     // Can not delete content
     cy.visit('/admin/content')
-    pageObjects
-      .editDropDown().then(btn => {
-        cy.get(btn[0]).click()
-      })
-    pageObjects
-      .editOpt().should('not.contain', 'delete')
+    const listItems = []
+    cy.get('[class="dropbutton dropbutton--extrasmall dropbutton--multiple"] li').each(($li) => listItems.push($li.text()))
+    cy.wrap(listItems).should('not.contain', 'delete')
 
     // Can create media but not delete media
     cy.request('/media/add').then((response) => {
