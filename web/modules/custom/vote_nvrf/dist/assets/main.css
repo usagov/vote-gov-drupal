@@ -1,3 +1,30 @@
+/* Vote Error styles */
+.vote-error-container {
+  border-left: 3px solid #b50909;
+  padding-left: 1rem;
+}
+
+.vote-error-container .vote-error-text {
+  display: block;
+}
+
+.vote-error-text {
+  color: #b50909;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  display: none;
+}
+
+.usa-button.usa-button--small {
+  padding: 0.6rem 0.8rem !important;
+}
+
+/* Vote Touchpoints styles */
+.fba-inline-container {
+  margin: 3rem 0 0 0 !important;
+}
+
+/* Vote Progressbar styles */
 @media (min-width: 641px) {
   .usa-step-indicator .usa-step-indicator__header {
     position: absolute;
@@ -23,7 +50,7 @@
       color: #005ea2;
     }
   }
-  
+
   .usa-step-indicator__segment-label {
     text-decoration: underline;
   }
@@ -31,24 +58,4 @@
 
 .usa-step-indicator .usa-step-indicator__segment-label {
   padding: .5rem;
-}.vote-error-container {
-  border-left: 3px solid #b50909;
-  padding-left: 1rem;
-}
-
-.vote-error-container .vote-error-text {
-  display: block;
-}
-
-.vote-error-text {
-  color: #b50909;
-  font-size: 1rem;
-  margin-top: 0.5rem;
-  display: none;
-}
-
-.usa-button.usa-button--small {
-  padding: 0.6rem 0.8rem !important;
-}.fba-inline-container {
-  margin: 3rem 0 0 0 !important;
 }

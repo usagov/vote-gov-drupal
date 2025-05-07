@@ -20,10 +20,6 @@ $settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config/sync';
 $settings['file_private_path'] = dirname(DRUPAL_ROOT) . '/private';
 
 $settings['tome_static_path_exclude'] = [
-  '/saml', '/saml/acs', '/saml/login', '/saml/logout', '/saml/metadata', '/saml/sls',
-  '/jsonapi', '/jsonapi/deleted-nodes',
-  '/es/saml', '/es/saml/acs', '/es/saml/login', '/es/saml/logout', '/es/saml/metadata', '/es/saml/sls',
-  '/es/jsonapi', '/es/jsonapi/deleted-nodes',
   '/am/disabled-state-mail-in-forms',
   '/ar/disabled-state-mail-in-forms',
   '/bn/disabled-state-mail-in-forms',
@@ -81,6 +77,18 @@ $settings['tome_static_path_exclude'] = [
   '/ypk/sitemap.xml',
   '/zh/sitemap.xml',
   '/zh-hans/sitemap.xml',
+];
+
+/**
+ * Vote.gov addition to exclude entire directories.
+ *
+ * Don't include the trailing slash.
+ */
+$settings['vote_tome_static_path_exclude_directories'] = [
+  '/node',
+  '/taxonomy',
+  '/saml',
+  '/jsonapi',
 ];
 
 $is_cloudgov = FALSE;
