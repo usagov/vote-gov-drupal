@@ -81,6 +81,7 @@ module:
   translatable_menu_link_uri: 0
   twig_field_value: 0
   twig_tweak: 0
+  uuid_extra: 0
   update: 0
   user: 0
   uswds_templates: 0
