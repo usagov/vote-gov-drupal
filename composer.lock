@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a96e43e10a677a40d05e9d8f380c204e",
+    "content-hash": "5e8c470b9525dd60c8a3abd0ca80fad2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3162,17 +3162,17 @@
         },
         {
             "name": "drupal/editoria11y",
-            "version": "2.2.6",
+            "version": "2.2.7",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/editoria11y.git",
-                "reference": "2.2.6"
+                "reference": "2.2.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/editoria11y-2.2.6.zip",
-                "reference": "2.2.6",
-                "shasum": "3d62855efcd533a45f9609460c67ad5540c0a462"
+                "url": "https://ftp.drupal.org/files/projects/editoria11y-2.2.7.zip",
+                "reference": "2.2.7",
+                "shasum": "27684935c41f7ee90b97122f995a30d00c498802"
             },
             "require": {
                 "drupal/core": "^9 || ^10 || ^11"
@@ -3183,8 +3183,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.2.6",
-                    "datestamp": "1743882955",
+                    "version": "2.2.7",
+                    "datestamp": "1746207613",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3337,17 +3337,17 @@
         },
         {
             "name": "drupal/externalauth",
-            "version": "2.0.7",
+            "version": "2.0.8",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/externalauth.git",
-                "reference": "2.0.7"
+                "reference": "2.0.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/externalauth-2.0.7.zip",
-                "reference": "2.0.7",
-                "shasum": "93c2b15f21172f931bb81cc365c828c12be377c3"
+                "url": "https://ftp.drupal.org/files/projects/externalauth-2.0.8.zip",
+                "reference": "2.0.8",
+                "shasum": "e9c1b41d6b59d0674b2756361ec729b046759387"
             },
             "require": {
                 "drupal/core": "^9.5 || ^10 || ^11"
@@ -3355,8 +3355,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.7",
-                    "datestamp": "1735897906",
+                    "version": "2.0.8",
+                    "datestamp": "1743603496",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5394,6 +5394,58 @@
             "homepage": "https://www.drupal.org/project/uswds_templates",
             "support": {
                 "source": "https://git.drupalcode.org/project/uswds_templates"
+            }
+        },
+        {
+            "name": "drupal/uuid_extra",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/uuid_extra.git",
+                "reference": "2.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/uuid_extra-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "3b4a2bd9926814bf02211521e98110b8dde75361"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.2",
+                    "datestamp": "1729060717",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "colan",
+                    "homepage": "https://www.drupal.org/user/58704"
+                },
+                {
+                    "name": "dawehner",
+                    "homepage": "https://www.drupal.org/user/99340"
+                },
+                {
+                    "name": "jsacksick",
+                    "homepage": "https://www.drupal.org/user/972218"
+                }
+            ],
+            "description": "Enables field widgets and formatters",
+            "homepage": "https://www.drupal.org/project/uuid_extra",
+            "support": {
+                "source": "https://git.drupalcode.org/project/uuid_extra"
             }
         },
         {

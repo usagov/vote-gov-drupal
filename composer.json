@@ -69,7 +69,7 @@
         "drupal/rest_views": "^3.0",
         "drupal/robotstxt": "^1.5",
         "drupal/s3fs": "^3.1",
-        "drupal/samlauth": "^3.8",
+        "drupal/samlauth": "^3.11",
         "drupal/simple_sitemap": "^4.2",
         "drupal/stage_file_proxy": "^3.1",
         "drupal/svg_image": "^3.0",
@@ -78,6 +78,7 @@
         "drupal/twig_field_value": "^2.0",
         "drupal/twig_tweak": "^3.2",
         "drupal/uswds_templates": "^3.0@dev",
+        "drupal/uuid_extra": "^2.0",
         "drupal/views_data_export": "^1.5",
         "drush/drush": "^12.4"
     },
