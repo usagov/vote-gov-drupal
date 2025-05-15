@@ -5,13 +5,4 @@ adding:
   permissions:
     - 'create content in disabled language'
     - 'view disabled languages'
-removing:
-  dependencies:
-    config:
-      - block_content.type.nvrf_card
-  permissions:
-    - 'access block library'
-    - 'delete any nvrf_card block content revisions'
-    - 'edit any nvrf_card block content'
-    - 'revert any nvrf_card block content revisions'
-    - 'view any nvrf_card block content history'
+removing: {  }
