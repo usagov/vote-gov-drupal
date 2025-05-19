@@ -1,6 +1,11 @@
 <?php
 
-use \Drupal\Core\Cache\RefinableCacheableDependencyInterface;
+/**
+ * @file
+ * Defines custom local tasks alter hooks.
+ */
+
+use Drupal\Core\Cache\RefinableCacheableDependencyInterface;
 
 /**
  * Implements hook_menu_local_tasks_alter().
