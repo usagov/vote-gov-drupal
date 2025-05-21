@@ -91,6 +91,14 @@ $settings['vote_tome_static_path_exclude_directories'] = [
   '/jsonapi',
 ];
 
+// Add cache.backend.null:
+$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/default/nonlocal.services.yml';
+if (PHP_SAPI === 'cli' && str_starts_with($_SERVER["argv"][1], 'tome:static')) {
+  // Disable the page and menu cache on tome runs.
+  $settings['cache']['bins']['page'] = 'cache.backend.null';
+  $settings['cache']['bins']['menu'] = 'cache.backend.null';
+}
+
 $is_cloudgov = FALSE;
 
 if (!empty($cf_application_data['space_name']) &&

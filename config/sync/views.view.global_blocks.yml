@@ -377,7 +377,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access block library'
+          perm: 'access content overview'
       cache:
         type: tag
         options: {  }
