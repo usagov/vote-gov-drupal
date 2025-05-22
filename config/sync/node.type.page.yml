@@ -13,7 +13,7 @@ third_party_settings:
     amount:
       status: true
       settings:
-        amount: 50
+        amount: 25
     created:
       status: false
       settings:
