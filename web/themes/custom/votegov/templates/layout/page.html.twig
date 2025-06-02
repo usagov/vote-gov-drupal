@@ -55,6 +55,7 @@
 {% set node_type = currentnode.bundle() %}
 
 {% if node_type == "state_territory" %}
+  {% set state_display_title = drupal_field('field_display_title', 'block_content', 23) %}
   {% set title = title | render | striptags | trim %}
   {% if language == 'ko' and currentnode.field_is_state.value %}
     {% set korean_state_char = "state" | t %}
@@ -62,10 +63,10 @@
   {% endif %}
 
   {% set in_state_name = currentnode.field_in_state_name.value | default("@state_name") | t({ "@state_name": title }) %}
-  {% set title = 'Register to vote in @state_name' | t ({
+  {% set title = state_display_title | field_value | render | trim | t ({
     "@state_name": title,
     "@in_state_name": in_state_name
-  }) %}
+  }) | default(title) %}
 {% endif %}
 
 {# Government banner component #}
