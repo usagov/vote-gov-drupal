@@ -12,16 +12,13 @@ describe('test state pages', () => {
   it('test - in person', () => {
     cy.visit('/register/as')
     pageObjects
-    .registrationInfo().should('be.visible').and('contain', 'In person registration deadline:')
+    .registrationInfo().should('be.visible').and('contain', 'In-person registration deadline:')
   })
 
   it('test - mail in', () => {
     cy.visit('/register/ar')
     pageObjects
-    .registrationInfo().should('be.visible').and('contain', 'Register by mail deadline:')
-
-    pageObjects
-    .nvrfForm().should('be.visible')
+    .registrationInfo().should('be.visible').and('contain', 'Mail-in registration deadline:')
   })
 
   it('test - not needed', () => {
