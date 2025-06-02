@@ -1,0 +1,12 @@
+@use "uswds-core" as *;
+@use "variables" as *;
+@use "mixins" as *;
+
+.usa-link--external::before {
+  position: absolute;
+  left: unset;
+  right: unset;
+  content: "";
+  inset-inline-start: -999em;
+  inset-inline-end: auto;
+}

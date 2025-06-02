@@ -1,0 +1,95 @@
+uuid: a5c42abd-b298-4e65-b67b-f737f9fd03b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.nvrf_display_content
+    - field.field.block_content.nvrf_display_content.field_confirm_group
+    - field.field.block_content.nvrf_display_content.field_download_button_label
+    - field.field.block_content.nvrf_display_content.field_edit_button_label
+    - field.field.block_content.nvrf_display_content.field_mail_deadline_label
+    - field.field.block_content.nvrf_display_content.field_not_required_label
+    - field.field.block_content.nvrf_display_content.field_nvrf_card
+    - field.field.block_content.nvrf_display_content.field_nvrf_footer
+    - field.field.block_content.nvrf_display_content.field_nvrf_step
+    - field.field.block_content.nvrf_display_content.field_print_button_label
+  module:
+    - text
+    - vote_fields
+id: block_content.nvrf_display_content.default
+targetEntityType: block_content
+bundle: nvrf_display_content
+mode: default
+content:
+  field_confirm_group:
+    type: confirm_group_default
+    label: above
+    settings:
+      foo: bar
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_download_button_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_edit_button_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_mail_deadline_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_not_required_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_nvrf_card:
+    type: nvrf_card_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_nvrf_footer:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_nvrf_step:
+    type: nvrf_step_default
+    label: above
+    settings:
+      foo: bar
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_print_button_label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

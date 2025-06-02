@@ -1,0 +1,161 @@
+uuid: e4fdb2a2-9e80-4f80-903a-664fb311078e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.nvrf_display_content
+    - field.field.block_content.nvrf_display_content.field_confirm_group
+    - field.field.block_content.nvrf_display_content.field_download_button_label
+    - field.field.block_content.nvrf_display_content.field_edit_button_label
+    - field.field.block_content.nvrf_display_content.field_mail_deadline_label
+    - field.field.block_content.nvrf_display_content.field_not_required_label
+    - field.field.block_content.nvrf_display_content.field_nvrf_card
+    - field.field.block_content.nvrf_display_content.field_nvrf_footer
+    - field.field.block_content.nvrf_display_content.field_nvrf_step
+    - field.field.block_content.nvrf_display_content.field_print_button_label
+  module:
+    - field_group
+    - text
+    - vote_fields
+third_party_settings:
+  field_group:
+    group_nvrf_card:
+      children:
+        - field_nvrf_card
+      label: 'NVRF cards'
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: true
+    group_nvrf_steps:
+      children:
+        - field_nvrf_step
+      label: 'NVRF steps'
+      region: content
+      parent_name: ''
+      weight: 4
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: true
+    group_nvrf_confirm_groups:
+      children:
+        - field_confirm_group
+      label: 'NVRF confirm groups'
+      region: content
+      parent_name: ''
+      weight: 5
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: true
+id: block_content.nvrf_display_content.default
+targetEntityType: block_content
+bundle: nvrf_display_content
+mode: default
+content:
+  field_confirm_group:
+    type: confirm_group
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_download_button_label:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_edit_button_label:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_mail_deadline_label:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_not_required_label:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_nvrf_card:
+    type: nvrf_card
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_nvrf_footer:
+    type: text_textarea
+    weight: 26
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_nvrf_step:
+    type: nvrf_step
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_print_button_label:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

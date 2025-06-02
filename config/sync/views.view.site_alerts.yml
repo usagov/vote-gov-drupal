@@ -23,7 +23,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Site Alerts'
+      title: 'Site alerts'
       fields:
         info:
           id: info
@@ -379,7 +379,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access block library'
+          perm: 'access content overview'
       cache:
         type: tag
         options: {  }
@@ -697,7 +697,7 @@ display:
       path: admin/content/site-alerts
       menu:
         type: tab
-        title: 'Site Alerts'
+        title: 'Site alerts'
         description: ''
         weight: 0
         expanded: false

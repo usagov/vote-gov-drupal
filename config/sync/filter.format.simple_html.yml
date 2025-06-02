@@ -1,7 +1,9 @@
 uuid: 908374de-2174-4084-bbab-fa4ea30efb42
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - linkit
 name: 'Simple HTML'
 format: simple_html
 weight: 0
@@ -12,6 +14,13 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p> <strong> <em> <a href aria-label title class target="_blank" rel> <ul> <ol> <li>'
+      allowed_html: '<br> <p> <strong> <em> <a data-state-ext href aria-label title class target="_blank" rel data-entity-type data-entity-uuid data-entity-substitution> <ul> <ol> <li>'
       filter_html_help: true
       filter_html_nofollow: false
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: 0
+    settings:
+      title: true

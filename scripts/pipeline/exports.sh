@@ -10,6 +10,8 @@ if [ "${cf_env}" == "prod" ]; then
   export drupal_memory=${prod_drupal_memory}
   export ssg_uri=${prod_ssg_uri}
   export sso_x509_cert=${prod_sso_x509_cert}
+  export sso_assertion_cert=${prod_sso_assertion_cert}
+  export sso_assertion_key=${prod_sso_assertion_key}
   export waf_name=${prod_waf_name}
   export waf_external_endpoint=${prod_waf_external_endpoint}
 elif [ "${cf_env}" == "stage" ]; then
@@ -19,6 +21,8 @@ elif [ "${cf_env}" == "stage" ]; then
   export drupal_memory=${stage_drupal_memory}
   export ssg_uri=${stage_ssg_uri}
   export sso_x509_cert=${stage_sso_x509_cert}
+  export sso_assertion_cert=${stage_sso_assertion_cert}
+  export sso_assertion_key=${stage_sso_assertion_key}
   export waf_name=${stage_waf_name}
   export waf_external_endpoint=${stage_waf_external_endpoint}
 elif [ "${cf_env}" == "test" ]; then
@@ -28,9 +32,10 @@ elif [ "${cf_env}" == "test" ]; then
   export drupal_instances=${test_drupal_instances}
   export ssg_uri=${test_ssg_uri}
   export sso_x509_cert=${test_sso_x509_cert}
+  export sso_assertion_cert=${test_sso_assertion_cert}
+  export sso_assertion_key=${test_sso_assertion_key}
   export waf_name=${test_waf_name}
   export waf_external_endpoint=${test_waf_external_endpoint}
-  export composer_no_dev=0
 elif [ "${cf_env}" == "dev" ]; then
   export cf_space=${dev_cf_space}
   export cms_uri=${dev_cms_uri}
@@ -38,7 +43,8 @@ elif [ "${cf_env}" == "dev" ]; then
   export drupal_memory=${dev_drupal_memory}
   export ssg_uri=${dev_ssg_uri}
   export sso_x509_cert=${dev_sso_x509_cert}
+  export sso_assertion_cert=${dev_sso_assertion_cert}
+  export sso_assertion_key=${dev_sso_assertion_key}
   export waf_name=${dev_waf_name}
   export waf_external_endpoint=${dev_waf_external_endpoint}
-  export composer_no_dev=0
 fi

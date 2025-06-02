@@ -31,6 +31,11 @@ function vote_users_install() {
  * Implements hook_uninstall().
  */
 function vote_users_uninstall() {
+  // Disable user activation email notifications to avoid drush cim errors.
+  \Drupal::configFactory()->getEditable('user.settings')
+    ->set('notify.status_activated', FALSE)
+    ->save();
+
   // Get all users who have the site_builder role.
   $users = \Drupal::entityQuery('user')
     ->accessCheck(FALSE)

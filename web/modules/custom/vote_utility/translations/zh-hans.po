@@ -8,153 +8,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
-#language selector
-msgid "Chinese - simplified"
-msgstr "中文"
-
 msgid "Select language"
 msgstr "选择语言"
 
-#breadcrumb
-msgid "Home"
-msgstr "主页"
-
-#main
-msgid "@sitename in language"
-msgstr "@sitename 中文"
-
-msgid "Go back"
-msgstr "回去"
-
-msgid "Last updated:"
-msgstr "最近更新时间："
-
-msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgstr "插有已勾选选票的选票箱图样，表示投票动作"
-
-#identifier
-msgid "An official website of the @link."
-msgstr "@link官方网站"
-
-msgid "General Services Administration"
-msgstr "总务管理局 (英语)"
-
-msgid "Looking for U.S. government information and services? @link."
-msgstr "寻找美国政府信息和服务？ @link"
-
-msgid "Visit USA.gov"
-msgstr "訪問 USA.gov (英语)"
-
-msgid "Agency identifier"
-msgstr "机构标识符"
-
-msgid "Agency description"
-msgstr "机构描述"
-
-msgid "Important links"
-msgstr "重要链接"
-
-msgid "Government information and services"
-msgstr "政府信息和服务"
-
-#contact
-msgid "in partnership with"
-msgstr "与合作"
-
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
-msgstr "与 U.S. Election Assistance Commission合作"
-
-msgid "Follow vote.gov on"
-msgstr "在 X 上关注 vote.gov (英语)"
-
-#search
-msgid "Search vote.gov"
-msgstr "搜索 vote.gov"
-
-#state
-msgid "Register to vote in @state_name"
-msgstr "在 @state_name 注册投票"
-
-msgid "How to register to vote"
-msgstr "如何登记投票"
-
-msgid "How to register and update your registration"
-msgstr "如何登记投票"
-
-msgid "Other ways to register to vote"
-msgstr "登记投票的其他方式"
-
-msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
-msgstr "@election_date选举的选民登记截止日期"
-
-msgid "Find state and local election dates."
-msgstr ""
-
-msgid "Register by mail deadline:"
-msgstr "邮寄报名截止日期："
-
-msgid "Must be postmarked by @date"
-msgstr "必须在 @date 星期六之前加盖邮戳"
-
-msgid "Must be received by @date"
-msgstr "必须在 @date 之前收到"
-
-msgid "Online registration deadline:"
-msgstr "网上报名截止日期："
-
-msgid "Voter registration deadlines"
-msgstr "选民登记截止日期"
-
-msgid "In person registration deadline:"
-msgstr "亲自报名截止日期："
-
-msgid "How to check your voter registration"
-msgstr "如何检查您的选民登记"
-
-msgid "You can confirm your voter registration status on @link."
-msgstr "您可以在 @link 上确认您的选民登记状态"
-
-msgid "You can confirm your voter registration status by contacting your local registration office. @link."
-msgstr "您可以聯繫當地的登記處確認您的選民登記狀態。@link。"
-
-msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr "點擊此處查看懷俄明州縣書記聯繫資訊 (PDF）(英语)"
-
-msgid "Find out ways to register"
-msgstr "了解如何注册"
-
-msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
-msgstr "目前不提供在线注册。 @link 在 @state_name 州的选举网站上投票。"
-
-msgid "Learn more about how to register"
-msgstr "详细了解如何注册"
-
-msgid "Register in person at your local election office. @link on @state_name’s election website."
-msgstr "亲自到您当地的选举办公室注册。 @link @state_name 州的选举网站"
-
-msgid "Learn more about voting"
-msgstr "详细了解如何注册"
-
-msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
-msgstr "弗吉尼亚州不要求选民注册。 @link @state_name 州的选举网站"
-
-msgid "Start or update your registration online"
-msgstr "开始在线注册"
-
-msgid "@link on @state_name’s election website."
-msgstr "在 @state_name 州的选举网站上 @link"
-
-msgid "register to vote by mail or in person"
-msgstr "邮寄或现场注册"
-
-msgid "You can also @link on @state_name’s election website."
-msgstr "您也可以 @link @state_name 州的选举网站"
-
-msgid "confirm your voter registration status"
-msgstr "确认您的选民注册状态"
-
-msgid "You can @link on @state_name’s election website."
-msgstr "您可以在 @state_name 州的选举网站上 @link"
+#in-page nav
+msgid "On this page"
+msgstr "本页内容"
 
 msgid "External link opens in new window"
 msgstr "外部链接打开新窗口"
@@ -164,20 +23,6 @@ msgstr "跳到主要内容"
 
 msgid "(in English)"
 msgstr "(英语)"
-
-#banner
-msgid "Official government website"
-msgstr "官方政府网站"
-
-#footer
-msgid "Email sign-up"
-msgstr "电邮注册"
-
-msgid "Contact"
-msgstr "联系"
-
-msgid "GSA logo"
-msgstr "GSA 标志"
 
 #month and day names
 msgctxt "Long month name"
@@ -248,3 +93,28 @@ msgstr "sábado"
 
 msgid "Sunday"
 msgstr "星期日"
+
+msgid "Close"
+msgstr "关闭"
+
+msgid "Menu"
+msgstr "菜单"
+
+msgid "Breadcrumb"
+msgstr "面包屑导航"
+
+msgid "Primary navigation"
+msgstr "主导航"
+
+# Temporary military and overseas voter cards
+msgid "Voting as a military service member"
+msgstr "军人投票"
+
+msgid "Learn more from the Federal Voting Assistance Program (FVAP)."
+msgstr "从联邦投票协助计划（Federal Voting Assistance Program - FVAP）了解更多信息 (英语)"
+
+msgid "Voting as a U.S. citizen from outside the U.S."
+msgstr "美国公民从海外投票"
+
+msgid "Know your voting rights"
+msgstr "了解您的投票权"

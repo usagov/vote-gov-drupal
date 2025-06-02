@@ -60,6 +60,7 @@ p {
 // Lists
 ul, ol {
   @include u-font-family('sans');
+
   main & {
     &:last-child {
       @include u-margin-bottom(0);
@@ -104,9 +105,4 @@ hr, p + hr {
   @include u-border(0);
   @include u-margin-y(3);
   border-bottom: 1px solid $bg-light-medium;
-}
-
-.nonvfont,
-.nonvfont * {
-  @include u-font-family('sans');
 }

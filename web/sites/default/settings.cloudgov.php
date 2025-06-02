@@ -20,11 +20,84 @@ $settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config/sync';
 $settings['file_private_path'] = dirname(DRUPAL_ROOT) . '/private';
 
 $settings['tome_static_path_exclude'] = [
-  '/saml', '/saml/acs', '/saml/login', '/saml/logout', '/saml/metadata', '/saml/sls',
-  '/jsonapi', '/jsonapi/deleted-nodes',
-  '/es/saml', '/es/saml/acs', '/es/saml/login', '/es/saml/logout', '/es/saml/metadata', '/es/saml/sls',
-  '/es/jsonapi', '/es/jsonapi/deleted-nodes',
+  '/am/disabled-state-mail-in-forms',
+  '/ar/disabled-state-mail-in-forms',
+  '/bn/disabled-state-mail-in-forms',
+  '/es/disabled-state-mail-in-forms',
+  '/fr/disabled-state-mail-in-forms',
+  '/ht/disabled-state-mail-in-forms',
+  '/hi/disabled-state-mail-in-forms',
+  '/ja/disabled-state-mail-in-forms',
+  '/km/disabled-state-mail-in-forms',
+  '/ko/disabled-state-mail-in-forms',
+  '/nv/disabled-state-mail-in-forms',
+  '/pt/disabled-state-mail-in-forms',
+  '/ru/disabled-state-mail-in-forms',
+  '/so/disabled-state-mail-in-forms',
+  '/tl/disabled-state-mail-in-forms',
+  '/vi/disabled-state-mail-in-forms',
+  '/ypk/disabled-state-mail-in-forms',
+  '/zh/disabled-state-mail-in-forms',
+  '/zh-hans/disabled-state-mail-in-forms',
+  '/am/state-data-points-index',
+  '/ar/state-data-points-index',
+  '/bn/state-data-points-index',
+  '/es/state-data-points-index',
+  '/fr/state-data-points-index',
+  '/ht/state-data-points-index',
+  '/hi/state-data-points-index',
+  '/ja/state-data-points-index',
+  '/km/state-data-points-index',
+  '/ko/state-data-points-index',
+  '/nv/state-data-points-index',
+  '/pt/state-data-points-index',
+  '/ru/state-data-points-index',
+  '/so/state-data-points-index',
+  '/tl/state-data-points-index',
+  '/vi/state-data-points-index',
+  '/ypk/state-data-points-index',
+  '/zh/state-data-points-index',
+  '/zh-hans/state-data-points-index',
+  '/am/sitemap.xml',
+  '/ar/sitemap.xml',
+  '/bn/sitemap.xml',
+  '/es/sitemap.xml',
+  '/fr/sitemap.xml',
+  '/ht/sitemap.xml',
+  '/hi/sitemap.xml',
+  '/ja/sitemap.xml',
+  '/km/sitemap.xml',
+  '/ko/sitemap.xml',
+  '/nv/sitemap.xml',
+  '/pt/sitemap.xml',
+  '/ru/sitemap.xml',
+  '/so/sitemap.xml',
+  '/tl/sitemap.xml',
+  '/vi/sitemap.xml',
+  '/ypk/sitemap.xml',
+  '/zh/sitemap.xml',
+  '/zh-hans/sitemap.xml',
 ];
+
+/**
+ * Vote.gov addition to exclude entire directories.
+ *
+ * Don't include the trailing slash.
+ */
+$settings['vote_tome_static_path_exclude_directories'] = [
+  '/node',
+  '/taxonomy',
+  '/saml',
+  '/jsonapi',
+];
+
+// Add cache.backend.null:
+$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/default/nonlocal.services.yml';
+if (PHP_SAPI === 'cli' && str_starts_with($_SERVER["argv"][1], 'tome:static')) {
+  // Disable the page and menu cache on tome runs.
+  $settings['cache']['bins']['page'] = 'cache.backend.null';
+  $settings['cache']['bins']['menu'] = 'cache.backend.null';
+}
 
 $is_cloudgov = FALSE;
 
@@ -116,29 +189,35 @@ $settings['trusted_host_patterns'][] = $applicaiton_fqdn_regex;
 
 // SSO - SAML Auth Config.
 $config['samlauth.authentication']['idp_certs'][] = getenv('sso_x509_cert');
+$config['samlauth.authentication']['sp_private_key'] = getenv('sso_assertion_key');
+$config['samlauth.authentication']['sp_x509_certificate'] = getenv('sso_assertion_cert');
 // @todo DC - Move the following to config split for respective environments.
 switch ($application_environment) {
   case "dev":
     $config['config_split.config_split.non_production']['status'] = TRUE;
     $config['samlauth.authentication']['sp_entity_id'] = 'dev.vote.gov';
-    $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://secureauth.dev.gsa.gov/SecureAuth592';
+    $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://auth-preprod.gsa.gov/app/gsauth-preprod_devvotegov_1/exkcups2fwc3wTcTO4h7/sso/saml';
+    $config['samlauth.authentication']['idp_entity_id'] = 'http://www.okta.com/exkcups2fwc3wTcTO4h7';
     break;
 
   case "prod":
     $config['config_split.config_split.production']['status'] = TRUE;
-    $config['samlauth.authentication']['sp_entity_id'] = 'prod.vote.gov';
-    $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://secureauth.gsa.gov/SecureAuth404';
+    $config['samlauth.authentication']['sp_entity_id'] = 'cms.vote.gov';
+    $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://auth.gsa.gov/app/gsauth_cmsvotegov_1/exkd51oit40ss1AdT4h7/sso/saml';
+    $config['samlauth.authentication']['idp_entity_id'] = 'http://www.okta.com/exkd51oit40ss1AdT4h7';
     break;
 
   case "stage":
     $config['config_split.config_split.non_production']['status'] = TRUE;
     $config['samlauth.authentication']['sp_entity_id'] = 'cms-stage.vote.gov';
-    $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://secureauth.dev.gsa.gov/SecureAuth616';
+    $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://auth-preprod.gsa.gov/app/gsauth-preprod_cmsstagevotegov_1/exkcupw8ddWb0oqaP4h7/sso/saml';
+    $config['samlauth.authentication']['idp_entity_id'] = 'http://www.okta.com/exkcupw8ddWb0oqaP4h7';
     break;
 
   case "test":
     $config['config_split.config_split.non_production']['status'] = TRUE;
     $config['samlauth.authentication']['sp_entity_id'] = 'cms-test.vote.gov';
-    $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://secureauth.dev.gsa.gov/SecureAuth615';
+    $config['samlauth.authentication']['idp_single_sign_on_service'] = 'https://auth-preprod.gsa.gov/app/gsauth-preprod_cmstestvotegov_1/exkcuoyewsWHvYili4h7/sso/saml';
+    $config['samlauth.authentication']['idp_entity_id'] = 'http://www.okta.com/exkcuoyewsWHvYili4h7';
     break;
 }

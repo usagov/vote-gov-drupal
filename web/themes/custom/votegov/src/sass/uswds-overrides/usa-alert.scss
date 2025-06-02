@@ -2,25 +2,27 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-.usa-alert__body {
-  .usa-alert & {
-    @include u-padding-left(8);
-    @include u-padding-right(4);
+// targeting inline alerts and individually setting the border color
+.usa-alert {
+  border-left: none;
 
-    &:before {
-      left: 1.5rem;
-    }
+  &.usa-alert--warning {
+    border-inline-start: 0.5rem color('gold-20v') solid;
   }
 
-  .usa-site-alert .usa-alert & {
-    @include at-media('tablet') {
-      padding-left: 7rem;
-      padding-right: 7rem;
-    }
-  }
-
-  .usa-alert--no-icon & {
-    @include u-padding-left(4);
+  &.usa-alert--info {
+    border-inline-start: 0.5rem color('accent-cool') solid;
   }
 }
 
+.usa-alert__body > * {
+  margin-left: unset;
+  margin-inline-start: 2.5rem;
+}
+
+.usa-alert .usa-alert__body {
+  &:before {
+    left: unset;
+    inset-inline-start: 1rem;
+  }
+}

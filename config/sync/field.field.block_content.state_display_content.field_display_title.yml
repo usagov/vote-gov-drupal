@@ -1,0 +1,19 @@
+uuid: df8f2dfd-0a06-42a5-829b-b81646f3579f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.state_display_content
+    - field.storage.block_content.field_display_title
+id: block_content.state_display_content.field_display_title
+field_name: field_display_title
+entity_type: block_content
+bundle: state_display_content
+label: 'Page display title'
+description: 'Use the placeholder <strong>@state_name</strong> to dynamically add the state name on the state page.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

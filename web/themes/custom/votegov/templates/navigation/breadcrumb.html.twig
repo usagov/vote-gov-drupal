@@ -8,18 +8,20 @@
  */
 #}
 {% if breadcrumb %}
-  <nav role="navigation" aria-labelledby="system-breadcrumb" class="usa-breadcrumb">
-    <h2 id="system-breadcrumb" class="usa-sr-only visually-hidden">{{ 'Breadcrumb' | t }}</h2>
-    <ol class="usa-breadcrumb__list">
-    {% for item in breadcrumb %}
-      <li class="usa-breadcrumb__list-item">
-        {% if item.url %}
-            <a class="usa-breadcrumb__link" href="{{ item.url }}"><span>{{ item.text | t }}</span></a>
-        {% else %}
-          {{ item.text | t }}
-        {% endif %}
-      </li>
-    {% endfor %}
-    </ol>
-  </nav>
+  <div class="grid-container">
+    <nav role="navigation" aria-labelledby="system-breadcrumb" class="usa-breadcrumb">
+      <h2 id="system-breadcrumb" class="usa-sr-only visually-hidden">{{ 'Breadcrumb' | t }}</h2>
+      <ol class="usa-breadcrumb__list">
+        {% for item in breadcrumb %}
+          <li class="usa-breadcrumb__list-item">
+            {% if item.url %}
+              <a class="usa-breadcrumb__link" href="{{ item.url }}"><span>{{ item.text | t }}</span></a>
+            {% else %}
+              {{ item.text | t }}
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ol>
+    </nav>
+  </div>
 {% endif %}

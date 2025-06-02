@@ -1,5 +1,6 @@
 @use "uswds-core" as *;
 @use "mixins" as *;
+@use "variables" as *;
 
 .usa-breadcrumb {
   background-color: transparent;
@@ -29,7 +30,15 @@
   @include vote-link-dark;
 }
 
-// targeting the div wrapping the breadcrumb block and add margin top to the following element
-.block.system-breadcrumb-block + * {
-  @include u-margin-top(5);
+.block.system-breadcrumb-block {
+  --vote-breadcrumb-bg: #{$base-dark};
+  --vote-breadcrumb-border: #{$ac-cool};
+  @include u-padding-y(1);
+  border-bottom: 1px solid var(--vote-breadcrumb-border);
+  background: var(--vote-breadcrumb-bg);
+
+  [data-theme="contrast"] & {
+    --vote-breadcrumb-bg: #{$bg-high-contrast};
+    --vote-breadcrumb-border: #{$base-white};
+  }
 }

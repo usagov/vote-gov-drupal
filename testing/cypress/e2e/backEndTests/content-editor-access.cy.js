@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+import { pageObjects } from '../../support/pageObjects.js'
 
 describe('Test Content Editor Role Access', () => {
   beforeEach('login as content editor', () => {
@@ -8,7 +9,7 @@ describe('Test Content Editor Role Access', () => {
   after('logout of content editor role', () => {
     cy.logout()
   })
-  
+
   it('verify access to email signup', () => {
     cy.request({
           url: '/block/4',
@@ -37,7 +38,7 @@ describe('Test Content Editor Role Access', () => {
 
   it('verify access to homepage', () => {
         cy.request({
-          url: '/node/63/edit',
+          url: '/node/91/edit',
           failOnStatusCode:false,
       }).then((resp) => {
           expect(resp.status).to.eq(403)
@@ -84,7 +85,7 @@ describe('Test Content Editor Role Access', () => {
         })
 
     cy.request({
-      url: '/media/6/delete?',
+      url: '/media/33/delete?',
       failOnStatusCode:false,
       }).then((resp) => {
           expect(resp.status).to.eq(403)
@@ -102,7 +103,8 @@ describe('Test Content Editor Role Access', () => {
 
   it('verify ability to publish', () => {
     cy.visit('/node/add/page')
-    cy.get('[data-drupal-selector="edit-moderation-state-0-state"]').find('option').then(option => {
+    pageObjects
+    .publishState().find('option').then(option => {
       cy.wrap(option).should('not.contain', 'Published')
     })
   })

@@ -1,0 +1,24 @@
+uuid: bd99de44-7ada-4b36-9304-d7a30e2b3757
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_identifier
+    - field.storage.block_content.field_usagov_link
+    - filter.format.simple_html
+  module:
+    - text
+id: block_content.contact_identifier.field_usagov_link
+field_name: field_usagov_link
+entity_type: block_content
+bundle: contact_identifier
+label: 'USAgov link'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - simple_html
+field_type: text_long

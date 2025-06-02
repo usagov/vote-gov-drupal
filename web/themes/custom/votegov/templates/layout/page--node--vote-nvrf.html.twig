@@ -11,11 +11,6 @@
 
 {% include '@votegov/component/theme-switcher.html.twig' %}
 
-{# load navajo font #}
-{% if language == 'nv' %}
-  {{ attach_library('votegov/navajo-font') }}
-{% endif %}
-
 {# Government banner component #}
   {{ drupal_entity('block_content', '1') }}
 
@@ -39,6 +34,8 @@
 {% endblock %}
 
 <footer class="usa-footer">
-  {% include '@votegov/component/eacgov-partner.html.twig' %}
-  {% include '@votegov/component/usa-identifier.html.twig' %}
+  {# Partnerships component #}
+  {{ drupal_entity('block_content', 24, 'teaser') }}
+  {# Identifier component #}
+  {{ drupal_entity('block_content', 25) }}
 </footer>

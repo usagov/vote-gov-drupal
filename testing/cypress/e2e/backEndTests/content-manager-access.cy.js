@@ -1,4 +1,6 @@
-// <reference types="cypress" />
+/// <reference types="cypress" />
+import { pageObjects } from '../../support/pageObjects.js'
+
 
 describe('Test Content Manager Role Access', () => {
   beforeEach('login as content manager', () => {
@@ -29,11 +31,11 @@ describe('Test Content Manager Role Access', () => {
       })
   })
 
-  it('verify access to homepage accordion', () => {
-    cy.request('/node/63/edit').then((response) => {
+  it('verify access to homepage', () => {
+    cy.request('/node/91/edit').then((response) => {
       expect(response.status).to.eq(200)
         })
-    
+
       cy.request('/node/add/landing').then((response) => {
       expect(response.status).to.eq(200)
         })
@@ -64,10 +66,6 @@ describe('Test Content Manager Role Access', () => {
     cy.request('/media/add').then((response) => {
       expect(response.status).to.eq(200)
         })
-
-    cy.request('/media/6/delete?').then((response) => {
-      expect(response.status).to.eq(200)
-        })
   })
 
   it('verify access to footer menu', () => {
@@ -78,7 +76,8 @@ describe('Test Content Manager Role Access', () => {
 
   it('verify ability to publish', () => {
     cy.visit('/node/add/page')
-    cy.get('[data-drupal-selector="edit-moderation-state-0-state"]').find('option').then(option => {
+    pageObjects
+    .publishState().find('option').then(option => {
       cy.wrap(option).should('contain', 'Published')
     })
   })

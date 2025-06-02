@@ -10,7 +10,7 @@ field_name: field_classes
 entity_type: paragraph
 bundle: basic
 label: Classes
-description: 'Separate classes with a space'
+description: 'The field values are used in applying styles to the block in code. The values are not displayed to the user. Separate classes with a space.'
 required: false
 translatable: false
 default_value: {  }

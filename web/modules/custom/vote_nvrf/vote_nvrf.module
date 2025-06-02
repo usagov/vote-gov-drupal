@@ -34,3 +34,46 @@ function vote_nvrf_preprocess_block__votegov_languageswitcher(&$variables) {
     }
   }
 }
+
+/**
+ * Implements hook_taxonomy_term_delete().
+ */
+function vote_nvrf_taxonomy_term_delete($term) {
+
+  if ($term->bundle() === 'nvrf_field') {
+    $deleted_tid = $term->id();
+    $field_name = 'field_nvrf_fields';
+    $entity_type = 'node';
+
+    // Get all entities referencing the deleted term.
+    $query = \Drupal::database()->select("{$entity_type}__{$field_name}", 't')
+      ->fields('t', ['entity_id'])
+      ->condition("{$field_name}_nvrf_field", $deleted_tid, '=')
+      ->execute();
+
+    $entities_to_update = $query->fetchCol();
+
+    if (!empty($entities_to_update)) {
+      $storage = \Drupal::entityTypeManager()->getStorage($entity_type);
+
+      foreach ($entities_to_update as $entity_id) {
+        $entity = $storage->load($entity_id);
+        if ($entity) {
+          // Get the current values of the multi-entry field.
+          $field_values = $entity->get($field_name)->getValue();
+
+          // Filter out the deleted term from the field values.
+          $updated_values = array_filter($field_values, function ($item) use ($deleted_tid) {
+            return $item['nvrf_field'] != $deleted_tid;
+          });
+
+          // Only update the entity if values have changed.
+          if (count($updated_values) !== count($field_values)) {
+            $entity->get($field_name)->setValue($updated_values);
+            $entity->save();
+          }
+        }
+      }
+    }
+  }
+}

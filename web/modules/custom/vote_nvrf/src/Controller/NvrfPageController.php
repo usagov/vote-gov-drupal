@@ -114,7 +114,60 @@ class NvrfPageController extends ControllerBase {
           $url = "/$langcode" . $url;
         }
 
-        $output .= '<li><a href="' . $url . '">' . $title . '(' . $langcode . ')' . '</a></li>';
+        $output .= '<li><a href="' . $url . '">' . $title . '(' . $langcode . ')</a></li>';
+      }
+    }
+
+    $output .= '</ul>';
+
+    return [
+      '#markup' => $output,
+      '#attached' => ['library' => []],
+      '#cache' => ['max-age' => 0],
+    ];
+  }
+
+  /**
+   * NVRF Page Controller which outputs state data endpoint links.
+   */
+  public function stateDataPointsIndex() {
+    // Get the current language.
+    $current_language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+
+    // Get the default language.
+    $default_language = \Drupal::languageManager()->getDefaultLanguage()->getId();
+
+    // Check if the current language is not the default.
+    if ($current_language !== $default_language) {
+      // Return a 404 response if no matches are found.
+      throw new NotFoundHttpException();
+    }
+
+    $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+    $nodes = $node_storage->loadByProperties([
+      'type' => 'state_territory',
+      'status' => 1,
+      'field_accepts_nvrf' => TRUE,
+    ]);
+
+    $output = '<ul>';
+
+    foreach ($nodes as $node) {
+      $languages = [
+        'en',
+        'es',
+      ];
+      $title = $node->get('title')->value;
+      $abbrev = $node->get('field_state_abbreviation')->value;
+
+      foreach ($languages as $langcode) {
+        $url = '/nvrf/assets/state/' . $abbrev . '/data.json';
+        // Add language code to url for non-english pages.
+        if ('en' !== $langcode) {
+          $url = "/$langcode" . $url;
+        }
+
+        $output .= '<li><a href="' . $url . '">' . $title . '(' . $langcode . ')</a></li>';
       }
     }
 

@@ -6,7 +6,7 @@ parameters:
   restore:
     type: string
     default: "none"
-  scheduled_backup:
+  scheduled-backup:
     type: boolean
     default: false
   upkeep:
@@ -15,7 +15,7 @@ parameters:
 jobs:
   upkeep:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/base:current-22.04
     steps:
       - checkout
       - run:
@@ -32,11 +32,12 @@ jobs:
             cf run-task ${project}-drupal-${CIRCLE_BRANCH} --command "ENV=${CIRCLE_BRANCH} scripts/upkeep" --name "${project}-${CIRCLE_BRANCH}-upkeep"  -k "2G" -m 1024M
   build-theme:
     docker:
-      - image: node:20-slim
+      - image: node:22-slim
     steps:
       - checkout
       - run:
           name: "Build theme"
+          no_output_timeout: 30m
           command: |
             source ./scripts/pipeline/build-theme.sh
       - persist_to_workspace:
@@ -45,7 +46,7 @@ jobs:
             - project/web/themes/custom/votegov/dist
   cypress:
     docker:
-      - image: cypress/included:cypress-13.14.2-node-20.17.0-chrome-128.0.6613.119-1-ff-130.0-edge-128.0.2739.63-1
+      - image: cypress/included:cypress-14.3.1-node-22.14.0-chrome-135.0.7049.95-1-ff-137.0.2-edge-135.0.3179.85-1
     environment:
       cypress_pipeline: 1
       cypress_cloudgov_application_name: "${project}-drupal-${CIRCLE_BRANCH}"
@@ -74,7 +75,6 @@ jobs:
             cd testing
             npm install
             npm run cy:pipeline:axe
-          when: always
       - run:
           name: "Cypress - axe tests - rerun"
           command: |
@@ -88,7 +88,7 @@ jobs:
           path: testing/cypress/screenshots
   deploy:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/base:current-22.04
     steps:
       - checkout
       - attach_workspace:
@@ -100,13 +100,14 @@ jobs:
             source ./scripts/pipeline/deb-cf-install.sh
       - run:
           name: "Deploy"
+          no_output_timeout: 30m
           command: |
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
             source ./scripts/pipeline/cloud-gov-deploy.sh
   post-deploy:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/base:current-22.04
     steps:
       - checkout
       - attach_workspace:
@@ -118,13 +119,14 @@ jobs:
             source ./scripts/pipeline/deb-cf-install.sh
       - run:
           name: "Post Deploy"
+          no_output_timeout: 30m
           command: |
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
             source ./scripts/pipeline/cloud-gov-post-deploy.sh
   post-deploy-upkeep:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/base:current-22.04
     steps:
       - checkout
       - attach_workspace:
@@ -141,11 +143,32 @@ jobs:
             source ./scripts/pipeline/exports.sh ${CIRCLE_BRANCH}
             source ./scripts/pipeline/cloud-gov-login.sh
             source ./scripts/pipeline/cloud-gov-post-deploy-upkeep.sh
-  downsync:
+  downsync-backup:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/base:current-22.04
+    steps:
+      - checkout
+      - run:
+          name: "Install cloudfoundry & dependencies"
+          command: |
+            source ./scripts/pipeline/deb-basic-deps.sh
+            source ./scripts/pipeline/deb-cf-install.sh
+            source ./scripts/pipeline/deb-mysql-client-install.sh
+            source ./scripts/pipeline/deb-awscli.sh
+
+            cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/v1.1.4/cf-service-connect_linux_amd64
+      - run:
+          name: "Run downsync-backup"
+          no_output_timeout: 30m
+          command: |
+            source ./scripts/pipeline/exports.sh "prod"
+            source ./scripts/pipeline/cloud-gov-login.sh
+            source ./scripts/pipeline/prod-db-backup.sh
+            cf logout
+  downsync-restore:
+    docker:
+      - image: cimg/base:current-22.04
     environment:
-      BACKUP_ENV: << pipeline.parameters.backup>>
       RESTORE_ENV: << pipeline.parameters.restore>>
     steps:
       - checkout
@@ -157,19 +180,14 @@ jobs:
             source ./scripts/pipeline/deb-mysql-client-install.sh
             source ./scripts/pipeline/deb-awscli.sh
 
-            cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/v1.1.3/cf-service-connect_linux_amd64
+            cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/v1.1.4/cf-service-connect_linux_amd64
       - run:
           name: "Run downsync"
           no_output_timeout: 30m
           command: |
-            source ./scripts/pipeline/exports.sh "${BACKUP_ENV}"
-            source ./scripts/pipeline/cloud-gov-login.sh
-            source ./scripts/pipeline/downsync-backup.sh
-            cf logout
-
             source ./scripts/pipeline/exports.sh "${RESTORE_ENV}"
             source ./scripts/pipeline/cloud-gov-login.sh
-            source ./scripts/pipeline/downsync-restore.sh
+            source ./scripts/pipeline/downsync-preprod.sh
   php-lint:
     docker:
       - image: php:8.3-alpine
@@ -199,7 +217,7 @@ jobs:
           destination: phpcs_<<pipeline.number>>.csv
   scheduled-backup:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/base:current-22.04
     steps:
       - checkout
       - run:
@@ -210,7 +228,7 @@ jobs:
             source ./scripts/pipeline/deb-mysql-client-install.sh
             source ./scripts/pipeline/deb-awscli.sh
 
-            cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/v1.1.3/cf-service-connect_linux_amd64
+            cf install-plugin -f https://github.com/cloud-gov/cf-service-connect/releases/download/v1.1.4/cf-service-connect_linux_amd64
       - run:
           name: "Run backup"
           no_output_timeout: 30m
@@ -218,8 +236,8 @@ jobs:
             export BACKUP_ENV=${CIRCLE_BRANCH}
             source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
             source ./scripts/pipeline/cloud-gov-login.sh
-            source ./scripts/pipeline/downsync-backup.sh
-            ./scripts/pipeline/scheduled_backup.sh "${prod_cf_space}"
+            source ./scripts/pipeline/app-backup.sh
+            ./scripts/pipeline/scheduled-backup.sh "${prod_cf_space}"
       - run:
           name: "Run backup"
           no_output_timeout: 30m
@@ -228,25 +246,12 @@ jobs:
             export BACKUP_ENV=${CIRCLE_BRANCH}
             source ./scripts/pipeline/exports.sh "${CIRCLE_BRANCH}"
             source ./scripts/pipeline/cloud-gov-login.sh
-            source ./scripts/pipeline/downsync-backup.sh
-            ./scripts/pipeline/scheduled_backup.sh "${prod_cf_space}"
+            source ./scripts/pipeline/app-backup.sh
+            ./scripts/pipeline/scheduled-backup.sh "${prod_cf_space}"
           when: on_fail
-  snyk:
-    docker:
-      - image: snyk/snyk:php
-    # environment:
-    #   SNYK_TOKEN: ${SNYK_TOKEN }
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/
-      - run:
-          name: "Snyk"
-          command: |
-            snyk test --org=${SNYK_ORG} --severity-threshold=$THRESHOLD
   link-validation:
     docker:
-      - image: cypress/included:cypress-13.14.2-node-20.17.0-chrome-128.0.6613.119-1-ff-130.0-edge-128.0.2739.63-1
+      - image: cypress/included:cypress-14.3.1-node-22.14.0-chrome-135.0.7049.95-1-ff-137.0.2-edge-135.0.3179.85-1
     environment:
       cypress_pipeline: 1
       cypress_cloudgov_application_name: "${project}-drupal-${CIRCLE_BRANCH}"
@@ -274,7 +279,6 @@ jobs:
             cd testing
             npm install
             npm run cy:pipeline:proofer
-          when: always
       - run:
           name: "Cypress External Links - rerun"
           command: |
@@ -283,6 +287,22 @@ jobs:
             npm install
             npm run cy:pipeline:proofer
           when: on_fail
+  home-page-redirect:
+    docker:
+      - image: cypress/included:cypress-14.3.1-node-22.14.0-chrome-135.0.7049.95-1-ff-137.0.2-edge-135.0.3179.85-1
+    environment:
+      cypress_pipeline: 1
+      cypress_cloudgov_application_name: "${project}-drupal-${CIRCLE_BRANCH}"
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: "Home Page Redirect"
+          command: |
+            cd testing
+            npm install
+            npm run cy:pipeline:hpRedirect
 workflows:
   deploy-workflow:
     when:
@@ -292,7 +312,6 @@ workflows:
             equal: [ prod, << pipeline.git.branch >> ]
     jobs:
       - php-lint
-      - snyk
       - build-theme:
           filters:
             branches:
@@ -393,26 +412,38 @@ workflows:
                 - prod
     jobs:
       - link-validation
+  home-page-redirect-workflow:
+    triggers:
+      - schedule:
+          cron: '0 9 * * 1-5'
+          filters:
+            branches:
+              only:
+                - prod
+    jobs:
+      - home-page-redirect
   scheduled-backup-workflow:
     when:
       and:
         - equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]
-        - equal: [ true, << pipeline.parameters.scheduled_backup >> ]
+        - equal: [ true, << pipeline.parameters.scheduled-backup >> ]
     jobs:
       - scheduled-backup
-  downsync-workflow:
+  downsync-backup:
     when:
       and:
         - equal:  [api, << pipeline.trigger_source >> ]
         - or:
-          - equal: [ dev, << pipeline.parameters.backup >> ]
           - equal: [ prod, << pipeline.parameters.backup >> ]
-          - equal:  [stage, << pipeline.parameters.backup >> ]
-          - equal: [ test, << pipeline.parameters.backup >> ]
+    jobs:
+      - downsync-backup
+  downsync-restore:
+    when:
+      and:
+        - equal:  [api, << pipeline.trigger_source >> ]
         - or:
           - equal: [ dev, << pipeline.parameters.restore >> ]
           - equal: [ stage, << pipeline.parameters.restore >> ]
           - equal: [ test, << pipeline.parameters.restore >> ]
     jobs:
-      - downsync
-
+      - downsync-restore

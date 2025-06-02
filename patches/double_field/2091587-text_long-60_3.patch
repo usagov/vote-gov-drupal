@@ -1,0 +1,121 @@
+diff --git a/src/Plugin/Field/FieldFormatter/Base.php b/src/Plugin/Field/FieldFormatter/Base.php
+index d70e9b7..483d66f 100644
+--- a/src/Plugin/Field/FieldFormatter/Base.php
++++ b/src/Plugin/Field/FieldFormatter/Base.php
+@@ -253,6 +253,14 @@ abstract class Base extends FormatterBase {
+           $item->{$subfield} = $field_settings[$subfield][$item->{$subfield} ? 'on_label' : 'off_label'];
+         }
+ 
++        if ($field_settings['storage'][$subfield]['type'] == 'text_long') {
++          $item->{$subfield} = array(
++            '#type' => 'processed_text',
++            '#text' => $item->{$subfield},
++            '#format' => $item->{$subfield . '_format'},
++          );
++        }
++
+         // Empty string should already be converted into NULL.
+         // @see Drupal\double_field\Plugin\Field\FieldWidget\DoubleField::massageFormValues()
+         if ($item->{$subfield} === NULL) {
+diff --git a/src/Plugin/Field/FieldType/DoubleField.php b/src/Plugin/Field/FieldType/DoubleField.php
+index ba843fe..b24decd 100644
+--- a/src/Plugin/Field/FieldType/DoubleField.php
++++ b/src/Plugin/Field/FieldType/DoubleField.php
+@@ -388,6 +388,15 @@ final class DoubleField extends FieldItemBase {
+           $columns[$subfield]['size'] = 'big';
+           break;
+ 
++        case 'text_long':
++          $columns[$subfield]['type'] = 'text';
++          $columns[$subfield]['size'] = 'big';
++          $columns[$subfield . '_format'] = [
++            'type' => 'varchar_ascii',
++            'length' => 255,
++          ];
++          break;
++
+         case 'integer':
+           $columns[$subfield]['type'] = 'int';
+           $columns[$subfield]['size'] = 'normal';
+@@ -443,7 +452,7 @@ final class DoubleField extends FieldItemBase {
+ 
+       $subfield_type = $settings['storage'][$subfield]['type'];
+       // Typed data are slightly different from schema the definition.
+-      if ($subfield_type === 'text' || $subfield_type === 'telephone') {
++      if ($subfield_type === 'text' || $subfield_type === 'telephone' || $subfield_type === 'text_long') {
+         $subfield_type = 'string';
+       }
+       elseif ($subfield_type === 'numeric') {
+@@ -452,6 +461,9 @@ final class DoubleField extends FieldItemBase {
+ 
+       $properties[$subfield] = DataDefinition::create($subfield_type)
+         ->setLabel($subfield_types[$subfield_type]);
++
++      $properties[$subfield . '_format'] = DataDefinition::create('filter_format')
++        ->setLabel(t('Text format'));
+     }
+ 
+     return $properties;
+@@ -591,6 +603,7 @@ final class DoubleField extends FieldItemBase {
+       'boolean' => new TM('Boolean'),
+       'string' => new TM('Text'),
+       'text' => new TM('Text (long)'),
++      'text_long' => new TM('Text (formatted, long)'),
+       'integer' => new TM('Integer'),
+       'float' => new TM('Float'),
+       'numeric' => new TM('Decimal'),
+diff --git a/src/Plugin/Field/FieldWidget/DoubleField.php b/src/Plugin/Field/FieldWidget/DoubleField.php
+index 575fd1c..63403ca 100644
+--- a/src/Plugin/Field/FieldWidget/DoubleField.php
++++ b/src/Plugin/Field/FieldWidget/DoubleField.php
+@@ -328,6 +328,11 @@ final class DoubleField extends WidgetBase {
+           if ($settings[$sub_field]['placeholder']) {
+             $sub_widget['#placeholder'] = $settings[$sub_field]['placeholder'];
+           }
++          if (!empty($settings[$sub_field]['editor'])) {
++            $sub_widget['#type'] = 'text_format';
++            $sub_widget['#format'] = isset($items[$delta]->{$sub_field . '_format'}) ? $items[$delta]->{$sub_field . '_format'} : NULL;
++            $sub_widget['#base_type'] = 'textarea';
++          }
+           break;
+ 
+         case 'number':
+@@ -383,7 +388,17 @@ final class DoubleField extends WidgetBase {
+ 
+     foreach ($values as $delta => $value) {
+       foreach (['first', 'second'] as $subfield) {
+-        if ($value[$subfield] === '') {
++        if (is_array($value[$subfield])) {
++          foreach ($value[$subfield] as $key => $field_value) {
++            if ($key == 'value') {
++              $values[$delta][$subfield] = $field_value;
++            }
++            else {
++              $values[$delta][$subfield . '_' . $key] = $field_value;
++            }
++          }
++        }
++        elseif ($value[$subfield] === '') {
+           $values[$delta][$subfield] = NULL;
+         }
+         elseif ($value[$subfield] instanceof DrupalDateTime) {
+@@ -448,6 +463,7 @@ final class DoubleField extends WidgetBase {
+         break;
+ 
+       case 'text':
++      case 'text_long':
+         $sub_widgets['textarea'] = new TM('Text area');
+         break;
+ 
+@@ -504,6 +520,11 @@ final class DoubleField extends WidgetBase {
+       if (!$settings[$subfield]['type']) {
+         $settings[$subfield]['type'] = \key($widget_types);
+       }
++
++      if ($field_settings['storage'][$subfield]['type'] == 'text_long') {
++        $settings[$subfield]['type'] = 'textarea';
++        $settings[$subfield]['editor'] = TRUE;
++      }
+     }
+ 
+     return $settings;

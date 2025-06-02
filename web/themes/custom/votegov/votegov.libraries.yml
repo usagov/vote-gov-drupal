@@ -1,5 +1,4 @@
 global:
-  version: VERSION
   css:
     theme:
       dist/css/styles.css: { minified: true }
@@ -8,10 +7,8 @@ global:
     - core/drupal.active-link
     - votegov/uswdsjs
     - votegov/external_links
-    - votegov/roboto
 
 uswdsjs:
-  version: VERSION
   js:
     dist/js/uswds-init.min.js: { minified: true }
     dist/js/uswds.min.js:
@@ -19,20 +16,7 @@ uswdsjs:
       attributes:
         defer: true
 
-navajo-font:
-  version: VERSION
-  css:
-    theme:
-      fonts/navajo-font/stylesheet.css: { minified: true }
-
-roboto:
-  version: VERSION
-  css:
-    theme:
-      https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap: { type: external }
-
 external_links:
-  version: VERSION
   js:
     dist/js/external-links.js:
       minified: true
@@ -40,7 +24,6 @@ external_links:
         defer: true
 
 registration_tool:
-  version: VERSION
   js:
     dist/js/registration-tool.js:
       minified: true
@@ -48,7 +31,6 @@ registration_tool:
         defer: true
 
 nvrf_pdf_download:
-  version: VERSION
   js:
     dist/js/nvrf-pdf-download.js:
       minified: true
@@ -56,9 +38,22 @@ nvrf_pdf_download:
         defer: true
 
 theme_switcher:
-  version: VERSION
   js:
     dist/js/theme-switcher.js:
+      minified: true
+      attributes:
+        defer: true
+
+to_top:
+  js:
+    dist/js/to-top.js:
+      minified: true
+      attributes:
+        defer: true
+
+touchpoints_click:
+  js:
+    dist/js/touchpoints-click.js:
       minified: true
       attributes:
         defer: true

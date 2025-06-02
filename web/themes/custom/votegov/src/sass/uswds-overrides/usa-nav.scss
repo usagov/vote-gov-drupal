@@ -37,9 +37,18 @@
     }
   }
 
-  button[aria-expanded=false] span::after,
-  button[aria-expanded=true] span::after {
-    background-color: var(--usa-nav--primary-after);
+  button[aria-expanded=false],
+  button[aria-expanded=true] {
+    span {
+      padding-right: unset;
+      padding-inline-end: 1rem;
+
+      &:after {
+        background-color: var(--usa-nav--primary-after);
+        right: unset;
+        inset-inline-end: 0.75rem;
+      }
+    }
   }
 }
 
@@ -51,7 +60,7 @@
       @include u-border-top(0);
     }
 
-    >a.usa-nav__link, >button.usa-nav__link {
+    > a.usa-nav__link, > button.usa-nav__link {
       --usa-nav--primary-item-text: #{$base-dark};
       --usa-nav--primary-item-bg: transparent;
       --usa-nav--primary-item-bg--hover: #{$bg-light-cool};
@@ -83,7 +92,7 @@
         }
       }
 
-      >button {
+      > button {
         text-align: start;
 
         span:after {
@@ -95,7 +104,7 @@
   }
 
   @include at-media('tablet-lg') {
-    >a.usa-nav__link, >button.usa-nav__link {
+    > a.usa-nav__link, > button.usa-nav__link {
       --usa-nav--primary-item-text: #{$base-dark};
       --usa-nav--primary-item-bg: transparent;
       --usa-nav--primary-item-text-expanded: #{$base-white};
@@ -198,7 +207,7 @@
       @include u-border-top(0);
     }
 
-    >a {
+    > a {
       --usa-nav--submenu-item-text: #{$base-dark};
       --usa-nav--submenu-item-bg: #{$base-white};
 
@@ -232,7 +241,7 @@
       &.usa-nav__Link,
       &.usa-current,
       &:not(.usa-button):not(.usa-current),
-      >button.usa-nav__Link {
+      > button.usa-nav__Link {
         background-color: var(--usa-nav--submenu-item-bg) !important;
         color: var(--usa-nav--submenu-item-text) !important;
       }
@@ -240,7 +249,7 @@
   }
 
   @include at-media('tablet-lg') {
-    >a {
+    > a {
       --usa-nav--submenu-item-text: #{$base-white};
 
       @include hover {
@@ -257,7 +266,7 @@
 
       color: var(--usa-nav--submenu-item-text) !important;
 
-      >span {
+      > span {
         @include u-padding-x(2);
         @include u-padding-y(1);
         @include u-display('block');
@@ -271,14 +280,23 @@
   }
 }
 
+
 .usa-nav__secondary {
+  // setting bottom as a variable to help with spacing for larger text sizes from a11y bar
+  $nav-bottom: 5.5rem;
+
   @include at-media-max('tablet-lg') {
     @include u-margin(0);
     @include grid-container;
 
-    > section {
-      @include u-padding-bottom(4);
+    @include before {
+      @include u-display('block');
       border-top: 1px solid $bg-light-medium;
+    }
+
+    > * {
+      @include u-margin-y(3);
+      @include u-display('block');
     }
   }
 
@@ -286,57 +304,17 @@
     [dir="rtl"] & {
       right: unset;
     }
-
     @include u-right(0);
-    bottom: 5.5rem;
+    bottom: $nav-bottom;
     inset-inline-end: 5rem;
-  }
-}
 
-.usa-nav__link--parent {
-  @include at-media-max('tablet-lg') {
-    --usa-nav--parent-color: #{$base-dark};
-
-    @include hover {
-      --usa-nav--parent-color: #{$base-secondary-hover};
+    [data-scale="large"] & {
+      bottom: $nav-bottom - 0.25rem;
     }
 
-    [data-theme="contrast"] & {
-      --usa-nav--parent-color: #{$link-high-contrast};
-
-      @include hover {
-        --usa-nav--parent-color: #{$link-high-contrast};
-      }
+    [data-scale="x-large"] & {
+      bottom: $nav-bottom - 0.5rem;
     }
-  }
-
-  @include at-media('tablet-lg') {
-    --usa-nav--parent-color: #{$base-white};
-
-    @include hover {
-      --usa-nav--parent-color: #{$base-white};
-    }
-
-    [data-theme="contrast"] & {
-      --usa-nav--parent-color: #{$base-white};
-
-      @include hover {
-        --usa-nav--parent-color: #{$btn-secondary-bg-high-contrast-hover};
-      }
-    }
-  }
-
-  @include u-font-weight('bold');
-  color: var(--usa-nav--parent-color);
-
-  @include after {
-    @include u-width(2);
-    @include u-display('inline-block');
-    margin-inline-start: 0.5rem;
-    height: 0.75rem;
-    mask: url('../../img/svg/arrow-white.svg') no-repeat;
-    mask-size: contain;
-    background-color: var(--usa-nav--parent-color);
   }
 }
 
@@ -389,4 +367,8 @@
 
 body.usa-js-mobile-nav--active {
   @include u-padding-right(0, '!important');
+}
+
+.usa-nav__primary button {
+  text-align: start;
 }

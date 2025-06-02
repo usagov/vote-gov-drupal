@@ -8,33 +8,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
-# config.languages.languageName
-msgid "Arabic"
-msgstr "العربية"
-
 # config.languages.params.select_language
 msgid "Select language"
 msgstr "اختر اللغة"
 
 #breadcrumb
-msgid "Home"
-msgstr "الصفحة الرئيسية"
-
-#breadcrumb
 msgid "Breadcrumb"
 msgstr "تتبع مسارك"
-
-# config.languages.params.Owner
-msgid "@sitename in language"
-msgstr "@sitename باللغة العربية"
-
-# config.languages.params.go_back
-msgid "Go back"
-msgstr "الرجوع للخلف"
-
-# config.languages.params.last_updated
-msgid "Last updated:"
-msgstr "آخر تحديث:"
 
 # config.languages.params.ext_link_title
 msgid "External link opens in new window"
@@ -47,174 +27,6 @@ msgstr "تخطي إلى المحتوى الرئيسي"
 # config.languages.params.english_only
 msgid "(in English)"
 msgstr "(باللغة الإنجليزية)"
-
-# data.translations.footer.vote_logo_alt_text (see accessibility updates)
-msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgstr "رسم توضيحي لصندوق الناخب مع إدخال بطاقة اقتراع محددة للإشارة إلى إجراء التصويت"
-
-# data.translations.footer.identifier_gsa_txt
-msgid "An official website of the @link."
-msgstr "موقع الكتروني رسمي لـ @link"
-
-# data.translations.footer.identifier_gsa_txt__1
-msgid "General Services Administration"
-msgstr "إدارة الخدمات العامة (باللغة الإنجليزية)"
-
-# data.translations.footer.identifier_more_info
-msgid "Looking for U.S. government information and services? @link."
-msgstr "هل تبحث عن معلومات وخدمات حكومية أمريكية؟ @link"
-
-# data.translations.footer.identifier_more_info__1
-msgid "Visit USA.gov"
-msgstr "قم بزيارة USA.gov (باللغة الإنجليزية)"
-
-# data.translations.footer.identifier_aria
-msgid "Agency identifier"
-msgstr "معرّف الوكالة"
-
-# data.translations.footer.identifier_gsa_txt_aria
-msgid "Agency description"
-msgstr "وصف الوكالة"
-
-# data.translations.footer.identifier_link_aria
-msgid "Important links"
-msgstr "روابط مهمة"
-
-# data.translations.footer.identifier_more_info_aria
-msgid "Government information and services"
-msgstr "معلومات وخدمات حكومة الولايات المتحدة"
-
-# data.translations.footer.eac_text
-msgid "in partnership with"
-msgstr "بالشراكة مع"
-
-# data.translations.footer.eac_logo_alt_text (see accessibility updates)
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
-msgstr "شعار لجنة المساعدة الانتخابية الأمريكية الذي يشير إلى التعاون  مع vote.gov"
-
-# data.translations.footer.twitter_text
-msgid "Follow vote.gov on"
-msgstr "تابع vote.gov على تويتر (باللغة الإنجليزية)"
-
-# data.translations.footer.section_sign_up
-msgid "Email sign-up"
-msgstr "الاشتراك في البريد الإلكتروني"
-
-# data.translations.footer.section_contact
-msgid "Contact"
-msgstr "التواصل"
-
-# data.translations.footer.gsa_logo_alt
-msgid "GSA logo"
-msgstr "شعار GSA"
-
-# data.translations.homepage.search_placeholder
-msgid "Search vote.gov"
-msgstr "ابحث عن vote.gov"
-
-# data.translations.homepage.section_banner
-msgid "Official government website"
-msgstr "الموقع الالكتروني الرسمي للحكومة"
-
-# data.translations.register.heading
-msgid "Register to vote in @state_name"
-msgstr "سجل للتصويت في @state_name"
-
-# data.translations.register.heading2 (state phrase updates)
-msgid "How to register to vote"
-msgstr "كيفية التسجيل للتصويت"
-
-msgid "How to register and update your registration"
-msgstr "كيف تُسجل وتُحدث سجلك الانتخابي"
-
-# data.translations.register.other_language_selection__heading (state phrase updates)
-msgid "Other ways to register to vote"
-msgstr "طرق أخرى للتسجيل للتصويت"
-
-# data.translations.register.dates__bymail_deadline
-msgid "Register by mail deadline:"
-msgstr "التسجيل عن طريق البريد الموعد النهائي:"
-
-msgid "Must be postmarked by @date"
-msgstr "يجب ختمه بالبريد بحلول @date"
-
-msgid "Must be received by @date"
-msgstr "يجب أن يتم استلامه بحلول @date"
-
-# data.translations.register.dates__byonline_deadline
-msgid "Online registration deadline:"
-msgstr "الموعد النهائي للتسجيل عبر الإنترنت:"
-
-# data.translations.register.dates__inperson_deadline
-msgid "In person registration deadline:"
-msgstr "الموعد النهائي للتسجيل الشخصي:"
-
-msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
-msgstr "المواعيد النهائية لتسجيل الناخبين هي لانتخابات 5 نوفمبر/تشرين الثاني 2024."
-
-msgid "Find state and local election dates."
-msgstr "تعرف على مواعيد الانتخابات على مستوى الولاية والمحليات."
-
-# data.translations.register.dates__heading (state phrase updates)
-msgid "Voter registration deadlines"
-msgstr "المواعيد النهائية لتسجيل الناخبين"
-
-# data.translations.register.confirm_registration__heading
-msgid "How to check your voter registration"
-msgstr "كيفية التحقق من تسجيل الناخبين الخاص بك"
-
-# data.translations.register.confirm_registration__intro_WY
-msgid "You can confirm your voter registration status by contacting your local registration office. @link."
-msgstr "يمكنك تأكيد حالة تسجيل الناخب الخاص بك عن طريق الاتصال بمكتب التسجيل المحلي. @link."
-
-# @link: data.translations.register.confirm_registration__link_WY
-msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr "انقر هنا لعرض معلومات الاتصال بموظف مقاطعة وايومنغ (PDF) (باللغة الإنجليزية)"
-
-# data.translations.register.confirm_registration__intro (see accessibility updates)
-msgid "You can @link on @state_name’s election website."
-msgstr "يمكنك @link على @state_name موقع انتخابات الولاية"
-
-# @link: data.translations.register.confirm_registration__intro (see accessibility updates)
-msgid "confirm your voter registration status"
-msgstr "تأكيد حالة تسجيل الناخب"
-
-# data.translations.register.by_mail__intro (see accessibility updates)
-msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
-msgstr "التسجيل عبر الإنترنت غير متاح حاليا. @link للتصويت على @state_name موقع انتخابات الولاية."
-
-# @link: data.translations.register.by_mail__intro (see accessibility updates)
-msgid "Find out ways to register"
-msgstr "اكتشف طرق التسجيل"
-
-# data.translations.register.in_person__intro (see accessibility updates)
-msgid "Register in person at your local election office. @link on @state_name’s election website."
-msgstr "سجل شخصيًا في مكتب الانتخابات المحلي. @link على @state_name  موقع انتخابات الولاية."
-
-# @link: data.translations.register.in_person__intro (see accessibility updates)
-msgid "Learn more about how to register"
-msgstr "تعرف على المزيد حول كيفية التسجيل"
-
-# data.translations.register.not_needed__intro (see accessibility updates)
-msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
-msgstr "تسجيل الناخبين غير مطلوب في ولاية @state_name. @link على @state_name موقع انتخابات الولاية"
-
-# @link: data.translations.register.not_needed__intro (see accessibility updates)
-msgid "Learn more about voting"
-msgstr "تعرف على المزيد حول التصويت"
-
-# data.translations.register.online__answer1 (see accessibility updates)
-msgid "@link on @state_name’s election website."
-msgstr "@link على @state_name موقع انتخابات الولاية"
-
-
-# data.translations.register.online__answer2 (see accessibility updates)
-msgid "You can also @link on @state_name’s election website."
-msgstr "يمكنك أيضًا @link على @state_name موقع انتخابات الولاية"
-
-# @link: data.translations.register.online__answer2 (see accessibility updates)
-msgid "register to vote by mail or in person"
-msgstr "التسجيل للتصويت عن طريق البريد أو شخصيًا"
 
 # data.translations.months.january
 msgctxt "Long month name"
@@ -304,10 +116,6 @@ msgstr "الجمعة"
 msgid "Saturday"
 msgstr "السبت"
 
-#footer
-msgid "Visit our partner site to find more information about voting in the United States."
-msgstr "(باللغة الإنجليزية) طالع الموقع الشريك USA.gov للحصول على مزيد من المعلومات حول التصويت في الولايات المتحدة."
-
 #main menu close button
 msgid "Close"
 msgstr "إغلاق"
@@ -316,50 +124,5 @@ msgstr "إغلاق"
 msgid "Menu"
 msgstr "القائمة"
 
-#U.S. flag alt text
-msgid "U.S. flag"
-msgstr "علم الولايات المتحدة"
-
-#eac partner text
-msgid "Vote.gov is in partnership with"
-msgstr "يشترك موقع vote.gov مع"
-
-#aria-label for election links
-msgid "External election resources"
-msgstr "روابط الانتخابات"
-
-#alt text for USA.gov logo
-msgid "USA.gov logo"
-msgstr "شعار USA.gov"
-
 msgid "Primary navigation"
 msgstr "التصفح الأساسي"
-
-#search aira-label
-msgid "Search component"
-msgstr "مكونات البحث"
-
-msgid "Primary tabs"
-msgstr "علامات التبويب الرئيسية"
-
-msgid "Secondary tabs"
-msgstr "علامات التبويب الثانوية"
-
-#state tool aria label
-msgid "Register to vote selector tool"
-msgstr "أداة اختيار التسجيل للتصويت"
-
-#state page
-msgid "Start or update your registration online"
-msgstr "ابدأ أو قُم بتحديث سجلك الانتخابي على الإنترنت"
-
-msgid "Select your state or territory"
-msgstr "اختر ولايتك أو إقليمك"
-
-#state list aria label
-msgid "States and territories list"
-msgstr "قائمة الولايات والأقاليم"
-
-#eac partner text
-msgid "Vote.gov is in partnership with"
-msgstr "تأسس موقع vote.gov بالشراكة مع "

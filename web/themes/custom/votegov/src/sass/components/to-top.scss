@@ -1,0 +1,57 @@
+@use "uswds-core" as *;
+@use "mixins" as *;
+@use "variables" as *;
+
+.back-to-top {
+  --vote-button-background: #{$base-white};
+  --vote-button-border: #{$base-primary};
+  --vote-button-arrow-icon: #{$base-dark};
+
+  [data-theme="contrast"] & {
+    --vote-button-border: #{$link-high-contrast};
+  }
+
+  @include hover {
+    --vote-button-background: #{$base-primary};
+    --vote-button-arrow-icon: #{$base-white};
+
+    [data-theme="contrast"] & {
+      --vote-button-background: #{$link-high-contrast};
+      --vote-button-arrow-icon: #{$base-white};
+    }
+  }
+
+  @include u-radius('pill');
+  @include u-width(6);
+  @include u-height(6);
+  @include u-position('fixed');
+  @include u-radius('pill');
+  bottom: 1.25rem;
+  right: 2rem;
+  margin: auto;
+  background-color: var(--vote-button-background);
+  border: 2px solid var(--vote-button-border);
+  outline: 1px solid $base-white;
+  transition: all 200ms;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+
+  @include at-media('tablet') {
+    bottom: 3.5rem;
+  }
+
+  @include before {
+    @include u-display('inline-block');
+    @include u-width('full');
+    @include u-height('full');
+    mask: url('../../img/svg/arrow-default.svg') no-repeat center;
+    mask-size: auto;
+    background-color: var(--vote-button-arrow-icon);
+  }
+
+  &.js-scrolled {
+    opacity: 1;
+    visibility: visible;
+  }
+}

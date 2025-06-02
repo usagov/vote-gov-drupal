@@ -1,5 +1,7 @@
 // <reference types="cypress" />
 
+import { pageObjects } from "../../support/pageObjects"
+
 describe('Test Site Admin Role access', () => {
   beforeEach('login as site admin', () => {
     cy.signin(Cypress.env('roles').site_admin.username, Cypress.env('test_pass'))
@@ -19,18 +21,18 @@ describe('Test Site Admin Role access', () => {
     cy.request('/block/1').then((response) => {
       expect(response.status).to.eq(200)
         })
-    
+
     // only site admin should be able to create banner
     cy.request('//block/add/government_banner').then((response) => {
       expect(response.status).to.eq(200)
         })
   })
 
-  it('verify access to homepage accordion', () => {
-    cy.request('/node/63/edit').then((response) => {
+  it('verify access to homepage', () => {
+    cy.request('/node/91/edit').then((response) => {
       expect(response.status).to.eq(200)
         })
-    
+
     cy.request('/node/add/landing').then((response) => {
       expect(response.status).to.eq(200)
         })
@@ -59,9 +61,9 @@ describe('Test Site Admin Role access', () => {
     cy.request('/media/add').then((response) => {
       expect(response.status).to.eq(200)
         })
-    
-    // admin cole should be able to delete 
-    cy.request('/media/6/delete?').then((response) => {
+
+    // admin cole should be able to delete
+    cy.request('/media/33/delete?').then((response) => {
       expect(response.status).to.eq(200)
         })
   })
@@ -74,7 +76,8 @@ describe('Test Site Admin Role access', () => {
 
   it('verify ability to publish', () => {
     cy.visit('/node/add/page')
-    cy.get('[data-drupal-selector="edit-moderation-state-0-state"]').find('option').then(option => {
+    pageObjects
+    .publishState().find('option').then(option => {
       cy.wrap(option).should('contain', 'Published')
     })
   })

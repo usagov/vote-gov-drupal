@@ -1,14 +1,15 @@
 const { defineConfig } = require("cypress");
 
+// This config file is set for the local testing, both this and the pipeline.config.js are the same outside of the baseurl. Any update here needs to be done in the pipeline.config.js as well.
+
 module.exports = defineConfig({
-reporter: 'cypress-mochawesome-reporter',
   e2e: {
     baseUrl: 'http://vote-gov.lndo.site',
     redirectionLimit: 100,
     video: false,
     viewportHeight: 800,
     viewportWidth: 1530,
-    chromeWebSecurity: false, 
+    chromeWebSecurity: false,
     "retries": {
       "runMode": 2,
     },
@@ -31,7 +32,7 @@ reporter: 'cypress-mochawesome-reporter',
                   "username": "editor_test",
                   "role": "content_editor"
             },
-            // info for content mananger role 
+            // info for content mananger role
             "content_manager": {
                   "username": "manager_test",
                   "role": "content_manager"
@@ -40,17 +41,16 @@ reporter: 'cypress-mochawesome-reporter',
 },
     setupNodeEvents(on, config) {
       // implement node event listeners here
-      require('cypress-mochawesome-reporter/plugin')(on);
 
       on('task', {
         log(message) {
           console.log(message)
-    
+
           return null
         },
         table(message) {
           console.table(message)
-    
+
           return null
         }
       })

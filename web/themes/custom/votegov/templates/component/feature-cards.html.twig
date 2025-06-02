@@ -1,8 +1,26 @@
+{#
+/**
+ * @file
+ * Default theme implementation to Vote.gov feature cards component.
+ *
+ * Template variables:
+ * - heading: string
+ * - cards: renderable array of cards
+ *
+ * Usage example:
+ * {% include '@votegov/component/feature-cards.html.twig' with {
+ *   'heading': var_heading,
+ *   'cards': var_cards,
+ * } %}
+ *
+#}
+
 <div{{ attributes.addClass('vote-feature-cards') }}>
   {# Hold these title_* placeholders for potential integration #}
   {{ title_prefix }}
   {{ title_suffix }}
-  <h2 id="know-your-voting-rights" class="vote-feature-cards__header vote-heading--red-underline vote-heading--max-width">
+  <h2 id="know-your-voting-rights"
+      class="vote-feature-cards__header vote-heading--red-underline vote-heading--max-width">
     {{ heading }}
   </h2>
   <div class="vote-card-group">

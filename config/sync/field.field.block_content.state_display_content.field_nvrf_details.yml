@@ -1,0 +1,21 @@
+uuid: f6e71adb-140a-4cdc-877e-a8176f9320f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.state_display_content
+    - field.storage.block_content.field_nvrf_details
+  module:
+    - vote_fields
+id: block_content.state_display_content.field_nvrf_details
+field_name: field_nvrf_details
+entity_type: block_content
+bundle: state_display_content
+label: 'NVRF details'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: vote_fields_state_content

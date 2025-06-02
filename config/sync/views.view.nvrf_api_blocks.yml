@@ -4,20 +4,29 @@ status: true
 dependencies:
   config:
     - block_content.type.nvrf_a_b_message
-    - block_content.type.nvrf_card
+    - block_content.type.nvrf_display_content
     - field.storage.block_content.body
-    - field.storage.block_content.field_button_label
-    - field.storage.block_content.field_heading
+    - field.storage.block_content.field_confirm_group
+    - field.storage.block_content.field_download_button_label
+    - field.storage.block_content.field_edit_button_label
+    - field.storage.block_content.field_mail_deadline_label
     - field.storage.block_content.field_messager_identifier
+    - field.storage.block_content.field_not_required_label
+    - field.storage.block_content.field_nvrf_card
+    - field.storage.block_content.field_nvrf_footer
+    - field.storage.block_content.field_nvrf_step
+    - field.storage.block_content.field_print_button_label
     - field.storage.block_content.field_touchpoints_id
     - user.role.anonymous
     - user.role.authenticated
   module:
     - block_content
     - rest
+    - rest_views
     - serialization
     - text
     - user
+    - vote_fields
 id: nvrf_api_blocks
 label: 'NVRF API Blocks'
 module: views
@@ -144,69 +153,6 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_heading:
-          id: field_heading
-          table: block_content__field_heading
-          field: field_heading
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -353,69 +299,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_button_label:
-          id: field_button_label
-          table: block_content__field_button_label
-          field: field_button_label
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
       pager:
         type: mini
         options:
@@ -520,16 +403,6 @@ display:
           group: 1
           expose:
             operator: ''
-        type:
-          id: type
-          table: block_content_field_data
-          field: type
-          entity_type: block_content
-          entity_field: type
-          plugin_id: bundle
-          value:
-            nvrf_card: nvrf_card
-          group: 1
         langcode:
           id: langcode
           table: block_content_field_data
@@ -608,8 +481,6 @@ display:
         - user.roles
       tags:
         - 'config:field.storage.block_content.body'
-        - 'config:field.storage.block_content.field_button_label'
-        - 'config:field.storage.block_content.field_heading'
   api_ab_messages:
     id: api_ab_messages
     display_title: 'NVRF AB Messages'
@@ -1086,9 +957,9 @@ display:
         - 'config:field.storage.block_content.body'
         - 'config:field.storage.block_content.field_messager_identifier'
         - 'config:field.storage.block_content.field_touchpoints_id'
-  api_nvrf_cards:
-    id: api_nvrf_cards
-    display_title: 'NVRF Cards'
+  api_strings:
+    id: api_strings
+    display_title: 'NVRF display strings'
     display_plugin: rest_export
     position: 1
     display_options:
@@ -1224,10 +1095,190 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_heading:
-          id: field_heading
-          table: block_content__field_heading
-          field: field_heading
+        field_nvrf_card_export:
+          id: field_nvrf_card_export
+          table: block_content__field_nvrf_card
+          field: field_nvrf_card_export
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field_export
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: nvrf_card_id
+          type: nvrf_card_default
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          field_api_classes: false
+        field_nvrf_step_export:
+          id: field_nvrf_step_export
+          table: block_content__field_nvrf_step
+          field: field_nvrf_step_export
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field_export
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: step_id
+          type: nvrf_step_default
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          field_api_classes: false
+        field_confirm_group_export:
+          id: field_confirm_group_export
+          table: block_content__field_confirm_group
+          field: field_confirm_group_export
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field_export
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: confirm_group_id
+          type: confirm_group_default
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          field_api_classes: false
+        field_edit_button_label:
+          id: field_edit_button_label
+          table: block_content__field_edit_button_label
+          field: field_edit_button_label
           relationship: none
           group_type: group
           admin_label: ''
@@ -1287,10 +1338,262 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        body:
-          id: body
-          table: block_content__body
-          field: body
+        field_mail_deadline_label:
+          id: field_mail_deadline_label
+          table: block_content__field_mail_deadline_label
+          field: field_mail_deadline_label
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_not_required_label:
+          id: field_not_required_label
+          table: block_content__field_not_required_label
+          field: field_not_required_label
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_print_button_label:
+          id: field_print_button_label
+          table: block_content__field_print_button_label
+          field: field_print_button_label
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_download_button_label:
+          id: field_download_button_label
+          table: block_content__field_download_button_label
+          field: field_download_button_label
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_nvrf_footer:
+          id: field_nvrf_footer
+          table: block_content__field_nvrf_footer
+          field: field_nvrf_footer
           relationship: none
           group_type: group
           admin_label: ''
@@ -1349,74 +1652,112 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_button_label:
-          id: field_button_label
-          table: block_content__field_button_label
-          field: field_button_label
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 1
+      arguments: {  }
+      filters:
+        status:
+          id: status
+          table: block_content_field_data
+          field: status
+          entity_type: block_content
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: block_content_field_data
+          field: type
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-      pager:
-        type: none
-        options:
-          offset: 0
-      arguments: {  }
+          entity_type: block_content
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            nvrf_display_content: nvrf_display_content
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        langcode:
+          id: langcode
+          table: block_content_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: block_content
+          entity_field: langcode
+          plugin_id: language
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: serializer
         options:
@@ -1432,25 +1773,44 @@ display:
             langcode:
               alias: lang
               raw_output: false
-            field_heading:
-              alias: heading
+            field_nvrf_card_export:
+              alias: nvrf_card
               raw_output: false
-            body:
-              alias: ''
+            field_nvrf_step_export:
+              alias: step
               raw_output: false
-            field_button_label:
-              alias: button_label
+            field_confirm_group_export:
+              alias: confirm_group
               raw_output: false
-            field_media_image:
-              alias: image_url
+            field_edit_button_label:
+              alias: edit_button_label
+              raw_output: false
+            field_mail_deadline_label:
+              alias: mail_deadline_label
+              raw_output: false
+            field_not_required_label:
+              alias: not_required_label
+              raw_output: false
+            field_print_button_label:
+              alias: print_button_label
+              raw_output: false
+            field_download_button_label:
+              alias: download_button_label
+              raw_output: false
+            field_nvrf_footer:
+              alias: nvrf_footer
               raw_output: false
       defaults:
+        relationships: false
         fields: false
         arguments: false
+        filters: false
+        filter_groups: false
+      relationships: {  }
       display_description: ''
       rendering_language: '***LANGUAGE_language_interface***'
       display_extenders: {  }
-      path: nvrf/assets/cards.json
+      path: nvrf/assets/strings.json
     cache_metadata:
       max-age: -1
       contexts:
@@ -1458,6 +1818,12 @@ display:
         - request_format
         - user.roles
       tags:
-        - 'config:field.storage.block_content.body'
-        - 'config:field.storage.block_content.field_button_label'
-        - 'config:field.storage.block_content.field_heading'
+        - 'config:field.storage.block_content.field_confirm_group'
+        - 'config:field.storage.block_content.field_download_button_label'
+        - 'config:field.storage.block_content.field_edit_button_label'
+        - 'config:field.storage.block_content.field_mail_deadline_label'
+        - 'config:field.storage.block_content.field_not_required_label'
+        - 'config:field.storage.block_content.field_nvrf_card'
+        - 'config:field.storage.block_content.field_nvrf_footer'
+        - 'config:field.storage.block_content.field_nvrf_step'
+        - 'config:field.storage.block_content.field_print_button_label'

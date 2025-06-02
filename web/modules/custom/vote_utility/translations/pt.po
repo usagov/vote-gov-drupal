@@ -8,32 +8,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
 
-# config.languages.languageName
-msgid "Portuguese"
-msgstr "Português"
-
-msgid "Home"
-msgstr ""
-
 # config.languages.params.select_language
 msgid "Select language"
 msgstr "Selecionar a língua"
 
-#breadcrumb
-msgid "Home"
-msgstr "Página inicial"
-
-# config.languages.params.Owner
-msgid "@sitename in language"
-msgstr "@sitename em Português"
-
-# config.languages.params.go_back
-msgid "Go back"
-msgstr "Voltar"
-
-# config.languages.params.last_updated
-msgid "Last updated:"
-msgstr "Última Atualização:"
+#in-page nav
+msgid "On this page"
+msgstr "Nesta página"
 
 # config.languages.params.ext_link_title
 msgid "External link opens in new window"
@@ -46,177 +27,6 @@ msgstr "Saltar para o conteúdo principal"
 # config.languages.params.english_only
 msgid "(in English)"
 msgstr "(em inglês)"
-
-# data.translations.footer.vote_logo_alt_text (see accessibility updates)
-msgid "Illustration of voter box with checked ballot being inserted to indicate voting action"
-msgstr "Ilustração da caixa do eleitor com voto marcado ao ser inserido para indicar ação de votação"
-
-# data.translations.footer.identifier_gsa_txt
-msgid "An official website of the @link."
-msgstr "Uma página web oficial da @link"
-
-# data.translations.footer.identifier_gsa_txt__1
-msgid "General Services Administration"
-msgstr "Administração dos Serviços Gerais (em inglês)"
-
-# data.translations.footer.identifier_more_info
-msgid "Looking for U.S. government information and services? @link."
-msgstr "Você procura informação e serviços do governo dos EUA? @link"
-
-# data.translations.footer.identifier_more_info__1
-msgid "Visit USA.gov"
-msgstr "Visite USA.gov (em inglês)"
-
-# data.translations.footer.identifier_aria
-msgid "Agency identifier"
-msgstr "Identificador da agência"
-
-# data.translations.footer.identifier_gsa_txt_aria
-msgid "Agency description"
-msgstr "Descrição da agência"
-
-# data.translations.footer.identifier_link_aria
-msgid "Important links"
-msgstr "Links importantes"
-
-# data.translations.footer.identifier_more_info_aria
-msgid "Government information and services"
-msgstr "Informação e serviços do governo"
-
-# data.translations.footer.eac_text
-msgid "in partnership with"
-msgstr "em parceria com"
-
-# data.translations.footer.eac_logo_alt_text (see accessibility updates)
-msgid "U.S. Election Assistance Commission logo which indicates a partnership with vote.gov"
-msgstr "Logomarca da Comissão de Assistência das Eleições dos EUA que indica uma parceria com vote.gov"
-
-# data.translations.footer.twitter_text
-msgid "Follow vote.gov on"
-msgstr "Siga vote.gov no X (em inglês)"
-
-# data.translations.footer.section_sign_up
-msgid "Email sign-up"
-msgstr "Inscrição por e-mail"
-
-# data.translations.footer.section_contact
-msgid "Contact"
-msgstr "Contato"
-
-# data.translations.footer.gsa_logo_alt
-msgid "GSA logo"
-msgstr "Logotipo do GSA"
-
-# data.translations.homepage.search_placeholder
-msgid "Search vote.gov"
-msgstr "Pesquisar vote.gov"
-
-# data.translations.homepage.section_banner
-msgid "Official government website"
-msgstr "Página web oficial do governo"
-
-# data.translations.register.heading
-msgid "Register to vote in @state_name"
-msgstr "Registrar-se para votar em @state_name"
-
-# data.translations.register.heading2 (state phrase updates)
-msgid "How to register to vote"
-msgstr "Como registrar-se para votar"
-
-msgid "How to register and update your registration"
-msgstr "Como registrar-se para votar"
-
-# data.translations.register.other_language_selection__heading (state phrase updates)
-msgid "Other ways to register to vote"
-msgstr "Outras maneiras de registrar-se para votar"
-
-msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
-msgstr "Prazos para registro de eleitores para a eleição de @election_date"
-
-msgid "Find state and local election dates."
-msgstr ""
-
-# data.translations.register.dates__bymail_deadline
-msgid "Register by mail deadline:"
-msgstr "Prazo final para registrar-se por correspondência:"
-
-msgid "Must be postmarked by @date"
-msgstr "Deve estar carimbado até o @date"
-
-msgid "Must be received by @date"
-msgstr "Deve ser recebido até o @date"
-
-# data.translations.register.dates__byonline_deadline
-msgid "Online registration deadline:"
-msgstr "Prazo final para registrar-se on-line:"
-
-# data.translations.register.dates__inperson_deadline
-msgid "In person registration deadline:"
-msgstr "Prazo final de registro em pessoa:"
-
-# data.translations.register.dates__heading (state phrase updates)
-msgid "Voter registration deadlines"
-msgstr "Os prazos de registro de eleitores"
-
-# data.translations.register.confirm_registration__heading
-msgid "How to check your voter registration"
-msgstr "Como você pode verificar seu registro de eleitor"
-
-# data.translations.register.confirm_registration__intro_WY
-msgid "You can confirm your voter registration status by contacting your local registration office. @link."
-msgstr "Você pode confirmar seu status de registro de eleitor entrando em contato com o cartório de registro local. @link."
-
-# @link: data.translations.register.confirm_registration__link_WY
-msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr "Clique aqui para ver as informações de contato do secretário do condado de Wyoming (PDF) (em inglês)"
-
-# data.translations.register.confirm_registration__intro (see accessibility updates)
-msgid "You can @link on @state_name’s election website."
-msgstr "Também pode @link na página web de eleição estadual do @state_name"
-
-# @link: data.translations.register.confirm_registration__intro (see accessibility updates)
-msgid "confirm your voter registration status"
-msgstr "confirmar o status do seu registro de eleitor"
-
-# data.translations.register.by_mail__intro (see accessibility updates)
-msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
-msgstr "O registro on-line não está disponível no momento. @link para votar na página web de eleição estadual do @state_name."
-
-# @link: data.translations.register.by_mail__intro (see accessibility updates)
-msgid "Find out ways to register"
-msgstr "Descubra maneiras de registrar-se"
-
-# data.translations.register.in_person__intro (see accessibility updates)
-msgid "Register in person at your local election office. @link on @state_name’s election website."
-msgstr "Registre-se em pessoa no seu escritório de eleições local. @link na página web de eleição estadual do @state_name."
-
-# @link: data.translations.register.in_person__intro (see accessibility updates)
-msgid "Learn more about how to register"
-msgstr "Aprenda mais sobre como registrar-se"
-
-# data.translations.register.not_needed__intro (see accessibility updates)
-msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
-msgstr "O registro de eleitores não é mandatório em @state_name. @link na página web de eleição estadual de @state_name."
-
-# @link: data.translations.register.not_needed__intro (see accessibility updates)
-msgid "Learn more about voting"
-msgstr "Aprenda mais sobre a votação"
-
-# data.translations.register.online__answer1 (see accessibility updates)
-msgid "@link on @state_name’s election website."
-msgstr "@link na página web de eleição estadual do @state_name"
-
-# @link: data.translations.register.online__answer1 (see accessibility updates)
-msgid "Start or update your registration online"
-msgstr "Comece o seu registro on-line"
-
-# data.translations.register.online__answer2 (see accessibility updates)
-msgid "You can also @link on @state_name’s election website."
-msgstr "Também pode @link na página web de eleição estadual do @state_name"
-
-# @link: data.translations.register.online__answer2 (see accessibility updates)
-msgid "register to vote by mail or in person"
-msgstr "registrar-se para votar por correspondência ou em pessoa"
 
 # data.translations.months.january
 msgctxt "Long month name"
@@ -305,3 +115,22 @@ msgstr "sexta-feira"
 # data.translations.days.saturday
 msgid "Saturday"
 msgstr "sábado"
+
+msgid "Close"
+msgstr "Fechar"
+
+msgid "Menu"
+msgstr "Menu"
+
+msgid "Breadcrumb"
+msgstr "Trilha de navegação"
+
+msgid "Primary navigation"
+msgstr "Navegação primária"
+
+#voter guide cards
+msgid "Learn more from the Federal Voting Assistance Program (FVAP)."
+msgstr "Saiba mais sobre o Programa Federal de Assistência ao Voto."
+
+msgid "Know your voting rights"
+msgstr "Conheça seus direitos de voto"

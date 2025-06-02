@@ -7,6 +7,7 @@ dependencies:
     - field.storage.taxonomy_term.field_error_message
     - field.storage.taxonomy_term.field_help_text
     - field.storage.taxonomy_term.field_instructions
+    - field.storage.taxonomy_term.field_nvrf_machine_name
     - field.storage.taxonomy_term.field_options
     - field.storage.taxonomy_term.field_section_alert
     - field.storage.taxonomy_term.field_section_description
@@ -47,7 +48,7 @@ display:
           entity_type: taxonomy_term
           entity_field: name
           plugin_id: term_name
-          label: 'Field Name'
+          label: 'Field administrative label'
           exclude: false
           alter:
             alter_text: false
@@ -166,19 +167,82 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_options:
-          id: field_options
-          table: taxonomy_term__field_options
-          field: field_options
+        field_nvrf_machine_name:
+          id: field_nvrf_machine_name
+          table: taxonomy_term__field_nvrf_machine_name
+          field: field_nvrf_machine_name
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'Options (if applicable)'
+          label: 'Machine name'
           exclude: false
           alter:
-            alter_text: true
-            text: '{{ field_options__second }}'
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_help_text:
+          id: field_help_text
+          table: taxonomy_term__field_help_text
+          field: field_help_text
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: 'Help text'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -215,25 +279,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: first
-          type: double_field_unformatted_list
+          click_sort_column: value
+          type: string
           settings:
-            first:
-              format_type: medium
-              link: false
-              hidden: false
-              decimal_separator: .
-              thousand_separator: ''
-              scale: 2
-            second:
-              format_type: medium
-              link: false
-              hidden: false
-              decimal_separator: .
-              thousand_separator: ''
-              scale: 2
-            inline: true
-          group_column: ''
+            link_to_entity: false
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -305,19 +355,19 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_help_text:
-          id: field_help_text
-          table: taxonomy_term__field_help_text
-          field: field_help_text
+        field_options:
+          id: field_options
+          table: taxonomy_term__field_options
+          field: field_options
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'Help text'
+          label: 'Options (if applicable)'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ field_options__second }}'
             make_link: false
             path: ''
             absolute: false
@@ -354,11 +404,25 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
+          click_sort_column: first
+          type: double_field_unformatted_list
           settings:
-            link_to_entity: false
-          group_column: value
+            first:
+              format_type: medium
+              link: false
+              hidden: false
+              decimal_separator: .
+              thousand_separator: ''
+              scale: 2
+            second:
+              format_type: medium
+              link: false
+              hidden: false
+              decimal_separator: .
+              thousand_separator: ''
+              scale: 2
+            inline: true
+          group_column: ''
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -754,6 +818,7 @@ display:
         - 'config:field.storage.taxonomy_term.field_error_message'
         - 'config:field.storage.taxonomy_term.field_help_text'
         - 'config:field.storage.taxonomy_term.field_instructions'
+        - 'config:field.storage.taxonomy_term.field_nvrf_machine_name'
         - 'config:field.storage.taxonomy_term.field_options'
         - 'config:field.storage.taxonomy_term.field_section_alert'
         - 'config:field.storage.taxonomy_term.field_section_description'
@@ -774,7 +839,7 @@ display:
           entity_type: taxonomy_term
           entity_field: name
           plugin_id: term_name
-          label: 'Field Name'
+          label: 'Administrative label'
           exclude: false
           alter:
             alter_text: false
@@ -893,19 +958,82 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_options:
-          id: field_options
-          table: taxonomy_term__field_options
-          field: field_options
+        field_nvrf_machine_name:
+          id: field_nvrf_machine_name
+          table: taxonomy_term__field_nvrf_machine_name
+          field: field_nvrf_machine_name
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'Options (if applicable)'
+          label: 'Machine name'
           exclude: false
           alter:
-            alter_text: true
-            text: '{{ field_options__second }}'
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_help_text:
+          id: field_help_text
+          table: taxonomy_term__field_help_text
+          field: field_help_text
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: 'Help text'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -942,25 +1070,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: first
-          type: double_field_unformatted_list
+          click_sort_column: value
+          type: string
           settings:
-            first:
-              format_type: medium
-              link: false
-              hidden: false
-              decimal_separator: .
-              thousand_separator: ''
-              scale: 2
-            second:
-              format_type: medium
-              link: false
-              hidden: false
-              decimal_separator: .
-              thousand_separator: ''
-              scale: 2
-            inline: true
-          group_column: ''
+            link_to_entity: false
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -1032,19 +1146,19 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_help_text:
-          id: field_help_text
-          table: taxonomy_term__field_help_text
-          field: field_help_text
+        field_options:
+          id: field_options
+          table: taxonomy_term__field_options
+          field: field_options
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'Help text'
+          label: 'Options (if applicable)'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ field_options__second }}'
             make_link: false
             path: ''
             absolute: false
@@ -1081,11 +1195,25 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
+          click_sort_column: first
+          type: double_field_unformatted_list
           settings:
-            link_to_entity: false
-          group_column: value
+            first:
+              format_type: medium
+              link: false
+              hidden: false
+              decimal_separator: .
+              thousand_separator: ''
+              scale: 2
+            second:
+              format_type: medium
+              link: false
+              hidden: false
+              decimal_separator: .
+              thousand_separator: ''
+              scale: 2
+            inline: true
+          group_column: ''
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -1319,6 +1447,7 @@ display:
         - 'config:field.storage.taxonomy_term.field_error_message'
         - 'config:field.storage.taxonomy_term.field_help_text'
         - 'config:field.storage.taxonomy_term.field_instructions'
+        - 'config:field.storage.taxonomy_term.field_nvrf_machine_name'
         - 'config:field.storage.taxonomy_term.field_options'
         - 'config:field.storage.taxonomy_term.field_section_alert'
         - 'config:field.storage.taxonomy_term.field_section_description'
@@ -1328,7 +1457,21 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      defaults:
+        header: false
       display_description: ''
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: false
+          content: '<a href="/admin/nvrf-fields/export" class="button button--action button--primary">Export NVRF field report</a>'
+          tokenize: false
       display_extenders: {  }
       path: admin/nvrf-fields
     cache_metadata:
@@ -1343,6 +1486,7 @@ display:
         - 'config:field.storage.taxonomy_term.field_error_message'
         - 'config:field.storage.taxonomy_term.field_help_text'
         - 'config:field.storage.taxonomy_term.field_instructions'
+        - 'config:field.storage.taxonomy_term.field_nvrf_machine_name'
         - 'config:field.storage.taxonomy_term.field_options'
         - 'config:field.storage.taxonomy_term.field_section_alert'
         - 'config:field.storage.taxonomy_term.field_section_description'

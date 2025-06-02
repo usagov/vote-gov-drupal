@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - language
+    - system
   theme:
     - votegov
 id: votegov_languageswitcher
@@ -17,4 +18,8 @@ settings:
   label: 'Select Language'
   label_display: '0'
   provider: language
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/state-data-points-index\r\n/disabled-state-mail-in-forms"

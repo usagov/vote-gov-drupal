@@ -25,7 +25,7 @@
 1. [Scripts](#scripts)
     1. [Application Scripts](#application-scripts)
         1. [bootstrap.sh](#bootstrapsh)
-        1. [build_static](#build_static)
+        1. [upkeep](#upkeep)
         1. [bash-exports.sh](#bash-exportssh)
         1. [entrypoint](#entrypoint)
         1. [post-deploy](#post-deploy)
@@ -47,6 +47,9 @@
         1. [scheduled-backup.sh](#scheduled-backupsh)
     1. [Miscellaneous Scripts](#miscellaneous-scripts)
         1. [download_latest_backup.sh](#download_latest_backupsh)
+1. [Common Usage](#common-usage)
+    1. [Downsync Process](#downsync-process)
+    1. [Running Upkeep](#running-upkeep)
 
 ## Prerequisites
 
@@ -71,7 +74,7 @@ These are general tools and requirements needed to interact with the various scr
 
   ### Data
 
-  Obtain a copy of the latest backup archive available. This will likely have been moved to Google Drive or some other storage.
+  Obtain a copy of the latest backup archive available. This data is stored in Google Drive.
 
   ### Software
 
@@ -220,17 +223,27 @@ This workflow is trigger after PR merges to the `prod` branch requires authorize
 
 #### Scheduled Pipelines
 
-`build-static-workflow`
+`upkeep-workflow`
 
-This workflow will build the static site and copy it to the `static` site S3 bucket. It currently runs twice an hour.
+This workflow will run the [upkeep script](../scripts/upkeep) which will run the `drush cron` command followed by a build of the static site and copy it to the `static` site S3 bucket. It currently runs twice an hour in the stage and prod environments.
 
-`drush-cron-workflow`
+It may be helpful to pause the `upkeep-workflow` if doing other tasks in a space. To do this:
+1. Navigate to the `vote-gov-drupal` project in CircleCI
+1. Go to `Project Settings`
+1. Select `Triggers` from the left hand column
+1. Click the edit pencil beside the trigger for the space to pause
+1. In the `Repeats on these days*` section, uncheck the box for the current day
+    * Note: de-selecting multiple days may be required if operating near midnight UTC
+1. Click the `Save Trigger` button at the bottom of the edit box
+1. Perform the task needed to prevent memory conflicts during
+1. Return to the Triggers edit page for the space previously paused
+1. Re-check the box for the days unchecked previously
+1. Click the `Save Trigger` button at the bottom of the edit box
 
-This workflow will run the command `drush cron`. It current runs once an hour.
 
 `scheduled-backup-workflow`
 
-This work flow runs [scheduled-backup.sh](#scheduled-backupsh). This currently runs once an hour.
+This work flow runs [scheduled-backup.sh](#scheduled-backupsh). This currently runs twice a day outside of business hours for the stage and prod environments.
 
 `link-validation-workflow`
 
@@ -299,7 +312,7 @@ Can be used to export a variety of application variables. Not used for anything,
 Runs configurations during the build pack staging. This includes things such as NewRelic configuration, setting of egress
 proxy variables, and the installation of `awscli`.
 
-#### build_static
+#### upkeep
 
 Compiles the static website via the Drupal Tome module, then syncs the newly generated static files via `awscli` to S3. This script runs as a scheduled pipeline in CircleCI, where it is launched as a CloudFoundry task in cloud.gov.
 
@@ -310,6 +323,10 @@ A simple script that is used to hold the container open with a infinite sleep lo
 #### post-deploy
 
 Used to do post deployment house keeping tasks. These include various `drush` commands, such as running cache rebuild, config import, and the s3fs module tasks.
+
+#### post-deploy-upkeep
+
+Used to do post deployment static site generation. This is the same as [upkeep](#upkeep) but runs inside the application instance and only as a part of the deploy workflow.
 
 #### start
 
@@ -362,11 +379,15 @@ Installs the `mysql-client` package. This is used for [downsync-backup.sh](#down
 
 #### downsync-backup.sh
 
-Launched by a `triggered pipeline` in CircleCI, that will connect to the database and executes the `mysqldump` command to get a current copy of the database running in an environment.
+Launched by a `triggered pipeline` in CircleCI, that will connect to the database and executes the `mysqldump` command to get a current copy of the database running in an environment. Additionally, the media files and Terraform remote state will be downloaded and saved in an archive S3 bucket.
 
-#### downsync-restore.sh
+#### prod-db-backup.sh
 
-Launched by a `triggered pipeline` in CircleCI, that will connect to the database and executes the `mysql` command to restore a database running in an environment.
+Launched by a `manually triggered pipeline` in CircleCI, that will connect to the prod database and executes the `mysqldump` command to get a current copy of the database. The intent with this script is to provide a mechanism to backup only the production database outside of the regularly scheduled [downsync-backup.sh](#downsync-backup.sh) if a more recent backup is needed to restore to a preprod application.
+
+#### downsync-preprod.sh
+
+Launched by a `manually triggered pipeline` in CircleCI, that will connect to the database and executes the `mysql` command to restore a database running in a preprod environment. This will retrieve the latest prod database backup from S3 and restore it into the specified environment
 
 #### exports.sh
 
@@ -387,3 +408,39 @@ Launched by a `triggered pipeline` in CircleCI, this scripts gathers all S3 buck
 #### download_backup.sh
 
 Allows for easy downloading of the various backups available on the system. This includes the database backup, the Drupal user uploaded file content, and backups of the Terraform state. Help with usage is available when running the script without arguments.
+
+## Common Usage
+
+### Downsync Process
+
+The Downsync Process is one by which production data is synced into a preproduction environment. This is primarily used to test application updates against production data. The [downsync-preprod.sh](#downsync-preprod) script is leveraged to do this within CircleCI through a `manually triggered pipeline`. Downsync may only happen to preproduction environments.
+
+1. Navigate to the project in CircleCI.
+1. Click `Trigger Pipeline`.
+1. Select the source information cooresponding to the preproduction environment to downsync.
+1. Under `Parameters` use the `Name` "restore".
+1. Enter the `Value` of the preproduction environment to downsync. These may only be `test`, `dev`, `stage`.
+1. The pipeline will be scheduled and retrieve the latest production database backup from the S3 backups bucket.
+
+Files are not downsynced as a part of this pipeline because preproduction environments leverage a file proxy against prod's files.
+
+### Running Upkeep
+
+As mentioned in [Upkeep](#upkeep) and [Scheduled Pipelines](#scheduled-pipelines) the upkeep script runs cron and generates the static site with Tome. Running Upkeep manually differs depending on the space and the amount of free memory it has as well as security configuration.
+
+#### Running Upkeep in Prod
+
+The production space requires and has enough memory to support spawning a task for upkeep and is done with the following CLI command:
+```bash
+cf run-task vote-drupal-prod --command "ENV=prod scripts/upkeep" --name "vote-prod-upkeep" -k "2G" -m "1024M"
+```
+Which is the same command the scheduled pipeline would run in prod.
+
+#### Running Upkeep in Preprod
+
+Preproduction environments do not have enough memory to spawn a new task to run upkeep. To manually run upkeep in preprod envs where memory is more limited, you must ssh into the application instance and run the script:
+```bash
+cf ssh vote-drupal-<env name>
+ENV=<env name> bash app/scripts/upkeep
+```
+Once this command completes, you can close your ssh session.

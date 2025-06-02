@@ -1,0 +1,21 @@
+uuid: 2cc8ed0b-e04b-40b6-bc9f-583d16da3467
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_print_button_label
+field_name: field_print_button_label
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

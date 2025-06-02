@@ -1,12 +1,16 @@
 // ****** Do not write any custom CSS on this file ****** //
+// Include custom font.
+@forward "fonts";
 
 // Theme settings overrides.
 @forward "uswds-settings";
 
 // USWDS individual components
 // to include everything, just code it as @forward "uswds";
-@forward "uswds-global"; //normalize, uswds-core, uswds-elements, uswds-fonts, uswds-helpers
-@forward "uswds-typography"; //usa-content, usa-dark-background, usa-display, usa-intro, usa-link, usa-list, usa-paragraph, usa-prose
+@forward "uswds-global";
+//normalize, uswds-core, uswds-elements, uswds-fonts, uswds-helpers
+@forward "uswds-typography";
+//usa-content, usa-dark-background, usa-display, usa-intro, usa-link, usa-list, usa-paragraph, usa-prose
 @forward "uswds-utilities";
 @forward "usa-accordion";
 @forward "usa-alert";

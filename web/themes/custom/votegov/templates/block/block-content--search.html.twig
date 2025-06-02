@@ -10,22 +10,26 @@
 
 {% set affiliated_search = content.field_translated_affiliate | field_value | render %}
 
-<form{{ attributes.addClass(['usa-search', 'usa-search--small']).setAttribute('role', 'search') }} action="https://search.vote.gov/search" accept-charset="UTF-8" method="get">
-  {# Hold these title_* placeholders for potential integration #}
-  {{ title_prefix }}
-  {{ title_suffix }}
-  {# if current language is chinese simplified, change the search to use Chinese tradional 'zh' #}
-  {% set searchLanguage = language == 'zh-hans' ? 'zh' : language %}
-  <input type="hidden" name="affiliate" id="affiliate"
-         value="vote_{{ affiliated_search == '1' ? searchLanguage : 'en' }}">
+<section id="usa-search--expandable" aria-label="{{ content.field_section_identifier | field_value }}">
+  <form{{ attributes.addClass(['usa-search', 'usa-search--small']).setAttribute('role', 'search') }}
+    action="https://search.vote.gov/search" accept-charset="UTF-8" method="get">
+    {# Hold these title_* placeholders for potential integration #}
+    {{ title_prefix }}
+    {{ title_suffix }}
+    {# if current language is chinese simplified, change the search to use Chinese tradional 'zh' #}
+    {% set searchLanguage = language == 'zh-hans' ? 'zh' : language %}
+    <input type="hidden" name="affiliate" id="affiliate"
+           value="vote_{{ affiliated_search == '1' ? searchLanguage : 'en' }}">
 
-  <label class="usa-sr-only" for="search-field-en-small">{{ content.field_search_placeholder | field_value }}</label>
+    <label class="usa-sr-only" for="search-field-en-small">{{ content.field_search_placeholder | field_value }}</label>
 
-  <input class="usa-input" data-test="searchBox" id="search-field-en-small" type="search" name="query"
-         autocomplete="off"
-         placeholder="{{ content.field_search_placeholder | field_value }} {{ affiliated_search != '1' ? '(in English)' | t }}">
+    <input class="usa-input" data-test="searchBox" id="search-field-en-small" type="search" name="query"
+           autocomplete="off"
+           placeholder="{{ content.field_search_placeholder | field_value }} {{ affiliated_search != '1' ? '(in English)' | t }}">
 
-  <button class="usa-button usa-button--search" data-test="searchBtn" type="submit" name="submit" data-disable-with="Search" aria-label="{{ 'Submit search' | t }}">
-    {{ source( directory ~ '/img/svg/search.svg' ) }}
-  </button>
-</form>
+    <button class="usa-button usa-button--search" data-test="searchBtn" type="submit" name="submit"
+            data-disable-with="Search" aria-label="{{ content.field_submit_button_label | field_value }}">
+      {{ source( directory ~ '/img/svg/search.svg' ) }}
+    </button>
+  </form>
+</section>

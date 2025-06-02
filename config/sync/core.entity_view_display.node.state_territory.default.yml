@@ -6,28 +6,34 @@ dependencies:
     - field.field.node.state_territory.body
     - field.field.node.state_territory.field_accepts_nvrf
     - field.field.node.state_territory.field_address_location_inst
+    - field.field.node.state_territory.field_check_registration
     - field.field.node.state_territory.field_confirm_registration_link
     - field.field.node.state_territory.field_content_version
+    - field.field.node.state_territory.field_date_in_person_deadline
+    - field.field.node.state_territory.field_date_online_deadline
     - field.field.node.state_territory.field_election_homepage_link
     - field.field.node.state_territory.field_g_in_person_deadline
     - field.field.node.state_territory.field_g_mail_postmarked_deadline
     - field.field.node.state_territory.field_g_mail_received_deadline
     - field.field.node.state_territory.field_g_online_deadline
     - field.field.node.state_territory.field_identification_inst
-    - field.field.node.state_territory.field_in_person_deadline
+    - field.field.node.state_territory.field_in_person_registration
     - field.field.node.state_territory.field_in_state_name
     - field.field.node.state_territory.field_is_state
     - field.field.node.state_territory.field_mail_postmarked_deadline
     - field.field.node.state_territory.field_mail_received_deadline
+    - field.field.node.state_territory.field_mail_registration
     - field.field.node.state_territory.field_mail_registration_link
     - field.field.node.state_territory.field_mailing_address_inst
     - field.field.node.state_territory.field_media
     - field.field.node.state_territory.field_metatags
+    - field.field.node.state_territory.field_military_and_overseas_regi
     - field.field.node.state_territory.field_more_info_link
+    - field.field.node.state_territory.field_nvrf_details
     - field.field.node.state_territory.field_nvrf_fields
     - field.field.node.state_territory.field_nvrf_last_updated_date
     - field.field.node.state_territory.field_of_state_name
-    - field.field.node.state_territory.field_online_deadline
+    - field.field.node.state_territory.field_online_registration
     - field.field.node.state_territory.field_override_confirm_reg_link
     - field.field.node.state_territory.field_override_election_hp_link
     - field.field.node.state_territory.field_override_mail_reg_link
@@ -38,17 +44,18 @@ dependencies:
     - field.field.node.state_territory.field_political_party_inst
     - field.field.node.state_territory.field_reg_eligibility_desc
     - field.field.node.state_territory.field_registration_link
+    - field.field.node.state_territory.field_registration_not_needed
     - field.field.node.state_territory.field_registration_type
     - field.field.node.state_territory.field_state_abbreviation
     - field.field.node.state_territory.field_updated_date
     - node.type.state_territory
   module:
     - datetime
-    - double_field
     - link
     - metatag
     - text
     - user
+    - vote_fields
     - vote_nvrf
 id: node.state_territory.default
 targetEntityType: node
@@ -77,6 +84,13 @@ content:
     third_party_settings: {  }
     weight: 24
     region: content
+  field_check_registration:
+    type: vote_fields_state_content_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 39
+    region: content
   field_confirm_registration_link:
     type: link
     label: hidden
@@ -96,6 +110,24 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 8
+    region: content
+  field_date_in_person_deadline:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long_date
+    third_party_settings: {  }
+    weight: 49
+    region: content
+  field_date_online_deadline:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long_date
+    third_party_settings: {  }
+    weight: 48
     region: content
   field_election_homepage_link:
     type: link
@@ -148,27 +180,12 @@ content:
     third_party_settings: {  }
     weight: 25
     region: content
-  field_in_person_deadline:
-    type: double_field_unformatted_list
-    label: hidden
-    settings:
-      first:
-        format_type: long_date
-        link: false
-        hidden: false
-        decimal_separator: .
-        thousand_separator: ''
-        scale: 2
-      second:
-        format_type: medium
-        link: false
-        hidden: false
-        decimal_separator: .
-        thousand_separator: ''
-        scale: 2
-      inline: true
+  field_in_person_registration:
+    type: vote_fields_state_content_default
+    label: above
+    settings: {  }
     third_party_settings: {  }
-    weight: 14
+    weight: 43
     region: content
   field_in_state_name:
     type: string
@@ -195,6 +212,13 @@ content:
       format_type: long_date
     third_party_settings: {  }
     weight: 12
+    region: content
+  field_mail_registration:
+    type: vote_fields_state_content_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 42
     region: content
   field_mail_registration_link:
     type: link
@@ -231,6 +255,13 @@ content:
     third_party_settings: {  }
     weight: 19
     region: content
+  field_military_and_overseas_regi:
+    type: vote_fields_state_content_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 44
+    region: content
   field_more_info_link:
     type: link
     label: hidden
@@ -242,6 +273,13 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 7
+    region: content
+  field_nvrf_details:
+    type: vote_fields_state_content_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 47
     region: content
   field_nvrf_fields:
     type: field_nvrf_fields_default
@@ -267,27 +305,12 @@ content:
     third_party_settings: {  }
     weight: 22
     region: content
-  field_online_deadline:
-    type: double_field_unformatted_list
-    label: hidden
-    settings:
-      first:
-        format_type: long_date
-        link: false
-        hidden: false
-        decimal_separator: .
-        thousand_separator: ''
-        scale: 2
-      second:
-        format_type: medium
-        link: false
-        hidden: false
-        decimal_separator: .
-        thousand_separator: ''
-        scale: 2
-      inline: true
+  field_online_registration:
+    type: vote_fields_state_content_default
+    label: above
+    settings: {  }
     third_party_settings: {  }
-    weight: 8
+    weight: 41
     region: content
   field_override_confirm_reg_link:
     type: link
@@ -389,6 +412,13 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_registration_not_needed:
+    type: vote_fields_state_content_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 45
     region: content
   field_updated_date:
     type: datetime_default

@@ -1,7 +1,8 @@
 const { defineConfig } = require("cypress");
 
+// This config file is set for the pipeline testing, both this and the cypress.config.js are the same outside of the baseurl. Any update here needs to be done in the cypress.config.js as well.
+
 module.exports = defineConfig({
-reporter: 'cypress-mochawesome-reporter',
   e2e: {
     baseUrl: 'https://staging.vote.gov/',
     redirectionLimit: 100,
@@ -40,7 +41,6 @@ reporter: 'cypress-mochawesome-reporter',
 },
     setupNodeEvents(on, config) {
       // implement node event listeners here
-      require('cypress-mochawesome-reporter/plugin')(on);
 
       on('task', {
         log(message) {

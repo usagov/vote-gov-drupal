@@ -1,0 +1,88 @@
+
+# Default value.
+field.value.vote_fields_state_content:
+  type: mapping
+  label: Default value
+  mapping:
+    heading:
+      type: string
+      label: Heading
+    text:
+      type: text
+      label: Text
+    link_text:
+      type: string
+      label: Link text
+
+field.field_settings.vote_fields_state_content:
+  type: mapping
+  label: Field settings
+  mapping:
+    form_subfield_display:
+      type: list
+      label: Fields to display in the form
+      sequence:
+        type: string
+    form_subfield_text_help_text:
+      type: string
+      label: Text subfield help text
+    form_subfield_link_text_help_text:
+      type: string
+      label: Link text subfield help text
+
+
+# Default value.
+field.value.nvrf_step:
+  type: mapping
+  label: Nvrf step
+  mapping:
+    step_id:
+      type: string
+      label: Step Id
+    step_label:
+      type: string
+      label: Step label
+    back_button_label:
+      type: string
+      label: Back button label
+    next_button_label:
+      type: string
+      label: Next button label
+    step_aria_label:
+      type: string
+      label: Step indicator aria label
+    edit_aria_label:
+      type: string
+      label: Edit button aria label
+
+# Default value.
+field.value.confirm_group:
+  type: mapping
+  label: Confirm group
+  mapping:
+    confirm_group_id:
+      type: string
+      label: Confirm group Id
+    confirm_group_label:
+      type: string
+      label: Confirm group label
+    confirm_group_message:
+      type: string
+      label: Confirm group message
+
+field.value.nvrf_card:
+  type: mapping
+  label: Default value
+  mapping:
+    nvrf_card_id:
+      type: string
+      label: NVRF card ID
+    nvrf_card_heading:
+      type: string
+      label: NVRF card heading
+    nvrf_card_text:
+      type: text
+      label: NVRF card text
+    nvrf_card_button_label:
+      type: string
+      label: NVRF button label

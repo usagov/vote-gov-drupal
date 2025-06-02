@@ -1,0 +1,14 @@
+uuid: 33a5c0a0-d6a6-40b6-8d96-d4721e7b833e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.archived
+  module:
+    - user
+id: user_add_role_action.archived
+label: 'Add the ARCHIVED role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: archived

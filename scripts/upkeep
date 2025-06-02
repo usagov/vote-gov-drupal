@@ -28,6 +28,13 @@ export ssg_sitemap_endpoint=ssg_endpoint
 
 cd ${app_path}
 echo "**************************************************"
+echo "Running 'drush cr' in '${environment}'..."
+echo "**************************************************"
+drush cr
+echo "'drush cr' task...completed!"
+echo ""
+
+echo "**************************************************"
 echo "Running 'drush cron' in '${environment}'..."
 echo "**************************************************"
 drush --uri=${ssg_endpoint} cron
@@ -37,7 +44,7 @@ echo ""
 echo "**************************************************"
 echo "Running 'drush tome:static' in '${environment}'..."
 echo "**************************************************"
-drush tome:static --uri=${ssg_endpoint} --path-count=1 --retry-count=3 -y
+drush tome:static --uri=${ssg_endpoint} --retry-count=3 -y
 drush tome:static-export-path '/sitemap.xml,/sitemap_generator/default/sitemap.xsl' --uri=${ssg_sitemap_endpoint} --retry-count=3 -y
 drush cr
 echo "'drush tome:static' task...completed!"
@@ -73,10 +80,10 @@ echo "Missing module files for Sitemap...completed!"
 echo ""
 
 echo "**************************************************"
-echo "Adding missing data files for NVRF..."
+echo "Adding missing files for NVRF..."
 echo "**************************************************"
-cp -rfp ${app_path}/web/data ${html_path}
-echo "Missing data files for NVRF...completed!"
+cp -rfp ${app_path}/web/files ${html_path}/files
+echo "Missing files for NVRF...completed!"
 echo ""
 
 echo "**************************************************"
@@ -84,33 +91,17 @@ echo "Adding Vote.gov custom theme assets..."
 echo "**************************************************"
 mkdir -p ${html_path}/themes/custom/votegov
 cp -rfp ${app_path}/web/themes/custom/votegov/dist ${html_path}/themes/custom/votegov/
-cp -rfp ${app_path}/web/themes/custom/votegov/fonts ${html_path}/themes/custom/votegov/
 cp -rfp ${app_path}/web/themes/custom/votegov/img ${html_path}/themes/custom/votegov/
 cp -rfp ${app_path}/web/themes/custom/votegov/json ${html_path}/themes/custom/votegov/
+cp -rfp ${app_path}/web/themes/custom/votegov/fonts ${html_path}/themes/custom/votegov/
 echo "Adding Vote.gov custom theme assets...completed!"
-echo ""
-
-echo "**************************************************"
-echo "Deleting 'node' redirect files..."
-echo "**************************************************"
-find ${html_path} -type d -name "node" -print0 | while IFS= read -r -d '' node_dir; do
-    # Find index.html files within each 'node' directory that are a redirect.
-    find "$node_dir" -type f -path "*/index.html" -exec grep -q "http-equiv=\"refresh\"" {} \; -delete -exec dirname {} \;
-done
-echo "Deleting 'node' redirect files...completed!"
-echo ""
-
-echo "**************************************************"
-echo "Deleting taxonomy directories..."
-echo "**************************************************"
-rm -rf ${html_path}/taxonomy 2>/dev/null
-echo "Deleting taxonomy directories...completed!"
 echo ""
 
 echo "**************************************************"
 echo "Removing miscellaneous files..."
 echo "**************************************************"
 rm -rf ${html_path}/disabled-state-mail-in-forms 2>/dev/null
+rm -rf ${html_path}/state-data-points-index 2>/dev/null
 echo "Removing miscellaneous files...completed!"
 echo ""
 
