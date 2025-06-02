@@ -16,7 +16,7 @@ function vote_utility_block_content_update(EntityInterface $entity) {
     SELECT revision_id from block_content_revision
     WHERE id = :entity_id
 	ORDER BY revision_created DESC
-	LIMIT 50, 18446744073709551615', [
+	LIMIT 25, 18446744073709551615', [
    ':entity_id' => $entity->id(),
  ]);
   foreach ($query->fetchAllAssoc('revision_id') as $version) {

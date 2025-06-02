@@ -13,7 +13,7 @@ third_party_settings:
     amount:
       status: true
       settings:
-        amount: 50
+        amount: 25
     created:
       status: false
       settings:
@@ -22,6 +22,10 @@ third_party_settings:
       status: false
       settings:
         age: 1
+    only_drafts:
+      status: false
+      settings:
+        age: 0
 name: 'NVRF Page'
 type: nvrf_page
 description: 'NVRF app page content'

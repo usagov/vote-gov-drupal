@@ -13,7 +13,19 @@ third_party_settings:
     amount:
       status: true
       settings:
-        amount: 50
+        amount: 25
+    created:
+      status: false
+      settings:
+        age: 1
+    drafts:
+      status: false
+      settings:
+        age: 1
+    only_drafts:
+      status: false
+      settings:
+        age: 0
 name: 'State/Territory Page'
 type: state_territory
 description: null
