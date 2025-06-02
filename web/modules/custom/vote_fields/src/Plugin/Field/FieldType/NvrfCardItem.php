@@ -55,10 +55,6 @@ final class NvrfCardItem extends FieldItemBase {
 
     $options['nvrf_card_id']['NotBlank'] = [];
 
-    $options['nvrf_card_heading']['NotBlank'] = [];
-
-    $options['nvrf_card_button_label']['NotBlank'] = [];
-
     $constraint_manager = \Drupal::typedDataManager()->getValidationConstraintManager();
     $constraints[] = $constraint_manager->create('ComplexData', $options);
     return $constraints;

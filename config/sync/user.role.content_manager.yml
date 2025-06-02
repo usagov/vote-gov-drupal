@@ -9,7 +9,6 @@ dependencies:
     - block_content.type.government_banner
     - block_content.type.inline_alert
     - block_content.type.nvrf_a_b_message
-    - block_content.type.nvrf_card
     - block_content.type.nvrf_display_content
     - block_content.type.partnership
     - block_content.type.registration_form_selector
@@ -94,7 +93,6 @@ permissions:
   - 'delete any inline_alert block content revisions'
   - 'delete any nvrf_a_b_message block content'
   - 'delete any nvrf_a_b_message block content revisions'
-  - 'delete any nvrf_card block content revisions'
   - 'delete any nvrf_display_content block content revisions'
   - 'delete any partnership block content revisions'
   - 'delete any registration_form_selector block content revisions'
@@ -122,7 +120,6 @@ permissions:
   - 'edit any inline_alert block content'
   - 'edit any landing content'
   - 'edit any nvrf_a_b_message block content'
-  - 'edit any nvrf_card block content'
   - 'edit any nvrf_display_content block content'
   - 'edit any nvrf_page content'
   - 'edit any page content'
@@ -156,7 +153,6 @@ permissions:
   - 'revert any government_banner block content revisions'
   - 'revert any inline_alert block content revisions'
   - 'revert any nvrf_a_b_message block content revisions'
-  - 'revert any nvrf_card block content revisions'
   - 'revert any nvrf_display_content block content revisions'
   - 'revert any partnership block content revisions'
   - 'revert any registration_form_selector block content revisions'
@@ -210,7 +206,6 @@ permissions:
   - 'view any image media revisions'
   - 'view any inline_alert block content history'
   - 'view any nvrf_a_b_message block content history'
-  - 'view any nvrf_card block content history'
   - 'view any nvrf_display_content block content history'
   - 'view any partnership block content history'
   - 'view any registration_form_selector block content history'

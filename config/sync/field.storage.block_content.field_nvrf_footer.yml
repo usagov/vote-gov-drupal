@@ -1,18 +1,16 @@
-uuid: 8363b76a-3613-4fa8-a801-19300748eccc
+uuid: 9f4145f8-d768-4430-b71f-30de41e7a60e
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
-id: block_content.field_button_label
-field_name: field_button_label
+    - text
+id: block_content.field_nvrf_footer
+field_name: field_nvrf_footer
 entity_type: block_content
-type: string
-settings:
-  max_length: 255
-  case_sensitive: false
-  is_ascii: false
-module: core
+type: text_long
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true

@@ -10,10 +10,12 @@ dependencies:
     - field.field.block_content.nvrf_display_content.field_mail_deadline_label
     - field.field.block_content.nvrf_display_content.field_not_required_label
     - field.field.block_content.nvrf_display_content.field_nvrf_card
+    - field.field.block_content.nvrf_display_content.field_nvrf_footer
     - field.field.block_content.nvrf_display_content.field_nvrf_step
     - field.field.block_content.nvrf_display_content.field_print_button_label
   module:
     - field_group
+    - text
     - vote_fields
 third_party_settings:
   field_group:
@@ -113,6 +115,14 @@ content:
     weight: 4
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_nvrf_footer:
+    type: text_textarea
+    weight: 26
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
   field_nvrf_step:
     type: nvrf_step
