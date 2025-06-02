@@ -114,7 +114,7 @@ class NvrfPageController extends ControllerBase {
           $url = "/$langcode" . $url;
         }
 
-        $output .= '<li><a href="' . $url . '">' . $title . '(' . $langcode . ')' . '</a></li>';
+        $output .= '<li><a href="' . $url . '">' . $title . '(' . $langcode . ')</a></li>';
       }
     }
 
@@ -167,7 +167,7 @@ class NvrfPageController extends ControllerBase {
           $url = "/$langcode" . $url;
         }
 
-        $output .= '<li><a href="' . $url . '">' . $title . '(' . $langcode . ')' . '</a></li>';
+        $output .= '<li><a href="' . $url . '">' . $title . '(' . $langcode . ')</a></li>';
       }
     }
 
