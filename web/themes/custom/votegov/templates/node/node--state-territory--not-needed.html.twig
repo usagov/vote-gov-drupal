@@ -6,53 +6,34 @@
  */
 #}
 
+{% block aside %}
+	{# keep empty for not needed #}
+{% endblock %}
+
 {% block content %}
-  {# More info #}
-  {% if content.field_more_info_link | render %}
-    <h2>{{ 'How to register to vote' | t({ '@state_name': state_name }) }}</h2>
-    {% set more_info_link = content.field_override_more_info_link | field_value | render | default( content.field_more_info_link | field_value | render ) %}
-    {% set more_info_link_text = "Learn more about voting" | t({'@state_name': state_name}) %}
+	{% if registration_not_needed is not empty %}
+		{# setting link text to be in inline hyper link #}
+		{% if registration_not_needed.link_text %}
+			{% set link_markup %}
+			<a href="{{ more_info_link }}" data-state-ext="state-website-no-registration">{{ registration_not_needed.link_text | render | trim | t({'@state_name': title_english}) }}</a>
+			{% endset %}
+		{% endif %}
+		{# setting body text to have palceholder for both state name and link #}
+		{% set body = registration_not_needed.text | render | trim | t({'@state_name': title_english, '@link': {'#markup': link_markup } | render}) %}
+    {# setting heading text to have placeholder for state name #}
+    {% set heading = registration_not_needed.heading | render | trim | t({'@state_name': title_english | render}) %}
 
-    {% if language != "en" and not content.field_override_more_info_link | render %}
-      {% set more_info_link_text = more_info_link_text ~ ' ' ~ in_english %}
-    {% endif %}
+		{% include '@votegov/component/info-card.html.twig' with {
+          'heading': heading is not empty ? heading,
+          'body': body,
+      } %}
 
-    <p>{{ 'Voter registration is not required in @state_name. @link on @state_name’s election website.' | t({
-        '@link': { "#markup": "<a href=\"#{more_info_link}\">#{more_info_link_text}</a>"} | render,
-        '@state_name': state_name,
-        '@of_state_name': of_state_name,
-        '@in_state_name': in_state_name
-      }) }}
-    </p>
-  {% endif %}
+	{% endif %}
+	{% if military_overseas_registration is not empty %}
+		{% include '@votegov/component/info-card.html.twig' with {
+        'heading': military_overseas_registration.heading,
+        'body': military_overseas_registration.text,
+      } %}
+	{% endif %}
 
-  {# JSON Schema #}
-  {# Commenting this out until we have a chance to review and improve #}
-  {#  <script type="application/ld+json"> #}
-  {#  { #}
-  {#    "@context": "https://schema.org", #}
-  {#    "@type": "FAQPage", #}
-  {#    "mainEntity": [{ #}
-  {#      "@type": "Question", #}
-  {#      "name": "{{ 'How to register to vote' | t({ '@state_name': state_name }) }}", #}
-  {#      "acceptedAnswer": { #}
-  {#        "@type": "Answer", #}
-  {#        "text": "{{ 'Voter registration is not required in @state_name. @link on @state_name’s election website.' | t({ #}
-  {#      '@link': { "#markup": "<a href=\"#{more_info_link}\">#{more_info_link_text}</a>"} | render | replace({'"': "\""}), #}
-  {#      '@state_name': state_name, #}
-  {#      '@of_state_name': of_state_name, #}
-  {#      '@in_state_name': in_state_name #}
-  {#    }) }}" #}
-  {#    } #}
-  {#    }{{ end }}] #}
-  {#  } #}
-  {# </script> #}
-{% endblock %}
-
-{% block deadlines %}
-  {# No deadline info. #}
-{% endblock %}
-
-{% block confirm %}
-  {# No confirmation info. #}
 {% endblock %}

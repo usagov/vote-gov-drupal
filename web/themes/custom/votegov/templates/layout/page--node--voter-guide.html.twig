@@ -16,18 +16,19 @@
       'media': drupal_field('field_media', 'node', node.id(), {type: 'media_thumbnail', settings: {image_style: 'scaled_lg' }}) | field_value,
       'variant': 'dark'
     } %}
-    <div
-      class="vote-main-content-row vote-block-margin-y--narrow grid-container {% if language not in excludedLanguages %} usa-in-page-nav-container {% endif %}">
+    <div class="vote-main-content-row vote-block-margin-y--narrow grid-container {% if language not in excludedLanguages %} usa-in-page-nav-container {% endif %}">
       {% if language not in excludedLanguages %}
-        <aside
-          class="usa-in-page-nav"
-          data-main-content-selector=".usa-in-page-nav-container"
-          data-title-text="{{ 'On this page' | t }}"
-          data-title-heading-level="h2"
-          data-scroll-offset="30"
-          data-root-margin="48px 0px 30px 0px"
-          data-threshold="1"
-        ></aside>
+        <aside class="vote-side-nav__container">
+          <div
+            class="usa-in-page-nav"
+            data-main-content-selector=".usa-in-page-nav-container"
+            data-title-text="{{ 'On this page' | t }}"
+            data-title-heading-level="h2"
+            data-scroll-offset="30"
+            data-root-margin="48px 0px 30px 0px"
+            data-threshold="1"
+          ></div>
+        </aside>
       {% endif %}
       <div class="vote-page-content vote-page-content--alt">
         {{ page.content }}

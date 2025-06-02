@@ -15,97 +15,6 @@ msgstr "选择语言"
 msgid "On this page"
 msgstr "本页内容"
 
-msgid "Last updated:"
-msgstr "最近更新时间："
-
-#state
-msgid "Register to vote in @state_name"
-msgstr "在 @state_name 注册投票"
-
-msgid "How to register to vote"
-msgstr "如何登记投票"
-
-msgid "How to register and update your registration"
-msgstr "如何登记和更新您的登记信息"
-
-msgid "Start or update your online registration"
-msgstr "开始在网上登记或者更新登记信息"
-
-msgid "Other ways to register to vote"
-msgstr "登记投票的其他方式"
-
-msgid "Voter registration deadlines are for the November 05, 2024 election. @link"
-msgstr "2024年11月5日选举的选民登记截止日期。"
-
-msgid "Find state and local election dates."
-msgstr "寻找州和地方选举日期。"
-
-msgid "Register by mail deadline:"
-msgstr "邮寄报名截止日期："
-
-msgid "Must be postmarked by @date"
-msgstr "必须在 @date 星期六之前加盖邮戳"
-
-msgid "Must be received by @date"
-msgstr "必须在 @date 之前收到"
-
-msgid "Online registration deadline:"
-msgstr "网上报名截止日期："
-
-msgid "Voter registration deadlines"
-msgstr "选民登记截止日期"
-
-msgid "In person registration deadline:"
-msgstr "亲自报名截止日期："
-
-msgid "How to check your voter registration"
-msgstr "如何检查您的选民登记"
-
-msgid "You can confirm your voter registration status on @link."
-msgstr "您可以在 @link 上确认您的选民登记状态"
-
-msgid "You can confirm your voter registration status by contacting your local registration office. @link."
-msgstr "您可以聯繫當地的登記處確認您的選民登記狀態。@link。"
-
-msgid "Click here to view Wyoming's county clerk contact information (PDF)"
-msgstr "點擊此處查看懷俄明州縣書記聯繫資訊 (PDF）(英语)"
-
-msgid "Find out ways to register"
-msgstr "了解如何注册"
-
-msgid "Online registration is currently not available. @link to vote at @state_name’s election website."
-msgstr "目前不提供在线注册。 @link 在 @state_name 州的选举网站上投票。"
-
-msgid "Learn more about how to register"
-msgstr "详细了解如何注册"
-
-msgid "Register in person at your local election office. @link on @state_name’s election website."
-msgstr "亲自到您当地的选举办公室注册。 @link @state_name 州的选举网站"
-
-msgid "Learn more about voting"
-msgstr "详细了解如何注册"
-
-msgid "Voter registration is not required in @state_name. @link on @state_name’s election website."
-msgstr "弗吉尼亚州不要求选民注册。 @link @state_name 州的选举网站"
-
-msgid "Start or update your registration online"
-msgstr "开始在线注册"
-
-msgid "@link on @state_name’s election website."
-msgstr "在 @state_name 州的选举网站上 @link"
-
-msgid "register to vote by mail or in person"
-msgstr "邮寄或现场注册"
-
-msgid "You can also @link on @state_name’s election website."
-msgstr "您也可以 @link @state_name 州的选举网站"
-
-msgid "confirm your voter registration status"
-msgstr "确认您的选民注册状态"
-
-msgid "You can @link on @state_name’s election website."
-msgstr "您可以在 @state_name 州的选举网站上 @link"
-
 msgid "External link opens in new window"
 msgstr "外部链接打开新窗口"
 
@@ -185,14 +94,8 @@ msgstr "sábado"
 msgid "Sunday"
 msgstr "星期日"
 
-msgid "U.S. government information and services"
-msgstr "美国政府提供的信息和服务"
-
 msgid "Close"
 msgstr "关闭"
-
-msgid "U.S. flag"
-msgstr "美国国旗"
 
 msgid "Menu"
 msgstr "菜单"
@@ -202,9 +105,6 @@ msgstr "面包屑导航"
 
 msgid "Primary navigation"
 msgstr "主导航"
-
-msgid "Introduction"
-msgstr "简介"
 
 # Temporary military and overseas voter cards
 msgid "Voting as a military service member"

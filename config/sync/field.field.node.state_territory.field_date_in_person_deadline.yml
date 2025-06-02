@@ -11,7 +11,7 @@ id: node.state_territory.field_date_in_person_deadline
 field_name: field_date_in_person_deadline
 entity_type: node
 bundle: state_territory
-label: 'Date in-person deadline'
+label: 'In-person deadline'
 description: ''
 required: false
 translatable: false
