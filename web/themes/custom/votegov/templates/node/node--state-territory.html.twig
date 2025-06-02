@@ -117,7 +117,7 @@
     </aside>
   {% endblock %}
 
-  <div id="main-content-state-page" class="vote-page-content vote-page-content--alt">
+  <div id="main-content-state-page" class="vote-page-content vote-page-content--alt" data-test="{{ not not_needed ? 'registrationInfo' }}">
    {% block content %}
     {% if check_registration is not empty %}
       {% include '@votegov/component/call-out-box.html.twig' with {

@@ -80,10 +80,6 @@ class PageObjects {
     return cy.get('[data-test="mainCloseBtn"]')
   }
 
-  nvrfDownload() {
-    return cy.get('[data-test="nvrfDownload"]')
-  }
-
   searchBox() {
     return cy.get('[data-test="searchBox"]')
   }
