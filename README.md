@@ -1,4 +1,5 @@
-# Vote.gov Drupal 10 installation
+# :warning: [DEPRECATED] Vote.gov Drupal 10 installation
+This repository is no longer maintained.
 
 ## Requirements
 
